@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { categories, products } from '../../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "All Collections" },
+];
+
+const collectionsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "All CBD Product Collections",
+  "description": "Browse all wholesale CBD product collections. CBD flowers, resins, oils, gummies and THC edibles.",
+  "url": "https://greensfarmhouse.com/collections",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+---
+
+<BaseLayout
+  title="All Collections | Wholesale CBD Products | Greens Farmhouse"
+  description="Browse all wholesale CBD product collections. CBD flowers, resins, oils, gummies and THC edibles. Premium quality, lab-tested, best wholesale prices in Europe."
+  jsonLd={collectionsJsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <section class="py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-8">All Collections</h1>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.map(cat => (
+          <a 
+            href={`/collections/${cat.slug}`}
+            class="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300"
+          >
+            <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/20 flex items-center justify-center group-hover:from-primary/10 group-hover:to-primary/30 transition-colors">
+              <svg class="w-16 h-16 text-primary/40 group-hover:text-primary/60 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">{cat.name}</h2>
+              <p class="text-sm text-gray-600 mt-2 line-clamp-2">{cat.description}</p>
+              <p class="text-xs text-primary font-semibold mt-3">{cat.productCount} products →</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

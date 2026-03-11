@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Greens Farmhouse Luxembourg" },
+];
+
+const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const resins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Greens Farmhouse Luxembourg — Premium Wholesale CBD Products",
+  "description": "Luxembourg's trusted CBD wholesale supplier. Premium CBD flowers, oils, resins at the best wholesale prices with next-day delivery.",
+  "url": "https://greensfarmhouse.com/cbd-wholesaler-luxembourg",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "Is CBD legal in Luxembourg?",
+    answer: "Yes. Luxembourg has progressive cannabis legislation. CBD products with less than 0.3% THC are legal for sale and consumption. Luxembourg was one of the first EU countries to move toward cannabis liberalization. All our CBD products meet Luxembourg's legal requirements and come with full certification."
+  },
+  {
+    question: "How fast is delivery to Luxembourg?",
+    answer: "Luxembourg benefits from our fastest European delivery. Standard delivery takes just 1-2 business days. Express next-day delivery is available to Luxembourg City and all communes. Free delivery on all orders over €99."
+  },
+  {
+    question: "What are the wholesale CBD opportunities in Luxembourg?",
+    answer: "Despite its small size, Luxembourg has a high GDP per capita and affluent, international population that values premium CBD products. CBD shops, pharmacies, wellness stores, and the growing number of retail outlets make it an excellent market for high-quality CBD wholesale."
+  },
+  {
+    question: "Do you provide documentation for Luxembourg businesses?",
+    answer: "Yes. All products include complete Certificates of Analysis, EU compliance documentation, and professional invoicing suitable for Luxembourg's regulatory and tax requirements. We support businesses in meeting local compliance standards."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Greens Farmhouse Luxembourg | Premium Wholesale CBD — Best Prices"
+  description="Luxembourg's premium CBD wholesale supplier. Buy CBD flowers, resins, oils in bulk at the best wholesale prices. Lab-tested, EU-compliant, next-day delivery."
+  canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-luxembourg"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-sky-50 via-white to-red-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-3xl mb-3">🇱🇺</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Greens Farmhouse Luxembourg — <span class="text-primary">Premium CBD at Wholesale Prices</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Greens Farmhouse supplies Luxembourg's finest retailers with premium 
+        <a href="/collections/cbd-flowers" class="text-primary hover:underline">CBD flowers</a>, 
+        <a href="/collections/cbd-resins" class="text-primary hover:underline">resins</a>, and 
+        <a href="/collections/cbd-oils" class="text-primary hover:underline">oils</a> at unbeatable wholesale prices. 
+        Next-day delivery to Luxembourg City, Esch-sur-Alzette, Differdange, and the entire Grand Duchy.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Wholesale CBD
+        </a>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Luxembourg Retailers Choose Us</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">⚡</span>
+          <h3 class="font-bold text-lg mb-2">Next-Day Delivery</h3>
+          <p class="text-sm text-gray-600">Luxembourg's proximity to our distribution means lightning-fast delivery. Order today, receive tomorrow. Free shipping on all orders over €99.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏆</span>
+          <h3 class="font-bold text-lg mb-2">Premium Quality Selection</h3>
+          <p class="text-sm text-gray-600">Luxembourg's affluent market demands premium products. Our indoor CBD flowers, artisan resins, and high-concentration oils meet the highest standards.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📋</span>
+          <h3 class="font-bold text-lg mb-2">Full EU Compliance</h3>
+          <p class="text-sm text-gray-600">Products compliant with Luxembourg's regulations (&lt;0.3% THC). Complete COA documentation and invoicing for Luxembourg businesses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Premium CBD Flowers — Luxembourg Wholesale</h2>
+      <p class="text-gray-600 mb-8">Luxembourg's discerning retailers choose our premium <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a> for their exceptional quality and aroma. Indoor and greenhouse varieties available.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {flowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Resins & Hash — Luxembourg Wholesale</h2>
+      <p class="text-gray-600 mb-8">Our <a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD resins and hash</a> are perfect for Luxembourg's quality-focused CBD shops. Ranging from traditional to premium artisan products.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {resins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD Wholesale in Luxembourg: Market Insight</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Luxembourg stands out in Europe for its progressive cannabis policy and wealthy, multinational population. As the first 
+          European country to legalize recreational cannabis for personal use (adopted in 2023), Luxembourg represents a forward-thinking 
+          market with enormous potential for CBD retailers.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Luxembourg's CBD Regulatory Environment</h3>
+        <p>
+          Luxembourg allows CBD products with up to 0.3% THC — more permissive than the standard EU 0.2% threshold. This progressive 
+          stance has fostered a growing number of CBD retail outlets in Luxembourg City, Esch-sur-Alzette, and surrounding areas. 
+          The Grand Duchy's central European location also makes it an excellent base for distribution to neighboring 
+          <a href="/cbd-wholesaler-belgium" class="text-primary hover:underline">Belgium</a>, France, and Germany.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Why Luxembourg is a Premium CBD Market</h3>
+        <p>
+          With the highest GDP per capita in the EU and a cosmopolitan population of over 640,000 (45% international residents), 
+          Luxembourg is an ideal market for premium CBD products. Consumers here are willing to pay for quality, lab-tested 
+          <a href="/cbd-wholesaler-organic" class="text-primary hover:underline">organic CBD products</a> and value transparency 
+          in sourcing. Our premium indoor flowers and artisan resins are particularly popular with Luxembourgish retailers.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Distribution & Logistics</h3>
+        <p>
+          Luxembourg's compact geography means we can reach every corner of the Grand Duchy with next-day delivery. Whether you 
+          run a CBD shop in Luxembourg City's Gare district, a wellness boutique in Kirchberg, or an online store, we deliver 
+          quickly and discreetly. Read our <a href="/blog/how-to-start-cbd-business" class="text-primary hover:underline">guide to starting a CBD business</a> 
+          for tips on entering the Luxembourg market, or explore our full <a href="/collections" class="text-primary hover:underline">product catalog</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Wholesale Luxembourg — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Start Selling CBD in Luxembourg</h2>
+      <p class="text-green-100 mb-6">Premium wholesale CBD products with next-day delivery throughout the Grand Duchy.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Shop Now</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

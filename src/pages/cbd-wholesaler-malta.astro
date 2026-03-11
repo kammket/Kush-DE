@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Greens Farmhouse Malta" },
+];
+
+const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const oils = getProductsByCategory('cbd-oils').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Greens Farmhouse Malta — Premium Wholesale CBD Products",
+  "description": "Malta's trusted CBD wholesale supplier. Premium CBD flowers, oils, resins at the best wholesale prices. Lab-tested, EU-compliant, delivery to Malta & Gozo.",
+  "url": "https://greensfarmhouse.com/cbd-wholesaler-malta",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "Is CBD legal in Malta?",
+    answer: "Yes. Malta has one of the most progressive cannabis laws in the EU. In 2021, Malta became the first EU country to legalize recreational cannabis for personal use. CBD products with less than 0.2% THC are fully legal for retail sale. This liberal regulatory environment makes Malta an excellent market for CBD businesses."
+  },
+  {
+    question: "How fast is delivery to Malta?",
+    answer: "We deliver to Malta within 3-5 business days, including both the main island of Malta and Gozo. Express shipping options are available for the major areas including Valletta, Sliema, St. Julian's, and Birkirkara. Free delivery on orders over €99."
+  },
+  {
+    question: "What CBD products sell best in Malta?",
+    answer: "Malta's warm climate and tourism-driven economy create strong demand for CBD oils (popular for wellness), CBD flowers (popular with locals), and CBD edibles. The growing number of CBD shops and pharmacies in Valletta, Sliema, and the central tourist areas are fueling demand."
+  },
+  {
+    question: "Can I open a CBD shop in Malta?",
+    answer: "Yes, Malta's liberal cannabis legislation makes it one of the easiest EU countries to start a CBD business. You'll need a standard business license and to ensure all products meet the 0.2% THC limit. We provide full documentation and compliance support for Maltese businesses."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Greens Farmhouse Malta | Wholesale CBD Flowers, Oils & Resins — Best Prices"
+  description="Malta's premier CBD wholesale supplier. Premium CBD flowers, resins, oils at unbeatable wholesale prices. Lab-tested, EU-compliant. Delivery to Malta & Gozo."
+  canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-malta"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-red-50 via-white to-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-3xl mb-3">🇲🇹</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Greens Farmhouse Malta — <span class="text-primary">Europe's Most Progressive CBD Market</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Malta was the first EU country to legalize cannabis. Our wholesale  
+        <a href="/collections/cbd-flowers" class="text-primary hover:underline">CBD flowers</a>, 
+        <a href="/collections/cbd-oils" class="text-primary hover:underline">oils</a>, and 
+        <a href="/collections/cbd-resins" class="text-primary hover:underline">resins</a> 
+        are delivered directly to Valletta, Sliema, St. Julian's, Birkirkara, and across Malta & Gozo.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Wholesale CBD
+        </a>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Request Maltese Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Malta Advantages -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Malta is Europe's CBD Opportunity</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏛️</span>
+          <h3 class="font-bold text-lg mb-2">First EU Legalization</h3>
+          <p class="text-sm text-gray-600">Malta legalized recreational cannabis in 2021 — the first EU nation to do so. This pioneering stance creates a uniquely open environment for CBD retail and wholesale.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏖️</span>
+          <h3 class="font-bold text-lg mb-2">Tourism-Driven Demand</h3>
+          <p class="text-sm text-gray-600">With over 3 million tourists annually, Malta's retail market enjoys year-round demand. CBD shops in tourist areas see significant international customer traffic.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🌍</span>
+          <h3 class="font-bold text-lg mb-2">English-Speaking Market</h3>
+          <p class="text-sm text-gray-600">Malta is officially English-speaking, making it easy to do business. No language barriers for marketing, documentation, or customer communication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Flowers — Malta Wholesale</h2>
+      <p class="text-gray-600 mb-8">Premium <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a> for Malta's growing retail market. Indoor and greenhouse varieties with rich terpene profiles.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {flowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Oils — Malta Wholesale</h2>
+      <p class="text-gray-600 mb-8"><a href="/collections/cbd-oils" class="text-primary hover:underline font-medium">CBD oils</a> are a top seller in Maltese pharmacies and wellness stores. Available in 5%, 10%, and 20% concentrations at wholesale prices.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {oils.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-oils" class="text-primary font-semibold hover:underline">Browse all CBD Oils →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD Wholesale in Malta: Market Overview</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Malta made history in December 2021 as the first European Union member state to legalize recreational cannabis 
+          for personal use. This landmark legislation, combined with Malta's thriving tourism industry and English-speaking 
+          population, has created one of Europe's most exciting CBD markets. For wholesale buyers, Malta represents 
+          an exceptional opportunity.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Malta's Cannabis Legislation</h3>
+        <p>
+          Under Malta's Responsible Use of Cannabis Act, adults can possess up to 7 grams of cannabis and grow up to 
+          4 plants at home. CBD products with less than 0.2% THC remain legal for retail sale through standard 
+          channels. The Authority on the Responsible Use of Cannabis (ARUC) oversees regulation. This forward-thinking 
+          approach has encouraged new CBD shops to open across the islands.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">The Maltese CBD Retail Landscape</h3>
+        <p>
+          Malta's compact geography (316 km²) means a concentrated, accessible market. CBD retail is booming in 
+          commercial areas like Sliema, St. Julian's, Valletta, and Birkirkara. <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">Tobacco shops</a> 
+          and pharmacies are increasingly stocking CBD oils and flowers. The tourist strip along the eastern coast provides 
+          year-round international customer traffic — a unique advantage for Maltese CBD retailers.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Getting Started in Malta</h3>
+        <p>
+          Whether you're an established Maltese retailer looking to expand your CBD range or an entrepreneur 
+          <a href="/blog/how-to-start-cbd-business" class="text-primary hover:underline">starting a new CBD business</a>, 
+          we're your ideal wholesale partner. Explore our <a href="/cbd-wholesaler-organic" class="text-primary hover:underline">organic CBD range</a>, 
+          browse our full <a href="/collections" class="text-primary hover:underline">product catalog</a>, or 
+          <a href="/contact" class="text-primary hover:underline">contact us</a> for a personalized quote. We also serve 
+          neighboring markets including <a href="/cbd-wholesaler-spain" class="text-primary hover:underline">Spain</a> and Italy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Wholesale Malta — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Start Your CBD Business in Malta</h2>
+      <p class="text-green-100 mb-6">Premium wholesale CBD with delivery to Malta & Gozo. No minimum order.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Shop Now</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

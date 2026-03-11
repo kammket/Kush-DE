@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { blogPosts, getBlogPostBySlug } from '../../../data/blog';
+import { supportedLocales, type Locale } from '../../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  const paths: any[] = [];
+  for (const lang of supportedLocales) {
+    for (const post of blogPosts) {
+      paths.push({ params: { lang, slug: post.slug }, props: { lang, slug: post.slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+const post = getBlogPostBySlug(slug);
+if (!post) return Astro.redirect(lp('/blog'));
+
+// Translated blog post titles and meta descriptions for SEO
+const blogMeta: Record<string, Record<string, { title: string; excerpt: string }>> = {
+  'how-to-start-cbd-business': {
+    es: { title: 'Cómo Iniciar un Negocio de CBD en Europa: Guía Completa 2026', excerpt: 'Todo lo que necesitas saber para lanzar un negocio de CBD exitoso en Europa, desde regulaciones hasta proveedores mayoristas.' },
+    fr: { title: 'Comment Lancer un Business CBD en Europe : Guide Complet 2026', excerpt: 'Tout ce qu\'il faut savoir pour lancer une activité CBD en Europe, des réglementations à l\'approvisionnement grossiste.' },
+    de: { title: 'CBD-Geschäft in Europa starten: Kompletter Leitfaden 2026', excerpt: 'Alles, was Sie über die Gründung eines erfolgreichen CBD-Geschäfts in Europa wissen müssen — von Vorschriften bis Großhandel.' },
+    nl: { title: 'CBD-Bedrijf Starten in Europa: Complete Gids 2026', excerpt: 'Alles wat u moet weten om een succesvol CBD-bedrijf in Europa te starten, van regelgeving tot groothandel.' },
+    it: { title: 'Come Avviare un Business CBD in Europa: Guida Completa 2026', excerpt: 'Tutto ciò che devi sapere per avviare un\'attività CBD di successo in Europa, dalle normative ai fornitori all\'ingrosso.' },
+    fi: { title: 'CBD-liiketoiminnan Aloittaminen Euroopassa: Täydellinen Opas 2026', excerpt: 'Kaikki mitä sinun tarvitsee tietää menestyksellisen CBD-liiketoiminnan käynnistämisestä Euroopassa.' },
+    pt: { title: 'Como Iniciar um Negócio de CBD na Europa: Guia Completo 2026', excerpt: 'Tudo o que precisa saber para lançar um negócio CBD de sucesso na Europa, desde regulamentações até fornecedores grossistas.' },
+  },
+  'cbd-flowers-vs-resins-guide': {
+    es: { title: 'Flores CBD vs Resinas CBD: ¿Cuál es Mejor para tu Tienda?', excerpt: 'Comparativa completa entre flores y resinas CBD para ayudar a compradores mayoristas a elegir los mejores productos para sus clientes.' },
+    fr: { title: 'Fleurs CBD vs Résines CBD : Quel Choix pour Votre Boutique ?', excerpt: 'Comparaison complète entre fleurs et résines CBD pour aider les acheteurs grossistes à choisir les meilleurs produits.' },
+    de: { title: 'CBD-Blüten vs CBD-Harze: Was ist Besser für Ihren Shop?', excerpt: 'Umfassender Vergleich von CBD-Blüten und -Harzen für Großhändler. Inklusive Margenanalyse.' },
+    nl: { title: 'CBD-Bloemen vs CBD-Harsen: Wat Past bij Uw Winkel?', excerpt: 'Uitgebreide vergelijking van CBD-bloemen en -harsen om groothandelskopers te helpen de beste producten te kiezen.' },
+    it: { title: 'Fiori CBD vs Resine CBD: Quale Scegliere per il Tuo Negozio?', excerpt: 'Confronto completo tra fiori e resine CBD per aiutare i grossisti a scegliere i migliori prodotti per i loro clienti.' },
+    fi: { title: 'CBD-kukat vs CBD-hartsit: Kumpi Sopii Kauppaasi?', excerpt: 'Kattava vertailu CBD-kukista ja -hartseista tukkuostajille. Sisältää katemargiinianalyysin.' },
+    pt: { title: 'Flores CBD vs Resinas CBD: Qual é Melhor para a Sua Loja?', excerpt: 'Comparação completa entre flores e resinas CBD para ajudar compradores grossistas a escolher os melhores produtos.' },
+  },
+  'cbd-oil-wholesale-buying-guide': {
+    es: { title: 'Guía Completa para Comprar Aceite CBD al por Mayor 2026', excerpt: 'Aprenda a evaluar la calidad del aceite CBD, entender análisis de laboratorio y maximizar sus márgenes en compras mayoristas.' },
+    fr: { title: 'Guide d\'Achat Huile CBD en Gros : Tout Savoir en 2026', excerpt: 'Apprenez à évaluer la qualité des huiles CBD, comprendre les rapports de laboratoire et maximiser vos marges.' },
+    de: { title: 'CBD-Öl Großhandel Einkaufsführer 2026', excerpt: 'Lernen Sie, CBD-Öl-Qualität zu bewerten, Laborberichte zu verstehen und Ihre Margen beim Großhandelskauf zu maximieren.' },
+    nl: { title: 'CBD-Olie Groothandel Koopgids 2026', excerpt: 'Leer CBD-oliekwaliteit beoordelen, labrapporten begrijpen en uw marges maximaliseren bij groothandelsinkoop.' },
+    it: { title: 'Guida all\'Acquisto di Olio CBD all\'Ingrosso 2026', excerpt: 'Scopri come valutare la qualità dell\'olio CBD, leggere i report di laboratorio e massimizzare i margini sugli acquisti.' },
+    fi: { title: 'CBD-öljyn Tukkuosto-opas 2026', excerpt: 'Opi arvioimaan CBD-öljyn laatua, ymmärtämään laboratorioraportteja ja maksimoimaan katteesi tukkuostoissa.' },
+    pt: { title: 'Guia de Compra de Óleo CBD por Grosso 2026', excerpt: 'Aprenda a avaliar a qualidade do óleo CBD, entender relatórios laboratoriais e maximizar as suas margens.' },
+  },
+  'european-cbd-regulations-2024': {
+    es: { title: 'Regulaciones CBD en Europa 2026: Lo que los Minoristas Deben Saber', excerpt: 'Mantente al día con las últimas regulaciones CBD en Europa. Desglose país por país de límites de THC y requisitos legales.' },
+    fr: { title: 'Réglementations CBD en Europe 2026 : Ce que les Détaillants Doivent Savoir', excerpt: 'Restez conforme avec les dernières réglementations CBD en Europe. Analyse pays par pays des limites THC et exigences légales.' },
+    de: { title: 'CBD-Vorschriften in Europa 2026: Was Einzelhändler Wissen Müssen', excerpt: 'Bleiben Sie konform mit den neuesten CBD-Vorschriften in Europa. Länderweise Aufschlüsselung der THC-Grenzwerte und rechtlichen Anforderungen.' },
+    nl: { title: 'CBD-Regelgeving in Europa 2026: Wat Retailers Moeten Weten', excerpt: 'Blijf op de hoogte van de laatste CBD-regelgeving in Europa. Land-voor-land overzicht van THC-limieten en wettelijke vereisten.' },
+    it: { title: 'Normative CBD in Europa 2026: Cosa Devono Sapere i Rivenditori', excerpt: 'Rimani conforme con le ultime normative CBD in Europa. Analisi paese per paese dei limiti THC e requisiti legali.' },
+    fi: { title: 'CBD-säädökset Euroopassa 2026: Mitä Jälleenmyyjien Tulee Tietää', excerpt: 'Pysy ajan tasalla Euroopan uusimmista CBD-säädöksistä. Maakohtainen erittely THC-rajoista ja lakivaatimuksista.' },
+    pt: { title: 'Regulamentações CBD na Europa 2026: O que os Retalhistas Devem Saber', excerpt: 'Mantenha-se em conformidade com as últimas regulamentações CBD na Europa. Análise país a país dos limites de THC.' },
+  },
+  'manage-cbd-wholesale-stock': {
+    es: { title: 'Cómo Gestionar tu Stock de CBD Mayorista Eficazmente 2026', excerpt: 'Domina la gestión de inventario CBD con nuestra guía experta. Rotación de stock, previsión de demanda y mejores prácticas de almacenamiento.' },
+    fr: { title: 'Comment Gérer Votre Stock CBD Grossiste Efficacement en 2026', excerpt: 'Maîtrisez la gestion de stock CBD avec notre guide expert. Rotation, prévision de la demande et bonnes pratiques de stockage.' },
+    de: { title: 'CBD-Großhandelsbestand Effektiv Verwalten 2026', excerpt: 'Meistern Sie die CBD-Bestandsverwaltung mit unserem Expertenguide. Lagerrotation, Nachfrageprognose und Best Practices.' },
+    nl: { title: 'CBD-Groothandel Voorraad Effectief Beheren 2026', excerpt: 'Beheers CBD-voorraadbeheer met onze expertgids. Voorraadrotatie, vraagvoorspelling en beste opslagpraktijken.' },
+    it: { title: 'Come Gestire lo Stock CBD all\'Ingrosso Efficacemente 2026', excerpt: 'Padroneggia la gestione dell\'inventario CBD con la nostra guida. Rotazione stock, previsione domanda e best practice.' },
+    fi: { title: 'CBD-tukkuvaraston Tehokas Hallinta 2026', excerpt: 'Hallitse CBD-varastonhallinta asiantuntijaoppaallamme. Varastonkierto, kysynnän ennustaminen ja parhaat käytännöt.' },
+    pt: { title: 'Como Gerir o Stock de CBD Grossista Eficazmente 2026', excerpt: 'Domine a gestão de inventário CBD com o nosso guia. Rotação de stock, previsão da procura e melhores práticas.' },
+  },
+  'choose-right-cbd-flower-supplier': {
+    es: { title: 'Cómo Elegir el Proveedor de Flores CBD Correcto: 7 Criterios Clave', excerpt: 'No todos los proveedores de flores CBD son iguales. Aprende los 7 criterios esenciales para evaluar proveedores mayoristas de CBD.' },
+    fr: { title: 'Comment Choisir le Bon Fournisseur de Fleurs CBD : 7 Critères Clés', excerpt: 'Tous les fournisseurs de fleurs CBD ne se valent pas. Découvrez les 7 critères essentiels pour évaluer les grossistes CBD.' },
+    de: { title: 'Den Richtigen CBD-Blüten-Lieferanten Wählen: 7 Schlüsselkriterien', excerpt: 'Nicht alle CBD-Blüten-Lieferanten sind gleich. Lernen Sie die 7 entscheidenden Kriterien zur Bewertung von CBD-Großhändlern.' },
+    nl: { title: 'De Juiste CBD-Bloemen Leverancier Kiezen: 7 Sleutelcriteria', excerpt: 'Niet alle CBD-bloemenleveranciers zijn gelijk. Leer de 7 essentiële criteria om CBD-groothandels te evalueren.' },
+    it: { title: 'Come Scegliere il Giusto Fornitore di Fiori CBD: 7 Criteri Chiave', excerpt: 'Non tutti i fornitori di fiori CBD sono uguali. Scopri i 7 criteri essenziali per valutare i grossisti CBD.' },
+    fi: { title: 'Oikean CBD-kukkatoimittajan Valinta: 7 Avainkriteeriä', excerpt: 'Kaikki CBD-kukkatoimittajat eivät ole samanlaisia. Opi 7 kriittistä kriteeriä CBD-tukkutoimittajien arviointiin.' },
+    pt: { title: 'Como Escolher o Fornecedor de Flores CBD Certo: 7 Critérios Chave', excerpt: 'Nem todos os fornecedores de flores CBD são iguais. Conheça os 7 critérios essenciais para avaliar grossistas CBD.' },
+  },
+  'avoid-mistakes-with-cbd-wholesaler': {
+    es: { title: '5 Errores a Evitar al Elegir un Mayorista de CBD', excerpt: 'No aprendas por las malas. Aquí están los 5 errores más comunes al seleccionar un proveedor mayorista de CBD y cómo evitarlos.' },
+    fr: { title: '5 Erreurs à Éviter avec un Grossiste CBD', excerpt: 'Ne faites pas ces erreurs coûteuses. Voici les 5 erreurs les plus courantes lors du choix d\'un grossiste CBD et comment les éviter.' },
+    de: { title: '5 Fehler bei der Wahl eines CBD-Großhändlers Vermeiden', excerpt: 'Lernen Sie nicht auf die harte Tour. Hier sind die 5 häufigsten Fehler bei der Auswahl eines CBD-Großhändlers.' },
+    nl: { title: '5 Fouten om te Vermijden bij het Kiezen van een CBD-Groothandel', excerpt: 'Leer niet op de harde manier. Dit zijn de 5 meest gemaakte fouten bij het kiezen van een CBD-groothandel.' },
+    it: { title: '5 Errori da Evitare nella Scelta di un Grossista CBD', excerpt: 'Non imparare a tue spese. Ecco i 5 errori più comuni nella scelta di un grossista CBD e come evitarli.' },
+    fi: { title: '5 Virhettä Vältettävänä CBD-tukkumyyjää Valitessa', excerpt: 'Älä opi kantapään kautta. Tässä 5 yleisintä virhettä CBD-tukkutoimittajaa valitessa ja miten ne vältetään.' },
+    pt: { title: '5 Erros a Evitar ao Escolher um Grossista de CBD', excerpt: 'Não aprenda da forma difícil. Aqui estão os 5 erros mais comuns ao escolher um grossista CBD e como evitá-los.' },
+  },
+  'best-selling-cbd-products': {
+    es: { title: 'Productos CBD Más Vendidos en 2026: Qué Deben Tener los Minoristas', excerpt: 'Descubre los productos CBD de mayor rendimiento en 2026. Datos sobre flores, resinas, aceites y comestibles que generan más ventas.' },
+    fr: { title: 'Produits CBD les Plus Vendus en 2026 : Que Stocker en Boutique', excerpt: 'Découvrez les produits CBD les plus performants en 2026. Analyses sur les fleurs, résines, huiles et comestibles les plus rentables.' },
+    de: { title: 'Meistverkaufte CBD-Produkte 2026: Was Händler Lagern Sollten', excerpt: 'Entdecken Sie die umsatzstärksten CBD-Produkte 2026. Datenbasierte Einblicke zu Blüten, Harzen, Ölen und Esswaren.' },
+    nl: { title: 'Bestverkochte CBD-Producten in 2026: Wat Retailers Moeten Inkopen', excerpt: 'Ontdek de best presterende CBD-producten van 2026. Data-gedreven inzichten over bloemen, harsen, oliën en eetbare producten.' },
+    it: { title: 'Prodotti CBD Più Venduti nel 2026: Cosa Dovrebbero Avere i Rivenditori', excerpt: 'Scopri i prodotti CBD più performanti del 2026. Dati su fiori, resine, oli e commestibili che generano più vendite.' },
+    fi: { title: 'Myydyimmät CBD-tuotteet 2026: Mitä Jälleenmyyjien Tulisi Varastoida', excerpt: 'Löydä vuoden 2026 parhaiten myyvät CBD-tuotteet. Datapohjaiset näkemykset kukista, hartseista, öljyistä ja syötävistä.' },
+    pt: { title: 'Produtos CBD Mais Vendidos em 2026: O que os Retalhistas Devem Ter', excerpt: 'Descubra os produtos CBD de melhor desempenho em 2026. Dados sobre flores, resinas, óleos e comestíveis mais rentáveis.' },
+  },
+};
+
+const postMeta = blogMeta[slug]?.[locale];
+const metaTitle = postMeta?.title || post.title;
+const metaExcerpt = postMeta?.excerpt || post.excerpt;
+
+const dateLocale: Record<string, string> = { es: 'es-ES', fr: 'fr-FR', de: 'de-DE', nl: 'nl-NL', it: 'it-IT', fi: 'fi-FI', pt: 'pt-PT' };
+
+const cta: Record<string, any> = {
+  es: { title: '¿Listo para Hacer tu Pedido Mayorista?', desc: 'Únete a más de 5.000 profesionales que confían en Greens Farmhouse.', btnShop: 'Comprar CBD al por Mayor', btnContact: 'Contactar' },
+  fr: { title: 'Prêt à Passer Votre Commande Grossiste ?', desc: 'Rejoignez plus de 5 000 professionnels qui font confiance à Greens Farmhouse.', btnShop: 'Acheter CBD en Gros', btnContact: 'Nous Contacter' },
+  de: { title: 'Bereit für Ihre Großhandelsbestellung?', desc: 'Schließen Sie sich über 5.000 Fachleuten an, die Greens Farmhouse vertrauen.', btnShop: 'CBD Großhandel Kaufen', btnContact: 'Kontaktieren' },
+  nl: { title: 'Klaar om te Bestellen?', desc: 'Sluit u aan bij meer dan 5.000 professionals die vertrouwen op Greens Farmhouse.', btnShop: 'CBD Groothandel Bestellen', btnContact: 'Contact' },
+  it: { title: 'Pronto per il Tuo Ordine all\'Ingrosso?', desc: 'Unisciti a oltre 5.000 professionisti che si affidano a Greens Farmhouse.', btnShop: 'Acquista CBD all\'Ingrosso', btnContact: 'Contattaci' },
+  fi: { title: 'Valmis Tekemään Tukkutilauksen?', desc: 'Liity yli 5 000 ammattilaisen joukkoon, jotka luottavat Greens Farmhouseiin.', btnShop: 'Osta CBD Tukkuhintaan', btnContact: 'Ota Yhteyttä' },
+  pt: { title: 'Pronto para Encomendar por Grosso?', desc: 'Junte-se a mais de 5.000 profissionais que confiam na Greens Farmhouse.', btnShop: 'Comprar CBD por Grosso', btnContact: 'Contactar' },
+};
+
+const relatedLabel: Record<string, string> = {
+  es: 'Artículos Relacionados', fr: 'Articles Connexes', de: 'Verwandte Artikel',
+  nl: 'Gerelateerde Artikelen', it: 'Articoli Correlati', fi: 'Aiheeseen Liittyvät Artikkelit', pt: 'Artigos Relacionados'
+};
+const readMore: Record<string, string> = {
+  es: 'Leer Más', fr: 'Lire la Suite', de: 'Weiterlesen',
+  nl: 'Lees Meer', it: 'Leggi di Più', fi: 'Lue Lisää', pt: 'Ler Mais'
+};
+
+const ct = cta[locale] || cta['es'];
+const related = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
+
+const breadcrumbs = [
+  { name: t(locale, 'nav.home'), url: lp('/') },
+  { name: 'Blog', url: lp('/blog') },
+  { name: metaTitle },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": metaTitle,
+  "description": metaExcerpt,
+  "url": `https://greensfarmhouse.com${lp(`/blog/${post.slug}`)}`,
+  "inLanguage": locale,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" }
+};
+---
+
+<BaseLayout title={`${metaTitle} | Greens Farmhouse`} description={metaExcerpt} locale={locale} jsonLd={jsonLd}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
+
+  <article class="py-8 md:py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <header class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">{post.category}</span>
+          <span class="text-sm text-gray-400">{post.readTime}</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{post.title}</h1>
+        <p class="text-lg text-gray-600 mb-4">{post.excerpt}</p>
+        <time class="text-sm text-gray-400" datetime={post.date}>
+          {new Date(post.date).toLocaleDateString(dateLocale[locale] || 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </header>
+
+      <!-- Content -->
+      <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-a:text-primary mb-12" set:html={post.content} />
+
+      <!-- CTA -->
+      <div class="bg-gradient-to-r from-primary/10 to-green-50 rounded-2xl p-8 text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">{ct.title}</h2>
+        <p class="text-gray-600 mb-6">{ct.desc}</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href={lp('/collections')} class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition-colors">{ct.btnShop}</a>
+          <a href={lp('/contact')} class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary/5 transition-colors">{ct.btnContact}</a>
+        </div>
+      </div>
+
+      <!-- Related -->
+      {related.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">{relatedLabel[locale]}</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            {related.map(r => (
+              <a href={lp(`/blog/${r.slug}`)} class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-shadow group">
+                <span class="text-xs text-primary font-bold">{r.category}</span>
+                <h3 class="font-bold text-gray-900 mt-1 mb-2 line-clamp-2 group-hover:text-primary transition-colors">{r.title}</h3>
+                <p class="text-sm text-gray-500 line-clamp-2">{r.excerpt}</p>
+                <span class="text-primary text-sm font-semibold mt-3 inline-block">{readMore[locale]} →</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- Internal Links -->
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <div class="flex flex-wrap gap-3 justify-center text-sm">
+          <a href={lp('/collections/cbd-flowers')} class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-primary/10 hover:text-primary transition">{t(locale, 'nav.flowers')}</a>
+          <a href={lp('/collections/cbd-resins')} class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-primary/10 hover:text-primary transition">{t(locale, 'nav.resins')}</a>
+          <a href={lp('/collections/cbd-oils')} class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-primary/10 hover:text-primary transition">{t(locale, 'nav.oils')}</a>
+          <a href={lp('/about')} class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-primary/10 hover:text-primary transition">{t(locale, 'nav.about')}</a>
+          <a href={lp('/contact')} class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-primary/10 hover:text-primary transition">{t(locale, 'nav.contact')}</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,288 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD in Tobacco Shops" },
+];
+
+const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const resins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+const oils = getProductsByCategory('cbd-oils').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CBD in Tobacco Shops: The Complete Guide for Tobacconists",
+  "description": "Everything tobacco shop owners need to know about selling CBD products. Regulations, best products, profit margins, and how to get started.",
+  "url": "https://greensfarmhouse.com/cbd-in-tobacco-shops",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com"
+  },
+  "datePublished": "2026-01-15",
+  "dateModified": "2026-01-15"
+};
+
+const faqItems = [
+  {
+    question: "Can I sell CBD in my tobacco shop?",
+    answer: "Yes. In most European countries, tobacco shops (tabacs, bureaux de tabac, estancos, Tabakläden) can legally sell CBD products that contain less than 0.2% THC (0.3% in some countries, 1% in Switzerland). You don't need a special license beyond your existing tobacco retail license. All our CBD products come with the necessary EU compliance documentation."
+  },
+  {
+    question: "What CBD products sell best in tobacco shops?",
+    answer: "The top-selling CBD products in tobacco shops are: (1) CBD flowers — sold by the gram, they appeal to existing tobacco customers; (2) CBD hash/resins — compact, easy to display, high margins; (3) CBD pre-rolls — convenient and popular with younger customers; (4) CBD oils — growing wellness segment, attractive to a broader clientele. We recommend starting with a selection of 5-10 flower strains, 3-4 hash varieties, and 2-3 oil concentrations."
+  },
+  {
+    question: "What are the profit margins on CBD in tobacco shops?",
+    answer: "CBD products typically offer 40-60% profit margins for tobacco shops — significantly higher than traditional tobacco products. For example, CBD flowers purchased wholesale at €1-3/gram can be retailed at €5-12/gram depending on quality and location. CBD oils bought at €3-8/unit wholesale can retail for €15-45. Volume wholesale pricing from us maximizes your margins further."
+  },
+  {
+    question: "How should I display CBD products in my tobacco shop?",
+    answer: "Best practices for CBD display in tobacco shops: (1) Create a dedicated CBD section behind or near the counter; (2) Use clear labeling and pricing; (3) Display lab certificates (COAs) visibly to build trust; (4) Store flowers in airtight containers for freshness; (5) Have tester jars so customers can smell different strains; (6) Position CBD oils and edibles near the health/wellness section if you have one."
+  },
+  {
+    question: "What is the minimum order for tobacco shop owners?",
+    answer: "We have no minimum order requirement. Tobacco shop owners can start small to test customer demand — for example with a €100-200 initial order covering a few flower strains, some hash, and a couple of oil options. Once you see what sells, you can scale up with larger wholesale orders to unlock better pricing tiers."
+  },
+  {
+    question: "Do you provide marketing materials for tobacco shops?",
+    answer: "Yes. We provide point-of-sale materials including product information cards, strain guides, and CBD information leaflets that you can display in your shop. We also offer white-label services if you want to sell CBD under your own tobacco shop brand. Contact us for more details."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="CBD in Tobacco Shops | Complete Guide for Tobacconists — CBD Wholesale"
+  description="Everything tobacco shop owners need to know about selling CBD. Best products, profit margins, regulations, display tips. Start selling CBD in your tabac today."
+  canonicalURL="https://greensfarmhouse.com/cbd-in-tobacco-shops"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-amber-50 via-white to-green-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Guide for Tobacconists</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        CBD in Tobacco Shops — <span class="text-primary">The Complete Business Guide</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Thousands of tobacco shops across Europe are already selling CBD products alongside traditional tobacco. 
+        With profit margins of 40-60%, CBD represents the biggest growth opportunity for tobacconists in a decade. 
+        Here's everything you need to know to start — and succeed.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Wholesale CBD
+        </a>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Get Tobacco Shop Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why CBD in Tobacco Shops -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Tobacco Shops Are Adding CBD</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💰</span>
+          <h3 class="font-bold text-lg mb-2">40-60% Margins</h3>
+          <p class="text-sm text-gray-600">CBD products offer significantly higher margins than traditional tobacco products, which are heavily taxed and regulated.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">👥</span>
+          <h3 class="font-bold text-lg mb-2">Existing Customer Base</h3>
+          <p class="text-sm text-gray-600">Your existing tobacco customers are a natural audience for CBD flowers and pre-rolls. Easy cross-selling opportunity.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📈</span>
+          <h3 class="font-bold text-lg mb-2">Growing Demand</h3>
+          <p class="text-sm text-gray-600">CBD market growing 25% annually in Europe while tobacco is declining. Diversify your revenue stream for the future.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏪</span>
+          <h3 class="font-bold text-lg mb-2">Easy to Start</h3>
+          <p class="text-sm text-gray-600">No special license needed in most EU countries. Start with a small test order and scale based on demand. We support you every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Products for Tobacco Shops -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">#1 — CBD Flowers for Tobacco Shops</h2>
+      <p class="text-gray-600 mb-3 max-w-3xl">
+        <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a> are the #1 selling CBD product in tobacco shops across Europe. 
+        They appeal directly to your existing customer base and offer the highest repeat purchase rate.
+      </p>
+      <p class="text-sm text-gray-500 mb-8">
+        <strong>Wholesale price:</strong> from €0.19/g (greenhouse) to €0.79/g (indoor premium) — <strong>Typical retail:</strong> €5-12/g
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {flowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">#2 — CBD Hash & Resins for Tobacco Shops</h2>
+      <p class="text-gray-600 mb-3 max-w-3xl">
+        <a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD hash and resins</a> are compact, easy to store and display, 
+        and have excellent shelf life. Perfect for tobacco shop counter displays.
+      </p>
+      <p class="text-sm text-gray-500 mb-8">
+        <strong>Wholesale price:</strong> from €0.49/g — <strong>Typical retail:</strong> €8-20/g
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {resins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">#3 — CBD Oils for Tobacco Shops</h2>
+      <p class="text-gray-600 mb-3 max-w-3xl">
+        <a href="/collections/cbd-oils" class="text-primary hover:underline font-medium">CBD oils</a> attract a broader, health-conscious clientele 
+        beyond your traditional tobacco customers. Great for expanding your customer base.
+      </p>
+      <p class="text-sm text-gray-500 mb-8">
+        <strong>Wholesale price:</strong> from €1.50/unit — <strong>Typical retail:</strong> €15-45/bottle
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {oils.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-oils" class="text-primary font-semibold hover:underline">Browse all CBD Oils →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step-by-step Guide -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">How to Start Selling CBD in Your Tobacco Shop</h2>
+      <div class="space-y-6">
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+          <div>
+            <h3 class="font-bold text-lg">Check Local Regulations</h3>
+            <p class="text-gray-600 mt-1">Verify CBD selling regulations in your country. In most EU countries, CBD products with &lt;0.2% THC are legal to sell in tobacco shops without additional licensing. Countries like <a href="/cbd-wholesaler-switzerland" class="text-primary hover:underline">Switzerland</a> allow up to 1% THC, while <a href="/cbd-wholesaler-malta" class="text-primary hover:underline">Malta</a> and <a href="/cbd-wholesaler-luxembourg" class="text-primary hover:underline">Luxembourg</a> have particularly progressive frameworks.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+          <div>
+            <h3 class="font-bold text-lg">Place Your First Test Order</h3>
+            <p class="text-gray-600 mt-1">Start with a small selection: 5-8 CBD flower strains, 2-3 hash varieties, and 2-3 CBD oil concentrations. We have no minimum order — start with €100-200 to test demand. Read our <a href="/blog/how-to-start-cbd-business" class="text-primary hover:underline">complete guide to starting a CBD business</a> for more tips.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+          <div>
+            <h3 class="font-bold text-lg">Set Up Your CBD Display</h3>
+            <p class="text-gray-600 mt-1">Create a dedicated CBD area near your counter. Use airtight jars to preserve flower freshness, display tester jars for customers to smell, and show lab certificates prominently. Good presentation directly impacts sales.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+          <div>
+            <h3 class="font-bold text-lg">Price for Profit</h3>
+            <p class="text-gray-600 mt-1">Apply a 2-5x markup on wholesale prices. Our volume discounts ensure healthy margins even when you're competitive on retail pricing. See our <a href="/blog/cbd-oil-wholesale-buying-guide" class="text-primary hover:underline">wholesale buying guide</a> for pricing strategies.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+          <div>
+            <h3 class="font-bold text-lg">Scale Based on Demand</h3>
+            <p class="text-gray-600 mt-1">Track what sells best and increase those orders. Our tiered wholesale pricing rewards growth: the more you order, the better your per-unit cost. Many tobacco shops go from test orders to €500+/month within 3 months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Country-specific Info -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD in Tobacco Shops Across Europe</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Tobacco shops selling CBD is a growing phenomenon across Europe. Here's how it works in key markets:
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">France — Bureaux de Tabac</h3>
+        <p>
+          France has over 24,000 tobacco shops (bureaux de tabac), and thousands have already added CBD. French tabacs 
+          are authorized to sell CBD products with &lt;0.3% THC following the 2022 regulatory clarification. 
+          CBD flowers are the top category, followed by <a href="/collections/cbd-resins" class="text-primary hover:underline">CBD hash</a> 
+          and <a href="/collections/cbd-oils" class="text-primary hover:underline">oils</a>.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Spain — Estancos</h3>
+        <p>
+          <a href="/cbd-wholesaler-spain" class="text-primary hover:underline">Spain's</a> tobacco monopoly shops (estancos) 
+          are increasingly stocking CBD. With over 13,000 estancos nationwide, this is a massive distribution channel. 
+          Spanish consumers prefer aromatic CBD flowers and CBD-infused products.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Belgium — Tabacs & Night Shops</h3>
+        <p>
+          <a href="/cbd-wholesaler-belgium" class="text-primary hover:underline">Belgian</a> tobacco shops and night shops 
+          (nachtwinkels) are strong CBD retail channels, particularly in Brussels, Antwerp, and Liège. 
+          Belgian demand centers on CBD flowers and hash.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Switzerland — Kiosks & Tabakläden</h3>
+        <p>
+          <a href="/cbd-wholesaler-switzerland" class="text-primary hover:underline">Switzerland</a> pioneered CBD in tobacco 
+          retail. Swiss kiosks and Tabakläden sell CBD as a legal tobacco substitute (with the 1% THC limit). 
+          This model has been so successful it's being replicated across Europe. We supply premium 
+          <a href="/cbd-wholesaler-organic" class="text-primary hover:underline">organic CBD products</a> ideal for Swiss quality standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD in Tobacco Shops — Frequently Asked Questions" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Add CBD to Your Tobacco Shop?</h2>
+      <p class="text-green-100 mb-6">Start small, grow fast. No minimum order. Free delivery over €99. Full support for tobacconists.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse CBD Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Get Tobacconist Quote</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

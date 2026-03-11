@@ -1,0 +1,285 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { supportedLocales, type Locale } from '../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+
+const translations: Record<string, any> = {
+  es: {
+    title: 'Sobre Nosotros | Greens Farmhouse — Proveedor CBD de Confianza en Europa',
+    description: 'Conozca Greens Farmhouse, el principal proveedor mayorista de CBD en Europa. Productos certificados, calidad testada en laboratorio y entrega rápida.',
+    heroTitle: '¿Quiénes', heroHighlight: 'Somos?',
+    heroDesc: 'Greens Farmhouse es un proveedor mayorista líder de productos CBD premium en Francia y Europa. Nos comprometemos a ofrecer flores, resinas, aceites y comestibles CBD de la más alta calidad a precios mayoristas competitivos.',
+    storyTitle: 'Nuestra Historia',
+    storyP1: 'Fundada con pasión por proporcionar productos CBD de alta calidad, Greens Farmhouse se ha convertido rápidamente en uno de los proveedores mayoristas más confiables de Europa.',
+    storyP2: 'Trabajamos directamente con las mejores granjas de cáñamo de Suiza, Italia y otros países europeos para obtener flores, resinas y materias primas que cumplen los más altos estándares de calidad.',
+    storyP3: 'Hoy servimos a miles de clientes profesionales — tiendas CBD, farmacias, estancos, negocios e-commerce y marcas de bienestar.',
+    valuesTitle: 'Nuestros Valores',
+    quality: 'Calidad Primero', qualityDesc: 'Cada producto está testado en laboratorio y certificado según los más altos estándares europeos.',
+    prices: 'Mejores Precios', pricesDesc: 'Abastecimiento directo y operaciones eficientes nos permiten ofrecer los precios mayoristas más competitivos.',
+    delivery: 'Entrega Rápida', deliveryDesc: 'Envío exprés a toda Europa con embalaje discreto. Pedidos enviados en 24-48h.',
+    support: 'Soporte Experto', supportDesc: 'Gestores de cuenta dedicados y servicio al cliente receptivo para apoyar su negocio.',
+    clients: 'Clientes Profesionales', products: 'Productos Premium', countries: 'Países Atendidos', rating: 'Valoración Clientes',
+    certTitle: 'Certificaciones y Conformidad',
+    certDesc: 'Todos nuestros productos cumplen con la regulación europea sobre CBD. Proporcionamos certificados de análisis (COA) de laboratorios independientes para cada producto.',
+    ctaTitle: '¿Listo para Asociarse con Nosotros?',
+    ctaDesc: 'Únase a miles de profesionales en toda Europa que confían en Greens Farmhouse. Contacte hoy para un presupuesto personalizado.',
+  },
+  fr: {
+    title: 'À Propos | Greens Farmhouse — Fournisseur CBD de Confiance en Europe',
+    description: 'Découvrez Greens Farmhouse, le principal fournisseur grossiste de CBD en Europe. Produits certifiés, qualité testée en laboratoire et livraison rapide.',
+    heroTitle: 'Qui Sommes-', heroHighlight: 'Nous ?',
+    heroDesc: 'Greens Farmhouse est un fournisseur grossiste leader de produits CBD premium en France et en Europe. Nous nous engageons à offrir des fleurs, résines, huiles et comestibles CBD de la plus haute qualité à des prix grossiste compétitifs.',
+    storyTitle: 'Notre Histoire',
+    storyP1: 'Fondée avec la passion de fournir des produits CBD de haute qualité, Greens Farmhouse est rapidement devenue l\'un des fournisseurs grossistes les plus fiables d\'Europe.',
+    storyP2: 'Nous travaillons directement avec les meilleures fermes de chanvre de Suisse, d\'Italie et d\'autres pays européens pour obtenir des fleurs, résines et matières premières répondant aux normes de qualité les plus élevées.',
+    storyP3: 'Aujourd\'hui, nous servons des milliers de clients professionnels — boutiques CBD, pharmacies, bureaux de tabac, e-commerces et marques de bien-être.',
+    valuesTitle: 'Nos Valeurs',
+    quality: 'Qualité d\'Abord', qualityDesc: 'Chaque produit est testé en laboratoire et certifié selon les plus hauts standards européens.',
+    prices: 'Meilleurs Prix', pricesDesc: 'L\'approvisionnement direct et des opérations efficaces nous permettent d\'offrir les prix grossiste les plus compétitifs.',
+    delivery: 'Livraison Rapide', deliveryDesc: 'Expédition express dans toute l\'Europe avec emballage discret. Commandes expédiées en 24-48h.',
+    support: 'Support Expert', supportDesc: 'Des gestionnaires de compte dédiés et un service client réactif pour accompagner votre entreprise.',
+    clients: 'Clients Professionnels', products: 'Produits Premium', countries: 'Pays Desservis', rating: 'Note Clients',
+    certTitle: 'Certifications et Conformité',
+    certDesc: 'Tous nos produits sont conformes aux réglementations européennes sur le CBD. Nous fournissons des certificats d\'analyse (COA) de laboratoires indépendants pour chaque produit.',
+    ctaTitle: 'Prêt à Devenir Partenaire ?',
+    ctaDesc: 'Rejoignez des milliers de professionnels à travers l\'Europe qui font confiance à Greens Farmhouse. Contactez-nous pour un devis personnalisé.',
+  },
+  de: {
+    title: 'Über Uns | Greens Farmhouse — Vertrauenswürdiger CBD-Lieferant in Europa',
+    description: 'Erfahren Sie mehr über Greens Farmhouse, Europas führenden CBD-Großhändler. Zertifizierte Produkte, laborgetestete Qualität und schnelle Lieferung.',
+    heroTitle: 'Wer Sind', heroHighlight: 'Wir?',
+    heroDesc: 'Greens Farmhouse ist ein führender Großhandelslieferant von Premium CBD-Produkten in Frankreich und Europa. Wir bieten hochwertigste CBD-Blüten, Harze, Öle und Esswaren zu wettbewerbsfähigen Großhandelspreisen.',
+    storyTitle: 'Unsere Geschichte',
+    storyP1: 'Gegründet mit der Leidenschaft für hochwertige CBD-Produkte, hat sich Greens Farmhouse schnell zu einem der vertrauenswürdigsten Großhändler in Europa entwickelt.',
+    storyP2: 'Wir arbeiten direkt mit den besten Hanffarmen in der Schweiz, Italien und anderen europäischen Ländern zusammen, um Blüten, Harze und Rohstoffe höchster Qualität zu beziehen.',
+    storyP3: 'Heute bedienen wir Tausende professioneller Kunden — CBD-Shops, Apotheken, Tabakläden, E-Commerce-Unternehmen und Wellness-Marken.',
+    valuesTitle: 'Unsere Werte',
+    quality: 'Qualität Zuerst', qualityDesc: 'Jedes Produkt wird laborgetestet und nach den höchsten europäischen Qualitätsstandards zertifiziert.',
+    prices: 'Beste Preise', pricesDesc: 'Direktbeschaffung und effiziente Abläufe ermöglichen uns die wettbewerbsfähigsten Großhandelspreise.',
+    delivery: 'Schnelle Lieferung', deliveryDesc: 'Expressversand in ganz Europa mit diskreter Verpackung. Bestellungen werden in 24-48h versandt.',
+    support: 'Fachkundiger Support', supportDesc: 'Dedizierte Account-Manager und reaktionsschneller Kundenservice für Ihr Geschäft.',
+    clients: 'Professionelle Kunden', products: 'Premium-Produkte', countries: 'Belieferte Länder', rating: 'Kundenbewertung',
+    certTitle: 'Zertifizierungen & Konformität',
+    certDesc: 'Alle Produkte entsprechen den europäischen CBD-Vorschriften. Wir stellen für jedes Produkt Analysezertifikate (COA) von unabhängigen Laboren bereit.',
+    ctaTitle: 'Bereit für eine Partnerschaft?',
+    ctaDesc: 'Schließen Sie sich Tausenden von Fachleuten in ganz Europa an. Kontaktieren Sie uns für ein individuelles Angebot.',
+  },
+  nl: {
+    title: 'Over Ons | Greens Farmhouse — Betrouwbare CBD-Leverancier in Europa',
+    description: 'Leer meer over Greens Farmhouse, Europa\'s toonaangevende CBD-groothandel. Gecertificeerde producten, labgeteste kwaliteit en snelle levering.',
+    heroTitle: 'Wie Zijn', heroHighlight: 'Wij?',
+    heroDesc: 'Greens Farmhouse is een toonaangevende groothandelsleverancier van premium CBD-producten in Frankrijk en Europa. Wij bieden CBD-bloemen, harsen, oliën en eetwaren van de hoogste kwaliteit tegen concurrerende groothandelsprijzen.',
+    storyTitle: 'Ons Verhaal',
+    storyP1: 'Opgericht met passie voor hoogwaardige CBD-producten, is Greens Farmhouse snel uitgegroeid tot een van de meest betrouwbare groothandels in Europa.',
+    storyP2: 'Wij werken rechtstreeks samen met de beste hennepboerderijen in Zwitserland, Italië en andere Europese landen voor bloemen, harsen en grondstoffen van de hoogste kwaliteit.',
+    storyP3: 'Vandaag bedienen wij duizenden professionele klanten — CBD-winkels, apotheken, tabakswinkels, e-commercebedrijven en wellnessmerken.',
+    valuesTitle: 'Onze Waarden',
+    quality: 'Kwaliteit Eerst', qualityDesc: 'Elk product is labgetest en gecertificeerd volgens de hoogste Europese kwaliteitsnormen.',
+    prices: 'Beste Prijzen', pricesDesc: 'Directe inkoop en efficiënte operaties stellen ons in staat de meest concurrerende groothandelsprijzen te bieden.',
+    delivery: 'Snelle Levering', deliveryDesc: 'Expresverzending door heel Europa met discrete verpakking. Bestellingen verzonden in 24-48u.',
+    support: 'Deskundige Ondersteuning', supportDesc: 'Toegewijde accountmanagers en responsieve klantenservice voor uw bedrijf.',
+    clients: 'Professionele Klanten', products: 'Premium Producten', countries: 'Bediende Landen', rating: 'Klantbeoordeling',
+    certTitle: 'Certificeringen & Conformiteit',
+    certDesc: 'Al onze producten voldoen aan de Europese CBD-regelgeving. Wij leveren analysecertificaten (COA) van onafhankelijke laboratoria voor elk product.',
+    ctaTitle: 'Klaar om Partner te Worden?',
+    ctaDesc: 'Sluit u aan bij duizenden professionals in heel Europa. Neem contact op voor een offerte op maat.',
+  },
+  it: {
+    title: 'Chi Siamo | Greens Farmhouse — Fornitore CBD Affidabile in Europa',
+    description: 'Scopri Greens Farmhouse, il principale fornitore all\'ingrosso di CBD in Europa. Prodotti certificati, qualità testata in laboratorio e consegna veloce.',
+    heroTitle: 'Chi', heroHighlight: 'Siamo?',
+    heroDesc: 'Greens Farmhouse è un fornitore all\'ingrosso leader di prodotti CBD premium in Francia e in Europa. Ci impegniamo a offrire fiori, resine, oli e commestibili CBD della massima qualità a prezzi all\'ingrosso competitivi.',
+    storyTitle: 'La Nostra Storia',
+    storyP1: 'Fondata con la passione di fornire prodotti CBD di alta qualità, Greens Farmhouse è rapidamente diventata uno dei grossisti più affidabili d\'Europa.',
+    storyP2: 'Lavoriamo direttamente con le migliori fattorie di canapa in Svizzera, Italia e altri paesi europei per ottenere fiori, resine e materie prime della massima qualità.',
+    storyP3: 'Oggi serviamo migliaia di clienti professionali — negozi CBD, farmacie, tabaccherie, e-commerce e marchi di benessere.',
+    valuesTitle: 'I Nostri Valori',
+    quality: 'Qualità Prima di Tutto', qualityDesc: 'Ogni prodotto è testato in laboratorio e certificato secondo i più alti standard europei.',
+    prices: 'Migliori Prezzi', pricesDesc: 'L\'approvvigionamento diretto ci permette di offrire i prezzi all\'ingrosso più competitivi.',
+    delivery: 'Consegna Veloce', deliveryDesc: 'Spedizione express in tutta Europa con imballaggio discreto. Ordini spediti in 24-48h.',
+    support: 'Supporto Esperto', supportDesc: 'Account manager dedicati e servizio clienti reattivo per supportare il vostro business.',
+    clients: 'Clienti Professionali', products: 'Prodotti Premium', countries: 'Paesi Serviti', rating: 'Valutazione Clienti',
+    certTitle: 'Certificazioni e Conformità',
+    certDesc: 'Tutti i nostri prodotti sono conformi alle normative europee sul CBD. Forniamo certificati di analisi (COA) da laboratori indipendenti per ogni prodotto.',
+    ctaTitle: 'Pronti a Collaborare?',
+    ctaDesc: 'Unitevi a migliaia di professionisti in tutta Europa. Contattateci per un preventivo personalizzato.',
+  },
+  fi: {
+    title: 'Tietoa Meistä | Greens Farmhouse — Luotettu CBD-toimittaja Euroopassa',
+    description: 'Tutustu Greens Farmhouseiin, Euroopan johtavaan CBD-tukkumyyjään. Sertifioidut tuotteet, laboratoriotestattu laatu ja nopea toimitus.',
+    heroTitle: 'Keitä Me', heroHighlight: 'Olemme?',
+    heroDesc: 'Greens Farmhouse on johtava premium CBD-tuotteiden tukkutoimittaja Ranskassa ja Euroopassa. Tarjoamme korkeimman laadun CBD-kukkia, hartseja, öljyjä ja syötäviä kilpailukykyisiin tukkuhintoihin.',
+    storyTitle: 'Tarinamme',
+    storyP1: 'Perustettu intohimosta tarjota korkealaatuisia CBD-tuotteita, Greens Farmhouse on nopeasti kasvanut yhdeksi Euroopan luotetuimmista tukkutoimittajista.',
+    storyP2: 'Työskentelemme suoraan parhaiden hamppuviljelyiden kanssa Sveitsissä, Italiassa ja muissa Euroopan maissa saadaksemme korkeimman laadun kukkia, hartseja ja raaka-aineita.',
+    storyP3: 'Tänään palvelemme tuhansia ammattimaisia asiakkaita — CBD-kauppoja, apteekkeja, tupakkakauppoja, verkkokauppoja ja hyvinvointibrändejä.',
+    valuesTitle: 'Arvomme',
+    quality: 'Laatu Ensin', qualityDesc: 'Jokainen tuote on laboratoriotestattu ja sertifioitu korkeimpien eurooppalaisten standardien mukaan.',
+    prices: 'Parhaat Hinnat', pricesDesc: 'Suora hankinta ja tehokkaat toiminnot mahdollistavat kilpailukykyisimmät tukkuhinnat.',
+    delivery: 'Nopea Toimitus', deliveryDesc: 'Pikakuljetus koko Eurooppaan huomaamattomalla pakkauksella. Tilaukset lähetetään 24-48h kuluessa.',
+    support: 'Asiantunteva Tuki', supportDesc: 'Oma asiakasvastaava ja reagoiva asiakaspalvelu liiketoimintasi tueksi.',
+    clients: 'Ammattiasiakkaat', products: 'Premium-tuotteet', countries: 'Palveltuja Maita', rating: 'Asiakasarvio',
+    certTitle: 'Sertifioinnit ja Vaatimustenmukaisuus',
+    certDesc: 'Kaikki tuotteemme noudattavat EU:n CBD-säädöksiä. Tarjoamme jokaiselle tuotteelle riippumattomien laboratorioiden analyysitodistukset (COA).',
+    ctaTitle: 'Valmis Yhteistyöhön?',
+    ctaDesc: 'Liity tuhansien Euroopan ammattilaisten joukkoon. Ota yhteyttä henkilökohtaisen tarjouksen saamiseksi.',
+  },
+  pt: {
+    title: 'Sobre Nós | Greens Farmhouse — Fornecedor CBD de Confiança na Europa',
+    description: 'Conheça Greens Farmhouse, o principal fornecedor grossista de CBD na Europa. Produtos certificados, qualidade testada em laboratório e entrega rápida.',
+    heroTitle: 'Quem', heroHighlight: 'Somos?',
+    heroDesc: 'Greens Farmhouse é um fornecedor grossista líder de produtos CBD premium em França e na Europa. Oferecemos flores, resinas, óleos e comestíveis CBD da mais alta qualidade a preços grossistas competitivos.',
+    storyTitle: 'A Nossa História',
+    storyP1: 'Fundada com a paixão de fornecer produtos CBD de alta qualidade, Greens Farmhouse tornou-se rapidamente um dos grossistas mais confiáveis da Europa.',
+    storyP2: 'Trabalhamos diretamente com as melhores quintas de cânhamo na Suíça, Itália e outros países europeus para obter flores, resinas e matérias-primas da mais alta qualidade.',
+    storyP3: 'Hoje servimos milhares de clientes profissionais — lojas CBD, farmácias, tabacarias, negócios e-commerce e marcas de bem-estar.',
+    valuesTitle: 'Os Nossos Valores',
+    quality: 'Qualidade em Primeiro', qualityDesc: 'Cada produto é testado em laboratório e certificado segundo os mais altos padrões europeus.',
+    prices: 'Melhores Preços', pricesDesc: 'O abastecimento direto permite-nos oferecer os preços grossistas mais competitivos.',
+    delivery: 'Entrega Rápida', deliveryDesc: 'Envio expresso para toda a Europa com embalagem discreta. Encomendas enviadas em 24-48h.',
+    support: 'Suporte Especializado', supportDesc: 'Gestores de conta dedicados e serviço ao cliente reativo para apoiar o seu negócio.',
+    clients: 'Clientes Profissionais', products: 'Produtos Premium', countries: 'Países Servidos', rating: 'Avaliação Clientes',
+    certTitle: 'Certificações e Conformidade',
+    certDesc: 'Todos os nossos produtos cumprem a regulamentação europeia sobre CBD. Fornecemos certificados de análise (COA) de laboratórios independentes para cada produto.',
+    ctaTitle: 'Pronto para Ser Nosso Parceiro?',
+    ctaDesc: 'Junte-se a milhares de profissionais em toda a Europa. Contacte-nos para um orçamento personalizado.',
+  },
+};
+
+const tr = translations[locale] || translations.en || {};
+
+const breadcrumbs = [
+  { name: t(locale, 'nav.home'), url: lp('/') },
+  { name: t(locale, 'nav.about') },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": tr.title,
+  "description": tr.description,
+  "url": getAbsoluteLocaleUrl(locale, '/about'),
+  "inLanguage": locale,
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com",
+    "foundingDate": "2020",
+  }
+};
+---
+
+<BaseLayout title={tr.title} description={tr.description} locale={locale} jsonLd={jsonLd}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
+
+  <section class="py-12 md:py-16 bg-gradient-to-br from-primary/5 to-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">{tr.heroTitle} <span class="text-primary">{tr.heroHighlight}</span></h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed">{tr.heroDesc}</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{tr.storyTitle}</h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed">
+            <p>{tr.storyP1}</p>
+            <p>{tr.storyP2}</p>
+            <p>{tr.storyP3}</p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-primary/15 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
+          <div class="text-center">
+            <svg class="w-24 h-24 mx-auto text-primary/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            <p class="text-primary/60 font-semibold">Greens Farmhouse HQ</p>
+            <p class="text-primary/40 text-sm">Serving Europe Since 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">{tr.valuesTitle}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">{tr.quality}</h3>
+          <p class="text-sm text-gray-600">{tr.qualityDesc}</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">{tr.prices}</h3>
+          <p class="text-sm text-gray-600">{tr.pricesDesc}</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">{tr.delivery}</h3>
+          <p class="text-sm text-gray-600">{tr.deliveryDesc}</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">{tr.support}</h3>
+          <p class="text-sm text-gray-600">{tr.supportDesc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <div class="p-6"><p class="text-3xl md:text-4xl font-extrabold text-primary">5000+</p><p class="text-sm text-gray-600 mt-1">{tr.clients}</p></div>
+        <div class="p-6"><p class="text-3xl md:text-4xl font-extrabold text-primary">100+</p><p class="text-sm text-gray-600 mt-1">{tr.products}</p></div>
+        <div class="p-6"><p class="text-3xl md:text-4xl font-extrabold text-primary">30+</p><p class="text-sm text-gray-600 mt-1">{tr.countries}</p></div>
+        <div class="p-6"><p class="text-3xl md:text-4xl font-extrabold text-primary">4.8/5</p><p class="text-sm text-gray-600 mt-1">{tr.rating}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{tr.certTitle}</h2>
+      <p class="text-gray-600 mb-8 leading-relaxed">{tr.certDesc}</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        {['Lab Tested', 'EU Compliant', 'THC < 0.3%', 'COA Available', 'Non-GMO', 'Organic'].map(badge => (
+          <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+            <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+            {badge}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{tr.ctaTitle}</h2>
+      <p class="text-gray-600 mb-8">{tr.ctaDesc}</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={lp('/contact')} class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition">{t(locale, 'common.contactUs')}</a>
+        <a href={lp('/collections')} class="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary/5 transition">{t(locale, 'common.browseProducts')}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

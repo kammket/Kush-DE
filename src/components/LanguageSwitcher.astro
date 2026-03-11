@@ -1,0 +1,76 @@
+---
+import { allLocales, localeNames, localeFlags, type Locale } from '../i18n/config';
+import { getLocalePath, getPathWithoutLocale } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const currentPath = getPathWithoutLocale(Astro.url.pathname);
+---
+
+<div class="language-switcher relative">
+  <button
+    id="lang-switcher-btn"
+    type="button"
+    class="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium text-gray-700"
+    aria-expanded="false"
+    aria-haspopup="true"
+    aria-label="Select language"
+  >
+    <span class="text-base leading-none">{localeFlags[locale]}</span>
+    <span class="hidden sm:inline text-xs uppercase">{locale}</span>
+    <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <div
+    id="lang-dropdown"
+    class="hidden absolute right-0 top-full mt-1 w-44 bg-white rounded-xl border border-gray-200 shadow-lg z-50 py-1 overflow-hidden"
+    role="menu"
+  >
+    {allLocales.map((loc) => (
+      <a
+        href={getLocalePath(currentPath, loc)}
+        class={`flex items-center gap-2.5 px-3 py-2 text-sm transition-colors ${
+          loc === locale ? 'bg-primary/5 text-primary font-semibold' : 'text-gray-700 hover:bg-gray-50'
+        }`}
+        role="menuitem"
+        hreflang={loc}
+      >
+        <span class="text-base leading-none">{localeFlags[loc]}</span>
+        <span>{localeNames[loc]}</span>
+        {loc === locale && (
+          <svg class="w-4 h-4 ml-auto text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        )}
+      </a>
+    ))}
+  </div>
+</div>
+
+<script>
+  function initLangSwitcher() {
+    const btn = document.getElementById('lang-switcher-btn');
+    const dropdown = document.getElementById('lang-dropdown');
+    if (!btn || !dropdown) return;
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = !dropdown.classList.contains('hidden');
+      dropdown.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    document.addEventListener('click', () => {
+      dropdown.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  initLangSwitcher();
+  document.addEventListener('astro:after-swap', initLangSwitcher);
+</script>

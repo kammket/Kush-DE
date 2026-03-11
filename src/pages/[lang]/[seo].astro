@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import FAQ from '../../components/FAQ.astro';
+import { getProductsByCategory } from '../../data/products';
+import { supportedLocales, type Locale } from '../../i18n/config';
+import { getLocalePath } from '../../i18n/utils';
+import { seoPages, seoTranslations, getSeoPageData } from '../../data/translations/seo-pages';
+
+export function getStaticPaths() {
+  const paths: { params: { lang: string; seo: string }; props: { lang: string; seo: string } }[] = [];
+  for (const locale of supportedLocales) {
+    for (const page of seoPages) {
+      paths.push({ params: { lang: locale, seo: page.slug }, props: { lang: locale, seo: page.slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, seo } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+
+const pageData = getSeoPageData(seo)!;
+const tr = seoTranslations[seo]?.[locale];
+if (!tr) return Astro.redirect('/');
+
+const breadcrumbs = [
+  { name: locale === 'es' ? 'Inicio' : locale === 'fr' ? 'Accueil' : locale === 'de' ? 'Startseite' : locale === 'nl' ? 'Home' : locale === 'it' ? 'Home' : locale === 'fi' ? 'Etusivu' : locale === 'pt' ? 'Início' : 'Home', url: lp('/') },
+  { name: tr.h1.split('—')[0].trim() },
+];
+
+const products1 = getProductsByCategory(tr.productSections[0]?.category || 'cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const products2 = tr.productSections[1] ? getProductsByCategory(tr.productSections[1].category || 'cbd-oils').filter(p => p.inStock).slice(0, 4) : [];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": tr.h1,
+  "description": tr.desc,
+  "url": `https://greensfarmhouse.com/${locale}/${seo}`,
+  "inLanguage": locale,
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": tr.faq.map((f: { question: string; answer: string }) => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.answer
+    }
+  }))
+};
+---
+
+<BaseLayout
+  title={tr.title}
+  description={tr.desc}
+  canonicalURL={`https://greensfarmhouse.com/${locale}/${seo}`}
+  jsonLd={jsonLd}
+  locale={locale}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class={`py-12 md:py-20 bg-gradient-to-br ${pageData.gradient}`}>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">{tr.heroTag}</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        {tr.h1.includes('—') ? (
+          <Fragment>
+            {tr.h1.split('—')[0]}— <span class="text-primary">{tr.h1.split('—')[1]?.trim()}</span>
+          </Fragment>
+        ) : tr.h1}
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        {tr.heroDesc}
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href={lp(`/collections/${tr.productSections[0]?.category || 'cbd-flowers'}`)} class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          {tr.btnPrimary}
+        </a>
+        {tr.productSections[1] && (
+          <a href={lp(`/collections/${tr.productSections[1].category}`)} class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+            {tr.btnSecondary}
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class={`grid md:grid-cols-${tr.features.length > 3 ? '4' : '3'} gap-8`}>
+        {tr.features.map(f => (
+          <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+            <span class="text-4xl block mb-4">{f.icon}</span>
+            <h3 class="font-bold text-lg mb-2">{f.title}</h3>
+            <p class="text-sm text-gray-600">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section 1 -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">{tr.productSections[0].title}</h2>
+      <p class="text-gray-600 mb-8">{tr.productSections[0].desc}</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {products1.map(p => <ProductCard product={p} locale={locale} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href={lp(`/collections/${tr.productSections[0].category}`)} class="text-primary font-semibold hover:underline">{tr.productSections[0].browseLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section 2 -->
+  {tr.productSections[1] && products2.length > 0 && (
+    <section class="py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">{tr.productSections[1].title}</h2>
+        <p class="text-gray-600 mb-8">{tr.productSections[1].desc}</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {products2.map(p => <ProductCard product={p} locale={locale} />)}
+        </div>
+        <div class="text-center mt-6">
+          <a href={lp(`/collections/${tr.productSections[1].category}`)} class="text-primary font-semibold hover:underline">{tr.productSections[1].browseLabel}</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  <FAQ title={tr.faqTitle} items={tr.faq} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">{tr.ctaTitle}</h2>
+      <p class="text-green-100 mb-6">{tr.ctaDesc}</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href={lp('/collections')} class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">{tr.ctaBtnPrimary}</a>
+        <a href={lp('/contact')} class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">{tr.ctaBtnSecondary}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

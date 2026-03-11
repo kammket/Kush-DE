@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { blogPosts } from '../../../data/blog';
+import { supportedLocales, type Locale } from '../../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+
+const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const translations: Record<string, any> = {
+  es: { title: 'Blog | Greens Farmhouse', desc: 'Noticias, guías y consejos sobre CBD al por mayor. Mantente al día con las últimas tendencias del mercado CBD europeo.', h1: 'Blog CBD Mayorista', subtitle: 'Guías, noticias y perspectivas del sector para profesionales del CBD. Manténgase informado sobre las últimas tendencias y mejores prácticas.', readMore: 'Leer Más', newsletter: 'Suscríbase a nuestro Boletín', newsletterDesc: 'Reciba las últimas guías, tendencias y ofertas exclusivas directamente en su bandeja de entrada.', subscribe: 'Suscribirse', emailPh: 'Su dirección de email' },
+  fr: { title: 'Blog | Greens Farmhouse', desc: 'Actualités, guides et conseils sur le CBD en gros. Restez informé des dernières tendances du marché CBD européen.', h1: 'Blog CBD Grossiste', subtitle: 'Guides, actualités et analyses du secteur pour les professionnels du CBD. Restez informé des dernières tendances et meilleures pratiques.', readMore: 'Lire la Suite', newsletter: 'Abonnez-vous à notre Newsletter', newsletterDesc: 'Recevez les derniers guides, tendances et offres exclusives directement dans votre boîte mail.', subscribe: 'S\'abonner', emailPh: 'Votre adresse email' },
+  de: { title: 'Blog | Greens Farmhouse', desc: 'Nachrichten, Guides und Tipps zum CBD-Großhandel. Bleiben Sie über die neuesten Trends im europäischen CBD-Markt informiert.', h1: 'CBD Großhandel Blog', subtitle: 'Guides, Nachrichten und Brancheneinblicke für CBD-Profis. Bleiben Sie über Trends und Best Practices informiert.', readMore: 'Weiterlesen', newsletter: 'Abonnieren Sie unseren Newsletter', newsletterDesc: 'Erhalten Sie die neuesten Guides, Trends und exklusive Angebote direkt in Ihrem Posteingang.', subscribe: 'Abonnieren', emailPh: 'Ihre E-Mail-Adresse' },
+  nl: { title: 'Blog | Greens Farmhouse', desc: 'Nieuws, gidsen en tips over CBD-groothandel. Blijf op de hoogte van de laatste trends in de Europese CBD-markt.', h1: 'CBD Groothandel Blog', subtitle: 'Gidsen, nieuws en branche-inzichten voor CBD-professionals. Blijf op de hoogte van trends en best practices.', readMore: 'Lees Meer', newsletter: 'Abonneer op onze Nieuwsbrief', newsletterDesc: 'Ontvang de laatste gidsen, trends en exclusieve aanbiedingen direct in uw inbox.', subscribe: 'Abonneren', emailPh: 'Uw e-mailadres' },
+  it: { title: 'Blog | Greens Farmhouse', desc: 'Notizie, guide e consigli sul CBD all\'ingrosso. Resta aggiornato sulle ultime tendenze del mercato CBD europeo.', h1: 'Blog CBD Ingrosso', subtitle: 'Guide, notizie e approfondimenti per professionisti del CBD. Resta aggiornato su tendenze e migliori pratiche.', readMore: 'Leggi di Più', newsletter: 'Iscriviti alla Newsletter', newsletterDesc: 'Ricevi le ultime guide, tendenze e offerte esclusive direttamente nella tua casella di posta.', subscribe: 'Iscriviti', emailPh: 'Il tuo indirizzo email' },
+  fi: { title: 'Blogi | Greens Farmhouse', desc: 'CBD-tukkukaupan uutiset, oppaat ja vinkit. Pysy ajan tasalla Euroopan CBD-markkinoiden uusimmista trendeistä.', h1: 'CBD-tukkukaupan Blogi', subtitle: 'Oppaat, uutiset ja alan näkemykset CBD-ammattilaisille. Pysy ajan tasalla trendeistä ja parhaista käytännöistä.', readMore: 'Lue Lisää', newsletter: 'Tilaa Uutiskirjeemme', newsletterDesc: 'Saat uusimmat oppaat, trendit ja eksklusiiviset tarjoukset suoraan sähköpostiisi.', subscribe: 'Tilaa', emailPh: 'Sähköpostiosoitteesi' },
+  pt: { title: 'Blog | Greens Farmhouse', desc: 'Notícias, guias e dicas sobre CBD por grosso. Mantenha-se atualizado com as últimas tendências do mercado CBD europeu.', h1: 'Blog CBD Grossista', subtitle: 'Guias, notícias e perspetivas do setor para profissionais de CBD. Mantenha-se informado sobre tendências e melhores práticas.', readMore: 'Ler Mais', newsletter: 'Subscreva a nossa Newsletter', newsletterDesc: 'Receba os últimos guias, tendências e ofertas exclusivas diretamente na sua caixa de entrada.', subscribe: 'Subscrever', emailPh: 'O seu endereço de email' },
+};
+
+const tr = translations[locale] || {};
+const dateLocale: Record<string, string> = { es: 'es-ES', fr: 'fr-FR', de: 'de-DE', nl: 'nl-NL', it: 'it-IT', fi: 'fi-FI', pt: 'pt-PT' };
+
+const breadcrumbs = [
+  { name: t(locale, 'nav.home'), url: lp('/') },
+  { name: 'Blog' },
+];
+
+const blogJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": tr.h1,
+  "description": tr.desc,
+  "url": getAbsoluteLocaleUrl(locale, '/blog'),
+  "inLanguage": locale,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com"
+  },
+  "blogPost": sortedPosts.slice(0, 10).map(post => ({
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "url": getAbsoluteLocaleUrl(locale, `/blog/${post.slug}`),
+    "datePublished": post.date
+  }))
+};
+---
+
+<BaseLayout title={tr.title} description={tr.desc} locale={locale} jsonLd={blogJsonLd}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
+
+  <section class="py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{tr.h1}</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">{tr.subtitle}</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {sortedPosts.map((post, i) => (
+          <article class={`bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow ${i === 0 ? 'md:col-span-2 lg:col-span-2' : ''}`}>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-full">{post.category}</span>
+                <span class="text-xs text-gray-400">{post.readTime}</span>
+              </div>
+              <h2 class={`font-bold text-gray-900 mb-2 ${i === 0 ? 'text-xl md:text-2xl' : 'text-lg'}`}>
+                <a href={lp(`/blog/${post.slug}`)} class="hover:text-primary transition-colors">{post.title}</a>
+              </h2>
+              <p class="text-sm text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+              <div class="flex items-center justify-between">
+                <time class="text-xs text-gray-400" datetime={post.date}>
+                  {new Date(post.date).toLocaleDateString(dateLocale[locale] || 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+                <a href={lp(`/blog/${post.slug}`)} class="text-primary text-sm font-semibold hover:underline">{tr.readMore} →</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Newsletter -->
+      <div class="bg-gradient-to-br from-primary/5 to-green-50 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">{tr.newsletter}</h2>
+        <p class="text-gray-600 mb-6 max-w-xl mx-auto">{tr.newsletterDesc}</p>
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="email" placeholder={tr.emailPh} class="flex-1 px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+          <button type="submit" class="px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition-colors">{tr.subscribe}</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

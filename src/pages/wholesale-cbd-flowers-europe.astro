@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Wholesale CBD Flowers Europe" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topResins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Wholesale CBD Flowers Europe — Premium Hemp Flowers at Wholesale Prices",
+  "description": "Europe's leading wholesale CBD flower supplier. Premium indoor, greenhouse & outdoor hemp flowers from €0.19/g. Lab-tested, EU-compliant, free delivery over €99.",
+  "url": "https://greensfarmhouse.com/wholesale-cbd-flowers-europe",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "Do you ship CBD flowers across Europe?",
+    answer: "Yes. We ship to all EU countries plus Switzerland and the United Kingdom. All orders over €99 qualify for free shipping with full tracking and insurance."
+  },
+  {
+    question: "What is the minimum order quantity?",
+    answer: "No strict minimum order. You can start from 25g for any strain. Volume discounts kick in from 100g, with significant bulk pricing available from 1kg+."
+  },
+  {
+    question: "Are your CBD flowers legal in Europe?",
+    answer: "Yes. All our CBD flowers contain less than 0.2% THC, fully compliant with EU regulations. Every batch ships with a Certificate of Analysis (COA) from accredited independent laboratories."
+  },
+  {
+    question: "What growing methods are available?",
+    answer: "We offer indoor (premium quality, from €0.79/g), greenhouse (best value, from €0.29/g), and outdoor (budget-friendly, from €0.19/g) CBD flowers. Each method produces different terpene profiles and potency levels."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Wholesale CBD Flowers Europe | Premium Hemp Flowers Wholesale"
+  description="Europe's leading wholesale CBD flower supplier. Premium indoor, greenhouse & outdoor hemp flowers from €0.19/g. Lab-tested, EU-compliant, free delivery over €99."
+  canonicalURL="https://greensfarmhouse.com/wholesale-cbd-flowers-europe"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-green-50 via-white to-emerald-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🌿 CBD Flowers Europe</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Wholesale CBD Flowers Europe — <span class="text-primary">Premium Hemp at Wholesale Prices</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Access the finest European CBD hemp flowers at unbeatable wholesale prices. Sourced from certified farms in Switzerland, Italy, France, Portugal, and Spain — with complete lab testing and full EU compliance. From just €0.19/g in bulk orders.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop CBD Flowers
+        </a>
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop CBD Resins
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Buy Wholesale CBD Flowers from Us?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🌍</span>
+          <h3 class="font-bold text-lg mb-2">European Network</h3>
+          <p class="text-sm text-gray-600">CBD flowers from the best farms in Switzerland, Italy, France, Portugal, and Spain. Complete traceability from seed to sale.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💰</span>
+          <h3 class="font-bold text-lg mb-2">From €0.19/g</h3>
+          <p class="text-sm text-gray-600">Unbeatable wholesale prices with volume discounts. The more you buy, the more you save. No minimum order required.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🔬</span>
+          <h3 class="font-bold text-lg mb-2">Certificate of Analysis</h3>
+          <p class="text-sm text-gray-600">Every batch includes a COA with full cannabinoid profile, terpene analysis, heavy metals, and pesticide residues. Total transparency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Premium CBD Flowers — Wholesale Europe</h2>
+      <p class="text-gray-600 mb-8">The finest European CBD hemp flowers in <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">indoor, greenhouse, and outdoor</a> varieties. From €0.19/g wholesale.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Resins — Wholesale Europe</h2>
+      <p class="text-gray-600 mb-8">Premium <a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD hash, pollen, and concentrates</a> from European production.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Wholesale CBD Flowers in Europe: Your Complete Guide</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          The European CBD flower market has exploded in recent years, with demand growing by over 40% year-over-year. As an established <strong>wholesale CBD flower supplier</strong>, Greens Farmhouse connects retailers, <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shops</a>, and online businesses across Europe with the highest quality hemp flowers at genuine wholesale prices.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Growing Methods: Indoor, Greenhouse & Outdoor</h3>
+        <p>
+          We offer three tiers of CBD flowers to suit every market segment. <a href="/cbd-hemp-flowers-indoor" class="text-primary hover:underline">Indoor CBD flowers</a> (from €0.79/g) deliver the highest potency and richest terpene profiles. <a href="/cbd-hemp-flowers-greenhouse" class="text-primary hover:underline">Greenhouse flowers</a> (from €0.29/g) offer the best quality-to-price ratio. Outdoor flowers (from €0.19/g) are ideal for value-focused retailers.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Pan-European Delivery</h3>
+        <p>
+          We ship to every EU country including <a href="/wholesale-cbd-flowers-germany" class="text-primary hover:underline">Germany</a>, <a href="/wholesale-cbd-flowers-france" class="text-primary hover:underline">France</a>, <a href="/wholesale-cbd-flowers-italy" class="text-primary hover:underline">Italy</a>, <a href="/wholesale-cbd-flowers-netherlands" class="text-primary hover:underline">the Netherlands</a>, and many more. All orders over €99 qualify for free insured shipping with tracking. For <a href="/cbd-flowers-bulk-europe" class="text-primary hover:underline">bulk orders</a> (1kg+), we offer even more competitive pricing and priority dispatch.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Full Compliance & Transparency</h3>
+        <p>
+          Every product in our catalog contains less than 0.2% THC and is fully compliant with EU regulations. We provide Certificates of Analysis from accredited French and Swiss laboratories. Whether you're a retailer, distributor, or <a href="/about" class="text-primary hover:underline">white-label partner</a>, you can trust our documentation and quality control processes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="Wholesale CBD Flowers Europe — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Order Wholesale CBD Flowers?</h2>
+      <p class="text-green-100 mb-6">Premium CBD flowers at the best wholesale prices in Europe. Free shipping on all orders over €99.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse All Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

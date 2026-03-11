@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { supportedLocales, type Locale } from '../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+
+const translations: Record<string, any> = {
+  es: { h1: 'Carrito de Compras', empty: 'Tu carrito está vacío', emptyDesc: 'Explora nuestros productos CBD al por mayor y añade artículos a tu carrito.', browse: 'Ver Productos', product: 'Producto', price: 'Precio', quantity: 'Cantidad', subtotalH: 'Subtotal', remove: 'Eliminar', discount: 'Código de Descuento', discountPh: 'Introduce código (ej. CBD20)', apply: 'Aplicar', orderSummary: 'Resumen del Pedido', subtotal: 'Subtotal', discountLabel: 'Descuento (20%)', shipping: 'Envío', shippingCalc: 'Calculado al finalizar', free: 'GRATIS', total: 'Total', freeShip: '✓ ¡Envío gratis en pedidos superiores a €150!', checkout: 'PROCEDER AL PAGO', continueShopping: 'Seguir Comprando', codeOk: '✓ Código CBD20 aplicado — ¡20% de descuento!', codeErr: '✗ Código de descuento no válido.', minWarning: 'Pedido mínimo de <strong>€150.00</strong> requerido para el envío. Añade <strong id="min-order-remaining">€0.00</strong> más para continuar.' },
+  fr: { h1: 'Panier', empty: 'Votre panier est vide', emptyDesc: 'Parcourez nos produits CBD en gros et ajoutez des articles à votre panier.', browse: 'Voir les Produits', product: 'Produit', price: 'Prix', quantity: 'Quantité', subtotalH: 'Sous-total', remove: 'Supprimer', discount: 'Code de Réduction', discountPh: 'Entrez le code (ex. CBD20)', apply: 'Appliquer', orderSummary: 'Récapitulatif', subtotal: 'Sous-total', discountLabel: 'Réduction (20%)', shipping: 'Livraison', shippingCalc: 'Calculé à la caisse', free: 'GRATUIT', total: 'Total', freeShip: '✓ Livraison gratuite dès €150 !', checkout: 'PASSER LA COMMANDE', continueShopping: 'Continuer les Achats', codeOk: '✓ Code CBD20 appliqué — 20% de réduction !', codeErr: '✗ Code de réduction invalide.', minWarning: 'Commande minimum de <strong>€150.00</strong> requise pour la livraison. Ajoutez <strong id="min-order-remaining">€0.00</strong> de plus pour continuer.' },
+  de: { h1: 'Warenkorb', empty: 'Ihr Warenkorb ist leer', emptyDesc: 'Entdecken Sie unsere CBD-Großhandelsprodukte und legen Sie Artikel in den Warenkorb.', browse: 'Produkte Ansehen', product: 'Produkt', price: 'Preis', quantity: 'Menge', subtotalH: 'Zwischensumme', remove: 'Entfernen', discount: 'Rabattcode', discountPh: 'Code eingeben (z.B. CBD20)', apply: 'Anwenden', orderSummary: 'Bestellübersicht', subtotal: 'Zwischensumme', discountLabel: 'Rabatt (20%)', shipping: 'Versand', shippingCalc: 'Wird an der Kasse berechnet', free: 'KOSTENLOS', total: 'Gesamt', freeShip: '✓ Kostenloser Versand ab €150!', checkout: 'ZUR KASSE', continueShopping: 'Weiter Einkaufen', codeOk: '✓ Code CBD20 angewendet — 20% Rabatt!', codeErr: '✗ Ungültiger Rabattcode.', minWarning: 'Mindestbestellwert von <strong>€150.00</strong> für die Lieferung erforderlich. Fügen Sie <strong id="min-order-remaining">€0.00</strong> mehr hinzu, um fortzufahren.' },
+  nl: { h1: 'Winkelwagen', empty: 'Je winkelwagen is leeg', emptyDesc: 'Bekijk onze CBD-groothandelsproducten en voeg artikelen toe aan je winkelwagen.', browse: 'Producten Bekijken', product: 'Product', price: 'Prijs', quantity: 'Aantal', subtotalH: 'Subtotaal', remove: 'Verwijderen', discount: 'Kortingscode', discountPh: 'Voer code in (bijv. CBD20)', apply: 'Toepassen', orderSummary: 'Overzicht', subtotal: 'Subtotaal', discountLabel: 'Korting (20%)', shipping: 'Verzending', shippingCalc: 'Berekend bij afrekenen', free: 'GRATIS', total: 'Totaal', freeShip: '✓ Gratis verzending bij bestellingen boven €150!', checkout: 'AFREKENEN', continueShopping: 'Verder Winkelen', codeOk: '✓ Code CBD20 toegepast — 20% korting!', codeErr: '✗ Ongeldige kortingscode.', minWarning: 'Minimale bestelling van <strong>€150.00</strong> vereist voor levering. Voeg <strong id="min-order-remaining">€0.00</strong> meer toe om door te gaan.' },
+  it: { h1: 'Carrello', empty: 'Il tuo carrello è vuoto', emptyDesc: 'Sfoglia i nostri prodotti CBD all\'ingrosso e aggiungi articoli al carrello.', browse: 'Vedi Prodotti', product: 'Prodotto', price: 'Prezzo', quantity: 'Quantità', subtotalH: 'Subtotale', remove: 'Rimuovi', discount: 'Codice Sconto', discountPh: 'Inserisci codice (es. CBD20)', apply: 'Applica', orderSummary: 'Riepilogo Ordine', subtotal: 'Subtotale', discountLabel: 'Sconto (20%)', shipping: 'Spedizione', shippingCalc: 'Calcolato al checkout', free: 'GRATUITA', total: 'Totale', freeShip: '✓ Spedizione gratuita per ordini superiori a €150!', checkout: 'PROCEDI AL PAGAMENTO', continueShopping: 'Continua lo Shopping', codeOk: '✓ Codice CBD20 applicato — 20% di sconto!', codeErr: '✗ Codice sconto non valido.', minWarning: 'Ordine minimo di <strong>€150.00</strong> richiesto per la consegna. Aggiungi <strong id="min-order-remaining">€0.00</strong> in più per procedere.' },
+  fi: { h1: 'Ostoskori', empty: 'Ostoskorisi on tyhjä', emptyDesc: 'Selaa CBD-tukkutuotteitamme ja lisää tuotteita ostoskoriisi.', browse: 'Selaa Tuotteita', product: 'Tuote', price: 'Hinta', quantity: 'Määrä', subtotalH: 'Välisumma', remove: 'Poista', discount: 'Alennuskoodi', discountPh: 'Syötä koodi (esim. CBD20)', apply: 'Käytä', orderSummary: 'Tilausyhteenveto', subtotal: 'Välisumma', discountLabel: 'Alennus (20%)', shipping: 'Toimitus', shippingCalc: 'Lasketaan kassalla', free: 'ILMAINEN', total: 'Yhteensä', freeShip: '✓ Ilmainen toimitus yli €150 tilauksiin!', checkout: 'SIIRRY KASSALLE', continueShopping: 'Jatka Ostoksia', codeOk: '✓ Koodi CBD20 käytetty — 20% alennus!', codeErr: '✗ Virheellinen alennuskoodi.', minWarning: 'Vähimmäistilaus <strong>€150.00</strong> vaaditaan toimitukseen. Lisää <strong id="min-order-remaining">€0.00</strong> lisää jatkaaksesi.' },
+  pt: { h1: 'Carrinho', empty: 'O seu carrinho está vazio', emptyDesc: 'Explore os nossos produtos CBD por grosso e adicione artigos ao carrinho.', browse: 'Ver Produtos', product: 'Produto', price: 'Preço', quantity: 'Quantidade', subtotalH: 'Subtotal', remove: 'Remover', discount: 'Código de Desconto', discountPh: 'Introduza código (ex. CBD20)', apply: 'Aplicar', orderSummary: 'Resumo do Pedido', subtotal: 'Subtotal', discountLabel: 'Desconto (20%)', shipping: 'Envio', shippingCalc: 'Calculado no checkout', free: 'GRÁTIS', total: 'Total', freeShip: '✓ Envio grátis em encomendas acima de €150!', checkout: 'FINALIZAR COMPRA', continueShopping: 'Continuar a Comprar', codeOk: '✓ Código CBD20 aplicado — 20% de desconto!', codeErr: '✗ Código de desconto inválido.', minWarning: 'Encomenda mínima de <strong>€150.00</strong> necessária para entrega. Adicione mais <strong id="min-order-remaining">€0.00</strong> para prosseguir.' },
+};
+
+const tr = translations[locale] || {};
+const breadcrumbs = [
+  { name: t(locale, 'nav.home'), url: lp('/') },
+  { name: tr.h1 },
+];
+---
+
+<BaseLayout title={`${tr.h1} | Greens Farmhouse`} description={tr.emptyDesc} locale={locale} noindex={true}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
+
+  <!-- Hidden element to pass translated strings to client JS -->
+  <div id="cart-i18n" class="hidden"
+    data-empty={tr.empty} data-empty-desc={tr.emptyDesc} data-browse={tr.browse}
+    data-remove={tr.remove} data-price={tr.price} data-subtotalh={tr.subtotalH}
+    data-code-ok={tr.codeOk} data-code-err={tr.codeErr}
+    data-locale={locale} data-collections={lp('/collections')}
+    data-products-prefix={lp('/products')}
+    data-free={tr.free} data-shipping-calc={tr.shippingCalc}
+    data-min-warning={tr.minWarning}
+  ></div>
+
+  <section class="py-6 md:py-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">{tr.h1}</h1>
+
+      <!-- Empty Cart -->
+      <div id="cart-empty" class="hidden text-center py-16">
+        <svg class="w-20 h-20 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+        </svg>
+        <h2 class="text-xl font-semibold text-gray-600 mb-2">{tr.empty}</h2>
+        <p class="text-gray-400 mb-6">{tr.emptyDesc}</p>
+        <a href={lp('/collections')} class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-dark transition-colors">
+          {tr.browse}
+        </a>
+      </div>
+
+      <!-- Cart Content -->
+      <div id="cart-content" class="hidden">
+        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-6">
+          <div class="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b">
+            <div class="col-span-6">{tr.product}</div>
+            <div class="col-span-2 text-center">{tr.price}</div>
+            <div class="col-span-2 text-center">{tr.quantity}</div>
+            <div class="col-span-2 text-right">{tr.subtotalH}</div>
+          </div>
+          <div id="cart-items" class="divide-y divide-gray-100"></div>
+        </div>
+
+        <!-- Discount Code -->
+        <div class="bg-white rounded-xl border border-gray-200 p-5 mb-6">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="flex-1">
+              <label for="discount-code" class="block text-sm font-medium text-gray-700 mb-1">{tr.discount}</label>
+              <input id="discount-code" type="text" placeholder={tr.discountPh} class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+            </div>
+            <button id="apply-discount" class="self-end px-6 py-2.5 bg-gray-900 text-white rounded-lg font-medium text-sm hover:bg-gray-800 transition-colors">{tr.apply}</button>
+          </div>
+          <p id="discount-msg" class="hidden mt-2 text-sm font-medium"></p>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-bold text-gray-900 mb-4">{tr.orderSummary}</h2>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-gray-600">{tr.subtotal}</span><span id="summary-subtotal" class="font-medium text-gray-900">€0.00</span></div>
+            <div id="summary-discount-row" class="hidden flex justify-between text-green-600"><span>{tr.discountLabel}</span><span id="summary-discount">−€0.00</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">{tr.shipping}</span><span id="summary-shipping" class="font-medium text-gray-900">{tr.shippingCalc}</span></div>
+            <div class="border-t pt-3 flex justify-between text-lg font-bold"><span>{tr.total}</span><span id="summary-total" class="text-primary">€0.00</span></div>
+            <p id="free-shipping-note" class="hidden text-xs text-green-600 font-medium text-right">{tr.freeShip}</p>
+          </div>
+          <div class="mt-6 space-y-3">
+            <a href={lp('/checkout')} id="checkout-btn" class="block w-full py-4 bg-primary text-white text-center text-lg font-bold rounded-xl hover:bg-primary-dark transition-colors shadow-lg">{tr.checkout}</a>
+            <!-- Minimum order warning -->
+            <div id="min-order-warning" class="hidden flex items-start gap-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+              <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+              <p id="min-order-msg" class="text-sm text-amber-800"></p>
+            </div>
+            <a href={lp('/collections')} class="block w-full py-3 border border-gray-300 text-gray-700 text-center font-medium rounded-xl hover:bg-gray-50 transition-colors text-sm">{tr.continueShopping}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { getCart, removeFromCart, updateQuantity, getCartTotal } from '../../scripts/cart';
+
+  let discountApplied = false;
+  const DISCOUNT_PCT = 0.20;
+  const DISCOUNT_CODE = 'CBD20';
+
+  function getI18n() {
+    const el = document.getElementById('cart-i18n');
+    return {
+      remove: el?.dataset.remove || 'Remove',
+      price: el?.dataset.price || 'Price',
+      subtotalh: el?.dataset.subtotalh || 'Subtotal',
+      codeOk: el?.dataset.codeOk || '',
+      codeErr: el?.dataset.codeErr || '',
+      productsPrefix: el?.dataset.productsPrefix || '/products',
+      free: el?.dataset.free || 'FREE',
+      shippingCalc: el?.dataset.shippingCalc || 'Calculated at checkout',
+      minWarning: el?.dataset.minWarning || 'Minimum order of <strong>€150.00</strong> required for delivery. Add <strong id="min-order-remaining">€0.00</strong> more to proceed.',
+    };
+  }
+
+  function renderCart() {
+    const cart = getCart();
+    const emptyEl = document.getElementById('cart-empty');
+    const contentEl = document.getElementById('cart-content');
+    const itemsEl = document.getElementById('cart-items');
+    const i18n = getI18n();
+
+    if (cart.length === 0) {
+      emptyEl?.classList.remove('hidden');
+      contentEl?.classList.add('hidden');
+      return;
+    }
+
+    emptyEl?.classList.add('hidden');
+    contentEl?.classList.remove('hidden');
+
+    if (itemsEl) {
+      itemsEl.innerHTML = cart.map(item => `
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 px-4 md:px-6 py-4 items-center" data-key="${item.slug}::${item.variantLabel}">
+          <div class="md:col-span-6 flex items-center gap-4">
+            <a href="${i18n.productsPrefix}/${item.slug}" class="shrink-0">
+              <img src="${item.image}" alt="${item.name}" class="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover border border-gray-200" loading="lazy" />
+            </a>
+            <div class="min-w-0">
+              <a href="${i18n.productsPrefix}/${item.slug}" class="font-semibold text-sm text-gray-900 hover:text-primary transition-colors line-clamp-2">${item.name}</a>
+              <p class="text-xs text-gray-500 mt-0.5">${item.variantLabel}</p>
+              <button class="cart-remove text-xs text-red-500 hover:text-red-700 mt-1 font-medium" data-slug="${item.slug}" data-variant="${item.variantLabel}">${i18n.remove}</button>
+            </div>
+          </div>
+          <div class="md:col-span-2 text-center">
+            <span class="md:hidden text-xs text-gray-500">${i18n.price}: </span>
+            <span class="font-medium text-sm text-gray-900">€${item.price.toFixed(2)}</span>
+          </div>
+          <div class="md:col-span-2 flex justify-center">
+            <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+              <button class="cart-qty-minus px-2.5 py-1.5 text-gray-600 hover:bg-gray-100 text-sm font-bold" data-slug="${item.slug}" data-variant="${item.variantLabel}">−</button>
+              <span class="w-10 text-center text-sm font-medium border-x border-gray-300 py-1.5">${item.quantity}</span>
+              <button class="cart-qty-plus px-2.5 py-1.5 text-gray-600 hover:bg-gray-100 text-sm font-bold" data-slug="${item.slug}" data-variant="${item.variantLabel}">+</button>
+            </div>
+          </div>
+          <div class="md:col-span-2 text-right">
+            <span class="md:hidden text-xs text-gray-500">${i18n.subtotalh}: </span>
+            <span class="font-bold text-sm text-gray-900">€${(item.price * item.quantity).toFixed(2)}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.querySelectorAll<HTMLButtonElement>('.cart-remove').forEach(btn => {
+      btn.addEventListener('click', () => { removeFromCart(btn.dataset.slug!, btn.dataset.variant!); renderCart(); });
+    });
+    document.querySelectorAll<HTMLButtonElement>('.cart-qty-minus').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = cart.find(c => c.slug === btn.dataset.slug && c.variantLabel === btn.dataset.variant);
+        if (item) { updateQuantity(btn.dataset.slug!, btn.dataset.variant!, item.quantity - 1); renderCart(); }
+      });
+    });
+    document.querySelectorAll<HTMLButtonElement>('.cart-qty-plus').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = cart.find(c => c.slug === btn.dataset.slug && c.variantLabel === btn.dataset.variant);
+        if (item) { updateQuantity(btn.dataset.slug!, btn.dataset.variant!, item.quantity + 1); renderCart(); }
+      });
+    });
+
+    const subtotal = getCartTotal();
+    const discountAmt = discountApplied ? subtotal * DISCOUNT_PCT : 0;
+    const total = subtotal - discountAmt;
+    const freeShipping = total >= 150;
+    const subtotalEl = document.getElementById('summary-subtotal');
+    const discountRow = document.getElementById('summary-discount-row');
+    const discountEl = document.getElementById('summary-discount');
+    const shippingEl = document.getElementById('summary-shipping');
+    const totalEl = document.getElementById('summary-total');
+    const freeShipNote = document.getElementById('free-shipping-note');
+    if (subtotalEl) subtotalEl.textContent = `€${subtotal.toFixed(2)}`;
+    if (discountApplied && discountRow && discountEl) { discountRow.classList.remove('hidden'); discountEl.textContent = `−€${discountAmt.toFixed(2)}`; }
+    if (shippingEl) shippingEl.textContent = freeShipping ? i18n.free : i18n.shippingCalc;
+    if (totalEl) totalEl.textContent = `€${total.toFixed(2)}`;
+    if (freeShipNote) { if (freeShipping) freeShipNote.classList.remove('hidden'); else freeShipNote.classList.add('hidden'); }
+
+    // Minimum order check
+    const MIN_ORDER = 150;
+    const checkoutBtn = document.getElementById('checkout-btn') as HTMLAnchorElement | null;
+    const minWarning = document.getElementById('min-order-warning');
+    const minMsg = document.getElementById('min-order-msg');
+    if (total < MIN_ORDER) {
+      if (checkoutBtn) {
+        checkoutBtn.classList.remove('bg-primary', 'hover:bg-primary-dark', 'shadow-lg');
+        checkoutBtn.classList.add('bg-gray-300', 'cursor-not-allowed', 'pointer-events-none');
+      }
+      if (minWarning) minWarning.classList.remove('hidden');
+      if (minMsg) {
+        let warningHtml = i18n.minWarning;
+        // Update the remaining amount in the warning HTML
+        warningHtml = warningHtml.replace(/€0\.00<\/strong> /, `€${(MIN_ORDER - total).toFixed(2)}</strong> `);
+        minMsg.innerHTML = warningHtml;
+      }
+    } else {
+      if (checkoutBtn) {
+        checkoutBtn.classList.add('bg-primary', 'hover:bg-primary-dark', 'shadow-lg');
+        checkoutBtn.classList.remove('bg-gray-300', 'cursor-not-allowed', 'pointer-events-none');
+      }
+      if (minWarning) minWarning.classList.add('hidden');
+    }
+  }
+
+  function initCartPage() {
+    renderCart();
+    const applyBtn = document.getElementById('apply-discount');
+    const codeInput = document.getElementById('discount-code') as HTMLInputElement | null;
+    const discountMsg = document.getElementById('discount-msg');
+    const i18n = getI18n();
+    applyBtn?.addEventListener('click', () => {
+      const code = codeInput?.value.trim().toUpperCase();
+      if (discountMsg) {
+        if (code === DISCOUNT_CODE) {
+          discountApplied = true;
+          discountMsg.classList.remove('hidden', 'text-red-600');
+          discountMsg.classList.add('text-green-600');
+          discountMsg.textContent = i18n.codeOk;
+          renderCart();
+        } else {
+          discountApplied = false;
+          discountMsg.classList.remove('hidden', 'text-green-600');
+          discountMsg.classList.add('text-red-600');
+          discountMsg.textContent = i18n.codeErr;
+          const discountRow = document.getElementById('summary-discount-row');
+          discountRow?.classList.add('hidden');
+          renderCart();
+        }
+      }
+    });
+  }
+
+  initCartPage();
+  document.addEventListener('astro:after-swap', initCartPage);
+</script>

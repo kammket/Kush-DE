@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import { supportedLocales, type Locale } from '../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+
+const tr: Record<string, any> = {
+  es: {
+    title: 'Nuestras Garantías | Calidad, Seguridad y Satisfacción | Greens Farmhouse',
+    desc: 'Greens Farmhouse garantiza: productos 100% testados en laboratorio, garantía de satisfacción, pagos SSL seguros, envío asegurado 24h, plena conformidad con la UE.',
+    heading: 'Nuestras', headingHL: 'Garantías',
+    intro: 'Cuando realiza un pedido en Greens Farmhouse, se beneficia de garantías completas diseñadas para darle total tranquilidad.',
+    labTitle: 'Productos 100% Testados', labDesc: 'Cada producto que vendemos es analizado por laboratorios independientes. Proporcionamos Certificados de Análisis (COA) para cada lote.',
+    satTitle: 'Garantía de Satisfacción', satDesc: 'Respaldamos la calidad de cada producto. Si su pedido no cumple sus expectativas, trabajaremos para solucionarlo — reemplazo, crédito o reembolso.',
+    secTitle: 'Pagos Seguros', secDesc: 'Su información financiera está protegida con cifrado SSL. Ofrecemos múltiples métodos de pago de confianza.',
+    shipTitle: 'Envío Rápido y Asegurado', shipDesc: 'Todos los pedidos se envían en 24 horas. Cada paquete está completamente asegurado, rastreado y enviado en embalaje discreto.',
+    euTitle: 'Conformidad Total con la UE', euDesc: 'Todos los productos cumplen con la regulación de la UE. Nuestro cáñamo proviene exclusivamente de granjas europeas certificadas.',
+    privTitle: 'Privacidad y Protección de Datos', privDesc: 'Nos tomamos su privacidad en serio. Sus datos están protegidos bajo el RGPD. Nunca vendemos su información.',
+    ctaTitle: '¿Listo para Pedir con Confianza?', ctaDesc: 'Únase a más de 5.000 profesionales que confían en Greens Farmhouse.',
+    browse: 'Ver Productos', contact: 'Contáctenos',
+  },
+  fr: {
+    title: 'Nos Garanties | Qualité, Sécurité et Satisfaction | Greens Farmhouse',
+    desc: 'Greens Farmhouse garantit : produits 100% testés en laboratoire, garantie satisfaction, paiements SSL sécurisés, expédition assurée 24h, conformité totale UE.',
+    heading: 'Nos', headingHL: 'Garanties',
+    intro: 'Quand vous commandez chez Greens Farmhouse, vous bénéficiez de garanties complètes pour une tranquillité d\'esprit totale.',
+    labTitle: 'Produits 100% Testés', labDesc: 'Chaque produit est analysé par des laboratoires indépendants. Nous fournissons des Certificats d\'Analyse (COA) pour chaque lot.',
+    satTitle: 'Garantie Satisfaction', satDesc: 'Nous garantissons la qualité de chaque produit. Si votre commande ne répond pas à vos attentes, nous ferons le nécessaire — remplacement, crédit ou remboursement.',
+    secTitle: 'Paiements Sécurisés', secDesc: 'Vos informations sont protégées par un chiffrement SSL. Nous proposons plusieurs méthodes de paiement de confiance.',
+    shipTitle: 'Livraison Rapide et Assurée', shipDesc: 'Toutes les commandes sont expédiées en 24h. Chaque colis est entièrement assuré, suivi et envoyé en emballage discret.',
+    euTitle: 'Conformité Totale UE', euDesc: 'Tous les produits respectent la réglementation européenne. Notre chanvre provient exclusivement de fermes européennes certifiées.',
+    privTitle: 'Vie Privée et Protection des Données', privDesc: 'Votre vie privée est importante. Vos données sont protégées conformément au RGPD. Nous ne vendons jamais vos informations.',
+    ctaTitle: 'Prêt à Commander en Toute Confiance ?', ctaDesc: 'Rejoignez plus de 5 000 professionnels qui font confiance à Greens Farmhouse.',
+    browse: 'Voir les Produits', contact: 'Contactez-nous',
+  },
+  de: {
+    title: 'Unsere Garantien | Qualität, Sicherheit & Zufriedenheit | Greens Farmhouse',
+    desc: 'Greens Farmhouse garantiert: 100% laborgetestete Produkte, Zufriedenheitsgarantie, sichere SSL-Zahlungen, versicherter 24h-Versand, volle EU-Konformität.',
+    heading: 'Unsere', headingHL: 'Garantien',
+    intro: 'Wenn Sie bei Greens Farmhouse bestellen, profitieren Sie von umfassenden Garantien für Ihre Sicherheit.',
+    labTitle: '100% Laborgetestete Produkte', labDesc: 'Jedes Produkt wird von unabhängigen Drittlaboren getestet. Wir liefern Analysezertifikate (COA) für jede Charge.',
+    satTitle: 'Zufriedenheitsgarantie', satDesc: 'Wir stehen hinter der Qualität jedes Produkts. Wenn Ihre Bestellung nicht Ihren Erwartungen entspricht, finden wir eine Lösung.',
+    secTitle: 'Sichere Zahlungen', secDesc: 'Ihre Daten sind mit SSL-Verschlüsselung geschützt. Wir bieten mehrere vertrauenswürdige Zahlungsmethoden.',
+    shipTitle: 'Schneller & Versicherter Versand', shipDesc: 'Alle Bestellungen werden in 24h versandt. Jedes Paket ist vollständig versichert, verfolgt und diskret verpackt.',
+    euTitle: 'Volle EU-Konformität', euDesc: 'Alle Produkte entsprechen EU-Vorschriften. Unser Hanf stammt ausschließlich von zertifizierten europäischen Farmen.',
+    privTitle: 'Datenschutz', privDesc: 'Ihre Privatsphäre ist uns wichtig. Ihre Daten werden DSGVO-konform geschützt. Wir verkaufen Ihre Daten niemals an Dritte.',
+    ctaTitle: 'Bereit mit Vertrauen zu Bestellen?', ctaDesc: 'Schließen Sie sich über 5.000 Fachleuten an, die Greens Farmhouse vertrauen.',
+    browse: 'Produkte Ansehen', contact: 'Kontaktieren Sie uns',
+  },
+  nl: {
+    title: 'Onze Garanties | Kwaliteit, Veiligheid & Tevredenheid | Greens Farmhouse',
+    desc: 'Greens Farmhouse garandeert: 100% labgeteste producten, tevredenheidsgarantie, veilige SSL-betalingen, verzekerde 24u verzending, volledige EU-naleving.',
+    heading: 'Onze', headingHL: 'Garanties',
+    intro: 'Als u bestelt bij Greens Farmhouse profiteert u van uitgebreide garanties voor uw gemoedsrust.',
+    labTitle: '100% Labgeteste Producten', labDesc: 'Elk product wordt getest door onafhankelijke laboratoria. We leveren Analysecertificaten (COA) voor elke batch.',
+    satTitle: 'Tevredenheidsgarantie', satDesc: 'Wij staan achter de kwaliteit van elk product. Als uw bestelling niet aan verwachtingen voldoet, lossen wij het op.',
+    secTitle: 'Veilige Betalingen', secDesc: 'Uw gegevens zijn beschermd met SSL-versleuteling. We bieden meerdere vertrouwde betaalmethoden.',
+    shipTitle: 'Snelle & Verzekerde Verzending', shipDesc: 'Alle bestellingen worden in 24u verzonden. Elk pakket is volledig verzekerd, gevolgd en discreet verpakt.',
+    euTitle: 'Volledige EU-Naleving', euDesc: 'Alle producten voldoen aan EU-regelgeving. Onze hennep komt uitsluitend van gecertificeerde Europese boerderijen.',
+    privTitle: 'Privacy & Gegevensbescherming', privDesc: 'Uw privacy is belangrijk. Uw gegevens worden AVG-conform beschermd. We verkopen uw informatie nooit.',
+    ctaTitle: 'Klaar om Met Vertrouwen te Bestellen?', ctaDesc: 'Sluit u aan bij meer dan 5.000 professionals die vertrouwen op Greens Farmhouse.',
+    browse: 'Producten Bekijken', contact: 'Neem Contact Op',
+  },
+  it: {
+    title: 'Le Nostre Garanzie | Qualità, Sicurezza e Soddisfazione | Greens Farmhouse',
+    desc: 'Greens Farmhouse garantisce: prodotti 100% testati in laboratorio, garanzia di soddisfazione, pagamenti SSL sicuri, spedizione assicurata 24h, piena conformità UE.',
+    heading: 'Le Nostre', headingHL: 'Garanzie',
+    intro: 'Quando ordini da Greens Farmhouse, benefici di garanzie complete per la tua tranquillità.',
+    labTitle: 'Prodotti 100% Testati', labDesc: 'Ogni prodotto è analizzato da laboratori indipendenti. Forniamo Certificati di Analisi (COA) per ogni lotto.',
+    satTitle: 'Garanzia di Soddisfazione', satDesc: 'Garantiamo la qualità di ogni prodotto. Se il tuo ordine non soddisfa le aspettative, troveremo una soluzione.',
+    secTitle: 'Pagamenti Sicuri', secDesc: 'Le tue informazioni sono protette con crittografia SSL. Offriamo diversi metodi di pagamento affidabili.',
+    shipTitle: 'Spedizione Rapida e Assicurata', shipDesc: 'Tutti gli ordini vengono spediti in 24h. Ogni pacco è completamente assicurato, tracciato e in imballaggio discreto.',
+    euTitle: 'Piena Conformità UE', euDesc: 'Tutti i prodotti rispettano le normative europee. La nostra canapa proviene esclusivamente da fattorie europee certificate.',
+    privTitle: 'Privacy e Protezione Dati', privDesc: 'La tua privacy è importante. I tuoi dati sono protetti in conformità al GDPR. Non vendiamo mai le tue informazioni.',
+    ctaTitle: 'Pronto a Ordinare con Fiducia?', ctaDesc: 'Unisciti a oltre 5.000 professionisti che si fidano di Greens Farmhouse.',
+    browse: 'Sfoglia Prodotti', contact: 'Contattaci',
+  },
+  fi: {
+    title: 'Takuumme | Laatu, Turvallisuus ja Tyytyväisyys | Greens Farmhouse',
+    desc: 'Greens Farmhouse takaa: 100% laboratoriotestattuja tuotteita, tyytyväisyystakuu, turvalliset SSL-maksut, vakuutettu 24h toimitus, täysi EU-yhteensopivuus.',
+    heading: 'Meidän', headingHL: 'Takuumme',
+    intro: 'Kun tilaat Greens Farmhouseilta, hyödyt kattavista takuista mielenrauhaasi varten.',
+    labTitle: '100% Laboratoriotestatut Tuotteet', labDesc: 'Jokainen tuote testataan riippumattomissa laboratorioissa. Toimitamme analyysitodistukset (COA) jokaiselle erälle.',
+    satTitle: 'Tyytyväisyystakuu', satDesc: 'Takaamme jokaisen tuotteen laadun. Jos tilauksesi ei vastaa odotuksiasi, löydämme ratkaisun.',
+    secTitle: 'Turvalliset Maksut', secDesc: 'Tietosi on suojattu SSL-salauksella. Tarjoamme useita luotettavia maksutapoja.',
+    shipTitle: 'Nopea & Vakuutettu Toimitus', shipDesc: 'Kaikki tilaukset lähetetään 24h kuluessa. Jokainen paketti on täysin vakuutettu, seurattu ja huomaamattomasti pakattu.',
+    euTitle: 'Täysi EU-yhteensopivuus', euDesc: 'Kaikki tuotteet noudattavat EU-säädöksiä. Hamppumme tulee yksinomaan sertifioiduilta eurooppalaisilta tiloilta.',
+    privTitle: 'Tietosuoja', privDesc: 'Yksityisyytesi on tärkeä. Tietosi suojataan GDPR:n mukaisesti. Emme koskaan myy tietojasi.',
+    ctaTitle: 'Valmis Tilaamaan Luottavaisesti?', ctaDesc: 'Liity yli 5 000 ammattilaiseen, jotka luottavat Greens Farmhouseiin.',
+    browse: 'Selaa Tuotteita', contact: 'Ota Yhteyttä',
+  },
+  pt: {
+    title: 'As Nossas Garantias | Qualidade, Segurança e Satisfação | Greens Farmhouse',
+    desc: 'Greens Farmhouse garante: produtos 100% testados em laboratório, garantia de satisfação, pagamentos SSL seguros, envio segurado 24h, plena conformidade com a UE.',
+    heading: 'As Nossas', headingHL: 'Garantias',
+    intro: 'Quando encomenda na Greens Farmhouse, beneficia de garantias abrangentes para a sua tranquilidade.',
+    labTitle: 'Produtos 100% Testados', labDesc: 'Cada produto é analisado por laboratórios independentes. Fornecemos Certificados de Análise (COA) para cada lote.',
+    satTitle: 'Garantia de Satisfação', satDesc: 'Garantimos a qualidade de cada produto. Se a sua encomenda não corresponder às expectativas, encontraremos uma solução.',
+    secTitle: 'Pagamentos Seguros', secDesc: 'As suas informações são protegidas com encriptação SSL. Oferecemos vários métodos de pagamento de confiança.',
+    shipTitle: 'Envio Rápido e Segurado', shipDesc: 'Todas as encomendas são enviadas em 24h. Cada embalagem é totalmente segurada, rastreada e em embalagem discreta.',
+    euTitle: 'Plena Conformidade com a UE', euDesc: 'Todos os produtos cumprem a regulamentação europeia. O nosso cânhamo provém exclusivamente de quintas europeias certificadas.',
+    privTitle: 'Privacidade e Proteção de Dados', privDesc: 'A sua privacidade é importante. Os seus dados são protegidos em conformidade com o RGPD. Nunca vendemos as suas informações.',
+    ctaTitle: 'Pronto para Encomendar com Confiança?', ctaDesc: 'Junte-se a mais de 5.000 profissionais que confiam na Greens Farmhouse.',
+    browse: 'Ver Produtos', contact: 'Contacte-nos',
+  },
+};
+
+const t2 = tr[locale] || tr.es;
+
+const breadcrumbs = [
+  { name: t(locale, 'nav.home'), url: lp('/') },
+  { name: t2.headingHL },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": t2.title,
+  "description": t2.desc,
+  "url": getAbsoluteLocaleUrl(locale, '/guarantees'),
+  "inLanguage": locale,
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+---
+
+<BaseLayout title={t2.title} description={t2.desc} locale={locale} canonicalURL={getAbsoluteLocaleUrl(locale, '/guarantees')} jsonLd={jsonLd}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <section class="py-12 md:py-16 bg-gradient-to-br from-primary/5 to-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        {t2.heading} <span class="text-primary">{t2.headingHL}</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">{t2.intro}</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5"><span class="text-3xl">🔬</span></div>
+          <h2 class="text-xl font-bold text-gray-900 mb-3">{t2.labTitle}</h2>
+          <p class="text-gray-600 leading-relaxed">{t2.labDesc}</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5"><span class="text-3xl">🛡️</span></div>
+          <h2 class="text-xl font-bold text-gray-900 mb-3">{t2.satTitle}</h2>
+          <p class="text-gray-600 leading-relaxed">{t2.satDesc}</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5"><span class="text-3xl">🔒</span></div>
+          <h2 class="text-xl font-bold text-gray-900 mb-3">{t2.secTitle}</h2>
+          <p class="text-gray-600 leading-relaxed">{t2.secDesc}</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-5"><span class="text-3xl">📦</span></div>
+          <h2 class="text-xl font-bold text-gray-900 mb-3">{t2.shipTitle}</h2>
+          <p class="text-gray-600 leading-relaxed">{t2.shipDesc}</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-5"><span class="text-3xl">🇪🇺</span></div>
+          <h2 class="text-xl font-bold text-gray-900 mb-3">{t2.euTitle}</h2>
+          <p class="text-gray-600 leading-relaxed">{t2.euDesc}</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5"><span class="text-3xl">🔐</span></div>
+          <h2 class="text-xl font-bold text-gray-900 mb-3">{t2.privTitle}</h2>
+          <p class="text-gray-600 leading-relaxed">{t2.privDesc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Testimonials locale={locale} />
+
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">{t2.ctaTitle}</h2>
+      <p class="text-green-100 mb-8 text-lg">{t2.ctaDesc}</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={lp('/collections')} class="inline-flex items-center gap-2 px-8 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+          {t2.browse}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href={lp('/contact')} class="inline-flex items-center gap-2 px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">{t2.contact}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

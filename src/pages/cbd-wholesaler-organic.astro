@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Organic Greens Farmhouse" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topOils = getProductsByCategory('cbd-oils').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Organic Greens Farmhouse — Premium Certified Organic Hemp Products",
+  "description": "Europe's trusted organic CBD wholesale supplier. Lab-tested, EU-compliant organic CBD flowers, resins, oils & edibles at wholesale prices.",
+  "url": "https://greensfarmhouse.com/cbd-wholesaler-organic",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "What does organic CBD mean?",
+    answer: "Organic CBD products are derived from hemp plants grown without synthetic pesticides, herbicides, or chemical fertilizers. Our organic hemp is cultivated on certified European farms using sustainable practices that protect soil health and biodiversity."
+  },
+  {
+    question: "Are your organic CBD products certified?",
+    answer: "Yes. All our organic CBD products come with Certificates of Analysis (COA) from independent laboratories. Our partner farms in Switzerland, Italy, and France follow organic farming standards, and every batch is tested for cannabinoid content, heavy metals, pesticides, and microbial contamination."
+  },
+  {
+    question: "What organic CBD products do you offer wholesale?",
+    answer: "We offer a full range of organic wholesale CBD products: organic CBD flowers (greenhouse and indoor), organic CBD oils in various concentrations (5%, 10%, 20%), organic CBD resins and hash, and organic hemp-based edibles. All available at competitive wholesale prices with volume discounts."
+  },
+  {
+    question: "What is the minimum order for organic CBD wholesale?",
+    answer: "We have no strict minimum order quantity. You can start with smaller quantities like 25 grams for flowers and resins, or single units for oils. However, buying in larger quantities (100g+, 50+ units) unlocks significantly better wholesale pricing."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Organic Greens Farmhouse | Certified Organic Hemp Products Wholesale"
+  description="Europe's leading organic CBD wholesale supplier. Premium organic CBD flowers, resins, oils at wholesale prices. Lab-tested, EU-compliant, free delivery over €99."
+  canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-organic"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-green-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">100% Organic Hemp</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Organic Greens Farmhouse — <span class="text-primary">Premium European Hemp</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Source certified organic CBD products directly from Europe's most trusted wholesale supplier. 
+        Our organic hemp is sustainably grown on partner farms in Switzerland, Italy, and France — 
+        with every batch lab-tested for purity, potency, and full EU compliance.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Organic Flowers
+        </a>
+        <a href="/collections/cbd-oils" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop Organic Oils
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Organic CBD -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose Organic CBD for Your Wholesale Business?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🌱</span>
+          <h3 class="font-bold text-lg mb-2">No Synthetic Chemicals</h3>
+          <p class="text-sm text-gray-600">Our organic hemp is grown without pesticides, herbicides, or synthetic fertilizers — only natural farming methods that produce cleaner, healthier products your customers can trust.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📈</span>
+          <h3 class="font-bold text-lg mb-2">Higher Retail Margins</h3>
+          <p class="text-sm text-gray-600">Organic CBD commands 20-40% higher retail prices than conventional CBD. Stock organic products to attract health-conscious consumers willing to pay premium prices.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🔬</span>
+          <h3 class="font-bold text-lg mb-2">Full Lab Transparency</h3>
+          <p class="text-sm text-gray-600">Every organic product includes a Certificate of Analysis testing for cannabinoid profiles, terpenes, heavy metals, mycotoxins, and pesticide residues. Total supply chain transparency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Organic Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Organic CBD Flowers — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Premium organic <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a> from European farms, available from just €0.19/gram in bulk.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Organic CBD Oils — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Organic <a href="/collections/cbd-oils" class="text-primary hover:underline font-medium">hemp seed oil infused with CBD</a> in 5%, 10%, and 20% concentrations. Available per liter or in retail-ready bottles.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topOils.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-oils" class="text-primary font-semibold hover:underline">Browse all CBD Oils →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Organic CBD Wholesale: What You Need to Know</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          The demand for organic CBD products across Europe has grown by over 35% year-over-year as consumers become 
+          increasingly health-conscious and environmentally aware. As a <strong>wholesale CBD supplier</strong>, Greens Farmhouse 
+          provides retailers, <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shops</a>, pharmacies, and 
+          e-commerce businesses with premium organic hemp products at the best wholesale rates.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Our Organic Sourcing Standards</h3>
+        <p>
+          We partner exclusively with certified organic hemp farms in <strong>Switzerland, Italy, and southern France</strong>. These farms 
+          use regenerative agriculture practices — no synthetic pesticides, no GMOs, and soil-enriching crop rotation. The result is CBD 
+          flower with richer terpene profiles, higher cannabinoid concentrations, and zero chemical residues.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Organic Product Range</h3>
+        <p>
+          Our organic wholesale catalog includes <a href="/collections/cbd-flowers" class="text-primary hover:underline">CBD flowers</a> 
+          (greenhouse from €0.19/g, indoor from €0.79/g), <a href="/collections/cbd-resins" class="text-primary hover:underline">CBD resins</a> 
+          (hash, pollen, concentrates), <a href="/collections/cbd-oils" class="text-primary hover:underline">organic hemp oils</a> 
+          (5%, 10%, 20% CBD in bulk or bottled), and <a href="/collections/cbd-gummies" class="text-primary hover:underline">CBD edibles</a>. 
+          Every product ships with full COA documentation from independent French laboratories.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">White-Label Organic CBD</h3>
+        <p>
+          Looking to build your own organic CBD brand? We offer white-label services for all our organic products. Choose 
+          from our existing range, add your branding, and we'll handle packaging and fulfillment. Learn more on our 
+          <a href="/about" class="text-primary hover:underline">About page</a> or <a href="/contact" class="text-primary hover:underline">contact our team</a> 
+          for a custom quote.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="Organic CBD Wholesale — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Stock Organic CBD?</h2>
+      <p class="text-green-100 mb-6">Get premium organic CBD products at the best wholesale prices. Free delivery on orders over €99.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse All Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { blogPosts } from '../../data/blog';
+
+const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog" },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Greens Farmhouse Blog",
+  "description": "Expert guides, industry insights, and tips for CBD businesses in Europe.",
+  "url": "https://greensfarmhouse.com/blog",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com"
+  },
+  "blogPost": blogPosts.map(post => ({
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "url": `https://greensfarmhouse.com/blog/${post.slug}`,
+    "author": {
+      "@type": "Organization",
+      "name": "Greens Farmhouse"
+    }
+  }))
+};
+---
+
+<BaseLayout
+  title="CBD Blog | Industry Guides & Tips | Greens Farmhouse"
+  description="Expert guides, buying tips, and industry insights for CBD retailers and wholesalers in Europe. Learn about CBD products, regulations, and business strategies."
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <section class="py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Greens Farmhouse Blog</h1>
+        <p class="text-lg text-gray-600">
+          Expert guides, industry insights, and practical tips to help grow your CBD business. Stay informed on the latest trends and regulations.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {sortedPosts.map((post, index) => (
+          <article class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow group">
+            <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/15 flex items-center justify-center">
+              <svg class="w-12 h-12 text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">{post.category}</span>
+                <span class="text-xs text-gray-500">{post.readTime}</span>
+              </div>
+              <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                <a href={`/blog/${post.slug}`} class="hover:underline">{post.title}</a>
+              </h2>
+              <p class="text-sm text-gray-600 line-clamp-3 mb-4">{post.excerpt}</p>
+              <div class="flex items-center justify-between">
+                <time datetime={post.date} class="text-xs text-gray-400">
+                  {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+                <a href={`/blog/${post.slug}`} class="text-sm font-semibold text-primary hover:underline">
+                  Read more →
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-12 md:py-16 bg-primary/5">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3">Stay Updated</h2>
+      <p class="text-gray-600 mb-6">Get the latest CBD industry news, product launches, and exclusive wholesale deals delivered to your inbox.</p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Your email address" required class="flex-1 px-4 py-2.5 border border-gray-300 rounded-full text-sm focus:ring-2 focus:ring-primary/30 focus:border-primary" />
+        <button type="submit" class="px-6 py-2.5 bg-primary text-white font-semibold rounded-full text-sm hover:bg-primary/90 transition">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

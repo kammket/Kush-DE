@@ -1,0 +1,95 @@
+---
+/**
+ * TrustStrip — slim bar displayed below header on every page.
+ * Shows key trust signals: secure payment, free shipping, lab tested, fast shipping, client count.
+ */
+import { defaultLocale, type Locale } from '../i18n/config';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = defaultLocale as Locale } = Astro.props;
+
+const strips: Record<string, Array<{ icon: string; text: string }>> = {
+  en: [
+    { icon: "🔒", text: "Secure Payment" },
+    { icon: "🚚", text: "Free Shipping €200+" },
+    { icon: "🔬", text: "Lab Tested" },
+    { icon: "⚡", text: "Ships in 24h" },
+    { icon: "👥", text: "5,000+ Clients" },
+    { icon: "✅", text: "Satisfaction Guarantee" },
+  ],
+  es: [
+    { icon: "🔒", text: "Pago Seguro" },
+    { icon: "🚚", text: "Envío Gratis +200€" },
+    { icon: "🔬", text: "Testado en Laboratorio" },
+    { icon: "⚡", text: "Envío en 24h" },
+    { icon: "👥", text: "5.000+ Clientes" },
+    { icon: "✅", text: "Garantía de Satisfacción" },
+  ],
+  fr: [
+    { icon: "🔒", text: "Paiement Sécurisé" },
+    { icon: "🚚", text: "Livraison Gratuite +200€" },
+    { icon: "🔬", text: "Testé en Laboratoire" },
+    { icon: "⚡", text: "Expédié en 24h" },
+    { icon: "👥", text: "5 000+ Clients" },
+    { icon: "✅", text: "Garantie Satisfaction" },
+  ],
+  de: [
+    { icon: "🔒", text: "Sichere Zahlung" },
+    { icon: "🚚", text: "Versandkostenfrei ab 200€" },
+    { icon: "🔬", text: "Laborgetestet" },
+    { icon: "⚡", text: "Versand in 24h" },
+    { icon: "👥", text: "5.000+ Kunden" },
+    { icon: "✅", text: "Zufriedenheitsgarantie" },
+  ],
+  nl: [
+    { icon: "🔒", text: "Veilige Betaling" },
+    { icon: "🚚", text: "Gratis Verzending +200€" },
+    { icon: "🔬", text: "Labgetest" },
+    { icon: "⚡", text: "Verzending in 24u" },
+    { icon: "👥", text: "5.000+ Klanten" },
+    { icon: "✅", text: "Tevredenheidsgarantie" },
+  ],
+  it: [
+    { icon: "🔒", text: "Pagamento Sicuro" },
+    { icon: "🚚", text: "Spedizione Gratuita +200€" },
+    { icon: "🔬", text: "Testato in Laboratorio" },
+    { icon: "⚡", text: "Spedizione in 24h" },
+    { icon: "👥", text: "5.000+ Clienti" },
+    { icon: "✅", text: "Garanzia di Soddisfazione" },
+  ],
+  fi: [
+    { icon: "🔒", text: "Turvallinen Maksu" },
+    { icon: "🚚", text: "Ilmainen Toimitus +200€" },
+    { icon: "🔬", text: "Laboratoriotestattu" },
+    { icon: "⚡", text: "Lähetys 24h" },
+    { icon: "👥", text: "5 000+ Asiakasta" },
+    { icon: "✅", text: "Tyytyväisyystakuu" },
+  ],
+  pt: [
+    { icon: "🔒", text: "Pagamento Seguro" },
+    { icon: "🚚", text: "Envio Grátis +200€" },
+    { icon: "🔬", text: "Testado em Laboratório" },
+    { icon: "⚡", text: "Envio em 24h" },
+    { icon: "👥", text: "5.000+ Clientes" },
+    { icon: "✅", text: "Garantia de Satisfação" },
+  ],
+};
+
+const items = strips[locale] || strips.en;
+---
+
+<div class="bg-gray-900 text-white overflow-hidden" aria-label="Trust indicators">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between gap-4 py-2.5 text-xs font-medium overflow-x-auto scrollbar-hide">
+      {items.map(item => (
+        <span class="flex items-center gap-1.5 whitespace-nowrap shrink-0">
+          <span>{item.icon}</span>
+          <span>{item.text}</span>
+        </span>
+      ))}
+    </div>
+  </div>
+</div>

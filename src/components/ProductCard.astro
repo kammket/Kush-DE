@@ -1,0 +1,147 @@
+---
+import type { Product } from '../data/products';
+import { defaultLocale, type Locale } from '../i18n/config';
+import { getLocalePath } from '../i18n/utils';
+
+interface Props {
+  product: Product;
+  locale?: Locale;
+}
+
+const { product, locale = defaultLocale as Locale } = Astro.props;
+const productUrl = getLocalePath(`/products/${product.slug}`, locale);
+---
+
+<article class="product-card group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+  <a href={productUrl} class="block" aria-label={`View ${product.name} - ${product.price}`}>
+    <!-- Image Container -->
+    <div class="relative aspect-square overflow-hidden bg-gray-100">
+      {product.image.startsWith('http') ? (
+        <img
+          src={product.image}
+          alt={product.name}
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100">
+          <div class="text-center p-4">
+            <svg class="w-16 h-16 mx-auto text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span class="text-xs text-gray-400 mt-2 block">{product.name}</span>
+          </div>
+        </div>
+      )}
+      
+      <!-- Badges -->
+      <div class="absolute top-2 left-2 flex flex-col gap-1">
+        {product.isSpecialOffer && (
+          <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">SPECIAL OFFER</span>
+        )}
+        {!product.inStock && (
+          <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded">SOLD OUT</span>
+        )}
+        {product.subcategory && (
+          <span class="bg-primary/90 text-white text-xs px-2 py-1 rounded">{product.subcategory}</span>
+        )}
+      </div>
+    </div>
+    
+    <!-- Content -->
+    <div class="p-4">
+      <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">{product.supplier}</p>
+      <h3 class="font-semibold text-sm text-gray-900 group-hover:text-primary transition-colors line-clamp-2 min-h-[2.5rem]">
+        {product.name}
+      </h3>
+
+      <!-- Star Rating -->
+      <div class="flex items-center gap-1 mt-1">
+        <div class="flex text-yellow-400 text-xs" aria-label="Rating: 4.8 out of 5 stars">
+          {'★★★★★'}
+        </div>
+        <span class="text-[10px] text-gray-400">(4.8)</span>
+      </div>
+      
+      <div class="mt-2 flex items-center gap-2">
+        {product.originalPrice && (
+          <span class="text-sm text-gray-400 line-through">{product.originalPrice}</span>
+        )}
+        <span class="text-lg font-bold text-primary">{product.price}</span>
+      </div>
+      
+      {product.variants && product.variants.length > 1 && (
+        <p class="mt-1 text-xs text-accent font-medium">
+          {product.variants.length} price tiers — up to €{product.variants[product.variants.length - 1].price.toFixed(2)}
+        </p>
+      )}
+
+      {product.cbdContent && (
+        <p class="mt-1 text-xs text-gray-500">CBD: {product.cbdContent}</p>
+      )}
+    </div>
+  </a>
+  
+  <!-- Add to Cart Button -->
+  <div class="px-4 pb-4">
+    {product.inStock ? (
+      <button 
+        type="button"
+        class="add-to-cart-card w-full py-2.5 bg-primary text-white rounded-lg font-medium text-sm hover:bg-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        aria-label={`Add ${product.name} to cart`}
+        data-slug={product.slug}
+        data-name={product.name}
+        data-image={product.image}
+        data-price={product.variants && product.variants.length > 0 ? product.variants[0].price : product.priceNumeric}
+        data-variant-label={product.variants && product.variants.length > 0 ? product.variants[0].label : 'Default'}
+      >
+        ADD TO CART
+      </button>
+    ) : (
+      <button 
+        class="w-full py-2.5 bg-gray-300 text-gray-500 rounded-lg font-medium text-sm cursor-not-allowed"
+        disabled
+        aria-label={`${product.name} is sold out`}
+      >
+        SOLD OUT
+      </button>
+    )}
+  </div>
+</article>
+
+<script>
+  import { addToCart } from '../scripts/cart';
+
+  function initCardButtons() {
+    document.querySelectorAll<HTMLButtonElement>('.add-to-cart-card').forEach(btn => {
+      // Avoid double-binding
+      if (btn.dataset.bound) return;
+      btn.dataset.bound = 'true';
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        addToCart({
+          slug: btn.dataset.slug!,
+          name: btn.dataset.name!,
+          image: btn.dataset.image!,
+          variantLabel: btn.dataset.variantLabel!,
+          price: parseFloat(btn.dataset.price!),
+        });
+
+        const orig = btn.textContent;
+        btn.textContent = '✓ ADDED!';
+        btn.classList.add('!bg-green-600');
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.classList.remove('!bg-green-600');
+        }, 1200);
+      });
+    });
+  }
+
+  initCardButtons();
+  document.addEventListener('astro:after-swap', initCardButtons);
+</script>

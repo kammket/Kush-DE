@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2d5016;
+  --color-primary-dark: #1a3a0a;
+  --color-primary-light: #4a7c28;
+  --color-secondary: #f5f0e8;
+  --color-accent: #c8a951;
+  --color-accent-dark: #b8952f;
+  --color-dark: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes slide {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-card .product-image {
+  transition: transform 0.3s ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}

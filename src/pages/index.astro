@@ -1,0 +1,491 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import Testimonials from '../components/Testimonials.astro';
+import { categories, getFeaturedProducts, getProductsByCategory } from '../data/products';
+
+const flowerProducts = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 6);
+const resinProducts = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 6);
+const oilProducts = getProductsByCategory('cbd-oils').filter(p => p.inStock).slice(0, 6);
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Greens Farmhouse",
+  "url": "https://greensfarmhouse.com",
+  "description": "N°1 Greens Farmhouse in France and Europe. Certified wholesale supplier of CBD flowers, resins, oils and edibles.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://greensfarmhouse.com/collections?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const faqItems = [
+  {
+    question: "What is CBD?",
+    answer: "Cannabidiol (CBD) is a molecule found in the hemp plant. Unlike THC, CBD has no psychoactive effect and is not considered a drug. The Court of Justice of the European Union confirmed on November 9, 2020 that CBD is not a psychotropic drug and has no harmful effect on health."
+  },
+  {
+    question: "Is the sale of CBD products legal in France and Europe?",
+    answer: "Yes, CBD products are legal in France and throughout Europe, provided they contain less than 0.3% THC. All our products are tested by independent laboratories and comply with current French and European legislation."
+  },
+  {
+    question: "How to buy CBD in bulk on your store?",
+    answer: "Simply navigate through our menu to find the products you need. We offer CBD flowers in bulk or jars (2g, 5g, 10g), CBD resins in bulk or jars, and CBD oils per liter or in retail bottles (10ml, 30ml, 100ml). Each product complies with French CBD legislation with THC content less than 0.3%."
+  },
+  {
+    question: "What are the benefits of buying CBD wholesale?",
+    answer: "Buying CBD wholesale offers many advantages: lower prices through bulk purchasing, premium quality guaranteed on all products, wide choice of products tailored to B2B needs, fast delivery across France and Europe, and legal compliance with THC levels below 0.3%."
+  },
+  {
+    question: "Can you deliver CBD abroad?",
+    answer: "Yes, we deliver throughout France and Europe. We ship to Spain, Germany, Italy, Portugal, Belgium, Luxembourg, Switzerland, Malta, Finland, Netherlands, and the United Kingdom. All orders are shipped within 24 hours of payment."
+  },
+  {
+    question: "How does payment work?",
+    answer: "Payments are secure and made by credit card. For professionals, parcels are sent via La Poste Colissimo with signature required. Free delivery for orders over €99. Mondial Relay and on-premises pickup are also available."
+  },
+  {
+    question: "Do you offer free samples?",
+    answer: "Yes! For all purchases, we include free samples so you can discover new products from our range. This allows you to test different strains and products before placing larger wholesale orders."
+  }
+];
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout 
+  title="Greens Farmhouse in France and Europe | Certified CBD Wholesale Supplier"
+  description="N°1 Greens Farmhouse in France and Europe. Buy wholesale CBD flowers, resins, oils & edibles. Premium quality, lab-tested, legal. Free delivery over €99. Professional B2B pricing."
+  jsonLd={homeJsonLd}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+      <div class="max-w-3xl">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">FOR ALL PURCHASES, FREE SAMPLES</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
+          Greens Farmhouse<br />
+          <span class="text-accent">N°1 in France &amp; Europe</span>
+        </h1>
+        <p class="text-lg md:text-xl text-green-100 mb-8 leading-relaxed max-w-2xl">
+          Certified wholesale supplier of premium CBD flowers, resins, oils and edibles. 
+          100% legal, lab-tested, and delivered within 24 hours across Europe.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+            Shop CBD Flowers
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a href="/collections" class="inline-flex items-center px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+            View All Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section class="bg-secondary py-8 border-b border-gray-200" aria-label="Trust indicators">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-2">🌿</span>
+          <h2 class="font-bold text-sm text-gray-900">Made in Europe</h2>
+          <p class="text-xs text-gray-600 mt-1">Organically grown hemp from trusted European farms</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-2">✅</span>
+          <h2 class="font-bold text-sm text-gray-900">100% Legal &amp; Certified</h2>
+          <p class="text-xs text-gray-600 mt-1">Lab-tested, THC &lt; 0.3%, fully compliant</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-2">🤝</span>
+          <h2 class="font-bold text-sm text-gray-900">Services for Your Business</h2>
+          <p class="text-xs text-gray-600 mt-1">White-label, B2B pricing, fast shipping</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By Professionals -->
+  <section class="py-8 bg-white border-b border-gray-100" aria-label="Trusted by professionals across Europe">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">Trusted by 5,000+ Professionals Across Europe</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🏪</span>
+          <span class="text-sm font-medium">CBD Shops</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🚬</span>
+          <span class="text-sm font-medium">Tobacco Shops</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">💊</span>
+          <span class="text-sm font-medium">Pharmacies</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🛒</span>
+          <span class="text-sm font-medium">E-Commerce</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🧘</span>
+          <span class="text-sm font-medium">Wellness Centers</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🏨</span>
+          <span class="text-sm font-medium">Hotels &amp; Spas</span>
+        </div>
+      </div>
+      <div class="mt-4 flex items-center justify-center gap-6 text-center">
+        <div>
+          <span class="text-2xl font-bold text-primary">5,000+</span>
+          <p class="text-[10px] text-gray-400 uppercase">B2B Clients</p>
+        </div>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <div>
+          <span class="text-2xl font-bold text-primary">15+</span>
+          <p class="text-[10px] text-gray-400 uppercase">Countries</p>
+        </div>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <div>
+          <span class="text-2xl font-bold text-primary">4.8/5</span>
+          <p class="text-[10px] text-gray-400 uppercase">Rating</p>
+        </div>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <div>
+          <span class="text-2xl font-bold text-primary">2018</span>
+          <p class="text-[10px] text-gray-400 uppercase">Since</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-12 md:py-16" aria-labelledby="about-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 id="about-heading" class="text-2xl md:text-3xl font-bold mb-6">Greens Farmhouse N°1 for Professionals and Individuals</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Founded in 2018, Greens Farmhouse is today the reference for <a href="/collections" class="text-primary hover:underline">CBD wholesale</a> in France and Europe. 
+          Our family-owned company specializes as a CBD supplier in the sale of cultivated hemp-based products, 
+          including <a href="/collections/cbd-flowers" class="text-primary hover:underline">CBD flowers</a>, 
+          <a href="/collections/cbd-resins" class="text-primary hover:underline">resins</a>, 
+          <a href="/collections/cbd-oils" class="text-primary hover:underline">oils</a>, and 
+          <a href="/collections/cbd-gummies" class="text-primary hover:underline">edibles</a>.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          From the outset, we have set ourselves the goal of offering only 
+          <a href="/cbd-wholesaler-organic" class="text-primary hover:underline">premium organic products</a> that comply with 
+          CBD legislation in France, made with complete transparency and delivered quickly anywhere in France and Europe. 
+          We supply retailers, <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shops</a>, pharmacies, and 
+          e-commerce businesses across <a href="/cbd-wholesaler-belgium" class="text-primary hover:underline">Belgium</a>, 
+          <a href="/cbd-wholesaler-spain" class="text-primary hover:underline">Spain</a>, 
+          <a href="/cbd-wholesaler-switzerland" class="text-primary hover:underline">Switzerland</a>, 
+          <a href="/cbd-wholesaler-luxembourg" class="text-primary hover:underline">Luxembourg</a>, and 
+          <a href="/cbd-wholesaler-malta" class="text-primary hover:underline">Malta</a>.
+        </p>
+        <p class="mt-4 text-primary font-semibold text-lg">
+          With CBD wholesale, quantity always rhymes with quality!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="py-12 md:py-16 bg-gray-50" aria-labelledby="categories-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 id="categories-heading" class="text-2xl md:text-3xl font-bold">Create Your Own White-Label Products</h2>
+        <p class="text-gray-600 mt-2">Browse our complete CBD catalog by category</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {categories.map(cat => (
+          <a 
+            href={`/collections/${cat.slug}`} 
+            class="group relative bg-white rounded-xl border border-gray-200 p-6 text-center hover:shadow-lg hover:border-primary/30 transition-all duration-300"
+          >
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-50 to-green-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-sm text-gray-900 group-hover:text-primary transition-colors">
+              {cat.name}
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">{cat.productCount} products</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CBD Flowers Section -->
+  <section class="py-12 md:py-16" aria-labelledby="flowers-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 id="flowers-heading" class="text-2xl md:text-3xl font-bold">Wholesale CBD Flowers</h2>
+          <p class="text-gray-600 mt-1">Premium hemp flowers from European farms</p>
+        </div>
+        <a href="/collections/cbd-flowers" class="hidden sm:inline-flex items-center text-primary font-medium hover:underline">
+          View all
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        {flowerProducts.map(product => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+      <div class="text-center mt-6 sm:hidden">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center text-primary font-medium hover:underline">
+          View all CBD Flowers →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CBD Resins Section -->
+  <section class="py-12 md:py-16 bg-gray-50" aria-labelledby="resins-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 id="resins-heading" class="text-2xl md:text-3xl font-bold">Wholesale CBD Resins</h2>
+          <p class="text-gray-600 mt-1">Hash, pollen, crumble &amp; concentrates</p>
+        </div>
+        <a href="/collections/cbd-resins" class="hidden sm:inline-flex items-center text-primary font-medium hover:underline">
+          View all
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        {resinProducts.map(product => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+      <div class="text-center mt-6 sm:hidden">
+        <a href="/collections/cbd-resins" class="inline-flex items-center text-primary font-medium hover:underline">
+          View all CBD Resins →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CBD Oils Section -->
+  <section class="py-12 md:py-16" aria-labelledby="oils-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 id="oils-heading" class="text-2xl md:text-3xl font-bold">Wholesale CBD Oils</h2>
+          <p class="text-gray-600 mt-1">Organic hemp oils — bulk &amp; retail bottles</p>
+        </div>
+        <a href="/collections/cbd-oils" class="hidden sm:inline-flex items-center text-primary font-medium hover:underline">
+          View all
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        {oilProducts.map(product => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+      <div class="text-center mt-6 sm:hidden">
+        <a href="/collections/cbd-oils" class="inline-flex items-center text-primary font-medium hover:underline">
+          View all CBD Oils →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-12 md:py-16 bg-primary text-white" aria-labelledby="why-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="why-heading" class="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose GreensFarmhouse.com?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+            <span class="text-3xl">🌱</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Organic Farming</h3>
+          <p class="text-green-100 text-sm leading-relaxed">
+            CBD flowers, resins and oils from reliable suppliers in France, Switzerland and Italy, 
+            with organically grown hemp.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+            <span class="text-3xl">💰</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Cheap CBD, Premium Quality</h3>
+          <p class="text-green-100 text-sm leading-relaxed">
+            Best value for money on the market. All products certified premium quality 
+            and compliant with legislation.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+            <span class="text-3xl">📋</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Comprehensive Catalog</h3>
+          <p class="text-green-100 text-sm leading-relaxed">
+            Full range of CBD resins, hemp flowers and oils compliant with current legislation 
+            for all your B2B needs.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+            <span class="text-3xl">📦</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Fast Delivery</h3>
+          <p class="text-green-100 text-sm leading-relaxed">
+            All orders shipped within 24 hours. Free delivery 
+            for orders over €99 across France and Europe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Buy Section -->
+  <section class="py-12 md:py-16" aria-labelledby="how-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="how-heading" class="text-2xl md:text-3xl font-bold text-center mb-8">How to Buy CBD in Bulk</h2>
+      <div class="max-w-none text-gray-600">
+        <p class="mb-6">
+          To simplify your CBD wholesale purchases, we designed a clear and practical interface. 
+          We offer a full range of products to suit all your needs:
+        </p>
+        <div class="grid md:grid-cols-3 gap-6 my-8">
+          <div class="bg-gray-50 rounded-xl p-6 text-center">
+            <span class="text-4xl block mb-3">🌸</span>
+            <h3 class="font-bold text-gray-900 mb-2">CBD Flowers</h3>
+            <p class="text-sm">Available in bulk or in 2g, 5g and 10g jars</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 text-center">
+            <span class="text-4xl block mb-3">🧊</span>
+            <h3 class="font-bold text-gray-900 mb-2">CBD Resins</h3>
+            <p class="text-sm">Packaged in bulk or in 2g, 5g and 10g jars</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 text-center">
+            <span class="text-4xl block mb-3">💧</span>
+            <h3 class="font-bold text-gray-900 mb-2">CBD Oils</h3>
+            <p class="text-sm">Wholesale in 1L cans or retail in 10ml, 30ml, 100ml</p>
+          </div>
+        </div>
+        <p>
+          Each product is selected for its premium quality and complies with French CBD legislation, 
+          guaranteeing a THC content of less than 0.3%.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ title="Frequently Asked Questions" items={faqItems} />
+
+  <!-- Blog Preview -->
+  <section class="py-12 md:py-16" aria-labelledby="blog-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 id="blog-heading" class="text-2xl md:text-3xl font-bold">Information and Advice</h2>
+        <a href="/blog" class="text-primary font-medium hover:underline">View all →</a>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+            <span class="text-4xl">📦</span>
+          </div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-02-26">FEBRUARY 26, 2026</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href="/blog/manage-cbd-wholesale-stock" class="hover:text-primary transition-colors">
+                How to manage your CBD stock to avoid shortages and maximize sales
+              </a>
+            </h3>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+            <span class="text-4xl">🌸</span>
+          </div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-02-10">FEBRUARY 10, 2026</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href="/blog/choose-right-cbd-flower-supplier" class="hover:text-primary transition-colors">
+                CBD flowers: how to choose a supplier that meets your needs year-round
+              </a>
+            </h3>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+            <span class="text-4xl">⚠️</span>
+          </div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-01-29">JANUARY 29, 2026</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href="/blog/avoid-mistakes-with-cbd-wholesaler" class="hover:text-primary transition-colors">
+                Mistakes that cost CBD stores dearly and how to avoid them
+              </a>
+            </h3>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+            <span class="text-4xl">📊</span>
+          </div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-01-16">JANUARY 16, 2026</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href="/blog/best-selling-cbd-products" class="hover:text-primary transition-colors">
+                The CBD products that are most popular this year: real market trends
+              </a>
+            </h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <Testimonials />
+
+  <!-- CTA Section -->
+  <section class="py-12 md:py-16 bg-accent/10" aria-labelledby="cta-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 id="cta-heading" class="text-2xl md:text-3xl font-bold mb-4">A Project? Have a Question?</h2>
+      <p class="text-gray-600 mb-6">Let's talk — we'll be happy to answer any questions you may have.</p>
+      <a href="/contact" class="inline-flex items-center px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors shadow-lg">
+        CONTACT US
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

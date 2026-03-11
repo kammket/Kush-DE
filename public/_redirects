@@ -1,0 +1,2 @@
+# www to non-www redirect
+https://www.greensfarmhouse.com/* https://greensfarmhouse.com/:splat 301

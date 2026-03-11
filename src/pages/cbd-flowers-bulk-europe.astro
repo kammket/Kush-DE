@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Flowers Bulk Europe" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topResins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "CBD Flowers Bulk Europe — Large Quantity Wholesale Orders",
+  "description": "Buy CBD flowers in bulk across Europe. Special pricing for 1kg+ orders. From €0.19/g. Free insured shipping. Discrete packaging.",
+  "url": "https://greensfarmhouse.com/cbd-flowers-bulk-europe",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "What is the minimum order for bulk pricing?",
+    answer: "Bulk pricing starts from 1kg orders. For 5kg+ and 10kg+ we offer even more competitive rates. Contact us for custom pricing on quantities above 50kg."
+  },
+  {
+    question: "Can you ship large volumes across Europe?",
+    answer: "Yes. We ship up to full pallets throughout Europe. All shipments are insured, tracked, and packed in discrete, neutral packaging. We have experience with courier and freight logistics."
+  },
+  {
+    question: "How is bulk pricing calculated?",
+    answer: "Pricing is tiered based on volume. Our greenhouse flowers start from €0.19/g at bulk quantities. Indoor flowers from €0.49/g in bulk. The more you order, the better your per-gram cost. Contact us for an exact quote."
+  },
+  {
+    question: "Is sample ordering available before committing to bulk?",
+    answer: "Absolutely. You can order any quantity from 25g to test our quality before placing a bulk order. Many customers start with a sample order and scale up once they've experienced our product quality."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="CBD Flowers Bulk Europe | Large Quantity Wholesale Orders"
+  description="Buy CBD flowers in bulk across Europe. Special pricing for 1kg+ orders. From €0.19/g. Free insured shipping, discrete packaging. Indoor, greenhouse & outdoor."
+  canonicalURL="https://greensfarmhouse.com/cbd-flowers-bulk-europe"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-amber-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">📦 CBD Bulk Orders</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        CBD Flowers Bulk Europe — <span class="text-primary">Best Prices for Large Orders</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Buy CBD flowers in large quantities at Europe's best wholesale prices. Exclusive volume discounts for 1kg, 5kg, and 10kg+ orders. Discrete, insured shipping across all of Europe with full tracking.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Bulk CBD
+        </a>
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop CBD Resins
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Buy CBD in Bulk?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📦</span>
+          <h3 class="font-bold text-lg mb-2">Orders 1kg — 100kg+</h3>
+          <p class="text-sm text-gray-600">We accept orders from 1kg up to full pallets. Tiered pricing based on volume — the more you order, the better your per-gram cost.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💰</span>
+          <h3 class="font-bold text-lg mb-2">Europe's Best Prices</h3>
+          <p class="text-sm text-gray-600">The larger the volume, the better the price. Greenhouse flowers from €0.19/g, indoor from €0.49/g in bulk quantities.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🔒</span>
+          <h3 class="font-bold text-lg mb-2">Discrete Shipping</h3>
+          <p class="text-sm text-gray-600">Neutral, discrete packaging for all orders. Fully insured shipping with tracking throughout Europe. Professional freight for large volumes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Flowers Bulk — Catalog</h2>
+      <p class="text-gray-600 mb-8">Our <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a> available in large quantities. Special pricing for high-volume orders.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Resins Bulk</h2>
+      <p class="text-gray-600 mb-8"><a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD hash and resins</a> also available in large quantities with volume pricing.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Bulk CBD Flowers: Maximise Your Margins</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          For serious CBD retailers and distributors, <strong>buying in bulk is the key to maximising profit margins</strong>. Whether you supply <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shops</a>, CBD boutiques, or operate a distribution network across <a href="/wholesale-cbd-flowers-germany" class="text-primary hover:underline">Germany</a>, <a href="/wholesale-cbd-flowers-france" class="text-primary hover:underline">France</a>, <a href="/wholesale-cbd-flowers-italy" class="text-primary hover:underline">Italy</a>, or the <a href="/wholesale-cbd-flowers-netherlands" class="text-primary hover:underline">Netherlands</a> — our bulk pricing will transform your business economics.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Volume Pricing Tiers</h3>
+        <p>
+          Our pricing is designed to reward volume. Start with standard wholesale rates at any quantity, and unlock progressively better pricing at 100g, 500g, 1kg, 5kg, and 10kg+ thresholds. For orders above 50kg, <a href="/contact" class="text-primary hover:underline">contact us</a> for a custom quote — we've fulfilled orders up to several hundred kilograms.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">All Growing Methods Available</h3>
+        <p>
+          Bulk orders are available for all our growing methods: <a href="/cbd-hemp-flowers-indoor" class="text-primary hover:underline">premium indoor</a> (from €0.49/g in bulk), <a href="/cbd-hemp-flowers-greenhouse" class="text-primary hover:underline">greenhouse</a> (from €0.19/g in bulk), and outdoor options. Our <a href="/wholesale-cbd-flowers-europe" class="text-primary hover:underline">European supply network</a> ensures consistent availability even for the largest orders.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Logistics & Packaging</h3>
+        <p>
+          We handle all bulk logistics — from courier delivery for smaller volumes to freight shipping for pallets. All packaging is discrete, neutral, and vacuum-sealed for freshness. Every order includes full documentation: COA, invoicing, and compliance paperwork for your jurisdiction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Bulk Orders — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Buy CBD Flowers in Bulk</h2>
+      <p class="text-green-100 mb-6">The best prices for large volumes. Free shipping on orders over €99. Custom quotes for 10kg+.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

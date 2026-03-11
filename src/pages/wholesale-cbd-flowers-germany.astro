@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Wholesale CBD Flowers Germany" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topResins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Wholesale CBD Flowers Germany — CBD Blüten Großhandel Deutschland",
+  "description": "Your wholesale CBD flower supplier for Germany. BtMG-compliant, lab-tested. Fast shipping to Berlin, Munich, Hamburg, Cologne.",
+  "url": "https://greensfarmhouse.com/wholesale-cbd-flowers-germany",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "Are CBD flowers legal in Germany?",
+    answer: "Yes. CBD flowers with less than 0.2% THC are legal in Germany under the BtMG (Betäubungsmittelgesetz). All our products comply with German regulations and ship with full Certificates of Analysis."
+  },
+  {
+    question: "How fast is shipping to Germany?",
+    answer: "Typically 2-3 business days for standard delivery anywhere in Germany. Free shipping on all orders above €99. Express delivery options available upon request."
+  },
+  {
+    question: "Is there a minimum order quantity?",
+    answer: "No mandatory minimum. You can start from 25g. Volume discounts kick in at 100g, with significant bulk pricing available from 1kg+."
+  },
+  {
+    question: "Do you provide German-language invoicing?",
+    answer: "Yes. We provide complete German-language invoicing and all necessary legal documentation for your German business records."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Wholesale CBD Flowers Germany | CBD Blüten Großhandel Deutschland"
+  description="Your wholesale CBD flower supplier for Germany. BtMG-compliant, lab-tested. Fast 2-3 day shipping to Berlin, Munich, Hamburg, Cologne. Free delivery over €99."
+  canonicalURL="https://greensfarmhouse.com/wholesale-cbd-flowers-germany"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-yellow-50 via-white to-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🇩🇪 CBD Germany</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Wholesale CBD Flowers Germany — <span class="text-primary">CBD Blüten Großhandel</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Germany is Europe's largest CBD market. Our CBD flowers fully comply with German BtMG regulations. Fast shipping in 2-3 business days nationwide with complete documentation and Certificates of Analysis.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop CBD Flowers
+        </a>
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop CBD Resins
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose Us for CBD Wholesale in Germany?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🇩🇪</span>
+          <h3 class="font-bold text-lg mb-2">BtMG Compliant</h3>
+          <p class="text-sm text-gray-600">All products comply with the Betäubungsmittelgesetz and Novel Food Regulation. THC &lt; 0.2% guaranteed with full COA documentation.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🚚</span>
+          <h3 class="font-bold text-lg mb-2">2-3 Day Shipping</h3>
+          <p class="text-sm text-gray-600">Fast delivery across Germany — Berlin, Munich, Hamburg, Cologne, Frankfurt, and beyond. Free on all orders over €99.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📋</span>
+          <h3 class="font-bold text-lg mb-2">Full Documentation</h3>
+          <p class="text-sm text-gray-600">COA, German-language invoicing, and all required legal documents. Everything you need for compliance in Germany.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Flowers for Germany — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Premium <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a> fully compliant with German regulations. Fast nationwide shipping.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Resins for Germany — Wholesale</h2>
+      <p class="text-gray-600 mb-8"><a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD hash and resins</a> compliant with German legislation.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD Wholesale Germany: Navigating the Market</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Germany is <strong>Europe's largest CBD market</strong>, with an estimated value of over €1.8 billion and growing rapidly year-over-year. German consumers are highly quality-conscious, making reliable supply and proper documentation essential for success. As a trusted <a href="/wholesale-cbd-flowers-europe" class="text-primary hover:underline">European Greens Farmhouse</a>, we help German businesses thrive.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">BtMG Compliance</h3>
+        <p>
+          All our CBD products comply with the German Betäubungsmittelgesetz (BtMG) with THC content verified below 0.2%. Every shipment includes Certificates of Analysis from accredited European laboratories. We understand the German regulatory landscape and ensure our documentation meets all requirements.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Product Range for the German Market</h3>
+        <p>
+          We offer <a href="/cbd-hemp-flowers-indoor" class="text-primary hover:underline">indoor CBD flowers</a> for premium retailers, <a href="/cbd-hemp-flowers-greenhouse" class="text-primary hover:underline">greenhouse flowers</a> for best-value positioning, and competitive outdoor options. For <a href="/cbd-flowers-bulk-europe" class="text-primary hover:underline">bulk purchasers</a> (1kg+), we provide custom pricing. Our <a href="/collections/cbd-resins" class="text-primary hover:underline">CBD resins</a> are also highly popular in the German market.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Wholesale Germany — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Your CBD Supplier for Germany</h2>
+      <p class="text-green-100 mb-6">Premium CBD flowers, fully BtMG-compliant. Fast, free shipping across Germany from €99.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

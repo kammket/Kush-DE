@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Greens Farmhouse Spain" },
+];
+
+const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const oils = getProductsByCategory('cbd-oils').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Greens Farmhouse Spain — Wholesale CBD Supplier for the Spanish Market",
+  "description": "Europe's trusted CBD wholesale supplier for Spain. Premium CBD flowers, oils, resins at wholesale prices with fast delivery throughout Spain.",
+  "url": "https://greensfarmhouse.com/cbd-wholesaler-spain",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "Is CBD legal in Spain?",
+    answer: "CBD products are legal in Spain for topical use and aromatherapy. Spain has a relatively progressive stance on hemp-derived products. CBD products with less than 0.2% THC can be sold legally. Spain is also home to a large network of cannabis social clubs, making the CBD market particularly vibrant. All our products comply with Spanish and EU regulations."
+  },
+  {
+    question: "How fast is delivery to Spain?",
+    answer: "We deliver throughout Spain in 3-4 business days via standard shipping. Express 2-day shipping is available to Madrid, Barcelona, Valencia, Seville, and other major cities. Free delivery on orders over €99."
+  },
+  {
+    question: "What CBD products sell best in Spain?",
+    answer: "Spanish consumers prefer CBD flowers (especially fruity and citrus strains), CBD oils for wellness, and CBD resins. The Spanish market values aromatic quality and strong terpene profiles. Indoor flowers like Amnesia and Lemon Haze are top sellers."
+  },
+  {
+    question: "Do you ship to the Canary Islands and Balearic Islands?",
+    answer: "Yes, we ship to all Spanish territories including the Canary Islands (Tenerife, Gran Canaria, Lanzarote) and the Balearic Islands (Mallorca, Ibiza, Menorca). Delivery to islands may take 1-2 additional business days."
+  },
+  {
+    question: "Can I get wholesale CBD invoices in Spanish?",
+    answer: "Yes. We provide professional invoicing suitable for Spanish accounting and tax requirements. All product documentation, certificates of analysis, and shipping paperwork is available in English and can be provided in a format compatible with Spanish business needs."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Greens Farmhouse Spain | Bulk CBD Flowers, Oils & Resins — Best Prices"
+  description="Spain's trusted CBD wholesale supplier. Premium CBD flowers, resins, oils & edibles at wholesale prices. Lab-tested, EU-compliant, fast delivery across Spain."
+  canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-spain"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-red-50 via-white to-yellow-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-3xl mb-3">🇪🇸</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Greens Farmhouse Spain — <span class="text-primary">Your European CBD Supplier</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Premium wholesale CBD for the Spanish market. We supply retailers, dispensaries, and online shops across 
+        Madrid, Barcelona, Valencia, Seville, Málaga, and all of Spain with lab-tested  
+        <a href="/collections/cbd-flowers" class="text-primary hover:underline">CBD flowers</a>, 
+        <a href="/collections/cbd-oils" class="text-primary hover:underline">oils</a>, and 
+        <a href="/collections/cbd-resins" class="text-primary hover:underline">resins</a> at unbeatable prices.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Comprar CBD al por mayor
+        </a>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Contact Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spain Market Advantages -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">CBD Wholesale Advantages for Spanish Retailers</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">☀️</span>
+          <h3 class="font-bold text-lg mb-2">Growing Spanish Market</h3>
+          <p class="text-sm text-gray-600">Spain is one of Europe's fastest-growing CBD markets with strong consumer awareness. Over 3,000 retail points sell CBD products across the country.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🚚</span>
+          <h3 class="font-bold text-lg mb-2">Fast All-Spain Delivery</h3>
+          <p class="text-sm text-gray-600">3-4 business day delivery to mainland Spain. Express shipping to Madrid, Barcelona, Valencia. We also ship to the Canary and Balearic Islands.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏷️</span>
+          <h3 class="font-bold text-lg mb-2">Competitive Spanish Pricing</h3>
+          <p class="text-sm text-gray-600">Wholesale prices starting from €0.19/g for flowers. Volume discounts designed for Spanish retail margins. No minimum order requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Best-Selling CBD Flowers in Spain</h2>
+      <p class="text-gray-600 mb-8">Spanish consumers love aromatic, high-quality <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a>. Fruity and citrus strains dominate the market — perfect for Spain's vibrant CBD scene.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {flowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Wholesale CBD Oils for Spain</h2>
+      <p class="text-gray-600 mb-8"><a href="/collections/cbd-oils" class="text-primary hover:underline font-medium">CBD oils</a> are the second most popular CBD product in Spain, used for wellness and relaxation. Available in 5%, 10%, and 20% concentrations.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {oils.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-oils" class="text-primary font-semibold hover:underline">Browse all CBD Oils →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD Wholesale in Spain: Market Guide</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Spain is one of the most exciting CBD markets in Europe. With a progressive regulatory environment, strong consumer 
+          demand, and a culture that embraces natural wellness products, the Spanish CBD wholesale market offers significant 
+          opportunities for retailers and entrepreneurs. The Spanish version of our site is available at 
+          <a href="https://elmayoristacbd.es" class="text-primary hover:underline" rel="noopener" target="_blank">elmayoristacbd.es</a>.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Spanish CBD Market Size & Trends</h3>
+        <p>
+          Spain's CBD market is estimated to be worth over €200 million annually, driven by a young, health-conscious population 
+          and a well-established hemp culture. Key retail channels include CBD specialty shops, grow shops, herbalist shops (herbolarios), 
+          <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shops (estancos)</a>, pharmacies, and online stores.
+          Major cities like Madrid, Barcelona, Valencia, and Seville each have hundreds of CBD retail points.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Regulations & Compliance</h3>
+        <p>
+          Spain follows EU hemp regulations, permitting CBD products with less than 0.2% THC. CBD is primarily sold for 
+          aromatic and topical use. The Spanish Agency of Medicines and Medical Devices (AEMPS) oversees compliance. 
+          All our products include complete laboratory documentation that satisfies Spanish regulatory requirements.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Why Spanish Retailers Choose Us</h3>
+        <p>
+          We are the preferred wholesale CBD supplier for hundreds of Spanish businesses because we offer the 
+          <strong>best wholesale prices in Europe</strong>, 
+          <a href="/blog/cbd-flowers-vs-resins-guide" class="text-primary hover:underline">expert product guidance</a>, 
+          fast delivery, and full lab documentation. Whether you're starting a 
+          <a href="/blog/how-to-start-cbd-business" class="text-primary hover:underline">new CBD business</a> in Barcelona 
+          or restocking your Madrid shop, we're your partner for success. Also explore our 
+          <a href="/cbd-wholesaler-organic" class="text-primary hover:underline">organic CBD range</a> — highly popular among 
+          Spanish wellness consumers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Wholesale Spain — Frequently Asked Questions" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Start Your CBD Business in Spain</h2>
+      <p class="text-green-100 mb-6">Get premium CBD at wholesale prices with fast delivery throughout Spain and its islands.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

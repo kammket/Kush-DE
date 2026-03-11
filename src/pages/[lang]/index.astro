@@ -1,0 +1,412 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import FAQ from '../../components/FAQ.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import { categories, getProductsByCategory } from '../../data/products';
+import { supportedLocales, type Locale } from '../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../i18n/utils';
+import { categoryTranslations } from '../../data/translations/categories';
+
+export function getStaticPaths() {
+  return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+
+const flowerProducts = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 6);
+const resinProducts = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 6);
+const oilProducts = getProductsByCategory('cbd-oils').filter(p => p.inStock).slice(0, 6);
+
+const catT = categoryTranslations[locale] || categoryTranslations.en;
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Greens Farmhouse",
+  "url": getAbsoluteLocaleUrl(locale, '/'),
+  "inLanguage": locale,
+  "description": t(locale, 'home.heroDesc'),
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": { "@type": "EntryPoint", "urlTemplate": `${getAbsoluteLocaleUrl(locale, '/collections')}?q={search_term_string}` },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const faqTranslations: Record<string, Array<{question: string; answer: string}>> = {
+  es: [
+    { question: "¿Qué es el CBD?", answer: "El cannabidiol (CBD) es una molécula que se encuentra en la planta de cáñamo. A diferencia del THC, el CBD no tiene efecto psicoactivo y no se considera una droga. El Tribunal de Justicia de la Unión Europea confirmó el 9 de noviembre de 2020 que el CBD no es una droga psicotrópica y no tiene efectos nocivos para la salud." },
+    { question: "¿Es legal la venta de productos CBD en Europa?", answer: "Sí, los productos CBD son legales en Francia y en toda Europa, siempre que contengan menos del 0,3% de THC. Todos nuestros productos están analizados por laboratorios independientes y cumplen con la legislación francesa y europea vigente." },
+    { question: "¿Cómo comprar CBD al por mayor en su tienda?", answer: "Simplemente navegue por nuestro menú para encontrar los productos que necesita. Ofrecemos flores CBD a granel o en tarros (2g, 5g, 10g), resinas CBD a granel o en tarros, y aceites CBD por litro o en frascos (10ml, 30ml, 100ml)." },
+    { question: "¿Cuáles son las ventajas de comprar CBD al por mayor?", answer: "Comprar CBD al por mayor ofrece muchas ventajas: precios más bajos por compra a granel, calidad premium garantizada, amplia selección de productos adaptados a necesidades B2B, entrega rápida en toda Europa y conformidad legal con niveles de THC inferiores al 0,3%." },
+    { question: "¿Pueden entregar CBD en el extranjero?", answer: "Sí, entregamos en toda Francia y Europa. Enviamos a España, Alemania, Italia, Portugal, Bélgica, Luxemburgo, Suiza, Malta, Finlandia, Países Bajos y Reino Unido. Todos los pedidos se envían en 24 horas." },
+    { question: "¿Cómo funciona el pago?", answer: "Los pagos son seguros y se realizan con tarjeta de crédito. Los paquetes se envían por La Poste Colissimo con firma. Envío gratuito para pedidos superiores a 99€." },
+    { question: "¿Ofrecen muestras gratuitas?", answer: "¡Sí! Con todas las compras incluimos muestras gratuitas para que pueda descubrir nuevos productos de nuestra gama." },
+  ],
+  fr: [
+    { question: "Qu'est-ce que le CBD ?", answer: "Le cannabidiol (CBD) est une molécule présente dans la plante de chanvre. Contrairement au THC, le CBD n'a aucun effet psychoactif et n'est pas considéré comme une drogue. La Cour de justice de l'Union européenne a confirmé le 9 novembre 2020 que le CBD n'est pas un psychotrope et n'a pas d'effet nocif sur la santé." },
+    { question: "La vente de produits CBD est-elle légale en France et en Europe ?", answer: "Oui, les produits CBD sont légaux en France et dans toute l'Europe, à condition qu'ils contiennent moins de 0,3% de THC. Tous nos produits sont testés par des laboratoires indépendants et conformes à la législation française et européenne." },
+    { question: "Comment acheter du CBD en gros sur votre boutique ?", answer: "Naviguez dans notre menu pour trouver les produits dont vous avez besoin. Nous proposons des fleurs CBD en vrac ou en pots (2g, 5g, 10g), des résines CBD en vrac ou en pots, et des huiles CBD au litre ou en flacons (10ml, 30ml, 100ml)." },
+    { question: "Quels sont les avantages d'acheter du CBD en gros ?", answer: "Acheter du CBD en gros offre de nombreux avantages : prix réduits grâce à l'achat en volume, qualité premium garantie, large choix de produits adaptés aux besoins B2B, livraison rapide en France et Europe, et conformité légale avec un taux de THC inférieur à 0,3%." },
+    { question: "Pouvez-vous livrer du CBD à l'étranger ?", answer: "Oui, nous livrons dans toute la France et l'Europe. Nous expédions en Espagne, Allemagne, Italie, Portugal, Belgique, Luxembourg, Suisse, Malte, Finlande, Pays-Bas et Royaume-Uni. Toutes les commandes sont expédiées sous 24h." },
+    { question: "Comment fonctionne le paiement ?", answer: "Les paiements sont sécurisés par carte bancaire. Les colis sont envoyés par La Poste Colissimo avec signature. Livraison gratuite à partir de 99€." },
+    { question: "Proposez-vous des échantillons gratuits ?", answer: "Oui ! Pour tout achat, nous incluons des échantillons gratuits pour vous faire découvrir de nouveaux produits de notre gamme." },
+  ],
+  de: [
+    { question: "Was ist CBD?", answer: "Cannabidiol (CBD) ist ein Molekül der Hanfpflanze. Im Gegensatz zu THC hat CBD keine psychoaktive Wirkung und gilt nicht als Droge. Der Gerichtshof der Europäischen Union bestätigte am 9. November 2020, dass CBD kein Psychotropikum ist und keine gesundheitsschädlichen Auswirkungen hat." },
+    { question: "Ist der Verkauf von CBD-Produkten in Europa legal?", answer: "Ja, CBD-Produkte sind in Frankreich und ganz Europa legal, sofern sie weniger als 0,3% THC enthalten. Alle unsere Produkte werden von unabhängigen Laboren getestet und entsprechen der französischen und europäischen Gesetzgebung." },
+    { question: "Wie kaufe ich CBD im Großhandel in Ihrem Shop?", answer: "Navigieren Sie einfach durch unser Menü. Wir bieten CBD-Blüten lose oder in Gläsern (2g, 5g, 10g), CBD-Harze lose oder in Gläsern und CBD-Öle pro Liter oder in Flaschen (10ml, 30ml, 100ml) an." },
+    { question: "Was sind die Vorteile des CBD-Großhandels?", answer: "Der CBD-Großhandel bietet viele Vorteile: günstigere Preise durch Großeinkauf, garantierte Premium-Qualität, breite Produktauswahl für B2B-Bedürfnisse, schnelle Lieferung in ganz Europa und rechtliche Konformität mit THC unter 0,3%." },
+    { question: "Liefern Sie CBD ins Ausland?", answer: "Ja, wir liefern in ganz Frankreich und Europa. Wir versenden nach Spanien, Deutschland, Italien, Portugal, Belgien, Luxemburg, die Schweiz, Malta, Finnland, die Niederlande und das Vereinigte Königreich." },
+    { question: "Wie funktioniert die Zahlung?", answer: "Zahlungen sind sicher per Kreditkarte. Die Pakete werden per La Poste Colissimo mit Unterschrift versandt. Kostenloser Versand ab 99€." },
+    { question: "Bieten Sie kostenlose Proben an?", answer: "Ja! Bei jedem Kauf legen wir kostenlose Proben bei, damit Sie neue Produkte aus unserem Sortiment entdecken können." },
+  ],
+  nl: [
+    { question: "Wat is CBD?", answer: "Cannabidiol (CBD) is een molecuul uit de hennepplant. In tegenstelling tot THC heeft CBD geen psychoactief effect en wordt het niet als drug beschouwd. Het Hof van Justitie van de EU bevestigde op 9 november 2020 dat CBD geen psychotroop middel is en geen schadelijke effecten op de gezondheid heeft." },
+    { question: "Is de verkoop van CBD-producten legaal in Europa?", answer: "Ja, CBD-producten zijn legaal in Frankrijk en heel Europa, mits ze minder dan 0,3% THC bevatten. Al onze producten worden getest door onafhankelijke laboratoria en voldoen aan de Franse en Europese wetgeving." },
+    { question: "Hoe koop ik CBD in bulk in uw winkel?", answer: "Navigeer door ons menu om de producten te vinden die u nodig heeft. Wij bieden CBD-bloemen in bulk of in potten (2g, 5g, 10g), CBD-harsen in bulk of in potten, en CBD-oliën per liter of in flesjes (10ml, 30ml, 100ml)." },
+    { question: "Wat zijn de voordelen van CBD-groothandel?", answer: "CBD-groothandel biedt veel voordelen: lagere prijzen door bulkaankoop, gegarandeerde premiumkwaliteit, breed productaanbod voor B2B-behoeften, snelle levering in heel Europa en wettelijke conformiteit met THC onder 0,3%." },
+    { question: "Levert u CBD in het buitenland?", answer: "Ja, wij leveren in heel Frankrijk en Europa. Wij verzenden naar Spanje, Duitsland, Italië, Portugal, België, Luxemburg, Zwitserland, Malta, Finland, Nederland en het VK." },
+    { question: "Hoe werkt de betaling?", answer: "Betalingen zijn veilig per creditcard. Pakketten worden verzonden via La Poste Colissimo met handtekening. Gratis verzending vanaf €99." },
+    { question: "Biedt u gratis monsters aan?", answer: "Ja! Bij elke aankoop voegen wij gratis monsters toe zodat u nieuwe producten uit ons assortiment kunt ontdekken." },
+  ],
+  it: [
+    { question: "Cos'è il CBD?", answer: "Il cannabidiolo (CBD) è una molecola presente nella pianta di canapa. A differenza del THC, il CBD non ha effetti psicoattivi e non è considerato una droga. La Corte di Giustizia dell'UE ha confermato il 9 novembre 2020 che il CBD non è una sostanza psicotropa e non ha effetti nocivi sulla salute." },
+    { question: "La vendita di prodotti CBD è legale in Europa?", answer: "Sì, i prodotti CBD sono legali in Francia e in tutta Europa, purché contengano meno dello 0,3% di THC. Tutti i nostri prodotti sono testati da laboratori indipendenti e conformi alla legislazione francese ed europea." },
+    { question: "Come acquistare CBD all'ingrosso nel vostro negozio?", answer: "Navigate nel nostro menu per trovare i prodotti di cui avete bisogno. Offriamo fiori CBD sfusi o in barattoli (2g, 5g, 10g), resine CBD sfuse o in barattoli e oli CBD al litro o in flaconi (10ml, 30ml, 100ml)." },
+    { question: "Quali sono i vantaggi dell'acquisto CBD all'ingrosso?", answer: "L'acquisto all'ingrosso offre molti vantaggi: prezzi più bassi grazie all'acquisto in volume, qualità premium garantita, ampia scelta di prodotti per esigenze B2B, consegna rapida in tutta Europa e conformità legale con THC inferiore allo 0,3%." },
+    { question: "Consegnate CBD all'estero?", answer: "Sì, consegniamo in tutta la Francia e l'Europa. Spediamo in Spagna, Germania, Italia, Portogallo, Belgio, Lussemburgo, Svizzera, Malta, Finlandia, Paesi Bassi e Regno Unito." },
+    { question: "Come funziona il pagamento?", answer: "I pagamenti sono sicuri con carta di credito. I pacchi vengono spediti tramite La Poste Colissimo con firma. Spedizione gratuita per ordini superiori a 99€." },
+    { question: "Offrite campioni gratuiti?", answer: "Sì! Con ogni acquisto includiamo campioni gratuiti per farvi scoprire nuovi prodotti della nostra gamma." },
+  ],
+  fi: [
+    { question: "Mikä on CBD?", answer: "Kannabidioli (CBD) on hamppukasvista löytyvä molekyyli. Toisin kuin THC, CBD:llä ei ole psykoaktiivista vaikutusta eikä sitä pidetä huumeena. EU:n tuomioistuin vahvisti 9. marraskuuta 2020, että CBD ei ole psykotrooppinen aine eikä sillä ole haitallisia terveysvaikutuksia." },
+    { question: "Onko CBD-tuotteiden myynti laillista Euroopassa?", answer: "Kyllä, CBD-tuotteet ovat laillisia Ranskassa ja koko Euroopassa, kunhan ne sisältävät alle 0,3% THC:tä. Kaikki tuotteemme on testattu riippumattomissa laboratorioissa ja ne noudattavat Ranskan ja Euroopan lainsäädäntöä." },
+    { question: "Miten ostan CBD:tä tukkuhintaan kaupassanne?", answer: "Navigoi valikossamme löytääksesi tarvitsemasi tuotteet. Tarjoamme CBD-kukkia irtotavarana tai purkeissa (2g, 5g, 10g), CBD-hartseja irtotavarana tai purkeissa ja CBD-öljyjä litroittain tai pulloissa (10ml, 30ml, 100ml)." },
+    { question: "Mitkä ovat CBD-tukkukaupan edut?", answer: "CBD-tukkukauppa tarjoaa monia etuja: alhaisemmat hinnat tukkuostolla, taattu premium-laatu, laaja tuotevalikoima B2B-tarpeisiin, nopea toimitus koko Eurooppaan ja lakien mukainen THC alle 0,3%." },
+    { question: "Toimitatteko CBD:tä ulkomaille?", answer: "Kyllä, toimitamme koko Ranskaan ja Eurooppaan. Lähetämme Espanjaan, Saksaan, Italiaan, Portugaliin, Belgiaan, Luxemburgiin, Sveitsiin, Maltalle, Suomeen, Alankomaihin ja Yhdistyneeseen kuningaskuntaan." },
+    { question: "Miten maksaminen toimii?", answer: "Maksut ovat turvallisia luottokortilla. Paketit lähetetään La Poste Colissimolla allekirjoitusta vastaan. Ilmainen toimitus yli 99€ tilauksiin." },
+    { question: "Tarjoatteko ilmaisia näytteitä?", answer: "Kyllä! Jokaisen ostoksen yhteydessä lisäämme ilmaisia näytteitä, jotta voitte tutustua valikoimamme uusiin tuotteisiin." },
+  ],
+  pt: [
+    { question: "O que é CBD?", answer: "O canabidiol (CBD) é uma molécula encontrada na planta de cânhamo. Ao contrário do THC, o CBD não tem efeito psicoativo e não é considerado uma droga. O Tribunal de Justiça da UE confirmou a 9 de novembro de 2020 que o CBD não é uma substância psicotrópica e não possui efeitos nocivos para a saúde." },
+    { question: "A venda de produtos CBD é legal na Europa?", answer: "Sim, os produtos CBD são legais em França e em toda a Europa, desde que contenham menos de 0,3% de THC. Todos os nossos produtos são testados por laboratórios independentes e cumprem a legislação francesa e europeia." },
+    { question: "Como comprar CBD por grosso na sua loja?", answer: "Navegue pelo nosso menu para encontrar os produtos de que necessita. Oferecemos flores CBD a granel ou em frascos (2g, 5g, 10g), resinas CBD a granel ou em frascos, e óleos CBD por litro ou em frascos (10ml, 30ml, 100ml)." },
+    { question: "Quais são as vantagens de comprar CBD por grosso?", answer: "Comprar CBD por grosso oferece muitas vantagens: preços mais baixos por compra em volume, qualidade premium garantida, ampla seleção de produtos para necessidades B2B, entrega rápida em toda a Europa e conformidade legal com THC inferior a 0,3%." },
+    { question: "Entregam CBD no estrangeiro?", answer: "Sim, entregamos em toda a França e Europa. Enviamos para Espanha, Alemanha, Itália, Portugal, Bélgica, Luxemburgo, Suíça, Malta, Finlândia, Países Baixos e Reino Unido." },
+    { question: "Como funciona o pagamento?", answer: "Os pagamentos são seguros por cartão de crédito. As encomendas são enviadas por La Poste Colissimo com assinatura. Envio grátis para encomendas acima de 99€." },
+    { question: "Oferecem amostras grátis?", answer: "Sim! Com todas as compras incluímos amostras grátis para que possa descobrir novos produtos da nossa gama." },
+  ],
+};
+
+const faqItems = faqTranslations[locale] || faqTranslations.en || [];
+
+const localeMap: Record<string, string> = { es: 'es-ES', fr: 'fr-FR', de: 'de-DE', nl: 'nl-NL', it: 'it-IT', fi: 'fi-FI', pt: 'pt-PT' };
+const dateLocale = localeMap[locale] || 'en-US';
+---
+
+<BaseLayout 
+  title={`${t(locale, 'home.heroTitle')} ${t(locale, 'home.heroHighlight')} | Greens Farmhouse`}
+  description={t(locale, 'home.heroDesc')}
+  locale={locale}
+  jsonLd={homeJsonLd}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+      <div class="max-w-3xl">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">{t(locale, 'home.heroTag')}</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
+          {t(locale, 'home.heroTitle')}<br />
+          <span class="text-accent">{t(locale, 'home.heroHighlight')}</span>
+        </h1>
+        <p class="text-lg md:text-xl text-green-100 mb-8 leading-relaxed max-w-2xl">{t(locale, 'home.heroDesc')}</p>
+        <div class="flex flex-wrap gap-4">
+          <a href={lp('/collections/cbd-flowers')} class="inline-flex items-center px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+            {t(locale, 'home.shopFlowers')}
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+          <a href={lp('/collections')} class="inline-flex items-center px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+            {t(locale, 'home.viewAllProducts')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section class="bg-secondary py-8 border-b border-gray-200" aria-label="Trust indicators">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-2">🌿</span>
+          <h2 class="font-bold text-sm text-gray-900">{t(locale, 'home.trustMade')}</h2>
+          <p class="text-xs text-gray-600 mt-1">{t(locale, 'home.trustMadeDesc')}</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-2">✅</span>
+          <h2 class="font-bold text-sm text-gray-900">{t(locale, 'home.trustLegal')}</h2>
+          <p class="text-xs text-gray-600 mt-1">{t(locale, 'home.trustLegalDesc')}</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-2">🤝</span>
+          <h2 class="font-bold text-sm text-gray-900">{t(locale, 'home.trustBiz')}</h2>
+          <p class="text-xs text-gray-600 mt-1">{t(locale, 'home.trustBizDesc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By Professionals -->
+  <section class="py-8 bg-white border-b border-gray-100" aria-label="Trusted by professionals">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">{locale === 'fr' ? 'Plus de 5 000 professionnels nous font confiance en Europe' : locale === 'de' ? 'Über 5.000 Profis in Europa vertrauen uns' : locale === 'es' ? 'Más de 5.000 profesionales confían en nosotros en Europa' : locale === 'it' ? 'Oltre 5.000 professionisti in Europa ci scelgono' : locale === 'nl' ? 'Meer dan 5.000 professionals in Europa vertrouwen ons' : locale === 'fi' ? 'Yli 5 000 ammattilaista Euroopassa luottaa meihin' : locale === 'pt' ? 'Mais de 5.000 profissionais na Europa confiam em nós' : 'Trusted by 5,000+ Professionals Across Europe'}</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🏪</span>
+          <span class="text-sm font-medium">{locale === 'fr' ? 'Boutiques CBD' : locale === 'de' ? 'CBD-Shops' : locale === 'es' ? 'Tiendas CBD' : locale === 'it' ? 'Negozi CBD' : locale === 'nl' ? 'CBD-Winkels' : locale === 'fi' ? 'CBD-kaupat' : locale === 'pt' ? 'Lojas CBD' : 'CBD Shops'}</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🚬</span>
+          <span class="text-sm font-medium">{locale === 'fr' ? 'Bureaux de tabac' : locale === 'de' ? 'Tabakgeschäfte' : locale === 'es' ? 'Estancos' : locale === 'it' ? 'Tabaccherie' : locale === 'nl' ? 'Tabakszaken' : locale === 'fi' ? 'Tupakkakaupat' : locale === 'pt' ? 'Tabacarias' : 'Tobacco Shops'}</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">💊</span>
+          <span class="text-sm font-medium">{locale === 'fr' ? 'Pharmacies' : locale === 'de' ? 'Apotheken' : locale === 'es' ? 'Farmacias' : locale === 'it' ? 'Farmacie' : locale === 'nl' ? 'Apotheken' : locale === 'fi' ? 'Apteekit' : locale === 'pt' ? 'Farmácias' : 'Pharmacies'}</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🛒</span>
+          <span class="text-sm font-medium">E-Commerce</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🧘</span>
+          <span class="text-sm font-medium">{locale === 'fr' ? 'Centres bien-être' : locale === 'de' ? 'Wellness-Zentren' : locale === 'es' ? 'Centros de bienestar' : locale === 'it' ? 'Centri benessere' : locale === 'nl' ? 'Wellnesscentra' : locale === 'fi' ? 'Hyvinvointikeskukset' : locale === 'pt' ? 'Centros de bem-estar' : 'Wellness Centers'}</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+          <span class="text-xl">🏨</span>
+          <span class="text-sm font-medium">{locale === 'fr' ? 'Hôtels & Spas' : locale === 'de' ? 'Hotels & Spas' : locale === 'es' ? 'Hoteles y Spas' : locale === 'it' ? 'Hotel & Spa' : locale === 'nl' ? 'Hotels & Spa\'s' : locale === 'fi' ? 'Hotellit & Kylpylät' : locale === 'pt' ? 'Hotéis & Spas' : 'Hotels & Spas'}</span>
+        </div>
+      </div>
+      <div class="mt-4 flex items-center justify-center gap-6 text-center">
+        <div>
+          <span class="text-2xl font-bold text-primary">5,000+</span>
+          <p class="text-[10px] text-gray-400 uppercase">{locale === 'fr' ? 'Clients B2B' : locale === 'de' ? 'B2B-Kunden' : locale === 'es' ? 'Clientes B2B' : locale === 'it' ? 'Clienti B2B' : locale === 'nl' ? 'B2B-klanten' : locale === 'fi' ? 'B2B-asiakkaat' : locale === 'pt' ? 'Clientes B2B' : 'B2B Clients'}</p>
+        </div>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <div>
+          <span class="text-2xl font-bold text-primary">15+</span>
+          <p class="text-[10px] text-gray-400 uppercase">{locale === 'fr' ? 'Pays' : locale === 'de' ? 'Länder' : locale === 'es' ? 'Países' : locale === 'it' ? 'Paesi' : locale === 'nl' ? 'Landen' : locale === 'fi' ? 'Maata' : locale === 'pt' ? 'Países' : 'Countries'}</p>
+        </div>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <div>
+          <span class="text-2xl font-bold text-primary">4.8/5</span>
+          <p class="text-[10px] text-gray-400 uppercase">{locale === 'fr' ? 'Note' : locale === 'de' ? 'Bewertung' : locale === 'es' ? 'Calificación' : locale === 'it' ? 'Valutazione' : locale === 'nl' ? 'Beoordeling' : locale === 'fi' ? 'Arvosana' : locale === 'pt' ? 'Avaliação' : 'Rating'}</p>
+        </div>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <div>
+          <span class="text-2xl font-bold text-primary">2018</span>
+          <p class="text-[10px] text-gray-400 uppercase">{locale === 'fr' ? 'Depuis' : locale === 'de' ? 'Seit' : locale === 'es' ? 'Desde' : locale === 'it' ? 'Dal' : locale === 'nl' ? 'Sinds' : locale === 'fi' ? 'Vuodesta' : locale === 'pt' ? 'Desde' : 'Since'}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-12 md:py-16" aria-labelledby="about-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 id="about-heading" class="text-2xl md:text-3xl font-bold mb-6">{t(locale, 'home.aboutTitle')}</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          {t(locale, 'footer.brandDesc')} {' '}
+          <a href={lp('/collections/cbd-flowers')} class="text-primary hover:underline">{catT['cbd-flowers']?.name || 'CBD Flowers'}</a>, {' '}
+          <a href={lp('/collections/cbd-resins')} class="text-primary hover:underline">{catT['cbd-resins']?.name || 'CBD Resins'}</a>, {' '}
+          <a href={lp('/collections/cbd-oils')} class="text-primary hover:underline">{catT['cbd-oils']?.name || 'CBD Oils'}</a>.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          <a href={lp('/cbd-wholesaler-organic')} class="text-primary hover:underline">{t(locale, 'footer.organicCbd')}</a> · {' '}
+          <a href={lp('/cbd-in-tobacco-shops')} class="text-primary hover:underline">{t(locale, 'footer.cbdTobacco')}</a> · {' '}
+          <a href={lp('/cbd-wholesaler-belgium')} class="text-primary hover:underline">{t(locale, 'footer.cbdBelgium')}</a> · {' '}
+          <a href={lp('/cbd-wholesaler-spain')} class="text-primary hover:underline">{t(locale, 'footer.cbdSpain')}</a> · {' '}
+          <a href={lp('/cbd-wholesaler-switzerland')} class="text-primary hover:underline">{t(locale, 'footer.cbdSwitzerland')}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="py-12 md:py-16 bg-gray-50" aria-labelledby="categories-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 id="categories-heading" class="text-2xl md:text-3xl font-bold">{t(locale, 'home.catTitle')}</h2>
+        <p class="text-gray-600 mt-2">{t(locale, 'home.catDesc')}</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {categories.map(cat => (
+          <a href={lp(`/collections/${cat.slug}`)} class="group relative bg-white rounded-xl border border-gray-200 p-6 text-center hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-50 to-green-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+            </div>
+            <h3 class="font-semibold text-sm text-gray-900 group-hover:text-primary transition-colors">{catT[cat.slug]?.name || cat.name}</h3>
+            <p class="text-xs text-gray-500 mt-1">{cat.productCount} {t(locale, 'common.products')}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CBD Flowers Section -->
+  <section class="py-12 md:py-16" aria-labelledby="flowers-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 id="flowers-heading" class="text-2xl md:text-3xl font-bold">{t(locale, 'home.flowersTitle')}</h2>
+          <p class="text-gray-600 mt-1">{t(locale, 'home.flowersDesc')}</p>
+        </div>
+        <a href={lp('/collections/cbd-flowers')} class="hidden sm:inline-flex items-center text-primary font-medium hover:underline">
+          {t(locale, 'common.viewAll')}
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        {flowerProducts.map(product => <ProductCard product={product} locale={locale} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- CBD Resins Section -->
+  <section class="py-12 md:py-16 bg-gray-50" aria-labelledby="resins-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 id="resins-heading" class="text-2xl md:text-3xl font-bold">{t(locale, 'home.resinsTitle')}</h2>
+          <p class="text-gray-600 mt-1">{t(locale, 'home.resinsDesc')}</p>
+        </div>
+        <a href={lp('/collections/cbd-resins')} class="hidden sm:inline-flex items-center text-primary font-medium hover:underline">
+          {t(locale, 'common.viewAll')}
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        {resinProducts.map(product => <ProductCard product={product} locale={locale} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- CBD Oils Section -->
+  <section class="py-12 md:py-16" aria-labelledby="oils-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 id="oils-heading" class="text-2xl md:text-3xl font-bold">{t(locale, 'home.oilsTitle')}</h2>
+          <p class="text-gray-600 mt-1">{t(locale, 'home.oilsDesc')}</p>
+        </div>
+        <a href={lp('/collections/cbd-oils')} class="hidden sm:inline-flex items-center text-primary font-medium hover:underline">
+          {t(locale, 'common.viewAll')}
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        {oilProducts.map(product => <ProductCard product={product} locale={locale} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-12 md:py-16 bg-primary text-white" aria-labelledby="why-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="why-heading" class="text-2xl md:text-3xl font-bold text-center mb-10">{t(locale, 'home.whyTitle')}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center"><span class="text-3xl">🌱</span></div>
+          <h3 class="font-bold text-lg mb-2">{t(locale, 'home.whyOrganic')}</h3>
+          <p class="text-green-100 text-sm leading-relaxed">{t(locale, 'home.whyOrganicDesc')}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center"><span class="text-3xl">💰</span></div>
+          <h3 class="font-bold text-lg mb-2">{t(locale, 'home.whyCheap')}</h3>
+          <p class="text-green-100 text-sm leading-relaxed">{t(locale, 'home.whyCheapDesc')}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center"><span class="text-3xl">📋</span></div>
+          <h3 class="font-bold text-lg mb-2">{t(locale, 'home.whyCatalog')}</h3>
+          <p class="text-green-100 text-sm leading-relaxed">{t(locale, 'home.whyCatalogDesc')}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center"><span class="text-3xl">📦</span></div>
+          <h3 class="font-bold text-lg mb-2">{t(locale, 'home.whyFast')}</h3>
+          <p class="text-green-100 text-sm leading-relaxed">{t(locale, 'home.whyFastDesc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ title={t(locale, 'home.faqTitle')} items={faqItems} />
+
+  <!-- Blog Preview -->
+  <section class="py-12 md:py-16" aria-labelledby="blog-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 id="blog-heading" class="text-2xl md:text-3xl font-bold">{t(locale, 'home.blogTitle')}</h2>
+        <a href={lp('/blog')} class="text-primary font-medium hover:underline">{t(locale, 'common.viewAll')} →</a>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center"><span class="text-4xl">📦</span></div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-02-26">2026-02-26</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href={lp('/blog/manage-cbd-wholesale-stock')} class="hover:text-primary transition-colors">CBD Wholesale Stock Management</a>
+            </h3>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center"><span class="text-4xl">🌸</span></div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-02-10">2026-02-10</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href={lp('/blog/choose-right-cbd-flower-supplier')} class="hover:text-primary transition-colors">CBD Flower Supplier Guide</a>
+            </h3>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center"><span class="text-4xl">⚠️</span></div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-01-29">2026-01-29</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href={lp('/blog/avoid-mistakes-with-cbd-wholesaler')} class="hover:text-primary transition-colors">CBD Store Mistakes Guide</a>
+            </h3>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center"><span class="text-4xl">📊</span></div>
+          <div class="p-4">
+            <time class="text-xs text-gray-500" datetime="2026-01-16">2026-01-16</time>
+            <h3 class="font-semibold text-sm mt-1 line-clamp-2">
+              <a href={lp('/blog/best-selling-cbd-products')} class="hover:text-primary transition-colors">Best Selling CBD Products</a>
+            </h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <Testimonials locale={locale} />
+
+  <!-- CTA Section -->
+  <section class="py-12 md:py-16 bg-accent/10" aria-labelledby="cta-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 id="cta-heading" class="text-2xl md:text-3xl font-bold mb-4">{t(locale, 'home.ctaTitle')}</h2>
+      <p class="text-gray-600 mb-6">{t(locale, 'home.ctaDesc')}</p>
+      <a href={lp('/contact')} class="inline-flex items-center px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors shadow-lg">
+        {t(locale, 'common.contactUs').toUpperCase()}
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

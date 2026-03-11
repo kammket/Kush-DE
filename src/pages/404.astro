@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Greens Farmhouse"
+  description="The page you're looking for could not be found. Browse our CBD products or return to the homepage."
+  noindex={true}
+>
+  <section class="py-20 md:py-32">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-8xl font-extrabold text-primary/20 mb-4">404</p>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Page Not Found</h1>
+      <p class="text-lg text-gray-600 mb-8">
+        Sorry, the page you're looking for doesn't exist or has been moved. 
+        Let us help you find what you need.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+          Go Home
+        </a>
+        <a href="/collections" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary/5 transition">
+          Browse Products
+        </a>
+      </div>
+      
+      <div class="mt-12 grid sm:grid-cols-3 gap-4 text-left">
+        <a href="/collections/cbd-flowers" class="p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition group">
+          <p class="font-semibold text-gray-900 group-hover:text-primary transition">CBD Flowers</p>
+          <p class="text-xs text-gray-500 mt-1">Premium greenhouse & indoor</p>
+        </a>
+        <a href="/collections/cbd-resins" class="p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition group">
+          <p class="font-semibold text-gray-900 group-hover:text-primary transition">CBD Resins</p>
+          <p class="text-xs text-gray-500 mt-1">Hash, pollen & concentrates</p>
+        </a>
+        <a href="/collections/cbd-oils" class="p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition group">
+          <p class="font-semibold text-gray-900 group-hover:text-primary transition">CBD Oils</p>
+          <p class="text-xs text-gray-500 mt-1">5%, 10% & 20% concentrations</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

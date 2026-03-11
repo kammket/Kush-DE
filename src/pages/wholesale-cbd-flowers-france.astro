@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Wholesale CBD Flowers France" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topResins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Wholesale CBD Flowers France — Grossiste Fleurs CBD France",
+  "description": "Your wholesale CBD flower supplier for France. Compliant with French legislation. 24h dispatch from French warehouses. Free delivery over €99.",
+  "url": "https://greensfarmhouse.com/wholesale-cbd-flowers-france",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "Is CBD legal in France?",
+    answer: "Yes. CBD with THC below 0.3% is legal in France following the Conseil d'État ruling of 2022. All our flowers are fully compliant with current French legislation."
+  },
+  {
+    question: "How fast is shipping within France?",
+    answer: "We dispatch within 24 hours from our French warehouses. Delivery takes 24-48 hours throughout metropolitan France. Free on all orders over €99."
+  },
+  {
+    question: "Are you based in France?",
+    answer: "Yes. Our warehouses are located in France. We are a French-based CBD wholesale specialist operating since 2018, serving thousands of French retailers."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Wholesale CBD Flowers France | Grossiste Fleurs CBD France"
+  description="Your wholesale CBD flower supplier in France. French legislation compliant. 24h dispatch, 24-48h delivery. Premium flowers from €0.19/g. Free delivery over €99."
+  canonicalURL="https://greensfarmhouse.com/wholesale-cbd-flowers-france"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-blue-50 via-white to-red-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🇫🇷 CBD France</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Wholesale CBD Flowers France — <span class="text-primary">Grossiste Fleurs CBD</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        France is one of Europe's leading CBD markets. Our CBD flowers comply with all French legislation. 24-hour dispatch from our French warehouses with 24-48h delivery across metropolitan France.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop CBD Flowers
+        </a>
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop CBD Resins
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose Us for CBD Wholesale in France?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🇫🇷</span>
+          <h3 class="font-bold text-lg mb-2">French Law Compliant</h3>
+          <p class="text-sm text-gray-600">All products comply with French legislation. THC &lt; 0.3%. Warehoused in France with complete legal documentation.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🚚</span>
+          <h3 class="font-bold text-lg mb-2">24h Dispatch</h3>
+          <p class="text-sm text-gray-600">French warehouses for ultra-fast delivery. 24h dispatch, 24-48h delivery. Free shipping on orders over €99.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🔬</span>
+          <h3 class="font-bold text-lg mb-2">French Laboratories</h3>
+          <p class="text-sm text-gray-600">All analyses performed by accredited independent French laboratories. Full transparency and compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Flowers France — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Premium <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD flowers</a> stored in France for ultra-fast delivery. From €0.19/g wholesale.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Resins France — Wholesale</h2>
+      <p class="text-gray-600 mb-8"><a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD hash and resins</a> compliant with French legislation. European production.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD Wholesale France: Market Overview</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Following the landmark Conseil d'État ruling of 2022, France has emerged as one of Europe's most dynamic CBD markets. With a population of 67 million and growing consumer awareness, the French CBD market presents enormous opportunities for retailers. As a <strong>French-based Greens Farmhouse</strong>, we provide the fastest delivery, local compliance expertise, and competitive pricing.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">French Regulatory Compliance</h3>
+        <p>
+          All our CBD products meet French legal requirements with THC content verified below 0.3%. Analyses are performed by accredited French laboratories, and every shipment includes full documentation. Whether you operate a <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">bureau de tabac</a>, CBD shop, or e-commerce business, we ensure your supply chain is fully compliant.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Product Range & Pricing</h3>
+        <p>
+          From <a href="/cbd-hemp-flowers-indoor" class="text-primary hover:underline">premium indoor flowers</a> to value-oriented <a href="/cbd-hemp-flowers-greenhouse" class="text-primary hover:underline">greenhouse varieties</a>, we stock the full range. Our <a href="/wholesale-cbd-flowers-europe" class="text-primary hover:underline">European wholesale network</a> ensures consistent supply. For <a href="/cbd-flowers-bulk-europe" class="text-primary hover:underline">bulk buyers</a>, we offer the best prices with priority dispatch from French warehouses.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Wholesale France — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Your CBD Supplier in France</h2>
+      <p class="text-green-100 mb-6">Premium CBD flowers, fully compliant. French warehouse, 24h dispatch, free shipping from €99.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

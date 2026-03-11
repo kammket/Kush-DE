@@ -1,0 +1,447 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { products, getProductBySlug, getProductsByCategory } from '../../data/products';
+
+export function getStaticPaths() {
+  return products.map(p => ({
+    params: { slug: p.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const product = getProductBySlug(slug!);
+if (!product) return Astro.redirect('/404');
+
+const relatedProducts = getProductsByCategory(product.categorySlug)
+  .filter(p => p.id !== product.id && p.inStock)
+  .slice(0, 4);
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name,
+  "description": product.description,
+  "image": product.image.startsWith('http') ? product.image : `https://greensfarmhouse.com${product.image}`,
+  "url": `https://greensfarmhouse.com/products/${product.slug}`,
+  "brand": {
+    "@type": "Brand",
+    "name": product.supplier
+  },
+  "category": product.category,
+  "offers": {
+    "@type": "Offer",
+    "price": product.priceNumeric,
+    "priceCurrency": "EUR",
+    "availability": product.inStock 
+      ? "https://schema.org/InStock" 
+      : "https://schema.org/OutOfStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Greens Farmhouse"
+    },
+    "priceValidUntil": "2026-12-31",
+    "url": `https://greensfarmhouse.com/products/${product.slug}`,
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "EUR"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "FR"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 1,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        }
+      }
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: product.category, url: `/collections/${product.categorySlug}` },
+  { name: product.name },
+];
+---
+
+<BaseLayout
+  title={`${product.name} | Wholesale CBD | Greens Farmhouse`}
+  description={product.description}
+  canonicalURL={`https://greensfarmhouse.com/products/${product.slug}`}
+  ogType="product"
+  jsonLd={productJsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Product Detail -->
+  <section class="py-6 md:py-10" itemscope itemtype="https://schema.org/Product">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        
+        <!-- Product Image -->
+        <div class="relative">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-green-100 border border-gray-200">
+            {product.image.startsWith('http') ? (
+              <img
+                src={product.image}
+                alt={product.name}
+                class="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
+                itemprop="image"
+              />
+            ) : (
+              <div class="w-full h-full flex items-center justify-center">
+                <div class="text-center p-8">
+                  <svg class="w-24 h-24 mx-auto text-primary/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p class="text-gray-400 mt-4 text-sm">{product.name}</p>
+                </div>
+              </div>
+            )}
+          </div>
+          
+          {/* Badges */}
+          <div class="absolute top-4 left-4 flex flex-col gap-2">
+            {product.isSpecialOffer && (
+              <span class="bg-red-600 text-white text-sm font-bold px-3 py-1.5 rounded-lg shadow">SPECIAL OFFER</span>
+            )}
+            {!product.inStock && (
+              <span class="bg-gray-500 text-white text-sm font-bold px-3 py-1.5 rounded-lg shadow">SOLD OUT</span>
+            )}
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-medium text-gray-500 uppercase tracking-wider" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
+              <span itemprop="name">{product.supplier}</span>
+            </span>
+            {product.subcategory && (
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{product.subcategory}</span>
+            )}
+          </div>
+          
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4" itemprop="name">
+            {product.name}
+          </h1>
+
+          <!-- Price -->
+          <div class="flex items-baseline gap-3 mb-6" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            {product.originalPrice && (
+              <span class="text-xl text-gray-400 line-through">{product.originalPrice}</span>
+            )}
+            <span class="text-3xl font-extrabold text-primary" itemprop="price" content={String(product.priceNumeric)}>
+              {product.price}
+            </span>
+            <meta itemprop="priceCurrency" content="EUR" />
+            <meta itemprop="availability" content={product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"} />
+          </div>
+
+          {/* Variant Pricing Table — interactive selector */}
+          {product.variants && product.variants.length > 0 && (
+            <div class="mb-6 border border-primary/20 rounded-xl overflow-hidden" id="variant-picker">
+              <div class="bg-primary/5 px-5 py-3 border-b border-primary/20">
+                <h2 class="font-semibold text-sm text-gray-900 flex items-center gap-2">
+                  <span>📦</span> Select Variant
+                </h2>
+              </div>
+              <div class="divide-y divide-gray-100" id="variant-list">
+                {product.variants.map((v, i) => (
+                  <button
+                    type="button"
+                    data-variant-btn
+                    data-variant-label={v.label}
+                    data-variant-price={v.price}
+                    class={`variant-row w-full flex items-center justify-between px-5 py-3 text-sm transition-colors cursor-pointer ${i === 0 ? 'bg-primary/10 ring-1 ring-inset ring-primary/30' : 'hover:bg-gray-50'}`}
+                  >
+                    <span class="flex items-center gap-2">
+                      <span class={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${i === 0 ? 'border-primary' : 'border-gray-300'}`}>
+                        {i === 0 && <span class="w-2 h-2 rounded-full bg-primary"></span>}
+                      </span>
+                      <span class="font-medium text-gray-700">{v.label}</span>
+                    </span>
+                    <span class={`font-bold ${i === 0 ? 'text-primary text-base' : 'text-gray-900'}`}>
+                      €{v.price.toFixed(2)}
+                    </span>
+                  </button>
+                ))}
+              </div>
+              {product.variants.length > 1 && (
+                <div class="bg-accent/10 px-5 py-2.5 border-t border-primary/20 text-xs text-gray-600 flex items-center gap-1.5">
+                  <span>💡</span>
+                  <span>Order in larger quantities for the best wholesale rates!</span>
+                </div>
+              )}
+            </div>
+          )}
+
+          <!-- Product Details -->
+          <div class="bg-gray-50 rounded-xl p-5 mb-6">
+            <h2 class="font-semibold text-sm text-gray-900 mb-3">Product Details</h2>
+            <dl class="grid grid-cols-2 gap-3 text-sm">
+              {product.cbdContent && (
+                <>
+                  <dt class="text-gray-500">CBD Content</dt>
+                  <dd class="font-medium text-gray-900">{product.cbdContent}</dd>
+                </>
+              )}
+              {product.thcContent && (
+                <>
+                  <dt class="text-gray-500">THC Content</dt>
+                  <dd class="font-medium text-gray-900">{product.thcContent}</dd>
+                </>
+              )}
+              <dt class="text-gray-500">Category</dt>
+              <dd class="font-medium text-gray-900">
+                <a href={`/collections/${product.categorySlug}`} class="text-primary hover:underline">{product.category}</a>
+              </dd>
+              <dt class="text-gray-500">Supplier</dt>
+              <dd class="font-medium text-gray-900">{product.supplier}</dd>
+              <dt class="text-gray-500">Availability</dt>
+              <dd class={`font-medium ${product.inStock ? 'text-green-600' : 'text-red-600'}`}>
+                {product.inStock ? '✓ In Stock' : '✗ Out of Stock'}
+              </dd>
+            </dl>
+          </div>
+
+          <!-- Description -->
+          <div class="mb-6" itemprop="description">
+            <h2 class="font-semibold text-gray-900 mb-2">Description</h2>
+            <p class="text-gray-600 leading-relaxed">{product.description}</p>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="space-y-3">
+            {product.inStock ? (
+              <>
+                {/* Quantity selector */}
+                <div class="flex items-center gap-3">
+                  <label for="qty" class="text-sm font-medium text-gray-700">Quantity:</label>
+                  <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                    <button type="button" id="qty-minus" class="px-3 py-2 text-gray-600 hover:bg-gray-100 transition-colors font-bold">−</button>
+                    <input type="number" id="qty" value="1" min="1" max="999" class="w-14 text-center border-x border-gray-300 py-2 text-sm font-medium focus:outline-none" />
+                    <button type="button" id="qty-plus" class="px-3 py-2 text-gray-600 hover:bg-gray-100 transition-colors font-bold">+</button>
+                  </div>
+                </div>
+                <button
+                  id="add-to-cart-btn"
+                  type="button"
+                  data-slug={product.slug}
+                  data-name={product.name}
+                  data-image={product.image}
+                  data-price={product.priceNumeric}
+                  data-variant-label={product.variants && product.variants.length > 0 ? product.variants[0].label : 'Default'}
+                  class="w-full py-4 bg-primary text-white text-lg font-bold rounded-xl hover:bg-primary-dark transition-colors shadow-lg focus:outline-none focus:ring-4 focus:ring-primary/30"
+                >
+                  ADD TO CART
+                </button>
+                {/* Confirmation toast */}
+                <div id="cart-toast" class="hidden fixed top-24 right-6 z-[100] bg-green-600 text-white px-5 py-3 rounded-xl shadow-2xl text-sm font-medium flex items-center gap-2 animate-slide-in">
+                  <span>✓</span>
+                  <span id="cart-toast-msg">Added to cart!</span>
+                  <a href="/cart" class="underline font-bold ml-2">View Cart</a>
+                </div>
+              </>
+            ) : (
+              <button class="w-full py-4 bg-gray-300 text-gray-500 text-lg font-bold rounded-xl cursor-not-allowed" disabled>
+                SOLD OUT
+              </button>
+            )}
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="mt-6 grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-2 text-xs text-gray-600 bg-gray-50 rounded-lg p-3">
+              <span>🔬</span>
+              <span>Lab-tested &lt; 0.3% THC</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-600 bg-gray-50 rounded-lg p-3">
+              <span>🚚</span>
+              <span>Ships within 24 hours</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-600 bg-gray-50 rounded-lg p-3">
+              <span>🌿</span>
+              <span>100% natural, European hemp</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-600 bg-gray-50 rounded-lg p-3">
+              <span>📦</span>
+              <span>Free delivery over €99</span>
+            </div>
+          </div>
+
+          <!-- Satisfaction Guarantee -->
+          <div class="mt-4 bg-green-50 border border-green-200 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm text-green-800">100% Satisfaction Guarantee</h4>
+                <p class="text-xs text-green-700 mt-1">Quality certified by independent labs. Trusted by 5,000+ professionals across Europe.</p>
+                <a href="/guarantees" class="text-xs text-green-600 font-medium hover:underline mt-1 inline-block">View our guarantees →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secure Payment -->
+          <div class="mt-3 flex items-center gap-2 text-xs text-gray-500">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span>Secure SSL payment · Visa · Mastercard · PayPal · Bank Transfer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  {relatedProducts.length > 0 && (
+    <section class="py-10 md:py-14 bg-gray-50" aria-labelledby="related-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="related-heading" class="text-2xl font-bold mb-6">You May Also Like</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {relatedProducts.map(p => (
+            <ProductCard product={p} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Product Page Cart Script -->
+  <script>
+    import { addToCart } from '../../scripts/cart';
+
+    function initProductPage() {
+      const btn = document.getElementById('add-to-cart-btn') as HTMLButtonElement | null;
+      if (!btn) return; // sold out page, no button
+
+      const qtyInput = document.getElementById('qty') as HTMLInputElement;
+      const qtyMinus = document.getElementById('qty-minus');
+      const qtyPlus = document.getElementById('qty-plus');
+
+      // Quantity controls
+      qtyMinus?.addEventListener('click', () => {
+        const v = parseInt(qtyInput.value) || 1;
+        qtyInput.value = String(Math.max(1, v - 1));
+      });
+      qtyPlus?.addEventListener('click', () => {
+        const v = parseInt(qtyInput.value) || 1;
+        qtyInput.value = String(Math.min(999, v + 1));
+      });
+
+      // Variant selection
+      const variantBtns = document.querySelectorAll<HTMLButtonElement>('[data-variant-btn]');
+      if (variantBtns.length > 0) {
+        variantBtns.forEach(vb => {
+          vb.addEventListener('click', () => {
+            // Deselect all
+            variantBtns.forEach(b => {
+              b.classList.remove('bg-primary/10', 'ring-1', 'ring-inset', 'ring-primary/30');
+              b.classList.add('hover:bg-gray-50');
+              const radio = b.querySelector('.w-4');
+              if (radio) {
+                radio.classList.remove('border-primary');
+                radio.classList.add('border-gray-300');
+                radio.innerHTML = '';
+              }
+            });
+            // Select clicked
+            vb.classList.add('bg-primary/10', 'ring-1', 'ring-inset', 'ring-primary/30');
+            vb.classList.remove('hover:bg-gray-50');
+            const radio = vb.querySelector('.w-4');
+            if (radio) {
+              radio.classList.remove('border-gray-300');
+              radio.classList.add('border-primary');
+              radio.innerHTML = '<span class="w-2 h-2 rounded-full bg-primary"></span>';
+            }
+            // Update button data
+            btn.dataset.variantLabel = vb.dataset.variantLabel!;
+            btn.dataset.price = vb.dataset.variantPrice!;
+            // Update main price display
+            const priceEl = document.querySelector('[itemprop="price"]') as HTMLElement;
+            if (priceEl) {
+              const p = parseFloat(vb.dataset.variantPrice!);
+              priceEl.textContent = `€${p.toFixed(2)}`;
+              priceEl.setAttribute('content', String(p));
+            }
+            // Highlight price in the row
+            variantBtns.forEach(b => {
+              const priceSpan = b.querySelector('span:last-child') as HTMLElement;
+              if (priceSpan) {
+                priceSpan.classList.remove('text-primary', 'text-base');
+                priceSpan.classList.add('text-gray-900');
+              }
+            });
+            const selectedPrice = vb.querySelector('span:last-child') as HTMLElement;
+            if (selectedPrice) {
+              selectedPrice.classList.remove('text-gray-900');
+              selectedPrice.classList.add('text-primary', 'text-base');
+            }
+          });
+        });
+      }
+
+      // Add to cart
+      btn.addEventListener('click', () => {
+        const qty = parseInt(qtyInput?.value) || 1;
+        addToCart({
+          slug: btn.dataset.slug!,
+          name: btn.dataset.name!,
+          image: btn.dataset.image!,
+          variantLabel: btn.dataset.variantLabel!,
+          price: parseFloat(btn.dataset.price!),
+        }, qty);
+
+        // Show toast
+        const toast = document.getElementById('cart-toast');
+        const toastMsg = document.getElementById('cart-toast-msg');
+        if (toast && toastMsg) {
+          toastMsg.textContent = `${qty}× ${btn.dataset.variantLabel} added to cart!`;
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 3500);
+        }
+
+        // Animate button
+        const orig = btn.textContent;
+        btn.textContent = '✓ ADDED!';
+        btn.classList.add('!bg-green-600');
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.classList.remove('!bg-green-600');
+        }, 1200);
+      });
+    }
+
+    // Run on initial load and on Astro page transitions
+    initProductPage();
+    document.addEventListener('astro:after-swap', initProductPage);
+  </script>
+</BaseLayout>

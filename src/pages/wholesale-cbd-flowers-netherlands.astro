@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Wholesale CBD Flowers Netherlands" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topResins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Wholesale CBD Flowers Netherlands — CBD Bloemen Groothandel Nederland",
+  "description": "Your wholesale CBD flower supplier for the Netherlands. Premium hemp flowers, lab-tested. Fast delivery Amsterdam, Rotterdam, The Hague, Utrecht.",
+  "url": "https://greensfarmhouse.com/wholesale-cbd-flowers-netherlands",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "Is CBD legal in the Netherlands?",
+    answer: "Yes. CBD products with THC below 0.2% are fully legal in the Netherlands. All our products come with Certificates of Analysis confirming compliance."
+  },
+  {
+    question: "How fast is delivery in the Netherlands?",
+    answer: "2-3 business days to most addresses in the Netherlands. Free shipping on all orders over €99 with full tracking."
+  },
+  {
+    question: "Do you offer Dutch-language invoicing?",
+    answer: "Yes. We provide complete Dutch-language invoicing and documentation for all your orders."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Wholesale CBD Flowers Netherlands | CBD Bloemen Groothandel Nederland"
+  description="Your CBD flower supplier in the Netherlands. Premium hemp flowers, lab-tested. Fast delivery to Amsterdam, Rotterdam, The Hague. From €0.19/g."
+  canonicalURL="https://greensfarmhouse.com/wholesale-cbd-flowers-netherlands"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🇳🇱 CBD Netherlands</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Wholesale CBD Flowers Netherlands — <span class="text-primary">CBD Bloemen Groothandel</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        The Netherlands has a unique cannabis culture and a rapidly growing CBD market. Premium CBD flowers with ultra-fast delivery throughout the Netherlands. Lab-tested, EU-compliant, from €0.19/g wholesale.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop CBD Flowers
+        </a>
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop CBD Resins
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose Us for CBD Wholesale in the Netherlands?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🇳🇱</span>
+          <h3 class="font-bold text-lg mb-2">Legal in the Netherlands</h3>
+          <p class="text-sm text-gray-600">All CBD products comply with Dutch legislation. THC &lt; 0.2% with full Certificate of Analysis for every batch.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🚚</span>
+          <h3 class="font-bold text-lg mb-2">2-3 Day Delivery</h3>
+          <p class="text-sm text-gray-600">Ultra-fast delivery throughout the Netherlands. Amsterdam, Rotterdam, The Hague, Utrecht and beyond. Free over €99.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏆</span>
+          <h3 class="font-bold text-lg mb-2">Premium Quality</h3>
+          <p class="text-sm text-gray-600">Premium varieties selected for the demanding Dutch market. Indoor, greenhouse, and outdoor options. The Dutch know quality — we deliver it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Flowers Netherlands — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Premium <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">CBD hemp flowers</a> with fast delivery throughout the Netherlands. Indoor, greenhouse, and outdoor from €0.19/g.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Resins Netherlands — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Premium <a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">hash, pollen, and concentrates</a>. Dutch quality standard.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD Wholesale in the Netherlands: Market Opportunity</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          The Netherlands has a unique position in Europe's cannabis landscape. With a well-established coffee shop culture and progressive attitudes, the <strong>Dutch CBD market</strong> is both sophisticated and demanding. Dutch consumers expect top-tier quality, and as a <a href="/wholesale-cbd-flowers-europe" class="text-primary hover:underline">European Greens Farmhouse</a>, we deliver exactly that.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Quality for Discerning Customers</h3>
+        <p>
+          The Dutch market demands excellence. That's why we offer <a href="/cbd-hemp-flowers-indoor" class="text-primary hover:underline">premium indoor flowers</a> with exceptional terpene profiles alongside <a href="/cbd-hemp-flowers-greenhouse" class="text-primary hover:underline">value-oriented greenhouse</a> options. Every product comes with full COA from accredited labs, including cannabinoid, terpene, and contaminant testing.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Serving the Dutch Retail Market</h3>
+        <p>
+          Whether you're a CBD specialty shop in Amsterdam, a wellness store in Rotterdam, or an online retailer serving the whole country, we provide the quality and pricing you need to compete. <a href="/cbd-flowers-bulk-europe" class="text-primary hover:underline">Bulk purchasing</a> options from 1kg+ are available with the best pricing. <a href="/contact" class="text-primary hover:underline">Contact us</a> for a personalized quote.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Wholesale Netherlands — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Your Greens Farmhouse for the Netherlands</h2>
+      <p class="text-green-100 mb-6">Premium CBD flowers with fast, free delivery throughout the Netherlands.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

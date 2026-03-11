@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "About Us" },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Greens Farmhouse",
+  "description": "Learn about Greens Farmhouse — Europe's trusted CBD wholesale supplier since 2020.",
+  "url": "https://greensfarmhouse.com/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com",
+    "foundingDate": "2020",
+    "description": "Leading CBD wholesale supplier in France and Europe. We provide premium, lab-tested CBD products at competitive wholesale prices.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33-1-88-81-21-99",
+      "contactType": "customer service",
+      "email": "contact@greensfarmhouse.com",
+      "availableLanguage": ["English", "French"]
+    }
+  }
+};
+---
+
+<BaseLayout
+  title="About Us | Greens Farmhouse — Europe's Trusted CBD Supplier"
+  description="Learn about Greens Farmhouse, Europe's leading wholesale CBD supplier. Certified products, lab-tested quality, competitive prices and fast delivery across Europe."
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-primary/5 to-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Who Are <span class="text-primary">We?</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+        Greens Farmhouse is a leading wholesale supplier of premium CBD products in France and Europe. 
+        We are committed to delivering the finest quality CBD flowers, resins, oils, and edibles at competitive wholesale prices.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed">
+            <p>
+              Founded with a passion for providing high-quality CBD products, Greens Farmhouse has quickly 
+              become one of the most trusted wholesale suppliers in Europe. Our journey began with a simple 
+              mission: make premium CBD accessible to businesses across the continent.
+            </p>
+            <p>
+              We work directly with the best hemp farms in Switzerland, Italy, and other European countries 
+              to source flowers, resins, and raw materials that meet the highest quality standards. Every 
+              product is rigorously tested in independent laboratories to ensure purity, potency, and 
+              compliance with European regulations.
+            </p>
+            <p>
+              Today, we serve thousands of professional clients — from CBD shops and pharmacies to 
+              <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shops</a>, 
+              e-commerce businesses, and wellness brands — providing them with the products and support 
+              they need to succeed across <a href="/cbd-wholesaler-belgium" class="text-primary hover:underline">Belgium</a>, 
+              <a href="/cbd-wholesaler-spain" class="text-primary hover:underline">Spain</a>, 
+              <a href="/cbd-wholesaler-switzerland" class="text-primary hover:underline">Switzerland</a>, 
+              <a href="/cbd-wholesaler-luxembourg" class="text-primary hover:underline">Luxembourg</a>, 
+              <a href="/cbd-wholesaler-malta" class="text-primary hover:underline">Malta</a>, and across Europe.
+            </p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-primary/15 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
+          <div class="text-center">
+            <svg class="w-24 h-24 mx-auto text-primary/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            <p class="text-primary/60 font-semibold">Greens Farmhouse HQ</p>
+            <p class="text-primary/40 text-sm">Serving Europe Since 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">Our Values</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Quality First</h3>
+          <p class="text-sm text-gray-600">Every product is lab-tested and certified to meet the highest European quality standards.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Best Prices</h3>
+          <p class="text-sm text-gray-600">Direct sourcing and efficient operations allow us to offer the most competitive wholesale prices.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Fast Delivery</h3>
+          <p class="text-sm text-gray-600">Express shipping across Europe with discreet packaging. Orders shipped within 24-48h.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Expert Support</h3>
+          <p class="text-sm text-gray-600">Dedicated account managers and responsive customer service to support your business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <div class="p-6">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary">5000+</p>
+          <p class="text-sm text-gray-600 mt-1">Professional Clients</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary">100+</p>
+          <p class="text-sm text-gray-600 mt-1">Premium Products</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary">30+</p>
+          <p class="text-sm text-gray-600 mt-1">Countries Served</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary">4.8/5</p>
+          <p class="text-sm text-gray-600 mt-1">Customer Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Certifications & Compliance</h2>
+      <p class="text-gray-600 mb-8 leading-relaxed">
+        All our products comply with European regulations on CBD. We provide certificates of analysis (COA) from 
+        independent third-party laboratories for every product, ensuring full transparency on cannabinoid content, 
+        terpene profiles, and the absence of contaminants.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+          <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          Lab Tested
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+          <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          EU Compliant
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+          <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          THC &lt; 0.3%
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+          <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          COA Available
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+          <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          Non-GMO
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full text-sm font-medium text-gray-700 shadow-sm">
+          <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          Organic
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Partner With Us?</h2>
+      <p class="text-gray-600 mb-8">
+        Join thousands of professionals across Europe who trust Greens Farmhouse for their CBD supply. 
+        Get in touch today for a personalized quote.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition">
+          Contact Us
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+        <a href="/collections" class="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary/5 transition">
+          Browse Products
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

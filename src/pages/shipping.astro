@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Shipping & Delivery" },
+];
+---
+
+<BaseLayout
+  title="Shipping & Delivery | Greens Farmhouse — Fast European Delivery"
+  description="Learn about Greens Farmhouse's shipping policies, delivery times, and costs for wholesale CBD orders across Europe. Fast, secure, and discreet delivery."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <section class="py-10 md:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Shipping & Delivery</h1>
+      
+      <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+        <h2>Delivery Zones & Estimated Times</h2>
+        <div class="not-prose overflow-x-auto mb-8">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="text-left p-3 border border-gray-200 font-semibold">Zone</th>
+                <th class="text-left p-3 border border-gray-200 font-semibold">Countries</th>
+                <th class="text-left p-3 border border-gray-200 font-semibold">Delivery Time</th>
+                <th class="text-left p-3 border border-gray-200 font-semibold">Shipping Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-gray-200 font-medium">France</td>
+                <td class="p-3 border border-gray-200">Metropolitan France</td>
+                <td class="p-3 border border-gray-200">24-48h</td>
+                <td class="p-3 border border-gray-200 text-primary font-semibold">Free on orders over €200</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="p-3 border border-gray-200 font-medium">Zone 1</td>
+                <td class="p-3 border border-gray-200">Belgium, Luxembourg, Germany, Netherlands</td>
+                <td class="p-3 border border-gray-200">2-4 business days</td>
+                <td class="p-3 border border-gray-200">From €9.90</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-gray-200 font-medium">Zone 2</td>
+                <td class="p-3 border border-gray-200">Italy, Spain, Portugal, Austria, Switzerland</td>
+                <td class="p-3 border border-gray-200">3-5 business days</td>
+                <td class="p-3 border border-gray-200">From €14.90</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="p-3 border border-gray-200 font-medium">Zone 3</td>
+                <td class="p-3 border border-gray-200">Rest of Europe (UK, Scandinavia, Eastern Europe)</td>
+                <td class="p-3 border border-gray-200">5-7 business days</td>
+                <td class="p-3 border border-gray-200">From €19.90</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Shipping Methods</h2>
+        <p>We use premium carriers to ensure your wholesale orders arrive safely and on time:</p>
+        <ul>
+          <li><strong>Standard Shipping:</strong> Tracked parcel delivery via Colissimo or DPD</li>
+          <li><strong>Express Shipping:</strong> Priority delivery via Chronopost or DHL Express</li>
+          <li><strong>Freight:</strong> For large wholesale orders over 50kg, we arrange pallet delivery</li>
+        </ul>
+
+        <h2>Order Processing</h2>
+        <ul>
+          <li>Orders placed before 14:00 CET (Monday–Friday) are processed the same day</li>
+          <li>Orders placed after 14:00 CET or on weekends are processed the next business day</li>
+          <li>You will receive a tracking number by email once your order has been shipped</li>
+        </ul>
+
+        <h2>Packaging</h2>
+        <p>All orders are shipped in discreet, neutral packaging with no external indication of the contents. Products are vacuum-sealed and protected to maintain freshness and quality during transport.</p>
+
+        <h2>Free Shipping</h2>
+        <p>We offer free standard shipping on all orders over €200 within metropolitan France. For other destinations, contact us for custom shipping quotes on large orders.</p>
+
+        <h2>Returns & Issues</h2>
+        <p>If your order arrives damaged or incorrect, please contact us within 48 hours of delivery at <a href="mailto:contact@greensfarmhouse.com">contact@greensfarmhouse.com</a> with photos of the issue. We will arrange a replacement or refund promptly.</p>
+
+        <h2>Questions?</h2>
+        <p>For any shipping inquiries, please <a href="/contact">contact our team</a> or call us at <a href="tel:+447346989289">+44 7346 989289</a>.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

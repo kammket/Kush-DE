@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Hemp Flowers Greenhouse" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topResins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "CBD Hemp Flowers Greenhouse — Best Value Wholesale CBD",
+  "description": "Greenhouse CBD hemp flowers wholesale. The perfect balance between quality and price. From €0.29/g. Lab-tested, EU-compliant.",
+  "url": "https://greensfarmhouse.com/cbd-hemp-flowers-greenhouse",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "What are greenhouse CBD flowers?",
+    answer: "Greenhouse CBD flowers are cultivated in glass or poly-tunnel structures that harness natural sunlight while providing protection and climate control. They offer near-indoor quality at significantly lower prices — the smart choice for most wholesalers."
+  },
+  {
+    question: "How much do greenhouse CBD flowers cost wholesale?",
+    answer: "Our greenhouse CBD flowers start from just €0.29/g at wholesale prices. Premium European varieties with exceptional terpene profiles are available. Volume discounts start from 100g."
+  },
+  {
+    question: "Greenhouse vs. indoor — which should I stock?",
+    answer: "Greenhouse flowers offer the best quality-to-price ratio and suit the majority of retailers. Indoor flowers target the premium segment. Many successful retailers stock both to serve different customer segments."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="CBD Hemp Flowers Greenhouse | Best Value Wholesale CBD Europe"
+  description="Greenhouse CBD hemp flowers wholesale. The perfect balance between quality and price. From €0.29/g. Natural light cultivation, lab-tested, EU-compliant."
+  canonicalURL="https://greensfarmhouse.com/cbd-hemp-flowers-greenhouse"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-lime-50 via-white to-green-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-lime-100 text-lime-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🏡 CBD Greenhouse</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        CBD Hemp Flowers Greenhouse — <span class="text-primary">Best Quality-Price Ratio</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Greenhouse CBD flowers deliver the ideal balance between indoor quality and outdoor pricing. Cultivated under natural sunlight in controlled European greenhouses for optimal terpene development and consistent cannabinoid profiles.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Greenhouse CBD
+        </a>
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop CBD Resins
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Greenhouse CBD Flowers?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">☀️</span>
+          <h3 class="font-bold text-lg mb-2">Natural Sunlight</h3>
+          <p class="text-sm text-gray-600">Greenhouse flowers harness natural solar energy, complemented by environmental controls. This produces more complex terpene profiles than artificial lighting alone.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">⚖️</span>
+          <h3 class="font-bold text-lg mb-2">Best Value for Money</h3>
+          <p class="text-sm text-gray-600">Near-indoor quality at significantly lower prices. Greenhouse CBD is the smart choice for wholesalers seeking the best margins without sacrificing quality.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🌡️</span>
+          <h3 class="font-bold text-lg mb-2">Climate Controlled</h3>
+          <p class="text-sm text-gray-600">Protected from rain, frost, and pests with regulated ventilation and temperature. Consistent quality year-round regardless of weather conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Greenhouse CBD Flowers — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Our selection of <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">greenhouse CBD flowers</a>, the perfect balance of quality and value. From just €0.29/g wholesale.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">CBD Resins for Wholesalers</h2>
+      <p class="text-gray-600 mb-8"><a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD resins and hash</a> crafted from selected greenhouse flowers.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Greenhouse CBD Flowers: The Smart Wholesale Choice</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Greenhouse CBD flowers have become the #1 choice for European wholesalers — and for good reason. By combining <strong>natural sunlight with controlled-environment protection</strong>, greenhouse cultivation produces CBD flowers that rival indoor quality at a fraction of the cost. Starting from just €0.29/g.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">The Greenhouse Advantage</h3>
+        <p>
+          Unlike <a href="/cbd-hemp-flowers-indoor" class="text-primary hover:underline">indoor flowers</a> that rely entirely on artificial lighting, greenhouse flowers benefit from the full spectrum of natural sunlight. This produces more complex terpene profiles and a more natural cannabinoid ratio. Combined with wind and rain protection plus temperature regulation, greenhouse cultivation achieves consistent, high-quality results.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Ideal for Most Market Segments</h3>
+        <p>
+          Whether you supply <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shops</a>, CBD boutiques, or online stores across <a href="/wholesale-cbd-flowers-germany" class="text-primary hover:underline">Germany</a>, <a href="/wholesale-cbd-flowers-france" class="text-primary hover:underline">France</a>, or the <a href="/wholesale-cbd-flowers-netherlands" class="text-primary hover:underline">Netherlands</a>, greenhouse flowers hit the sweet spot. Attractive visual appearance, excellent aromas, and price points that deliver strong margins. For <a href="/cbd-flowers-bulk-europe" class="text-primary hover:underline">bulk orders</a>, greenhouse flowers become even more compelling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="Greenhouse CBD Flowers — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Greenhouse CBD Flowers at the Best Price</h2>
+      <p class="text-green-100 mb-6">The best quality-to-price ratio in CBD flowers. Free shipping on orders over €99.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

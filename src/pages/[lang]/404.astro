@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { supportedLocales, type Locale } from '../../i18n/config';
+import { t, getLocalePath } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+const lp = (path: string) => getLocalePath(path, locale);
+
+const translations: Record<string, any> = {
+  es: { h1: 'Página No Encontrada', desc: 'Lo sentimos, la página que busca no existe o ha sido movida.', home: 'Ir al Inicio', browse: 'Ver Productos', flowers: 'Flores CBD', flowersDesc: 'Invernadero e interior premium', resins: 'Resinas CBD', resinsDesc: 'Hash, polen y concentrados', oils: 'Aceites CBD', oilsDesc: 'Concentraciones 5%, 10% y 20%' },
+  fr: { h1: 'Page Non Trouvée', desc: 'Désolé, la page que vous cherchez n\'existe pas ou a été déplacée.', home: 'Accueil', browse: 'Voir les Produits', flowers: 'Fleurs CBD', flowersDesc: 'Serre et intérieur premium', resins: 'Résines CBD', resinsDesc: 'Hash, pollen et concentrés', oils: 'Huiles CBD', oilsDesc: 'Concentrations 5%, 10% et 20%' },
+  de: { h1: 'Seite Nicht Gefunden', desc: 'Entschuldigung, die gesuchte Seite existiert nicht oder wurde verschoben.', home: 'Zur Startseite', browse: 'Produkte Ansehen', flowers: 'CBD Blüten', flowersDesc: 'Premium Gewächshaus & Indoor', resins: 'CBD Harze', resinsDesc: 'Hash, Pollen & Konzentrate', oils: 'CBD Öle', oilsDesc: '5%, 10% & 20% Konzentrationen' },
+  nl: { h1: 'Pagina Niet Gevonden', desc: 'Sorry, de pagina die u zoekt bestaat niet of is verplaatst.', home: 'Naar Home', browse: 'Producten Bekijken', flowers: 'CBD Bloemen', flowersDesc: 'Premium kas & indoor', resins: 'CBD Harsen', resinsDesc: 'Hash, pollen & concentraten', oils: 'CBD Oliën', oilsDesc: '5%, 10% & 20% concentraties' },
+  it: { h1: 'Pagina Non Trovata', desc: 'Ci scusiamo, la pagina che cercate non esiste o è stata spostata.', home: 'Vai alla Home', browse: 'Vedi Prodotti', flowers: 'Fiori CBD', flowersDesc: 'Serra e indoor premium', resins: 'Resine CBD', resinsDesc: 'Hash, polline e concentrati', oils: 'Oli CBD', oilsDesc: 'Concentrazioni 5%, 10% e 20%' },
+  fi: { h1: 'Sivua Ei Löytynyt', desc: 'Valitettavasti etsimääsi sivua ei ole olemassa tai se on siirretty.', home: 'Etusivulle', browse: 'Selaa Tuotteita', flowers: 'CBD-kukat', flowersDesc: 'Premium kasvihuone ja sisätila', resins: 'CBD-hartsit', resinsDesc: 'Hasis, siitepöly ja tiivisteet', oils: 'CBD-öljyt', oilsDesc: '5%, 10% ja 20% pitoisuudet' },
+  pt: { h1: 'Página Não Encontrada', desc: 'Desculpe, a página que procura não existe ou foi movida.', home: 'Ir para Início', browse: 'Ver Produtos', flowers: 'Flores CBD', flowersDesc: 'Estufa e interior premium', resins: 'Resinas CBD', resinsDesc: 'Hash, pólen e concentrados', oils: 'Óleos CBD', oilsDesc: 'Concentrações 5%, 10% e 20%' },
+};
+
+const tr = translations[locale] || {};
+---
+
+<BaseLayout title={`404 — ${tr.h1} | Greens Farmhouse`} description={tr.desc} locale={locale} noindex={true}>
+  <section class="py-20 md:py-32">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-8xl font-extrabold text-primary/20 mb-4">404</p>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{tr.h1}</h1>
+      <p class="text-lg text-gray-600 mb-8">{tr.desc}</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={lp('/')} class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          {tr.home}
+        </a>
+        <a href={lp('/collections')} class="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary/5 transition">{tr.browse}</a>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-3 gap-4 text-left">
+        <a href={lp('/collections/cbd-flowers')} class="p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition group">
+          <p class="font-semibold text-gray-900 group-hover:text-primary transition">{tr.flowers}</p>
+          <p class="text-xs text-gray-500 mt-1">{tr.flowersDesc}</p>
+        </a>
+        <a href={lp('/collections/cbd-resins')} class="p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition group">
+          <p class="font-semibold text-gray-900 group-hover:text-primary transition">{tr.resins}</p>
+          <p class="text-xs text-gray-500 mt-1">{tr.resinsDesc}</p>
+        </a>
+        <a href={lp('/collections/cbd-oils')} class="p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition group">
+          <p class="font-semibold text-gray-900 group-hover:text-primary transition">{tr.oils}</p>
+          <p class="text-xs text-gray-500 mt-1">{tr.oilsDesc}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

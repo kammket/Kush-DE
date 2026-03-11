@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Hemp Flowers Indoor" },
+];
+
+const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const topResins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "CBD Hemp Flowers Indoor — Premium Indoor-Grown CBD at Wholesale Prices",
+  "description": "Premium indoor CBD hemp flowers wholesale. Controlled-environment cultivation for maximum potency and purity. From €0.79/g wholesale.",
+  "url": "https://greensfarmhouse.com/cbd-hemp-flowers-indoor",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "What is the difference between indoor and greenhouse CBD flowers?",
+    answer: "Indoor CBD flowers are grown in a 100% controlled environment with optimized lighting, temperature, humidity, and nutrients. This produces higher CBD potency, richer terpene profiles, and superior visual appearance compared to greenhouse or outdoor flowers."
+  },
+  {
+    question: "How much do indoor CBD flowers cost wholesale?",
+    answer: "Our indoor CBD flowers start from €0.79/g at wholesale prices. Additional bulk discounts are available for orders of 500g+. Contact us for custom pricing on kilogram quantities."
+  },
+  {
+    question: "Why are indoor flowers more expensive?",
+    answer: "Indoor cultivation requires significant investment in lighting, climate control, and nutrients. The result is flowers with higher CBD concentrations (up to 25%+), more complex terpene profiles, and premium visual appeal that commands higher retail prices."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="CBD Hemp Flowers Indoor | Premium Indoor CBD Wholesale"
+  description="Premium indoor CBD hemp flowers wholesale. Controlled-environment cultivation, maximum potency and purity. From €0.79/g. Lab-tested, EU-compliant."
+  canonicalURL="https://greensfarmhouse.com/cbd-hemp-flowers-indoor"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-purple-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">💎 Premium Indoor CBD</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        CBD Hemp Flowers Indoor — <span class="text-primary">Premium Quality</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Indoor CBD flowers represent the pinnacle of European hemp cultivation. Grown in fully controlled environments for maximum cannabinoid concentration and exceptional terpene profiles. The ultimate choice for discerning retailers and premium consumers.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Indoor Flowers
+        </a>
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Shop CBD Resins
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose Indoor CBD Flowers?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏠</span>
+          <h3 class="font-bold text-lg mb-2">Indoor Cultivation</h3>
+          <p class="text-sm text-gray-600">100% controlled environment: lighting, temperature, humidity, and nutrients optimized for maximum quality. Every variable is precision-managed.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💎</span>
+          <h3 class="font-bold text-lg mb-2">Superior Quality</h3>
+          <p class="text-sm text-gray-600">Higher CBD concentration, richer terpene profiles, and zero contaminants. The premium experience that discerning consumers demand.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">👃</span>
+          <h3 class="font-bold text-lg mb-2">Intense Aromas</h3>
+          <p class="text-sm text-gray-600">Indoor cultivation produces flowers with exceptional aromatic profiles. Complex terpene compositions that premium customers actively seek out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Indoor CBD Flowers — Wholesale</h2>
+      <p class="text-gray-600 mb-8">Our premium selection of <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">indoor CBD flowers</a>, cultivated with meticulous attention to detail. From €0.79/g wholesale.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Premium CBD Resins</h2>
+      <p class="text-gray-600 mb-8"><a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD hash and concentrates</a> crafted from top-quality indoor flowers.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {topResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Indoor CBD Flowers: The Premium Choice for Wholesalers</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Indoor CBD hemp flowers are the gold standard of the European CBD market. Grown under precisely controlled conditions — optimized LED lighting, regulated temperature and humidity, and carefully calibrated nutrient programs — <strong>indoor flowers consistently deliver the highest cannabinoid concentrations and most complex terpene profiles</strong>.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Indoor vs. Greenhouse vs. Outdoor</h3>
+        <p>
+          While <a href="/cbd-hemp-flowers-greenhouse" class="text-primary hover:underline">greenhouse CBD flowers</a> offer excellent value and <a href="/wholesale-cbd-flowers-europe" class="text-primary hover:underline">outdoor flowers</a> provide the most competitive pricing, indoor flowers command the highest retail prices — typically €8-15/g in retail settings compared to €3-8/g for greenhouse. For wholesalers targeting premium consumers, indoor is the clear profit leader.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Perfect for Premium Retailers</h3>
+        <p>
+          Whether you run a <a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">tobacco shop</a>, CBD boutique, or online store across <a href="/wholesale-cbd-flowers-germany" class="text-primary hover:underline">Germany</a>, <a href="/wholesale-cbd-flowers-france" class="text-primary hover:underline">France</a>, <a href="/wholesale-cbd-flowers-italy" class="text-primary hover:underline">Italy</a>, or <a href="/wholesale-cbd-flowers-netherlands" class="text-primary hover:underline">the Netherlands</a> — indoor flowers are the product your premium customers are looking for. Consistent quality, exceptional aromas, and beautiful frosty appearance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="Indoor CBD Flowers — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Indoor CBD Flowers at the Best Price</h2>
+      <p class="text-green-100 mb-6">Premium indoor flowers at wholesale prices. Free shipping on orders over €99.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

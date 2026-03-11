@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import FAQ from '../components/FAQ.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Greens Farmhouse Switzerland" },
+];
+
+const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+const resins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(0, 4);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Greens Farmhouse Switzerland — Premium Swiss-Quality CBD Wholesale",
+  "description": "Switzerland's trusted CBD wholesale supplier. Premium CBD flowers, resins, oils at wholesale prices. Swiss-quality standards, fast delivery throughout Switzerland.",
+  "url": "https://greensfarmhouse.com/cbd-wholesaler-switzerland",
+  "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
+};
+
+const faqItems = [
+  {
+    question: "What is the THC limit for CBD in Switzerland?",
+    answer: "Switzerland has one of Europe's most permissive CBD regulations, allowing up to 1% THC (compared to the EU's 0.2%). This means a wider variety of high-quality CBD products can be legally sold. We offer products that meet both Swiss and EU THC limits, giving Swiss retailers flexibility."
+  },
+  {
+    question: "How fast is delivery to Switzerland?",
+    answer: "We deliver throughout Switzerland in 2-3 business days. Express shipping (1-2 days) is available to Zurich, Geneva, Bern, Basel, Lausanne, and other major cities. Free delivery on orders over €99 (or equivalent in CHF)."
+  },
+  {
+    question: "Do you ship to all Swiss cantons?",
+    answer: "Yes, we deliver to all 26 cantons across Switzerland, including Zurich, Geneva, Bern, Basel-Stadt, Vaud, Ticino, and all others. Whether you're in a major city or a mountain resort, we can reach you."
+  },
+  {
+    question: "What CBD products are popular in Switzerland?",
+    answer: "Switzerland has a mature, quality-focused CBD market. Indoor CBD flowers are by far the most popular, followed by artisan CBD hash and resins. Swiss consumers value terpene-rich, premium products with strong aromatics. CBD oils (10-20% concentration) are also growing rapidly."
+  },
+  {
+    question: "Can I pay in Swiss Francs (CHF)?",
+    answer: "Our prices are listed in Euros, which is standard for European wholesale. Most Swiss businesses work with both EUR and CHF. We provide professional invoicing that meets Swiss business and VAT requirements."
+  }
+];
+
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Greens Farmhouse Switzerland | Swiss-Quality CBD at Wholesale Prices"
+  description="Switzerland's premium CBD wholesale supplier. Top-quality CBD flowers, resins, oils at the best wholesale prices. Fast delivery across all Swiss cantons."
+  canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-switzerland"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-red-50 via-white to-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-3xl mb-3">🇨🇭</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Greens Farmhouse Switzerland — <span class="text-primary">Swiss-Quality CBD Products</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Europe's most trusted CBD wholesale supplier for the Swiss market. We deliver premium 
+        <a href="/collections/cbd-flowers" class="text-primary hover:underline">CBD flowers</a>, 
+        <a href="/collections/cbd-resins" class="text-primary hover:underline">resins</a>, and 
+        <a href="/collections/cbd-oils" class="text-primary hover:underline">oils</a> 
+        to Zurich, Geneva, Bern, Basel, Lausanne, Lucerne, and all 26 cantons.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Wholesale CBD
+        </a>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Request Swiss Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiss Market Advantages -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Switzerland is Europe's Premier CBD Market</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">⛰️</span>
+          <h3 class="font-bold text-lg mb-2">1% THC Allowed</h3>
+          <p class="text-sm text-gray-600">Switzerland allows CBD products up to 1% THC — the most permissive in Europe. This enables a wider range of potent, full-spectrum products that Swiss consumers love.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💎</span>
+          <h3 class="font-bold text-lg mb-2">Premium Market</h3>
+          <p class="text-sm text-gray-600">Swiss consumers expect the highest quality. With strong purchasing power, the Swiss market rewards retailers who stock premium, lab-tested CBD products.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏪</span>
+          <h3 class="font-bold text-lg mb-2">Mature Retail Network</h3>
+          <p class="text-sm text-gray-600">Switzerland pioneered European CBD retail. Thousands of CBD shops, kiosks, and online stores across German, French, and Italian-speaking regions create robust demand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Premium CBD Flowers for Swiss Retailers</h2>
+      <p class="text-gray-600 mb-8">Switzerland is the birthplace of European CBD flower culture. Our premium <a href="/collections/cbd-flowers" class="text-primary hover:underline font-medium">indoor and greenhouse CBD flowers</a> meet Swiss quality expectations.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {flowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">Browse all CBD Flowers →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Artisan CBD Resins — Swiss Wholesale</h2>
+      <p class="text-gray-600 mb-8">Swiss CBD shops love our artisan <a href="/collections/cbd-resins" class="text-primary hover:underline font-medium">CBD hash and resins</a>. Handcrafted from premium European hemp with rich, complex terpene profiles.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {resins.map(p => <ProductCard product={p} />)}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">Browse all CBD Resins →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">CBD Wholesale in Switzerland: The Expert Guide</h2>
+      <div class="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+        <p>
+          Switzerland was the first European country to develop a large-scale legal CBD market. Since 2017, when the 
+          Swiss government clarified that CBD products with less than 1% THC are legal, the Swiss CBD industry has 
+          boomed. Today, Switzerland has more CBD retail outlets per capita than any other European country, 
+          making it a critical market for wholesale CBD suppliers.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Swiss CBD Regulations</h3>
+        <p>
+          Switzerland's unique 1% THC threshold (compared to the EU's 0.2%) allows for more potent, full-spectrum 
+          products with richer cannabinoid profiles. The Swiss Federal Office of Public Health (FOPH) and Swissmedic 
+          regulate CBD products. CBD tobacco substitutes are legally sold in kiosks and tobacco shops throughout the 
+          country — a model now being studied by other European nations.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Serving All Language Regions</h3>
+        <p>
+          Switzerland's trilingual market requires cultural sensitivity. We serve retailers across German-speaking Switzerland 
+          (Zurich, Bern, Basel, Lucerne), French-speaking Romandie (Geneva, Lausanne, Fribourg), and Italian-speaking 
+          Ticino (Lugano, Bellinzona). Our Swiss site is also available in German at 
+          <a href="https://dercbdgrosshandler.de" class="text-primary hover:underline" rel="noopener" target="_blank">dercbdgrosshandler.de</a> 
+          and Italian at <a href="https://ilgrossistacbd.it" class="text-primary hover:underline" rel="noopener" target="_blank">ilgrossistacbd.it</a>.
+        </p>
+        <h3 class="text-xl font-bold text-gray-900 mt-6">Swiss Quality, Wholesale Prices</h3>
+        <p>
+          Swiss retailers demand impeccable product quality — and we deliver. Our 
+          <a href="/cbd-wholesaler-organic" class="text-primary hover:underline">organic CBD products</a> are sourced from 
+          certified European farms in Switzerland, Italy, and France. Every batch is independently tested, full COA 
+          documentation is provided, and our pricing structure rewards volume buyers. Read our 
+          <a href="/blog/cbd-oil-wholesale-buying-guide" class="text-primary hover:underline">wholesale buying guide</a> 
+          or <a href="/contact" class="text-primary hover:underline">contact us</a> for a custom Swiss quote.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="CBD Wholesale Switzerland — FAQ" items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Supply Your Swiss CBD Business</h2>
+      <p class="text-green-100 mb-6">Premium CBD at wholesale prices, fast delivery to all 26 cantons.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+        <a href="/contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</BaseLayout>

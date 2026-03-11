@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { categories, getProductsByCategory, getCategoryBySlug } from '../../data/products';
+
+export function getStaticPaths() {
+  return categories.map(cat => ({
+    params: { slug: cat.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const category = getCategoryBySlug(slug!);
+if (!category) return Astro.redirect('/404');
+
+const allProducts = getProductsByCategory(slug!);
+const inStockProducts = allProducts.filter(p => p.inStock);
+const outOfStockProducts = allProducts.filter(p => !p.inStock);
+
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": category.name,
+  "description": category.description,
+  "url": `https://greensfarmhouse.com/collections/${slug}`,
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": allProducts.length,
+    "itemListElement": allProducts.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": product.name,
+        "url": `https://greensfarmhouse.com/products/${product.slug}`,
+        "description": product.description,
+        "brand": {
+          "@type": "Brand",
+          "name": product.supplier
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": product.priceNumeric,
+          "priceCurrency": "EUR",
+          "availability": product.inStock 
+            ? "https://schema.org/InStock" 
+            : "https://schema.org/OutOfStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Greens Farmhouse"
+          }
+        }
+      }
+    }))
+  }
+};
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Collections", url: "/collections" },
+  { name: category.name },
+];
+---
+
+<BaseLayout
+  title={category.metaTitle}
+  description={category.metaDescription}
+  ogType="website"
+  canonicalURL={`https://greensfarmhouse.com/collections/${slug}`}
+  jsonLd={collectionJsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Category Header -->
+  <section class="bg-gradient-to-r from-primary to-primary-light text-white py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-3">{category.name}</h1>
+      <p class="text-green-100 max-w-3xl leading-relaxed">{category.description}</p>
+      <p class="mt-3 text-sm text-green-200">{allProducts.length} products</p>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="py-10 md:py-14" aria-label={`${category.name} products`}>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      {/* Sort / Filter Bar */}
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
+        <p class="text-sm text-gray-600">
+          Showing <strong>{allProducts.length}</strong> products
+        </p>
+        <div class="flex items-center gap-2">
+          <label for="sort" class="text-sm text-gray-600">Sort by:</label>
+          <select id="sort" class="text-sm border border-gray-300 rounded-lg px-3 py-1.5 bg-white focus:ring-2 focus:ring-primary focus:border-primary">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name A-Z</option>
+          </select>
+        </div>
+      </div>
+
+      {/* In Stock Products */}
+      {inStockProducts.length > 0 && (
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+          {inStockProducts.map(product => (
+            <ProductCard product={product} />
+          ))}
+        </div>
+      )}
+
+      {/* Out of Stock Products */}
+      {outOfStockProducts.length > 0 && (
+        <div class="mt-12">
+          <h2 class="text-lg font-semibold text-gray-500 mb-4">Currently Unavailable</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 opacity-75">
+            {outOfStockProducts.map(product => (
+              <ProductCard product={product} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Category SEO Content -->
+  <section class="py-10 md:py-14 bg-gray-50" aria-labelledby="cat-info">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="cat-info" class="text-2xl font-bold mb-4">{category.name}</h2>
+      <div class="text-gray-600 leading-relaxed space-y-4">
+        <p>{category.description}</p>
+        <p>
+          By choosing Greens Farmhouse, you benefit from the services of the best CBD supplier and 
+          distributor in France. Our family-run company, based in the Paris region, guarantees that all 
+          our products are cleared through customs and stored in France, in compliance with current legislation. 
+          All CBD wholesale orders are carefully prepared and shipped within 24 hours, with fast, free delivery 
+          for orders over €99.
+        </p>
+        <h3 class="text-lg font-bold text-gray-900 pt-2">Related Resources</h3>
+        <ul class="list-disc pl-6 space-y-1 text-sm">
+          <li><a href="/blog/how-to-start-cbd-business" class="text-primary hover:underline">How to Start a CBD Business in Europe</a> — complete guide for new retailers</li>
+          <li><a href="/blog/best-selling-cbd-products" class="text-primary hover:underline">Best-Selling CBD Products in 2026</a> — discover what's trending</li>
+          <li><a href="/blog/choose-right-cbd-flower-supplier" class="text-primary hover:underline">How to Choose the Right CBD Supplier</a> — 7 key criteria</li>
+          <li><a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">CBD in Tobacco Shops</a> — guide for tobacconists</li>
+          <li><a href="/cbd-wholesaler-organic" class="text-primary hover:underline">Organic CBD Wholesale</a> — premium organic range</li>
+        </ul>
+        <h3 class="text-lg font-bold text-gray-900 pt-2">We Deliver Across Europe</h3>
+        <p class="text-sm">
+          Fast wholesale delivery to 
+          <a href="/cbd-wholesaler-belgium" class="text-primary hover:underline">Belgium</a>, 
+          <a href="/cbd-wholesaler-spain" class="text-primary hover:underline">Spain</a>, 
+          <a href="/cbd-wholesaler-luxembourg" class="text-primary hover:underline">Luxembourg</a>, 
+          <a href="/cbd-wholesaler-switzerland" class="text-primary hover:underline">Switzerland</a>, 
+          <a href="/cbd-wholesaler-malta" class="text-primary hover:underline">Malta</a>, 
+          Germany, Italy, Portugal, Finland, Netherlands, and the UK. 
+          <a href="/contact" class="text-primary hover:underline">Contact us</a> for bulk pricing.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

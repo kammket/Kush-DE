@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { supportedLocales, type Locale } from '../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+
+const translations: Record<string, any> = {
+  es: { title: 'Aviso Legal | Greens Farmhouse', desc: 'Aviso legal y condiciones de uso del sitio web Greens Farmhouse.', h1: 'Aviso Legal', company: 'Información de la Empresa', terms: 'Condiciones de Uso', termsDesc: 'Al acceder y utilizar este sitio web, acepta y se compromete a cumplir estas condiciones. Si no está de acuerdo, no utilice nuestro sitio web.', age: 'Restricción de Edad', ageDesc: 'Este sitio web y sus productos están destinados a personas mayores de 18 años.', pro: 'Uso Profesional', proDesc: 'Greens Farmhouse es un proveedor mayorista B2B. Nuestros productos están destinados a compradores profesionales y empresas del sector CBD.', productInfo: 'Información del Producto', productDesc: 'Todos los productos cumplen con las regulaciones de la Unión Europea. Nuestros productos CBD contienen menos del 0,3% de THC.', ip: 'Propiedad Intelectual', ipDesc: 'Todo el contenido de este sitio web es propiedad de Greens Farmhouse y está protegido por las leyes de propiedad intelectual.', liability: 'Limitación de Responsabilidad', liabilityDesc: 'Greens Farmhouse no será responsable de daños directos, indirectos o consecuentes derivados del uso de este sitio web.', law: 'Legislación Aplicable', lawDesc: 'Estas condiciones se rigen por la legislación francesa. Cualquier disputa se someterá a los tribunales franceses.', contactQ: 'Contacto', contactQDesc: 'Para cualquier pregunta sobre estos términos legales, contacte con nosotros.' },
+  fr: { title: 'Mentions Légales | Greens Farmhouse', desc: 'Mentions légales et conditions d\'utilisation du site Greens Farmhouse.', h1: 'Mentions Légales', company: 'Informations sur l\'Entreprise', terms: 'Conditions d\'Utilisation', termsDesc: 'En accédant et en utilisant ce site web, vous acceptez et vous engagez à respecter ces conditions.', age: 'Restriction d\'Âge', ageDesc: 'Ce site web et ses produits sont destinés aux personnes âgées de 18 ans et plus.', pro: 'Usage Professionnel', proDesc: 'Greens Farmhouse est un fournisseur grossiste B2B. Nos produits sont destinés aux acheteurs professionnels et entreprises du secteur CBD.', productInfo: 'Information Produit', productDesc: 'Tous les produits sont conformes aux réglementations de l\'Union européenne. Nos produits CBD contiennent moins de 0,3% de THC.', ip: 'Propriété Intellectuelle', ipDesc: 'Tout le contenu de ce site est la propriété de Greens Farmhouse et est protégé par les lois sur la propriété intellectuelle.', liability: 'Limitation de Responsabilité', liabilityDesc: 'Greens Farmhouse ne sera pas responsable des dommages directs, indirects ou consécutifs résultant de l\'utilisation de ce site.', law: 'Droit Applicable', lawDesc: 'Ces conditions sont régies par le droit français. Tout litige sera soumis aux tribunaux français.', contactQ: 'Contact', contactQDesc: 'Pour toute question concernant ces mentions légales, contactez-nous.' },
+  de: { title: 'Impressum | Greens Farmhouse', desc: 'Impressum und Nutzungsbedingungen der Website Greens Farmhouse.', h1: 'Impressum', company: 'Unternehmensinformationen', terms: 'Nutzungsbedingungen', termsDesc: 'Durch den Zugang und die Nutzung dieser Website akzeptieren Sie diese Bedingungen.', age: 'Altersbeschränkung', ageDesc: 'Diese Website und ihre Produkte sind für Personen ab 18 Jahren bestimmt.', pro: 'Professionelle Nutzung', proDesc: 'Greens Farmhouse ist ein B2B-Großhändler. Unsere Produkte sind für professionelle Käufer und Unternehmen der CBD-Branche bestimmt.', productInfo: 'Produktinformationen', productDesc: 'Alle Produkte entsprechen den EU-Vorschriften. Unsere CBD-Produkte enthalten weniger als 0,3% THC.', ip: 'Geistiges Eigentum', ipDesc: 'Alle Inhalte dieser Website sind Eigentum von Greens Farmhouse und durch Urheberrecht geschützt.', liability: 'Haftungsbeschränkung', liabilityDesc: 'Greens Farmhouse haftet nicht für direkte, indirekte oder Folgeschäden aus der Nutzung dieser Website.', law: 'Anwendbares Recht', lawDesc: 'Diese Bedingungen unterliegen französischem Recht. Streitigkeiten unterliegen der französischen Gerichtsbarkeit.', contactQ: 'Kontakt', contactQDesc: 'Bei Fragen zu diesen rechtlichen Bedingungen kontaktieren Sie uns.' },
+  nl: { title: 'Juridische Kennisgeving | Greens Farmhouse', desc: 'Juridische kennisgeving en gebruiksvoorwaarden van de website Greens Farmhouse.', h1: 'Juridische Kennisgeving', company: 'Bedrijfsinformatie', terms: 'Gebruiksvoorwaarden', termsDesc: 'Door deze website te bezoeken en te gebruiken, aanvaardt u deze voorwaarden.', age: 'Leeftijdsbeperking', ageDesc: 'Deze website en producten zijn bedoeld voor personen van 18 jaar en ouder.', pro: 'Professioneel Gebruik', proDesc: 'Greens Farmhouse is een B2B-groothandel. Onze producten zijn bestemd voor professionele kopers en CBD-bedrijven.', productInfo: 'Productinformatie', productDesc: 'Alle producten voldoen aan de EU-regelgeving. Onze CBD-producten bevatten minder dan 0,3% THC.', ip: 'Intellectueel Eigendom', ipDesc: 'Alle inhoud op deze website is eigendom van Greens Farmhouse en beschermd door auteursrecht.', liability: 'Aansprakelijkheidsbeperking', liabilityDesc: 'Greens Farmhouse is niet aansprakelijk voor directe, indirecte of gevolgschade uit het gebruik van deze website.', law: 'Toepasselijk Recht', lawDesc: 'Deze voorwaarden zijn onderworpen aan Frans recht en de exclusieve bevoegdheid van Franse rechtbanken.', contactQ: 'Contact', contactQDesc: 'Voor vragen over deze juridische voorwaarden, neem contact op.' },
+  it: { title: 'Note Legali | Greens Farmhouse', desc: 'Note legali e condizioni d\'uso del sito web Greens Farmhouse.', h1: 'Note Legali', company: 'Informazioni sull\'Azienda', terms: 'Condizioni d\'Uso', termsDesc: 'Accedendo e utilizzando questo sito web, accetti queste condizioni.', age: 'Restrizione d\'Età', ageDesc: 'Questo sito web e i suoi prodotti sono destinati a persone di età superiore ai 18 anni.', pro: 'Uso Professionale', proDesc: 'Greens Farmhouse è un fornitore all\'ingrosso B2B. I nostri prodotti sono destinati ad acquirenti professionali e aziende CBD.', productInfo: 'Informazioni Prodotto', productDesc: 'Tutti i prodotti sono conformi alle normative dell\'Unione Europea. I nostri prodotti CBD contengono meno dello 0,3% di THC.', ip: 'Proprietà Intellettuale', ipDesc: 'Tutto il contenuto di questo sito è proprietà di Greens Farmhouse e protetto dalle leggi sulla proprietà intellettuale.', liability: 'Limitazione di Responsabilità', liabilityDesc: 'Greens Farmhouse non sarà responsabile per danni diretti, indiretti o consequenziali derivanti dall\'uso di questo sito.', law: 'Legge Applicabile', lawDesc: 'Queste condizioni sono regolate dal diritto francese e soggette alla giurisdizione dei tribunali francesi.', contactQ: 'Contatti', contactQDesc: 'Per qualsiasi domanda su questi termini legali, contattateci.' },
+  fi: { title: 'Oikeudellinen Ilmoitus | Greens Farmhouse', desc: 'Greens Farmhousein verkkosivuston oikeudellinen ilmoitus ja käyttöehdot.', h1: 'Oikeudellinen Ilmoitus', company: 'Yrityksen Tiedot', terms: 'Käyttöehdot', termsDesc: 'Käyttämällä tätä verkkosivustoa hyväksyt nämä ehdot.', age: 'Ikäraja', ageDesc: 'Tämä verkkosivusto ja sen tuotteet on tarkoitettu vähintään 18-vuotiaille.', pro: 'Ammattimainen Käyttö', proDesc: 'Greens Farmhouse on B2B-tukkumyyjä. Tuotteemme on tarkoitettu ammattimaisille ostajille ja CBD-alan yrityksille.', productInfo: 'Tuotetiedot', productDesc: 'Kaikki tuotteet noudattavat EU:n säädöksiä. CBD-tuotteemme sisältävät alle 0,3% THC:tä.', ip: 'Immateriaalioikeudet', ipDesc: 'Kaikki tämän sivuston sisältö on Greens Farmhousein omaisuutta ja suojattu tekijänoikeuslailla.', liability: 'Vastuunrajoitus', liabilityDesc: 'Greens Farmhouse ei ole vastuussa suorista, epäsuorista tai välillisistä vahingoista.', law: 'Sovellettava Laki', lawDesc: 'Näitä ehtoja säätelee Ranskan laki. Riidat käsitellään ranskalaisissa tuomioistuimissa.', contactQ: 'Yhteystiedot', contactQDesc: 'Näitä oikeudellisia ehtoja koskevissa kysymyksissä ottakaa yhteyttä.' },
+  pt: { title: 'Aviso Legal | Greens Farmhouse', desc: 'Aviso legal e condições de utilização do site Greens Farmhouse.', h1: 'Aviso Legal', company: 'Informação da Empresa', terms: 'Condições de Utilização', termsDesc: 'Ao aceder e utilizar este website, aceita e compromete-se a cumprir estas condições.', age: 'Restrição de Idade', ageDesc: 'Este website e os seus produtos destinam-se a pessoas com 18 anos ou mais.', pro: 'Uso Profissional', proDesc: 'Greens Farmhouse é um fornecedor grossista B2B. Os nossos produtos destinam-se a compradores profissionais e empresas do setor CBD.', productInfo: 'Informação do Produto', productDesc: 'Todos os produtos cumprem a regulamentação da União Europeia. Os nossos produtos CBD contêm menos de 0,3% de THC.', ip: 'Propriedade Intelectual', ipDesc: 'Todo o conteúdo deste website é propriedade da Greens Farmhouse e protegido por leis de propriedade intelectual.', liability: 'Limitação de Responsabilidade', liabilityDesc: 'Greens Farmhouse não será responsável por danos diretos, indiretos ou consequentes do uso deste website.', law: 'Lei Aplicável', lawDesc: 'Estas condições regem-se pela lei francesa. Quaisquer litígios ficam sujeitos aos tribunais franceses.', contactQ: 'Contacto', contactQDesc: 'Para questões sobre estes termos legais, contacte-nos.' },
+};
+
+const tr = translations[locale] || {};
+
+const breadcrumbs = [
+  { name: t(locale, 'nav.home'), url: getLocalePath('/', locale) },
+  { name: t(locale, 'nav.legal') },
+];
+---
+
+<BaseLayout title={tr.title} description={tr.desc} locale={locale}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
+
+  <section class="py-10 md:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">{tr.h1}</h1>
+      <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+        <h2>{tr.company}</h2>
+        <p><strong>Greens Farmhouse</strong><br />Website: <a href="https://greensfarmhouse.com">https://greensfarmhouse.com</a><br />Email: <a href="mailto:contact@greensfarmhouse.com">contact@greensfarmhouse.com</a><br />Phone: <a href="tel:+447346989289">+44 7346 989289</a></p>
+        <h2>{tr.terms}</h2>
+        <p>{tr.termsDesc}</p>
+        <h3>{tr.age}</h3>
+        <p>{tr.ageDesc}</p>
+        <h3>{tr.pro}</h3>
+        <p>{tr.proDesc}</p>
+        <h2>{tr.productInfo}</h2>
+        <p>{tr.productDesc}</p>
+        <h2>{tr.ip}</h2>
+        <p>{tr.ipDesc}</p>
+        <h2>{tr.liability}</h2>
+        <p>{tr.liabilityDesc}</p>
+        <h2>{tr.law}</h2>
+        <p>{tr.lawDesc}</p>
+        <h2>{tr.contactQ}</h2>
+        <p>{tr.contactQDesc} <a href="mailto:contact@greensfarmhouse.com">contact@greensfarmhouse.com</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

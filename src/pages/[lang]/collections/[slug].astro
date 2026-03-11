@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { categories, getProductsByCategory, getCategoryBySlug } from '../../../data/products';
+import { supportedLocales, type Locale } from '../../../i18n/config';
+import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
+import { categoryTranslations } from '../../../data/translations/categories';
+
+export function getStaticPaths() {
+  const paths: any[] = [];
+  for (const lang of supportedLocales) {
+    for (const cat of categories) {
+      paths.push({ params: { lang, slug: cat.slug }, props: { lang } });
+    }
+  }
+  return paths;
+}
+
+const { lang } = Astro.props;
+const locale = lang as Locale;
+const { slug } = Astro.params;
+const category = getCategoryBySlug(slug!);
+if (!category) return Astro.redirect('/404');
+
+const lp = (path: string) => getLocalePath(path, locale);
+const catT = categoryTranslations[locale]?.[slug!] || categoryTranslations.en[slug!];
+const allProducts = getProductsByCategory(slug!);
+const inStockProducts = allProducts.filter(p => p.inStock);
+const outOfStockProducts = allProducts.filter(p => !p.inStock);
+
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": catT.name,
+  "description": catT.description,
+  "url": getAbsoluteLocaleUrl(locale, `/collections/${slug}`),
+  "inLanguage": locale,
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": allProducts.length,
+    "itemListElement": allProducts.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": product.name,
+        "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
+        "offers": { "@type": "Offer", "price": product.priceNumeric, "priceCurrency": "EUR", "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock" }
+      }
+    }))
+  }
+};
+
+const breadcrumbs = [
+  { name: t(locale, 'nav.home'), url: lp('/') },
+  { name: t(locale, 'nav.collections'), url: lp('/collections') },
+  { name: catT.name },
+];
+---
+
+<BaseLayout
+  title={catT.metaTitle}
+  description={catT.metaDescription}
+  locale={locale}
+  ogType="website"
+  canonicalURL={getAbsoluteLocaleUrl(locale, `/collections/${slug}`)}
+  jsonLd={collectionJsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <section class="bg-gradient-to-r from-primary to-primary-light text-white py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-3">{catT.name}</h1>
+      <p class="text-green-100 max-w-3xl leading-relaxed">{catT.description}</p>
+      <p class="mt-3 text-sm text-green-200">{allProducts.length} {t(locale, 'common.products')}</p>
+    </div>
+  </section>
+
+  <section class="py-10 md:py-14" aria-label={`${catT.name}`}>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
+        <p class="text-sm text-gray-600">{t(locale, 'common.showing')} <strong>{allProducts.length}</strong> {t(locale, 'common.products')}</p>
+        <div class="flex items-center gap-2">
+          <label for="sort" class="text-sm text-gray-600">{t(locale, 'common.sortBy')}</label>
+          <select id="sort" class="text-sm border border-gray-300 rounded-lg px-3 py-1.5 bg-white focus:ring-2 focus:ring-primary focus:border-primary">
+            <option value="featured">{t(locale, 'common.featured')}</option>
+            <option value="price-asc">{t(locale, 'common.priceLow')}</option>
+            <option value="price-desc">{t(locale, 'common.priceHigh')}</option>
+            <option value="name">{t(locale, 'common.nameAZ')}</option>
+          </select>
+        </div>
+      </div>
+
+      {inStockProducts.length > 0 && (
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+          {inStockProducts.map(product => <ProductCard product={product} locale={locale} />)}
+        </div>
+      )}
+
+      {outOfStockProducts.length > 0 && (
+        <div class="mt-12">
+          <h2 class="text-lg font-semibold text-gray-500 mb-4">{t(locale, 'common.unavailable')}</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 opacity-75">
+            {outOfStockProducts.map(product => <ProductCard product={product} locale={locale} />)}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="py-10 md:py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-4">{catT.name}</h2>
+      <div class="text-gray-600 leading-relaxed space-y-4">
+        <p>{catT.description}</p>
+        <h3 class="text-lg font-bold text-gray-900 pt-2">{t(locale, 'common.relatedResources')}</h3>
+        <ul class="list-disc pl-6 space-y-1 text-sm">
+          <li><a href={lp('/blog/how-to-start-cbd-business')} class="text-primary hover:underline">How to Start a CBD Business</a></li>
+          <li><a href={lp('/cbd-wholesaler-organic')} class="text-primary hover:underline">{t(locale, 'footer.organicCbd')}</a></li>
+          <li><a href={lp('/cbd-in-tobacco-shops')} class="text-primary hover:underline">{t(locale, 'footer.cbdTobacco')}</a></li>
+        </ul>
+        <h3 class="text-lg font-bold text-gray-900 pt-2">{t(locale, 'common.weDeliverEurope')}</h3>
+        <p class="text-sm">
+          <a href={lp('/cbd-wholesaler-belgium')} class="text-primary hover:underline">{t(locale, 'footer.cbdBelgium')}</a> · 
+          <a href={lp('/cbd-wholesaler-spain')} class="text-primary hover:underline">{t(locale, 'footer.cbdSpain')}</a> · 
+          <a href={lp('/cbd-wholesaler-switzerland')} class="text-primary hover:underline">{t(locale, 'footer.cbdSwitzerland')}</a> · 
+          <a href={lp('/cbd-wholesaler-malta')} class="text-primary hover:underline">{t(locale, 'footer.cbdMalta')}</a> · 
+          <a href={lp('/contact')} class="text-primary hover:underline">{t(locale, 'common.contactUs')}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
