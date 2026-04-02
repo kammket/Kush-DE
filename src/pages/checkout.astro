@@ -293,12 +293,60 @@ const breadcrumbs = [
 
     // Form submission
     const form = document.getElementById('checkout-form') as HTMLFormElement;
-    form?.addEventListener('submit', (e) => {
+    form?.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const btn = document.getElementById('place-order-btn') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'PROCESSING...';
 
       const emailInput = document.getElementById('email') as HTMLInputElement;
       const confirmEmail = document.getElementById('confirm-email');
       if (confirmEmail) confirmEmail.textContent = emailInput?.value || '';
+
+      // Build order data
+      const orderData = {
+        type: 'order',
+        firstName: (document.getElementById('first-name') as HTMLInputElement)?.value,
+        lastName: (document.getElementById('last-name') as HTMLInputElement)?.value,
+        email: emailInput?.value,
+        phone: (document.getElementById('phone') as HTMLInputElement)?.value,
+        company: (document.getElementById('company') as HTMLInputElement)?.value,
+        address: (document.getElementById('address') as HTMLInputElement)?.value,
+        address2: (document.getElementById('address2') as HTMLInputElement)?.value,
+        city: (document.getElementById('city') as HTMLInputElement)?.value,
+        postal: (document.getElementById('postal') as HTMLInputElement)?.value,
+        country: (document.getElementById('country') as HTMLSelectElement)?.value,
+        notes: (document.getElementById('notes') as HTMLTextAreaElement)?.value,
+        items: cart.map(item => ({ name: item.name, variant: item.variantLabel, quantity: item.quantity, price: item.price })),
+        subtotal,
+        shipping: freeShipping ? 'FREE' : '€9.90',
+        total,
+      };
+
+      try {
+        const res = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(orderData),
+        });
+
+        if (!res.ok) {
+          let errorMsg = 'Failed to send order email. Please try again.';
+          try {
+            const errorData = await res.json();
+            if (errorData?.error) errorMsg = errorData.error;
+          } catch {
+            // ignore JSON parse errors
+          }
+          throw new Error(errorMsg);
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'PLACE ORDER';
+        alert(err instanceof Error ? err.message : 'Failed to send order email. Please try again.');
+        return;
+      }
 
       // Clear cart & show confirmation
       clearCart();
