@@ -22,7 +22,7 @@ const {
   description,
   locale = defaultLocale as Locale,
   canonicalURL = Astro.url.href,
-  ogImage = '/images/og-default.jpg',
+  ogImage = 'https://greensfarmhouse.com/images/og-default.jpg',
   ogType = 'website',
   jsonLd,
   noindex = false,
@@ -72,7 +72,7 @@ const lp = (path: string) => getLocalePath(path, locale);
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={ogImage} />
+  <meta property="og:image" content={ogImage.startsWith('http') ? ogImage : `https://greensfarmhouse.com${ogImage}`} />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:locale" content={localeOgLocale[locale]} />
   {allLocales.filter(l => l !== locale).map(l => (
@@ -84,7 +84,7 @@ const lp = (path: string) => getLocalePath(path, locale);
   <meta name="twitter:url" content={canonicalURL} />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `https://greensfarmhouse.com${ogImage}`} />
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -93,7 +93,9 @@ const lp = (path: string) => getLocalePath(path, locale);
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
   
   <!-- JSON-LD Structured Data -->
   {jsonLd && (

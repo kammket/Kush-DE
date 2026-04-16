@@ -110,8 +110,11 @@ const breadcrumbs = [
               <img
                 src={product.image}
                 alt={product.name}
+                width="600"
+                height="600"
                 class="w-full h-full object-cover"
                 loading="eager"
+                fetchpriority="high"
                 decoding="async"
                 itemprop="image"
               />
