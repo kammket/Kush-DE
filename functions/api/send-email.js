@@ -1,6 +1,3 @@
-const FROM_EMAIL = "Greens Farmhouse <contact@greensfarmhouse.com>";
-const OWNER_EMAIL = "contact@greensfarmhouse.com";
-
 async function sendEmail(apiKey, { from, to, subject, html, replyTo }) {
   const payload = { from, to: Array.isArray(to) ? to : [to], subject, html };
   if (replyTo) payload.reply_to = replyTo;
@@ -23,7 +20,10 @@ async function sendEmail(apiKey, { from, to, subject, html, replyTo }) {
 }
 
 export async function onRequestPost(context) {
-  const RESEND_API_KEY = context.env.RESEND_API_KEY;
+  const env = context.env;
+  const RESEND_API_KEY = env.RESEND_API_KEY || env[" RESEND_API_KEY"];
+  const FROM_EMAIL = env.RESEND_FROM_EMAIL || "Greens Farmhouse <contact@greensfarmhouse.com>";
+  const OWNER_EMAIL = env.RESEND_TO_EMAIL || "contact@greensfarmhouse.com";
 
   if (!RESEND_API_KEY) {
     return new Response(JSON.stringify({ error: "Email service not configured" }), {
