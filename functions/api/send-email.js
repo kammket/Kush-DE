@@ -21,7 +21,12 @@ async function sendEmail(apiKey, { from, to, subject, html, replyTo }) {
 
 export async function onRequestPost(context) {
   const env = context.env;
-  const RESEND_API_KEY = env.RESEND_API_KEY || env[" RESEND_API_KEY"];
+  // Find RESEND_API_KEY even if whitespace was accidentally added to the name
+  let RESEND_API_KEY = env.RESEND_API_KEY;
+  if (!RESEND_API_KEY) {
+    const match = Object.keys(env).find(k => k.trim() === "RESEND_API_KEY");
+    if (match) RESEND_API_KEY = env[match];
+  }
   const FROM_EMAIL = env.RESEND_FROM_EMAIL || "Greens Farmhouse <contact@greensfarmhouse.com>";
   const OWNER_EMAIL = env.RESEND_TO_EMAIL || "contact@greensfarmhouse.com";
 
