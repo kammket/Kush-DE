@@ -168,3 +168,51 @@ const jsonLd = {
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  function initContactForm() {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg> Sending...';
+
+      const data = {
+        type: 'contact',
+        firstName: (document.getElementById('first-name') as HTMLInputElement)?.value,
+        lastName: (document.getElementById('last-name') as HTMLInputElement)?.value,
+        email: (document.getElementById('email') as HTMLInputElement)?.value,
+        phone: (document.getElementById('phone') as HTMLInputElement)?.value,
+        company: (document.getElementById('company') as HTMLInputElement)?.value,
+        contactSubject: (document.getElementById('subject') as HTMLSelectElement)?.value,
+        message: (document.getElementById('message') as HTMLTextAreaElement)?.value,
+      };
+
+      try {
+        const res = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          form.innerHTML = '<div class="text-center py-12"><div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div><h3 class="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3><p class="text-gray-600">Thank you for contacting us. We\'ll get back to you within 24 hours.</p></div>';
+        } else {
+          throw new Error('Failed');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+        alert('Sorry, there was an error sending your message. Please try again or email us directly at kushyguy5@gmail.com');
+      }
+    });
+  }
+
+  initContactForm();
+  document.addEventListener('astro:after-swap', initContactForm);
+</script>
