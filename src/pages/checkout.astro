@@ -132,6 +132,9 @@ const breadcrumbs = [
                 <textarea id="notes" rows="3" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Special instructions for your order..."></textarea>
               </div>
 
+              <!-- Error banner -->
+              <div id="checkout-error" class="hidden bg-red-50 border border-red-200 text-red-700 text-sm rounded-xl p-4"></div>
+
               <!-- Submit -->
               <button type="submit" id="place-order-btn" class="w-full py-4 bg-primary text-white text-lg font-bold rounded-xl hover:bg-primary-dark transition-colors shadow-lg focus:outline-none focus:ring-4 focus:ring-primary/30">
                 PLACE ORDER
@@ -299,6 +302,7 @@ const breadcrumbs = [
       const btn = document.getElementById('place-order-btn') as HTMLButtonElement;
       btn.disabled = true;
       btn.textContent = 'PROCESSING...';
+      document.getElementById('checkout-error')?.classList.add('hidden');
 
       const emailInput = document.getElementById('email') as HTMLInputElement;
       const confirmEmail = document.getElementById('confirm-email');
@@ -344,7 +348,12 @@ const breadcrumbs = [
       } catch (err) {
         btn.disabled = false;
         btn.textContent = 'PLACE ORDER';
-        alert(err instanceof Error ? err.message : 'Failed to send order email. Please try again.');
+        const errorEl = document.getElementById('checkout-error');
+        if (errorEl) {
+          errorEl.textContent = err instanceof Error ? err.message : 'Something went wrong. Please try again or contact us via WhatsApp.';
+          errorEl.classList.remove('hidden');
+          errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
         return;
       }
 
