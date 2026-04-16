@@ -78,7 +78,7 @@ const breadcrumbs = [
         <div class="relative">
           <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-green-100 border border-gray-200">
             {product.image.startsWith('http') ? (
-              <img src={product.image} alt={product.name} class="w-full h-full object-cover" loading="eager" decoding="async" itemprop="image" />
+              <img src={product.image} alt={product.name} width="600" height="600" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" itemprop="image" />
             ) : (
               <div class="w-full h-full flex items-center justify-center">
                 <div class="text-center p-8">
