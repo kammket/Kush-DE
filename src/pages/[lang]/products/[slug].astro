@@ -6,6 +6,7 @@ import { products, getProductBySlug, getProductsByCategory } from '../../../data
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 import { categoryTranslations } from '../../../data/translations/categories';
+import { getProductDescription } from '../../../data/translations/products';
 
 export function getStaticPaths() {
   const paths: any[] = [];
@@ -25,6 +26,7 @@ if (!product) return Astro.redirect('/404');
 
 const lp = (path: string) => getLocalePath(path, locale);
 const catT = categoryTranslations[locale]?.[product.categorySlug] || categoryTranslations.en[product.categorySlug];
+const description = getProductDescription(locale, product.slug) ?? product.description;
 
 const relatedProducts = getProductsByCategory(product.categorySlug)
   .filter(p => p.id !== product.id && p.inStock)
@@ -34,7 +36,7 @@ const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": product.name,
-  "description": product.description,
+  "description": description,
   "image": product.image.startsWith('http') ? product.image : `https://greensfarmhouse.com${product.image}`,
   "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
   "brand": { "@type": "Brand", "name": product.supplier },
@@ -69,7 +71,7 @@ const breadcrumbs = [
 
 <BaseLayout
   title={`${product.name} | ${catT?.name || product.category} | Greens Farmhouse`}
-  description={product.description}
+  description={description}
   locale={locale}
   canonicalURL={getAbsoluteLocaleUrl(locale, `/products/${product.slug}`)}
   ogType="product"
@@ -85,7 +87,7 @@ const breadcrumbs = [
         <!-- Product Image -->
         <div class="relative">
           <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-green-100 border border-gray-200">
-            {product.image.startsWith('http') ? (
+            {product.image ? (
               <img src={product.image} alt={product.name} width="600" height="600" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" itemprop="image" />
             ) : (
               <div class="w-full h-full flex items-center justify-center">
@@ -164,7 +166,7 @@ const breadcrumbs = [
 
           <div class="mb-6" itemprop="description">
             <h2 class="font-semibold text-gray-900 mb-2">{t(locale, 'product.description')}</h2>
-            <p class="text-gray-600 leading-relaxed">{product.description}</p>
+            <p class="text-gray-600 leading-relaxed">{description}</p>
           </div>
 
           <div class="space-y-3">
