@@ -40,7 +40,16 @@ const productJsonLd = {
   "brand": { "@type": "Brand", "name": product.supplier },
   "category": catT?.name || product.category,
   "inLanguage": locale,
-  "offers": {
+  "offers": (product.variants && product.variants.length > 1) ? {
+    "@type": "AggregateOffer",
+    "lowPrice": Math.min(...product.variants.map(v => v.price)),
+    "highPrice": Math.max(...product.variants.map(v => v.price)),
+    "offerCount": product.variants.length,
+    "priceCurrency": "EUR",
+    "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+    "seller": { "@type": "Organization", "name": "Greens Farmhouse" },
+    "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
+  } : {
     "@type": "Offer",
     "price": product.priceNumeric,
     "priceCurrency": "EUR",
@@ -48,8 +57,7 @@ const productJsonLd = {
     "seller": { "@type": "Organization", "name": "Greens Farmhouse" },
     "priceValidUntil": "2026-12-31",
     "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
-  },
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "127" }
+  }
 };
 
 const breadcrumbs = [

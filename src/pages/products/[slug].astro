@@ -18,6 +18,38 @@ const relatedProducts = getProductsByCategory(product.categorySlug)
   .filter(p => p.id !== product.id && p.inStock)
   .slice(0, 4);
 
+const variantPrices = (product.variants ?? []).map(v => v.price);
+const availability = product.inStock
+  ? "https://schema.org/InStock"
+  : "https://schema.org/OutOfStock";
+const shippingDetails = {
+  "@type": "OfferShippingDetails",
+  "shippingRate": {
+    "@type": "MonetaryAmount",
+    "value": "0",
+    "currency": "EUR"
+  },
+  "shippingDestination": {
+    "@type": "DefinedRegion",
+    "addressCountry": "FR"
+  },
+  "deliveryTime": {
+    "@type": "ShippingDeliveryTime",
+    "handlingTime": {
+      "@type": "QuantitativeValue",
+      "minValue": 0,
+      "maxValue": 1,
+      "unitCode": "DAY"
+    },
+    "transitTime": {
+      "@type": "QuantitativeValue",
+      "minValue": 1,
+      "maxValue": 3,
+      "unitCode": "DAY"
+    }
+  }
+};
+
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -30,53 +62,30 @@ const productJsonLd = {
     "name": product.supplier
   },
   "category": product.category,
-  "offers": {
+  "offers": variantPrices.length > 1 ? {
+    "@type": "AggregateOffer",
+    "lowPrice": Math.min(...variantPrices),
+    "highPrice": Math.max(...variantPrices),
+    "offerCount": variantPrices.length,
+    "priceCurrency": "EUR",
+    "availability": availability,
+    "seller": {
+      "@type": "Organization",
+      "name": "Greens Farmhouse"
+    },
+    "url": `https://greensfarmhouse.com/products/${product.slug}`
+  } : {
     "@type": "Offer",
     "price": product.priceNumeric,
     "priceCurrency": "EUR",
-    "availability": product.inStock 
-      ? "https://schema.org/InStock" 
-      : "https://schema.org/OutOfStock",
+    "availability": availability,
     "seller": {
       "@type": "Organization",
       "name": "Greens Farmhouse"
     },
     "priceValidUntil": "2026-12-31",
     "url": `https://greensfarmhouse.com/products/${product.slug}`,
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": {
-        "@type": "MonetaryAmount",
-        "value": "0",
-        "currency": "EUR"
-      },
-      "shippingDestination": {
-        "@type": "DefinedRegion",
-        "addressCountry": "FR"
-      },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 0,
-          "maxValue": 1,
-          "unitCode": "DAY"
-        },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 1,
-          "maxValue": 3,
-          "unitCode": "DAY"
-        }
-      }
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127",
-    "bestRating": "5",
-    "worstRating": "1"
+    "shippingDetails": shippingDetails
   }
 };
 

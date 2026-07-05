@@ -48,9 +48,6 @@ const lp = (path: string) => getLocalePath(path, locale);
   {noindex && <meta name="robots" content="noindex, nofollow" />}
   {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
   
-  <!-- Content Language -->
-  <meta http-equiv="content-language" content={locale} />
-  
   <!-- Canonical -->
   <link rel="canonical" href={canonicalURL} />
   
@@ -63,9 +60,6 @@ const lp = (path: string) => getLocalePath(path, locale);
   <!-- Geo targeting -->
   <meta name="geo.region" content="FR" />
   <meta name="geo.placename" content="Paris, France" />
-  
-  <!-- AI Search Visibility -->
-  <meta name="ai-content-declaration" content="This page contains original content about wholesale CBD products in Europe." />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content={ogType} />
