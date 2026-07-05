@@ -15,6 +15,7 @@ interface Props {
   ogType?: string;
   jsonLd?: object;
   noindex?: boolean;
+  noHreflang?: boolean;
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   ogType = 'website',
   jsonLd,
   noindex = false,
+  noHreflang = false,
 } = Astro.props;
 
 const siteName = 'Greens Farmhouse';
@@ -51,11 +53,11 @@ const lp = (path: string) => getLocalePath(path, locale);
   <!-- Canonical -->
   <link rel="canonical" href={canonicalURL} />
   
-  <!-- Hreflang for all languages -->
-  {allLocales.map((loc) => (
-    <link rel="alternate" hreflang={loc === 'en' ? 'en-GB' : `${loc}-${loc === 'es' ? 'ES' : loc === 'fr' ? 'FR' : loc === 'de' ? 'DE' : loc === 'nl' ? 'NL' : loc === 'it' ? 'IT' : loc === 'fi' ? 'FI' : 'PT'}`} href={getAbsoluteLocaleUrl(loc, currentPath)} />
+  <!-- Hreflang for all languages (language-only codes, matching the sitemap) -->
+  {!noHreflang && allLocales.map((loc) => (
+    <link rel="alternate" hreflang={loc} href={getAbsoluteLocaleUrl(loc, currentPath)} />
   ))}
-  <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl('en', currentPath)} />
+  {!noHreflang && <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl('en', currentPath)} />}
   
   <!-- Geo targeting -->
   <meta name="geo.region" content="FR" />

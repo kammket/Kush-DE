@@ -21,7 +21,9 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/cart') &&
         !page.includes('/checkout') &&
-        !page.includes('/404'),
+        !page.includes('/404') &&
+        // localized blog pages canonical to the English original until translated
+        !/\/(es|fr|de|nl|it|fi|pt)\/blog(\/|$)/.test(page),
       i18n: {
         defaultLocale: 'en',
         locales: {
