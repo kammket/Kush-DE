@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Legal Cannabis in Europe" },
+];
+
+const thcGummies = getProductsByCategory('thc-gummies').filter(p => p.inStock).slice(0, 4);
+const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent('Hello! I have a question about your legal THC and CBD products.')}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Legal Cannabis in Europe: What You Can Actually Buy in 2026",
+  "description": "The complete guide to legal cannabis products in Europe — EU-compliant THC edibles, hemp flowers under 0.3% THC, and high-CBD concentrates. Lab-tested and shipped across Europe.",
+  "url": "https://greensfarmhouse.com/legal-cannabis-europe",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com"
+  },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06"
+};
+
+const faqItems = [
+  {
+    question: "Is cannabis legal in Europe?",
+    answer: "It depends on the product. Hemp-derived cannabis products are legal across the EU when their THC content stays below the legal threshold — 0.3% in France and most member states. That covers CBD flowers, resins, oils and edibles. High-THC cannabis (marijuana) remains a controlled substance in every EU country for commercial sale; no web shop can legally sell it. Everything we supply is within the legal limits, lab-tested, and shipped with compliance documentation."
+  },
+  {
+    question: "Can I legally buy THC products online in Europe?",
+    answer: "Yes — as long as the THC content is below the legal limit. Our THC gummies and edibles contain less than 0.20% THC, which makes them compliant with European legislation while still delivering precisely dosed effects (10mg, 25mg or 50mg per piece). They ship legally across the EU with lab certificates."
+  },
+  {
+    question: "What is the strongest legal cannabis product I can buy?",
+    answer: "For edibles: our 50mg THC gummies are the strongest legal option — precisely dosed and under the 0.20% THC threshold. For concentrates: 85% CBD crumbles, MoonRock and Ice Rock deliver the most intense legal cannabinoid experience. For flowers: indoor-grown strains rich in CBD, CBG and terpenes with THC under 0.3%. All are legal to buy, possess, and resell in most EU countries."
+  },
+  {
+    question: "Do you sell high-THC marijuana?",
+    answer: "No. Selling high-THC cannabis is illegal throughout the EU, and any shop offering it online is operating outside the law — a serious risk for buyers as well as sellers. We built our business on the legal side of the market: the strongest products allowed under EU law, verified by independent laboratory testing, with a certificate of analysis available for every batch."
+  },
+  {
+    question: "Will legal THC products show up on a drug test?",
+    answer: "They can. Even trace THC amounts below legal limits may accumulate and trigger a positive result on sensitive drug tests, especially with regular use. If you are subject to testing, choose our 0% THC product line — resins and isolates with guaranteed zero THC content, confirmed by lab certificates."
+  },
+  {
+    question: "How do I order or ask questions?",
+    answer: "The fastest way is WhatsApp — message us at +44 7346 989289 and you'll chat directly with the team that prepares your order. We answer questions about products, lab certificates, wholesale pricing and shipping, usually within minutes during business hours. You can also order directly through the website with bank transfer payment."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Legal Cannabis in Europe 2026 | Buy Legal THC & CBD Products Online"
+  description="What cannabis products are actually legal in Europe? EU-compliant THC edibles (<0.20%), hemp flowers under 0.3% THC, and high-CBD concentrates. Lab-tested, shipped in 24h. Ask us on WhatsApp."
+  canonicalURL="https://greensfarmhouse.com/legal-cannabis-europe"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-emerald-50 via-white to-amber-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">⚖️ 100% EU-Compliant</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        Legal Cannabis in Europe — <span class="text-primary">What You Can Actually Buy in 2026</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Searching for legal weed or legal THC? Here's the honest answer: high-THC marijuana can't be sold legally anywhere in the EU —
+        but the legal cannabis market has never been stronger. Precisely dosed THC edibles, cannabinoid-rich hemp flowers,
+        and concentrates up to 99.8% purity — all lab-tested, all compliant, all delivered across Europe within 24 hours.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/thc-gummies" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Shop Legal THC Edibles
+        </a>
+        <a href={waUrl} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#1eb857] transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Ask on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Legal -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">What Cannabis Products Are Legal in the EU?</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">European law draws the line at THC content, not at cannabis itself. Everything below the threshold is legal to buy, sell and ship.</p>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🍬</span>
+          <h3 class="font-bold text-lg mb-2">THC Edibles — Legal</h3>
+          <p class="text-sm text-gray-600">Gummies, candies and popcorn with &lt;0.20% THC by weight, dosed at 10–50mg per piece. Compliant with EU legislation and precisely repeatable.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🌿</span>
+          <h3 class="font-bold text-lg mb-2">Hemp Flowers — Legal</h3>
+          <p class="text-sm text-gray-600">Cannabis flowers from certified hemp varieties with THC under 0.3%. Rich in CBD, CBG and terpenes — the full flower experience within the law.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💎</span>
+          <h3 class="font-bold text-lg mb-2">Concentrates — Legal</h3>
+          <p class="text-sm text-gray-600">CBD crumbles at 85%, MoonRock, Ice Rock, distillates and 99.8% isolates. The most intense legal cannabinoid products available.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-red-200 bg-red-50/50">
+          <span class="text-4xl block mb-4">🚫</span>
+          <h3 class="font-bold text-lg mb-2">High-THC Marijuana — Not Legal</h3>
+          <p class="text-sm text-gray-600">No EU country allows commercial online sale of high-THC cannabis. Any site offering it operates illegally — a real risk for buyers. We don't sell it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THC Gummies -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Legal THC Gummies &amp; Edibles</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">The strongest edibles allowed under EU law. Precisely dosed from 10mg to 50mg THC per piece, always under the 0.20% threshold — with flavors developed for adult consumers.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {thcGummies.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/collections/thc-gummies" class="text-primary font-semibold hover:underline">View all Legal THC Gummies →</a>
+    </div>
+  </section>
+
+  <!-- CBD Flowers -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Legal Cannabis Flowers (Hemp, &lt;0.3% THC)</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Real cannabis flowers — grown in greenhouses and indoor facilities from certified hemp varieties. OG Kush, Gelato, Gorilla Glue and more, lab-tested under the legal THC limit.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {flowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">View all CBD Flowers →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Legal Cannabis in Europe — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Questions About Legal THC? Talk to Us Directly.</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Message us on WhatsApp — you'll chat with the same team that prepares your order. Product advice, lab certificates, wholesale pricing, shipping — usually answered within minutes during business hours.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href={waUrl} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#1eb857] transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse All Products</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
