@@ -123,6 +123,7 @@ const searchNoResults: Record<string, string> = {
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Greens Farmhouse Blog" href="/rss.xml" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   
   <!-- Self-hosted Inter font -->
@@ -189,13 +190,12 @@ const searchNoResults: Record<string, string> = {
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <a href={lp('/')} class="flex items-center gap-2 text-primary font-bold text-xl md:text-2xl" aria-label="Greens Farmhouse - Home">
-          <svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a href={lp('/')} class="flex items-center gap-2 text-primary font-bold text-xl md:text-2xl">
+          <svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="20" cy="20" r="20" fill="currentColor"/>
             <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="14" font-weight="bold" dy=".1em">CBD</text>
           </svg>
-          <span class="hidden sm:inline">Greens Farmhouse</span>
-          <span class="sm:hidden">Greens Farmhouse</span>
+          <span>Greens Farmhouse</span>
         </a>
         
         <!-- Desktop Navigation -->
@@ -495,7 +495,7 @@ const searchNoResults: Record<string, string> = {
       </div>
       
       <!-- Bottom -->
-      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
         <p>&copy; {new Date().getFullYear()} Greens Farmhouse. {t(locale, 'footer.rights')}</p>
       </div>
     </div>

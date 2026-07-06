@@ -135,7 +135,7 @@ const breadcrumbs = [
   <section class="py-10 md:py-14 bg-gray-50" aria-labelledby="cat-info">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 id="cat-info" class="text-2xl font-bold mb-4">{category.name}</h2>
-      <div class="text-gray-600 leading-relaxed space-y-4 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-gray-900 [&_h3]:pt-2 [&_a]:text-primary [&_a]:hover:underline">
+      <div class="text-gray-600 leading-relaxed space-y-4 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-gray-900 [&_h3]:pt-2 [&_a]:text-primary [&_a]:underline [&_a]:hover:no-underline">
         <p>{category.description}</p>
         {seoContent && <div class="space-y-4" set:html={seoContent} />}
         <p>
@@ -147,22 +147,22 @@ const breadcrumbs = [
         </p>
         <h3 class="text-lg font-bold text-gray-900 pt-2">Related Resources</h3>
         <ul class="list-disc pl-6 space-y-1 text-sm">
-          <li><a href="/blog/how-to-start-cbd-business" class="text-primary hover:underline">How to Start a CBD Business in Europe</a> — complete guide for new retailers</li>
-          <li><a href="/blog/best-selling-cbd-products" class="text-primary hover:underline">Best-Selling CBD Products in 2026</a> — discover what's trending</li>
-          <li><a href="/blog/choose-right-cbd-flower-supplier" class="text-primary hover:underline">How to Choose the Right CBD Supplier</a> — 7 key criteria</li>
-          <li><a href="/cbd-in-tobacco-shops" class="text-primary hover:underline">CBD in Tobacco Shops</a> — guide for tobacconists</li>
-          <li><a href="/cbd-wholesaler-organic" class="text-primary hover:underline">Organic CBD Wholesale</a> — premium organic range</li>
+          <li><a href="/blog/how-to-start-cbd-business" class="text-primary underline hover:no-underline">How to Start a CBD Business in Europe</a> — complete guide for new retailers</li>
+          <li><a href="/blog/best-selling-cbd-products" class="text-primary underline hover:no-underline">Best-Selling CBD Products in 2026</a> — discover what's trending</li>
+          <li><a href="/blog/choose-right-cbd-flower-supplier" class="text-primary underline hover:no-underline">How to Choose the Right CBD Supplier</a> — 7 key criteria</li>
+          <li><a href="/cbd-in-tobacco-shops" class="text-primary underline hover:no-underline">CBD in Tobacco Shops</a> — guide for tobacconists</li>
+          <li><a href="/cbd-wholesaler-organic" class="text-primary underline hover:no-underline">Organic CBD Wholesale</a> — premium organic range</li>
         </ul>
         <h3 class="text-lg font-bold text-gray-900 pt-2">We Deliver Across Europe</h3>
         <p class="text-sm">
           Fast wholesale delivery to 
-          <a href="/cbd-wholesaler-belgium" class="text-primary hover:underline">Belgium</a>, 
-          <a href="/cbd-wholesaler-spain" class="text-primary hover:underline">Spain</a>, 
-          <a href="/cbd-wholesaler-luxembourg" class="text-primary hover:underline">Luxembourg</a>, 
-          <a href="/cbd-wholesaler-switzerland" class="text-primary hover:underline">Switzerland</a>, 
-          <a href="/cbd-wholesaler-malta" class="text-primary hover:underline">Malta</a>, 
+          <a href="/cbd-wholesaler-belgium" class="text-primary underline hover:no-underline">Belgium</a>, 
+          <a href="/cbd-wholesaler-spain" class="text-primary underline hover:no-underline">Spain</a>, 
+          <a href="/cbd-wholesaler-luxembourg" class="text-primary underline hover:no-underline">Luxembourg</a>, 
+          <a href="/cbd-wholesaler-switzerland" class="text-primary underline hover:no-underline">Switzerland</a>, 
+          <a href="/cbd-wholesaler-malta" class="text-primary underline hover:no-underline">Malta</a>, 
           Germany, Italy, Portugal, Finland, Netherlands, and the UK.
-          <a href="/contact" class="text-primary hover:underline">Contact us</a> for bulk pricing.
+          <a href="/contact" class="text-primary underline hover:no-underline">Contact us</a> for bulk pricing.
         </p>
         {slug === 'cbd-flowers' && (
           <>
@@ -172,7 +172,7 @@ const breadcrumbs = [
               {strainGuides.map((s, i) => (
                 <>
                   {i > 0 && ' · '}
-                  <a href={`/strains/${s.slug}`} class="text-primary hover:underline">{s.name}</a>
+                  <a href={`/strains/${s.slug}`} class="text-primary underline hover:no-underline">{s.name}</a>
                 </>
               ))}
               {' — or see the '}

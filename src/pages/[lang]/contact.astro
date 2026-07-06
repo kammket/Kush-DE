@@ -156,7 +156,7 @@ const jsonLd = {
             </div>
             <div class="flex items-start gap-2">
               <input type="checkbox" id="consent" name="consent" required class="mt-1 rounded border-gray-300 text-primary focus:ring-primary" />
-              <label for="consent" class="text-xs text-gray-600">{tr.consent} <a href={lp('/privacy')} class="text-primary hover:underline">{tr.privacyPolicy}</a>. *</label>
+              <label for="consent" class="text-xs text-gray-600">{tr.consent} <a href={lp('/privacy')} class="text-primary underline hover:no-underline">{tr.privacyPolicy}</a>. *</label>
             </div>
             <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition">
               {tr.sendMessage}

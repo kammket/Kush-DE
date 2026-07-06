@@ -13,7 +13,7 @@ const productUrl = getLocalePath(`/products/${product.slug}`, locale);
 ---
 
 <article class="product-card group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
-  <a href={productUrl} class="block" aria-label={`View ${product.name} - ${product.price}`}>
+  <a href={productUrl} class="block">
     <!-- Image Container -->
     <div class="relative aspect-square overflow-hidden bg-gray-100">
       {product.image ? (
@@ -63,7 +63,7 @@ const productUrl = getLocalePath(`/products/${product.slug}`, locale);
         <div class="flex text-yellow-400 text-xs" aria-label="Rating: 4.8 out of 5 stars">
           {'★★★★★'}
         </div>
-        <span class="text-[10px] text-gray-400">(4.8)</span>
+        <span class="text-[10px] text-gray-500">(4.8)</span>
       </div>
       
       <div class="mt-2 flex items-center gap-2">
@@ -74,7 +74,7 @@ const productUrl = getLocalePath(`/products/${product.slug}`, locale);
       </div>
       
       {product.variants && product.variants.length > 1 && (
-        <p class="mt-1 text-xs text-accent font-medium">
+        <p class="mt-1 text-xs text-primary font-semibold">
           {product.variants.length} price tiers — up to €{product.variants[product.variants.length - 1].price.toFixed(2)}
         </p>
       )}
@@ -91,7 +91,7 @@ const productUrl = getLocalePath(`/products/${product.slug}`, locale);
       <button 
         type="button"
         class="add-to-cart-card w-full py-2.5 bg-primary text-white rounded-lg font-medium text-sm hover:bg-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-        aria-label={`Add ${product.name} to cart`}
+        aria-label={`Add to cart: ${product.name}`}
         data-slug={product.slug}
         data-name={product.name}
         data-image={product.image}

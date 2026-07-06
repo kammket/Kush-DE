@@ -204,7 +204,7 @@ const breadcrumbs = [
               {product.cbdContent && (<><dt class="text-gray-500">{t(locale, 'product.cbdContent')}</dt><dd class="font-medium text-gray-900">{product.cbdContent}</dd></>)}
               {product.thcContent && (<><dt class="text-gray-500">{t(locale, 'product.thcContent')}</dt><dd class="font-medium text-gray-900">{product.thcContent}</dd></>)}
               <dt class="text-gray-500">{t(locale, 'common.categories')}</dt>
-              <dd class="font-medium text-gray-900"><a href={lp(`/collections/${product.categorySlug}`)} class="text-primary hover:underline">{catT?.name || product.category}</a></dd>
+              <dd class="font-medium text-gray-900"><a href={lp(`/collections/${product.categorySlug}`)} class="text-primary underline hover:no-underline">{catT?.name || product.category}</a></dd>
               <dt class="text-gray-500">{t(locale, 'product.supplier')}</dt>
               <dd class="font-medium text-gray-900">{product.supplier}</dd>
               <dt class="text-gray-500">{t(locale, 'common.inStock')}</dt>
@@ -224,7 +224,7 @@ const breadcrumbs = [
               {relatedPages.map((rp, i) => (
                 <>
                   {i > 0 && <span class="mx-1 text-gray-300">·</span>}
-                  <a href={lp(rp.path)} class="text-primary hover:underline">{t(locale, rp.tKey)}</a>
+                  <a href={lp(rp.path)} class="text-primary underline hover:no-underline">{t(locale, rp.tKey)}</a>
                 </>
               ))}
             </div>

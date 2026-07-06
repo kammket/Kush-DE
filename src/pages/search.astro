@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { products } from '../data/products';
+
+const searchIndex = products.map(p => ({ n: p.name, s: p.slug, c: p.category, i: p.image, p: p.price }));
+---
+
+<BaseLayout
+  title="Search CBD Products | Greens Farmhouse"
+  description="Search our full catalog of wholesale CBD flowers, resins, oils, and gummies."
+  noindex={true}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+    <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Search Products</h1>
+    <div class="relative mb-8">
+      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input
+        id="search-page-input"
+        type="search"
+        placeholder="Search by name, strain, or category…"
+        autocomplete="off"
+        class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+      />
+    </div>
+    <p id="search-page-count" class="text-sm text-gray-500 mb-4"></p>
+    <div id="search-page-results" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+    <p id="search-page-empty" class="hidden text-gray-500 text-center py-12">
+      No products found. Try a different term or <a href="/collections" class="text-primary font-medium hover:underline">browse all products</a>.
+    </p>
+  </div>
+
+  <script type="application/json" id="search-page-index" set:html={JSON.stringify(searchIndex)} />
+  <script>
+    function initSearchPage() {
+      const input = document.getElementById('search-page-input') as HTMLInputElement | null;
+      const results = document.getElementById('search-page-results');
+      const empty = document.getElementById('search-page-empty');
+      const count = document.getElementById('search-page-count');
+      const indexEl = document.getElementById('search-page-index');
+      if (!input || !results || !empty || !count || !indexEl) return;
+
+      const items: { n: string; s: string; c: string; i: string; p: string }[] = JSON.parse(indexEl.textContent || '[]');
+
+      function render(q: string) {
+        const query = q.trim().toLowerCase();
+        if (query.length < 2) {
+          results!.innerHTML = '';
+          empty!.classList.add('hidden');
+          count!.textContent = '';
+          return;
+        }
+        const matches = items.filter(it => it.n.toLowerCase().includes(query) || it.c.toLowerCase().includes(query));
+        count!.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'} for "${q}"`;
+        empty!.classList.toggle('hidden', matches.length > 0);
+        results!.innerHTML = matches.map(it => `
+          <a href="/products/${it.s}" class="block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="${it.i}" alt="${it.n}" width="300" height="300" class="w-full aspect-square object-cover" loading="lazy" />
+            <div class="p-3">
+              <p class="text-sm font-medium text-gray-900 line-clamp-2">${it.n}</p>
+              <p class="text-xs text-gray-500 mt-0.5">${it.c}</p>
+              <p class="text-sm font-bold text-primary mt-1">${it.p}</p>
+            </div>
+          </a>`).join('');
+      }
+
+      const params = new URLSearchParams(location.search);
+      const initialQuery = params.get('q') || '';
+      input.value = initialQuery;
+      render(initialQuery);
+
+      input.addEventListener('input', () => {
+        const url = new URL(location.href);
+        if (input.value) url.searchParams.set('q', input.value); else url.searchParams.delete('q');
+        history.replaceState({}, '', url);
+        render(input.value);
+      });
+    }
+    initSearchPage();
+    document.addEventListener('astro:after-swap', initSearchPage);
+  </script>
+</BaseLayout>

@@ -32,5 +32,6 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-# Sitemap
+# Sitemaps
 Sitemap: https://greensfarmhouse.com/sitemap-index.xml
+Sitemap: https://greensfarmhouse.com/image-sitemap.xml

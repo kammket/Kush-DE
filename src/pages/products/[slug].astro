@@ -271,7 +271,7 @@ const relatedPages = [
               )}
               <dt class="text-gray-500">Category</dt>
               <dd class="font-medium text-gray-900">
-                <a href={`/collections/${product.categorySlug}`} class="text-primary hover:underline">{product.category}</a>
+                <a href={`/collections/${product.categorySlug}`} class="text-primary underline hover:no-underline">{product.category}</a>
               </dd>
               <dt class="text-gray-500">Supplier</dt>
               <dd class="font-medium text-gray-900">{product.supplier}</dd>
@@ -294,7 +294,7 @@ const relatedPages = [
               {relatedPages.map((rp, i) => (
                 <>
                   {i > 0 && <span class="mx-1 text-gray-300">·</span>}
-                  <a href={rp.url} class="text-primary hover:underline">{rp.label}</a>
+                  <a href={rp.url} class="text-primary underline hover:no-underline">{rp.label}</a>
                 </>
               ))}
             </div>
