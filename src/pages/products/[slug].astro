@@ -96,6 +96,30 @@ const breadcrumbs = [
 ];
 
 const coaUrl = `https://wa.me/447346989289?text=${encodeURIComponent(`Hello! I would like to see the lab certificate (COA) for: ${product.name}`)}`;
+
+const relatedPagesByCategory: Record<string, { url: string; label: string }[]> = {
+  'cbd-flowers': [
+    { url: '/wholesale-cbd-flowers-europe', label: 'Wholesale CBD Flowers Europe' },
+    { url: '/cbd-hemp-flowers-indoor', label: 'Indoor CBD Flowers' },
+    { url: '/cbd-hemp-flowers-greenhouse', label: 'Greenhouse CBD Flowers' },
+    { url: '/cbd-flowers-bulk-europe', label: 'Bulk CBD Flowers' },
+  ],
+  'cbd-resins': [
+    { url: '/cbd-wholesaler-organic', label: 'Organic CBD Wholesale' },
+    { url: '/cbd-in-tobacco-shops', label: 'CBD in Tobacco Shops' },
+  ],
+  'cbd-oils': [
+    { url: '/cbd-wholesaler-organic', label: 'Organic CBD Wholesale' },
+    { url: '/cbd-in-tobacco-shops', label: 'CBD in Tobacco Shops' },
+  ],
+  'cbd-gummies': [
+    { url: '/cbd-in-tobacco-shops', label: 'CBD in Tobacco Shops' },
+  ],
+  'thc-gummies': [
+    { url: '/legal', label: 'Legal Information' },
+  ],
+};
+const relatedPages = relatedPagesByCategory[product.categorySlug] ?? [];
 ---
 
 <BaseLayout
@@ -251,6 +275,18 @@ const coaUrl = `https://wa.me/447346989289?text=${encodeURIComponent(`Hello! I w
             <h2 class="font-semibold text-gray-900 mb-2">Description</h2>
             <p class="text-gray-600 leading-relaxed">{product.description}</p>
           </div>
+
+          {relatedPages.length > 0 && (
+            <div class="mb-6 text-sm text-gray-500">
+              <span class="font-medium">Related:</span>
+              {relatedPages.map((rp, i) => (
+                <>
+                  {i > 0 && <span class="mx-1 text-gray-300">·</span>}
+                  <a href={rp.url} class="text-primary hover:underline">{rp.label}</a>
+                </>
+              ))}
+            </div>
+          )}
 
           <!-- Add to Cart -->
           <div class="space-y-3">

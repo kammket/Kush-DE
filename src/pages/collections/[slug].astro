@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { categories, getProductsByCategory, getCategoryBySlug } from '../../data/products';
+import { getCategorySeoContent } from '../../data/translations/categorySeo';
 
 export function getStaticPaths() {
   return categories.map(cat => ({
@@ -17,6 +18,9 @@ if (!category) return Astro.redirect('/404');
 const allProducts = getProductsByCategory(slug!);
 const inStockProducts = allProducts.filter(p => p.inStock);
 const outOfStockProducts = allProducts.filter(p => !p.inStock);
+
+const seoContent = getCategorySeoContent('en', slug!);
+const otherCategories = categories.filter(c => c.slug !== slug);
 
 const collectionJsonLd = {
   "@context": "https://schema.org",
@@ -130,8 +134,9 @@ const breadcrumbs = [
   <section class="py-10 md:py-14 bg-gray-50" aria-labelledby="cat-info">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 id="cat-info" class="text-2xl font-bold mb-4">{category.name}</h2>
-      <div class="text-gray-600 leading-relaxed space-y-4">
+      <div class="text-gray-600 leading-relaxed space-y-4 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-gray-900 [&_h3]:pt-2 [&_a]:text-primary [&_a]:hover:underline">
         <p>{category.description}</p>
+        {seoContent && <div class="space-y-4" set:html={seoContent} />}
         <p>
           By choosing Greens Farmhouse, you benefit from the services of the best CBD supplier and 
           distributor in France. Our family-run company, based in the Paris region, guarantees that all 
@@ -155,9 +160,17 @@ const breadcrumbs = [
           <a href="/cbd-wholesaler-luxembourg" class="text-primary hover:underline">Luxembourg</a>, 
           <a href="/cbd-wholesaler-switzerland" class="text-primary hover:underline">Switzerland</a>, 
           <a href="/cbd-wholesaler-malta" class="text-primary hover:underline">Malta</a>, 
-          Germany, Italy, Portugal, Finland, Netherlands, and the UK. 
+          Germany, Italy, Portugal, Finland, Netherlands, and the UK.
           <a href="/contact" class="text-primary hover:underline">Contact us</a> for bulk pricing.
         </p>
+        <h3 class="text-lg font-bold text-gray-900 pt-2">Browse Other Categories</h3>
+        <div class="flex flex-wrap gap-2">
+          {otherCategories.map(c => (
+            <a href={`/collections/${c.slug}`} class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors !no-underline">
+              {c.name}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </section>

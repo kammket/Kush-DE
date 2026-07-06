@@ -429,7 +429,7 @@ export const products: Product[] = [
     description: "Cali Grape grown indoors for maximum quality. Sweet grape aroma with beautiful purple coloring. Premium indoor quality at wholesale prices.",
     cbdContent: "High",
     thcContent: "<0.3%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["cali grape", "indoor", "premium"],
     variants: [
@@ -716,7 +716,7 @@ export const products: Product[] = [
     description: "Critical CBD grown indoors. Sweet, earthy aroma with citrus notes. Known for its large, dense buds.",
     cbdContent: "High",
     thcContent: "<0.3%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["critical", "indoor"],
     variants: [
@@ -1246,7 +1246,7 @@ export const products: Product[] = [
     description: "Le Jaune CBN resin. Focused on CBN (cannabinol) for sleep-promoting and relaxation properties. Premium quality with unique cannabinoid profile.",
     cbdContent: "CBN",
     thcContent: "<0.3%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["le jaune", "cbn", "sleep"],
     variants: [
@@ -1271,7 +1271,7 @@ export const products: Product[] = [
     description: "Traditional Moroccan-style CBD resin with authentic flavor and texture. A classic that never goes out of style.",
     cbdContent: "High",
     thcContent: "<0.3%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["moroccan", "traditional", "classic"],
     variants: [
@@ -1882,7 +1882,7 @@ export const products: Product[] = [
     supplier: "PUFFY",
     description: "25mg THC gummies in peach mimosa flavor. Premium quality with consistent dosing.",
     thcContent: "<0.20%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["thc", "25mg", "peach", "gummy"],
     variants: [
@@ -1902,7 +1902,7 @@ export const products: Product[] = [
     supplier: "PUFFY",
     description: "25mg THC gummies in sour diesel apple flavor. Tart apple taste with a cannabis twist.",
     thcContent: "<0.20%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["thc", "25mg", "apple", "sour diesel"],
     variants: [
@@ -1922,7 +1922,7 @@ export const products: Product[] = [
     supplier: "PUFFY",
     description: "25mg THC gummies in kush berries flavor. Mixed berry flavor with kush terpenes.",
     thcContent: "<0.20%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["thc", "25mg", "berries", "kush"],
     variants: [
@@ -1942,7 +1942,7 @@ export const products: Product[] = [
     supplier: "PUFFY",
     description: "50mg THC gummies in peach mimosa flavor. Higher potency for experienced consumers.",
     thcContent: "<0.20%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["thc", "50mg", "peach", "strong"],
     variants: [
@@ -1962,7 +1962,7 @@ export const products: Product[] = [
     supplier: "PUFFY",
     description: "50mg THC gummies in sour diesel apple flavor. High potency with tart apple taste.",
     thcContent: "<0.20%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["thc", "50mg", "apple", "strong"],
     variants: [
@@ -1982,7 +1982,7 @@ export const products: Product[] = [
     supplier: "PUFFY",
     description: "50mg THC gummies in kush berries flavor. High potency with rich berry flavors.",
     thcContent: "<0.20%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["thc", "50mg", "berries", "strong"],
     variants: [
@@ -2002,7 +2002,7 @@ export const products: Product[] = [
     supplier: "MAMA KANA",
     description: "THC-infused chocolate balls with 50mg THC. Indulgent chocolate experience combined with THC.",
     thcContent: "<0.20%",
-    inStock: false,
+    inStock: true,
     isSpecialOffer: false,
     tags: ["chocolate", "thc", "50mg"],
   },

@@ -6,6 +6,7 @@ import { categories, getProductsByCategory, getCategoryBySlug } from '../../../d
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 import { categoryTranslations } from '../../../data/translations/categories';
+import { getCategorySeoContent } from '../../../data/translations/categorySeo';
 
 export function getStaticPaths() {
   const paths: any[] = [];
@@ -28,6 +29,14 @@ const catT = categoryTranslations[locale]?.[slug!] || categoryTranslations.en[sl
 const allProducts = getProductsByCategory(slug!);
 const inStockProducts = allProducts.filter(p => p.inStock);
 const outOfStockProducts = allProducts.filter(p => !p.inStock);
+
+// Locale-prefix the root-relative internal links inside the SEO content
+const localePrefix = locale === 'en' ? '' : '/' + locale;
+const seoContent = (getCategorySeoContent(locale, slug!) || '')
+  .replace(/href="\//g, 'href="' + localePrefix + '/');
+const otherCategories = categories
+  .filter(c => c.slug !== slug)
+  .map(c => ({ slug: c.slug, name: (categoryTranslations[locale]?.[c.slug] || categoryTranslations.en[c.slug]).name }));
 
 const collectionJsonLd = {
   "@context": "https://schema.org",
@@ -114,8 +123,9 @@ const breadcrumbs = [
   <section class="py-10 md:py-14 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold mb-4">{catT.name}</h2>
-      <div class="text-gray-600 leading-relaxed space-y-4">
+      <div class="text-gray-600 leading-relaxed space-y-4 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-gray-900 [&_h3]:pt-2 [&_a]:text-primary [&_a]:hover:underline">
         <p>{catT.description}</p>
+        {seoContent && <div class="space-y-4" set:html={seoContent} />}
         <h3 class="text-lg font-bold text-gray-900 pt-2">{t(locale, 'common.relatedResources')}</h3>
         <ul class="list-disc pl-6 space-y-1 text-sm">
           <li><a href={lp('/blog/how-to-start-cbd-business')} class="text-primary hover:underline">How to Start a CBD Business</a></li>
@@ -127,9 +137,16 @@ const breadcrumbs = [
           <a href={lp('/cbd-wholesaler-belgium')} class="text-primary hover:underline">{t(locale, 'footer.cbdBelgium')}</a> · 
           <a href={lp('/cbd-wholesaler-spain')} class="text-primary hover:underline">{t(locale, 'footer.cbdSpain')}</a> · 
           <a href={lp('/cbd-wholesaler-switzerland')} class="text-primary hover:underline">{t(locale, 'footer.cbdSwitzerland')}</a> · 
-          <a href={lp('/cbd-wholesaler-malta')} class="text-primary hover:underline">{t(locale, 'footer.cbdMalta')}</a> · 
+          <a href={lp('/cbd-wholesaler-malta')} class="text-primary hover:underline">{t(locale, 'footer.cbdMalta')}</a> ·
           <a href={lp('/contact')} class="text-primary hover:underline">{t(locale, 'common.contactUs')}</a>
         </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          {otherCategories.map(c => (
+            <a href={lp(`/collections/${c.slug}`)} class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors !no-underline">
+              {c.name}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </section>

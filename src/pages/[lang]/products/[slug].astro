@@ -50,6 +50,31 @@ const coaMessages: Record<string, string> = {
 };
 const coaUrl = `https://wa.me/447346989289?text=${encodeURIComponent(coaMessages[locale] || coaMessages.en)}`;
 
+// Related SEO landing pages per category; labels come from existing footer translations
+const relatedPagesByCategory: Record<string, { path: string; tKey: string }[]> = {
+  'cbd-flowers': [
+    { path: '/wholesale-cbd-flowers-europe', tKey: 'footer.cbdFlowersEurope' },
+    { path: '/cbd-hemp-flowers-indoor', tKey: 'footer.cbdFlowersIndoor' },
+    { path: '/cbd-hemp-flowers-greenhouse', tKey: 'footer.cbdFlowersGreenhouse' },
+    { path: '/cbd-flowers-bulk-europe', tKey: 'footer.cbdFlowersBulk' },
+  ],
+  'cbd-resins': [
+    { path: '/cbd-wholesaler-organic', tKey: 'footer.organicCbd' },
+    { path: '/cbd-in-tobacco-shops', tKey: 'footer.cbdTobacco' },
+  ],
+  'cbd-oils': [
+    { path: '/cbd-wholesaler-organic', tKey: 'footer.organicCbd' },
+    { path: '/cbd-in-tobacco-shops', tKey: 'footer.cbdTobacco' },
+  ],
+  'cbd-gummies': [
+    { path: '/cbd-in-tobacco-shops', tKey: 'footer.cbdTobacco' },
+  ],
+  'thc-gummies': [
+    { path: '/legal', tKey: 'nav.legal' },
+  ],
+};
+const relatedPages = relatedPagesByCategory[product.categorySlug] ?? [];
+
 const relatedProducts = getProductsByCategory(product.categorySlug)
   .filter(p => p.id !== product.id && p.inStock)
   .slice(0, 4);
@@ -190,6 +215,17 @@ const breadcrumbs = [
             <h2 class="font-semibold text-gray-900 mb-2">{t(locale, 'product.description')}</h2>
             <p class="text-gray-600 leading-relaxed">{description}</p>
           </div>
+
+          {relatedPages.length > 0 && (
+            <div class="mb-6 text-sm text-gray-500">
+              {relatedPages.map((rp, i) => (
+                <>
+                  {i > 0 && <span class="mx-1 text-gray-300">·</span>}
+                  <a href={lp(rp.path)} class="text-primary hover:underline">{t(locale, rp.tKey)}</a>
+                </>
+              ))}
+            </div>
+          )}
 
           <div class="space-y-3">
             {product.inStock ? (
