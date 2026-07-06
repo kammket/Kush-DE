@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug, getProductsByCategory } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Sample Packs" },
+];
+
+const packs = ['flower-discovery-pack', 'resins-discovery-pack', 'resin-discovery-0-thc'].map(s => getProductBySlug(s)!).filter(Boolean);
+const popularFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock && p.slug !== 'flower-discovery-pack').slice(0, 4);
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent("Hello! I'd like a sample pack — can you tell me which strains are available to try?")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CBD Sample Packs: Test Every Strain Before You Buy Wholesale",
+  "description": "CBD sample packs and discovery packs — flowers, resins and 0% THC options. Test all strains before committing to a wholesale order. Shipped across Europe in 24h.",
+  "url": "https://greensfarmhouse.com/cbd-sample-packs",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06"
+};
+
+const faqItems = [
+  {
+    question: "What's inside a CBD sample pack?",
+    answer: "Our Flower Discovery Pack contains a curated selection of our best-selling CBD flower strains — greenhouse and indoor — so you can compare aroma, appearance and quality side by side. The Resin Discovery Pack does the same for our hash and resin range, and the 0% THC Discovery Pack covers our guaranteed THC-free line for strictly regulated markets."
+  },
+  {
+    question: "Can I get samples of specific strains?",
+    answer: "Yes. Sample packs are available for all strains in our catalog. If you want to test specific references before a wholesale order — say OG Kush, Gelato and Afghan Hash — message us on WhatsApp and we'll put together a custom sample pack for you."
+  },
+  {
+    question: "Why order a sample pack before buying wholesale?",
+    answer: "Because your customers will judge your shop on quality, and no photo replaces holding the product. A sample pack lets you verify aroma, trim quality and freshness for a few euros before committing hundreds to a bulk order. Most of our long-term wholesale partners started with a discovery pack."
+  },
+  {
+    question: "How fast do sample packs ship?",
+    answer: "Same as everything else: within 24 hours from our French warehouse, with tracking, across all of Europe. Free delivery applies to orders over €99, and you can combine a sample pack with any other products."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="CBD Sample Packs | Test All Strains Before Buying Wholesale"
+  description="CBD sample packs & discovery packs: flowers, resins, and 0% THC options. Test every strain before your wholesale order. Custom sample packs via WhatsApp. Shipped in 24h across Europe."
+  canonicalURL="https://greensfarmhouse.com/cbd-sample-packs"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-green-50 via-white to-lime-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🌿 Try Before You Buy</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        CBD Sample Packs — <span class="text-primary">Test Every Strain Before You Order Wholesale</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Never commit to a bulk order blind. Our discovery packs let you compare our best-selling flowers,
+        resins and 0% THC products side by side — and custom sample packs are available for
+        <strong>every strain in the catalog</strong>. Shipped in 24 hours across Europe.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/products/flower-discovery-pack" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Get the Flower Discovery Pack
+        </a>
+        <WaLink href={waUrl} class="px-6 py-3">Request a Custom Sample Pack</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discovery packs -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Ready-Made Discovery Packs</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Curated selections of our best sellers — the fastest way to evaluate our quality across a whole category.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-3xl">
+        {packs.map(p => <ProductCard product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why sample first -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Smart Buyers Sample First</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">👃</span>
+          <h3 class="font-bold text-lg mb-2">Judge Quality Yourself</h3>
+          <p class="text-sm text-gray-600">Aroma, trim, density, freshness — the things your customers notice can't be verified from photos. Hold the product before you stock it.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💶</span>
+          <h3 class="font-bold text-lg mb-2">Risk a Few Euros, Not Hundreds</h3>
+          <p class="text-sm text-gray-600">Test for the price of a pack before committing to kilos. Most of our long-term wholesale partners started exactly this way.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🎯</span>
+          <h3 class="font-bold text-lg mb-2">Pick Winners for Your Market</h3>
+          <p class="text-sm text-gray-600">Fruity or earthy? Greenhouse price point or indoor premium? Sampling tells you what your specific customers will reorder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular strains -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Popular Strains to Sample</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Every strain below — and everything else in the catalog — is available in sample quantity. Ask on WhatsApp.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {popularFlowers.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">View all CBD Flowers →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Sample Packs — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Tell Us What You Want to Try</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Message us the strains you're curious about — we'll build your custom sample pack and quote you the same day. When you're ready to scale, wholesale pricing kicks in.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/wholesale-cbd-flowers-europe" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">See Wholesale Pricing</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

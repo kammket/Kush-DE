@@ -1,5 +1,6 @@
 ---
 import { defaultLocale, type Locale } from '../i18n/config';
+import { getLocalePath } from '../i18n/utils';
 
 interface Props {
   productName: string;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { productName, locale = defaultLocale as Locale } = Astro.props;
+const samplePacksUrl = getLocalePath('/cbd-sample-packs', locale);
 
 const tr: Record<string, { title: string; desc: string; samples: string; btn: string; or: string; emailLabel: string }> = {
   en: {
@@ -97,7 +99,7 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(`${s.emailLabel}: $
     <div>
       <h3 class="font-bold text-gray-900">{s.title}</h3>
       <p class="text-sm text-gray-600 mt-1">{s.desc}</p>
-      <p class="text-sm text-gray-600 mt-1">🌿 {s.samples}</p>
+      <p class="text-sm text-gray-600 mt-1">🌿 <a href={samplePacksUrl} class="underline decoration-primary/40 hover:text-primary">{s.samples}</a></p>
     </div>
   </div>
   <a

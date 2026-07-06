@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "White Label CBD" },
+];
+
+const bulkOils = ['cbd-oil-5-liter', 'cbd-oil-10-liter', 'cbd-oil-20-liter', 'cbd-oil-10-liter-cherry'].map(s => getProductBySlug(s)!).filter(Boolean);
+const concentrates = ['distillate-90-cbd', 'isolat-99-cbd', 'jack-herer-crumble', 'lemon-haze-crumble'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent("Hello! I'm interested in white label / private label CBD production. Can you tell me more?")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "White Label CBD in Europe: Launch Your Own CBD Brand",
+  "description": "White label and private label CBD manufacturing in Europe. Bulk CBD oil per liter, 90% distillate, 99.8% isolate — lab-tested base products for your own brand.",
+  "url": "https://greensfarmhouse.com/white-label-cbd-europe",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06"
+};
+
+const faqItems = [
+  {
+    question: "What CBD products can I white label?",
+    answer: "The most popular white-label formats are bulk CBD oils sold per liter (5%, 10% and 20% concentrations, plus cherry, mint and peach flavors) that you bottle under your own brand, and pure base materials for your own formulations: 90% CBD distillate and 99.8% CBD isolate. Flowers and resins can also be supplied in bulk for your own packaging. Every batch ships with a certificate of analysis you can reference on your labels."
+  },
+  {
+    question: "What is the minimum order for white label CBD?",
+    answer: "Bulk oils start at one liter — enough for roughly 100 retail bottles of 10ml — so you can launch a brand with a small first run. Distillate and isolate are available from small quantities upward, with tiered pricing as volume grows. Message us on WhatsApp with your target products and volumes for a same-day quote."
+  },
+  {
+    question: "Do you provide the compliance documentation my brand needs?",
+    answer: "Yes. Every batch comes with an independent lab certificate (COA) showing cannabinoid content and confirming THC below legal limits. This is the documentation you need for EU compliance, for your product labels, and for reassuring your own retail customers."
+  },
+  {
+    question: "How fast can I launch?",
+    answer: "Base products ship within 24 hours from our French warehouse. If you already have bottles and labels, you can be selling under your own brand within a week of your first order. We can also advise on concentrations, flavor selection and pricing based on what sells across our 5,000+ B2B customers."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="White Label CBD Europe | Launch Your Own CBD Brand — Private Label"
+  description="White label & private label CBD manufacturing in Europe. Bulk CBD oil per liter, 90% distillate, 99.8% isolate. Lab certificates included, shipped in 24h. Start your CBD brand today."
+  canonicalURL="https://greensfarmhouse.com/white-label-cbd-europe"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-primary/5 via-white to-accent/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🏷️ Your Brand, Our Production</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        White Label CBD in Europe — <span class="text-primary">Launch Your Own Brand</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Skip years of production setup. We supply the lab-tested base products — bulk CBD oils per liter,
+        90% distillate, 99.8% isolate and bulk flowers — you put your brand on them. Full compliance
+        documentation included, shipped across Europe within 24 hours.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Discuss Your Brand on WhatsApp</WaLink>
+        <a href="/collections/cbd-oils" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Browse Bulk Oils
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">How White Label CBD Works</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🧪</span>
+          <h3 class="font-bold text-lg mb-2">1. Choose Your Base</h3>
+          <p class="text-sm text-gray-600">Bulk oils per liter (5–20%, natural or flavored), 90% distillate or 99.8% isolate for custom formulations, or bulk flowers and resins for your own packaging.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏷️</span>
+          <h3 class="font-bold text-lg mb-2">2. Add Your Brand</h3>
+          <p class="text-sm text-gray-600">Bottle, package and label under your own name. One liter of oil fills roughly 100 retail bottles — a full product line from a small first order.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📋</span>
+          <h3 class="font-bold text-lg mb-2">3. Sell With Confidence</h3>
+          <p class="text-sm text-gray-600">Every batch ships with an independent lab certificate (COA) — the compliance documentation your labels, your shops and your customers need.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bulk oils -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Bulk CBD Oils — Per Liter</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">The fastest route to your own oil line. Concentrations from 5% to 20%, natural or flavored, ready for bottling under your brand.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {bulkOils.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/collections/cbd-oils" class="text-primary font-semibold hover:underline">View all CBD Oils →</a>
+    </div>
+  </section>
+
+  <!-- Concentrates -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Distillate, Isolate &amp; Concentrates</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Pure, documented base materials for manufacturers — formulate cosmetics, edibles, oils or vape products with 90% distillate or 99.8% isolate.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {concentrates.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/cbd-flowers-bulk-europe" class="text-primary font-semibold hover:underline">Also available: bulk flowers by the kilo →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">White Label CBD — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Ready to Build Your CBD Brand?</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Tell us your target products and volumes on WhatsApp — we'll reply with pricing, sample options and launch advice the same day.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/cbd-sample-packs" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Order a Sample Pack First</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
