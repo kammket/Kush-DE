@@ -400,7 +400,7 @@ export const blogPosts: BlogPost[] = [
       
       <h3>Emerging Categories for 2026</h3>
       <ul>
-        <li><strong>HHC & THCV Products:</strong> New cannabinoids gaining consumer interest (check local regulations)</li>
+        <li><strong><a href="/cbn-sleep-products">CBN & Sleep Products</a>:</strong> CBN resins and melatonin formulas are the fastest-growing legal cannabinoid segment in Europe</li>
         <li><strong>CBD Edibles:</strong> <a href="/collections/cbd-gummies">Gummies</a> and candies growing 40%+ year-over-year</li>
         <li><strong><a href="/cbd-wholesaler-organic">Organic CBD</a>:</strong> Premium segment growing as health-conscious consumers demand pesticide-free, sustainably grown products</li>
         <li><strong>CBD Cosmetics:</strong> Topicals, serums, and CBD-infused skincare</li>
@@ -408,6 +408,293 @@ export const blogPosts: BlogPost[] = [
       
       <h3>Stocking Strategy for 2026</h3>
       <p>Our recommended product split for a balanced CBD retail inventory: 40-45% flowers (5-10 strains covering indoor and greenhouse), 25-30% resins/hash (4-6 varieties), 15-20% oils (3 concentrations + specialties), and 10-15% edibles and accessories. Adjust based on your customer base and local market preferences. Read our <a href="/blog/manage-cbd-wholesale-stock">stock management guide</a> for detailed inventory tips.</p>
+    `,
+  },
+  {
+    slug: "cbd-vs-thc-difference",
+    title: "CBD vs THC: What's the Difference? (Complete 2026 Guide)",
+    excerpt: "CBD and THC are the two best-known cannabinoids in the cannabis plant, but they behave completely differently. Here's the difference in effects, legality, and what it means for your product range.",
+    date: "2026-02-03",
+    readTime: "7 min read",
+    category: "Educational",
+    content: `
+      <h2>CBD vs THC: Same Plant, Completely Different Molecules</h2>
+      <p>CBD (cannabidiol) and THC (tetrahydrocannabinol) are both extracted from the cannabis/hemp plant, and both interact with the body's endocannabinoid system — but that's where the similarity ends. Understanding the difference matters whether you're a retailer explaining products to customers or a shopper trying to make sense of confusing labels.</p>
+
+      <h3>The Core Difference: Psychoactivity</h3>
+      <p>THC is psychoactive — it's the molecule responsible for the "high" associated with marijuana. CBD is non-intoxicating: it does not produce a high, no matter how much is consumed. This is the single most important distinction, and it's why CBD products are legal across the EU while high-THC cannabis is not.</p>
+      <p>Both molecules interact with cannabinoid receptors (CB1 and CB2), but they bind differently. THC binds directly and strongly to CB1 receptors in the brain, producing intoxicating effects. CBD has a much weaker, indirect interaction with these receptors, and is generally associated with relaxation without impairment.</p>
+
+      <h3>Legal Status in Europe</h3>
+      <p>This is where the practical difference really matters for buyers and retailers. CBD products are legal across the EU provided THC content stays below the legal threshold — 0.3% in France and most member states. <a href="/collections/cbd-flowers">CBD flowers</a>, <a href="/collections/cbd-resins">resins</a>, and <a href="/collections/cbd-oils">oils</a> all fall under this rule. Products with higher THC content remain controlled substances throughout the EU.</p>
+      <p>Our <a href="/legal-cannabis-europe">Legal Cannabis in Europe guide</a> breaks down exactly what's legal to buy and sell, including our <a href="/collections/thc-gummies">legal THC gummies</a> line, which is precisely dosed under the 0.20% EU threshold.</p>
+
+      <h3>Effects: What to Expect</h3>
+      <ul>
+        <li><strong>THC:</strong> Euphoria, altered perception, increased appetite, potential anxiety at high doses. Intoxicating and impairing.</li>
+        <li><strong>CBD:</strong> Relaxation, no impairment, no intoxication. Widely used alongside CBN for sleep support and as part of general wellness routines.</li>
+      </ul>
+
+      <h3>Which Should You Stock?</h3>
+      <p>For a legally compliant EU retail business, CBD is the foundation of the category — flowers, resins, oils, and gummies with THC under 0.3%. Our <a href="/best-cbd-strains">Best CBD Strains guide</a> covers the flower varieties that convert best at retail. For customers specifically asking about a stronger legal option, our EU-compliant THC gummies at 10mg, 25mg, and 50mg fill that gap without crossing any legal line.</p>
+      <p>For a deeper look at how CBD and THC are researched and regulated, the U.S. National Center for Complementary and Integrative Health publishes an accessible overview of the science: <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Cannabis, Marijuana, and Cannabinoids: What You Need to Know (NCCIH)</a>.</p>
+    `,
+  },
+  {
+    slug: "how-long-does-cbd-stay-in-your-system",
+    title: "How Long Does CBD Stay in Your System? (2026 Guide)",
+    excerpt: "CBD's elimination half-life varies enormously by product format and dosing pattern — from a few hours to several days. Here's what the research actually shows, and what it means if you're being tested.",
+    date: "2026-02-18",
+    readTime: "6 min read",
+    category: "Educational",
+    content: `
+      <h2>There's No Single Answer — Format and Dose Change Everything</h2>
+      <p>"How long does CBD stay in your system" doesn't have one universal answer, because CBD's elimination half-life depends heavily on how it was taken, the dose, and whether use is occasional or regular. This is a genuinely useful thing for both retailers and customers to understand correctly, rather than repeating the oversimplified answers that circulate online.</p>
+
+      <h3>What the Research Shows</h3>
+      <p>A systematic review of human pharmacokinetic studies found that CBD's half-life ranges from roughly 1-2 hours after vaping or smoking, to 2-5 hours after oral oil capsules, up to several days with chronic daily oral dosing as CBD accumulates in fatty tissue. In practical terms: a single dose of <a href="/collections/cbd-oils">CBD oil</a> clears the body far faster than the same dose taken every day for weeks.</p>
+      <p>This variability is why blanket statements like "CBD leaves your system in 3 days" are unreliable. Format, frequency, individual metabolism, and body fat percentage all play a role.</p>
+
+      <h3>Does CBD Show Up on a Drug Test?</h3>
+      <p>Standard drug tests target THC metabolites, not CBD itself — pure CBD isolate should not trigger a positive result. However, most CBD products, including full-spectrum <a href="/collections/cbd-flowers">flowers</a> and oils, contain trace THC (up to the legal 0.3% limit). With regular, high-volume use, that trace THC can accumulate enough to trigger a positive test in sensitive assays.</p>
+      <p>For customers who are tested regularly, the safest choice is a verified 0% THC product — our resin and oil lines in this category are lab-certified THC-free, not just "trace amount" compliant. Ask about these specifically via <a href="/quality-and-testing">our quality and testing page</a>, which explains how every batch is verified.</p>
+
+      <h3>What This Means for Retailers</h3>
+      <p>Customers asking this question are usually concerned about drug testing, not recreational timing. Point them toward genuinely 0% THC products rather than assuming any "CBD product" is automatically safe for testing — the distinction between "under legal limit" and "zero THC" matters a great deal here, and it's worth explaining clearly at the counter.</p>
+      <p>For the full data behind these half-life ranges, see the peer-reviewed <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">systematic review of CBD pharmacokinetics in humans (Frontiers in Pharmacology)</a>.</p>
+    `,
+  },
+  {
+    slug: "cbd-dosage-guide-how-much-to-take",
+    title: "CBD Dosage Guide: How Much CBD Oil Should You Take?",
+    excerpt: "There's no single correct CBD dose — it depends on concentration, body weight, and what you're using it for. Here's a practical framework for helping customers find their starting point.",
+    date: "2026-03-05",
+    readTime: "8 min read",
+    category: "Buying Guide",
+    content: `
+      <h2>Why There's No Universal CBD Dose</h2>
+      <p>Unlike medications with standardized dosing, CBD dosage varies by individual, product concentration, and intended use. This is one of the most common questions retailers get, and the honest answer is "it depends" — but that doesn't mean there isn't a useful framework to guide first-time buyers.</p>
+
+      <h3>Start Low, Go Slow</h3>
+      <p>The most widely recommended approach, echoed across consumer and regulatory guidance, is to start with a low dose and increase gradually over days or weeks until the desired effect is reached. For <a href="/collections/cbd-oils">CBD oil</a>, that typically means starting with a few drops of a lower concentration (5% or 10%) rather than jumping straight to a 20% product.</p>
+
+      <h3>A Practical Starting Framework</h3>
+      <ul>
+        <li><strong>First-time users:</strong> Start with a 5-10% oil, a few drops (roughly 5-10mg CBD) once daily.</li>
+        <li><strong>Regular users seeking a stronger effect:</strong> 10-20% oil, building up dose gradually based on response.</li>
+        <li><strong>Sleep-focused customers:</strong> Consider our <a href="/cbn-sleep-products">CBN and melatonin combination products</a>, which are formulated specifically for evening use rather than general daytime dosing.</li>
+        <li><strong>Bulk buyers formulating their own products:</strong> Our <a href="/white-label-cbd-europe">white label bulk oils</a> let you control concentration precisely across your own product line.</li>
+      </ul>
+
+      <h3>Concentration Matters More Than People Realize</h3>
+      <p>A common mistake is assuming "more drops = more effect" without accounting for concentration. Two drops of a 20% oil deliver roughly double the CBD of two drops of a 10% oil. Our <a href="/blog/cbd-oil-wholesale-buying-guide">CBD oil buying guide</a> breaks down exactly how to read concentration labels and calculate mg-per-drop for retail advice.</p>
+
+      <h3>Sample Before You Recommend at Scale</h3>
+      <p>If you're advising customers or stocking a new concentration, it's worth testing the product yourself first. Our <a href="/cbd-sample-packs">sample packs</a> let you and your staff try different concentrations before committing to a full wholesale order — genuinely useful when you need to speak confidently to customers about dosing.</p>
+      <p>For the most rigorous independent review of CBD dosing and safety data available, see the <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">World Health Organization's Cannabidiol Critical Review Report</a>.</p>
+    `,
+  },
+  {
+    slug: "what-is-cbg-complete-guide",
+    title: "What is CBG? The Complete Guide to Cannabigerol",
+    excerpt: "CBG is often called the 'mother cannabinoid' because other cannabinoids are synthesized from it. Here's what makes it different from CBD, and which products actually contain it.",
+    date: "2026-03-22",
+    readTime: "7 min read",
+    category: "Educational",
+    content: `
+      <h2>CBG: The "Mother Cannabinoid"</h2>
+      <p>Cannabigerol (CBG) is a non-intoxicating cannabinoid that earns its "mother cannabinoid" nickname because CBGA — its acidic precursor — is the compound from which the plant synthesizes THC, CBD, and CBC as it matures. Young hemp plants are naturally higher in CBG; as the plant grows, enzymes convert most of it into other cannabinoids, which is why CBG-dominant products are comparatively rare and typically come from hemp harvested earlier or bred specifically for higher CBG content.</p>
+
+      <h3>How CBG Differs From CBD</h3>
+      <p>Both are non-intoxicating, but they interact with the endocannabinoid system differently. CBG is understood to act as a partial agonist at both CB1 and CB2 receptors and to influence other signaling pathways, giving it a distinct profile from CBD. Like CBD, it does not produce a high.</p>
+
+      <h3>CBG Products in Our Catalog</h3>
+      <p>CBG is often blended with CBD rather than sold in isolation, since the two cannabinoids are frequently found together in the same plant material:</p>
+      <ul>
+        <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a>:</strong> A CBG-rich flower strain with a sweet banana aroma, grown in greenhouse conditions.</li>
+        <li><strong><a href="/products/aya-cbd-cbg-resin">Aya CBD/CBG Resin</a>:</strong> A resin combining both cannabinoids with an earthy, floral terpene profile.</li>
+        <li><strong><a href="/products/ketama-cbg-cbd-resin">Ketama CBG/CBD Resin</a>:</strong> Inspired by the traditional Moroccan Ketama region, with a high combined cannabinoid content.</li>
+      </ul>
+      <p>Browse the full <a href="/collections/cbd-flowers">CBD flowers</a> and <a href="/collections/cbd-resins">CBD resins</a> collections to see current availability of these and other cannabinoid-rich references.</p>
+
+      <h3>Why Stock CBG Products</h3>
+      <p>CBG remains a comparatively under-served niche compared to mainstream CBD — which makes it a genuine differentiator for shops willing to educate customers about it. It also tends to attract a curious, engaged customer segment who research cannabinoids in depth and are more likely to become repeat, higher-spend customers.</p>
+      <p>For the full pharmacological detail on CBG's mechanisms and current research status, see this peer-reviewed review: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Cannabigerol (CBG): A Comprehensive Review of Its Molecular Mechanisms and Therapeutic Potential (PMC)</a>.</p>
+    `,
+  },
+  {
+    slug: "cbd-drug-interactions-what-to-know",
+    title: "CBD and Drug Interactions: What Retailers Should Tell Customers",
+    excerpt: "CBD can interact with certain medications by affecting the liver enzymes that metabolize them. Here's what the research shows, and how to have that conversation responsibly at the counter.",
+    date: "2026-04-10",
+    readTime: "7 min read",
+    category: "Educational",
+    content: `
+      <h2>CBD Isn't Risk-Free — Here's the Honest Picture</h2>
+      <p>CBD has an excellent safety profile compared to many substances, but "natural" doesn't mean "no interactions." CBD is metabolized by liver enzymes in the cytochrome P450 family — the same enzyme system responsible for metabolizing a large share of prescription medications. This is genuinely useful information for anyone selling CBD products, not a reason to avoid the category.</p>
+
+      <h3>How the Interaction Works</h3>
+      <p>Clinical research has shown that CBD inhibits several cytochrome P450 enzymes, including CYP3A4, CYP2C9, and CYP2C19 — enzymes responsible for metabolizing a wide range of common medications. When CBD inhibits these enzymes, medications that rely on them for clearance can build up to higher-than-expected levels in the bloodstream, or clear more slowly than intended.</p>
+      <p>This doesn't mean CBD is dangerous to use alongside all medications — the clinical significance depends heavily on the specific drug, its therapeutic window, and the CBD dose involved. It does mean it's worth a moment's thought rather than an assumption of zero interaction.</p>
+
+      <h3>What This Means in Practice</h3>
+      <ul>
+        <li>Customers on regular prescription medication — especially blood thinners, anti-seizure medications, or drugs with a narrow safe-dose range — should check with a healthcare provider before starting CBD, not because it's dangerous by default, but because interactions are genuinely possible.</li>
+        <li>This applies across formats: <a href="/collections/cbd-oils">CBD oils</a>, <a href="/collections/cbd-flowers">flowers</a>, and <a href="/collections/cbd-gummies">edibles</a> are all metabolized the same way once absorbed.</li>
+        <li>This is general information, not medical advice — retailers should direct specific medication questions to a pharmacist or doctor rather than answering them directly.</li>
+      </ul>
+
+      <h3>Why This Builds Trust, Not Fear</h3>
+      <p>Retailers who proactively mention this — rather than claiming CBD is entirely risk-free — build more credibility with informed customers, particularly the growing wellness-focused segment who research before buying. It's also consistent with how we approach every product: every batch we sell is <a href="/quality-and-testing">independently lab-tested</a>, so the actual cannabinoid content customers are consuming is verified, not guessed at.</p>
+      <p>For the detailed clinical data on CBD's cytochrome P450 interactions, see this peer-reviewed study: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Evaluation of Cytochrome P450-Mediated Cannabinoid-Drug Interactions in Healthy Adult Participants (PMC)</a>.</p>
+    `,
+  },
+  {
+    slug: "full-spectrum-vs-broad-spectrum-vs-isolate",
+    title: "Full-Spectrum vs Broad-Spectrum vs Isolate CBD: What's the Difference?",
+    excerpt: "These three terms describe how much of the original hemp plant's cannabinoid and terpene profile survives extraction — and it changes the effect, the legal THC content, and the price point.",
+    date: "2026-04-28",
+    readTime: "8 min read",
+    category: "Product Guide",
+    content: `
+      <h2>Three Extraction Outcomes, Three Different Products</h2>
+      <p>"Full-spectrum," "broad-spectrum," and "isolate" describe how much of the original hemp plant's chemical profile remains after extraction and processing. Understanding the difference matters for both compliance and for matching the right product to the right customer.</p>
+
+      <h3>Full-Spectrum: The Whole Plant Profile</h3>
+      <p>Full-spectrum extracts retain the complete range of cannabinoids naturally present in the plant — CBD, trace THC (under the legal 0.3% limit), CBG, CBN, and the full terpene profile. Many customers prefer full-spectrum products because of the "entourage effect" theory — the idea that cannabinoids and terpenes work better together than any single compound in isolation. Our <a href="/collections/cbd-flowers">CBD flowers</a> and most <a href="/collections/cbd-resins">resins</a> are naturally full-spectrum, since they're minimally processed plant material.</p>
+
+      <h3>Broad-Spectrum: Everything Except THC</h3>
+      <p>Broad-spectrum extracts start as full-spectrum, then go through an additional process to remove THC specifically while retaining other cannabinoids and terpenes. This appeals to customers who want the multi-cannabinoid profile without any THC at all — useful for anyone concerned about drug testing or operating in a market with especially strict rules. Our 0% THC resin and oil references fall into this category.</p>
+
+      <h3>Isolate: Pure CBD, Nothing Else</h3>
+      <p>Isolate is CBD in its purest form — typically 99%+ pure, with all other plant compounds removed. Our <a href="/products/isolat-99-cbd">99.8% CBD Isolate</a> is this category: a white crystalline powder with no detectable THC, terpenes, or other cannabinoids. It's the preferred base for precise dosing, cosmetic formulations, and any product where a completely neutral, flavorless, colorless ingredient is required.</p>
+      <p>Our <a href="/products/distillate-90-cbd">90% CBD Distillate</a> sits between broad-spectrum and isolate — highly refined but retaining slightly more of the original cannabinoid complexity than pure isolate.</p>
+
+      <h3>Which Should You Stock or Use?</h3>
+      <ul>
+        <li><strong>Full-spectrum:</strong> Best for customers who want the complete plant experience and aren't concerned about trace THC.</li>
+        <li><strong>Broad-spectrum:</strong> Best for customers who want multiple cannabinoids but need guaranteed zero THC.</li>
+        <li><strong>Isolate:</strong> Best for white-label manufacturing, precise dosing, and THC-sensitive markets.</li>
+      </ul>
+      <p>If you're formulating your own product line, our <a href="/white-label-cbd-europe">white label CBD page</a> covers bulk options across all three categories, with lab documentation for each.</p>
+      <p>For the industry-standard technical definitions of these terms, see the <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>, the pan-European trade body for the hemp sector.</p>
+    `,
+  },
+  {
+    slug: "how-is-cbd-extracted-co2-vs-ethanol",
+    title: "How Is CBD Extracted? CO2 vs Ethanol Extraction Explained",
+    excerpt: "The extraction method used to pull CBD out of raw hemp affects purity, cost, and the final product's profile. Here's how CO2 and ethanol extraction actually compare.",
+    date: "2026-05-15",
+    readTime: "7 min read",
+    category: "Educational",
+    content: `
+      <h2>From Plant to Product: How Extraction Actually Works</h2>
+      <p>Before CBD reaches an oil bottle or a distillate, it has to be separated from the raw plant material. The two dominant methods in commercial production are CO2 extraction and ethanol extraction — each with a different cost, purity, and equipment profile.</p>
+
+      <h3>CO2 Extraction</h3>
+      <p>Supercritical CO2 extraction uses carbon dioxide under high pressure and controlled temperature, in a state between liquid and gas, to pull cannabinoids and terpenes from the plant material. This method is prized for precision — operators can fine-tune pressure and temperature to selectively extract specific compounds — and it leaves no residual solvent in the final product, since CO2 simply returns to gas form at normal pressure.</p>
+      <p>The trade-off is cost: CO2 extraction requires expensive specialized equipment, making it better suited to large-scale, high-value production runs.</p>
+
+      <h3>Ethanol Extraction</h3>
+      <p>Ethanol extraction soaks the plant material in food-grade ethanol, which dissolves cannabinoids and terpenes out of the plant matter. The ethanol is then evaporated off, leaving a concentrated extract behind. This method is faster and less capital-intensive than CO2 extraction, making it popular for mid-size producers, but it can also pull more plant chlorophyll and other unwanted compounds into the extract if not carefully controlled, requiring additional filtration steps.</p>
+
+      <h3>What This Means for the Products You Buy</h3>
+      <p>Both methods, done properly, produce clean, compliant extract — the method itself isn't a reliable indicator of quality on its own. What matters is what happens after extraction: winterization to remove waxes and lipids, and independent lab testing to confirm cannabinoid content and the absence of solvent residue. Every batch behind our <a href="/products/distillate-90-cbd">90% CBD distillate</a> and <a href="/products/isolat-99-cbd">99.8% CBD isolate</a> goes through this full process, verified by a certificate of analysis.</p>
+      <p>See our <a href="/quality-and-testing">quality and testing standards page</a> for the full breakdown of how every product — regardless of extraction method — gets verified before it's listed for sale.</p>
+
+      <h3>For Brands Formulating Their Own Products</h3>
+      <p>If you're building a white-label line and deciding between distillate and isolate as your base, extraction method and refinement level directly affect flavor neutrality, solubility, and cost. Our <a href="/white-label-cbd-europe">white label CBD guide</a> walks through which base material suits which product format.</p>
+      <p>For the technical standards the European hemp industry works to, see the <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>.</p>
+    `,
+  },
+  {
+    slug: "cbd-for-sleep-cbn-melatonin",
+    title: "CBD for Sleep: Does It Work? CBN, CBD and Melatonin Explained",
+    excerpt: "Sleep is the number-one reason new customers try cannabinoid products. Here's how CBD, CBN, and melatonin each play a different role — and why combining them is becoming the standard approach.",
+    date: "2026-06-02",
+    readTime: "8 min read",
+    category: "Product Guide",
+    content: `
+      <h2>Sleep Is the #1 Reason People Try CBD</h2>
+      <p>Across CBD retail, sleep support consistently ranks as the most common reason new customers walk in the door — ahead of pain relief or general wellness. But "CBD for sleep" is actually a blend of three distinct compounds working through different mechanisms, and understanding each helps you recommend the right product rather than just reaching for whatever's labeled "night."</p>
+
+      <h3>CBD's Role: Relaxation, Not Sedation</h3>
+      <p>CBD itself is not a sedative — its effect on sleep is generally understood to work indirectly, by reducing the anxiety and racing thoughts that keep some people awake, rather than inducing drowsiness directly. This is why CBD alone works well for some customers and does very little for others: it addresses a specific barrier to sleep, not sleep itself.</p>
+
+      <h3>CBN: The Cannabinoid Most Associated With Sleep</h3>
+      <p>Cannabinol (CBN) forms as THC ages and oxidizes, and it's the cannabinoid most consistently associated with sedating, sleep-supportive effects in consumer use — which is why CBN-focused products have become the fastest-growing segment of the cannabinoid sleep market. Our <a href="/cbn-sleep-products">CBN and sleep products collection</a> covers CBN-rich resins built specifically around this profile.</p>
+
+      <h3>Melatonin: The Body's Own Sleep Signal</h3>
+      <p>Melatonin is the hormone the body naturally produces to regulate the sleep-wake cycle. Unlike CBD and CBN, it's not a cannabinoid at all — it's a well-established sleep aid in its own right, which is why combining it with cannabinoids has become a popular formulation strategy rather than a marketing gimmick.</p>
+
+      <h3>Why Combination Products Are Taking Over</h3>
+      <p>Our <a href="/products/cbd-cbn-melatonin-oil">CBD + CBN + Melatonin oil</a> combines all three mechanisms in one formula: CBD to ease pre-sleep anxiety, CBN for its sedating profile, and melatonin to support the body's natural sleep signal. Our <a href="/products/bonbons-1400mg-melatonin">melatonin CBD gummies</a> offer the same combination in an edible format for customers who prefer not to use oil drops.</p>
+      <p>For retailers, this is a genuine opportunity: a dedicated "sleep shelf" featuring CBN resins, combination oils, and melatonin gummies captures customer intent immediately, rather than making them guess which of your regular CBD products might help with sleep.</p>
+      <p>These are general wellness products, not medical treatments — customers with ongoing sleep disorders should be encouraged to speak with a healthcare provider. For an independent overview of what's actually known about cannabis compounds and health, see the <a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">FDA's consumer update on cannabis and CBD products</a>.</p>
+    `,
+  },
+  {
+    slug: "is-cbd-legal-in-europe-country-guide",
+    title: "Is CBD Legal in Europe? Country-by-Country Guide 2026",
+    excerpt: "CBD is broadly legal across the EU under the 0.3% THC threshold, but enforcement, labeling rules, and product format restrictions vary meaningfully by country. Here's the practical picture for buyers and resellers.",
+    date: "2026-06-20",
+    readTime: "10 min read",
+    category: "Legal Guide",
+    content: `
+      <h2>Legal in Principle, Different in Practice</h2>
+      <p>CBD is legal to buy, sell, and ship across the European Union as long as it's derived from approved industrial hemp varieties and stays under the legal THC threshold. But "legal across the EU" doesn't mean identical rules everywhere — individual countries interpret novel food regulation, labeling requirements, and enforcement differently. Here's the practical country-by-country picture for our core delivery markets.</p>
+
+      <h3>France</h3>
+      <p>Our home market. France permits CBD products with THC below 0.3%, and the regulatory position has stabilized considerably since the legal challenges of the early 2020s. See our <a href="/wholesale-cbd-flowers-france">wholesale CBD flowers France</a> page for market-specific details.</p>
+
+      <h3>Germany</h3>
+      <p>Europe's largest CBD market by volume. Germany follows the standard 0.3% THC threshold and has a mature, well-established retail CBD sector. Details on our <a href="/wholesale-cbd-flowers-germany">Germany wholesale page</a>.</p>
+
+      <h3>Italy, Netherlands</h3>
+      <p>Both markets permit CBD flowers and derivatives under the standard EU THC threshold, with established wholesale and retail channels. See <a href="/wholesale-cbd-flowers-italy">Italy</a> and <a href="/wholesale-cbd-flowers-netherlands">Netherlands</a> for market specifics.</p>
+
+      <h3>Belgium, Spain, Luxembourg</h3>
+      <p>These markets follow the standard EU framework with generally favorable enforcement environments for compliant CBD products. See our dedicated pages for <a href="/cbd-wholesaler-belgium">Belgium</a>, <a href="/cbd-wholesaler-spain">Spain</a>, and <a href="/cbd-wholesaler-luxembourg">Luxembourg</a>.</p>
+
+      <h3>Switzerland</h3>
+      <p>Notably different: Switzerland is not an EU member and applies its own, more permissive THC threshold of 1% rather than 0.3%. This makes Switzerland one of the most mature CBD markets in Europe. See our <a href="/cbd-wholesaler-switzerland">Switzerland page</a> for details specific to that market.</p>
+
+      <h3>Malta</h3>
+      <p>An EU member with its own specific licensing framework for cannabis-related products. See our <a href="/cbd-wholesaler-malta">Malta wholesaler page</a> for market details.</p>
+
+      <h3>The One Rule That Doesn't Change: THC Limits Are Not Optional</h3>
+      <p>Regardless of country-specific nuance, every product we sell is independently lab-tested and verified below the applicable legal THC limit before it's listed — see our <a href="/quality-and-testing">quality and testing standards</a> for how that verification works. For products marketed as THC edibles, that means strictly under 0.20% THC per our <a href="/legal-cannabis-europe">legal cannabis guide</a>, not the 0.3% flower/resin threshold.</p>
+      <p>Regulation continues to evolve — the EU's own Novel Food framework, which governs how CBD extracts can be marketed as food or supplements, is still being finalized country by country. For the official, current status of CBD under EU Novel Food rules, see the <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">European Commission's Novel Food decisions page</a>.</p>
+    `,
+  },
+  {
+    slug: "how-to-store-cbd-flowers-resins-fresh",
+    title: "How to Store CBD Flowers and Resins to Keep Them Fresh",
+    excerpt: "CBD flower loses potency and aroma when exposed to light, air, heat, or the wrong humidity. Here's how to store flowers and resins properly, whether you're holding retail stock or a personal supply.",
+    date: "2026-07-01",
+    readTime: "6 min read",
+    category: "Product Guide",
+    content: `
+      <h2>Freshness Is a Storage Problem, Not Just a Harvest Problem</h2>
+      <p>A perfectly grown, perfectly cured CBD flower can still degrade quickly if it's stored badly afterward. Light, air exposure, heat, and incorrect humidity all accelerate the breakdown of cannabinoids and terpenes — which means storage matters just as much as sourcing quality in the first place, for retailers holding stock and individual buyers alike.</p>
+
+      <h3>The Four Enemies of Fresh Flower</h3>
+      <ul>
+        <li><strong>Light:</strong> UV exposure degrades cannabinoids over time. Store flower in opaque containers, not clear jars on a sunlit shelf.</li>
+        <li><strong>Air:</strong> Oxygen exposure dries out flower and accelerates terpene loss, which is why the aroma fades before the potency does. Airtight containers are essential.</li>
+        <li><strong>Heat:</strong> Warm storage accelerates degradation. Cool, stable room temperature is ideal — avoid storing near windows, heaters, or in warm stockrooms.</li>
+        <li><strong>Humidity:</strong> Too dry and the flower becomes brittle, losing trichomes (where most cannabinoids and terpenes are concentrated) at the slightest handling. Too humid and mold risk increases. A stable humidity range in the mid-to-high 50s percent is generally recommended for cured flower.</li>
+      </ul>
+
+      <h3>Practical Storage for Retailers</h3>
+      <p>If you're holding wholesale stock of <a href="/collections/cbd-flowers">CBD flowers</a>, airtight glass or food-grade containers stored in a cool, dark stockroom will preserve quality far longer than bins or bags left under retail lighting. For higher-volume inventory, humidity-control packs (widely used in the cigar and premium tobacco industry) are a low-cost way to maintain the right moisture range across a whole batch.</p>
+
+      <h3>Resins Are More Forgiving, But Not Immune</h3>
+      <p><a href="/collections/cbd-resins">CBD resins and hash</a> are generally more stable than flower — less surface area exposed to air, and a denser structure that resists moisture loss. Still, the same principles apply: keep resins wrapped or in sealed containers, away from heat and direct light, and they'll hold their quality significantly longer than flower stored the same way.</p>
+
+      <h3>Test Before You Commit to Storage-Heavy Stock</h3>
+      <p>If you're unsure how a specific strain holds up over weeks of storage, our <a href="/cbd-sample-packs">sample packs</a> are a low-risk way to test a small quantity's shelf behavior before ordering the volume you'd need to justify long-term storage.</p>
+      <p>For science-based guidance on hemp flower drying, curing, and post-harvest handling, see <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">Oregon State University Extension's guide to post-harvest processing of hemp flowers</a>.</p>
     `,
   },
 ];
