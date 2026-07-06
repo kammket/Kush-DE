@@ -3,6 +3,7 @@ import '../styles/global.css';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import TrustStrip from '../components/TrustStrip.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
+import CompareBar from '../components/CompareBar.astro';
 import { defaultLocale, allLocales, localeOgLocale, type Locale } from '../i18n/config';
 import { t, getLocalePath, getPathWithoutLocale, getAbsoluteLocaleUrl } from '../i18n/utils';
 import { products } from '../data/products';
@@ -458,6 +459,7 @@ const searchNoResults: Record<string, string> = {
         <div>
           <h3 class="font-semibold mb-4">{t(locale, 'footer.information')}</h3>
           <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="/find-your-product" class="hover:text-white transition-colors">{locale === 'fr' ? 'Trouvez Votre Produit' : locale === 'de' ? 'Finden Sie Ihr Produkt' : locale === 'es' ? 'Encuentra Tu Producto' : locale === 'it' ? 'Trova il Tuo Prodotto' : locale === 'nl' ? 'Vind Uw Product' : locale === 'fi' ? 'Löydä Tuotteesi' : locale === 'pt' ? 'Encontre o Seu Produto' : 'Find Your Product'}</a></li>
             <li><a href={lp('/blog')} class="hover:text-white transition-colors">{t(locale, 'nav.blog')}</a></li>
             <li><a href={lp('/about')} class="hover:text-white transition-colors">{t(locale, 'footer.whoAreWe')}</a></li>
             <li><a href={lp('/shipping')} class="hover:text-white transition-colors">{t(locale, 'nav.shipping')}</a></li>
@@ -592,6 +594,9 @@ const searchNoResults: Record<string, string> = {
 
   <!-- WhatsApp Button -->
   <WhatsAppButton locale={locale} />
+
+  <!-- Product Compare Bar -->
+  <CompareBar locale={locale} />
 
   <style is:global>
     @keyframes slide-in-right {

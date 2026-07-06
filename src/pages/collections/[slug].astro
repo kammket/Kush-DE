@@ -2,8 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RecentlyViewed from '../../components/RecentlyViewed.astro';
+import FAQ from '../../components/FAQ.astro';
 import { categories, getProductsByCategory, getCategoryBySlug } from '../../data/products';
 import { getCategorySeoContent } from '../../data/translations/categorySeo';
+import { getCategoryFaqs } from '../../data/translations/categoryFaqs';
 import { strainGuides } from '../../data/strains';
 
 export function getStaticPaths() {
@@ -22,6 +25,7 @@ const outOfStockProducts = allProducts.filter(p => !p.inStock);
 
 const seoContent = getCategorySeoContent('en', slug!);
 const otherCategories = categories.filter(c => c.slug !== slug);
+const faqItems = getCategoryFaqs('en', slug!);
 
 const collectionJsonLd = {
   "@context": "https://schema.org",
@@ -91,7 +95,8 @@ const breadcrumbs = [
   <!-- Products Grid -->
   <section class="py-10 md:py-14" aria-label={`${category.name} products`}>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+      <h2 class="sr-only">{category.name} Products</h2>
+
       {/* Sort / Filter Bar */}
       <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-200">
         <p class="text-sm text-gray-600">
@@ -112,7 +117,7 @@ const breadcrumbs = [
       {inStockProducts.length > 0 && (
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
           {inStockProducts.map(product => (
-            <ProductCard product={product} />
+            <ProductCard product={product} showCompare={true} />
           ))}
         </div>
       )}
@@ -123,7 +128,7 @@ const breadcrumbs = [
           <h2 class="text-lg font-semibold text-gray-500 mb-4">Currently Unavailable</h2>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 opacity-75">
             {outOfStockProducts.map(product => (
-              <ProductCard product={product} />
+              <ProductCard product={product} showCompare={true} />
             ))}
           </div>
         </div>
@@ -191,4 +196,8 @@ const breadcrumbs = [
       </div>
     </div>
   </section>
+
+  {faqItems.length > 0 && <FAQ title={`${category.name} — FAQ`} items={faqItems} />}
+
+  <RecentlyViewed />
 </BaseLayout>

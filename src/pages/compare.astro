@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { products } from '../data/products';
+
+const compareIndex = products.map(p => ({
+  s: p.slug, n: p.name, i: p.image, p: p.price, c: p.category,
+  cbd: p.cbdContent || '—', thc: p.thcContent || '<0.3%',
+  supplier: p.supplier, inStock: p.inStock,
+}));
+---
+
+<BaseLayout
+  title="Compare Products | Greens Farmhouse"
+  description="Compare wholesale CBD products side by side."
+  noindex={true}
+  noHreflang={true}
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+    <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Compare Products</h1>
+    <div id="compare-empty" class="hidden text-center py-16 text-gray-500">
+      <p class="mb-4">No products selected to compare.</p>
+      <a href="/collections" class="text-primary font-semibold hover:underline">Browse products →</a>
+    </div>
+    <div id="compare-table-wrap" class="hidden overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr id="compare-header-row"></tr>
+        </thead>
+        <tbody id="compare-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="application/json" id="compare-index" set:html={JSON.stringify(compareIndex)} />
+  <script>
+    function initComparePage() {
+      const indexEl = document.getElementById('compare-index');
+      const headerRow = document.getElementById('compare-header-row');
+      const body = document.getElementById('compare-body');
+      const tableWrap = document.getElementById('compare-table-wrap');
+      const empty = document.getElementById('compare-empty');
+      if (!indexEl || !headerRow || !body || !tableWrap || !empty) return;
+
+      const all: { s: string; n: string; i: string; p: string; c: string; cbd: string; thc: string; supplier: string; inStock: boolean }[] = JSON.parse(indexEl.textContent || '[]');
+      const params = new URLSearchParams(location.search);
+      const slugs = (params.get('slugs') || '').split(',').filter(Boolean);
+      const selected = slugs.map(s => all.find(p => p.s === s)).filter(Boolean) as typeof all;
+
+      if (selected.length === 0) {
+        empty.classList.remove('hidden');
+        return;
+      }
+      tableWrap.classList.remove('hidden');
+
+      headerRow.innerHTML = `<th class="text-left p-3 border-b-2 border-gray-200 bg-gray-50 sticky left-0 w-32">Product</th>` +
+        selected.map(p => `
+          <th class="p-3 border-b-2 border-gray-200 bg-gray-50 min-w-[180px]">
+            <a href="/products/${p.s}" class="block">
+              <img src="${p.i}" alt="${p.n}" class="w-20 h-20 rounded-lg object-cover mx-auto mb-2 border border-gray-200" />
+              <span class="block font-semibold text-gray-900 hover:text-primary">${p.n}</span>
+            </a>
+          </th>`).join('');
+
+      const rows: [string, (p: typeof all[0]) => string][] = [
+        ['Price', p => `<span class="font-bold text-primary">${p.p}</span>`],
+        ['Category', p => p.c],
+        ['CBD Content', p => p.cbd],
+        ['THC Content', p => p.thc],
+        ['Supplier', p => p.supplier],
+        ['Availability', p => p.inStock ? '<span class="text-green-600 font-medium">✓ In Stock</span>' : '<span class="text-red-500">Sold Out</span>'],
+      ];
+
+      body.innerHTML = rows.map(([label, getValue]) => `
+        <tr>
+          <td class="p-3 border-b border-gray-100 font-medium text-gray-700 sticky left-0 bg-white">${label}</td>
+          ${selected.map(p => `<td class="p-3 border-b border-gray-100 text-center">${getValue(p)}</td>`).join('')}
+        </tr>`).join('') + `
+        <tr>
+          <td class="p-3 sticky left-0 bg-white"></td>
+          ${selected.map(p => `<td class="p-3 text-center"><a href="/products/${p.s}" class="inline-block px-4 py-2 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary-dark transition-colors">View Product</a></td>`).join('')}
+        </tr>`;
+    }
+    initComparePage();
+    document.addEventListener('astro:after-swap', initComparePage);
+  </script>
+</BaseLayout>

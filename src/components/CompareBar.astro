@@ -1,0 +1,52 @@
+---
+const localePrefix = Astro.props.locale && Astro.props.locale !== 'en' ? `/${Astro.props.locale}` : '';
+---
+
+<div id="compare-bar" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-gray-900 text-white rounded-2xl shadow-2xl px-5 py-3 flex items-center gap-4 max-w-[95vw]">
+  <span id="compare-bar-count" class="text-sm font-medium whitespace-nowrap"></span>
+  <div id="compare-bar-thumbs" class="flex items-center gap-1.5"></div>
+  <a id="compare-bar-link" href="#" class="bg-primary hover:bg-primary-dark px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap transition-colors">Compare Now</a>
+  <button type="button" id="compare-bar-clear" class="text-gray-400 hover:text-white text-sm whitespace-nowrap">Clear</button>
+</div>
+
+<script define:vars={{ localePrefix }}>
+  function initCompareBar() {
+    const KEY = 'cbd_compare';
+    const bar = document.getElementById('compare-bar');
+    const countEl = document.getElementById('compare-bar-count');
+    const thumbsEl = document.getElementById('compare-bar-thumbs');
+    const link = document.getElementById('compare-bar-link');
+    const clearBtn = document.getElementById('compare-bar-clear');
+    if (!bar || !countEl || !thumbsEl || !link || !clearBtn) return;
+
+    function getList() {
+      try { return JSON.parse(sessionStorage.getItem(KEY) || '[]'); } catch { return []; }
+    }
+
+    function render() {
+      const list = getList();
+      if (list.length === 0) {
+        bar.classList.add('hidden');
+        return;
+      }
+      bar.classList.remove('hidden');
+      countEl.textContent = `${list.length} to compare`;
+      thumbsEl.innerHTML = list.map(p => `<img src="${p.image}" alt="${p.name}" class="w-8 h-8 rounded object-cover border border-gray-700" />`).join('');
+      link.href = `${localePrefix}/compare?slugs=${list.map(p => p.slug).join(',')}`;
+    }
+
+    if (clearBtn.dataset.bound !== 'true') {
+      clearBtn.dataset.bound = 'true';
+      clearBtn.addEventListener('click', () => {
+        sessionStorage.removeItem(KEY);
+        render();
+        window.dispatchEvent(new CustomEvent('compare:updated'));
+      });
+    }
+
+    render();
+    window.addEventListener('compare:updated', render);
+  }
+  initCompareBar();
+  document.addEventListener('astro:after-swap', initCompareBar);
+</script>

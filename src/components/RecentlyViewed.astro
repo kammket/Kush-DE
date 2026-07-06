@@ -1,0 +1,85 @@
+---
+import { defaultLocale, type Locale } from '../i18n/config';
+import { getLocalePath } from '../i18n/utils';
+import type { Product } from '../data/products';
+
+interface Props {
+  currentProduct?: Product;
+  locale?: Locale;
+}
+const { currentProduct, locale = defaultLocale as Locale } = Astro.props;
+const localePrefix = locale === 'en' ? '' : `/${locale}`;
+
+const tr: Record<string, string> = {
+  en: 'Recently Viewed', fr: 'Consultés Récemment', de: 'Zuletzt Angesehen',
+  es: 'Vistos Recientemente', it: 'Visti di Recente', nl: 'Recent Bekeken',
+  fi: 'Äskettäin Katsotut', pt: 'Vistos Recentemente',
+};
+---
+
+<section id="recently-viewed-section" class="hidden py-10 md:py-14 border-t border-gray-100" aria-label={tr[locale] || tr.en}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">{tr[locale] || tr.en}</h2>
+    <div id="recently-viewed-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+  </div>
+</section>
+
+{currentProduct && (
+  <script type="application/json" id="current-product-data" set:html={JSON.stringify({
+    slug: currentProduct.slug,
+    name: currentProduct.name,
+    image: currentProduct.image,
+    price: currentProduct.price,
+    category: currentProduct.category,
+  })} />
+)}
+<script define:vars={{ localePrefix }}>
+  function initRecentlyViewed() {
+    const KEY = 'cbd_recently_viewed';
+    const MAX_ITEMS = 8;
+
+    function getList() {
+      try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; }
+    }
+    function saveList(list) {
+      localStorage.setItem(KEY, JSON.stringify(list.slice(0, MAX_ITEMS)));
+    }
+
+    // Track current product if present on this page
+    const dataEl = document.getElementById('current-product-data');
+    if (dataEl) {
+      try {
+        const product = JSON.parse(dataEl.textContent || 'null');
+        if (product) {
+          const list = getList().filter(p => p.slug !== product.slug);
+          list.unshift(product);
+          saveList(list);
+        }
+      } catch {}
+    }
+
+    // Render, excluding the current product
+    const currentSlug = dataEl ? JSON.parse(dataEl.textContent || '{}').slug : null;
+    const list = getList().filter(p => p.slug !== currentSlug);
+    const section = document.getElementById('recently-viewed-section');
+    const grid = document.getElementById('recently-viewed-grid');
+    if (!section || !grid) return;
+
+    if (list.length === 0) {
+      section.classList.add('hidden');
+      return;
+    }
+    section.classList.remove('hidden');
+    grid.innerHTML = list.slice(0, 6).map(p => `
+      <a href="${localePrefix}/products/${p.slug}" class="block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+        <img src="${p.image}" alt="${p.name}" width="200" height="200" class="w-full aspect-square object-cover" loading="lazy" decoding="async" />
+        <div class="p-3">
+          <p class="text-xs text-gray-500 truncate">${p.category}</p>
+          <p class="text-sm font-medium text-gray-900 line-clamp-2 mt-0.5">${p.name}</p>
+          <p class="text-sm font-bold text-primary mt-1">${p.price}</p>
+        </div>
+      </a>`).join('');
+  }
+  initRecentlyViewed();
+  document.addEventListener('astro:after-swap', initRecentlyViewed);
+</script>

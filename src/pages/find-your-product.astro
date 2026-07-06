@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import WaLink from '../components/WaLink.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Find Your Product" },
+];
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent("Hello! I'm not sure which product is right for me — can you help me choose?")}`;
+---
+
+<BaseLayout
+  title="Find Your CBD Product | Product Finder — Greens Farmhouse"
+  description="Answer a few quick questions to find the right wholesale CBD product for your shop — flowers, resins, oils, or edibles."
+  canonicalURL="https://greensfarmhouse.com/find-your-product"
+  noHreflang={true}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🧭 Product Finder</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Find the Right Product in 3 Questions</h1>
+        <p class="text-gray-600">Not sure where to start in a 91-product catalog? Answer a few quick questions and we'll point you to the right collection.</p>
+      </div>
+
+      <!-- Progress -->
+      <div class="flex items-center gap-2 mb-8" id="pf-progress">
+        <div class="h-1.5 flex-1 rounded-full bg-primary" data-step-dot="1"></div>
+        <div class="h-1.5 flex-1 rounded-full bg-gray-200" data-step-dot="2"></div>
+        <div class="h-1.5 flex-1 rounded-full bg-gray-200" data-step-dot="3"></div>
+      </div>
+
+      <!-- Step 1: product type -->
+      <div id="pf-step-1" class="pf-step">
+        <h2 class="text-xl font-bold text-gray-900 mb-5">What are you looking for?</h2>
+        <div class="grid gap-3">
+          <button type="button" class="pf-option text-left px-5 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-colors" data-type="flowers">
+            <span class="block font-semibold text-gray-900">🌿 CBD Flowers</span>
+            <span class="block text-sm text-gray-500 mt-0.5">Greenhouse or indoor hemp flowers, by the gram or kilo</span>
+          </button>
+          <button type="button" class="pf-option text-left px-5 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-colors" data-type="resins">
+            <span class="block font-semibold text-gray-900">🍫 CBD Resins & Hash</span>
+            <span class="block text-sm text-gray-500 mt-0.5">Traditional hash, pollen, and premium concentrates</span>
+          </button>
+          <button type="button" class="pf-option text-left px-5 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-colors" data-type="oils">
+            <span class="block font-semibold text-gray-900">💧 CBD Oils</span>
+            <span class="block text-sm text-gray-500 mt-0.5">Retail bottles or bulk per liter for white-label</span>
+          </button>
+          <button type="button" class="pf-option text-left px-5 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-colors" data-type="edibles">
+            <span class="block font-semibold text-gray-900">🍬 Gummies & Edibles</span>
+            <span class="block text-sm text-gray-500 mt-0.5">CBD gummies or legal THC edibles</span>
+          </button>
+          <button type="button" class="pf-option text-left px-5 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-colors" data-type="unsure">
+            <span class="block font-semibold text-gray-900">🤔 Not Sure — Ask Me More</span>
+            <span class="block text-sm text-gray-500 mt-0.5">Help me based on my business type</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: refine (content injected per step-1 answer) -->
+      <div id="pf-step-2" class="pf-step hidden">
+        <h2 id="pf-step-2-title" class="text-xl font-bold text-gray-900 mb-5"></h2>
+        <div id="pf-step-2-options" class="grid gap-3"></div>
+        <button type="button" id="pf-back-1" class="mt-5 text-sm text-gray-500 hover:text-primary">← Back</button>
+      </div>
+
+      <!-- Step 3: result -->
+      <div id="pf-step-3" class="pf-step hidden text-center">
+        <span class="text-5xl block mb-4">🎯</span>
+        <h2 class="text-xl font-bold text-gray-900 mb-2">Here's What We Recommend</h2>
+        <p id="pf-result-desc" class="text-gray-600 mb-6"></p>
+        <div class="flex flex-col gap-3 items-center">
+          <a id="pf-result-link" href="#" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+            View Recommended Products
+          </a>
+          <button type="button" id="pf-restart" class="text-sm text-gray-500 hover:text-primary mt-2">Start over</button>
+        </div>
+      </div>
+
+      <!-- Fallback -->
+      <div class="mt-10 pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500 mb-3">Still not sure? Talk to a real person.</p>
+        <WaLink href={waUrl} class="px-5 py-2.5 text-sm">Ask on WhatsApp</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function initProductFinder() {
+      const step1 = document.getElementById('pf-step-1');
+      const step2 = document.getElementById('pf-step-2');
+      const step3 = document.getElementById('pf-step-3');
+      const step2Title = document.getElementById('pf-step-2-title');
+      const step2Options = document.getElementById('pf-step-2-options');
+      const resultDesc = document.getElementById('pf-result-desc');
+      const resultLink = document.getElementById('pf-result-link') as HTMLAnchorElement | null;
+      const backBtn = document.getElementById('pf-back-1');
+      const restartBtn = document.getElementById('pf-restart');
+      const dots = document.querySelectorAll('[data-step-dot]');
+      if (!step1 || !step2 || !step3 || !step2Title || !step2Options || !resultDesc || !resultLink) return;
+
+      function setDot(n: number) {
+        dots.forEach((d, i) => {
+          d.classList.toggle('bg-primary', i < n);
+          d.classList.toggle('bg-gray-200', i >= n);
+        });
+      }
+
+      function showStep(n: number) {
+        step1!.classList.toggle('hidden', n !== 1);
+        step2!.classList.toggle('hidden', n !== 2);
+        step3!.classList.toggle('hidden', n !== 3);
+        setDot(n);
+      }
+
+      const refineOptions: Record<string, { title: string; options: { label: string; desc: string; url: string; result: string }[] }> = {
+        flowers: {
+          title: 'Budget-friendly or premium quality?',
+          options: [
+            { label: '💰 Budget-Friendly', desc: 'Best value, greenhouse-grown', url: '/cbd-hemp-flowers-greenhouse', result: 'Greenhouse flowers offer the best price per gram while staying lab-tested and compliant — ideal for volume orders.' },
+            { label: '💎 Premium Quality', desc: 'Indoor-grown, top terpene profiles', url: '/cbd-hemp-flowers-indoor', result: 'Indoor-grown flowers give you the richest aroma and highest bag appeal — perfect for a premium shelf.' },
+            { label: '📦 Just Show Me Everything', desc: 'Browse the full flower catalog', url: '/collections/cbd-flowers', result: 'Here is our full range of wholesale CBD flowers, greenhouse and indoor.' },
+          ],
+        },
+        resins: {
+          title: 'What kind of resin are you after?',
+          options: [
+            { label: '🌙 Sleep Support (CBN)', desc: 'CBN-focused resins for relaxation', url: '/cbn-sleep-products', result: 'Our CBN resins and sleep-formula products are built for the fastest-growing cannabinoid segment.' },
+            { label: '🍫 Traditional & Premium', desc: 'Hash styles and concentrates', url: '/collections/cbd-resins', result: 'From traditional hash to 85% CBD crumble — here is our full resin range.' },
+            { label: '0️⃣ Guaranteed 0% THC', desc: 'For strictly regulated markets', url: '/collections/cbd-resins', result: 'Our 0% THC resin line is verified THC-free by lab certificate — browse the collection to find these references.' },
+          ],
+        },
+        oils: {
+          title: 'Retail, bulk, or sleep support?',
+          options: [
+            { label: '🏪 Retail Bottles', desc: 'Ready-to-sell, flavored or organic', url: '/collections/cbd-oils', result: 'Retail-ready CBD oils in multiple concentrations and flavors, ready to stock.' },
+            { label: '🏷️ Bulk / White Label', desc: 'Per-liter for your own brand', url: '/white-label-cbd-europe', result: 'Bulk oils by the liter, distillate, and isolate — everything you need to launch your own CBD brand.' },
+            { label: '🌙 Sleep Support', desc: 'CBD+CBN+melatonin formula', url: '/cbn-sleep-products', result: 'Our specialty sleep oil combines CBD, CBN, and melatonin for the sleep-support market.' },
+          ],
+        },
+        edibles: {
+          title: 'CBD or legal THC?',
+          options: [
+            { label: '🍬 CBD Gummies', desc: 'Full-spectrum, incl. melatonin formula', url: '/collections/cbd-gummies', result: 'CBD gummies including our melatonin night formula — a fast-rotating impulse product.' },
+            { label: '⚖️ Legal THC Edibles', desc: '<0.20% THC, EU-compliant', url: '/collections/thc-gummies', result: 'Precisely dosed THC gummies under the EU legal limit — a genuine differentiator for your shop.' },
+            { label: '📖 Explain the Legal Difference', desc: 'What\'s actually legal in the EU', url: '/legal-cannabis-europe', result: 'Here is the full breakdown of what\'s legal to sell in the EU — CBD, THC edibles, and where the line is.' },
+          ],
+        },
+        unsure: {
+          title: 'What best describes your business?',
+          options: [
+            { label: '🚬 Tobacco Shop', desc: 'Adding CBD to an existing shop', url: '/cbd-in-tobacco-shops', result: 'Our guide for tobacco shops covers the best-selling products and margins for your specific customer base.' },
+            { label: '🛒 Online Store', desc: 'E-commerce / dropshipping', url: '/cbd-dropshipping-wholesale-europe', result: 'Low-minimum, fast-dispatch wholesale built for how online CBD stores actually order.' },
+            { label: '🌱 New CBD Shop', desc: 'Starting from scratch', url: '/cbd-sample-packs', result: 'Start with sample packs to test our quality across categories before committing to a full wholesale order.' },
+          ],
+        },
+      };
+
+      document.querySelectorAll<HTMLButtonElement>('.pf-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const type = btn.dataset.type;
+          if (!type || !refineOptions[type]) return;
+          const config = refineOptions[type];
+          step2Title.textContent = config.title;
+          step2Options.innerHTML = '';
+          config.options.forEach(opt => {
+            const optBtn = document.createElement('button');
+            optBtn.type = 'button';
+            optBtn.className = 'pf-refine-option text-left px-5 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-colors';
+            optBtn.innerHTML = `<span class="block font-semibold text-gray-900">${opt.label}</span><span class="block text-sm text-gray-500 mt-0.5">${opt.desc}</span>`;
+            optBtn.addEventListener('click', () => {
+              resultDesc.textContent = opt.result;
+              resultLink.href = opt.url;
+              showStep(3);
+            });
+            step2Options.appendChild(optBtn);
+          });
+          showStep(2);
+        });
+      });
+
+      backBtn?.addEventListener('click', () => showStep(1));
+      restartBtn?.addEventListener('click', () => showStep(1));
+
+      showStep(1);
+    }
+    initProductFinder();
+    document.addEventListener('astro:after-swap', initProductFinder);
+  </script>
+</BaseLayout>

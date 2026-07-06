@@ -6,13 +6,28 @@ import { getLocalePath } from '../i18n/utils';
 interface Props {
   product: Product;
   locale?: Locale;
+  showCompare?: boolean;
 }
 
-const { product, locale = defaultLocale as Locale } = Astro.props;
+const { product, locale = defaultLocale as Locale, showCompare = false } = Astro.props;
 const productUrl = getLocalePath(`/products/${product.slug}`, locale);
 ---
 
-<article class="product-card group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<article class="product-card group relative bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+  {showCompare && (
+    <label class="compare-checkbox absolute top-2 right-2 z-10 flex items-center gap-1.5 bg-white/95 backdrop-blur px-2 py-1 rounded-lg shadow-sm border border-gray-200 text-xs font-medium text-gray-700 cursor-pointer">
+      <input
+        type="checkbox"
+        class="compare-input w-3.5 h-3.5 accent-primary"
+        data-slug={product.slug}
+        data-name={product.name}
+        data-image={product.image}
+        data-price={product.price}
+        data-category={product.category}
+      />
+      Compare
+    </label>
+  )}
   <a href={productUrl} class="block">
     <!-- Image Container -->
     <div class="relative aspect-square overflow-hidden bg-gray-100">
@@ -68,7 +83,7 @@ const productUrl = getLocalePath(`/products/${product.slug}`, locale);
       
       <div class="mt-2 flex items-center gap-2">
         {product.originalPrice && (
-          <span class="text-sm text-gray-400 line-through">{product.originalPrice}</span>
+          <span class="text-sm text-gray-500 line-through">{product.originalPrice}</span>
         )}
         <span class="text-lg font-bold text-primary">{product.price}</span>
       </div>
@@ -114,6 +129,32 @@ const productUrl = getLocalePath(`/products/${product.slug}`, locale);
 
 <script>
   import { addToCart } from '../scripts/cart';
+  import { toggleCompare, getCompareList } from '../scripts/compare';
+
+  function initCompareCheckboxes() {
+    const list = getCompareList();
+    document.querySelectorAll<HTMLInputElement>('.compare-input').forEach(input => {
+      if (input.dataset.bound) return;
+      input.dataset.bound = 'true';
+
+      input.checked = list.some(p => p.slug === input.dataset.slug);
+
+      input.addEventListener('change', () => {
+        const added = toggleCompare({
+          slug: input.dataset.slug!,
+          name: input.dataset.name!,
+          image: input.dataset.image!,
+          price: input.dataset.price!,
+          category: input.dataset.category!,
+        });
+        if (!added && input.checked) {
+          // Hit the 3-item cap
+          input.checked = false;
+          alert('You can compare up to 3 products at a time. Remove one first.');
+        }
+      });
+    });
+  }
 
   function initCardButtons() {
     document.querySelectorAll<HTMLButtonElement>('.add-to-cart-card').forEach(btn => {
@@ -145,5 +186,7 @@ const productUrl = getLocalePath(`/products/${product.slug}`, locale);
   }
 
   initCardButtons();
+  initCompareCheckboxes();
   document.addEventListener('astro:after-swap', initCardButtons);
+  document.addEventListener('astro:after-swap', initCompareCheckboxes);
 </script>
