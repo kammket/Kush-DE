@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Wholesale for E-commerce Sellers" },
+];
+
+const startPacks = ['flower-discovery-pack', 'resins-discovery-pack', 'cbd-oil-10-cherry', 'bonbons-1400mg-strawberry'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent("Hello! I run an online store and I'm looking for a CBD wholesale supplier for regular restocking. Can you tell me more?")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CBD Wholesale for E-commerce Sellers: Fast, Low-Minimum Restocking",
+  "description": "CBD wholesale supply for online sellers and e-commerce resellers. Low €150 minimum order, 24-hour dispatch, no long-term contract. Order what you need, when you need it.",
+  "url": "https://greensfarmhouse.com/cbd-dropshipping-wholesale-europe",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06"
+};
+
+const faqItems = [
+  {
+    question: "Do you offer CBD dropshipping?",
+    answer: "We don't ship blind orders directly to your end customers under your brand — what we offer is fast, low-minimum wholesale fulfillment: you order stock, we dispatch within 24 hours, and you fulfill your own customer orders. For most online sellers this works better anyway, since you keep full control of packaging, branding and delivery times."
+  },
+  {
+    question: "What is the minimum order for online sellers?",
+    answer: "€150 — low enough to restock little and often without tying up capital in a large inventory, which suits the way most online CBD stores actually sell: testing products, watching what moves, and reordering the winners."
+  },
+  {
+    question: "How fast do orders ship?",
+    answer: "Within 24 hours from our French warehouse, with tracking, to anywhere in Europe. That turnaround is what lets online sellers run lean inventory instead of stockpiling — order this week, have it in your own warehouse or ready to ship within days."
+  },
+  {
+    question: "Can I start with a small test order?",
+    answer: "Yes. Discovery packs and single-unit sample orders let you list a new product on your store before committing to volume. Once you know what sells, scale up the same SKU with a full wholesale order."
+  },
+  {
+    question: "Is there a contract or subscription?",
+    answer: "No. Order when you need to, skip when you don't. There's no monthly commitment or exclusivity requirement — many of our online-seller customers order every few weeks based on their own sales velocity."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="CBD Wholesale for Online Sellers | Low Minimum, Fast Restocking — Europe"
+  description="CBD wholesale supply for e-commerce sellers and online resellers. €150 minimum order, 24h dispatch, no contract. Test with sample packs, restock winners. Ships across Europe."
+  canonicalURL="https://greensfarmhouse.com/cbd-dropshipping-wholesale-europe"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-sky-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🛒 Built for Online Sellers</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        CBD Wholesale for <span class="text-primary">E-commerce Sellers</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Running a CBD store online? Order what you need, when you need it — a €150 minimum,
+        no contract, no exclusivity, and dispatch within 24 hours. Test new products with sample
+        packs before committing to volume, and restock winners in a few clicks.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Ask About Restocking on WhatsApp</WaLink>
+        <a href="/collections" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Browse the Full Catalog
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why it works for online sellers -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Built for How Online Stores Actually Sell</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">💶</span>
+          <h3 class="font-bold text-lg mb-2">Low €150 Minimum</h3>
+          <p class="text-sm text-gray-600">Restock little and often instead of tying up capital in a large inventory you're not sure will sell.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">⚡</span>
+          <h3 class="font-bold text-lg mb-2">24-Hour Dispatch</h3>
+          <p class="text-sm text-gray-600">Order this week, have stock in hand within days. No need to pre-buy months of inventory to avoid stockouts.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🧪</span>
+          <h3 class="font-bold text-lg mb-2">Test Before You Commit</h3>
+          <p class="text-sm text-gray-600">List a new product with a sample or small order first. Scale up the SKUs that actually convert on your store.</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🔓</span>
+          <h3 class="font-bold text-lg mb-2">No Contract, No Exclusivity</h3>
+          <p class="text-sm text-gray-600">Order on your own schedule. No monthly minimums, no long-term commitment — just wholesale pricing when you need it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start small -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Start With a Test Order</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Before adding a new SKU to your store, try it yourself. These are popular starting points for online sellers building out a category.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {startPacks.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/cbd-sample-packs" class="text-primary font-semibold hover:underline">See all sample packs →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">CBD Wholesale for Online Sellers — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Ready to Stock Your Store?</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Tell us what you're selling on WhatsApp — we'll point you to the right products and get your first order dispatched within 24 hours.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/white-label-cbd-europe" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Launch Your Own Brand Instead</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
