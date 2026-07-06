@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 import FAQ from '../components/FAQ.astro';
+import LegalThcSection from '../components/LegalThcSection.astro';
 import Testimonials from '../components/Testimonials.astro';
 import { categories, getFeaturedProducts, getProductsByCategory } from '../data/products';
 
@@ -137,6 +138,9 @@ const faqJsonLd = {
       </div>
     </div>
   </section>
+
+  <!-- Legal THC & CBD -->
+  <LegalThcSection />
 
   <!-- Trusted By Professionals -->
   <section class="py-8 bg-white border-b border-gray-100" aria-label="Trusted by professionals across Europe">
