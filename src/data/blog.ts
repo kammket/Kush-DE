@@ -91,7 +91,48 @@ export const blogPosts: BlogPost[] = [
       
       <h3>Profit Margin Comparison</h3>
       <p>Both categories offer excellent margins, but the dynamics differ. Flowers move in higher volume at moderate margins, while specialty resins like crumbles and concentrates offer higher per-unit margins. A balanced inventory of both maximizes your revenue potential.</p>
-      
+      <table>
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>CBD Flowers</th>
+            <th>CBD Resins</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wholesale entry price</td>
+            <td>From €0.19/g (greenhouse)</td>
+            <td>From €1-3/g (pollen)</td>
+          </tr>
+          <tr>
+            <td>Typical retail margin</td>
+            <td>40-60%</td>
+            <td>50-80% (concentrates highest)</td>
+          </tr>
+          <tr>
+            <td>Sales volume</td>
+            <td>Higher — broadest customer appeal</td>
+            <td>Lower — more selective buyers</td>
+          </tr>
+          <tr>
+            <td>Shelf life</td>
+            <td>6-12 months, needs airtight storage</td>
+            <td>12-24 months, more stable</td>
+          </tr>
+          <tr>
+            <td>Best for</td>
+            <td>Walk-in traffic, new customers, tester jars</td>
+            <td>Repeat customers, higher basket value</td>
+          </tr>
+          <tr>
+            <td>Storage/display needs</td>
+            <td>Airtight containers, humidity control</td>
+            <td>Simple, compact, minimal upkeep</td>
+          </tr>
+        </tbody>
+      </table>
+
       <h3>Our Recommendation</h3>
       <p>Stock both categories with a emphasis on your market's preferences. Start with 60% flowers and 40% resins, then adjust based on sales data. Don't forget to include discovery packs — they're excellent for attracting new customers.</p>
     `,

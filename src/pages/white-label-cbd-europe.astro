@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentByline from '../components/ContentByline.astro';
 import ProductCard from '../components/ProductCard.astro';
 import WaLink from '../components/WaLink.astro';
 import { getProductBySlug } from '../data/products';
@@ -73,9 +74,10 @@ const faqJsonLd = {
   <section class="py-12 md:py-20 bg-gradient-to-br from-primary/5 via-white to-accent/10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🏷️ Your Brand, Our Production</span>
-      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-3">
         White Label CBD in Europe — <span class="text-primary">Launch Your Own Brand</span>
       </h1>
+      <div class="mb-4 flex justify-center"><ContentByline /></div>
       <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
         Skip years of production setup. We supply the lab-tested base products — bulk CBD oils per liter,
         90% distillate, 99.8% isolate and bulk flowers — you put your brand on them. Full compliance

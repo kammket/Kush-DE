@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentByline from '../../components/ContentByline.astro';
 import { blogPosts } from '../../data/blog';
 
 export function getStaticPaths() {
@@ -69,17 +71,14 @@ const jsonLd = {
           <span class="text-xs text-gray-500">{post.readTime}</span>
         </div>
         <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{post.title}</h1>
-        <div class="flex items-center gap-4 text-sm text-gray-500">
-          <time datetime={post.date}>
-            {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </time>
-          <span>•</span>
-          <span>By Greens Farmhouse Team</span>
-        </div>
+        <ContentByline date={post.date} />
       </header>
 
       <!-- Content -->
-      <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-a:text-primary prose-strong:text-gray-900" set:html={post.content} />
+      <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-a:text-primary prose-strong:text-gray-900">
+        <QuickAnswer>{post.excerpt}</QuickAnswer>
+        <div set:html={post.content} />
+      </div>
 
       <!-- CTA -->
       <div class="mt-12 p-8 bg-primary/5 rounded-2xl text-center">

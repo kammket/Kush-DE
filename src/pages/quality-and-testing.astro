@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import WaLink from '../components/WaLink.astro';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Quality & Testing" },
+];
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent("Hello! Can you send me the lab certificate (COA) for a product I'm interested in?")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Quality & Testing Standards | Greens Farmhouse",
+  "description": "How Greens Farmhouse sources, tests, and verifies every CBD product: European hemp farms, independent lab testing, and EU THC compliance.",
+  "url": "https://greensfarmhouse.com/quality-and-testing",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com"
+  }
+};
+---
+
+<BaseLayout
+  title="Quality & Testing Standards | How We Verify Every CBD Product — Greens Farmhouse"
+  description="How Greens Farmhouse sources, tests, and verifies every CBD product: European hemp farms, independent lab testing, and EU THC compliance for every batch."
+  canonicalURL="https://greensfarmhouse.com/quality-and-testing"
+  jsonLd={jsonLd}
+  noHreflang={true}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-primary/5 via-white to-green-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🔬 Our Standards</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        How We Guarantee Every Product Is <span class="text-primary">Safe, Legal, and What the Label Says</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+        Every product we sell is grown or sourced from vetted European partners, independently
+        lab-tested, and verified below the EU legal THC limit before it ever reaches a customer.
+        Here's exactly how that works.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sourcing -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start mb-12">
+        <span class="text-4xl">🌱</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Sourcing: Vetted European Partner Farms</h2>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Our flowers and hemp raw material come from partner farms in Europe, cultivated under greenhouse
+            and indoor conditions depending on the strain. We monitor these partnerships continuously — not
+            a one-time supplier check, but ongoing oversight of cultivation practices, harvest handling, and
+            drying/curing standards that affect the final product's quality and cannabinoid consistency.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            This is also why our catalog stays consistent: the same strain ordered this month and next month
+            comes from the same monitored supply chain, not a rotating cast of unknown sources.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start mb-12">
+        <span class="text-4xl">🧪</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Testing: Independent Labs, Every Batch</h2>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Every batch — not a sample from the harvest, every batch — is tested by independent, accredited
+            European laboratories before it's listed for sale. Testing verifies cannabinoid content (CBD, THC,
+            and where relevant CBG/CBN) and confirms THC stays below the applicable legal limit.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            A Certificate of Analysis (COA) exists for every product we sell. We don't publish every COA
+            on the site yet, but any customer can request the certificate for a specific product directly —
+            just message us on WhatsApp with the product name and we'll send it over.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start mb-12">
+        <span class="text-4xl">⚖️</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Compliance: Tracking EU Regulation, Country by Country</h2>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            EU hemp and CBD regulation is not uniform — the legal THC threshold, permitted product formats,
+            and labeling requirements vary by country. Our compliance approach starts from the strictest common
+            standard (THC below 0.3%, and below 0.20% for our THC edibles line) and tracks regulatory changes
+            in each market we ship to.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            This is also why some product categories exist as they do: our 0% THC resin and oil lines exist
+            specifically for markets and customers who need a guaranteed-zero-THC option, verified by lab
+            certificate rather than a marketing claim.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        <span class="text-4xl">🤝</span>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">Who Verifies This</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Our sourcing and quality team works directly with partner farms to monitor cultivation standards,
+            and coordinates lab testing and compliance tracking across the markets we serve. This is also the
+            team you reach when you ask a product question on WhatsApp — not a generic support queue.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Want to See a Specific Lab Certificate?</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Message us the product name on WhatsApp and we'll send you the COA directly.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Request a COA on WhatsApp</WaLink>
+        <a href="/collections" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Browse Products</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

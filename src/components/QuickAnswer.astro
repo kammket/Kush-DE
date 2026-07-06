@@ -1,0 +1,14 @@
+---
+interface Props {
+  label?: string;
+}
+const { label = 'Quick Answer' } = Astro.props;
+---
+
+<div class="not-prose bg-primary/5 border border-primary/20 rounded-xl p-5 mb-8 flex gap-3">
+  <span class="text-2xl shrink-0" aria-hidden="true">⚡</span>
+  <div>
+    <p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">{label}</p>
+    <p class="text-gray-700 leading-relaxed"><slot /></p>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+import { defaultLocale, type Locale } from '../i18n/config';
+
+interface Props {
+  locale?: Locale;
+  date?: string;
+}
+const { locale = defaultLocale as Locale, date } = Astro.props;
+// The quality/testing page is English-only; never locale-prefix this link.
+const qualityUrl = '/quality-and-testing';
+
+const tr: Record<string, { by: string; reviewed: string }> = {
+  en: { by: 'Written by the Greens Farmhouse Sourcing Team', reviewed: 'Our quality & testing standards' },
+  fr: { by: "Rédigé par l'équipe d'approvisionnement Greens Farmhouse", reviewed: 'Nos normes de qualité et de tests' },
+  de: { by: 'Verfasst vom Greens Farmhouse Sourcing-Team', reviewed: 'Unsere Qualitäts- und Teststandards' },
+  es: { by: 'Escrito por el equipo de abastecimiento de Greens Farmhouse', reviewed: 'Nuestros estándares de calidad y pruebas' },
+  it: { by: "Scritto dal team di approvvigionamento di Greens Farmhouse", reviewed: 'I nostri standard di qualità e test' },
+  nl: { by: 'Geschreven door het Greens Farmhouse-inkoopteam', reviewed: 'Onze kwaliteits- en testnormen' },
+  fi: { by: 'Kirjoittanut Greens Farmhousen hankintatiimi', reviewed: 'Laatu- ja testausstandardimme' },
+  pt: { by: 'Escrito pela equipa de abastecimento da Greens Farmhouse', reviewed: 'Os nossos padrões de qualidade e testes' },
+};
+const s = tr[locale] || tr.en;
+---
+
+<p class="text-xs text-gray-500 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>{s.by}</span>
+  {date && <span aria-hidden="true">·</span>}
+  {date && <time datetime={date}>{new Date(date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}</time>}
+  <span aria-hidden="true">·</span>
+  <a href={qualityUrl} class="text-primary underline hover:no-underline">{s.reviewed}</a>
+</p>
