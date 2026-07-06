@@ -4,6 +4,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { categories, getProductsByCategory, getCategoryBySlug } from '../../data/products';
 import { getCategorySeoContent } from '../../data/translations/categorySeo';
+import { strainGuides } from '../../data/strains';
 
 export function getStaticPaths() {
   return categories.map(cat => ({
@@ -163,6 +164,22 @@ const breadcrumbs = [
           Germany, Italy, Portugal, Finland, Netherlands, and the UK.
           <a href="/contact" class="text-primary hover:underline">Contact us</a> for bulk pricing.
         </p>
+        {slug === 'cbd-flowers' && (
+          <>
+            <h3 class="text-lg font-bold text-gray-900 pt-2">Strain Guides</h3>
+            <p class="text-sm">
+              Deep dives into our most popular strains — lineage, terpenes, and who they sell to:
+              {strainGuides.map((s, i) => (
+                <>
+                  {i > 0 && ' · '}
+                  <a href={`/strains/${s.slug}`} class="text-primary hover:underline">{s.name}</a>
+                </>
+              ))}
+              {' — or see the '}
+              <a href="/best-cbd-strains" class="text-primary hover:underline font-medium">Best CBD Strains of 2026</a> ranking.
+            </p>
+          </>
+        )}
         <h3 class="text-lg font-bold text-gray-900 pt-2">Browse Other Categories</h3>
         <div class="flex flex-wrap gap-2">
           {otherCategories.map(c => (

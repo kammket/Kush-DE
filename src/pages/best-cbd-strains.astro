@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import WaLink from '../components/WaLink.astro';
+import { strainGuides } from '../data/strains';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Best CBD Strains 2026" },
+];
+
+const entries = strainGuides.map(s => ({ strain: s, product: getProductBySlug(s.productSlug)! }));
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent("Hello! I'd like to try your top CBD strains — can you put together a sample pack?")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The 8 Best CBD Strains in 2026: Ranked by a Wholesale Grower",
+  "description": "The best CBD flower strains of 2026, ranked: OG Kush, Gelato, Gorilla Glue, White Widow, Jack Herer, Sour Diesel, Wedding Cake and Zkittlez. Terpene profiles, cultivation and wholesale pricing.",
+  "url": "https://greensfarmhouse.com/best-cbd-strains",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06"
+};
+
+const listJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best CBD Strains 2026",
+  "itemListElement": entries.map((e, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": e.strain.name,
+    "url": `https://greensfarmhouse.com/strains/${e.strain.slug}`
+  }))
+};
+---
+
+<BaseLayout
+  title="Best CBD Strains 2026 | Top 8 CBD Flowers Ranked by a Grower"
+  description="The 8 best CBD strains of 2026, ranked by a wholesale grower: OG Kush, Gelato, Gorilla Glue, White Widow, Jack Herer, Sour Diesel, Wedding Cake, Zkittlez. Full strain guides & wholesale pricing."
+  canonicalURL="https://greensfarmhouse.com/best-cbd-strains"
+  jsonLd={jsonLd}
+  noHreflang={true}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(listJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-green-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🏆 Ranked by a Wholesale Grower</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        The 8 Best CBD Strains in <span class="text-primary">2026</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        We grow and ship CBD flowers to 5,000+ shops across Europe — so this ranking isn't based on hype,
+        but on what actually sells, reorders, and keeps customers coming back. Every strain below is lab-tested,
+        under 0.3% THC, and available at wholesale prices.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Sample the Top Strains</WaLink>
+        <a href="/collections/cbd-flowers" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+          Browse All Flowers
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ranking -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      {entries.map((e, i) => (
+        <article class="flex flex-col sm:flex-row gap-6 bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="shrink-0 flex sm:flex-col items-center gap-4">
+            <span class="text-3xl font-extrabold text-primary/30">#{i + 1}</span>
+            <a href={`/strains/${e.strain.slug}`}>
+              <img src={e.product.image} alt={`${e.strain.name} CBD flowers`} width="140" height="140" class="w-28 h-28 sm:w-36 sm:h-36 rounded-xl object-cover border border-gray-100" loading={i < 2 ? 'eager' : 'lazy'} decoding="async" />
+            </a>
+          </div>
+          <div class="min-w-0">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-1">
+              <a href={`/strains/${e.strain.slug}`} class="hover:text-primary transition-colors">{e.strain.name}</a>
+            </h2>
+            <p class="text-xs text-gray-500 mb-3">{e.strain.type} · {e.strain.cultivation} · {e.strain.aroma.slice(0, 3).join(', ')}</p>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">{e.strain.intro[0]}</p>
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+              <a href={`/strains/${e.strain.slug}`} class="text-primary font-semibold hover:underline">Full strain guide →</a>
+              <a href={`/products/${e.product.slug}`} class="text-primary font-semibold hover:underline">Buy from {e.product.price} →</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Can't Decide? Try Them All.</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Our sample packs let you test the top strains side by side before ordering wholesale — the way 5,000+ shop owners started with us.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/cbd-sample-packs" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Get a Sample Pack</a>
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

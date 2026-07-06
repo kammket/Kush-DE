@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import WaLink from '../../components/WaLink.astro';
+import { strainGuides, getStrainBySlug } from '../../data/strains';
+import { getProductBySlug } from '../../data/products';
+
+export function getStaticPaths() {
+  return strainGuides.map(s => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const strain = getStrainBySlug(slug!)!;
+const product = getProductBySlug(strain.productSlug)!;
+const relatedStrains = strain.related.map(r => getStrainBySlug(r)!).filter(Boolean);
+const relatedProducts = relatedStrains.map(r => getProductBySlug(r.productSlug)!).filter(Boolean);
+
+const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent(`Hello! I'm interested in ${strain.name} — can you tell me about wholesale pricing and samples?`)}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": `${strain.name}: Strain Guide, Terpenes & Wholesale Pricing`,
+  "description": strain.intro[0].slice(0, 200),
+  "url": `https://greensfarmhouse.com/strains/${strain.slug}`,
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06"
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": strain.faq.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Best CBD Strains", url: "/best-cbd-strains" },
+  { name: strain.name },
+];
+---
+
+<BaseLayout
+  title={`${strain.name} | Strain Guide, Terpenes & Wholesale — Greens Farmhouse`}
+  description={`${strain.name} strain guide: lineage, aroma, terpene profile and ${strain.cultivation.toLowerCase()} cultivation. Buy lab-tested ${strain.name} at wholesale prices, shipped across Europe in 24h.`}
+  canonicalURL={`https://greensfarmhouse.com/strains/${strain.slug}`}
+  jsonLd={jsonLd}
+  noHreflang={true}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-green-50 via-white to-primary/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🌿 Strain Guide</span>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">{strain.name}</h1>
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">{strain.intro[0]}</p>
+          <div class="flex flex-wrap gap-3">
+            <a href={`/products/${product.slug}`} class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+              Buy {strain.name} — {product.price}
+            </a>
+            <WaLink href={waUrl} class="px-6 py-3">Ask About Wholesale</WaLink>
+          </div>
+        </div>
+        <div class="relative">
+          <a href={`/products/${product.slug}`}>
+            <img
+              src={product.image}
+              alt={`${strain.name} hemp flowers`}
+              width="600"
+              height="600"
+              class="w-full max-w-md mx-auto rounded-2xl shadow-xl border border-gray-200 object-cover"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strain profile -->
+  <section class="py-10 md:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Strain Profile</h2>
+      <dl class="grid sm:grid-cols-2 gap-x-8 gap-y-4 bg-gray-50 rounded-xl p-6 text-sm">
+        <div><dt class="text-gray-500 mb-0.5">Type</dt><dd class="font-semibold text-gray-900">{strain.type}</dd></div>
+        <div><dt class="text-gray-500 mb-0.5">Cultivation</dt><dd class="font-semibold text-gray-900">{strain.cultivation}</dd></div>
+        <div class="sm:col-span-2"><dt class="text-gray-500 mb-0.5">Lineage</dt><dd class="font-semibold text-gray-900">{strain.lineage}</dd></div>
+        <div><dt class="text-gray-500 mb-0.5">Aroma</dt><dd class="font-semibold text-gray-900">{strain.aroma.join(' · ')}</dd></div>
+        <div><dt class="text-gray-500 mb-0.5">Dominant Terpenes</dt><dd class="font-semibold text-gray-900">{strain.terpenes.join(' · ')}</dd></div>
+        <div><dt class="text-gray-500 mb-0.5">THC</dt><dd class="font-semibold text-gray-900">&lt; 0.3% (EU-legal, lab-verified)</dd></div>
+        <div><dt class="text-gray-500 mb-0.5">CBD Content</dt><dd class="font-semibold text-gray-900">{product.cbdContent || 'High'}</dd></div>
+      </dl>
+      <div class="mt-8 space-y-4 text-gray-600 leading-relaxed">
+        {strain.intro.slice(1).map(p => <p>{p}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-10 md:py-14 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">{strain.name} — FAQ</h2>
+      <div class="space-y-4">
+        {strain.faq.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related strains -->
+  <section class="py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Similar Strains to Explore</h2>
+      <p class="text-gray-600 mb-8">
+        {relatedStrains.map((r, i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={`/strains/${r.slug}`} class="text-primary font-medium hover:underline">{r.name} guide</a>
+          </>
+        ))}
+        {' · '}
+        <a href="/best-cbd-strains" class="text-primary font-medium hover:underline">Best CBD Strains 2026 →</a>
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-3xl">
+        {relatedProducts.map(p => <ProductCard product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Try {strain.name} Before You Stock It</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Sample packs are available for every strain — test the quality yourself, then order wholesale with volume discounts.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/cbd-sample-packs" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Get a Sample Pack</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

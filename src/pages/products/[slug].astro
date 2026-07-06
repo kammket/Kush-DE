@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import WholesaleCta from '../../components/WholesaleCta.astro';
 import { products, getProductBySlug, getProductsByCategory } from '../../data/products';
+import { getStrainByProductSlug } from '../../data/strains';
 
 export function getStaticPaths() {
   return products.map(p => ({
@@ -124,7 +125,11 @@ const relatedPagesByCategory: Record<string, { url: string; label: string }[]> =
     { url: '/legal', label: 'Legal Information' },
   ],
 };
-const relatedPages = relatedPagesByCategory[product.categorySlug] ?? [];
+const strainGuide = getStrainByProductSlug(product.slug);
+const relatedPages = [
+  ...(strainGuide ? [{ url: `/strains/${strainGuide.slug}`, label: `${strainGuide.name} Strain Guide` }] : []),
+  ...(relatedPagesByCategory[product.categorySlug] ?? []),
+];
 ---
 
 <BaseLayout
