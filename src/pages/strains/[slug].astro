@@ -17,7 +17,7 @@ const product = getProductBySlug(strain.productSlug)!;
 const relatedStrains = strain.related.map(r => getStrainBySlug(r)!).filter(Boolean);
 const relatedProducts = relatedStrains.map(r => getProductBySlug(r.productSlug)!).filter(Boolean);
 
-const waUrl = `https://wa.me/447346989289?text=${encodeURIComponent(`Hello! I'm interested in ${strain.name} — can you tell me about wholesale pricing and samples?`)}`;
+const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent(`Hello! I'm interested in ${strain.name} — can you tell me about wholesale pricing and samples?`)}`;
 
 const jsonLd = {
   "@context": "https://schema.org",
