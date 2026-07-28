@@ -33,6 +33,10 @@ export const seoPages: SeoPageData[] = [
   // and hreflang is narrowed to match, so add locales here as translations land.
   { slug: 'cbd-hash-wholesale-europe', gradient: 'from-amber-50 via-white to-primary/5', tag: '🧱', categories: ['cbd-resins', 'cbd-flowers'] },
   { slug: 'moroccan-cbd-hash-wholesale', gradient: 'from-orange-50 via-white to-primary/5', emoji: '🇲🇦', categories: ['cbd-resins', 'cbd-flowers'] },
+  { slug: 'cbd-pollen-dry-sift-wholesale', gradient: 'from-yellow-50 via-white to-primary/5', tag: '🌾', categories: ['cbd-resins', 'cbd-flowers'] },
+  { slug: 'thc-free-cbd-wholesale', gradient: 'from-sky-50 via-white to-primary/5', tag: '🔬', categories: ['cbd-resins', 'cbd-oils'] },
+  { slug: 'cbd-trim-small-buds-wholesale', gradient: 'from-lime-50 via-white to-primary/5', tag: '📦', categories: ['cbd-flowers', 'cbd-resins'] },
+  { slug: 'moonrock-icerock-cbd-wholesale', gradient: 'from-violet-50 via-white to-primary/5', tag: '💎', categories: ['cbd-flowers', 'cbd-resins'] },
 ];
 
 // translations[slug][locale] = { title, desc, h1, heroTag, heroDesc, btnPrimary, btnSecondary, features: [{title, desc}], seoTitle, seoContent, faqTitle, faq: [{q,a}], ctaTitle, ctaDesc }
@@ -508,6 +512,238 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
       ctaTitle: 'Commandez du hash marocain en gros',
       ctaDesc: 'Tarifs dégressifs jusqu\'au kilo, COA par lot, expédition sous 24 heures partout en Europe.',
       ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Nous contacter'
+    },
+  },
+  'cbd-pollen-dry-sift-wholesale': {
+    de: {
+      title: 'CBD Pollen & Dry Sift Großhandel',
+      desc: 'CBD Pollen, Skuff und Dry Sift im Großhandel: lösungsmittelfrei getrenntes Harz vom Einstieg bis Premium. Golden Static, 3X gefiltert, COA pro Charge.',
+      h1: 'CBD Pollen & Dry Sift — Großhandel für Skuff und Static',
+      heroTag: '🌾 Ohne Lösungsmittel',
+      heroDesc: 'Mechanisch getrenntes Harz — in keinem Schritt kommen Lösungsmittel zum Einsatz. Vom Einstiegs-Skuff, der Blüten-Kunden zu Harz-Kunden macht, bis zu statisch getrennten und dreifach gefilterten Qualitäten für Kunden, die nach Reinheit urteilen.',
+      btnPrimary: 'Harze ansehen', btnSecondary: 'CBD Blüten ansehen',
+      features: [
+        { icon: '🌾', title: 'Was ist Pollen?', desc: 'Das lose, sandige Harzpulver, das beim Sieben getrockneter Blüten durch das Sieb fällt. Gepresst wird daraus Hash, lose bleibt es Pollen.' },
+        { icon: '⚡', title: 'Static-Trennung', desc: 'Statische Elektrizität löst die Harzköpfe vom restlichen Pflanzenmaterial und liefert ein sichtbar saubereres, helleres Produkt als reines Sieben.' },
+        { icon: '💎', title: '3X gefiltert', desc: 'Drei aufeinanderfolgende Filterstufen entfernen zunehmend Pflanzenmaterial — sauberer, potenter, heller und entsprechend höher im Preis.' }
+      ],
+      productSections: [
+        { title: 'Pollen, Static & gefilterte Qualitäten', desc: 'Vier Qualitäten über die gesamte Preisleiter, vom Einstiegs-Skuff bis zum dreifach gefilterten CBG.', category: 'cbd-resins', browseLabel: 'Alle CBD Harze ansehen →' },
+        { title: 'Das Ausgangsmaterial', desc: 'Die Blüten, aus denen gesiebt wird — Indoor und Greenhouse aus EU-Anbau.', category: 'cbd-flowers', browseLabel: 'Alle CBD Blüten ansehen →' }
+      ],
+      faqTitle: 'CBD Pollen & Dry Sift — FAQ',
+      faq: [
+        { question: 'Was ist CBD Pollen?', answer: 'CBD Pollen — auch Skuff oder Kief genannt — ist das lose Harzpulver, das von getrockneten Hanfblüten abgeschüttelt wird. Die Blüten werden über feine Siebe bewegt, sodass die Harzdrüsen abbrechen und hindurchfallen, während das Pflanzenmaterial oben bleibt. Was sich darunter sammelt, ist Pollen: sandig, hellgold und deutlich konzentrierter als die Blüte.' },
+        { question: 'Was bedeutet „Dry Sift"?', answer: 'Dry Sift bezeichnet die Trennmethode selbst — mechanisch, lösungsmittelfrei, allein durch Bewegung und Sieb. Es ist die älteste Hash-Herstellungstechnik und in Europa nach wie vor die verbreitetste. Da in keinem Schritt Lösungsmittel eingesetzt werden, spricht Dry Sift Händler und Kunden an, die den einfachsten möglichen Prozess hinter dem Produkt wünschen.' },
+        { question: 'Was ist Static-Trennung?', answer: 'Eine Weiterentwicklung des Dry Sift, bei der statische Elektrizität die Harzköpfe vom verbliebenen Pflanzenmaterial löst. Das Ergebnis ist merklich sauberer und heller als reines Sieben. Unser Golden Static entsteht so und trägt ein dreifaches CBD+CBG+CBN-Profil, was ihm im Regal eine andere Position gibt als einer klassischen Einzel-Cannabinoid-Pressung.' },
+        { question: 'Ist Pollen günstiger als gepresstes Hash?', answer: 'In der Regel ja. Skuff und Pollen bilden den Einstieg in die Harz-Kategorie und sind damit der einfachste Weg, Kunden heranzuführen, die bislang nur Blüten gekauft haben. Genau diese Zugänglichkeit macht sie lohnend: Pollen verwandelt Blüten-Käufer in Harz-Käufer, und Harz-Käufer geben pro Besuch mehr aus.' },
+        { question: 'Kann ich Pollen zur Weiterverarbeitung kaufen?', answer: 'Viele unserer Großhandelskunden kaufen Pollen und Sift als Ausgangsmaterial statt zum Weiterverkauf — es ist ein konzentriertes, gleichbleibendes Rohmaterial. Wenn Sie für die Produktion einkaufen statt fürs Regal, nennen Sie uns Volumen und Zielprofil; die Preisstruktur unterscheidet sich vom Regal-Großhandel.' }
+      ],
+      ctaTitle: 'Kaufen Sie Sift für Wiederverkauf oder Produktion?',
+      ctaDesc: 'Nennen Sie uns Volumen und Zielprofil — die Preise unterscheiden sich zwischen Produktionsmaterial und Regal-Großhandel.',
+      ctaBtnPrimary: 'Alle Harze ansehen', ctaBtnSecondary: 'Kontakt aufnehmen'
+    },
+    fr: {
+      title: 'Pollen CBD & Dry Sift en Gros',
+      desc: 'Pollen CBD, skuff et dry sift en gros : résine séparée sans solvant, de l\'entrée de gamme au premium. Golden Static, 3X filtré, COA par lot.',
+      h1: 'Pollen CBD & Dry Sift — Grossiste skuff et static',
+      heroTag: '🌾 Sans solvant',
+      heroDesc: 'Résine séparée mécaniquement — aucun solvant à aucune étape. Du skuff d\'entrée de gamme, qui convertit les acheteurs de fleurs en acheteurs de résine, jusqu\'aux qualités séparées par static et triplement filtrées pour les clients qui jugent sur la pureté.',
+      btnPrimary: 'Voir les résines', btnSecondary: 'Voir les fleurs CBD',
+      features: [
+        { icon: '🌾', title: 'Qu\'est-ce que le pollen ?', desc: 'La poudre de résine sableuse qui traverse le tamis lors du tamisage des fleurs séchées. Pressée elle devient du hash, laissée libre elle reste du pollen.' },
+        { icon: '⚡', title: 'Séparation static', desc: 'L\'électricité statique détache les têtes de résine de la matière végétale résiduelle, pour un produit nettement plus propre et plus clair que le tamisage seul.' },
+        { icon: '💎', title: '3X filtré', desc: 'Trois étapes de filtration successives retirent progressivement la matière végétale — plus propre, plus puissant, plus clair, et plus cher au gramme.' }
+      ],
+      productSections: [
+        { title: 'Pollen, static et qualités filtrées', desc: 'Quatre qualités couvrant toute l\'échelle de prix, du skuff d\'entrée de gamme au CBG triplement filtré.', category: 'cbd-resins', browseLabel: 'Voir toutes les résines CBD →' },
+        { title: 'La matière première', desc: 'Les fleurs dont provient le tamisage — indoor et greenhouse cultivées en Europe.', category: 'cbd-flowers', browseLabel: 'Voir toutes les fleurs CBD →' }
+      ],
+      faqTitle: 'Pollen CBD & Dry Sift — FAQ',
+      faq: [
+        { question: 'Qu\'est-ce que le pollen CBD ?', answer: 'Le pollen CBD — aussi appelé skuff ou kief — est la poudre de résine libre détachée des fleurs de chanvre séchées. Les fleurs sont agitées sur des tamis fins afin que les glandes résineuses se détachent et tombent, la matière végétale restant au-dessus. Ce qui se dépose en dessous est le pollen : sableux, doré pâle, et bien plus concentré que la fleur d\'origine.' },
+        { question: 'Que signifie « dry sift » ?', answer: 'Le dry sift désigne la méthode de séparation elle-même — mécanique, sans solvant, uniquement par le mouvement et le tamis. C\'est la plus ancienne technique de fabrication de hash et elle reste la plus répandue en Europe. Comme aucun solvant n\'intervient à aucune étape, le dry sift séduit les détaillants et les clients qui recherchent le procédé le plus simple possible.' },
+        { question: 'Qu\'est-ce que la séparation static ?', answer: 'Un raffinement du dry sift qui utilise l\'électricité statique pour détacher les têtes de résine de la matière végétale résiduelle, produisant un résultat nettement plus propre et plus clair que le tamisage seul. Notre Golden Static est obtenu ainsi et présente un triple profil CBD+CBG+CBN, ce qui le positionne différemment d\'un pressage classique à cannabinoïde unique.' },
+        { question: 'Le pollen est-il moins cher que le hash pressé ?', answer: 'En général oui. Le skuff et le pollen constituent l\'entrée de la catégorie résine, ce qui en fait le moyen le plus simple d\'initier des clients qui n\'ont jamais acheté que de la fleur. C\'est précisément cette accessibilité qui les rend intéressants : le pollen transforme les acheteurs de fleurs en acheteurs de résine, et ces derniers dépensent davantage par visite.' },
+        { question: 'Puis-je acheter du pollen pour la production ?', answer: 'Beaucoup de nos clients grossistes achètent pollen et sift comme matière première plutôt que pour la revente — c\'est un intrant concentré et régulier. Si vous approvisionnez une production plutôt qu\'un rayon, indiquez-nous votre volume et votre profil cible ; la structure tarifaire diffère du gros destiné à la revente.' }
+      ],
+      ctaTitle: 'Vous achetez du sift pour la revente ou la production ?',
+      ctaDesc: 'Indiquez-nous votre volume et votre profil cible — les tarifs diffèrent entre matière de production et gros destiné au rayon.',
+      ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Nous contacter'
+    },
+  },
+  'thc-free-cbd-wholesale': {
+    de: {
+      title: '0% THC CBD Großhandel',
+      desc: '0% THC CBD im Großhandel: Harze mit 25–50% CBD, 99,8% Isolat und 90% Destillat, alle ohne nachweisbares THC. COA pro Charge inklusive.',
+      h1: '0% THC CBD Großhandel — Für die striktesten Märkte',
+      heroTag: '🔬 Kein nachweisbares THC',
+      heroDesc: 'Eine komplette Linie, hergestellt und geprüft, sodass im Zertifikat kein THC ausgewiesen wird — gepresste Harze von 25% bis 50% CBD, dazu 90% Destillat und 99,8% Isolat. Jede Charge wird mit dem COA geliefert, das Sie als Nachweis benötigen.',
+      btnPrimary: 'Harze ansehen', btnSecondary: 'CBD Öle ansehen',
+      features: [
+        { icon: '⚖️', title: 'Schwellenwert vs. nicht nachweisbar', desc: 'Manche Märkte begrenzen THC als Prozentsatz des Fertigprodukts, andere verlangen, dass keines nachweisbar ist. Ein 0,2%-Produkt besteht den ersten Test und scheitert am zweiten.' },
+        { icon: '🏢', title: 'Kunden, die Sicherheit brauchen', desc: 'Berufskraftfahrer, Betriebe mit Testpflichten und vorsichtige Erstkäufer stellen dieselbe Frage. Ein THC-freies Regal beantwortet sie ohne Gespräch.' },
+        { icon: '📄', title: 'Belastbare Unterlagen', desc: 'Jede Charge trägt ein unabhängiges COA. Wenn Sie einen Konformitätsnachweis erbringen müssen, ist das Zertifikat das Dokument — nicht die Verpackung.' }
+      ],
+      productSections: [
+        { title: '0% THC Harze — 25% bis 50% CBD', desc: 'Gepresste Harze in vier Stärken, alle auf nicht nachweisbares THC geprüft.', category: 'cbd-resins', browseLabel: 'Alle CBD Harze ansehen →' },
+        { title: 'CBD Öle & Konzentrate', desc: 'Für Hersteller und White-Label-Produktion sind Isolat und Destillat der sauberste denkbare Ausgangspunkt.', category: 'cbd-oils', browseLabel: 'Alle CBD Öle ansehen →' }
+      ],
+      faqTitle: '0% THC CBD — FAQ',
+      faq: [
+        { question: 'Was bedeutet 0% THC genau?', answer: 'Es bedeutet, dass THC an der Bestimmungsgrenze des prüfenden Labors nicht nachweisbar ist — nicht, dass ein theoretischer Nullwert bewiesen wurde, was keine Analysemethode leisten kann. Der praktische Unterschied ist erheblich: Ein konformes CBD-Produkt darf bis zu 0,3% THC enthalten, während diese Produkte so hergestellt und geprüft werden, dass im Zertifikat überhaupt kein THC ausgewiesen wird.' },
+        { question: 'Warum brauche ich THC-freie Produkte?', answer: 'Die Anforderungen unterscheiden sich in Europa. Manche Märkte setzen einen Prozentwert für THC im Fertigprodukt, andere verlangen, dass überhaupt keines nachweisbar ist — woran ein Produkt knapp unterhalb eines Schwellenwerts scheitert. Dazu kommen kommerzielle Gründe ohne rechtlichen Bezug: Firmenkunden, Bedenken wegen Tests am Arbeitsplatz und Kunden, die schlicht Sicherheit wollen.' },
+        { question: 'Welche Produkte bieten Sie mit 0% THC an?', answer: 'Vier gepresste Harze von 25% bis 50% CBD — Ketama 25%, Soft 30%, Creamy Yellow 50% und Supreme 50% — dazu 99,8% CBD-Isolat und 90% CBD-Destillat, die naturgemäß frei von anderen Cannabinoiden sind. Außerdem gibt es ein eigenes 0%-THC-Harz-Entdeckerpaket zum Testen vor der Volumenbestellung.' },
+        { question: 'Verändert die THC-Entfernung das Produkt?', answer: 'Ja, und das sollte man Kunden gegenüber offen sagen. Die zusätzliche Raffination entfernt mit dem THC auch einen Teil der Terpene und Neben-Cannabinoide. Ein THC-freies Harz hat daher ein saubereres, aber weniger komplexes Aroma als eine klassische Pressung. Gewonnen wird Konformitätssicherheit und ein höherer CBD-Anteil.' },
+        { question: 'Ist ein 0%-THC-Produkt überall in Europa zulässig?', answer: 'Der THC-Gehalt ist nur eine von mehreren Variablen. Manche Länder regulieren das Produktformat — insbesondere rauchbare Blüten und Hash — unabhängig vom Inhalt, sodass ein THC-freies Harz dort eingeschränkt sein kann, wo Harz generell eingeschränkt ist. Prüfen Sie die Anforderungen für Ihren Markt und Ihre Produktkategorie; unsere Rechtsübersicht ist ein Ausgangspunkt, keine Rechtsberatung.' }
+      ],
+      ctaTitle: 'Fordern Sie zuerst die Zertifikate an',
+      ctaDesc: 'Nennen Sie uns die Produkte, die Sie in Betracht ziehen, und wir senden Ihnen die aktuellen Chargen-COAs, bevor Sie irgendetwas bestellen.',
+      ctaBtnPrimary: 'Alle Harze ansehen', ctaBtnSecondary: 'COAs anfragen'
+    },
+    fr: {
+      title: 'CBD 0% THC en Gros',
+      desc: 'CBD 0% THC en gros : résines de 25 à 50% de CBD, isolat 99,8% et distillat 90%, tous sans THC détectable. COA par lot inclus.',
+      h1: 'CBD 0% THC en Gros — Pour les marchés les plus stricts',
+      heroTag: '🔬 Aucun THC détectable',
+      heroDesc: 'Une gamme complète produite et testée pour qu\'aucun THC ne figure sur le certificat — résines pressées de 25 à 50% de CBD, plus distillat 90% et isolat 99,8%. Chaque lot est livré avec le COA nécessaire pour le prouver.',
+      btnPrimary: 'Voir les résines', btnSecondary: 'Voir les huiles CBD',
+      features: [
+        { icon: '⚖️', title: 'Seuil ou non détectable', desc: 'Certains marchés plafonnent le THC en pourcentage du produit fini, d\'autres exigent qu\'aucun ne soit détectable. Un produit à 0,2% réussit le premier test et échoue au second.' },
+        { icon: '🏢', title: 'Des clients qui veulent une certitude', desc: 'Chauffeurs professionnels, entreprises avec politique de dépistage, primo-acheteurs prudents : tous posent la même question. Un rayon sans THC y répond sans discussion.' },
+        { icon: '📄', title: 'Des documents solides', desc: 'Chaque lot porte un COA indépendant. Si l\'on vous demande de démontrer la conformité, c\'est le certificat qui fait foi — pas l\'emballage.' }
+      ],
+      productSections: [
+        { title: 'Résines 0% THC — de 25 à 50% de CBD', desc: 'Résines pressées en quatre concentrations, toutes testées sans THC détectable.', category: 'cbd-resins', browseLabel: 'Voir toutes les résines CBD →' },
+        { title: 'Huiles CBD & concentrés', desc: 'Pour les fabricants et la production en marque blanche, isolat et distillat sont le point de départ le plus pur possible.', category: 'cbd-oils', browseLabel: 'Voir toutes les huiles CBD →' }
+      ],
+      faqTitle: 'CBD 0% THC — FAQ',
+      faq: [
+        { question: 'Que signifie exactement 0% THC ?', answer: 'Cela signifie que le THC n\'est pas détectable à la limite de quantification du laboratoire — et non qu\'un zéro théorique a été prouvé, ce qu\'aucune méthode analytique ne permet. La différence pratique est importante : un produit CBD conforme peut légalement contenir jusqu\'à 0,3% de THC, tandis que ceux-ci sont produits et testés pour qu\'aucun THC ne soit reporté sur le certificat.' },
+        { question: 'Pourquoi aurais-je besoin de produits sans THC ?', answer: 'Les exigences diffèrent selon les pays européens. Certains marchés fixent un seuil en pourcentage pour le produit fini, d\'autres exigent qu\'aucun THC ne soit détectable — ce à quoi un produit situé juste sous un seuil échoue. Il existe aussi des raisons commerciales sans lien avec la loi : clients entreprises, préoccupations liées aux dépistages en milieu professionnel, et clients qui veulent simplement être rassurés.' },
+        { question: 'Quels produits proposez-vous en 0% THC ?', answer: 'Quatre résines pressées de 25 à 50% de CBD — Ketama 25%, Soft 30%, Creamy Yellow 50% et Supreme 50% — ainsi que l\'isolat de CBD à 99,8% et le distillat à 90%, intrinsèquement exempts d\'autres cannabinoïdes. Il existe également un pack découverte résines 0% THC dédié pour tester la gamme avant de vous engager en volume.' },
+        { question: 'Le retrait du THC modifie-t-il le produit ?', answer: 'Oui, et il vaut mieux être franc avec les clients à ce sujet. Le raffinage supplémentaire retire une partie des terpènes et des cannabinoïdes mineurs en même temps que le THC. Une résine sans THC présente donc un arôme plus propre mais moins complexe qu\'un pressage traditionnel. Ce que l\'on gagne, c\'est la certitude réglementaire et un taux de CBD plus élevé.' },
+        { question: 'Un produit 0% THC est-il légal partout en Europe ?', answer: 'La teneur en THC n\'est qu\'une variable parmi d\'autres. Certains pays réglementent le format du produit — fleurs et hash fumables en particulier — indépendamment de sa composition, si bien qu\'une résine sans THC peut rester restreinte là où la résine elle-même l\'est. Vérifiez les exigences propres à votre marché et à votre catégorie ; notre aperçu juridique est un point de départ, pas un conseil juridique.' }
+      ],
+      ctaTitle: 'Demandez d\'abord les certificats',
+      ctaDesc: 'Indiquez-nous les produits que vous envisagez et nous vous transmettrons les COA du lot en cours avant toute commande.',
+      ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Demander les COA'
+    },
+  },
+  'cbd-trim-small-buds-wholesale': {
+    de: {
+      title: 'CBD Trim & Small Buds Großhandel',
+      desc: 'CBD Trim ab 0,19 €/g und Small Buds ab 0,39 €/g im Großhandel. Rohstoff für Extraktion, Pre-Rolls und Preiseinstiegslinien. Kilopreise.',
+      h1: 'CBD Trim & Small Buds — Großhandel ab 0,19 €/g',
+      heroTag: '📦 Volumenklasse',
+      heroDesc: 'Die Klasse, mit der die Rechnung aufgeht. Rohstoff für die Extraktion, Füllmaterial für Pre-Rolls und Preiseinstiegslinien im Regal — derselbe EU-Hanf, dieselbe Laborprüfung, zu einem Bruchteil des Grammpreises von Premium-Indoor.',
+      btnPrimary: 'CBD Blüten ansehen', btnSecondary: 'Harze ansehen',
+      features: [
+        { icon: '⚗️', title: 'Rohstoff für Extraktion', desc: 'Das Standardmaterial für Öle, Destillat und Isolat. Hier zählt Cannabinoid-Gehalt pro Euro, nicht das Aussehen — und dabei gewinnt Trim jedes Mal.' },
+        { icon: '🚬', title: 'Pre-Roll-Produktion', desc: 'Trim oder eine Mischung aus Trim und Small Buds hält die Stückkosten niedrig genug, dass Pre-Rolls bei akzeptablen Endpreisen noch Marge tragen.' },
+        { icon: '🏷️', title: 'Preiseinstiegslinie', desc: 'Eine günstigere Regallinie holt preissensible Kunden, die nie zu Premium-Indoor greifen würden — und viele steigen beim zweiten Besuch auf.' }
+      ],
+      productSections: [
+        { title: 'CBD Blüten — Volumenklasse', desc: 'Trim, Small Buds und die günstigsten Greenhouse-Blüten im Katalog.', category: 'cbd-flowers', browseLabel: 'Alle CBD Blüten ansehen →' },
+        { title: 'Harze für dasselbe Regal', desc: 'Ergänzen Sie die Volumenklasse mit Einstiegsharzen aus derselben Preislogik.', category: 'cbd-resins', browseLabel: 'Alle CBD Harze ansehen →' }
+      ],
+      faqTitle: 'CBD Trim & Small Buds — FAQ',
+      faq: [
+        { question: 'Was ist CBD Trim?', answer: 'Trim ist das kleinere Blatt- und Schnittmaterial, das beim Maniküren der Hanfblüten anfällt. Es hat eine geringere Cannabinoid-Dichte als die Blüte selbst, ist aber pro Gramm deutlich günstiger — weshalb es der Standard-Ausgangsstoff für Extraktion, Pre-Roll-Füllung und Preiseinstiegsprodukte ist. Es wird nach Gewicht im Volumen verkauft, nicht als Schauprodukt.' },
+        { question: 'Was sind Small Buds?', answer: 'Small Buds — auch Popcorn Buds oder französisch petites têtes genannt — sind die kleineren Blüten aus den unteren Pflanzenbereichen. Es ist dasselbe Material wie die Topblüten, gleich getrocknet und ausgehärtet, nur kleiner und optisch weniger auffällig. Aroma und Cannabinoid-Gehalt sind weitgehend vergleichbar, weshalb sie das beste Preis-Leistungs-Verhältnis der Blütenkategorie bieten.' },
+        { question: 'Wie groß ist der Preisunterschied?', answer: 'Erheblich. Unser Greenhouse-Trim beginnt bei 0,19 € pro Gramm und Small Buds bei 0,39 €, gegenüber rund 0,69 € bis 1,19 € für vollwertige Greenhouse- und Indoor-Blüten. Für einen Laden, der eine Preiseinstiegslinie aufbaut, oder für einen Produzenten, der Extraktionsmaterial einkauft, ist genau diese Differenz der gesamte Geschäftsfall.' },
+        { question: 'Wofür verwenden Großhandelskunden Trim?', answer: 'Im Wesentlichen für drei Dinge. Extraktion — Trim ist der Standard-Ausgangsstoff für Öle, Destillat und Isolat. Pre-Rolls, wo Trim oder eine Trim-Small-Bud-Mischung die Stückkosten tragbar hält. Und Preiseinstiegslinien im Regal, die Kunden anziehen, die kein Premium-Indoor kaufen würden.' },
+        { question: 'Ist die Qualität schlechter?', answer: 'Sie ist eher anders als schlechter, und die Unterscheidung ist kommerziell wichtig. Trim hat tatsächlich weniger Cannabinoid-Dichte als Blüten — genau das macht es günstig. Small Buds sind im Kern dasselbe Produkt wie Topblüten in kleinerem Format, der Qualitätsunterschied ist dort weitgehend kosmetisch. Beides wird nach demselben Standard angebaut, getrocknet und laborgeprüft, mit COA pro Charge.' }
+      ],
+      ctaTitle: 'Kaufen Sie kiloweise?',
+      ctaDesc: 'Nennen Sie uns Ihr monatliches Volumen und wir kalkulieren einen Vertragspreis statt der veröffentlichten Staffel.',
+      ctaBtnPrimary: 'Alle CBD Blüten ansehen', ctaBtnSecondary: 'Kontakt aufnehmen'
+    },
+    fr: {
+      title: 'Trim CBD & Petites Têtes en Gros',
+      desc: 'Trim CBD dès 0,19 €/g et petites têtes dès 0,39 €/g en gros. Matière première pour extraction, pré-roulés et gammes premier prix. Tarifs au kilo.',
+      h1: 'Trim CBD & Petites Têtes — En gros dès 0,19 €/g',
+      heroTag: '📦 Gamme volume',
+      heroDesc: 'La gamme qui rend les calculs viables. Matière première pour l\'extraction, garnissage de pré-roulés et lignes premier prix en rayon — même chanvre européen, mêmes analyses, à une fraction du prix au gramme de l\'indoor premium.',
+      btnPrimary: 'Voir les fleurs CBD', btnSecondary: 'Voir les résines',
+      features: [
+        { icon: '⚗️', title: 'Matière première d\'extraction', desc: 'L\'intrant standard pour huiles, distillat et isolat. Ici c\'est le contenu en cannabinoïdes par euro qui compte, pas l\'apparence — et le trim gagne à chaque fois.' },
+        { icon: '🚬', title: 'Production de pré-roulés', desc: 'Le trim, ou un mélange trim et petites têtes, maintient un coût unitaire assez bas pour que les pré-roulés dégagent une marge à des prix acceptables.' },
+        { icon: '🏷️', title: 'Ligne premier prix', desc: 'Une ligne moins chère attire les clients sensibles au prix qui ne prendraient jamais de l\'indoor premium — et beaucoup montent en gamme au deuxième passage.' }
+      ],
+      productSections: [
+        { title: 'Fleurs CBD — Gamme volume', desc: 'Trim, petites têtes et les fleurs greenhouse les plus abordables du catalogue.', category: 'cbd-flowers', browseLabel: 'Voir toutes les fleurs CBD →' },
+        { title: 'Résines pour le même rayon', desc: 'Complétez la gamme volume avec des résines d\'entrée de gamme dans la même logique de prix.', category: 'cbd-resins', browseLabel: 'Voir toutes les résines CBD →' }
+      ],
+      faqTitle: 'Trim CBD & Petites Têtes — FAQ',
+      faq: [
+        { question: 'Qu\'est-ce que le trim CBD ?', answer: 'Le trim correspond aux petites feuilles et chutes retirées des fleurs de chanvre lors du manucurage. Sa densité en cannabinoïdes est inférieure à celle des têtes, mais son prix au gramme est bien moindre, ce qui en fait l\'intrant standard pour l\'extraction, le garnissage de pré-roulés et les produits premier prix. Il se vend au poids en vrac, pas comme produit de présentation.' },
+        { question: 'Que sont les petites têtes ?', answer: 'Les petites têtes — aussi appelées popcorn buds — sont les fleurs plus petites issues du bas de la plante. C\'est la même matière que les têtes principales, séchée et affinée de la même façon, simplement plus petite et moins spectaculaire visuellement. L\'arôme et la teneur en cannabinoïdes sont globalement comparables, ce qui en fait le meilleur rapport qualité-prix de la catégorie fleurs.' },
+        { question: 'Quel est l\'écart de prix ?', answer: 'Substantiel. Notre trim greenhouse démarre à 0,19 € le gramme et les petites têtes à 0,39 €, contre environ 0,69 € à 1,19 € pour les fleurs greenhouse et indoor de taille normale. Pour une boutique qui construit une gamme premier prix, ou un producteur qui achète de la matière d\'extraction, cet écart constitue tout l\'intérêt économique.' },
+        { question: 'À quoi les grossistes utilisent-ils le trim ?', answer: 'À trois choses principalement. L\'extraction — le trim est l\'intrant standard pour produire huiles, distillat et isolat. Les pré-roulés, où le trim ou un mélange trim et petites têtes maintient un coût unitaire viable. Et les gammes premier prix en rayon, qui attirent une clientèle qui n\'achèterait pas d\'indoor premium.' },
+        { question: 'La qualité est-elle inférieure ?', answer: 'Elle est différente plutôt qu\'inférieure, et la distinction compte commercialement. Le trim a réellement moins de densité en cannabinoïdes que la fleur — c\'est ce qui le rend bon marché. Les petites têtes sont essentiellement le même produit que les têtes principales dans un format réduit, l\'écart y est surtout cosmétique. Les deux sont cultivés, affinés et analysés selon le même standard, avec un COA par lot.' }
+      ],
+      ctaTitle: 'Vous achetez au kilo ?',
+      ctaDesc: 'Indiquez-nous votre volume mensuel et nous établirons un tarif contractuel plutôt que le palier public.',
+      ctaBtnPrimary: 'Voir toutes les fleurs CBD', ctaBtnSecondary: 'Nous contacter'
+    },
+  },
+  'moonrock-icerock-cbd-wholesale': {
+    de: {
+      title: 'MoonRock & Ice Rock CBD Großhandel',
+      desc: 'MoonRock und Ice Rock CBD im Großhandel: Premium-Indoor-Blüte mit CBD-Extrakt überzogen und in Pollen oder Isolat gewälzt. COA inklusive.',
+      h1: 'MoonRock & Ice Rock CBD — Der Blickfang im Regal',
+      heroTag: '💎 Spitze des Sortiments',
+      heroDesc: 'Premium-Indoor-Blüte, mit CBD-Extrakt überzogen und in Pollen oder Isolat gewälzt — der höchste Gesamt-Cannabinoid-Gehalt aller Blütenformate in unserem Katalog, und das Produkt, das Kunden fotografieren, bevor sie es kaufen.',
+      btnPrimary: 'CBD Blüten ansehen', btnSecondary: 'Harze ansehen',
+      features: [
+        { icon: '🌕', title: 'MoonRock', desc: 'In Pollen gewälzt. Goldene, strukturierte Oberfläche und das reichere Aroma der beiden, weil das Sift eigene Terpene mitbringt.' },
+        { icon: '❄️', title: 'Ice Rock', desc: 'In CBD-Isolat gewälzt. Weiß, kristallin und optisch auffällig, meist mit dem höheren Wert im Zertifikat, da Isolat nahezu reines Cannabinoid ist.' },
+        { icon: '🏆', title: 'Warum sie sich lohnen', desc: 'Sie erfüllen eine Aufgabe, die kein anderes Produkt im Regal übernimmt: Sie heben die wahrgenommene Qualität von allem daneben und eröffnen das Verkaufsgespräch.' }
+      ],
+      productSections: [
+        { title: 'Premium CBD Blüten', desc: 'MoonRock, Ice Rock und die stärksten Indoor-Blüten des Katalogs.', category: 'cbd-flowers', browseLabel: 'Alle CBD Blüten ansehen →' },
+        { title: 'Die Bestandteile einzeln', desc: 'Extrakt, Isolat und Pollen — alles, was in eine überzogene Blüte einfließt, gibt es auch separat.', category: 'cbd-resins', browseLabel: 'Alle CBD Harze ansehen →' }
+      ],
+      faqTitle: 'MoonRock & Ice Rock — FAQ',
+      faq: [
+        { question: 'Was ist MoonRock CBD?', answer: 'MoonRock ist eine Premium-Indoor-CBD-Blüte, die mit CBD-Extrakt überzogen und anschließend in Pollen oder Kief gewälzt wurde. Das Ergebnis ist eine dichte, stark bereifte Blüte mit einem weit höheren Gesamt-Cannabinoid-Gehalt als die Ausgangsblüte. Es ist ein Drei-Komponenten-Produkt — Blüte, Extrakt und Sift — weshalb es an der Spitze der Preisleiter steht.' },
+        { question: 'Was ist der Unterschied zwischen MoonRock und Ice Rock?', answer: 'Die äußere Schicht. MoonRock wird nach dem Auftragen des Extrakts in Pollen oder Kief gewälzt, was eine goldene, strukturierte Oberfläche ergibt. Ice Rock wird stattdessen in CBD-Isolat gewälzt, was ein charakteristisches weißes, kristallines Erscheinungsbild und meist einen noch höheren CBD-Wert ergibt, da Isolat nahezu reines Cannabinoid ist. Ice Rock liest sich im Zertifikat stärker, MoonRock hat in der Regel das reichere Aroma.' },
+        { question: 'Warum sollte ich sie führen, wenn sie teuer sind?', answer: 'Weil sie eine Aufgabe erfüllen, die kein anderes Produkt im Regal übernimmt. Sie sind der optische Anker der Auslage — Kunden bemerken sie, fragen danach und erinnern sich an den Laden, der sie hatte. Selbst bei bescheidenem Absatz heben sie die wahrgenommene Qualität von allem daneben und geben dem Personal einen einfachen Gesprächseinstieg, der oft mit dem Verkauf von etwas anderem endet.' },
+        { question: 'Wie werden sie hergestellt?', answer: 'Eine hochwertige Indoor-Blüte dient als Basis, wird mit CBD-Extrakt überzogen und anschließend je nach Produkt in Pollen oder Isolat gewälzt. Da jede Komponente selbst ein Produkt ist, das wir separat verkaufen, können Sie genau nachvollziehen, was darin steckt.' },
+        { question: 'Wie sollte ich sie anbieten und kalkulieren?', answer: 'Verkaufen Sie sie grammweise in kleinen Mengen statt in den Mehrgramm-Gläsern, die Sie für Standardblüten nutzen — Kunden kaufen sie als gelegentlichen Kauf, nicht wöchentlich. Halten Sie sie sichtbar und gut beleuchtet; das Aussehen ist ein großer Teil dessen, was gekauft wird. Die meisten Händler positionieren sie deutlich über ihrer besten Indoor-Blüte, nicht in Konkurrenz dazu.' }
+      ],
+      ctaTitle: 'Setzen Sie den Blickfang',
+      ctaDesc: 'Fragen Sie Großhandelspreise für MoonRock und Ice Rock an — oder nehmen Sie sie in eine Musterbestellung auf und sehen Sie, wie sie sich in Ihrem Regal machen.',
+      ctaBtnPrimary: 'Alle CBD Blüten ansehen', ctaBtnSecondary: 'Kontakt aufnehmen'
+    },
+    fr: {
+      title: 'MoonRock & Ice Rock CBD en Gros',
+      desc: 'MoonRock et Ice Rock CBD en gros : fleur indoor premium enrobée d\'extrait de CBD et roulée dans du pollen ou de l\'isolat. COA inclus.',
+      h1: 'MoonRock & Ice Rock CBD — La pièce maîtresse du rayon',
+      heroTag: '💎 Haut de gamme',
+      heroDesc: 'Fleur indoor premium enrobée d\'extrait de CBD puis roulée dans du pollen ou de l\'isolat — la teneur totale en cannabinoïdes la plus élevée de tous nos formats de fleur, et le produit que les clients photographient avant de l\'acheter.',
+      btnPrimary: 'Voir les fleurs CBD', btnSecondary: 'Voir les résines',
+      features: [
+        { icon: '🌕', title: 'MoonRock', desc: 'Roulée dans le pollen. Surface dorée et texturée, et l\'arôme le plus riche des deux, car le sift apporte ses propres terpènes.' },
+        { icon: '❄️', title: 'Ice Rock', desc: 'Roulée dans l\'isolat de CBD. Blanche, cristalline et visuellement frappante, avec généralement le chiffre le plus élevé sur le certificat.' },
+        { icon: '🏆', title: 'Pourquoi les référencer', desc: 'Elles remplissent un rôle qu\'aucun autre produit ne tient : elles rehaussent la qualité perçue de tout ce qui les entoure et amorcent la conversation de vente.' }
+      ],
+      productSections: [
+        { title: 'Fleurs CBD premium', desc: 'MoonRock, Ice Rock et les fleurs indoor les plus puissantes du catalogue.', category: 'cbd-flowers', browseLabel: 'Voir toutes les fleurs CBD →' },
+        { title: 'Les composants séparément', desc: 'Extrait, isolat et pollen — tout ce qui entre dans une fleur enrobée existe aussi séparément.', category: 'cbd-resins', browseLabel: 'Voir toutes les résines CBD →' }
+      ],
+      faqTitle: 'MoonRock & Ice Rock — FAQ',
+      faq: [
+        { question: 'Qu\'est-ce que le MoonRock CBD ?', answer: 'Le MoonRock est une fleur de CBD indoor premium enrobée d\'extrait de CBD puis roulée dans du pollen ou du kief. Le résultat est une tête dense et fortement givrée, dont la teneur totale en cannabinoïdes dépasse largement celle de la fleur de départ. C\'est un produit à trois composants — fleur, extrait et sift — d\'où sa position en haut de l\'échelle de prix.' },
+        { question: 'Quelle différence entre MoonRock et Ice Rock ?', answer: 'L\'enrobage. Le MoonRock est roulé dans du pollen ou du kief après application de l\'extrait, ce qui laisse une surface dorée et texturée. L\'Ice Rock est enrobé d\'isolat de CBD, produisant une apparence blanche cristalline caractéristique et généralement un taux de CBD encore plus élevé, l\'isolat étant proche du cannabinoïde pur. L\'Ice Rock affiche un chiffre plus élevé au certificat, le MoonRock a généralement l\'arôme le plus riche.' },
+        { question: 'Pourquoi les référencer si elles sont chères ?', answer: 'Parce qu\'elles remplissent un rôle qu\'aucun autre produit du rayon ne tient. Elles sont l\'ancrage visuel de la présentation — les clients les remarquent, posent des questions, et se souviennent de la boutique qui en avait. Même avec un volume modeste, elles rehaussent la qualité perçue de tout ce qui les entoure et donnent au personnel une accroche qui se termine souvent par la vente d\'autre chose.' },
+        { question: 'Comment sont-elles fabriquées ?', answer: 'Une fleur indoor de qualité sert de base, elle est enrobée d\'extrait de CBD, puis roulée dans du pollen ou de l\'isolat selon le produit. Comme chaque composant est lui-même un produit que nous vendons séparément, vous pouvez voir exactement ce qui les compose.' },
+        { question: 'Comment les présenter et les tarifer ?', answer: 'Vendez-les au gramme en petites quantités plutôt que dans les pots multigrammes utilisés pour la fleur classique — les clients les achètent ponctuellement, pas chaque semaine. Gardez-les visibles et bien éclairées ; l\'apparence fait une grande partie de l\'achat. La plupart des détaillants les positionnent nettement au-dessus de leur meilleure fleur indoor plutôt qu\'en concurrence avec elle.' }
+      ],
+      ctaTitle: 'Ancrez votre présentation',
+      ctaDesc: 'Demandez les tarifs de gros sur MoonRock et Ice Rock, ou ajoutez-les à une commande d\'échantillons et voyez le rendu sur votre rayon.',
+      ctaBtnPrimary: 'Voir toutes les fleurs CBD', ctaBtnSecondary: 'Nous contacter'
     },
   },
 };

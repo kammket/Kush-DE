@@ -5,6 +5,8 @@ import ContentByline from '../components/ContentByline.astro';
 import ProductCard from '../components/ProductCard.astro';
 import WaLink from '../components/WaLink.astro';
 import { getProductBySlug } from '../data/products';
+import { seoTranslations } from '../data/translations/seo-pages';
+import type { Locale } from '../i18n/config';
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
@@ -72,8 +74,9 @@ const process = [
   { step: "3", title: "Grade by micron", text: "Finer screens yield purer sift. The first, finest pass is the premium grade; later passes carry more plant matter." },
   { step: "4", title: "Press or leave loose", text: "Left loose it stays pollen. Pressed with warmth and pressure it becomes traditional hash." },
 ];
-// English-only page: no localized versions exist, so BaseLayout must not emit
-// hreflang alternates — they would point at URLs that 404 (noHreflang below).
+// Alternates are derived from the translations that actually exist, so this list
+// can never claim a localized URL that was not built.
+const hreflangLocales = ['en', ...Object.keys(seoTranslations['cbd-pollen-dry-sift-wholesale'] ?? {})] as Locale[];
 ---
 
 <BaseLayout
@@ -81,7 +84,7 @@ const process = [
   description="Wholesale CBD pollen, skuff and dry sift: solvent-free separated resin, entry to premium grade. Golden Static, 3X Filtered, COA every batch, 24h delivery."
   canonicalURL="https://greensfarmhouse.com/cbd-pollen-dry-sift-wholesale"
   jsonLd={jsonLd}
-  noHreflang={true}
+  hreflangLocales={hreflangLocales}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 

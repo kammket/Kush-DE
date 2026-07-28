@@ -5,6 +5,8 @@ import ContentByline from '../components/ContentByline.astro';
 import ProductCard from '../components/ProductCard.astro';
 import WaLink from '../components/WaLink.astro';
 import { getProductBySlug } from '../data/products';
+import { seoTranslations } from '../data/translations/seo-pages';
+import type { Locale } from '../i18n/config';
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
@@ -64,8 +66,9 @@ const faqJsonLd = {
     "acceptedAnswer": { "@type": "Answer", "text": f.answer }
   }))
 };
-// English-only page: no localized versions exist, so BaseLayout must not emit
-// hreflang alternates — they would point at URLs that 404 (noHreflang below).
+// Alternates are derived from the translations that actually exist, so this list
+// can never claim a localized URL that was not built.
+const hreflangLocales = ['en', ...Object.keys(seoTranslations['thc-free-cbd-wholesale'] ?? {})] as Locale[];
 ---
 
 <BaseLayout
@@ -73,7 +76,7 @@ const faqJsonLd = {
   description="Wholesale 0% THC CBD: resins 25–50% CBD, 99.8% isolate and 90% distillate, all non-detectable THC. For markets requiring THC-free products. COA included."
   canonicalURL="https://greensfarmhouse.com/thc-free-cbd-wholesale"
   jsonLd={jsonLd}
-  noHreflang={true}
+  hreflangLocales={hreflangLocales}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
