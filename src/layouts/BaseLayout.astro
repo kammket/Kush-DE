@@ -42,6 +42,22 @@ const {
   availableLocales = hreflangLocales,
 } = Astro.props;
 
+/**
+ * The server 308-redirects /path to /path/, so a canonical without the slash
+ * points at a redirect rather than at the page itself. The sitemap and hreflang
+ * already use the slashed form; normalising here makes all three agree, which
+ * is the form Google resolves to anyway.
+ */
+function withTrailingSlash(url: string): string {
+  try {
+    const u = new URL(url);
+    if (!u.pathname.endsWith('/')) u.pathname += '/';
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
 const siteName = 'Greens Farmhouse';
 // Google truncates titles around 60 characters. Only append the brand suffix when
 // the result still fits, so long keyword-bearing titles are not cut off mid-phrase.
@@ -52,6 +68,7 @@ const fullTitle = title.includes(siteName)
   : title.length + titleSuffix.length <= TITLE_MAX
     ? `${title}${titleSuffix}`
     : title;
+const canonical = withTrailingSlash(canonicalURL);
 const currentPath = getPathWithoutLocale(Astro.url.pathname);
 const lp = (path: string) => getLocalePath(path, locale);
 const isActive = (path: string) => currentPath === path || currentPath.startsWith(path + '/');
@@ -110,15 +127,15 @@ const searchNoResults: Record<string, string> = {
   {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
 
   <!-- Canonical -->
-  <link rel="canonical" href={canonicalURL} />
+  <link rel="canonical" href={canonical} />
 
   <!-- Hreflang for all languages (language-only codes, matching the sitemap).
        Never emitted on noindex pages: declaring a language alternate for a page
        you have asked Google not to index is a contradictory signal. -->
   {!noHreflang && !noindex && hreflangLocales.map((loc) => (
-    <link rel="alternate" hreflang={loc} href={getAbsoluteLocaleUrl(loc, currentPath)} />
+    <link rel="alternate" hreflang={loc} href={withTrailingSlash(getAbsoluteLocaleUrl(loc, currentPath))} />
   ))}
-  {!noHreflang && !noindex && <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl('en', currentPath)} />}
+  {!noHreflang && !noindex && <link rel="alternate" hreflang="x-default" href={withTrailingSlash(getAbsoluteLocaleUrl('en', currentPath))} />}
   
   <!-- Geo targeting -->
   <meta name="geo.region" content="FR" />
@@ -126,7 +143,7 @@ const searchNoResults: Record<string, string> = {
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content={ogType} />
-  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:url" content={canonical} />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage.startsWith('http') ? ogImage : `https://greensfarmhouse.com${ogImage}`} />
@@ -138,7 +155,7 @@ const searchNoResults: Record<string, string> = {
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content={canonicalURL} />
+  <meta name="twitter:url" content={canonical} />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `https://greensfarmhouse.com${ogImage}`} />
