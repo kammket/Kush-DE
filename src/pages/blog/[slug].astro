@@ -14,8 +14,12 @@ export function getStaticPaths() {
 
 const { post } = Astro.props;
 
-// Get related posts (exclude current, pick up to 3)
-const relatedPosts = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
+// Related posts: prefer the same category, then fall back to filling with others.
+// Taking the first three of the full list would show identical links on every post,
+// which wastes the internal-linking value of having a blog at all.
+const others = blogPosts.filter(p => p.slug !== post.slug);
+const sameCategory = others.filter(p => p.category === post.category);
+const relatedPosts = [...sameCategory, ...others.filter(p => p.category !== post.category)].slice(0, 3);
 
 const breadcrumbs = [
   { name: "Home", url: "/" },

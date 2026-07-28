@@ -697,6 +697,229 @@ export const blogPosts: BlogPost[] = [
       <p>For science-based guidance on hemp flower drying, curing, and post-harvest handling, see <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">Oregon State University Extension's guide to post-harvest processing of hemp flowers</a>.</p>
     `,
   },
+  {
+    slug: "what-are-terpenes-cbd-guide",
+    title: "What Are Terpenes? A Practical Guide for CBD Retailers",
+    excerpt: "Terpenes are the aromatic compounds that give each CBD strain its smell and character. They are also the single best predictor of whether a customer will come back for the same product twice.",
+    date: "2026-07-28",
+    readTime: "9 min read",
+    category: "Educational",
+    content: `
+      <h2>Terpenes: What Customers Are Actually Buying</h2>
+      <p>Terpenes are aromatic compounds produced in the same resin glands as cannabinoids. They are not unique to hemp — limonene is what makes citrus peel smell like citrus, pinene is what makes pine forests smell like pine — but the particular combination a plant produces is what gives each strain its recognisable character.</p>
+      <p>This matters commercially more than most retailers realise. Customers standing at a counter cannot perceive a CBD percentage. They can perceive smell, immediately and without explanation. When someone says a flower is "better" than another at the same CBD content, they are almost always describing its terpene profile.</p>
+
+      <h3>The Terpenes You Will Meet Most Often</h3>
+      <ul>
+        <li><strong>Myrcene:</strong> earthy, musky, slightly herbal. The most common terpene in most hemp varieties and a large part of what people describe as a "classic" smell.</li>
+        <li><strong>Limonene:</strong> bright citrus. Prominent in strains like <a href="/products/lemon-haze-crumble">Lemon Haze</a> and a reliable seller because the aroma reads as "fresh" to almost everyone.</li>
+        <li><strong>Pinene:</strong> sharp pine and rosemary. Often present alongside myrcene and contributes to the "green" edge in greenhouse material.</li>
+        <li><strong>Caryophyllene:</strong> pepper and clove. Unusual among terpenes in that it also interacts with cannabinoid receptors directly.</li>
+        <li><strong>Linalool:</strong> floral, lavender-like. Common in strains marketed toward the evening segment.</li>
+      </ul>
+
+      <h3>Why Terpene Content Fades — And What That Costs You</h3>
+      <p>Terpenes are volatile. They evaporate with heat, light and air exposure, which is why a flower that smelled remarkable on arrival can smell like hay two months later in a badly stored jar. The cannabinoid content will barely have moved; the thing customers actually judge will have collapsed.</p>
+      <p>This is the practical reason storage discipline matters in a CBD shop, and we cover the specifics in our guide to <a href="/blog/how-to-store-cbd-flowers-resins-fresh">keeping CBD flowers and resins fresh</a>. If you are buying in volume, terpene preservation is the difference between selling through a kilo and discounting it.</p>
+
+      <h3>Terpenes in Resin and Hash</h3>
+      <p>Because resin is made from the trichomes themselves, hash concentrates terpenes along with cannabinoids — which is why a good traditional pressing has a far more intense nose than the flower it came from. It is also why over-heated pressing damages a product: too much heat during production drives off exactly the compounds that justify the price.</p>
+      <p>The difference is easiest to notice by comparing a <a href="/moroccan-cbd-hash-wholesale">traditional Moroccan pressing</a> against a heavily refined grade. Multi-pass filtration removes plant matter but also strips terpene content, which is the honest trade-off behind our <a href="/thc-free-cbd-wholesale">0% THC range</a>: cleaner and higher in CBD, less aromatically complex.</p>
+
+      <h3>How to Use Terpenes When Buying</h3>
+      <p>Ask for the terpene panel, not just the cannabinoid figure. Many certificates report both. A flower at 12% CBD with a rich, layered terpene profile will outsell a 16% flower that smells of nothing, and it will generate the repeat purchase that actually builds a shop.</p>
+      <p>When you order samples — from our <a href="/cbd-sample-packs">sample packs</a> or a <a href="/products/flower-discovery-pack">discovery pack</a> — smell them side by side before committing to volume. It is the cheapest quality control available to you.</p>
+      <p>A note on what we are not claiming: terpenes are frequently marketed with specific effects attached to each compound. The research on that is early and contested, and the honest commercial case for terpenes does not depend on it. Aroma drives choice at the counter and drives repeat purchase — that is enough.</p>
+
+      <h3>Where to Start</h3>
+      <p>Build your shelf around aroma diversity rather than percentage alone. Stock one citrus-forward, one earthy, one sweet or dessert-style, and let customers choose by smell. Browse current availability in <a href="/collections/cbd-flowers">CBD flowers</a> and <a href="/collections/cbd-resins">CBD resins</a>, or read our <a href="/best-cbd-strains">strain guides</a> for profile-by-profile detail.</p>
+    `,
+  },
+  {
+    slug: "how-to-read-cbd-coa-lab-report",
+    title: "How to Read a CBD Certificate of Analysis (COA)",
+    excerpt: "A COA is the only document that proves what is actually in a CBD product. Here is how to read one properly, and the specific things that should make you reject a batch.",
+    date: "2026-07-28",
+    readTime: "10 min read",
+    category: "Buying Guide",
+    content: `
+      <h2>The Document That Matters More Than the Label</h2>
+      <p>A Certificate of Analysis is a laboratory report on a specific batch of product. It is the only evidence that what is written on the packaging matches what is in the jar — and if you are ever asked by an authority to demonstrate compliance, it is the COA you will produce, not the label.</p>
+      <p>Every batch we ship carries one, and you can request the certificate for any product before ordering. What follows is how to actually read it.</p>
+
+      <h3>1. Check It Matches the Batch in Front of You</h3>
+      <p>The most common problem with COAs is not falsification — it is that the certificate describes a different batch. Look for a batch or lot number, a sample date, and a product name that match what you were sent. A COA from eighteen months ago for "CBD Flower" tells you nothing about the material on your shelf.</p>
+
+      <h3>2. Confirm the Lab Is Independent and Accredited</h3>
+      <p>The report should name a third-party laboratory, not the producer's own quality department. Look for ISO/IEC 17025 accreditation, which is the international standard for testing laboratory competence. An unaccredited in-house result is not worthless, but it is not evidence you would want to rely on if challenged.</p>
+
+      <h3>3. Read the Cannabinoid Profile</h3>
+      <p>You are checking two things. First, that the CBD figure supports the claim being made on the packaging. Second — and more importantly — that the THC figure sits where it needs to for your market. Note that some certificates report both delta-9 THC and "total THC", which accounts for THCA converting to THC when heated. Know which figure your regulator cares about.</p>
+      <p>This distinction is exactly why our <a href="/thc-free-cbd-wholesale">0% THC range</a> exists as a separate line. "Not detected" means the laboratory found no THC at its limit of quantification — a materially different claim from a product sitting just under a percentage threshold. Some markets require the former and a compliant 0.2% product will fail there.</p>
+
+      <h3>4. Do Not Skip the Contaminant Panels</h3>
+      <p>A cannabinoid profile alone is an incomplete COA. A full report should also cover:</p>
+      <ul>
+        <li><strong>Heavy metals:</strong> lead, arsenic, mercury, cadmium. Hemp is a known bioaccumulator, meaning it draws contaminants out of the soil it grows in — so this panel is not a formality.</li>
+        <li><strong>Pesticides:</strong> particularly relevant if the product is sold as organic. See our <a href="/cbd-wholesaler-organic">organic range</a> for the certified side of the catalogue.</li>
+        <li><strong>Microbials and mycotoxins:</strong> mould and its by-products, most relevant for flower and anything stored in humid conditions.</li>
+        <li><strong>Residual solvents:</strong> only relevant for solvent-extracted products. Mechanically separated material such as <a href="/cbd-pollen-dry-sift-wholesale">dry sift and pollen</a> never involves solvents at any stage, which is part of its appeal.</li>
+      </ul>
+
+      <h3>5. Understand "ND" and the Limit of Quantification</h3>
+      <p>"ND" means not detected — but detection always has a threshold, listed on the report as the LOQ or limit of quantification. "Not detected at 0.01%" and "not detected at 0.5%" are very different statements. A laboratory with a high LOQ can report a clean result on material a more sensitive lab would flag. Read the number, not just the letters.</p>
+
+      <h3>Red Flags That Should Stop an Order</h3>
+      <ul>
+        <li>No batch number, or a batch number that does not match your delivery.</li>
+        <li>Cannabinoid results only, with no contaminant panels at all.</li>
+        <li>An unnamed laboratory, or a report with no accreditation reference.</li>
+        <li>A supplier who cannot produce the certificate before you order, only after.</li>
+      </ul>
+      <p>That last one is the most telling. Any serious supplier will send you a COA on request without hesitation — ours are available over WhatsApp before you commit to anything, and our <a href="/quality-and-testing">testing page</a> sets out the process in full.</p>
+
+      <h3>Why This Is Worth Your Time</h3>
+      <p>Reading certificates properly protects you twice: from stocking material that fails inspection, and from stocking material that disappoints customers. Both cost more than the ten minutes it takes to check. If you are building a supplier relationship from scratch, our guide to <a href="/blog/choose-right-cbd-flower-supplier">choosing a CBD flower supplier</a> covers what else to verify alongside the paperwork.</p>
+      <p>For background on the ISO/IEC 17025 standard itself, see the <a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">official ISO overview of testing and calibration laboratories</a>.</p>
+    `,
+  },
+  {
+    slug: "hemp-vs-cannabis-vs-marijuana-difference",
+    title: "Hemp vs Cannabis vs Marijuana: What Actually Separates Them",
+    excerpt: "Hemp and marijuana are the same plant species. The only thing separating them is a THC threshold written into law — which is why the distinction is legal rather than botanical.",
+    date: "2026-07-28",
+    readTime: "8 min read",
+    category: "Educational",
+    content: `
+      <h2>One Species, Two Legal Categories</h2>
+      <p>Hemp and marijuana are not different plants. Both are <em>Cannabis sativa</em>. What separates them is a number written into legislation: the concentration of delta-9 THC the plant is allowed to contain. Below that threshold the plant is hemp and broadly lawful to cultivate and trade; above it, the same species becomes a controlled substance.</p>
+      <p>This is worth understanding precisely, because customers ask the question constantly and a confident, accurate answer at the counter builds more trust than any marketing claim.</p>
+
+      <h3>Where the Threshold Sits</h3>
+      <p>In the European Union the limit for industrial hemp cultivation has been set at 0.3% THC, having previously been 0.2%. Individual member states apply their own rules to finished products on top of that, and those rules are not uniform — some cap THC as a percentage of the finished product, others require that no THC be detectable at all.</p>
+      <p>Our <a href="/legal-cannabis-europe">country-by-country legal overview</a> covers where the differences fall, and the <a href="/blog/is-cbd-legal-in-europe-country-guide">legal guide on the blog</a> goes into the detail per market. Treat both as a starting point rather than legal advice.</p>
+
+      <h3>"Marijuana" Is a Regulatory Word, Not a Botanical One</h3>
+      <p>There is no botanical category called marijuana. The term entered common use through drug policy rather than plant science, which is why most European industry and regulatory documents avoid it entirely and refer to cannabis, hemp, or specific cannabinoid content instead. If you are writing product copy, matching that convention makes you sound like a professional supplier rather than a novelty shop.</p>
+
+      <h3>What This Means for the Product on Your Shelf</h3>
+      <p>Because the plants are the same species, hemp produces the same families of compounds — cannabinoids, terpenes, flavonoids — just in different ratios. Hemp bred for CBD production is selected to express high CBD and minimal THC. That is why a CBD flower can look, smell and handle exactly like high-THC cannabis while remaining non-intoxicating and lawful.</p>
+      <p>It is also why the visual similarity causes practical problems. Retailers in several markets report roadside and inspection issues precisely because the material is indistinguishable by eye. This is the entire argument for keeping a <a href="/blog/how-to-read-cbd-coa-lab-report">certificate of analysis</a> with your stock rather than filed away.</p>
+
+      <h3>CBD, THC and the Other Cannabinoids</h3>
+      <p>CBD and THC are the two best known of well over a hundred cannabinoids, but they are not the only ones with commercial relevance. <a href="/blog/what-is-cbg-complete-guide">CBG</a> is the precursor compound from which the others are synthesised, and <a href="/cbn-sleep-products">CBN</a> forms as THC ages and oxidises. For a direct comparison of the two headline compounds, see our guide to <a href="/blog/cbd-vs-thc-difference">CBD versus THC</a>.</p>
+
+      <h3>Practical Takeaway for Retailers</h3>
+      <p>When a customer asks whether what you are selling is "the same as weed", the honest answer is: same plant, different chemistry, different legal status. That answer is accurate, it is easy to remember, and it does not overclaim. Everything else — potency, aroma, format — follows from the chemistry rather than the label.</p>
+      <p>Browse what that looks like in practice across our <a href="/collections/cbd-flowers">CBD flowers</a>, <a href="/collections/cbd-resins">resins</a> and <a href="/thc-free-cbd-wholesale">0% THC line</a>.</p>
+      <p>For the regulatory framing behind the EU hemp threshold, see the European Commission's overview of <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">hemp in EU agriculture</a>.</p>
+    `,
+  },
+  {
+    slug: "how-cbd-hash-is-made-dry-sift-bubble-charas",
+    title: "How CBD Hash Is Made: Dry Sift, Bubble Hash and Charas",
+    excerpt: "Every hash you stock comes from one of three separation methods. Knowing which is which explains the texture, the aroma and — most usefully — the price difference.",
+    date: "2026-07-28",
+    readTime: "9 min read",
+    category: "Product Guide",
+    content: `
+      <h2>Separation Is the Whole Story</h2>
+      <p>Hash is not an ingredient added to hemp. It is hemp with everything except the resin removed. The trichomes — the resin glands on the surface of the flower — hold most of the cannabinoids and terpenes; hash-making is simply the business of separating those glands from the plant material as cleanly as possible.</p>
+      <p>Three methods dominate, and each produces a recognisably different product. If you stock resin, being able to explain which is which is the difference between selling on price and selling on quality.</p>
+
+      <h3>1. Dry Sift — Mechanical, Solvent-Free, Traditional</h3>
+      <p>Dried flower is agitated over fine mesh screens. The resin glands are brittle when cured and snap off, falling through the mesh while the plant matter stays above. What collects underneath is loose resin powder — pollen, also called skuff or kief.</p>
+      <p>Screen size determines grade. The finest early passes yield the cleanest sift; later passes carry progressively more plant matter and sell for less. Leave the powder loose and it stays pollen; press it under warmth and pressure and it becomes traditional hash. This is the method behind our <a href="/cbd-pollen-dry-sift-wholesale">pollen and dry sift range</a> and behind classic <a href="/moroccan-cbd-hash-wholesale">Moroccan-style pressings</a>.</p>
+      <p>A refinement worth knowing about is static separation, which uses static electricity to pull resin heads away from residual plant matter. It produces a paler, cleaner result than screening alone — our <a href="/products/golden-static-resin">Golden Static</a> is made this way.</p>
+
+      <h3>2. Ice Water Separation — Bubble Hash</h3>
+      <p>Plant material is agitated in ice water. The cold makes the trichomes brittle enough to break away, and because resin does not dissolve in water it can be caught in a series of progressively finer filter bags. The name comes from the way high-quality bubble hash bubbles when heat is applied.</p>
+      <p>Ice water separation can produce a very clean product, but it is more equipment-intensive than dry sifting and the material must be dried carefully afterwards — residual moisture is what ruins a batch. Like dry sift, it uses no solvents at any point.</p>
+
+      <h3>3. Charas — Hand-Rubbed, Fresh Plant</h3>
+      <p>Charas is made from living plants rather than dried material. Fresh flowers are rubbed between the hands until resin accumulates on the skin, which is then collected and rolled. It is the oldest method of the three and by far the most labour-intensive, which is why genuine charas is rare and expensive relative to sifted product.</p>
+
+      <h3>What About Filtered and High-Percentage Grades?</h3>
+      <p>Beyond the three traditional methods sit modern refinement steps. Multi-pass filtration takes sifted material and puts it through successive stages, each removing more plant matter — our <a href="/products/3x-filtered-cbg-cbd-resin">3X Filtered</a> is an example. The result is cleaner, paler and higher in cannabinoid content.</p>
+      <p>There is an honest trade-off here that is worth telling customers about. Refinement strips terpenes along with plant matter, so a heavily filtered grade is more potent but less aromatically complex than a good traditional press. Neither is "better" — they serve customers who are buying on different criteria. Our <a href="/thc-free-cbd-wholesale">0% THC line</a> sits at the far end of that spectrum.</p>
+
+      <h3>How to Judge What You Are Being Offered</h3>
+      <p>Texture and aroma tell you most of it. Good resin softens with warmth and holds its shape when cool; material that crumbles to dust cold or stays greasy at room temperature has usually been made or stored badly. A flat, hay-like nose generally means old material or over-heated pressing, whatever the percentage claims.</p>
+      <p>Then read the paperwork — our guide to <a href="/blog/how-to-read-cbd-coa-lab-report">reading a certificate of analysis</a> covers what to look for, including the residual solvent panel that mechanically separated hash should never need.</p>
+
+      <h3>Building the Shelf</h3>
+      <p>Most successful resin shelves carry three tiers: an entry pollen, a mid-range traditional press, and one premium or high-percentage grade. That structure lets customers trade up rather than forcing a single price point. Our <a href="/cbd-hash-wholesale-europe">hash wholesale range</a> is organised to make that ladder straightforward, and the <a href="/products/resins-discovery-pack">resins discovery pack</a> lets you compare grades before committing to volume.</p>
+      <p>For a broader comparison of resin against flower as a category, see our guide to <a href="/blog/cbd-flowers-vs-resins-guide">CBD flowers versus resins</a>.</p>
+    `,
+  },
+  {
+    slug: "eu-novel-food-cbd-what-retailers-need-to-know",
+    title: "EU Novel Food and CBD: What Retailers Actually Need to Know",
+    excerpt: "Ingestible CBD sits in a regulatory holding pattern in the EU. Understanding why matters for what you stock, how you label it, and what you can safely claim.",
+    date: "2026-07-28",
+    readTime: "9 min read",
+    category: "Regulations",
+    content: `
+      <h2>Why CBD Edibles Are Treated Differently</h2>
+      <p>The EU classifies foods with no significant history of consumption before May 1997 as "novel foods", governed by <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">Regulation (EU) 2015/2283</a>. Products in that category require pre-market authorisation before they can be lawfully sold as food.</p>
+      <p>The European Commission takes the position that cannabinoid extracts fall inside this definition. That is the root of the situation every retailer of ingestible CBD is currently operating in — and it applies to oils, capsules and edibles in a way it does not apply to products not sold for consumption.</p>
+
+      <h3>Where the Assessments Currently Stand</h3>
+      <p>EFSA, the European Food Safety Authority, assesses novel food applications on the Commission's behalf. In 2022 its panel concluded that it could not complete safety assessments of CBD because of significant data gaps, and evaluations were placed on hold pending further evidence. EFSA's own <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">plain-language summary of that statement</a> sets out the reasoning, and its <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">novel food topic page</a> tracks the current position.</p>
+      <p>The practical consequence is a long holding pattern: a large number of applications submitted, assessments paused, and enforcement left largely to individual member states in the meantime. That is why the legal reality for CBD edibles differs so much from one country to the next.</p>
+
+      <h3>What This Means in Practice</h3>
+      <ul>
+        <li><strong>Enforcement is national, not uniform.</strong> A product sold without difficulty in one member state may be treated as an unauthorised novel food in another. Check your own market rather than assuming EU-wide consistency.</li>
+        <li><strong>Product format changes the analysis.</strong> Novel food rules attach to food. Products not presented for consumption sit under different rules — which is one reason the flower and resin side of the market has developed on a separate regulatory track from oils and edibles.</li>
+        <li><strong>Claims are a separate legal problem.</strong> Health claims on foods are governed by their own regime and are not something a COA can support. Describing what a product is remains safe; describing what it does for a body generally is not.</li>
+      </ul>
+
+      <h3>How to Reduce Your Exposure</h3>
+      <p>Three things are within your control regardless of how the regulatory position develops.</p>
+      <p><strong>Keep documentation with the stock.</strong> Batch-level certificates of analysis are the evidence base for any conversation with an inspector. Our guide to <a href="/blog/how-to-read-cbd-coa-lab-report">reading a COA</a> covers what a complete one contains, and our <a href="/quality-and-testing">testing process</a> explains what ships with each batch.</p>
+      <p><strong>Be conservative with claims.</strong> The commercial temptation is to say more than the evidence supports. Descriptive, factual product copy is both safer and, in a market crowded with overclaiming, more credible.</p>
+      <p><strong>Know your own market's THC rule.</strong> Some markets set a percentage threshold; others require no detectable THC in the finished product. If you sell into the second kind, a compliant 0.2% product will not qualify — which is why our <a href="/thc-free-cbd-wholesale">0% THC range</a> exists as a distinct line rather than a marketing angle.</p>
+
+      <h3>What to Watch</h3>
+      <p>The position is genuinely unsettled and worth rechecking rather than assuming. EFSA's novel food page is the primary source for assessment status; national food safety authorities publish their own enforcement positions, which in practice matter more day to day. Our <a href="/legal-cannabis-europe">country overview</a> and <a href="/blog/is-cbd-legal-in-europe-country-guide">legal guide</a> summarise the landscape, but neither substitutes for checking your own jurisdiction.</p>
+      <p>This article is general information for retailers, not legal advice. If you are making stocking decisions with real money behind them, take advice specific to your market.</p>
+    `,
+  },
+  {
+    slug: "hhc-thcp-semi-synthetic-cannabinoids-europe",
+    title: "HHC, THCP and Semi-Synthetic Cannabinoids: A Retailer's Briefing",
+    excerpt: "Semi-synthetic cannabinoids moved from novelty to regulatory priority in a few years. Here is what they are, why they appeared, and why stocking them is a different risk category from CBD.",
+    date: "2026-07-28",
+    readTime: "8 min read",
+    category: "Regulations",
+    content: `
+      <h2>Where These Compounds Came From</h2>
+      <p>Hexahydrocannabinol (HHC) was the first semi-synthetic cannabinoid reported in the European Union, and has been monitored by the EU Early Warning System since October 2022. It is not extracted from the plant in the way CBD is — it is produced by chemically modifying CBD extracted from low-THC hemp.</p>
+      <p>That production route is the whole reason the category exists. Starting from lawful hemp-derived CBD and converting it into a different, intoxicating compound placed these products in a regulatory space that had not been written with them in mind. Related compounds including HHC-P and THCP followed the same commercial path.</p>
+      <p>The European Union Drugs Agency covers the emergence of the category in its briefing on <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">HHC and the evolving cannabinoid market</a>, and maintains a broader topic page on <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">synthetic cannabinoids</a>.</p>
+
+      <h3>Why This Is Not the Same Risk as CBD</h3>
+      <p>Three differences matter for anyone deciding what to put on a shelf.</p>
+      <ul>
+        <li><strong>These compounds are intoxicating.</strong> Unlike CBD, HHC and its relatives produce psychoactive effects. Whatever the legal position in a given market, that changes the customer conversation and the duty of care entirely.</li>
+        <li><strong>The regulatory position has been moving quickly.</strong> Semi-synthetic cannabinoids have been the subject of national bans, controlled-substance scheduling, and international control measures — with different countries acting at different times. A product lawful when ordered may not be lawful when it arrives.</li>
+        <li><strong>The evidence base is thin.</strong> These are recent compounds with far less published research behind them than CBD. That is a genuine unknown, not a marketing objection.</li>
+      </ul>
+
+      <h3>The Practical Problem for Retailers</h3>
+      <p>The commercial appeal is obvious — intoxicating products carry higher margins and attract customers CBD alone does not. The difficulty is that the risk is not evenly distributed across your business. Stocking a controlled substance, even unknowingly, is a different order of problem from a labelling dispute, and it can affect banking, insurance and licences well beyond the individual product line.</p>
+      <p>Because national positions differ and have changed repeatedly, the only reliable approach is to verify the current status in your own market at the time of ordering, from a national authority rather than from a supplier's marketing page.</p>
+
+      <h3>What We Stock, and Why</h3>
+      <p>Our catalogue is built on hemp-derived, lab-tested products within legal THC limits — <a href="/collections/cbd-flowers">flowers</a>, <a href="/cbd-hash-wholesale-europe">hash and resin</a>, <a href="/collections/cbd-oils">oils</a> and edibles — rather than semi-synthetic cannabinoids. That is a deliberate positioning decision. It keeps our customers' compliance picture straightforward and means a certificate of analysis is sufficient documentation for what they are selling.</p>
+      <p>For retailers who want stronger-selling products without stepping into that risk category, the practical routes are aroma and quality rather than intoxication: <a href="/cbd-hemp-flowers-indoor">premium indoor flower</a>, high-percentage <a href="/thc-free-cbd-wholesale">filtered resins</a>, or novelty formats such as <a href="/moonrock-icerock-cbd-wholesale">MoonRock and Ice Rock</a> that command a premium on presentation.</p>
+
+      <h3>If You Do Decide to Stock Them</h3>
+      <p>Verify the legal status in writing, from a national source, dated. Keep documentation for every batch. Age-gate rigorously. And understand that the regulatory position may change between ordering and selling — several markets have moved from permissive to prohibited within a single season.</p>
+      <p>For the wider legal picture on cannabinoids in Europe, see our <a href="/legal-cannabis-europe">country overview</a> and the blog guide to <a href="/blog/is-cbd-legal-in-europe-country-guide">CBD legality across Europe</a>. As with all regulatory content here, this is general information for retailers rather than legal advice.</p>
+    `,
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
