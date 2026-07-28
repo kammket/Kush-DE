@@ -455,6 +455,146 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
       ctaDesc: 'Indiquez-nous votre volume et votre prix cible, nous composerons un palier — ou commandez d\'abord un pack découverte et jugez la matière vous-même.',
       ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Nous contacter'
     },
+    es: {
+      title: 'Hachís CBD al por Mayor',
+      desc: 'Hachís y resina CBD al por mayor: marroquí, afgano, polen/dry sift, filtrado y 0% THC. Precios por kilo, COA por lote, envío en 24h.',
+      h1: 'Hachís CBD al por Mayor — Todas las calidades, un proveedor',
+      heroTag: '🧱 Hachís y Resina',
+      heroDesc: 'Prensados marroquíes y afganos tradicionales, polen y dry sift a granel, calidades multifiltradas de alta concentración y una línea 0% THC dedicada — más de 20 resinas en un solo catálogo, analizadas en laboratorio, con precios escalonados hasta el kilo.',
+      btnPrimary: 'Ver todas las resinas', btnSecondary: 'Ver flores CBD',
+      features: [
+        { icon: '🇲🇦', title: 'Marroquí y Afgano', desc: 'Los perfiles clásicos que sus clientes piden por su nombre — suave y floral, o oscuro y terroso.' },
+        { icon: '🌾', title: 'Polen y Dry Sift', desc: 'Separación mecánica, sin disolventes. La entrada a la categoría resina y la mejor forma de convertir a sus compradores de flores.' },
+        { icon: '📄', title: 'COA por lote', desc: 'Cada lote se entrega con certificado de análisis independiente. Solicite cualquier COA por WhatsApp antes de pedir.' }
+      ],
+      productSections: [
+        { title: 'Resina y Hachís CBD — Mayorista', desc: 'Marroquí, Afgano, King Hassan, Ketama, polen Skuff y calidades filtradas hasta el 50% de CBD.', category: 'cbd-resins', browseLabel: 'Ver todas las resinas CBD →' },
+        { title: 'Flores CBD — Mayorista', desc: 'La materia prima: flores indoor y greenhouse cultivadas en Europa, desde 0,19 €/g al por mayor.', category: 'cbd-flowers', browseLabel: 'Ver todas las flores CBD →' }
+      ],
+      faqTitle: 'Hachís CBD al por Mayor — FAQ',
+      faq: [
+        { question: '¿Qué es el hachís CBD?', answer: 'El hachís CBD — también llamado resina CBD o hachís de cáñamo — es un concentrado obtenido de las glándulas de resina (tricomas) de la flor de cáñamo en lugar de la flor misma. Los tricomas se separan mecánicamente, normalmente tamizando en seco sobre mallas finas, y después se prensan en bloques. Como la resina concentra la mayor parte de los cannabinoides, el hachís es bastante más concentrado que la flor de origen, manteniéndose dentro de los mismos límites legales de THC.' },
+        { question: '¿Qué diferencia hay entre polen, dry sift y hachís?', answer: 'Son etapas del mismo proceso. El polen (también llamado skuff o kief) es el polvo de resina arenoso que atraviesa la malla antes del prensado. El dry sift designa el método de tamizado en seco. El hachís es lo que se obtiene al prensar ese polvo bajo calor y presión hasta formar un bloque sólido. La diferencia en el lineal es textura, maleabilidad y posicionamiento de precio.' },
+        { question: '¿Cuál es el pedido mínimo?', answer: 'Nuestras resinas parten de pequeñas cantidades mayoristas y escalan hasta precios por kilo, con el precio por gramo bajando en cada tramo. Los tramos figuran en cada ficha de producto. Si prefiere no comprometerse todavía, el pack descubrimiento de resinas permite probar varias calidades en un solo pedido.' },
+        { question: '¿Puedo vender hachís CBD en mi país?', answer: 'Los productos CBD por debajo del umbral del 0,3% de THC están ampliamente permitidos en la UE, pero las normas específicas sobre hachís y flores varían considerablemente entre Estados miembros — algunos países restringen o prohíben los formatos fumables incluso donde el aceite de CBD se vende libremente. Consulte la normativa de su mercado antes de referenciar; nuestra guía legal es un punto de partida, no asesoramiento jurídico.' },
+        { question: '¿Cómo fijo el precio del hachís en mi tienda?', answer: 'El hachís admite normalmente un precio por gramo más alto que la flor y un margen mejor, porque el cliente compra cantidades menores y juzga por aroma y textura más que por volumen. La mayoría de minoristas mantiene tres niveles — un polen de entrada, un prensado tradicional y una calidad premium o de alta concentración — para permitir la subida de gama.' }
+      ],
+      ctaTitle: 'Construya su lineal de hachís',
+      ctaDesc: 'Díganos su volumen y su precio objetivo y le prepararemos un tramo — o pida primero un pack descubrimiento y juzgue el material usted mismo.',
+      ctaBtnPrimary: 'Ver todas las resinas', ctaBtnSecondary: 'Contactar'
+    },
+    it: {
+      title: 'Hashish CBD all\'Ingrosso',
+      desc: 'Hashish e resina CBD all\'ingrosso: marocchino, afgano, polline/dry sift, filtrato e 0% THC. Prezzi al chilo, COA per lotto, spedizione in 24h.',
+      h1: 'Hashish CBD all\'Ingrosso — Tutte le qualità, un solo fornitore',
+      heroTag: '🧱 Hashish e Resina',
+      heroDesc: 'Pressature marocchine e afgane tradizionali, polline e dry sift sfusi, qualità multifiltrate ad alta concentrazione e una linea 0% THC dedicata — oltre 20 resine in un unico catalogo, testate in laboratorio, con prezzi a scaglioni fino al chilo.',
+      btnPrimary: 'Vedi tutte le resine', btnSecondary: 'Vedi i fiori CBD',
+      features: [
+        { icon: '🇲🇦', title: 'Marocchino e Afgano', desc: 'I profili classici che i suoi clienti chiedono per nome — morbido e floreale, oppure scuro e terroso.' },
+        { icon: '🌾', title: 'Polline e Dry Sift', desc: 'Separazione meccanica, senza solventi. L\'ingresso nella categoria resine e il modo migliore per convertire chi compra fiori.' },
+        { icon: '📄', title: 'COA per lotto', desc: 'Ogni lotto viene consegnato con certificato di analisi indipendente. Richieda qualsiasi COA su WhatsApp prima di ordinare.' }
+      ],
+      productSections: [
+        { title: 'Resina e Hashish CBD — Ingrosso', desc: 'Marocchino, Afgano, King Hassan, Ketama, polline Skuff e qualità filtrate fino al 50% di CBD.', category: 'cbd-resins', browseLabel: 'Vedi tutte le resine CBD →' },
+        { title: 'Fiori CBD — Ingrosso', desc: 'La materia prima: fiori indoor e greenhouse coltivati in Europa, da 0,19 €/g all\'ingrosso.', category: 'cbd-flowers', browseLabel: 'Vedi tutti i fiori CBD →' }
+      ],
+      faqTitle: 'Hashish CBD all\'Ingrosso — FAQ',
+      faq: [
+        { question: 'Che cos\'è l\'hashish CBD?', answer: 'L\'hashish CBD — chiamato anche resina CBD o hashish di canapa — è un concentrato ottenuto dalle ghiandole resinose (tricomi) del fiore di canapa anziché dal fiore stesso. I tricomi vengono separati meccanicamente, di norma setacciando a secco su reti fini, e poi pressati in blocchi. Poiché la resina concentra la maggior parte dei cannabinoidi, l\'hashish è nettamente più concentrato del fiore di partenza, pur restando entro gli stessi limiti legali di THC.' },
+        { question: 'Che differenza c\'è tra polline, dry sift e hashish?', answer: 'Sono fasi dello stesso processo. Il polline (detto anche skuff o kief) è la polvere di resina sabbiosa che attraversa il setaccio prima della pressatura. Dry sift indica il metodo di setacciatura a secco. L\'hashish è ciò che si ottiene pressando quella polvere sotto calore e pressione fino a formare un blocco solido. La differenza a scaffale è consistenza, malleabilità e posizionamento di prezzo.' },
+        { question: 'Qual è l\'ordine minimo?', answer: 'Le nostre resine partono da piccole quantità all\'ingrosso e scalano fino ai prezzi al chilo, con il prezzo al grammo che scende a ogni scaglione. Gli scaglioni sono indicati su ogni scheda prodotto. Se preferisce non impegnarsi subito, il pacchetto scoperta resine permette di testare più qualità in un solo ordine.' },
+        { question: 'Posso vendere hashish CBD nel mio Paese?', answer: 'I prodotti CBD sotto la soglia dello 0,3% di THC sono ampiamente consentiti nell\'UE, ma le regole specifiche su hashish e fiori variano notevolmente tra Stati membri — alcuni Paesi limitano o vietano i formati fumabili anche dove l\'olio di CBD si vende liberamente. Verifichi la normativa del suo mercato prima di inserire a catalogo; la nostra panoramica legale è un punto di partenza, non consulenza legale.' },
+        { question: 'Come posiziono il prezzo dell\'hashish in negozio?', answer: 'L\'hashish sostiene di norma un prezzo al grammo più alto del fiore e un margine migliore, perché il cliente acquista quantità minori e giudica su aroma e consistenza più che sul volume. La maggior parte dei rivenditori tiene tre livelli — un polline d\'ingresso, una pressatura tradizionale e una qualità premium o ad alta concentrazione — per consentire la salita di gamma.' }
+      ],
+      ctaTitle: 'Costruisca il suo scaffale hashish',
+      ctaDesc: 'Ci indichi volume e prezzo obiettivo e comporremo uno scaglione — oppure ordini prima un pacchetto scoperta e giudichi la materia di persona.',
+      ctaBtnPrimary: 'Vedi tutte le resine', ctaBtnSecondary: 'Contattaci'
+    },
+    nl: {
+      title: 'CBD Hasj Groothandel',
+      desc: 'CBD hasj en hars in de groothandel: Marokkaans, Afghaans, pollen/dry sift, gefilterd en 0% THC. Kiloprijzen, COA per batch, verzending in 24u.',
+      h1: 'CBD Hasj Groothandel — Alle kwaliteiten, één leverancier',
+      heroTag: '🧱 Hasj & Hars',
+      heroDesc: 'Traditionele Marokkaanse en Afghaanse persingen, losse pollen en dry sift, meervoudig gefilterde kwaliteiten met hoog gehalte en een aparte 0%-THC-lijn — ruim 20 harsen in één catalogus, laboratoriumgetest, met staffelprijzen tot aan de kilo.',
+      btnPrimary: 'Bekijk alle harsen', btnSecondary: 'Bekijk CBD bloemen',
+      features: [
+        { icon: '🇲🇦', title: 'Marokkaans & Afghaans', desc: 'De klassieke profielen die uw klanten bij naam vragen — zacht en bloemig, of donker en aards.' },
+        { icon: '🌾', title: 'Pollen & Dry Sift', desc: 'Mechanisch gescheiden, zonder oplosmiddelen. De instap in de harscategorie en de beste manier om bloemkopers om te zetten.' },
+        { icon: '📄', title: 'COA per batch', desc: 'Elke batch wordt geleverd met een onafhankelijk analysecertificaat. Vraag elk COA op via WhatsApp voordat u bestelt.' }
+      ],
+      productSections: [
+        { title: 'CBD Hars & Hasj — Groothandel', desc: 'Marokkaans, Afghaans, King Hassan, Ketama, Skuff-pollen en gefilterde kwaliteiten tot 50% CBD.', category: 'cbd-resins', browseLabel: 'Bekijk alle CBD-harsen →' },
+        { title: 'CBD Bloemen — Groothandel', desc: 'De grondstof: indoor- en greenhouse-bloemen uit Europese teelt, vanaf € 0,19/g in de groothandel.', category: 'cbd-flowers', browseLabel: 'Bekijk alle CBD-bloemen →' }
+      ],
+      faqTitle: 'CBD Hasj Groothandel — FAQ',
+      faq: [
+        { question: 'Wat is CBD hasj?', answer: 'CBD hasj — ook wel CBD hars of hennephasj genoemd — is een concentraat uit de harsklieren (trichomen) van de hennepbloem in plaats van uit de bloem zelf. De trichomen worden mechanisch gescheiden, meestal door droog zeven over fijne zeven, en daarna tot blokken geperst. Omdat de hars het grootste deel van de cannabinoïden bevat, is hasj aanzienlijk geconcentreerder dan de bloem waaruit het komt, binnen dezelfde wettelijke THC-grenzen.' },
+        { question: 'Wat is het verschil tussen pollen, dry sift en hasj?', answer: 'Het zijn stadia van hetzelfde proces. Pollen (ook skuff of kief) is het losse, korrelige harspoeder dat vóór het persen door de zeef valt. Dry sift is de zeefmethode zelf. Hasj ontstaat wanneer dat poeder onder warmte en druk tot een vast blok wordt geperst. Het verschil in het schap is textuur, kneedbaarheid en prijspunt.' },
+        { question: 'Wat is de minimale bestelling?', answer: 'Onze harsen beginnen bij kleine groothandelshoeveelheden en schalen door naar kiloprijzen, waarbij de gramprijs bij elke staffel daalt. De staffels staan op elke productpagina. Wilt u zich nog niet vastleggen, dan kunt u met het harsen-ontdekkingspakket meerdere kwaliteiten in één bestelling testen.' },
+        { question: 'Mag ik CBD hasj in mijn land verkopen?', answer: 'CBD-producten onder de grens van 0,3% THC zijn EU-breed grotendeels toegestaan, maar de regels specifiek voor hasj en bloemen verschillen sterk per lidstaat — sommige landen beperken of verbieden rookbare hennepvormen zelfs waar CBD-olie vrij verkrijgbaar is. Controleer de regelgeving in uw markt voordat u inkoopt; ons juridisch overzicht is een startpunt, geen juridisch advies.' },
+        { question: 'Hoe prijs ik hasj in mijn winkel?', answer: 'Hasj draagt doorgaans een hogere gramprijs dan bloem en een betere marge, omdat klanten kleinere hoeveelheden kopen en beoordelen op aroma en textuur in plaats van volume. De meeste retailers voeren drie niveaus — een instap-pollen, een traditionele persing en één premium- of hoogpercentagekwaliteit — zodat klanten kunnen doorstromen.' }
+      ],
+      ctaTitle: 'Bouw uw hasjschap op',
+      ctaDesc: 'Geef ons uw volume en streefprijs en wij stellen een staffel samen — of bestel eerst een ontdekkingspakket en beoordeel het materiaal zelf.',
+      ctaBtnPrimary: 'Bekijk alle harsen', ctaBtnSecondary: 'Neem contact op'
+    },
+    fi: {
+      title: 'CBD-hasis Tukkumyynti',
+      desc: 'CBD-hasis ja -hartsi tukkuhintaan: marokkolainen, afgaani, siitepöly/dry sift, suodatettu ja 0% THC. Kilohinnat, COA per erä, toimitus 24 h.',
+      h1: 'CBD-hasis Tukkuhintaan — Kaikki laadut, yksi toimittaja',
+      heroTag: '🧱 Hasis ja hartsi',
+      heroDesc: 'Perinteiset marokkolaiset ja afgaanit puristeet, irtonainen siitepöly ja dry sift, monikertaisesti suodatetut korkean pitoisuuden laadut sekä oma 0%:n THC-linja — yli 20 hartsia yhdessä valikoimassa, laboratoriotestattuna, porrastetuin hinnoin kiloon asti.',
+      btnPrimary: 'Katso kaikki hartsit', btnSecondary: 'Katso CBD-kukat',
+      features: [
+        { icon: '🇲🇦', title: 'Marokkolainen ja afgaani', desc: 'Klassiset profiilit, joita asiakkaasi pyytävät nimeltä — pehmeä ja kukkainen tai tumma ja maanläheinen.' },
+        { icon: '🌾', title: 'Siitepöly ja dry sift', desc: 'Mekaanisesti erotettu, ilman liuottimia. Hartsikategorian edullisin sisäänpääsy ja paras tapa muuttaa kukkien ostajat hartsin ostajiksi.' },
+        { icon: '📄', title: 'COA joka erälle', desc: 'Jokainen erä toimitetaan riippumattoman laboratorion analyysitodistuksen kanssa. Pyydä mikä tahansa COA WhatsAppilla ennen tilausta.' }
+      ],
+      productSections: [
+        { title: 'CBD-hartsi ja -hasis — tukku', desc: 'Marokkolainen, afgaani, King Hassan, Ketama, Skuff-siitepöly ja suodatetut laadut jopa 50 % CBD.', category: 'cbd-resins', browseLabel: 'Katso kaikki CBD-hartsit →' },
+        { title: 'CBD-kukat — tukku', desc: 'Raaka-aine: EU:ssa kasvatetut sisä- ja kasvihuonekukat, alkaen 0,19 €/g tukkuhintaan.', category: 'cbd-flowers', browseLabel: 'Katso kaikki CBD-kukat →' }
+      ],
+      faqTitle: 'CBD-hasis tukkumyynti — UKK',
+      faq: [
+        { question: 'Mitä CBD-hasis on?', answer: 'CBD-hasis — jota kutsutaan myös CBD-hartsiksi tai hamppuhasikseksi — on tiiviste, joka valmistetaan hampun kukan hartsirauhasista (trikomeista) itse kukan sijaan. Trikomit erotetaan mekaanisesti, tavallisesti seulomalla kuivana hienojen seulojen läpi, ja puristetaan sitten palasiksi. Koska hartsi sisältää valtaosan kannabinoideista, hasis on selvästi väkevämpää kuin kukka, josta se on peräisin, pysyen silti samoissa laillisissa THC-rajoissa.' },
+        { question: 'Mikä ero on siitepölyllä, dry siftillä ja hasiksella?', answer: 'Ne ovat saman prosessin vaiheita. Siitepöly (myös skuff tai kief) on irtonainen, hiekkamainen hartsijauhe, joka putoaa seulan läpi ennen puristusta. Dry sift tarkoittaa itse kuivaseulontamenetelmää. Hasis syntyy, kun tuo jauhe puristetaan lämmön ja paineen avulla kiinteäksi palaksi. Hyllyssä ero on rakenne, muovailtavuus ja hintapiste.' },
+        { question: 'Mikä on minimitilaus?', answer: 'Hartsimme alkavat pienistä tukkumääristä ja skaalautuvat kilohintoihin, ja grammahinta laskee jokaisella portaalla. Portaat näkyvät jokaisella tuotesivulla. Jos et halua vielä sitoutua, hartsien tutustumispakkauksella voit testata useita laatuja yhdellä tilauksella.' },
+        { question: 'Saanko myydä CBD-hasista maassani?', answer: 'CBD-tuotteet alle 0,3 %:n THC-rajan ovat laajalti sallittuja EU:ssa, mutta erityisesti hasista ja kukkia koskevat säännöt vaihtelevat huomattavasti jäsenvaltioittain — osa maista rajoittaa tai kieltää poltettavat hamppumuodot silloinkin, kun CBD-öljyä myydään vapaasti. Tarkista oman markkinasi säännöt ennen valikoimaan ottamista; oikeudellinen katsauksemme on lähtökohta, ei oikeudellinen neuvo.' },
+        { question: 'Miten hinnoittelen hasiksen myymälässäni?', answer: 'Hasis kestää yleensä korkeamman grammahinnan kuin kukka ja tuottaa paremman katteen, koska asiakkaat ostavat pienempiä määriä ja arvioivat tuotetta aromin ja rakenteen eikä määrän perusteella. Useimmat jälleenmyyjät pitävät kolmea tasoa — sisäänheittosiitepöly, perinteinen puriste ja yksi premium- tai korkean pitoisuuden laatu — jotta asiakkaat voivat siirtyä ylöspäin.' }
+      ],
+      ctaTitle: 'Rakenna hasishyllysi',
+      ctaDesc: 'Kerro volyymisi ja tavoitehintasi, niin kokoamme portaan — tai tilaa ensin tutustumispakkaus ja arvioi materiaali itse.',
+      ctaBtnPrimary: 'Katso kaikki hartsit', ctaBtnSecondary: 'Ota yhteyttä'
+    },
+    pt: {
+      title: 'Haxixe CBD por Grosso',
+      desc: 'Haxixe e resina CBD por grosso: marroquino, afegão, pólen/dry sift, filtrado e 0% THC. Preços por quilo, COA por lote, envio em 24h.',
+      h1: 'Haxixe CBD por Grosso — Todas as qualidades, um fornecedor',
+      heroTag: '🧱 Haxixe e Resina',
+      heroDesc: 'Prensagens marroquinas e afegãs tradicionais, pólen e dry sift a granel, qualidades multifiltradas de alta concentração e uma linha 0% THC dedicada — mais de 20 resinas num só catálogo, testadas em laboratório, com preços escalonados até ao quilo.',
+      btnPrimary: 'Ver todas as resinas', btnSecondary: 'Ver flores CBD',
+      features: [
+        { icon: '🇲🇦', title: 'Marroquino e Afegão', desc: 'Os perfis clássicos que os seus clientes pedem pelo nome — suave e floral, ou escuro e terroso.' },
+        { icon: '🌾', title: 'Pólen e Dry Sift', desc: 'Separação mecânica, sem solventes. A entrada na categoria resina e a melhor forma de converter quem compra flor.' },
+        { icon: '📄', title: 'COA por lote', desc: 'Cada lote é entregue com certificado de análise independente. Peça qualquer COA por WhatsApp antes de encomendar.' }
+      ],
+      productSections: [
+        { title: 'Resina e Haxixe CBD — Por grosso', desc: 'Marroquino, Afegão, King Hassan, Ketama, pólen Skuff e qualidades filtradas até 50% de CBD.', category: 'cbd-resins', browseLabel: 'Ver todas as resinas CBD →' },
+        { title: 'Flores CBD — Por grosso', desc: 'A matéria-prima: flores indoor e greenhouse cultivadas na Europa, a partir de 0,19 €/g por grosso.', category: 'cbd-flowers', browseLabel: 'Ver todas as flores CBD →' }
+      ],
+      faqTitle: 'Haxixe CBD por Grosso — FAQ',
+      faq: [
+        { question: 'O que é o haxixe CBD?', answer: 'O haxixe CBD — também chamado resina CBD ou haxixe de cânhamo — é um concentrado obtido das glândulas de resina (tricomas) da flor de cânhamo em vez da flor propriamente dita. Os tricomas são separados mecanicamente, normalmente por peneiração a seco em redes finas, e depois prensados em blocos. Como a resina concentra a maior parte dos canabinóides, o haxixe é bastante mais concentrado do que a flor de origem, mantendo-se dentro dos mesmos limites legais de THC.' },
+        { question: 'Qual a diferença entre pólen, dry sift e haxixe?', answer: 'São etapas do mesmo processo. O pólen (também chamado skuff ou kief) é o pó de resina arenoso que atravessa a rede antes da prensagem. Dry sift designa o método de peneiração a seco. O haxixe é o que se obtém quando esse pó é prensado sob calor e pressão até formar um bloco sólido. A diferença na prateleira é textura, maleabilidade e posicionamento de preço.' },
+        { question: 'Qual é a encomenda mínima?', answer: 'As nossas resinas partem de pequenas quantidades por grosso e escalam até preços por quilo, com o preço por grama a descer em cada escalão. Os escalões constam de cada ficha de produto. Se preferir não se comprometer já, o pack descoberta de resinas permite testar várias qualidades numa só encomenda.' },
+        { question: 'Posso vender haxixe CBD no meu país?', answer: 'Os produtos CBD abaixo do limiar de 0,3% de THC são amplamente permitidos na UE, mas as regras específicas sobre haxixe e flores variam consideravelmente entre Estados-Membros — alguns países restringem ou proíbem os formatos fumáveis mesmo onde o óleo de CBD é vendido livremente. Verifique a regulamentação do seu mercado antes de referenciar; a nossa visão geral legal é um ponto de partida, não aconselhamento jurídico.' },
+        { question: 'Como defino o preço do haxixe na minha loja?', answer: 'O haxixe suporta normalmente um preço por grama mais elevado do que a flor e uma margem melhor, porque o cliente compra quantidades menores e avalia pelo aroma e textura em vez do volume. A maioria dos retalhistas mantém três níveis — um pólen de entrada, uma prensagem tradicional e uma qualidade premium ou de alta concentração — para permitir a subida de gama.' }
+      ],
+      ctaTitle: 'Construa a sua prateleira de haxixe',
+      ctaDesc: 'Diga-nos o seu volume e preço-alvo e montamos um escalão — ou encomende primeiro um pack descoberta e avalie o material você mesmo.',
+      ctaBtnPrimary: 'Ver todas as resinas', ctaBtnSecondary: 'Contactar'
+    },
   },
   'moroccan-cbd-hash-wholesale': {
     de: {
@@ -512,6 +652,146 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
       ctaTitle: 'Commandez du hash marocain en gros',
       ctaDesc: 'Tarifs dégressifs jusqu\'au kilo, COA par lot, expédition sous 24 heures partout en Europe.',
       ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Nous contacter'
+    },
+    es: {
+      title: 'Hachís CBD Marroquí al por Mayor',
+      desc: 'Hachís CBD marroquí al por mayor: Ketama, King Hassan, Beldia y prensado clásico. Tradición del Rif, opciones 0% THC, COA por lote.',
+      h1: 'Hachís CBD Marroquí — Ketama, Beldia y King Hassan',
+      heroTag: '🇲🇦 Tradición del Rif',
+      heroDesc: 'El estilo de prensado que los clientes europeos conocen mejor — suave, floral, tamizado en seco según la tradición del Rif, elaborado con cáñamo europeo dentro de los límites legales de THC. Disponible en prensados clásicos y en línea sin THC detectable.',
+      btnPrimary: 'Ver resinas marroquíes', btnSecondary: 'Ver flores CBD',
+      features: [
+        { icon: '🏔️', title: 'Ketama', desc: 'Una región del Rif que desde hace generaciones representa un tamizado en seco cuidadoso. El nombre señala un estándar de limpieza y aroma.' },
+        { icon: '🌿', title: 'Beldia', desc: 'La variedad landrace marroquí tradicional, apreciada por su aroma característico. La nuestra es un prensado CBN+CBD para el segmento de noche.' },
+        { icon: '👑', title: 'King Hassan', desc: 'Calidad premium del tamizado más limpio — menos materia vegetal, perfil aromático más concentrado, posicionado en consecuencia.' }
+      ],
+      productSections: [
+        { title: 'Resinas marroquíes — Mayorista', desc: 'Cuatro prensados, cada uno con su aroma, su textura y su perfil de cannabinoides.', category: 'cbd-resins', browseLabel: 'Ver todas las resinas CBD →' },
+        { title: 'Flores CBD complementarias', desc: 'Complete el lineal de resinas con flores indoor y greenhouse del mismo catálogo.', category: 'cbd-flowers', browseLabel: 'Ver todas las flores CBD →' }
+      ],
+      faqTitle: 'Hachís CBD Marroquí — FAQ',
+      faq: [
+        { question: '¿Qué hace que un hachís sea "marroquí"?', answer: 'El método, no solo el origen. El hachís marroquí se obtiene tamizando en seco cáñamo secado sobre mallas finas para recoger la resina suelta — llamada localmente kif — y prensándola después en planchas con calor suave. El resultado es característicamente blando y maleable, más claro que los prensados afganos, con un aroma floral ligeramente especiado.' },
+        { question: '¿Qué es el hachís Ketama?', answer: 'Ketama es una región del Rif marroquí que ha sido referencia de producción de calidad durante generaciones. El nombre señala un estándar concreto de dry sift — limpio, aromático y cuidadosamente prensado. Lo ofrecemos en dos formas: una versión CBG/CBD con perfil de cannabinoides más amplio, y un prensado al 25% de CBD y 0% de THC para mercados que exigen ausencia de THC detectable.' },
+        { question: '¿Qué es la Beldia?', answer: 'Beldia designa la variedad landrace marroquí tradicional, valorada por su aroma distintivo más que por su potencia bruta. Nuestro Le Beldia es un prensado CBN+CBD — el contenido en CBN lo sitúa en el segmento de noche y relajación, lo que lo convierte en complemento natural de una gama de descanso.' },
+        { question: '¿En qué se diferencia del hachís afgano?', answer: 'Ambos se tamizan en seco y se prensan, pero el prensado difiere. El estilo marroquí emplea menos calor y presión, dando un bloque más blando, más claro y más desmenuzable, de nariz floral. El estilo afgano usa más calor y presión para un bloque más oscuro, denso y graso, de aroma terroso. La mayoría de lineales gana teniendo uno de cada.' },
+        { question: '¿Ofrecen hachís marroquí sin THC?', answer: 'Sí. Nuestro Ketama 25% CBD está prensado al 0% de THC, junto con Soft 30%, Creamy Yellow 50% y Supreme 50% de la misma línea. Son las calidades a referenciar si vende en mercados que exigen que el producto acabado no contenga THC detectable, en lugar de simplemente mantenerse bajo un umbral.' }
+      ],
+      ctaTitle: 'Pida hachís marroquí al por mayor',
+      ctaDesc: 'Precios escalonados hasta el kilo, COA por lote, envío en 24 horas a toda Europa.',
+      ctaBtnPrimary: 'Ver todas las resinas', ctaBtnSecondary: 'Contactar'
+    },
+    it: {
+      title: 'Hashish CBD Marocchino Ingrosso',
+      desc: 'Hashish CBD marocchino all\'ingrosso: Ketama, King Hassan, Beldia e pressatura classica. Tradizione del Rif, opzioni 0% THC, COA per lotto.',
+      h1: 'Hashish CBD Marocchino — Ketama, Beldia e King Hassan',
+      heroTag: '🇲🇦 Tradizione del Rif',
+      heroDesc: 'Lo stile di pressatura che i clienti europei conoscono meglio — morbido, floreale, setacciato a secco secondo la tradizione del Rif, prodotto con canapa europea entro i limiti legali di THC. Disponibile in pressature classiche e in linea senza THC rilevabile.',
+      btnPrimary: 'Vedi le resine marocchine', btnSecondary: 'Vedi i fiori CBD',
+      features: [
+        { icon: '🏔️', title: 'Ketama', desc: 'Una regione del Rif che da generazioni incarna un setacciamento a secco accurato. Il nome indica uno standard di pulizia e aroma.' },
+        { icon: '🌿', title: 'Beldia', desc: 'La varietà landrace marocchina tradizionale, apprezzata per l\'aroma caratteristico. La nostra è una pressatura CBN+CBD per il segmento serale.' },
+        { icon: '👑', title: 'King Hassan', desc: 'Qualità premium dal setacciamento più pulito — meno materia vegetale, profilo aromatico più concentrato, posizionato di conseguenza.' }
+      ],
+      productSections: [
+        { title: 'Resine marocchine — Ingrosso', desc: 'Quattro pressature, ciascuna con il proprio aroma, la propria consistenza e il proprio profilo di cannabinoidi.', category: 'cbd-resins', browseLabel: 'Vedi tutte le resine CBD →' },
+        { title: 'Fiori CBD abbinati', desc: 'Completi lo scaffale resine con fiori indoor e greenhouse dello stesso catalogo.', category: 'cbd-flowers', browseLabel: 'Vedi tutti i fiori CBD →' }
+      ],
+      faqTitle: 'Hashish CBD Marocchino — FAQ',
+      faq: [
+        { question: 'Cosa rende un hashish "marocchino"?', answer: 'Il metodo, non solo l\'origine. L\'hashish marocchino si ottiene setacciando a secco canapa essiccata su reti fini per raccogliere la resina libera — localmente chiamata kif — e pressandola poi in lastre con calore delicato. Il risultato è caratteristicamente morbido e malleabile, più chiaro delle pressature afgane, con aroma floreale e leggermente speziato.' },
+        { question: 'Cos\'è l\'hashish Ketama?', answer: 'Ketama è una regione del Rif marocchino che da generazioni rappresenta il punto di riferimento per la produzione di qualità. Il nome indica uno standard preciso di dry sift — pulito, aromatico e pressato con cura. Lo proponiamo in due versioni: una CBG/CBD dal profilo di cannabinoidi più ampio, e una pressatura al 25% di CBD e 0% di THC per i mercati che richiedono assenza di THC rilevabile.' },
+        { question: 'Cos\'è la Beldia?', answer: 'Beldia indica la varietà landrace marocchina tradizionale, apprezzata più per l\'aroma distintivo che per la potenza pura. Il nostro Le Beldia è una pressatura CBN+CBD — il contenuto di CBN lo colloca nel segmento serale e del relax, rendendolo un complemento naturale a una linea dedicata al sonno.' },
+        { question: 'Che differenza c\'è con l\'hashish afgano?', answer: 'Entrambi sono setacciati a secco e pressati, ma la pressatura differisce. Lo stile marocchino impiega meno calore e pressione, dando un blocco più morbido, chiaro e friabile, dal naso floreale. Lo stile afgano usa più calore e pressione per un blocco più scuro, denso e oleoso, dall\'aroma terroso. La maggior parte degli scaffali guadagna avendone uno di ciascuno.' },
+        { question: 'Avete hashish marocchino senza THC?', answer: 'Sì. Il nostro Ketama 25% CBD è pressato allo 0% di THC, insieme a Soft 30%, Creamy Yellow 50% e Supreme 50% della stessa linea. Sono le qualità da inserire se vende su mercati che richiedono che il prodotto finito non contenga THC rilevabile, anziché limitarsi a restare sotto una soglia.' }
+      ],
+      ctaTitle: 'Ordini hashish marocchino all\'ingrosso',
+      ctaDesc: 'Prezzi a scaglioni fino al chilo, COA per lotto, spedizione entro 24 ore in tutta Europa.',
+      ctaBtnPrimary: 'Vedi tutte le resine', ctaBtnSecondary: 'Contattaci'
+    },
+    nl: {
+      title: 'Marokkaanse CBD Hasj Groothandel',
+      desc: 'Marokkaanse CBD hasj groothandel: Ketama, King Hassan, Beldia en klassieke persing. Rif-traditie, 0%-THC-opties, COA per batch.',
+      h1: 'Marokkaanse CBD Hasj — Ketama, Beldia & King Hassan',
+      heroTag: '🇲🇦 Rif-traditie',
+      heroDesc: 'De persstijl die Europese klanten het beste kennen — zacht, bloemig, droog gezeefd volgens de Rif-traditie, gemaakt van Europese hennep binnen de wettelijke THC-grenzen. Verkrijgbaar als klassieke persing en als lijn zonder aantoonbaar THC.',
+      btnPrimary: 'Bekijk Marokkaanse harsen', btnSecondary: 'Bekijk CBD bloemen',
+      features: [
+        { icon: '🏔️', title: 'Ketama', desc: 'Een regio in het Rif-gebergte die al generaties staat voor zorgvuldig droog zeven. De naam duidt op een standaard van zuiverheid en aroma.' },
+        { icon: '🌿', title: 'Beldia', desc: 'De traditionele Marokkaanse landrassoort, gewaardeerd om haar kenmerkende aroma. De onze is een CBN+CBD-persing voor het avondsegment.' },
+        { icon: '👑', title: 'King Hassan', desc: 'Premiumkwaliteit uit de schoonste zeefgang — minder plantmateriaal, geconcentreerder aromaprofiel, navenant geprijsd.' }
+      ],
+      productSections: [
+        { title: 'Marokkaanse harsen — Groothandel', desc: 'Vier persingen, elk met een eigen aroma, textuur en cannabinoïdenprofiel.', category: 'cbd-resins', browseLabel: 'Bekijk alle CBD-harsen →' },
+        { title: 'Bijpassende CBD bloemen', desc: 'Vul het harsschap aan met indoor- en greenhouse-bloemen uit dezelfde catalogus.', category: 'cbd-flowers', browseLabel: 'Bekijk alle CBD-bloemen →' }
+      ],
+      faqTitle: 'Marokkaanse CBD Hasj — FAQ',
+      faq: [
+        { question: 'Wat maakt hasj "Marokkaans"?', answer: 'De methode, niet alleen de herkomst. Marokkaanse hasj ontstaat door gedroogde hennep droog te zeven over fijne zeven om de losse hars — lokaal kif genoemd — op te vangen en die vervolgens met zachte warmte tot platen te persen. Het resultaat is kenmerkend zacht en kneedbaar, lichter van kleur dan Afghaanse persingen, met een bloemig, licht kruidig aroma.' },
+        { question: 'Wat is Ketama-hasj?', answer: 'Ketama is een regio in het Marokkaanse Rif-gebergte die al generaties het referentiepunt vormt voor kwaliteitsproductie. De naam staat voor een bepaalde standaard van dry sift — schoon, aromatisch en zorgvuldig geperst. Wij voeren hem in twee vormen: een CBG/CBD-versie met breder cannabinoïdenprofiel, en een persing van 25% CBD en 0% THC voor markten die geen aantoonbaar THC toestaan.' },
+        { question: 'Wat is Beldia?', answer: 'Beldia verwijst naar de traditionele Marokkaanse landrassoort, gewaardeerd om haar kenmerkende aroma eerder dan om pure sterkte. Onze Le Beldia is een CBN+CBD-persing — het CBN-gehalte plaatst hem in het avond- en ontspanningssegment, wat hem een natuurlijke aanvulling maakt op een slaapassortiment.' },
+        { question: 'Wat is het verschil met Afghaanse hasj?', answer: 'Beide worden droog gezeefd en geperst, maar de persing verschilt. De Marokkaanse stijl gebruikt minder hitte en druk, wat een zachter, lichter en kruimeliger blok oplevert met een bloemige neus. De Afghaanse stijl gebruikt meer hitte en druk voor een donkerder, dichter en olieachtiger blok met aards aroma. De meeste schappen varen wel bij één van elk.' },
+        { question: 'Heeft u Marokkaanse hasj zonder THC?', answer: 'Ja. Onze Ketama 25% CBD is geperst op 0% THC, naast Soft 30%, Creamy Yellow 50% en Supreme 50% uit dezelfde lijn. Dit zijn de kwaliteiten om te voeren als u verkoopt op markten die eisen dat het eindproduct geen aantoonbaar THC bevat, in plaats van enkel onder een drempel te blijven.' }
+      ],
+      ctaTitle: 'Bestel Marokkaanse hasj in de groothandel',
+      ctaDesc: 'Staffelprijzen tot aan de kilo, COA per batch, verzending binnen 24 uur door heel Europa.',
+      ctaBtnPrimary: 'Bekijk alle harsen', ctaBtnSecondary: 'Neem contact op'
+    },
+    fi: {
+      title: 'Marokkolainen CBD-hasis tukku',
+      desc: 'Marokkolainen CBD-hasis tukkuhintaan: Ketama, King Hassan, Beldia ja klassinen puriste. Rifin perinne, 0% THC -vaihtoehdot, COA per erä.',
+      h1: 'Marokkolainen CBD-hasis — Ketama, Beldia ja King Hassan',
+      heroTag: '🇲🇦 Rifin perinne',
+      heroDesc: 'Puristustyyli, jonka eurooppalaiset asiakkaat tuntevat parhaiten — pehmeä, kukkainen, kuivaseulottu Rifin perinteen mukaan, valmistettu EU-hampusta laillisten THC-rajojen sisällä. Saatavana klassisina puristeina ja ilman havaittavaa THC:tä.',
+      btnPrimary: 'Katso marokkolaiset hartsit', btnSecondary: 'Katso CBD-kukat',
+      features: [
+        { icon: '🏔️', title: 'Ketama', desc: 'Rif-vuoriston alue, joka on sukupolvien ajan edustanut huolellista kuivaseulontaa. Nimi kertoo puhtauden ja aromin tasosta.' },
+        { icon: '🌿', title: 'Beldia', desc: 'Perinteinen marokkolainen maatiaislajike, arvostettu tunnusomaisesta aromistaan. Meidän versiomme on CBN+CBD-puriste ilta-segmenttiin.' },
+        { icon: '👑', title: 'King Hassan', desc: 'Premium-laatu puhtaimmasta seulonnasta — vähemmän kasviainesta, tiiviimpi aromiprofiili, hinnoiteltu sen mukaisesti.' }
+      ],
+      productSections: [
+        { title: 'Marokkolaiset hartsit — tukku', desc: 'Neljä puristetta, kullakin oma aromi, rakenne ja kannabinoidiprofiili.', category: 'cbd-resins', browseLabel: 'Katso kaikki CBD-hartsit →' },
+        { title: 'Sopivat CBD-kukat', desc: 'Täydennä hartsihylly saman valikoiman sisä- ja kasvihuonekukilla.', category: 'cbd-flowers', browseLabel: 'Katso kaikki CBD-kukat →' }
+      ],
+      faqTitle: 'Marokkolainen CBD-hasis — UKK',
+      faq: [
+        { question: 'Mikä tekee hasiksesta marokkolaisen?', answer: 'Menetelmä, ei pelkkä alkuperä. Marokkolainen hasis syntyy seulomalla kuivattua hamppua kuivana hienojen seulojen läpi, jolloin irtonainen hartsi — paikallisesti kif — kerätään ja puristetaan laatoiksi kevyellä lämmöllä. Lopputulos on tyypillisesti pehmeä ja muovailtava, väriltään vaaleampi kuin afgaanipuristeet, aromiltaan kukkainen ja hieman mausteinen.' },
+        { question: 'Mitä on Ketama-hasis?', answer: 'Ketama on Marokon Rif-vuoriston alue, joka on sukupolvien ajan toiminut laatutuotannon vertailukohtana. Nimi kertoo tietystä kuivaseulonnan tasosta — puhdas, aromikas ja huolellisesti puristettu. Meillä sitä on kahdessa muodossa: CBG/CBD-versio laajemmalla kannabinoidiprofiililla sekä 25 % CBD ja 0 % THC -puriste markkinoille, joilla THC:tä ei saa olla havaittavissa.' },
+        { question: 'Mikä on Beldia?', answer: 'Beldia viittaa perinteiseen marokkolaiseen maatiaislajikkeeseen, jota arvostetaan tunnusomaisen aromin vuoksi ennemmin kuin raa\'an voimakkuuden. Meidän Le Beldia on CBN+CBD-puriste — CBN-pitoisuus sijoittaa sen ilta- ja rentoutumissegmenttiin, mikä tekee siitä luontevan täydennyksen unituotteiden valikoimaan.' },
+        { question: 'Miten se eroaa afgaanihasiksesta?', answer: 'Molemmat kuivaseulotaan ja puristetaan, mutta puristus eroaa. Marokkolainen tyyli käyttää vähemmän lämpöä ja painetta, jolloin syntyy pehmeämpi, vaaleampi ja murenevampi pala kukkaisella tuoksulla. Afgaanityyli käyttää enemmän lämpöä ja painetta, jolloin tulos on tummempi, tiiviimpi ja öljyisempi maanläheisellä aromilla. Useimmat hyllyt hyötyvät molemmista.' },
+        { question: 'Onko teillä marokkolaista hasista ilman THC:tä?', answer: 'Kyllä. Ketama 25 % CBD on puristettu 0 %:n THC-pitoisuuteen, samoin Soft 30 %, Creamy Yellow 50 % ja Supreme 50 % samasta linjasta. Nämä ovat oikeat laadut, jos myyt markkinoille, joilla valmiissa tuotteessa ei saa olla havaittavaa THC:tä sen sijaan, että pysyttäisiin vain kynnysarvon alapuolella.' }
+      ],
+      ctaTitle: 'Tilaa marokkolaista hasista tukkuhintaan',
+      ctaDesc: 'Porrastetut hinnat kiloon asti, COA joka erälle, toimitus 24 tunnissa kaikkialle Eurooppaan.',
+      ctaBtnPrimary: 'Katso kaikki hartsit', ctaBtnSecondary: 'Ota yhteyttä'
+    },
+    pt: {
+      title: 'Haxixe CBD Marroquino por Grosso',
+      desc: 'Haxixe CBD marroquino por grosso: Ketama, King Hassan, Beldia e prensagem clássica. Tradição do Rif, opções 0% THC, COA por lote.',
+      h1: 'Haxixe CBD Marroquino — Ketama, Beldia e King Hassan',
+      heroTag: '🇲🇦 Tradição do Rif',
+      heroDesc: 'O estilo de prensagem que os clientes europeus melhor conhecem — macio, floral, peneirado a seco na tradição do Rif, produzido com cânhamo europeu dentro dos limites legais de THC. Disponível em prensagens clássicas e em linha sem THC detetável.',
+      btnPrimary: 'Ver resinas marroquinas', btnSecondary: 'Ver flores CBD',
+      features: [
+        { icon: '🏔️', title: 'Ketama', desc: 'Uma região do Rif que há gerações representa uma peneiração a seco cuidada. O nome sinaliza um padrão de limpeza e aroma.' },
+        { icon: '🌿', title: 'Beldia', desc: 'A variedade landrace marroquina tradicional, apreciada pelo aroma característico. A nossa é uma prensagem CBN+CBD para o segmento da noite.' },
+        { icon: '👑', title: 'King Hassan', desc: 'Qualidade premium da peneiração mais limpa — menos matéria vegetal, perfil aromático mais concentrado, posicionado em conformidade.' }
+      ],
+      productSections: [
+        { title: 'Resinas marroquinas — Por grosso', desc: 'Quatro prensagens, cada uma com o seu aroma, textura e perfil de canabinóides.', category: 'cbd-resins', browseLabel: 'Ver todas as resinas CBD →' },
+        { title: 'Flores CBD a combinar', desc: 'Complete a prateleira de resinas com flores indoor e greenhouse do mesmo catálogo.', category: 'cbd-flowers', browseLabel: 'Ver todas as flores CBD →' }
+      ],
+      faqTitle: 'Haxixe CBD Marroquino — FAQ',
+      faq: [
+        { question: 'O que torna um haxixe "marroquino"?', answer: 'O método, não apenas a origem. O haxixe marroquino obtém-se peneirando a seco cânhamo seco sobre redes finas para recolher a resina solta — localmente chamada kif — e prensando-a depois em placas com calor suave. O resultado é caracteristicamente macio e maleável, mais claro do que as prensagens afegãs, com aroma floral ligeiramente especiado.' },
+        { question: 'O que é o haxixe Ketama?', answer: 'Ketama é uma região do Rif marroquino que há gerações serve de referência para a produção de qualidade. O nome sinaliza um padrão específico de dry sift — limpo, aromático e cuidadosamente prensado. Temo-lo em duas formas: uma versão CBG/CBD com perfil de canabinóides mais amplo, e uma prensagem a 25% de CBD e 0% de THC para mercados que exigem ausência de THC detetável.' },
+        { question: 'O que é a Beldia?', answer: 'Beldia designa a variedade landrace marroquina tradicional, valorizada pelo aroma distintivo mais do que pela potência bruta. O nosso Le Beldia é uma prensagem CBN+CBD — o teor de CBN coloca-o no segmento da noite e do relaxamento, o que faz dele um complemento natural a uma gama de sono.' },
+        { question: 'Qual a diferença para o haxixe afegão?', answer: 'Ambos são peneirados a seco e prensados, mas a prensagem difere. O estilo marroquino usa menos calor e pressão, dando um bloco mais macio, mais claro e mais friável, de nariz floral. O estilo afegão usa mais calor e pressão para um bloco mais escuro, denso e oleoso, de aroma terroso. A maioria das prateleiras ganha em ter um de cada.' },
+        { question: 'Têm haxixe marroquino sem THC?', answer: 'Sim. O nosso Ketama 25% CBD é prensado a 0% de THC, a par de Soft 30%, Creamy Yellow 50% e Supreme 50% da mesma linha. São as qualidades a referenciar se vende em mercados que exigem que o produto acabado não contenha THC detetável, em vez de apenas permanecer abaixo de um limiar.' }
+      ],
+      ctaTitle: 'Encomende haxixe marroquino por grosso',
+      ctaDesc: 'Preços escalonados até ao quilo, COA por lote, expedição em 24 horas para toda a Europa.',
+      ctaBtnPrimary: 'Ver todas as resinas', ctaBtnSecondary: 'Contactar'
     },
   },
   'cbd-pollen-dry-sift-wholesale': {
@@ -571,6 +851,146 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
       ctaDesc: 'Indiquez-nous votre volume et votre profil cible — les tarifs diffèrent entre matière de production et gros destiné au rayon.',
       ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Nous contacter'
     },
+    es: {
+      title: 'Polen CBD y Dry Sift al por Mayor',
+      desc: 'Polen CBD, skuff y dry sift al por mayor: resina separada sin disolventes, de entrada a premium. Golden Static, 3X filtrado, COA por lote.',
+      h1: 'Polen CBD y Dry Sift — Mayorista de skuff y static',
+      heroTag: '🌾 Sin disolventes',
+      heroDesc: 'Resina separada mecánicamente — sin disolventes en ninguna etapa. Desde el skuff de entrada, que convierte a los compradores de flores en compradores de resina, hasta las calidades separadas por static y triplemente filtradas para clientes que juzgan por pureza.',
+      btnPrimary: 'Ver las resinas', btnSecondary: 'Ver flores CBD',
+      features: [
+        { icon: '🌾', title: '¿Qué es el polen?', desc: 'El polvo de resina arenoso que atraviesa la malla al tamizar flores secas. Prensado se convierte en hachís; suelto se queda en polen.' },
+        { icon: '⚡', title: 'Separación static', desc: 'La electricidad estática despega las cabezas de resina de la materia vegetal residual, dando un producto notablemente más limpio y claro que el tamizado solo.' },
+        { icon: '💎', title: '3X filtrado', desc: 'Tres etapas sucesivas de filtrado retiran progresivamente materia vegetal — más limpio, más potente, más claro y más caro por gramo.' }
+      ],
+      productSections: [
+        { title: 'Polen, static y calidades filtradas', desc: 'Cuatro calidades que cubren toda la escala de precios, del skuff de entrada al CBG triplemente filtrado.', category: 'cbd-resins', browseLabel: 'Ver todas las resinas CBD →' },
+        { title: 'La materia prima', desc: 'Las flores de las que procede el tamizado — indoor y greenhouse cultivadas en Europa.', category: 'cbd-flowers', browseLabel: 'Ver todas las flores CBD →' }
+      ],
+      faqTitle: 'Polen CBD y Dry Sift — FAQ',
+      faq: [
+        { question: '¿Qué es el polen CBD?', answer: 'El polen CBD — también llamado skuff o kief — es el polvo de resina suelto que se desprende de las flores de cáñamo secas. Las flores se agitan sobre mallas finas para que las glándulas de resina se rompan y caigan, quedando la materia vegetal arriba. Lo que se deposita debajo es el polen: arenoso, dorado pálido y mucho más concentrado que la flor de origen.' },
+        { question: '¿Qué significa "dry sift"?', answer: 'Dry sift designa el propio método de separación — mecánico, sin disolventes, únicamente mediante movimiento y malla. Es la técnica de elaboración de hachís más antigua que existe y sigue siendo la más extendida en Europa. Como no interviene ningún disolvente en ninguna etapa, el dry sift atrae a minoristas y clientes que buscan el proceso más simple posible detrás del producto.' },
+        { question: '¿Qué es la separación static?', answer: 'Un refinamiento del dry sift que emplea electricidad estática para separar las cabezas de resina de la materia vegetal residual, produciendo un resultado notablemente más limpio y claro que el tamizado por sí solo. Nuestro Golden Static se obtiene así y presenta un triple perfil CBD+CBG+CBN, lo que lo posiciona de forma distinta a un prensado clásico de un solo cannabinoide.' },
+        { question: '¿Es el polen más barato que el hachís prensado?', answer: 'Por lo general sí. El skuff y el polen constituyen la entrada a la categoría de resinas, lo que los convierte en la forma más sencilla de iniciar a clientes que solo han comprado flor. Precisamente esa accesibilidad los hace interesantes: el polen transforma compradores de flor en compradores de resina, y estos últimos gastan más por visita.' },
+        { question: '¿Puedo comprar polen para producción?', answer: 'Muchos de nuestros clientes mayoristas compran polen y sift como materia prima en lugar de para reventa — es un insumo concentrado y constante. Si se abastece para producción en vez de para el lineal, indíquenos volumen y perfil objetivo; la estructura de precios difiere de la del mayorista de reventa.' }
+      ],
+      ctaTitle: '¿Compra sift para reventa o producción?',
+      ctaDesc: 'Indíquenos volumen y perfil objetivo — los precios difieren entre materia de producción y mayorista de lineal.',
+      ctaBtnPrimary: 'Ver todas las resinas', ctaBtnSecondary: 'Contactar'
+    },
+    it: {
+      title: 'Polline CBD e Dry Sift Ingrosso',
+      desc: 'Polline CBD, skuff e dry sift all\'ingrosso: resina separata senza solventi, dall\'ingresso al premium. Golden Static, 3X filtrato, COA per lotto.',
+      h1: 'Polline CBD e Dry Sift — Ingrosso skuff e static',
+      heroTag: '🌾 Senza solventi',
+      heroDesc: 'Resina separata meccanicamente — nessun solvente in alcuna fase. Dallo skuff d\'ingresso, che converte chi compra fiori in acquirente di resina, fino alle qualità separate con static e triplamente filtrate per i clienti che giudicano sulla purezza.',
+      btnPrimary: 'Vedi le resine', btnSecondary: 'Vedi i fiori CBD',
+      features: [
+        { icon: '🌾', title: 'Cos\'è il polline?', desc: 'La polvere di resina sabbiosa che attraversa il setaccio setacciando fiori secchi. Pressata diventa hashish, lasciata sciolta resta polline.' },
+        { icon: '⚡', title: 'Separazione static', desc: 'L\'elettricità statica stacca le teste di resina dalla materia vegetale residua, dando un prodotto nettamente più pulito e chiaro della sola setacciatura.' },
+        { icon: '💎', title: '3X filtrato', desc: 'Tre fasi successive di filtrazione rimuovono progressivamente la materia vegetale — più pulito, più potente, più chiaro e più caro al grammo.' }
+      ],
+      productSections: [
+        { title: 'Polline, static e qualità filtrate', desc: 'Quattro qualità che coprono l\'intera scala di prezzo, dallo skuff d\'ingresso al CBG triplamente filtrato.', category: 'cbd-resins', browseLabel: 'Vedi tutte le resine CBD →' },
+        { title: 'La materia prima', desc: 'I fiori da cui proviene la setacciatura — indoor e greenhouse coltivati in Europa.', category: 'cbd-flowers', browseLabel: 'Vedi tutti i fiori CBD →' }
+      ],
+      faqTitle: 'Polline CBD e Dry Sift — FAQ',
+      faq: [
+        { question: 'Cos\'è il polline CBD?', answer: 'Il polline CBD — chiamato anche skuff o kief — è la polvere di resina sciolta staccata dai fiori di canapa essiccati. I fiori vengono agitati su reti fini così che le ghiandole resinose si stacchino e cadano, mentre la materia vegetale resta sopra. Ciò che si deposita sotto è il polline: sabbioso, dorato chiaro e molto più concentrato del fiore di partenza.' },
+        { question: 'Cosa significa "dry sift"?', answer: 'Dry sift indica il metodo di separazione stesso — meccanico, senza solventi, basato solo su movimento e setaccio. È la tecnica di produzione dell\'hashish più antica e resta la più diffusa in Europa. Poiché nessun solvente interviene in alcuna fase, il dry sift attrae rivenditori e clienti che cercano il processo più semplice possibile dietro il prodotto.' },
+        { question: 'Cos\'è la separazione static?', answer: 'Un affinamento del dry sift che usa l\'elettricità statica per staccare le teste di resina dalla materia vegetale residua, con un risultato nettamente più pulito e chiaro della sola setacciatura. Il nostro Golden Static nasce così e presenta un triplo profilo CBD+CBG+CBN, che lo posiziona diversamente da una pressatura classica a cannabinoide singolo.' },
+        { question: 'Il polline costa meno dell\'hashish pressato?', answer: 'In genere sì. Skuff e polline costituiscono l\'ingresso nella categoria resine, il che li rende il modo più semplice per avvicinare clienti che finora hanno comprato solo fiori. È proprio questa accessibilità a renderli interessanti: il polline trasforma gli acquirenti di fiori in acquirenti di resina, e questi ultimi spendono di più per visita.' },
+        { question: 'Posso acquistare polline per la produzione?', answer: 'Molti nostri clienti all\'ingrosso comprano polline e sift come materia prima anziché per la rivendita — è un input concentrato e costante. Se si approvvigiona per la produzione anziché per lo scaffale, ci indichi volume e profilo obiettivo; la struttura dei prezzi differisce da quella dell\'ingrosso per la rivendita.' }
+      ],
+      ctaTitle: 'Acquista sift per rivendita o produzione?',
+      ctaDesc: 'Ci indichi volume e profilo obiettivo — i prezzi differiscono tra materia da produzione e ingrosso da scaffale.',
+      ctaBtnPrimary: 'Vedi tutte le resine', ctaBtnSecondary: 'Contattaci'
+    },
+    nl: {
+      title: 'CBD Pollen & Dry Sift Groothandel',
+      desc: 'CBD pollen, skuff en dry sift groothandel: oplosmiddelvrij gescheiden hars, van instap tot premium. Golden Static, 3X gefilterd, COA per batch.',
+      h1: 'CBD Pollen & Dry Sift — Groothandel skuff en static',
+      heroTag: '🌾 Oplosmiddelvrij',
+      heroDesc: 'Mechanisch gescheiden hars — in geen enkele stap komen oplosmiddelen eraan te pas. Van instap-skuff, dat bloemkopers omzet in harskopers, tot static-gescheiden en drievoudig gefilterde kwaliteiten voor klanten die op zuiverheid beoordelen.',
+      btnPrimary: 'Bekijk de harsen', btnSecondary: 'Bekijk CBD bloemen',
+      features: [
+        { icon: '🌾', title: 'Wat is pollen?', desc: 'Het korrelige harspoeder dat door de zeef valt bij het zeven van gedroogde bloemen. Geperst wordt het hasj, los blijft het pollen.' },
+        { icon: '⚡', title: 'Static-scheiding', desc: 'Statische elektriciteit maakt de harskoppen los van resterend plantmateriaal, wat een merkbaar schoner en lichter product geeft dan zeven alleen.' },
+        { icon: '💎', title: '3X gefilterd', desc: 'Drie opeenvolgende filterstappen verwijderen steeds meer plantmateriaal — schoner, krachtiger, lichter en navenant duurder per gram.' }
+      ],
+      productSections: [
+        { title: 'Pollen, static en gefilterde kwaliteiten', desc: 'Vier kwaliteiten over de hele prijsladder, van instap-skuff tot drievoudig gefilterde CBG.', category: 'cbd-resins', browseLabel: 'Bekijk alle CBD-harsen →' },
+        { title: 'De grondstof', desc: 'De bloemen waaruit gezeefd wordt — indoor en greenhouse uit Europese teelt.', category: 'cbd-flowers', browseLabel: 'Bekijk alle CBD-bloemen →' }
+      ],
+      faqTitle: 'CBD Pollen & Dry Sift — FAQ',
+      faq: [
+        { question: 'Wat is CBD pollen?', answer: 'CBD pollen — ook skuff of kief genoemd — is het losse harspoeder dat van gedroogde hennepbloemen wordt geschud. De bloemen worden over fijne zeven bewogen zodat de harsklieren afbreken en erdoorheen vallen, terwijl het plantmateriaal boven blijft. Wat zich eronder verzamelt is pollen: korrelig, lichtgoud en veel geconcentreerder dan de bloem waaruit het komt.' },
+        { question: 'Wat betekent "dry sift"?', answer: 'Dry sift is de scheidingsmethode zelf — mechanisch, oplosmiddelvrij, enkel door beweging en zeef. Het is de oudste hasjbereidingstechniek die bestaat en nog altijd de meest gebruikte in Europa. Omdat er in geen enkele stap oplosmiddelen aan te pas komen, spreekt dry sift retailers en klanten aan die het eenvoudigst mogelijke proces achter het product willen.' },
+        { question: 'Wat is static-scheiding?', answer: 'Een verfijning van dry sift waarbij statische elektriciteit de harskoppen losmaakt van resterend plantmateriaal, met een merkbaar schoner en lichter resultaat dan zeven alleen. Onze Golden Static wordt zo gemaakt en heeft een drievoudig CBD+CBG+CBN-profiel, wat hem anders positioneert dan een klassieke persing met één cannabinoïde.' },
+        { question: 'Is pollen goedkoper dan geperste hasj?', answer: 'Doorgaans wel. Skuff en pollen vormen de instap van de harscategorie, wat ze de makkelijkste manier maakt om klanten te introduceren die tot nu toe alleen bloem kochten. Juist die toegankelijkheid maakt ze de moeite waard: pollen verandert bloemkopers in harskopers, en die besteden meer per bezoek.' },
+        { question: 'Kan ik pollen kopen voor productie?', answer: 'Veel van onze groothandelsklanten kopen pollen en sift als grondstof in plaats van voor doorverkoop — het is een geconcentreerde, constante input. Koopt u in voor productie in plaats van voor het schap, geef ons dan uw volume en doelprofiel; de prijsstructuur verschilt van groothandel voor doorverkoop.' }
+      ],
+      ctaTitle: 'Koopt u sift voor doorverkoop of productie?',
+      ctaDesc: 'Geef ons uw volume en doelprofiel — de prijzen verschillen tussen productiemateriaal en groothandel voor het schap.',
+      ctaBtnPrimary: 'Bekijk alle harsen', ctaBtnSecondary: 'Neem contact op'
+    },
+    fi: {
+      title: 'CBD-siitepöly ja dry sift tukku',
+      desc: 'CBD-siitepöly, skuff ja dry sift tukkuhintaan: liuottimitta erotettu hartsi perustasosta premiumiin. Golden Static, 3X suodatettu, COA per erä.',
+      h1: 'CBD-siitepöly ja dry sift — skuff ja static tukkuhintaan',
+      heroTag: '🌾 Ilman liuottimia',
+      heroDesc: 'Mekaanisesti erotettu hartsi — missään vaiheessa ei käytetä liuottimia. Perustason skuffista, joka muuttaa kukkien ostajat hartsin ostajiksi, aina static-erotettuihin ja kolminkertaisesti suodatettuihin laatuihin niille, jotka arvioivat puhtautta.',
+      btnPrimary: 'Katso hartsit', btnSecondary: 'Katso CBD-kukat',
+      features: [
+        { icon: '🌾', title: 'Mitä siitepöly on?', desc: 'Hiekkamainen hartsijauhe, joka putoaa seulan läpi kuivia kukkia seulottaessa. Puristettuna siitä tulee hasista, irtonaisena se pysyy siitepölynä.' },
+        { icon: '⚡', title: 'Static-erotus', desc: 'Staattinen sähkö irrottaa hartsipäät jäljelle jääneestä kasviaineksesta, jolloin tulos on selvästi puhtaampi ja vaaleampi kuin pelkällä seulonnalla.' },
+        { icon: '💎', title: '3X suodatettu', desc: 'Kolme peräkkäistä suodatusvaihetta poistaa yhä enemmän kasviainesta — puhtaampi, vahvempi, vaaleampi ja vastaavasti kalliimpi grammalta.' }
+      ],
+      productSections: [
+        { title: 'Siitepöly, static ja suodatetut laadut', desc: 'Neljä laatua koko hinta-asteikolla, perustason skuffista kolminkertaisesti suodatettuun CBG:hen.', category: 'cbd-resins', browseLabel: 'Katso kaikki CBD-hartsit →' },
+        { title: 'Raaka-aine', desc: 'Kukat, joista seulonta tehdään — EU:ssa kasvatetut sisä- ja kasvihuonekukat.', category: 'cbd-flowers', browseLabel: 'Katso kaikki CBD-kukat →' }
+      ],
+      faqTitle: 'CBD-siitepöly ja dry sift — UKK',
+      faq: [
+        { question: 'Mitä CBD-siitepöly on?', answer: 'CBD-siitepöly — jota kutsutaan myös skuffiksi tai kiefiksi — on irtonainen hartsijauhe, joka ravistellaan irti kuivatuista hampun kukista. Kukkia liikutellaan hienojen seulojen päällä, jolloin hartsirauhaset katkeavat ja putoavat läpi kasviaineksen jäädessä päälle. Alle kertyvä aines on siitepölyä: hiekkamaista, vaaleankultaista ja huomattavasti väkevämpää kuin kukka, josta se on peräisin.' },
+        { question: 'Mitä "dry sift" tarkoittaa?', answer: 'Dry sift tarkoittaa itse erotusmenetelmää — mekaanista, liuottimetonta, pelkkään liikkeeseen ja seulaan perustuvaa. Se on vanhin olemassa oleva hasiksenvalmistustekniikka ja edelleen Euroopan yleisin. Koska missään vaiheessa ei käytetä liuottimia, dry sift vetoaa jälleenmyyjiin ja asiakkaisiin, jotka haluavat tuotteen taakse mahdollisimman yksinkertaisen prosessin.' },
+        { question: 'Mitä static-erotus on?', answer: 'Dry siftin hienostuneempi muoto, jossa staattinen sähkö irrottaa hartsipäät jäljelle jääneestä kasviaineksesta ja tuottaa selvästi puhtaamman ja vaaleamman lopputuloksen kuin pelkkä seulonta. Golden Static valmistetaan näin ja siinä on kolminkertainen CBD+CBG+CBN-profiili, mikä asemoi sen eri tavoin kuin perinteisen yhden kannabinoidin puristeen.' },
+        { question: 'Onko siitepöly halvempaa kuin puristettu hasis?', answer: 'Yleensä kyllä. Skuff ja siitepöly muodostavat hartsikategorian sisäänpääsyn, mikä tekee niistä helpoimman tavan tutustuttaa asiakkaat, jotka ovat tähän asti ostaneet vain kukkaa. Juuri tämä saavutettavuus tekee niistä kannattavia: siitepöly muuttaa kukkien ostajat hartsin ostajiksi, ja hartsin ostajat käyttävät enemmän rahaa käynnillä.' },
+        { question: 'Voinko ostaa siitepölyä tuotantoon?', answer: 'Monet tukkuasiakkaamme ostavat siitepölyä ja siftiä raaka-aineeksi eivätkä jälleenmyyntiin — se on väkevä ja tasalaatuinen lähtömateriaali. Jos hankit tuotantoon etkä hyllyyn, kerro volyymi ja tavoiteprofiili; hinnoittelurakenne poikkeaa jälleenmyyntitukusta.' }
+      ],
+      ctaTitle: 'Ostatko siftiä jälleenmyyntiin vai tuotantoon?',
+      ctaDesc: 'Kerro volyymi ja tavoiteprofiili — hinnat eroavat tuotantomateriaalin ja hyllytukun välillä.',
+      ctaBtnPrimary: 'Katso kaikki hartsit', ctaBtnSecondary: 'Ota yhteyttä'
+    },
+    pt: {
+      title: 'Pólen CBD e Dry Sift por Grosso',
+      desc: 'Pólen CBD, skuff e dry sift por grosso: resina separada sem solventes, da entrada ao premium. Golden Static, 3X filtrado, COA por lote.',
+      h1: 'Pólen CBD e Dry Sift — Grossista de skuff e static',
+      heroTag: '🌾 Sem solventes',
+      heroDesc: 'Resina separada mecanicamente — sem solventes em nenhuma etapa. Do skuff de entrada, que converte compradores de flor em compradores de resina, até às qualidades separadas por static e triplamente filtradas para clientes que avaliam pela pureza.',
+      btnPrimary: 'Ver as resinas', btnSecondary: 'Ver flores CBD',
+      features: [
+        { icon: '🌾', title: 'O que é o pólen?', desc: 'O pó de resina arenoso que atravessa a rede ao peneirar flores secas. Prensado torna-se haxixe; solto continua a ser pólen.' },
+        { icon: '⚡', title: 'Separação static', desc: 'A eletricidade estática solta as cabeças de resina da matéria vegetal residual, dando um produto claramente mais limpo e claro do que só a peneiração.' },
+        { icon: '💎', title: '3X filtrado', desc: 'Três etapas sucessivas de filtragem removem progressivamente matéria vegetal — mais limpo, mais potente, mais claro e mais caro por grama.' }
+      ],
+      productSections: [
+        { title: 'Pólen, static e qualidades filtradas', desc: 'Quatro qualidades cobrindo toda a escala de preços, do skuff de entrada ao CBG triplamente filtrado.', category: 'cbd-resins', browseLabel: 'Ver todas as resinas CBD →' },
+        { title: 'A matéria-prima', desc: 'As flores de onde provém a peneiração — indoor e greenhouse cultivadas na Europa.', category: 'cbd-flowers', browseLabel: 'Ver todas as flores CBD →' }
+      ],
+      faqTitle: 'Pólen CBD e Dry Sift — FAQ',
+      faq: [
+        { question: 'O que é o pólen CBD?', answer: 'O pólen CBD — também chamado skuff ou kief — é o pó de resina solto que se desprende das flores de cânhamo secas. As flores são agitadas sobre redes finas para que as glândulas de resina se partam e caiam, ficando a matéria vegetal por cima. O que se deposita por baixo é o pólen: arenoso, dourado claro e muito mais concentrado do que a flor de origem.' },
+        { question: 'O que significa "dry sift"?', answer: 'Dry sift designa o próprio método de separação — mecânico, sem solventes, apenas por movimento e rede. É a técnica de fabrico de haxixe mais antiga que existe e continua a ser a mais usada na Europa. Como não intervém qualquer solvente em nenhuma etapa, o dry sift agrada a retalhistas e clientes que procuram o processo mais simples possível por trás do produto.' },
+        { question: 'O que é a separação static?', answer: 'Um refinamento do dry sift que usa eletricidade estática para soltar as cabeças de resina da matéria vegetal residual, com um resultado claramente mais limpo e claro do que a peneiração isolada. O nosso Golden Static é feito assim e apresenta um triplo perfil CBD+CBG+CBN, o que o posiciona de forma diferente de uma prensagem clássica de canabinóide único.' },
+        { question: 'O pólen é mais barato do que o haxixe prensado?', answer: 'Em geral sim. O skuff e o pólen constituem a entrada na categoria resina, o que faz deles a forma mais simples de iniciar clientes que até agora só compraram flor. É precisamente essa acessibilidade que os torna interessantes: o pólen transforma compradores de flor em compradores de resina, e estes gastam mais por visita.' },
+        { question: 'Posso comprar pólen para produção?', answer: 'Muitos dos nossos clientes grossistas compram pólen e sift como matéria-prima em vez de para revenda — é um insumo concentrado e constante. Se se abastece para produção em vez de para a prateleira, indique-nos volume e perfil-alvo; a estrutura de preços difere da do grosso para revenda.' }
+      ],
+      ctaTitle: 'Compra sift para revenda ou produção?',
+      ctaDesc: 'Indique-nos volume e perfil-alvo — os preços diferem entre matéria de produção e grosso para prateleira.',
+      ctaBtnPrimary: 'Ver todas as resinas', ctaBtnSecondary: 'Contactar'
+    },
   },
   'thc-free-cbd-wholesale': {
     de: {
@@ -628,6 +1048,146 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
       ctaTitle: 'Demandez d\'abord les certificats',
       ctaDesc: 'Indiquez-nous les produits que vous envisagez et nous vous transmettrons les COA du lot en cours avant toute commande.',
       ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Demander les COA'
+    },
+    es: {
+      title: 'CBD 0% THC al por Mayor',
+      desc: 'CBD 0% THC al por mayor: resinas del 25 al 50% de CBD, aislado 99,8% y destilado 90%, todos sin THC detectable. COA por lote incluido.',
+      h1: 'CBD 0% THC al por Mayor — Para los mercados más estrictos',
+      heroTag: '🔬 Sin THC detectable',
+      heroDesc: 'Una gama completa producida y analizada para que no figure THC en el certificado — resinas prensadas del 25% al 50% de CBD, más destilado al 90% y aislado al 99,8%. Cada lote se entrega con el COA que necesita para demostrarlo.',
+      btnPrimary: 'Ver las resinas', btnSecondary: 'Ver aceites CBD',
+      features: [
+        { icon: '⚖️', title: 'Umbral o no detectable', desc: 'Algunos mercados limitan el THC como porcentaje del producto acabado; otros exigen que no sea detectable. Un producto al 0,2% supera la primera prueba y falla la segunda.' },
+        { icon: '🏢', title: 'Clientes que necesitan certeza', desc: 'Conductores profesionales, empresas con políticas de control y compradores primerizos cautelosos hacen la misma pregunta. Un lineal sin THC la responde sin conversación.' },
+        { icon: '📄', title: 'Documentación sólida', desc: 'Cada lote lleva un COA independiente. Si alguna vez le piden demostrar conformidad, el certificado es el documento — no el envase.' }
+      ],
+      productSections: [
+        { title: 'Resinas 0% THC — del 25% al 50% de CBD', desc: 'Resinas prensadas en cuatro concentraciones, todas analizadas sin THC detectable.', category: 'cbd-resins', browseLabel: 'Ver todas las resinas CBD →' },
+        { title: 'Aceites CBD y concentrados', desc: 'Para fabricantes y producción de marca blanca, el aislado y el destilado son el punto de partida más limpio posible.', category: 'cbd-oils', browseLabel: 'Ver todos los aceites CBD →' }
+      ],
+      faqTitle: 'CBD 0% THC — FAQ',
+      faq: [
+        { question: '¿Qué significa exactamente 0% THC?', answer: 'Significa que el THC no es detectable en el límite de cuantificación del laboratorio — no que se haya demostrado un cero teórico, algo que ningún método analítico permite. La diferencia práctica es importante: un producto CBD conforme puede contener legalmente hasta un 0,3% de THC, mientras que estos se producen y analizan para que no se reporte THC alguno en el certificado.' },
+        { question: '¿Por qué necesitaría productos sin THC?', answer: 'Los requisitos difieren en Europa. Algunos mercados fijan un umbral porcentual para el producto acabado; otros exigen que no haya THC detectable, prueba que falla un producto situado justo por debajo de un umbral. Además existen razones comerciales ajenas a la ley: clientes corporativos, preocupaciones por controles laborales y clientes que simplemente quieren tranquilidad.' },
+        { question: '¿Qué productos ofrecen con 0% THC?', answer: 'Cuatro resinas prensadas del 25% al 50% de CBD — Ketama 25%, Soft 30%, Creamy Yellow 50% y Supreme 50% — además de aislado de CBD al 99,8% y destilado al 90%, intrínsecamente libres de otros cannabinoides. También hay un pack descubrimiento de resinas 0% THC para probar la gama antes de comprometerse en volumen.' },
+        { question: '¿Retirar el THC modifica el producto?', answer: 'Sí, y conviene ser franco con los clientes al respecto. El refinado adicional retira parte de los terpenos y cannabinoides menores junto con el THC. Una resina sin THC tiene por tanto un aroma más limpio pero menos complejo que un prensado tradicional. Lo que se gana es certeza normativa y un porcentaje de CBD más alto.' },
+        { question: '¿Es legal un producto 0% THC en toda Europa?', answer: 'El contenido de THC es solo una variable. Algunos países regulan el formato del producto — flores y hachís fumables en particular — con independencia de su composición, de modo que una resina sin THC puede seguir restringida allí donde la resina misma lo esté. Consulte los requisitos de su mercado y categoría; nuestra guía legal es un punto de partida, no asesoramiento jurídico.' }
+      ],
+      ctaTitle: 'Pida primero los certificados',
+      ctaDesc: 'Indíquenos los productos que está considerando y le enviaremos los COA del lote actual antes de que encargue nada.',
+      ctaBtnPrimary: 'Ver todas las resinas', ctaBtnSecondary: 'Solicitar COA'
+    },
+    it: {
+      title: 'CBD 0% THC all\'Ingrosso',
+      desc: 'CBD 0% THC all\'ingrosso: resine dal 25 al 50% di CBD, isolato 99,8% e distillato 90%, tutti senza THC rilevabile. COA per lotto incluso.',
+      h1: 'CBD 0% THC all\'Ingrosso — Per i mercati più severi',
+      heroTag: '🔬 Nessun THC rilevabile',
+      heroDesc: 'Una gamma completa prodotta e testata perché nel certificato non compaia THC — resine pressate dal 25% al 50% di CBD, più distillato al 90% e isolato al 99,8%. Ogni lotto viene consegnato con il COA necessario a dimostrarlo.',
+      btnPrimary: 'Vedi le resine', btnSecondary: 'Vedi gli oli CBD',
+      features: [
+        { icon: '⚖️', title: 'Soglia o non rilevabile', desc: 'Alcuni mercati limitano il THC come percentuale del prodotto finito, altri esigono che non sia rilevabile. Un prodotto allo 0,2% supera il primo test e fallisce il secondo.' },
+        { icon: '🏢', title: 'Clienti che vogliono certezze', desc: 'Autisti professionisti, aziende con politiche di controllo e acquirenti alla prima esperienza pongono la stessa domanda. Uno scaffale senza THC risponde senza discussioni.' },
+        { icon: '📄', title: 'Documenti solidi', desc: 'Ogni lotto porta un COA indipendente. Se le viene chiesto di dimostrare la conformità, è il certificato a fare fede — non la confezione.' }
+      ],
+      productSections: [
+        { title: 'Resine 0% THC — dal 25% al 50% di CBD', desc: 'Resine pressate in quattro concentrazioni, tutte testate senza THC rilevabile.', category: 'cbd-resins', browseLabel: 'Vedi tutte le resine CBD →' },
+        { title: 'Oli CBD e concentrati', desc: 'Per i produttori e la produzione white label, isolato e distillato sono il punto di partenza più puro possibile.', category: 'cbd-oils', browseLabel: 'Vedi tutti gli oli CBD →' }
+      ],
+      faqTitle: 'CBD 0% THC — FAQ',
+      faq: [
+        { question: 'Cosa significa esattamente 0% THC?', answer: 'Significa che il THC non è rilevabile al limite di quantificazione del laboratorio — non che sia stato dimostrato uno zero teorico, cosa che nessun metodo analitico consente. La differenza pratica è rilevante: un prodotto CBD conforme può contenere legalmente fino allo 0,3% di THC, mentre questi sono prodotti e testati perché nel certificato non risulti alcun THC.' },
+        { question: 'Perché dovrei avere prodotti senza THC?', answer: 'I requisiti differiscono in Europa. Alcuni mercati fissano una soglia percentuale per il prodotto finito, altri esigono che non vi sia THC rilevabile — test che un prodotto appena sotto soglia non supera. Esistono poi ragioni commerciali estranee alla legge: clienti aziendali, preoccupazioni legate ai controlli sul lavoro e clienti che vogliono semplicemente una rassicurazione.' },
+        { question: 'Quali prodotti offrite con 0% THC?', answer: 'Quattro resine pressate dal 25% al 50% di CBD — Ketama 25%, Soft 30%, Creamy Yellow 50% e Supreme 50% — oltre a isolato di CBD al 99,8% e distillato al 90%, intrinsecamente privi di altri cannabinoidi. C\'è anche un pacchetto scoperta resine 0% THC per testare la gamma prima di impegnarsi in volume.' },
+        { question: 'La rimozione del THC modifica il prodotto?', answer: 'Sì, ed è bene dirlo apertamente ai clienti. La raffinazione aggiuntiva rimuove parte dei terpeni e dei cannabinoidi minori insieme al THC. Una resina senza THC ha quindi un aroma più pulito ma meno complesso di una pressatura tradizionale. Ciò che si guadagna è certezza normativa e una percentuale di CBD più alta.' },
+        { question: 'Un prodotto 0% THC è legale in tutta Europa?', answer: 'Il contenuto di THC è solo una delle variabili. Alcuni Paesi regolano il formato del prodotto — fiori e hashish fumabili in particolare — indipendentemente dalla composizione, per cui una resina senza THC può restare limitata dove la resina stessa lo è. Verifichi i requisiti del suo mercato e della sua categoria; la nostra panoramica legale è un punto di partenza, non consulenza legale.' }
+      ],
+      ctaTitle: 'Richieda prima i certificati',
+      ctaDesc: 'Ci indichi i prodotti che sta valutando e le invieremo i COA del lotto in corso prima di qualsiasi ordine.',
+      ctaBtnPrimary: 'Vedi tutte le resine', ctaBtnSecondary: 'Richiedi i COA'
+    },
+    nl: {
+      title: '0% THC CBD Groothandel',
+      desc: '0% THC CBD groothandel: harsen van 25 tot 50% CBD, isolaat 99,8% en distillaat 90%, alle zonder aantoonbaar THC. COA per batch inbegrepen.',
+      h1: '0% THC CBD Groothandel — Voor de strengste markten',
+      heroTag: '🔬 Geen aantoonbaar THC',
+      heroDesc: 'Een complete lijn geproduceerd en getest zodat er geen THC op het certificaat verschijnt — geperste harsen van 25% tot 50% CBD, plus distillaat 90% en isolaat 99,8%. Elke batch wordt geleverd met het COA dat u nodig heeft om dat aan te tonen.',
+      btnPrimary: 'Bekijk de harsen', btnSecondary: 'Bekijk CBD oliën',
+      features: [
+        { icon: '⚖️', title: 'Drempel of niet aantoonbaar', desc: 'Sommige markten begrenzen THC als percentage van het eindproduct, andere eisen dat er geen aantoonbaar is. Een product met 0,2% slaagt voor de eerste test en zakt voor de tweede.' },
+        { icon: '🏢', title: 'Klanten die zekerheid willen', desc: 'Beroepschauffeurs, bedrijven met testbeleid en voorzichtige eerste kopers stellen dezelfde vraag. Een THC-vrij schap beantwoordt die zonder gesprek.' },
+        { icon: '📄', title: 'Papieren die standhouden', desc: 'Elke batch draagt een onafhankelijk COA. Wordt u ooit gevraagd conformiteit aan te tonen, dan is het certificaat het document — niet de verpakking.' }
+      ],
+      productSections: [
+        { title: '0% THC harsen — 25% tot 50% CBD', desc: 'Geperste harsen in vier sterktes, alle getest op niet-aantoonbaar THC.', category: 'cbd-resins', browseLabel: 'Bekijk alle CBD-harsen →' },
+        { title: 'CBD oliën & concentraten', desc: 'Voor fabrikanten en white-labelproductie zijn isolaat en distillaat het schoonst denkbare uitgangspunt.', category: 'cbd-oils', browseLabel: 'Bekijk alle CBD-oliën →' }
+      ],
+      faqTitle: '0% THC CBD — FAQ',
+      faq: [
+        { question: 'Wat betekent 0% THC precies?', answer: 'Het betekent dat THC niet aantoonbaar is op de bepalingsgrens van het testende laboratorium — niet dat een theoretische nul is bewezen, wat geen enkele analysemethode kan. Het praktische verschil is aanzienlijk: een conform CBD-product mag wettelijk tot 0,3% THC bevatten, terwijl deze zo worden geproduceerd en getest dat er helemaal geen THC op het certificaat staat.' },
+        { question: 'Waarom zou ik THC-vrije producten nodig hebben?', answer: 'De eisen verschillen binnen Europa. Sommige markten hanteren een percentagedrempel voor het eindproduct, andere eisen dat er geen THC aantoonbaar is — een test waar een product net onder een drempel voor zakt. Daarnaast zijn er commerciële redenen los van de wet: zakelijke klanten, zorgen over tests op de werkvloer, en klanten die simpelweg zekerheid willen.' },
+        { question: 'Welke producten biedt u met 0% THC?', answer: 'Vier geperste harsen van 25% tot 50% CBD — Ketama 25%, Soft 30%, Creamy Yellow 50% en Supreme 50% — plus CBD-isolaat 99,8% en distillaat 90%, van nature vrij van andere cannabinoïden. Er is ook een apart 0%-THC harsen-ontdekkingspakket om de lijn te testen voordat u zich vastlegt op volume.' },
+        { question: 'Verandert het verwijderen van THC het product?', answer: 'Ja, en het is goed daar eerlijk over te zijn tegen klanten. De extra raffinage verwijdert samen met het THC ook een deel van de terpenen en minder voorkomende cannabinoïden. Een THC-vrije hars heeft daardoor een schoner maar minder complex aroma dan een traditionele persing. Wat u wint is zekerheid over naleving en een hoger CBD-percentage.' },
+        { question: 'Is een 0%-THC-product overal in Europa legaal?', answer: 'Het THC-gehalte is maar één variabele. Sommige landen reguleren de productvorm — met name rookbare bloem en hasj — los van de samenstelling, waardoor een THC-vrije hars beperkt kan blijven waar hars zelf beperkt is. Controleer de eisen voor uw markt en categorie; ons juridisch overzicht is een startpunt, geen juridisch advies.' }
+      ],
+      ctaTitle: 'Vraag eerst de certificaten op',
+      ctaDesc: 'Stuur ons de producten die u overweegt en wij sturen de COA\'s van de huidige batch voordat u iets bestelt.',
+      ctaBtnPrimary: 'Bekijk alle harsen', ctaBtnSecondary: 'COA\'s aanvragen'
+    },
+    fi: {
+      title: '0% THC CBD tukkuhintaan',
+      desc: '0% THC CBD tukkuhintaan: hartsit 25–50 % CBD, isolaatti 99,8 % ja tisle 90 %, kaikki ilman havaittavaa THC:tä. COA joka erälle.',
+      h1: '0% THC CBD tukkuhintaan — Tiukimmille markkinoille',
+      heroTag: '🔬 Ei havaittavaa THC:tä',
+      heroDesc: 'Täydellinen tuotelinja, joka on valmistettu ja testattu niin ettei todistuksessa raportoida THC:tä lainkaan — puristetut hartsit 25 %:sta 50 %:iin CBD:tä, lisäksi 90 %:n tisle ja 99,8 %:n isolaatti. Jokainen erä toimitetaan COA:n kanssa.',
+      btnPrimary: 'Katso hartsit', btnSecondary: 'Katso CBD-öljyt',
+      features: [
+        { icon: '⚖️', title: 'Kynnysarvo vai ei havaittavaa', desc: 'Osa markkinoista rajoittaa THC:tä prosenttiosuutena valmiista tuotteesta, osa vaatii ettei sitä ole havaittavissa. 0,2 %:n tuote läpäisee ensimmäisen testin ja kaatuu toiseen.' },
+        { icon: '🏢', title: 'Asiakkaat jotka tarvitsevat varmuutta', desc: 'Ammattikuljettajat, testauskäytäntöjä noudattavat työpaikat ja varovaiset ensiostajat kysyvät samaa. THC-vapaa hylly vastaa siihen ilman keskustelua.' },
+        { icon: '📄', title: 'Kestävät dokumentit', desc: 'Jokaisella erällä on riippumaton COA. Jos sinua pyydetään osoittamaan vaatimustenmukaisuus, todistus on se asiakirja — ei pakkaus.' }
+      ],
+      productSections: [
+        { title: '0% THC -hartsit — 25–50 % CBD', desc: 'Puristetut hartsit neljässä vahvuudessa, kaikki testattu ilman havaittavaa THC:tä.', category: 'cbd-resins', browseLabel: 'Katso kaikki CBD-hartsit →' },
+        { title: 'CBD-öljyt ja tiivisteet', desc: 'Valmistajille ja private label -tuotantoon isolaatti ja tisle ovat puhtain mahdollinen lähtökohta.', category: 'cbd-oils', browseLabel: 'Katso kaikki CBD-öljyt →' }
+      ],
+      faqTitle: '0% THC CBD — UKK',
+      faq: [
+        { question: 'Mitä 0 % THC tarkalleen tarkoittaa?', answer: 'Se tarkoittaa, ettei THC:tä havaita laboratorion määritysrajalla — ei sitä, että teoreettinen nolla olisi todistettu, mihin mikään analyysimenetelmä ei pysty. Käytännön ero on merkittävä: vaatimustenmukainen CBD-tuote saa laillisesti sisältää jopa 0,3 % THC:tä, kun taas nämä valmistetaan ja testataan niin ettei todistuksessa raportoida THC:tä lainkaan.' },
+        { question: 'Miksi tarvitsisin THC-vapaita tuotteita?', answer: 'Vaatimukset vaihtelevat Euroopassa. Osa markkinoista asettaa prosenttirajan valmiille tuotteelle, osa vaatii ettei THC:tä ole havaittavissa — testi, jonka juuri kynnysarvon alle jäävä tuote kaataa. Lisäksi on lainsäädännöstä riippumattomia kaupallisia syitä: yritysasiakkaat, työpaikkatestaukseen liittyvät huolet ja asiakkaat jotka haluavat yksinkertaisesti varmuutta.' },
+        { question: 'Mitä tuotteita tarjoatte 0 %:n THC:llä?', answer: 'Neljä puristettua hartsia 25 %:sta 50 %:iin CBD:tä — Ketama 25 %, Soft 30 %, Creamy Yellow 50 % ja Supreme 50 % — sekä 99,8 %:n CBD-isolaatti ja 90 %:n tisle, jotka ovat luonnostaan vapaita muista kannabinoideista. Lisäksi on oma 0 %:n THC-hartsien tutustumispakkaus valikoiman testaamiseen ennen volyymiin sitoutumista.' },
+        { question: 'Muuttaako THC:n poisto tuotetta?', answer: 'Kyllä, ja siitä kannattaa puhua asiakkaille suoraan. Lisäjalostus poistaa THC:n mukana osan terpeeneistä ja sivukannabinoideista. THC-vapaan hartsin aromi on siksi puhtaampi mutta vähemmän monitahoinen kuin perinteisen puristeen. Vastineeksi saadaan varmuus vaatimustenmukaisuudesta ja korkeampi CBD-pitoisuus.' },
+        { question: 'Onko 0 %:n THC-tuote laillinen kaikkialla Euroopassa?', answer: 'THC-pitoisuus on vain yksi muuttuja. Osa maista sääntelee tuotemuotoa — erityisesti poltettavaa kukkaa ja hasista — riippumatta sen sisällöstä, joten THC-vapaa hartsi voi silti olla rajoitettu siellä missä hartsi ylipäätään on. Tarkista oman markkinasi ja tuoteryhmäsi vaatimukset; oikeudellinen katsauksemme on lähtökohta, ei oikeudellinen neuvo.' }
+      ],
+      ctaTitle: 'Pyydä ensin todistukset',
+      ctaDesc: 'Kerro harkitsemasi tuotteet, niin lähetämme nykyisen erän COA:t ennen kuin tilaat mitään.',
+      ctaBtnPrimary: 'Katso kaikki hartsit', ctaBtnSecondary: 'Pyydä COA:t'
+    },
+    pt: {
+      title: 'CBD 0% THC por Grosso',
+      desc: 'CBD 0% THC por grosso: resinas de 25 a 50% de CBD, isolado 99,8% e destilado 90%, todos sem THC detetável. COA por lote incluído.',
+      h1: 'CBD 0% THC por Grosso — Para os mercados mais exigentes',
+      heroTag: '🔬 Sem THC detetável',
+      heroDesc: 'Uma gama completa produzida e testada para que não conste THC no certificado — resinas prensadas de 25% a 50% de CBD, mais destilado a 90% e isolado a 99,8%. Cada lote é entregue com o COA necessário para o comprovar.',
+      btnPrimary: 'Ver as resinas', btnSecondary: 'Ver óleos CBD',
+      features: [
+        { icon: '⚖️', title: 'Limiar ou não detetável', desc: 'Alguns mercados limitam o THC como percentagem do produto acabado, outros exigem que não seja detetável. Um produto a 0,2% passa no primeiro teste e falha no segundo.' },
+        { icon: '🏢', title: 'Clientes que precisam de certeza', desc: 'Motoristas profissionais, empresas com políticas de despistagem e compradores de primeira viagem fazem a mesma pergunta. Uma prateleira sem THC responde sem conversa.' },
+        { icon: '📄', title: 'Documentação sólida', desc: 'Cada lote traz um COA independente. Se lhe pedirem para demonstrar conformidade, é o certificado que conta — não a embalagem.' }
+      ],
+      productSections: [
+        { title: 'Resinas 0% THC — de 25% a 50% de CBD', desc: 'Resinas prensadas em quatro concentrações, todas testadas sem THC detetável.', category: 'cbd-resins', browseLabel: 'Ver todas as resinas CBD →' },
+        { title: 'Óleos CBD e concentrados', desc: 'Para fabricantes e produção em marca branca, isolado e destilado são o ponto de partida mais puro possível.', category: 'cbd-oils', browseLabel: 'Ver todos os óleos CBD →' }
+      ],
+      faqTitle: 'CBD 0% THC — FAQ',
+      faq: [
+        { question: 'O que significa exatamente 0% THC?', answer: 'Significa que o THC não é detetável no limite de quantificação do laboratório — não que um zero teórico tenha sido provado, o que nenhum método analítico permite. A diferença prática é significativa: um produto CBD conforme pode conter legalmente até 0,3% de THC, ao passo que estes são produzidos e testados para que não seja reportado qualquer THC no certificado.' },
+        { question: 'Porque precisaria de produtos sem THC?', answer: 'Os requisitos diferem na Europa. Alguns mercados fixam um limiar percentual para o produto acabado, outros exigem que não haja THC detetável — teste que um produto mesmo abaixo de um limiar falha. Há ainda razões comerciais alheias à lei: clientes empresariais, preocupações com despistagens no trabalho e clientes que simplesmente querem tranquilidade.' },
+        { question: 'Que produtos oferecem com 0% THC?', answer: 'Quatro resinas prensadas de 25% a 50% de CBD — Ketama 25%, Soft 30%, Creamy Yellow 50% e Supreme 50% — além de isolado de CBD a 99,8% e destilado a 90%, intrinsecamente livres de outros canabinóides. Existe também um pack descoberta de resinas 0% THC para testar a gama antes de se comprometer em volume.' },
+        { question: 'Retirar o THC altera o produto?', answer: 'Sim, e vale a pena ser franco com os clientes quanto a isso. A refinação adicional retira parte dos terpenos e canabinóides menores juntamente com o THC. Uma resina sem THC tem por isso um aroma mais limpo mas menos complexo do que uma prensagem tradicional. O que se ganha é certeza regulamentar e uma percentagem de CBD mais alta.' },
+        { question: 'Um produto 0% THC é legal em toda a Europa?', answer: 'O teor de THC é apenas uma das variáveis. Alguns países regulam o formato do produto — flores e haxixe fumáveis em particular — independentemente da composição, pelo que uma resina sem THC pode continuar restringida onde a própria resina o esteja. Verifique os requisitos do seu mercado e categoria; a nossa visão geral legal é um ponto de partida, não aconselhamento jurídico.' }
+      ],
+      ctaTitle: 'Peça primeiro os certificados',
+      ctaDesc: 'Indique-nos os produtos que está a considerar e enviaremos os COA do lote atual antes de encomendar seja o que for.',
+      ctaBtnPrimary: 'Ver todas as resinas', ctaBtnSecondary: 'Pedir COA'
     },
   },
   'cbd-trim-small-buds-wholesale': {
@@ -687,6 +1247,146 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
       ctaDesc: 'Indiquez-nous votre volume mensuel et nous établirons un tarif contractuel plutôt que le palier public.',
       ctaBtnPrimary: 'Voir toutes les fleurs CBD', ctaBtnSecondary: 'Nous contacter'
     },
+    es: {
+      title: 'Trim CBD y Cogollos Pequeños Mayor',
+      desc: 'Trim CBD desde 0,19 €/g y cogollos pequeños desde 0,39 €/g al por mayor. Materia prima para extracción, prerrollados y gamas de entrada.',
+      h1: 'Trim CBD y Cogollos Pequeños — Mayorista desde 0,19 €/g',
+      heroTag: '📦 Gama volumen',
+      heroDesc: 'La gama con la que salen las cuentas. Materia prima para extracción, relleno de prerrollados y líneas de entrada en el lineal — el mismo cáñamo europeo, los mismos análisis, a una fracción del precio por gramo del indoor premium.',
+      btnPrimary: 'Ver flores CBD', btnSecondary: 'Ver las resinas',
+      features: [
+        { icon: '⚗️', title: 'Materia prima de extracción', desc: 'El insumo estándar para aceites, destilado y aislado. Aquí cuenta el contenido de cannabinoides por euro, no el aspecto — y ahí el trim gana siempre.' },
+        { icon: '🚬', title: 'Producción de prerrollados', desc: 'El trim, o una mezcla de trim y cogollos pequeños, mantiene el coste unitario lo bastante bajo para que los prerrollados dejen margen a precios aceptables.' },
+        { icon: '🏷️', title: 'Línea de entrada', desc: 'Una línea más económica atrae a clientes sensibles al precio que nunca cogerían indoor premium — y muchos suben de gama en la segunda visita.' }
+      ],
+      productSections: [
+        { title: 'Flores CBD — Gama volumen', desc: 'Trim, cogollos pequeños y las flores greenhouse más asequibles del catálogo.', category: 'cbd-flowers', browseLabel: 'Ver todas las flores CBD →' },
+        { title: 'Resinas para el mismo lineal', desc: 'Complete la gama volumen con resinas de entrada bajo la misma lógica de precio.', category: 'cbd-resins', browseLabel: 'Ver todas las resinas CBD →' }
+      ],
+      faqTitle: 'Trim CBD y Cogollos Pequeños — FAQ',
+      faq: [
+        { question: '¿Qué es el trim CBD?', answer: 'El trim son las hojas pequeñas y recortes retirados de las flores de cáñamo durante el manicurado. Tiene menor densidad de cannabinoides que el cogollo, pero es mucho más barato por gramo, lo que lo convierte en el insumo estándar para extracción, relleno de prerrollados y productos de entrada. Se vende por peso a granel, no como producto de exposición.' },
+        { question: '¿Qué son los cogollos pequeños?', answer: 'Los cogollos pequeños — también llamados popcorn buds o petites têtes en francés — son las flores más pequeñas de la parte baja de la planta. Es el mismo material que los cogollos principales, secado y curado igual, solo que más pequeño y menos vistoso. El aroma y el contenido en cannabinoides son ampliamente comparables, por lo que ofrecen la mejor relación calidad-precio de la categoría flor.' },
+        { question: '¿Cuál es la diferencia de precio?', answer: 'Sustancial. Nuestro trim greenhouse parte de 0,19 € por gramo y los cogollos pequeños de 0,39 €, frente a unos 0,69 € a 1,19 € de las flores greenhouse e indoor de tamaño completo. Para una tienda que construye una gama de entrada, o un productor que compra materia de extracción, esa diferencia es todo el argumento de negocio.' },
+        { question: '¿Para qué usan el trim los mayoristas?', answer: 'Sobre todo para tres cosas. Extracción — el trim es el insumo estándar para producir aceites, destilado y aislado. Prerrollados, donde el trim o una mezcla de trim y cogollos pequeños mantiene viable el coste unitario. Y líneas de entrada en el lineal, que atraen a clientes que no comprarían indoor premium.' },
+        { question: '¿Es de peor calidad?', answer: 'Es distinta más que peor, y la distinción importa comercialmente. El trim tiene realmente menos densidad de cannabinoides que la flor — eso es lo que lo abarata. Los cogollos pequeños son en esencia el mismo producto que los principales en formato reducido, ahí la diferencia es sobre todo cosmética. Ambos se cultivan, curan y analizan con el mismo estándar, con COA por lote.' }
+      ],
+      ctaTitle: '¿Compra por kilos?',
+      ctaDesc: 'Indíquenos su volumen mensual y le calcularemos una tarifa contractual en lugar del tramo publicado.',
+      ctaBtnPrimary: 'Ver todas las flores CBD', ctaBtnSecondary: 'Contactar'
+    },
+    it: {
+      title: 'Trim CBD e Cimette Ingrosso',
+      desc: 'Trim CBD da 0,19 €/g e cimette piccole da 0,39 €/g all\'ingrosso. Materia prima per estrazione, prerollati e linee entry level.',
+      h1: 'Trim CBD e Cimette Piccole — Ingrosso da 0,19 €/g',
+      heroTag: '📦 Fascia volume',
+      heroDesc: 'La fascia con cui i conti tornano. Materia prima per l\'estrazione, riempimento per prerollati e linee entry level a scaffale — stessa canapa europea, stesse analisi, a una frazione del prezzo al grammo dell\'indoor premium.',
+      btnPrimary: 'Vedi i fiori CBD', btnSecondary: 'Vedi le resine',
+      features: [
+        { icon: '⚗️', title: 'Materia prima da estrazione', desc: 'L\'input standard per oli, distillato e isolato. Qui conta il contenuto di cannabinoidi per euro, non l\'aspetto — e il trim vince ogni volta.' },
+        { icon: '🚬', title: 'Produzione di prerollati', desc: 'Il trim, o una miscela di trim e cimette, mantiene il costo unitario abbastanza basso perché i prerollati rendano a prezzi accettabili.' },
+        { icon: '🏷️', title: 'Linea entry level', desc: 'Una linea più economica attira clienti sensibili al prezzo che non prenderebbero mai indoor premium — e molti salgono di gamma alla seconda visita.' }
+      ],
+      productSections: [
+        { title: 'Fiori CBD — Fascia volume', desc: 'Trim, cimette piccole e i fiori greenhouse più accessibili del catalogo.', category: 'cbd-flowers', browseLabel: 'Vedi tutti i fiori CBD →' },
+        { title: 'Resine per lo stesso scaffale', desc: 'Completi la fascia volume con resine d\'ingresso nella stessa logica di prezzo.', category: 'cbd-resins', browseLabel: 'Vedi tutte le resine CBD →' }
+      ],
+      faqTitle: 'Trim CBD e Cimette Piccole — FAQ',
+      faq: [
+        { question: 'Cos\'è il trim CBD?', answer: 'Il trim è il materiale fogliare minuto e di scarto rimosso dai fiori di canapa durante la manicura. Ha una densità di cannabinoidi inferiore alla cima, ma costa molto meno al grammo, il che lo rende l\'input standard per estrazione, riempimento di prerollati e prodotti entry level. Si vende a peso sfuso, non come prodotto da esposizione.' },
+        { question: 'Cosa sono le cimette piccole?', answer: 'Le cimette piccole — dette anche popcorn buds — sono i fiori più piccoli della parte bassa della pianta. È lo stesso materiale delle cime principali, essiccato e curato allo stesso modo, solo più piccolo e meno vistoso. Aroma e contenuto di cannabinoidi sono ampiamente comparabili, per cui offrono il miglior rapporto qualità-prezzo della categoria fiori.' },
+        { question: 'Qual è la differenza di prezzo?', answer: 'Sostanziale. Il nostro trim greenhouse parte da 0,19 € al grammo e le cimette da 0,39 €, contro circa 0,69 € - 1,19 € dei fiori greenhouse e indoor a piena taglia. Per un negozio che costruisce una fascia entry level, o per un produttore che acquista materia da estrazione, quel divario è l\'intero caso commerciale.' },
+        { question: 'Per cosa usano il trim i clienti all\'ingrosso?', answer: 'Principalmente per tre cose. Estrazione — il trim è l\'input standard per produrre oli, distillato e isolato. Prerollati, dove trim o una miscela trim-cimette mantiene sostenibile il costo unitario. E linee entry level a scaffale, che attraggono clienti che non comprerebbero indoor premium.' },
+        { question: 'La qualità è inferiore?', answer: 'È diversa più che inferiore, e la distinzione conta commercialmente. Il trim ha davvero meno densità di cannabinoidi del fiore — è questo a renderlo economico. Le cimette sono in sostanza lo stesso prodotto delle cime principali in formato ridotto, lì il divario è soprattutto estetico. Entrambi sono coltivati, curati e analizzati secondo lo stesso standard, con COA per lotto.' }
+      ],
+      ctaTitle: 'Acquista al chilo?',
+      ctaDesc: 'Ci indichi il suo volume mensile e le calcoleremo una tariffa contrattuale anziché lo scaglione pubblicato.',
+      ctaBtnPrimary: 'Vedi tutti i fiori CBD', ctaBtnSecondary: 'Contattaci'
+    },
+    nl: {
+      title: 'CBD Trim & Kleine Toppen Groothandel',
+      desc: 'CBD trim vanaf € 0,19/g en kleine toppen vanaf € 0,39/g in de groothandel. Grondstof voor extractie, pre-rolls en instaplijnen.',
+      h1: 'CBD Trim & Kleine Toppen — Groothandel vanaf € 0,19/g',
+      heroTag: '📦 Volumeklasse',
+      heroDesc: 'De klasse waarmee de som klopt. Grondstof voor extractie, vulling voor pre-rolls en instaplijnen in het schap — dezelfde Europese hennep, dezelfde laboratoriumtests, voor een fractie van de gramprijs van premium indoor.',
+      btnPrimary: 'Bekijk CBD bloemen', btnSecondary: 'Bekijk de harsen',
+      features: [
+        { icon: '⚗️', title: 'Grondstof voor extractie', desc: 'De standaardinput voor oliën, distillaat en isolaat. Hier telt cannabinoïdegehalte per euro, niet het uiterlijk — en daarin wint trim altijd.' },
+        { icon: '🚬', title: 'Pre-rollproductie', desc: 'Trim, of een mengsel van trim en kleine toppen, houdt de stukkosten laag genoeg zodat pre-rolls marge dragen bij acceptabele verkoopprijzen.' },
+        { icon: '🏷️', title: 'Instaplijn', desc: 'Een goedkopere schaplijn trekt prijsbewuste klanten die nooit premium indoor zouden pakken — en velen stappen bij het tweede bezoek op.' }
+      ],
+      productSections: [
+        { title: 'CBD Bloemen — Volumeklasse', desc: 'Trim, kleine toppen en de meest betaalbare greenhouse-bloemen uit de catalogus.', category: 'cbd-flowers', browseLabel: 'Bekijk alle CBD-bloemen →' },
+        { title: 'Harsen voor hetzelfde schap', desc: 'Vul de volumeklasse aan met instapharsen in dezelfde prijslogica.', category: 'cbd-resins', browseLabel: 'Bekijk alle CBD-harsen →' }
+      ],
+      faqTitle: 'CBD Trim & Kleine Toppen — FAQ',
+      faq: [
+        { question: 'Wat is CBD trim?', answer: 'Trim is het kleinere blad- en snijafval dat bij het manicuren van hennepbloemen wordt verwijderd. Het heeft een lagere cannabinoïdendichtheid dan de toppen zelf, maar is per gram veel goedkoper, waardoor het de standaardinput is voor extractie, pre-rollvulling en instapproducten. Het wordt op gewicht in bulk verkocht, niet als etalageproduct.' },
+        { question: 'Wat zijn kleine toppen?', answer: 'Kleine toppen — ook popcorn buds genoemd — zijn de kleinere bloemen van lager aan de plant. Het is hetzelfde materiaal als de hoofdtoppen, op dezelfde manier gedroogd en gerijpt, alleen kleiner en minder opvallend. Aroma en cannabinoïdengehalte zijn grotendeels vergelijkbaar, waardoor ze de beste prijs-kwaliteitverhouding in de bloemcategorie bieden.' },
+        { question: 'Hoe groot is het prijsverschil?', answer: 'Aanzienlijk. Onze greenhouse-trim begint bij € 0,19 per gram en kleine toppen bij € 0,39, tegenover ruwweg € 0,69 tot € 1,19 voor greenhouse- en indoorbloem op volle grootte. Voor een winkel die een instaplijn opbouwt, of een producent die extractiemateriaal inkoopt, is dat verschil de hele businesscase.' },
+        { question: 'Waar gebruiken groothandelsklanten trim voor?', answer: 'Vooral voor drie dingen. Extractie — trim is de standaardinput voor het produceren van oliën, distillaat en isolaat. Pre-rolls, waar trim of een mengsel van trim en kleine toppen de stukkosten werkbaar houdt. En instaplijnen in het schap, die klanten aantrekken die geen premium indoor zouden kopen.' },
+        { question: 'Is de kwaliteit lager?', answer: 'Ze is anders in plaats van simpelweg lager, en dat onderscheid telt commercieel. Trim heeft werkelijk minder cannabinoïdendichtheid dan bloem — dat maakt het goedkoop. Kleine toppen zijn in wezen hetzelfde product als hoofdtoppen in kleiner formaat, daar is het verschil vooral cosmetisch. Beide worden geteeld, gerijpt en getest volgens dezelfde standaard, met een COA per batch.' }
+      ],
+      ctaTitle: 'Koopt u per kilo?',
+      ctaDesc: 'Geef ons uw maandelijkse volume en wij offreren een contracttarief in plaats van de gepubliceerde staffel.',
+      ctaBtnPrimary: 'Bekijk alle CBD-bloemen', ctaBtnSecondary: 'Neem contact op'
+    },
+    fi: {
+      title: 'CBD-trim ja pienet nuput tukku',
+      desc: 'CBD-trim alkaen 0,19 €/g ja pienet nuput alkaen 0,39 €/g tukkuhintaan. Raaka-aine uuttoon, esikäärittyihin ja edullisiin tuotelinjoihin.',
+      h1: 'CBD-trim ja pienet nuput — tukkuhintaan alkaen 0,19 €/g',
+      heroTag: '📦 Volyymiluokka',
+      heroDesc: 'Luokka, jolla laskelmat toimivat. Raaka-ainetta uuttoon, täytettä esikäärittyihin ja edullisia tuotelinjoja hyllyyn — samaa EU-hamppua, samat laboratoriotestit, murto-osalla premium-sisäkukan grammahinnasta.',
+      btnPrimary: 'Katso CBD-kukat', btnSecondary: 'Katso hartsit',
+      features: [
+        { icon: '⚗️', title: 'Uuton raaka-aine', desc: 'Vakiomateriaali öljyille, tisleelle ja isolaatille. Tässä ratkaisee kannabinoidipitoisuus euroa kohden, ei ulkonäkö — ja siinä trim voittaa joka kerta.' },
+        { icon: '🚬', title: 'Esikäärittyjen valmistus', desc: 'Trim tai trimin ja pienten nuppujen sekoitus pitää yksikkökustannuksen riittävän matalana, jotta esikääritty tuottaa katetta hyväksyttävällä hinnalla.' },
+        { icon: '🏷️', title: 'Edullinen tuotelinja', desc: 'Edullisempi hyllylinja tuo hintatietoiset asiakkaat, jotka eivät koskaan ottaisi premium-sisäkukkaa — ja moni siirtyy ylöspäin toisella käynnillä.' }
+      ],
+      productSections: [
+        { title: 'CBD-kukat — volyymiluokka', desc: 'Trim, pienet nuput ja valikoiman edullisimmat kasvihuonekukat.', category: 'cbd-flowers', browseLabel: 'Katso kaikki CBD-kukat →' },
+        { title: 'Hartsit samaan hyllyyn', desc: 'Täydennä volyymiluokka sisäänheittohartseilla samalla hintalogiikalla.', category: 'cbd-resins', browseLabel: 'Katso kaikki CBD-hartsit →' }
+      ],
+      faqTitle: 'CBD-trim ja pienet nuput — UKK',
+      faq: [
+        { question: 'Mitä CBD-trim on?', answer: 'Trim on pienempää lehti- ja leikkuumateriaalia, joka poistetaan hampun kukista viimeistelyn yhteydessä. Sen kannabinoiditiheys on nuppuja matalampi, mutta grammahinta on huomattavasti edullisempi, mikä tekee siitä vakiomateriaalin uuttoon, esikäärittyjen täytteeksi ja edullisiin tuotteisiin. Sitä myydään painon mukaan irtotavarana, ei esillepanotuotteena.' },
+        { question: 'Mitä pienet nuput ovat?', answer: 'Pienet nuput — joita kutsutaan myös popcorn-nupuiksi tai ranskaksi petites têtes — ovat kasvin alaosan pienempiä kukkia. Materiaali on sama kuin päänupuissa, kuivattu ja kypsytetty samoin, vain pienempää ja vähemmän näyttävää. Aromi ja kannabinoidipitoisuus ovat pitkälti verrattavissa, joten ne tarjoavat kukkakategorian parhaan hinta-laatusuhteen.' },
+        { question: 'Kuinka suuri hintaero on?', answer: 'Merkittävä. Kasvihuonetrimimme alkaa 0,19 eurosta grammalta ja pienet nuput 0,39 eurosta, kun täysikokoiset kasvihuone- ja sisäkukat maksavat noin 0,69–1,19 euroa. Myymälälle, joka rakentaa edullista tuotelinjaa, tai valmistajalle, joka ostaa uuttomateriaalia, tuo ero on koko liiketoimintaperuste.' },
+        { question: 'Mihin tukkuasiakkaat käyttävät trimiä?', answer: 'Pääasiassa kolmeen asiaan. Uuttoon — trim on vakiomateriaali öljyjen, tisleen ja isolaatin valmistuksessa. Esikäärittyihin, joissa trim tai trimin ja pienten nuppujen sekoitus pitää yksikkökustannuksen järkevänä. Ja edullisiin hyllylinjoihin, jotka houkuttelevat asiakkaita, jotka eivät ostaisi premium-sisäkukkaa.' },
+        { question: 'Onko laatu heikompi?', answer: 'Se on pikemminkin erilainen kuin heikompi, ja ero on kaupallisesti merkittävä. Trimissä on todella vähemmän kannabinoiditiheyttä kuin kukassa — juuri se tekee siitä edullista. Pienet nuput ovat pohjimmiltaan samaa tuotetta kuin päänuput pienemmässä koossa, siinä ero on lähinnä kosmeettinen. Molemmat kasvatetaan, kypsytetään ja testataan samalla standardilla, COA joka erälle.' }
+      ],
+      ctaTitle: 'Ostatko kiloittain?',
+      ctaDesc: 'Kerro kuukausivolyymisi, niin laskemme sopimushinnan julkaistun portaan sijaan.',
+      ctaBtnPrimary: 'Katso kaikki CBD-kukat', ctaBtnSecondary: 'Ota yhteyttä'
+    },
+    pt: {
+      title: 'Trim CBD e Flores Pequenas Grosso',
+      desc: 'Trim CBD desde 0,19 €/g e flores pequenas desde 0,39 €/g por grosso. Matéria-prima para extração, pré-enrolados e gamas de entrada.',
+      h1: 'Trim CBD e Flores Pequenas — Por grosso desde 0,19 €/g',
+      heroTag: '📦 Gama volume',
+      heroDesc: 'A gama com que as contas fecham. Matéria-prima para extração, enchimento de pré-enrolados e linhas de entrada na prateleira — o mesmo cânhamo europeu, as mesmas análises, a uma fração do preço por grama do indoor premium.',
+      btnPrimary: 'Ver flores CBD', btnSecondary: 'Ver as resinas',
+      features: [
+        { icon: '⚗️', title: 'Matéria-prima de extração', desc: 'O insumo padrão para óleos, destilado e isolado. Aqui conta o teor de canabinóides por euro, não a aparência — e nisso o trim ganha sempre.' },
+        { icon: '🚬', title: 'Produção de pré-enrolados', desc: 'O trim, ou uma mistura de trim e flores pequenas, mantém o custo unitário baixo o suficiente para que os pré-enrolados deem margem a preços aceitáveis.' },
+        { icon: '🏷️', title: 'Linha de entrada', desc: 'Uma linha mais barata atrai clientes sensíveis ao preço que nunca escolheriam indoor premium — e muitos sobem de gama na segunda visita.' }
+      ],
+      productSections: [
+        { title: 'Flores CBD — Gama volume', desc: 'Trim, flores pequenas e as flores greenhouse mais acessíveis do catálogo.', category: 'cbd-flowers', browseLabel: 'Ver todas as flores CBD →' },
+        { title: 'Resinas para a mesma prateleira', desc: 'Complete a gama volume com resinas de entrada na mesma lógica de preço.', category: 'cbd-resins', browseLabel: 'Ver todas as resinas CBD →' }
+      ],
+      faqTitle: 'Trim CBD e Flores Pequenas — FAQ',
+      faq: [
+        { question: 'O que é o trim CBD?', answer: 'O trim são as folhas mais pequenas e aparas retiradas das flores de cânhamo durante a manicura. Tem menor densidade de canabinóides do que a flor, mas é bastante mais barato por grama, o que faz dele o insumo padrão para extração, enchimento de pré-enrolados e produtos de entrada. Vende-se a peso a granel, não como produto de exposição.' },
+        { question: 'O que são flores pequenas?', answer: 'As flores pequenas — também chamadas popcorn buds — são as flores mais pequenas da parte de baixo da planta. É o mesmo material das flores principais, seco e curado da mesma forma, apenas mais pequeno e menos vistoso. O aroma e o teor de canabinóides são largamente comparáveis, pelo que oferecem a melhor relação qualidade-preço da categoria flor.' },
+        { question: 'Qual é a diferença de preço?', answer: 'Substancial. O nosso trim greenhouse parte de 0,19 € por grama e as flores pequenas de 0,39 €, contra cerca de 0,69 € a 1,19 € das flores greenhouse e indoor de tamanho completo. Para uma loja que constrói uma gama de entrada, ou um produtor que compra matéria de extração, essa diferença é todo o argumento de negócio.' },
+        { question: 'Para que usam os grossistas o trim?', answer: 'Sobretudo para três coisas. Extração — o trim é o insumo padrão para produzir óleos, destilado e isolado. Pré-enrolados, onde o trim ou uma mistura de trim e flores pequenas mantém o custo unitário viável. E linhas de entrada na prateleira, que atraem clientes que não comprariam indoor premium.' },
+        { question: 'A qualidade é inferior?', answer: 'É diferente em vez de simplesmente inferior, e a distinção conta comercialmente. O trim tem realmente menos densidade de canabinóides do que a flor — é isso que o torna barato. As flores pequenas são no essencial o mesmo produto das principais em formato reduzido, aí a diferença é sobretudo cosmética. Ambos são cultivados, curados e analisados segundo o mesmo padrão, com COA por lote.' }
+      ],
+      ctaTitle: 'Compra ao quilo?',
+      ctaDesc: 'Diga-nos o seu volume mensal e calcularemos uma tarifa contratual em vez do escalão publicado.',
+      ctaBtnPrimary: 'Ver todas as flores CBD', ctaBtnSecondary: 'Contactar'
+    },
   },
   'moonrock-icerock-cbd-wholesale': {
     de: {
@@ -744,6 +1444,146 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
       ctaTitle: 'Ancrez votre présentation',
       ctaDesc: 'Demandez les tarifs de gros sur MoonRock et Ice Rock, ou ajoutez-les à une commande d\'échantillons et voyez le rendu sur votre rayon.',
       ctaBtnPrimary: 'Voir toutes les fleurs CBD', ctaBtnSecondary: 'Nous contacter'
+    },
+    es: {
+      title: 'MoonRock y Ice Rock CBD al por Mayor',
+      desc: 'MoonRock e Ice Rock CBD al por mayor: flor indoor premium bañada en extracto de CBD y rebozada en polen o aislado. COA incluido.',
+      h1: 'MoonRock e Ice Rock CBD — La pieza clave del lineal',
+      heroTag: '💎 Alta gama',
+      heroDesc: 'Flor indoor premium bañada en extracto de CBD y rebozada en polen o aislado — el contenido total de cannabinoides más alto de todos nuestros formatos de flor, y el producto que los clientes fotografían antes de comprarlo.',
+      btnPrimary: 'Ver flores CBD', btnSecondary: 'Ver las resinas',
+      features: [
+        { icon: '🌕', title: 'MoonRock', desc: 'Rebozada en polen. Superficie dorada y texturada, y el aroma más rico de las dos, porque el sift aporta sus propios terpenos.' },
+        { icon: '❄️', title: 'Ice Rock', desc: 'Rebozada en aislado de CBD. Blanca, cristalina y visualmente llamativa, con normalmente la cifra más alta en el certificado.' },
+        { icon: '🏆', title: 'Por qué referenciarlas', desc: 'Cumplen un papel que ningún otro producto cumple: elevan la calidad percibida de todo lo que las rodea y abren la conversación de venta.' }
+      ],
+      productSections: [
+        { title: 'Flores CBD premium', desc: 'MoonRock, Ice Rock y las flores indoor más potentes del catálogo.', category: 'cbd-flowers', browseLabel: 'Ver todas las flores CBD →' },
+        { title: 'Los componentes por separado', desc: 'Extracto, aislado y polen — todo lo que entra en una flor bañada existe también por separado.', category: 'cbd-resins', browseLabel: 'Ver todas las resinas CBD →' }
+      ],
+      faqTitle: 'MoonRock e Ice Rock — FAQ',
+      faq: [
+        { question: '¿Qué es el MoonRock CBD?', answer: 'El MoonRock es una flor de CBD indoor premium bañada en extracto de CBD y después rebozada en polen o kief. El resultado es un cogollo denso y muy escarchado, con un contenido total de cannabinoides muy superior al de la flor de partida. Es un producto de tres componentes — flor, extracto y sift — de ahí su posición en lo alto de la escala de precios.' },
+        { question: '¿Qué diferencia hay entre MoonRock e Ice Rock?', answer: 'El rebozado. El MoonRock se reboza en polen o kief tras aplicar el extracto, lo que deja una superficie dorada y texturada. El Ice Rock se reboza en aislado de CBD, produciendo un aspecto blanco cristalino característico y normalmente un porcentaje de CBD aún más alto, ya que el aislado es cannabinoide casi puro. El Ice Rock da la cifra más alta en el certificado; el MoonRock suele tener el aroma más rico.' },
+        { question: '¿Por qué referenciarlas si son caras?', answer: 'Porque cumplen un papel que ningún otro producto del lineal cumple. Son el ancla visual de la exposición — los clientes las notan, preguntan por ellas y recuerdan la tienda que las tenía. Incluso con volumen modesto, elevan la calidad percibida de todo lo que hay al lado y dan al personal una entrada de conversación que a menudo acaba en la venta de otra cosa.' },
+        { question: '¿Cómo se fabrican?', answer: 'Se selecciona una flor indoor de calidad como base, se baña en extracto de CBD y después se reboza en polen o en aislado según el producto. Como cada componente es a su vez un producto que vendemos por separado, puede ver exactamente qué lleva.' },
+        { question: '¿Cómo debo presentarlas y fijar su precio?', answer: 'Véndalas por gramos en cantidades pequeñas en lugar de en los botes multigramo que usa para la flor estándar — el cliente las compra como capricho puntual, no cada semana. Manténgalas visibles y bien iluminadas; el aspecto es gran parte de lo que se compra. La mayoría de minoristas las sitúa claramente por encima de su mejor flor indoor, no compitiendo con ella.' }
+      ],
+      ctaTitle: 'Ancle su exposición',
+      ctaDesc: 'Pida precios mayoristas de MoonRock e Ice Rock, o añádalas a un pedido de muestras y vea cómo quedan en su lineal.',
+      ctaBtnPrimary: 'Ver todas las flores CBD', ctaBtnSecondary: 'Contactar'
+    },
+    it: {
+      title: 'MoonRock e Ice Rock CBD Ingrosso',
+      desc: 'MoonRock e Ice Rock CBD all\'ingrosso: fiore indoor premium ricoperto di estratto di CBD e rotolato in polline o isolato. COA incluso.',
+      h1: 'MoonRock e Ice Rock CBD — Il pezzo forte dello scaffale',
+      heroTag: '💎 Alta gamma',
+      heroDesc: 'Fiore indoor premium ricoperto di estratto di CBD e rotolato in polline o isolato — il contenuto totale di cannabinoidi più alto tra tutti i nostri formati di fiore, e il prodotto che i clienti fotografano prima di acquistarlo.',
+      btnPrimary: 'Vedi i fiori CBD', btnSecondary: 'Vedi le resine',
+      features: [
+        { icon: '🌕', title: 'MoonRock', desc: 'Rotolato nel polline. Superficie dorata e texturizzata, e l\'aroma più ricco dei due, perché il sift porta con sé i propri terpeni.' },
+        { icon: '❄️', title: 'Ice Rock', desc: 'Rotolato nell\'isolato di CBD. Bianco, cristallino e visivamente d\'impatto, di norma con il valore più alto sul certificato.' },
+        { icon: '🏆', title: 'Perché inserirli', desc: 'Svolgono un ruolo che nessun altro prodotto svolge: alzano la qualità percepita di tutto ciò che li circonda e avviano la conversazione di vendita.' }
+      ],
+      productSections: [
+        { title: 'Fiori CBD premium', desc: 'MoonRock, Ice Rock e i fiori indoor più potenti del catalogo.', category: 'cbd-flowers', browseLabel: 'Vedi tutti i fiori CBD →' },
+        { title: 'I componenti separatamente', desc: 'Estratto, isolato e polline — tutto ciò che entra in un fiore ricoperto esiste anche separatamente.', category: 'cbd-resins', browseLabel: 'Vedi tutte le resine CBD →' }
+      ],
+      faqTitle: 'MoonRock e Ice Rock — FAQ',
+      faq: [
+        { question: 'Cos\'è il MoonRock CBD?', answer: 'Il MoonRock è un fiore di CBD indoor premium ricoperto di estratto di CBD e poi rotolato in polline o kief. Il risultato è una cima densa e fortemente brinata, con un contenuto totale di cannabinoidi molto superiore a quello del fiore di partenza. È un prodotto a tre componenti — fiore, estratto e sift — da qui la sua posizione in cima alla scala dei prezzi.' },
+        { question: 'Che differenza c\'è tra MoonRock e Ice Rock?', answer: 'La copertura. Il MoonRock viene rotolato in polline o kief dopo l\'applicazione dell\'estratto, lasciando una superficie dorata e texturizzata. L\'Ice Rock viene invece rotolato nell\'isolato di CBD, producendo un aspetto bianco cristallino caratteristico e di norma una percentuale di CBD ancora più alta, dato che l\'isolato è cannabinoide quasi puro. L\'Ice Rock dà il valore più alto sul certificato, il MoonRock ha generalmente l\'aroma più ricco.' },
+        { question: 'Perché inserirli se sono cari?', answer: 'Perché svolgono un ruolo che nessun altro prodotto dello scaffale svolge. Sono l\'ancora visiva dell\'esposizione — i clienti li notano, chiedono informazioni e ricordano il negozio che li aveva. Anche con volumi modesti, alzano la qualità percepita di tutto ciò che sta accanto e offrono al personale un aggancio che spesso si conclude con la vendita di altro.' },
+        { question: 'Come vengono realizzati?', answer: 'Si seleziona un fiore indoor di qualità come base, lo si ricopre di estratto di CBD e poi lo si rotola in polline o isolato a seconda del prodotto. Poiché ogni componente è a sua volta un prodotto che vendiamo separatamente, può vedere esattamente cosa contiene.' },
+        { question: 'Come presentarli e fissarne il prezzo?', answer: 'Li venda al grammo in piccole quantità anziché nei barattoli multigrammo usati per il fiore standard — il cliente li compra come acquisto occasionale, non settimanale. Li tenga visibili e ben illuminati; l\'aspetto è gran parte di ciò che si acquista. La maggior parte dei rivenditori li posiziona chiaramente sopra il proprio miglior fiore indoor, non in concorrenza con esso.' }
+      ],
+      ctaTitle: 'Dia un ancora alla sua esposizione',
+      ctaDesc: 'Chieda i prezzi all\'ingrosso di MoonRock e Ice Rock, oppure li aggiunga a un ordine campione e veda come rendono sul suo scaffale.',
+      ctaBtnPrimary: 'Vedi tutti i fiori CBD', ctaBtnSecondary: 'Contattaci'
+    },
+    nl: {
+      title: 'MoonRock & Ice Rock CBD Groothandel',
+      desc: 'MoonRock en Ice Rock CBD groothandel: premium indoorbloem omhuld met CBD-extract en gerold in pollen of isolaat. COA inbegrepen.',
+      h1: 'MoonRock & Ice Rock CBD — Het pronkstuk van het schap',
+      heroTag: '💎 Topsegment',
+      heroDesc: 'Premium indoorbloem omhuld met CBD-extract en gerold in pollen of isolaat — het hoogste totale cannabinoïdengehalte van al onze bloemvormen, en het product dat klanten fotograferen voordat ze het kopen.',
+      btnPrimary: 'Bekijk CBD bloemen', btnSecondary: 'Bekijk de harsen',
+      features: [
+        { icon: '🌕', title: 'MoonRock', desc: 'Gerold in pollen. Goudkleurig, getextureerd oppervlak en het rijkste aroma van de twee, omdat de sift eigen terpenen meebrengt.' },
+        { icon: '❄️', title: 'Ice Rock', desc: 'Gerold in CBD-isolaat. Wit, kristallijn en visueel opvallend, doorgaans met het hoogste cijfer op het certificaat.' },
+        { icon: '🏆', title: 'Waarom ze voeren', desc: 'Ze vervullen een rol die geen ander product vervult: ze verhogen de gepercipieerde kwaliteit van alles eromheen en openen het verkoopgesprek.' }
+      ],
+      productSections: [
+        { title: 'Premium CBD bloemen', desc: 'MoonRock, Ice Rock en de sterkste indoorbloemen uit de catalogus.', category: 'cbd-flowers', browseLabel: 'Bekijk alle CBD-bloemen →' },
+        { title: 'De componenten apart', desc: 'Extract, isolaat en pollen — alles wat in een omhulde bloem gaat, bestaat ook apart.', category: 'cbd-resins', browseLabel: 'Bekijk alle CBD-harsen →' }
+      ],
+      faqTitle: 'MoonRock & Ice Rock — FAQ',
+      faq: [
+        { question: 'Wat is MoonRock CBD?', answer: 'MoonRock is een premium indoor CBD-bloem die is omhuld met CBD-extract en vervolgens gerold in pollen of kief. Het resultaat is een dichte, sterk berijpte top met een veel hoger totaal cannabinoïdengehalte dan de bloem waarmee begonnen werd. Het is een product van drie componenten — bloem, extract en sift — vandaar de positie bovenaan de prijsladder.' },
+        { question: 'Wat is het verschil tussen MoonRock en Ice Rock?', answer: 'De omhulling. MoonRock wordt na het aanbrengen van het extract in pollen of kief gerold, wat een goudkleurig, getextureerd oppervlak geeft. Ice Rock wordt in plaats daarvan in CBD-isolaat gerold, wat een kenmerkend wit kristallijn uiterlijk oplevert en doorgaans een nog hoger CBD-percentage, aangezien isolaat vrijwel puur cannabinoïde is. Ice Rock leest hoger op het certificaat, MoonRock heeft meestal het rijkere aroma.' },
+        { question: 'Waarom voeren als ze duur zijn?', answer: 'Omdat ze een rol vervullen die geen ander product in het schap vervult. Ze zijn het visuele anker van de presentatie — klanten merken ze op, vragen ernaar, en onthouden de winkel die ze had. Zelfs bij bescheiden volume verhogen ze de gepercipieerde kwaliteit van alles ernaast en geven ze personeel een makkelijke opening die vaak eindigt in de verkoop van iets anders.' },
+        { question: 'Hoe worden ze gemaakt?', answer: 'Een hoogwaardige indoorbloem dient als basis, wordt omhuld met CBD-extract en daarna gerold in pollen of isolaat afhankelijk van het product. Omdat elk component zelf een product is dat wij apart verkopen, ziet u precies wat erin gaat.' },
+        { question: 'Hoe presenteer en prijs ik ze?', answer: 'Verkoop ze per gram in kleine hoeveelheden in plaats van in de multigrampotten die u voor standaardbloem gebruikt — klanten kopen ze als incidentele aankoop, niet wekelijks. Houd ze zichtbaar en goed verlicht; het uiterlijk is een groot deel van wat wordt gekocht. De meeste retailers positioneren ze duidelijk boven hun beste indoorbloem in plaats van ermee te concurreren.' }
+      ],
+      ctaTitle: 'Anker uw presentatie',
+      ctaDesc: 'Vraag groothandelsprijzen voor MoonRock en Ice Rock, of voeg ze toe aan een monsterbestelling en zie hoe ze op uw schap staan.',
+      ctaBtnPrimary: 'Bekijk alle CBD-bloemen', ctaBtnSecondary: 'Neem contact op'
+    },
+    fi: {
+      title: 'MoonRock ja Ice Rock CBD tukku',
+      desc: 'MoonRock ja Ice Rock CBD tukkuhintaan: premium-sisäkukka päällystettynä CBD-uutteella ja pyöritettynä siitepölyssä tai isolaatissa. COA mukana.',
+      h1: 'MoonRock ja Ice Rock CBD — Hyllyn näyttävin tuote',
+      heroTag: '💎 Valikoiman huippu',
+      heroDesc: 'Premium-sisäkukka päällystettynä CBD-uutteella ja pyöritettynä siitepölyssä tai isolaatissa — valikoimamme kaikista kukkamuodoista korkein kokonaiskannabinoidipitoisuus, ja tuote, jonka asiakkaat valokuvaavat ennen ostamista.',
+      btnPrimary: 'Katso CBD-kukat', btnSecondary: 'Katso hartsit',
+      features: [
+        { icon: '🌕', title: 'MoonRock', desc: 'Pyöritetty siitepölyssä. Kullanvärinen, rakenteinen pinta ja kahdesta rikkaampi aromi, koska sift tuo mukanaan omat terpeeninsä.' },
+        { icon: '❄️', title: 'Ice Rock', desc: 'Pyöritetty CBD-isolaatissa. Valkoinen, kiteinen ja näyttävä, ja todistuksessa yleensä korkeampi lukema.' },
+        { icon: '🏆', title: 'Miksi ottaa valikoimaan', desc: 'Ne täyttävät tehtävän, jota mikään muu tuote ei täytä: ne nostavat kaiken ympärillään koettua laatua ja avaavat myyntikeskustelun.' }
+      ],
+      productSections: [
+        { title: 'Premium CBD-kukat', desc: 'MoonRock, Ice Rock ja valikoiman vahvimmat sisäkukat.', category: 'cbd-flowers', browseLabel: 'Katso kaikki CBD-kukat →' },
+        { title: 'Osat erikseen', desc: 'Uute, isolaatti ja siitepöly — kaikki päällystettyyn kukkaan menevä on saatavana myös erikseen.', category: 'cbd-resins', browseLabel: 'Katso kaikki CBD-hartsit →' }
+      ],
+      faqTitle: 'MoonRock ja Ice Rock — UKK',
+      faq: [
+        { question: 'Mitä MoonRock CBD on?', answer: 'MoonRock on premium-sisäkasvatettu CBD-kukka, joka on päällystetty CBD-uutteella ja pyöritetty sen jälkeen siitepölyssä tai kiefissä. Tuloksena on tiivis, voimakkaasti huurteinen nuppu, jonka kokonaiskannabinoidipitoisuus on huomattavasti korkeampi kuin lähtökukan. Kyseessä on kolmen osan tuote — kukka, uute ja sift — mistä johtuu sen paikka hinta-asteikon huipulla.' },
+        { question: 'Mikä ero on MoonRockilla ja Ice Rockilla?', answer: 'Päällyste. MoonRock pyöritetään siitepölyssä tai kiefissä uutteen levittämisen jälkeen, mikä jättää kullanvärisen, rakenteisen pinnan. Ice Rock pyöritetään sen sijaan CBD-isolaatissa, jolloin syntyy tunnusomainen valkoinen kiteinen ulkonäkö ja tyypillisesti vielä korkeampi CBD-pitoisuus, koska isolaatti on lähes puhdasta kannabinoidia. Ice Rock näyttää todistuksessa korkeamman lukeman, MoonRockilla on yleensä rikkaampi aromi.' },
+        { question: 'Miksi ottaa ne valikoimaan, jos ne ovat kalliita?', answer: 'Koska ne täyttävät tehtävän, jota mikään muu hyllyn tuote ei täytä. Ne ovat esillepanon visuaalinen ankkuri — asiakkaat huomaavat ne, kysyvät niistä ja muistavat myymälän, jossa niitä oli. Vaatimattomallakin menekillä ne nostavat viereisten tuotteiden koettua laatua ja antavat henkilökunnalle helpon keskustelunavauksen, joka päättyy usein jonkin muun myyntiin.' },
+        { question: 'Miten ne valmistetaan?', answer: 'Pohjaksi valitaan laadukas sisäkukka, se päällystetään CBD-uutteella ja pyöritetään sitten tuotteesta riippuen siitepölyssä tai isolaatissa. Koska jokainen osa on itsessään tuote, jota myymme erikseen, näet tarkalleen mitä niihin menee.' },
+        { question: 'Miten esittelen ja hinnoittelen ne?', answer: 'Myy niitä grammoittain pieninä erinä sen sijaan, että käyttäisit monigrammaisia purkkeja kuten tavallisen kukan kohdalla — asiakkaat ostavat niitä satunnaisesti, eivät viikoittain. Pidä ne näkyvillä ja hyvin valaistuina; ulkonäkö on suuri osa siitä mitä ostetaan. Useimmat jälleenmyyjät asemoivat ne selvästi parhaan sisäkukkansa yläpuolelle eivätkä sen kilpailijaksi.' }
+      ],
+      ctaTitle: 'Ankkuroi esillepanosi',
+      ctaDesc: 'Kysy MoonRockin ja Ice Rockin tukkuhintoja, tai lisää ne näytetilaukseen ja katso miltä ne näyttävät hyllyssäsi.',
+      ctaBtnPrimary: 'Katso kaikki CBD-kukat', ctaBtnSecondary: 'Ota yhteyttä'
+    },
+    pt: {
+      title: 'MoonRock e Ice Rock CBD por Grosso',
+      desc: 'MoonRock e Ice Rock CBD por grosso: flor indoor premium revestida de extrato de CBD e rolada em pólen ou isolado. COA incluído.',
+      h1: 'MoonRock e Ice Rock CBD — A peça central da prateleira',
+      heroTag: '💎 Topo de gama',
+      heroDesc: 'Flor indoor premium revestida de extrato de CBD e rolada em pólen ou isolado — o teor total de canabinóides mais elevado de todos os nossos formatos de flor, e o produto que os clientes fotografam antes de comprar.',
+      btnPrimary: 'Ver flores CBD', btnSecondary: 'Ver as resinas',
+      features: [
+        { icon: '🌕', title: 'MoonRock', desc: 'Rolada em pólen. Superfície dourada e texturada, e o aroma mais rico das duas, porque o sift traz os seus próprios terpenos.' },
+        { icon: '❄️', title: 'Ice Rock', desc: 'Rolada em isolado de CBD. Branca, cristalina e visualmente marcante, normalmente com o valor mais alto no certificado.' },
+        { icon: '🏆', title: 'Porquê referenciá-las', desc: 'Cumprem um papel que nenhum outro produto cumpre: elevam a qualidade percebida de tudo o que as rodeia e abrem a conversa de venda.' }
+      ],
+      productSections: [
+        { title: 'Flores CBD premium', desc: 'MoonRock, Ice Rock e as flores indoor mais potentes do catálogo.', category: 'cbd-flowers', browseLabel: 'Ver todas as flores CBD →' },
+        { title: 'Os componentes em separado', desc: 'Extrato, isolado e pólen — tudo o que entra numa flor revestida existe também em separado.', category: 'cbd-resins', browseLabel: 'Ver todas as resinas CBD →' }
+      ],
+      faqTitle: 'MoonRock e Ice Rock — FAQ',
+      faq: [
+        { question: 'O que é o MoonRock CBD?', answer: 'O MoonRock é uma flor de CBD indoor premium revestida de extrato de CBD e depois rolada em pólen ou kief. O resultado é uma flor densa e fortemente cristalizada, com um teor total de canabinóides muito superior ao da flor de partida. É um produto de três componentes — flor, extrato e sift — daí a sua posição no topo da escala de preços.' },
+        { question: 'Qual a diferença entre MoonRock e Ice Rock?', answer: 'O revestimento. O MoonRock é rolado em pólen ou kief após a aplicação do extrato, o que deixa uma superfície dourada e texturada. O Ice Rock é rolado em isolado de CBD, produzindo um aspeto branco cristalino característico e normalmente uma percentagem de CBD ainda mais alta, já que o isolado é canabinóide quase puro. O Ice Rock apresenta o valor mais alto no certificado; o MoonRock tem geralmente o aroma mais rico.' },
+        { question: 'Porquê referenciá-las se são caras?', answer: 'Porque cumprem um papel que nenhum outro produto da prateleira cumpre. São a âncora visual da exposição — os clientes reparam nelas, perguntam por elas e lembram-se da loja que as tinha. Mesmo com volume modesto, elevam a qualidade percebida de tudo o que está ao lado e dão à equipa uma abertura de conversa que muitas vezes termina na venda de outra coisa.' },
+        { question: 'Como são fabricadas?', answer: 'Seleciona-se uma flor indoor de qualidade como base, reveste-se com extrato de CBD e depois rola-se em pólen ou isolado consoante o produto. Como cada componente é ele próprio um produto que vendemos em separado, pode ver exatamente o que leva.' },
+        { question: 'Como as apresento e defino o preço?', answer: 'Venda-as ao grama em pequenas quantidades em vez dos frascos multigrama que usa para a flor comum — os clientes compram-nas como aquisição pontual, não semanal. Mantenha-as visíveis e bem iluminadas; a aparência é grande parte do que está a ser comprado. A maioria dos retalhistas posiciona-as claramente acima da sua melhor flor indoor, e não em concorrência com ela.' }
+      ],
+      ctaTitle: 'Ancore a sua exposição',
+      ctaDesc: 'Peça preços por grosso de MoonRock e Ice Rock, ou junte-as a uma encomenda de amostras e veja como ficam na sua prateleira.',
+      ctaBtnPrimary: 'Ver todas as flores CBD', ctaBtnSecondary: 'Contactar'
     },
   },
 };
