@@ -66,10 +66,10 @@ const breadcrumbs = [
             </div>
             <p id="volume-nudge" class="text-sm text-gray-800 font-medium"></p>
           </div>
-          <p id="volume-max" class="hidden text-sm font-semibold text-primary">🎉 You've unlocked our best rate — 15% off this order.</p>
+          <p id="volume-max" class="hidden text-sm font-semibold text-primary"></p>
 
           <!-- The full ladder, so the payoff for a bigger order is always visible -->
-          <ul id="volume-ladder" class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-center"></ul>
+          <ul id="volume-ladder" class="mt-4 grid grid-cols-3 sm:grid-cols-6 gap-2 text-center"></ul>
         </div>
 
         <!-- Discount Code -->
@@ -134,7 +134,7 @@ const breadcrumbs = [
 
 <script>
   import { getCart, removeFromCart, updateQuantity, getCartTotal } from '../scripts/cart';
-  import { discountTiers, getTier, getNextTierProgress, resolveDiscount } from '../data/discounts';
+  import { discountTiers, getTier, getNextTierProgress, resolveDiscount, topTierPercent } from '../data/discounts';
 
   /**
    * Renders the volume-discount panel: current tier, the gap to the next one, and
@@ -176,6 +176,7 @@ const breadcrumbs = [
     } else {
       wrap?.classList.add('hidden');
       maxNote?.classList.remove('hidden');
+      if (maxNote) maxNote.textContent = `🎉 You've unlocked our best rate — ${topTierPercent}% off this order.`;
     }
 
     const ladder = document.getElementById('volume-ladder');

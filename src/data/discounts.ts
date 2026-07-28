@@ -29,11 +29,16 @@ export const MIN_ORDER = 150;
  */
 export const discountTiers: readonly DiscountTier[] = [
   { min: 0, percent: 0 },
-  { min: 300, percent: 5 },
-  { min: 600, percent: 8 },
-  { min: 1200, percent: 12 },
-  { min: 2500, percent: 15 },
+  { min: 150, percent: 3 },
+  { min: 300, percent: 8 },
+  { min: 600, percent: 12 },
+  { min: 1200, percent: 18 },
+  { min: 2500, percent: 22 },
+  { min: 5000, percent: 25 },
 ];
+
+/** The best rate available, used in copy so the headline number never drifts. */
+export const topTierPercent = discountTiers[discountTiers.length - 1].percent;
 
 /** The tier a given subtotal currently qualifies for. Never returns undefined. */
 export function getTier(subtotal: number): DiscountTier {
