@@ -24,6 +24,8 @@ interface Props {
    * URL that does not exist is worse than declaring none at all.
    */
   hreflangLocales?: readonly Locale[];
+  /** Locales the language switcher may offer. Defaults to the hreflang set. */
+  availableLocales?: readonly Locale[];
 }
 
 const {
@@ -37,6 +39,7 @@ const {
   noindex = false,
   noHreflang = false,
   hreflangLocales = allLocales,
+  availableLocales = hreflangLocales,
 } = Astro.props;
 
 const siteName = 'Greens Farmhouse';
@@ -276,7 +279,7 @@ const searchNoResults: Record<string, string> = {
           </button>
 
           <!-- Language Switcher -->
-          <LanguageSwitcher locale={locale} />
+          <LanguageSwitcher locale={locale} availableLocales={availableLocales} />
 
           <!-- Cart Icon -->
           <a href={lp('/cart')} class="relative p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label={t(locale, 'nav.cart')}>

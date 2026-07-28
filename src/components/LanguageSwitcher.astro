@@ -4,12 +4,19 @@ import { getLocalePath, getPathWithoutLocale } from '../i18n/utils';
 
 interface Props {
   locale: Locale;
+  /**
+   * Locales this page actually exists in. Offering a language whose page was
+   * never built sends the visitor — and the crawler — straight to a 404.
+   */
+  availableLocales?: readonly Locale[];
 }
 
-const { locale } = Astro.props;
+const { locale, availableLocales = allLocales } = Astro.props;
 const currentPath = getPathWithoutLocale(Astro.url.pathname);
+const options = allLocales.filter(l => availableLocales.includes(l));
 ---
 
+{options.length > 1 && (
 <div class="language-switcher relative">
   <button
     id="lang-switcher-btn"
@@ -31,7 +38,7 @@ const currentPath = getPathWithoutLocale(Astro.url.pathname);
     class="hidden absolute right-0 top-full mt-1 w-44 bg-white rounded-xl border border-gray-200 shadow-lg z-50 py-1 overflow-hidden"
     role="menu"
   >
-    {allLocales.map((loc) => (
+    {options.map((loc) => (
       <a
         href={getLocalePath(currentPath, loc)}
         class={`flex items-center gap-2.5 px-3 py-2 text-sm transition-colors ${
@@ -51,6 +58,7 @@ const currentPath = getPathWithoutLocale(Astro.url.pathname);
     ))}
   </div>
 </div>
+)}
 
 <script>
   function initLangSwitcher() {

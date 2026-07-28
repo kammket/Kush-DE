@@ -59,9 +59,13 @@ export default defineConfig({
         return lastmod ? { ...item, lastmod } : item;
       },
       filter: (page) =>
+        // Must mirror the pages that render noindex. Listing a noindex URL in the
+        // sitemap asks Google to index a page that then refuses indexing.
         !page.includes('/cart') &&
         !page.includes('/checkout') &&
         !page.includes('/404') &&
+        !page.includes('/compare') &&
+        !page.includes('/search') &&
         // localized blog pages canonical to the English original until translated
         !/\/(es|fr|de|nl|it|fi|pt)\/blog(\/|$)/.test(page),
       i18n: {

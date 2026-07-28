@@ -1,11 +1,15 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_astro/
 Disallow: /cart
 Disallow: /checkout
 Disallow: /*/cart
 Disallow: /*/checkout
+
+# /_astro/ holds the stylesheet and scripts every page loads. Blocking it stops
+# Googlebot rendering pages the way a visitor sees them, which is why Google's
+# own guidance says not to disallow CSS or JS.
+Allow: /_astro/
 
 # AI Search Crawlers — explicitly allowed
 User-agent: GPTBot
