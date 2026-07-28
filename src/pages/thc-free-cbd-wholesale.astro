@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentByline from '../components/ContentByline.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "0% THC CBD Wholesale" },
+];
+
+const zeroThcResins = ['creamy-yellow-50-resin', 'supreme-50-resin', 'soft-30-resin', 'ketama-25-resin'].map(s => getProductBySlug(s)!).filter(Boolean);
+const zeroThcPure = ['isolat-99-cbd', 'distillate-90-cbd', 'resin-discovery-0-thc'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent("Hello! I need 0% THC / non-detectable THC CBD products for my market. Can you send wholesale pricing and COAs?")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "0% THC CBD Wholesale: Non-Detectable THC Resins and Isolates for Strict Markets",
+  "description": "Wholesale 0% THC CBD: resins at 25-50% CBD, 99.8% isolate and 90% distillate with non-detectable THC. For markets requiring THC-free finished products. COA with every batch.",
+  "url": "https://greensfarmhouse.com/thc-free-cbd-wholesale",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28"
+};
+
+const faqItems = [
+  {
+    question: "What does 0% THC actually mean?",
+    answer: "It means THC is not detectable at the limit of quantification used by the testing laboratory — not that a theoretical zero has been proven, which no analytical method can do. The practical difference from a standard product is significant: a compliant CBD product may legally contain up to 0.3% THC, whereas these are produced and tested so that no THC is reported at all on the certificate. Always read the COA rather than the label."
+  },
+  {
+    question: "Why would I need THC-free products?",
+    answer: "Requirements differ across Europe. Some markets set a percentage threshold for THC in the finished product; others require that no THC be detectable at all, which a product sitting just under a threshold will fail. There are also commercial reasons unrelated to law — corporate customers, workplace drug-testing concerns, and customers who simply want the reassurance. Stocking a THC-free line lets you serve all of those without changing your main range."
+  },
+  {
+    question: "Which products do you offer with 0% THC?",
+    answer: "Four pressed resins spanning 25% to 50% CBD — Ketama 25%, Soft 30%, Creamy Yellow 50% and Supreme 50% — plus 99.8% CBD isolate and 90% CBD distillate, which are inherently free of other cannabinoids. There is also a dedicated 0% THC Resin Discovery Pack so you can test the range before committing to volume."
+  },
+  {
+    question: "Does removing THC change the product?",
+    answer: "Yes, and it is worth being straight with customers about it. Additional refinement strips some of the terpene and minor-cannabinoid content along with the THC, so a THC-free resin generally has a cleaner but less complex aroma than a traditional press. What you gain is compliance certainty and a higher CBD percentage. Customers who prioritise aroma will still prefer a traditional pressing."
+  },
+  {
+    question: "Can I verify the THC content before ordering?",
+    answer: "Yes — and you should. Every batch ships with an independent certificate of analysis, and we will send you the COA for any product before you place an order. Message us on WhatsApp with the product name and we will forward the current batch certificate."
+  },
+  {
+    question: "Is a 0% THC product legal everywhere in Europe?",
+    answer: "THC content is only one of the variables. Some countries regulate the product format — smokable flower and hash in particular — independently of what is in it, so a THC-free resin can still be restricted where resin itself is restricted. Novel Food rules affect ingestible products separately again. Check the requirements for your own market and product category before stocking; our legal overview is a starting point, not legal advice."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="0% THC CBD Wholesale — Non-Detectable THC"
+  description="Wholesale 0% THC CBD: resins 25–50% CBD, 99.8% isolate and 90% distillate, all non-detectable THC. For markets requiring THC-free products. COA included."
+  canonicalURL="https://greensfarmhouse.com/thc-free-cbd-wholesale"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-sky-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-sky-100 text-sky-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🔬 Non-Detectable THC</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-3">
+        0% THC CBD Wholesale — <span class="text-primary">For the Strictest Markets</span>
+      </h1>
+      <div class="mb-4 flex justify-center"><ContentByline /></div>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        A complete line produced and tested so that no THC is reported on the certificate —
+        pressed resins from 25% to 50% CBD, plus 90% distillate and 99.8% isolate. Every batch
+        ships with the COA you will need to prove it.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/products/resin-discovery-0-thc" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Try the 0% THC Discovery Pack
+        </a>
+        <WaLink href={waUrl} class="px-6 py-3">Request COAs</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Why a Separate THC-Free Line Exists</h2>
+      <p class="text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+        A product sitting just under a percentage threshold is compliant in some markets and
+        non-compliant in others. These grades remove that variable entirely.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">⚖️</span>
+          <h3 class="font-bold text-lg mb-2">Threshold vs non-detectable</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Some markets cap THC as a percentage of the finished product; others require none to be detectable. A 0.2% product passes the first test and fails the second.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">🏢</span>
+          <h3 class="font-bold text-lg mb-2">Customers who need certainty</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Professional drivers, workplaces with testing policies, and cautious first-time buyers all ask the same question. A THC-free shelf answers it without a conversation.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📄</span>
+          <h3 class="font-bold text-lg mb-2">Paperwork that holds up</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Every batch carries an independent COA. If you are ever asked to demonstrate compliance, the certificate is the document that does it — not the packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resins -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">0% THC Resins — 25% to 50% CBD</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Pressed resins across four strengths, all tested to non-detectable THC.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {zeroThcResins.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/cbd-hash-wholesale-europe" class="text-primary font-semibold hover:underline">Compare with traditional pressings →</a>
+    </div>
+  </section>
+
+  <!-- Isolate / distillate -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Isolate, Distillate &amp; Sampling</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">
+        For manufacturers and white-label production, isolate and distillate are the cleanest
+        possible starting point — and the discovery pack lets you assess the resin line first.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {zeroThcPure.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/white-label-cbd-europe" class="text-primary font-semibold hover:underline">See white-label production →</a>
+    </div>
+  </section>
+
+  <!-- Honest note -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white border border-gray-200 rounded-xl p-6 md:p-8">
+        <h2 class="text-xl md:text-2xl font-bold mb-3">What THC-Free Costs You</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Worth knowing before you switch a whole shelf across: the extra refinement that removes
+          THC also strips some terpene and minor-cannabinoid content. THC-free resins are cleaner
+          and higher in CBD, but generally less aromatically complex than a traditional press.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Most retailers carry both — a traditional range for customers buying on aroma, and a
+          THC-free range for customers buying on certainty. If you are unsure which way your
+          market leans, order both discovery packs and put them side by side.
+        </p>
+        <p class="mt-4 text-sm text-gray-500">
+          Requirements vary by country and product format. See our
+          <a href="/legal-cannabis-europe" class="text-primary underline hover:no-underline">country-by-country legal overview</a>
+          — it is a starting point, not legal advice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">0% THC CBD — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Ask for the Certificates First</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Send us the products you are considering and we will forward the current batch COAs before you order anything.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Request COAs on WhatsApp</WaLink>
+        <a href="/quality-and-testing" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">How We Test</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

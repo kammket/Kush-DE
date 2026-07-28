@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentByline from '../components/ContentByline.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Hash Wholesale", url: "/cbd-hash-wholesale-europe" },
+  { name: "Moroccan CBD Hash" },
+];
+
+const moroccanRange = ['moroccan-cbd-resin', 'ketama-cbg-cbd-resin', 'king-hassan-resin', 'le-beldia-cbn-cbd-resin'].map(s => getProductBySlug(s)!).filter(Boolean);
+const zeroThc = ['ketama-25-resin', 'creamy-yellow-50-resin', 'soft-30-resin', 'supreme-50-resin'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent("Hello! I'd like wholesale pricing on your Moroccan-style CBD hash (Ketama, King Hassan, Beldia).")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Moroccan CBD Hash Wholesale: Ketama, Beldia and King Hassan Explained",
+  "description": "Wholesale Moroccan-style CBD hash: Ketama, King Hassan, Beldia and classic Moroccan press. Dry-sifted Rif tradition, lab-tested, COA with every batch, European delivery in 24h.",
+  "url": "https://greensfarmhouse.com/moroccan-cbd-hash-wholesale",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28"
+};
+
+const faqItems = [
+  {
+    question: "What makes hash 'Moroccan style'?",
+    answer: "The method, not just the origin. Moroccan hash is made by dry-sifting dried hemp over fine mesh screens to collect the loose resin — known locally as kif — then pressing it into slabs with gentle heat. The result is characteristically soft and pliable, lighter in colour than Afghan presses, with a floral, slightly spicy aroma. Our Moroccan-style CBD resins reproduce that process using EU-grown hemp within legal THC limits."
+  },
+  {
+    question: "What is Ketama hash?",
+    answer: "Ketama is a region in Morocco's Rif mountains that has been the reference point for quality hash production for generations. The name signals a particular standard of dry sift — clean, aromatic and carefully pressed. We carry it in two forms: a CBG/CBD version with a broader cannabinoid profile, and a 25% CBD, 0% THC pressing for markets that require non-detectable THC."
+  },
+  {
+    question: "What is Beldia?",
+    answer: "Beldia refers to the traditional Moroccan landrace hemp variety, prized for its distinctive aroma rather than raw potency. Our Le Beldia is a CBN+CBD pressing — the CBN content puts it in the evening and relaxation segment, which makes it a natural companion product to a sleep range rather than a straight daytime resin."
+  },
+  {
+    question: "How is Moroccan hash different from Afghan hash?",
+    answer: "Both are dry-sifted and pressed, but the pressing differs. Moroccan style uses lighter heat and pressure, producing a softer, lighter, more crumbly block with a floral nose. Afghan style uses more heat and pressure for a darker, denser, oilier block with an earthier aroma. Most shelves benefit from carrying one of each — customers tend to have a firm preference and will buy the one you stock."
+  },
+  {
+    question: "Do you offer Moroccan hash without THC?",
+    answer: "Yes. Our Ketama 25% CBD is pressed to 0% THC, alongside Soft 30%, Creamy Yellow 50% and Supreme 50% in the same non-detectable line. These are the grades to stock if you sell into markets that require finished products to contain no detectable THC rather than simply staying under a percentage threshold."
+  },
+  {
+    question: "What volumes can I order?",
+    answer: "Each resin has tiered pricing that steps down from small wholesale quantities into kilo rates — the tiers are listed on every product page. If you want to compare several Moroccan pressings before committing, the Resins Discovery Pack is the cheapest way to get material in hand."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Moroccan CBD Hash Wholesale"
+  description="Wholesale Moroccan CBD hash: Ketama, King Hassan, Beldia and classic press. Dry-sifted Rif tradition, 0% THC options, COA every batch, 24h EU delivery."
+  canonicalURL="https://greensfarmhouse.com/moroccan-cbd-hash-wholesale"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-orange-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-orange-100 text-orange-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🇲🇦 Rif Tradition</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-3">
+        Moroccan CBD Hash — <span class="text-primary">Ketama, Beldia &amp; King Hassan</span>
+      </h1>
+      <div class="mb-4 flex justify-center"><ContentByline /></div>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        The pressing style European customers know best — soft, floral, dry-sifted in the Rif
+        tradition, made from EU-grown hemp inside legal THC limits. Available in classic
+        pressings and a non-detectable-THC line.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/products/moroccan-cbd-resin" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          See Moroccan CBD Resin
+        </a>
+        <WaLink href={waUrl} class="px-6 py-3">Get Wholesale Pricing</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <!-- The range -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">The Moroccan Range</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Four pressings covering the classic profiles — each with its own aroma, texture and cannabinoid split.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {moroccanRange.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">View all CBD resins →</a>
+    </div>
+  </section>
+
+  <!-- Names explained -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">What the Names Actually Mean</h2>
+      <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+        These aren't invented brand names — each refers to a real region, variety or production
+        standard. Knowing the difference helps you sell them.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <h3 class="font-bold text-lg mb-2">Ketama</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">A region in the Rif mountains synonymous with careful dry sift. The name signals a standard of cleanliness and aroma rather than a specific strain.</p>
+          <a href="/products/ketama-cbg-cbd-resin" class="text-primary text-sm font-semibold hover:underline mt-3 inline-block">Ketama CBG/CBD →</a>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <h3 class="font-bold text-lg mb-2">Beldia</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">The traditional Moroccan landrace variety — valued for its distinctive aroma rather than raw strength. Ours is a CBN+CBD pressing for the evening segment.</p>
+          <a href="/products/le-beldia-cbn-cbd-resin" class="text-primary text-sm font-semibold hover:underline mt-3 inline-block">Le Beldia CBN+CBD →</a>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <h3 class="font-bold text-lg mb-2">King Hassan</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">A premium-tier designation for the cleanest sift of the run — fewer passes of plant matter, a more concentrated aromatic profile, priced accordingly.</p>
+          <a href="/products/king-hassan-resin" class="text-primary text-sm font-semibold hover:underline mt-3 inline-block">King Hassan →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 0% THC -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Moroccan Style, 0% THC</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">
+        Some markets require finished products to contain no detectable THC, not merely to stay
+        below a threshold. These pressings are made for that requirement.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {zeroThc.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/thc-free-cbd-wholesale" class="text-primary font-semibold hover:underline">See the full 0% THC range →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Moroccan CBD Hash — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Order Moroccan Hash at Wholesale</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Volume pricing down to the kilo, COA with every batch, dispatched within 24 hours across Europe.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/cbd-hash-wholesale-europe" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Compare All Hash Grades</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

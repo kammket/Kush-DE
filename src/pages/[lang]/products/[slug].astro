@@ -103,6 +103,10 @@ const productJsonLd = {
   "offers": buildProductOffers(product, productUrl)
 };
 
+// The translated category keyword stays in the title — it is the money keyword for
+// each market and what differentiates the 8 locales from one another.
+const pageTitle = `${product.name} | ${catT?.name || product.category}`;
+
 const breadcrumbs = [
   { name: t(locale, 'nav.home'), url: lp('/') },
   { name: catT?.name || product.category, url: lp(`/collections/${product.categorySlug}`) },
@@ -111,9 +115,7 @@ const breadcrumbs = [
 ---
 
 <BaseLayout
-  {/* Translated category keyword stays in the title — it is the money keyword for
-      each market and also what differentiates the 8 locales from one another. */}
-  title={`${product.name} | ${catT?.name || product.category}`}
+  title={pageTitle}
   description={description}
   locale={locale}
   canonicalURL={productUrl}

@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentByline from '../components/ContentByline.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "MoonRock & Ice Rock CBD" },
+];
+
+const premiumRange = ['moonrock-cbd-indoor', 'ice-rock-cbd-indoor', 'critical-indoor', 'tropical-haze-indoor'].map(s => getProductBySlug(s)!).filter(Boolean);
+const ingredients = ['isolat-99-cbd', 'distillate-90-cbd', 'skuff-pollen-cbd', 'gelato-indoor'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent("Hello! I'd like wholesale pricing on MoonRock and Ice Rock CBD.")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MoonRock and Ice Rock CBD Wholesale: The Premium Shelf Explained",
+  "description": "Wholesale MoonRock and Ice Rock CBD — flower coated in CBD extract and rolled in pollen or isolate. The highest-cannabinoid flower format. Lab-tested, COA included, 24h European delivery.",
+  "url": "https://greensfarmhouse.com/moonrock-icerock-cbd-wholesale",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28"
+};
+
+const faqItems = [
+  {
+    question: "What is MoonRock CBD?",
+    answer: "MoonRock is a premium indoor CBD flower that has been coated in CBD extract and then rolled in pollen or kief. The result is a dense, heavily frosted bud with a far higher total cannabinoid content than the flower started with. It is a three-component product — flower, extract and sift — which is why it sits at the top of the price ladder."
+  },
+  {
+    question: "What is the difference between MoonRock and Ice Rock?",
+    answer: "The coating. MoonRock is rolled in pollen or kief after the extract is applied, which leaves a golden, textured surface. Ice Rock is coated in CBD isolate instead, producing a distinctive white crystalline appearance and typically an even higher CBD percentage, since isolate is close to pure cannabinoid. Ice Rock generally reads as more potent on the certificate; MoonRock generally has the richer aroma."
+  },
+  {
+    question: "Why should I stock them if they are expensive?",
+    answer: "Because they do a job no other product on the shelf does. They are the visual anchor of a display — customers notice them, ask about them, and remember the shop that had them. Even where volume is modest, they raise the perceived quality of everything sitting next to them and give staff an easy way to start a conversation that ends in a sale of something else."
+  },
+  {
+    question: "How are they made?",
+    answer: "A high-quality indoor flower is selected as the base, coated in CBD extract, then rolled in either pollen or isolate depending on the product. Because each component is itself a finished product we sell separately, you can see exactly what goes into them — the base flowers, the extract and the sift are all in our catalogue."
+  },
+  {
+    question: "How should I price and present them?",
+    answer: "Sell them by the gram in small quantities rather than in the multi-gram jars you would use for standard flower — customers buy them as an occasional purchase, not a weekly one. Keep them visible and well lit; the appearance is a large part of what is being bought. Most retailers position them at a clear premium over their best indoor flower rather than competing with it."
+  },
+  {
+    question: "Do they come with lab certificates?",
+    answer: "Yes, like everything in the catalogue. Because these are composite products, the COA is particularly worth reading — it confirms the total cannabinoid content after coating, which is the figure customers are actually paying for. Ask us for the current batch certificate before ordering."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+
+const layers = [
+  { n: "1", title: "The base flower", text: "A premium indoor bud, selected for density and aroma. Loose or airy flower does not hold a coating well." },
+  { n: "2", title: "The extract coat", text: "CBD extract is applied to the surface, raising total cannabinoid content and giving the sift something to adhere to." },
+  { n: "3", title: "The outer layer", text: "Rolled in pollen for MoonRock's golden finish, or in CBD isolate for Ice Rock's white crystalline shell." },
+];
+---
+
+<BaseLayout
+  title="MoonRock & Ice Rock CBD Wholesale"
+  description="Wholesale MoonRock and Ice Rock CBD: premium indoor flower coated in extract, rolled in pollen or isolate. Our highest-cannabinoid flower format. COA included."
+  canonicalURL="https://greensfarmhouse.com/moonrock-icerock-cbd-wholesale"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-violet-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-violet-100 text-violet-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">💎 Top of the Shelf</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-3">
+        MoonRock &amp; Ice Rock CBD — <span class="text-primary">The Display Anchor</span>
+      </h1>
+      <div class="mb-4 flex justify-center"><ContentByline /></div>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Premium indoor flower coated in CBD extract and rolled in pollen or isolate — the highest
+        total cannabinoid content of any flower format we carry, and the product customers
+        photograph before they buy it.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/products/moonrock-cbd-indoor" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          See MoonRock CBD
+        </a>
+        <WaLink href={waUrl} class="px-6 py-3">Get Wholesale Pricing</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">The Premium Shelf</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">MoonRock, Ice Rock and the strongest indoor flowers in the catalogue.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {premiumRange.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/cbd-hemp-flowers-indoor" class="text-primary font-semibold hover:underline">View all indoor flowers →</a>
+    </div>
+  </section>
+
+  <!-- Three layers -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Three Products in One</h2>
+      <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+        Understanding the construction explains the price — and gives your staff something
+        concrete to say when a customer asks why it costs what it does.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        {layers.map(l => (
+          <div class="p-6 bg-white rounded-xl border border-gray-200">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-white font-bold text-sm mb-4">{l.n}</span>
+            <h3 class="font-bold text-lg mb-2">{l.title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{l.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MoonRock vs Ice Rock -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">MoonRock or Ice Rock?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <h3 class="font-bold text-lg mb-2">🌕 MoonRock</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3">Rolled in pollen. Golden, textured surface and the richer aroma of the two, because the sift brings its own terpene content with it.</p>
+          <p class="text-xs text-gray-500">Stock this one if your customers buy on smell.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <h3 class="font-bold text-lg mb-2">❄️ Ice Rock</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3">Rolled in CBD isolate. White, crystalline and visually striking, and usually the higher figure on the certificate since isolate is near-pure cannabinoid.</p>
+          <p class="text-xs text-gray-500">Stock this one if your customers buy on percentage.</p>
+        </div>
+      </div>
+      <p class="text-center text-sm text-gray-500 mt-6">Most shops that carry one end up carrying both — they sell to different customers.</p>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">The Components, Sold Separately</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">
+        Everything that goes into a coated flower is in our catalogue in its own right — useful if
+        you produce your own, or simply want to show customers what they are paying for.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {ingredients.map(p => <ProductCard product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">MoonRock &amp; Ice Rock — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Anchor Your Display</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Ask for wholesale pricing on MoonRock and Ice Rock, or add them to a sample order and see how they photograph on your shelf.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/cbd-sample-packs" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Order Samples First</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

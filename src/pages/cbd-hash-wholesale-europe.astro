@@ -1,0 +1,249 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentByline from '../components/ContentByline.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Hash Wholesale" },
+];
+
+const traditionalHash = ['moroccan-cbd-resin', 'afghan-hash-resin', 'king-hassan-resin', 'ketama-cbg-cbd-resin'].map(s => getProductBySlug(s)!).filter(Boolean);
+const modernHash = ['skuff-pollen-cbd', 'golden-static-resin', '3x-filtered-cbg-cbd-resin', 'le-supreme-resin'].map(s => getProductBySlug(s)!).filter(Boolean);
+const startHere = ['resins-discovery-pack', 'resin-discovery-0-thc'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent("Hello! I'd like wholesale pricing on your CBD hash and resin range.")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CBD Hash Wholesale Europe: Types, Grading and Bulk Pricing",
+  "description": "Wholesale CBD hash and resin from a European supplier: Moroccan, Afghan, pollen/dry sift, filtered and 0% THC grades. Lab-tested, COA with every batch, shipped across Europe in 24h.",
+  "url": "https://greensfarmhouse.com/cbd-hash-wholesale-europe",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28"
+};
+
+const faqItems = [
+  {
+    question: "What is CBD hash?",
+    answer: "CBD hash — also called CBD resin or hemp hash — is a concentrate made from the resin glands (trichomes) of hemp flowers rather than the flower itself. The trichomes are separated mechanically, usually by dry sifting through fine mesh screens or by ice-water separation, then pressed into blocks or slabs. Because the resin is where most of the cannabinoids sit, hash is considerably more concentrated than the flower it came from, while staying within the same legal THC limits."
+  },
+  {
+    question: "What is the difference between pollen, dry sift and hash?",
+    answer: "They describe stages of the same process. Pollen (also called skuff or kief) is the loose, sandy resin powder that falls through the screen before it is pressed. Dry sift is the sieving method used to collect it. Hash is what you get when that powder is pressed under heat and pressure into a solid block. So all our pressed hash starts life as pollen — the difference on the shelf is texture, malleability and price point."
+  },
+  {
+    question: "What is the minimum order for wholesale CBD hash?",
+    answer: "Our resins start from small wholesale quantities and scale into kilo pricing, with the per-gram rate dropping at each volume tier. You can see the tiers on each product page. If you are not ready to commit to a full tier, the Resins Discovery Pack lets you test several grades in one order before choosing what to stock."
+  },
+  {
+    question: "Do your hash products come with lab certificates?",
+    answer: "Yes. Every batch ships with an independent certificate of analysis (COA) confirming the cannabinoid profile and that THC is within the legal threshold. You can request the COA for any specific product over WhatsApp before ordering — there is a direct link on every product page."
+  },
+  {
+    question: "Is CBD hash legal to sell in my country?",
+    answer: "CBD products under the 0.3% THC threshold are broadly permitted across the EU, but rules on hash and flower specifically vary considerably by member state — some countries restrict or prohibit the sale of smokable hemp formats even where CBD oil is freely sold. Check the rules in your own market before stocking; our legal overview page covers the situation country by country, and we supply the COA you will need to demonstrate compliance."
+  },
+  {
+    question: "How should I price CBD hash in my shop?",
+    answer: "Hash generally carries a higher per-gram retail price than flower and a stronger margin, because customers buy it in smaller quantities and judge it on aroma and texture rather than volume. Most retailers stock a three-tier range — an entry pollen, a mid-range traditional press, and one premium or high-percentage grade — so customers can trade up. Our catalogue is organised to make that ladder easy to build."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+
+const hashTypes = [
+  {
+    icon: "🇲🇦",
+    name: "Moroccan / Rif style",
+    text: "Dry-sifted and pressed in the tradition of the Rif mountains. Softer, pliable, floral and spicy on the nose. The reference point most European customers already know.",
+    link: "/moroccan-cbd-hash-wholesale",
+    linkLabel: "Moroccan range",
+  },
+  {
+    icon: "🏔️",
+    name: "Afghan style",
+    text: "Darker, denser and more resinous, pressed with more heat and pressure. Earthier aroma and a firmer block that holds its shape on the shelf.",
+    link: "/products/afghan-hash-resin",
+    linkLabel: "Afghan Hash",
+  },
+  {
+    icon: "🌾",
+    name: "Pollen / dry sift",
+    text: "The loose, sandy resin caught on the screen before pressing. Crumbly, lighter in colour, and the most affordable entry point into the resin category.",
+    link: "/cbd-pollen-dry-sift-wholesale",
+    linkLabel: "Pollen & dry sift",
+  },
+  {
+    icon: "💎",
+    name: "Filtered & high-percentage",
+    text: "Multi-pass filtration removes plant matter for a cleaner, more concentrated product — up to 50% CBD, and a 0% THC line for the strictest markets.",
+    link: "/thc-free-cbd-wholesale",
+    linkLabel: "0% THC range",
+  },
+];
+---
+
+<BaseLayout
+  title="CBD Hash Wholesale Europe"
+  description="Wholesale CBD hash and resin: Moroccan, Afghan, pollen/dry sift, filtered and 0% THC grades. Kilo pricing, COA with every batch, shipped across Europe in 24h."
+  canonicalURL="https://greensfarmhouse.com/cbd-hash-wholesale-europe"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-amber-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🧱 Hash &amp; Resin</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-3">
+        CBD Hash Wholesale — <span class="text-primary">Every Grade, One Supplier</span>
+      </h1>
+      <div class="mb-4 flex justify-center"><ContentByline /></div>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Traditional Moroccan and Afghan presses, loose pollen and dry sift, multi-filtered
+        high-percentage grades, and a dedicated 0% THC line — 20+ resins in one catalogue,
+        lab-tested, with volume pricing down to the kilo.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/collections/cbd-resins" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          Browse All Resins
+        </a>
+        <WaLink href={waUrl} class="px-6 py-3">Get Wholesale Pricing</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <!-- Type explainer -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">The Four Grades Worth Stocking</h2>
+      <p class="text-gray-600 mb-8 max-w-3xl">
+        Hash is not one product. The extraction method changes the texture, the aroma and the price
+        point — and customers buy them for different reasons. A shelf that covers all four converts
+        far better than one that stocks a single press.
+      </p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {hashTypes.map(t => (
+          <div class="p-6 bg-white rounded-xl border border-gray-200 hover:border-primary/40 transition-colors">
+            <span class="text-3xl block mb-3">{t.icon}</span>
+            <h3 class="font-bold text-lg mb-2">{t.name}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-3">{t.text}</p>
+            <a href={t.link} class="text-primary text-sm font-semibold hover:underline">{t.linkLabel} →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Traditional presses -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Traditional Presses</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">The classic profiles — the ones customers ask for by name.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {traditionalHash.map(p => <ProductCard product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern / filtered -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Pollen, Static &amp; Filtered Grades</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Mechanically separated and multi-pass filtered — cleaner profiles at higher cannabinoid percentages.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {modernHash.map(p => <ProductCard product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Buyer guidance -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">How to Judge a Hash Before You Buy a Kilo</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">👃</span>
+          <h3 class="font-bold text-lg mb-2">Aroma first</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Terpene intensity is what your customers judge at the counter. A flat or hay-like nose usually means old material or over-heated pressing, regardless of what the percentage says.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">✋</span>
+          <h3 class="font-bold text-lg mb-2">Texture and pliability</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Good resin softens with warmth and holds its shape when cool. Material that crumbles to dust cold, or stays greasy at room temperature, will disappoint on repeat purchase.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-gray-200">
+          <span class="text-4xl block mb-4">📄</span>
+          <h3 class="font-bold text-lg mb-2">Read the COA</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">The certificate tells you the cannabinoid split and the THC figure you will need if you are ever asked. Never stock resin you cannot produce paperwork for — ask us for any COA before ordering.</p>
+        </div>
+      </div>
+      <p class="text-center mt-8 text-sm text-gray-500 max-w-2xl mx-auto">
+        Rules on smokable hemp formats vary by country. See our
+        <a href="/legal-cannabis-europe" class="text-primary underline hover:no-underline">country-by-country legal overview</a>
+        before deciding what to stock.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sample first -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Not Sure Which Grade? Start Here</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Test several resins in one order before committing to volume — including a dedicated 0% THC selection.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {startHere.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/cbd-sample-packs" class="text-primary font-semibold hover:underline">See all sample packs →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">CBD Hash Wholesale — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Build Your Hash Shelf</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Tell us your volume and target price point and we will put a tier together — or order a discovery pack and judge the material yourself first.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/cbd-sample-packs" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Order Samples First</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

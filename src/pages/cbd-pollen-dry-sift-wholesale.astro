@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentByline from '../components/ContentByline.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Hash Wholesale", url: "/cbd-hash-wholesale-europe" },
+  { name: "CBD Pollen & Dry Sift" },
+];
+
+const pollenRange = ['skuff-pollen-cbd', 'golden-static-resin', '3x-filtered-cbg-cbd-resin', 'le-mousseux-resin'].map(s => getProductBySlug(s)!).filter(Boolean);
+const concentrates = ['jack-herer-crumble', 'lemon-haze-crumble', 'distillate-90-cbd', 'isolat-99-cbd'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent("Hello! I'd like wholesale pricing on your CBD pollen and dry sift range (Skuff, Golden Static, 3X Filtered).")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CBD Pollen and Dry Sift Wholesale: Skuff, Static and Filtered Grades",
+  "description": "Wholesale CBD pollen, skuff and dry sift: mechanically separated resin at entry to premium grades. Golden Static, 3X Filtered, lab-tested with COA, European delivery in 24h.",
+  "url": "https://greensfarmhouse.com/cbd-pollen-dry-sift-wholesale",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28"
+};
+
+const faqItems = [
+  {
+    question: "What is CBD pollen?",
+    answer: "CBD pollen — also called skuff or kief — is the loose resin powder shaken free from dried hemp flowers. The flowers are agitated over fine mesh screens so the resin glands break off and fall through, leaving plant matter behind. What collects underneath is pollen: sandy, pale gold, and far more concentrated than the flower it came from. Press it and you get hash; leave it loose and you have pollen."
+  },
+  {
+    question: "What does 'dry sift' mean?",
+    answer: "Dry sift is the separation method itself — mechanical, solvent-free, using nothing but movement and mesh. It is the oldest hash-making technique there is and still the most widely used in Europe. Because no solvents are involved at any stage, dry sift appeals to retailers and customers who want the simplest possible process behind the product."
+  },
+  {
+    question: "What is static separation?",
+    answer: "A refinement of dry sift that uses static electricity to pull the resin heads away from residual plant matter, producing a noticeably cleaner and paler product than screening alone. Our Golden Static is made this way and carries a triple CBD+CBG+CBN profile, which puts it in a different position on the shelf from a standard single-cannabinoid press."
+  },
+  {
+    question: "What does 3X filtered mean?",
+    answer: "The material passes through three successive filtration stages, each removing more plant matter and leaving a higher proportion of pure resin. More passes means a cleaner, more potent and paler end product — and a higher price per gram. It is the grade to stock for customers who judge on purity rather than tradition."
+  },
+  {
+    question: "Is pollen cheaper than pressed hash?",
+    answer: "Generally yes. Skuff and pollen sit at the entry point of the resin category, which makes them the easiest way to introduce customers who have only ever bought flower. That accessibility is precisely why they are worth stocking: pollen converts flower buyers into resin buyers, and resin buyers spend more per visit."
+  },
+  {
+    question: "Can I use pollen for extraction or production?",
+    answer: "Many of our wholesale customers buy pollen and sift as input material rather than for resale — it is a concentrated, consistent feedstock. If you are sourcing for production rather than the shelf, tell us your volume and target cannabinoid profile and we will quote accordingly; the pricing structure differs from retail-tier wholesale."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+
+const process = [
+  { step: "1", title: "Dry and cure", text: "Flowers are dried and cured so the resin glands become brittle enough to snap away cleanly from the plant." },
+  { step: "2", title: "Agitate over mesh", text: "The material is moved across fine screens. Resin heads break off and fall through; plant matter stays above." },
+  { step: "3", title: "Grade by micron", text: "Finer screens yield purer sift. The first, finest pass is the premium grade; later passes carry more plant matter." },
+  { step: "4", title: "Press or leave loose", text: "Left loose it stays pollen. Pressed with warmth and pressure it becomes traditional hash." },
+];
+---
+
+<BaseLayout
+  title="CBD Pollen & Dry Sift Wholesale"
+  description="Wholesale CBD pollen, skuff and dry sift: solvent-free separated resin, entry to premium grade. Golden Static, 3X Filtered, COA every batch, 24h delivery."
+  canonicalURL="https://greensfarmhouse.com/cbd-pollen-dry-sift-wholesale"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-yellow-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-yellow-100 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">🌾 Solvent-Free</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-3">
+        CBD Pollen &amp; Dry Sift — <span class="text-primary">Wholesale Skuff &amp; Static</span>
+      </h1>
+      <div class="mb-4 flex justify-center"><ContentByline /></div>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        Mechanically separated resin — no solvents at any stage. From entry-level skuff that
+        converts flower buyers into resin buyers, through static-separated and triple-filtered
+        grades for customers who judge on purity.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/products/skuff-pollen-cbd" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          See Skuff Pollen
+        </a>
+        <WaLink href={waUrl} class="px-6 py-3">Get Wholesale Pricing</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <!-- Range -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Pollen, Static &amp; Filtered</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Four grades spanning the full price ladder, from entry skuff to triple-filtered CBG.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {pollenRange.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/collections/cbd-resins" class="text-primary font-semibold hover:underline">View all CBD resins →</a>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">How Dry Sift Is Made</h2>
+      <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+        Four steps, no solvents. Understanding the process is what lets you explain the price
+        difference between grades at the counter.
+      </p>
+      <div class="grid md:grid-cols-4 gap-6">
+        {process.map(s => (
+          <div class="p-6 bg-white rounded-xl border border-gray-200">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-white font-bold text-sm mb-4">{s.step}</span>
+            <h3 class="font-bold mb-2">{s.title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{s.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Concentrates upsell -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Beyond Sift: Concentrates</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">
+        For production customers and the top of the retail shelf — crumbles at 85%, distillate at
+        90% and isolate at 99.8% CBD.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {concentrates.map(p => <ProductCard product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">CBD Pollen &amp; Dry Sift — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Buying Sift for Resale or Production?</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Tell us your volume and target profile — pricing differs for production feedstock and retail-tier wholesale.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/cbd-hash-wholesale-europe" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Compare All Hash Grades</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

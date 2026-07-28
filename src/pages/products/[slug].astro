@@ -56,11 +56,16 @@ const relatedPagesByCategory: Record<string, { url: string; label: string }[]> =
     { url: '/wholesale-cbd-flowers-europe', label: 'Wholesale CBD Flowers Europe' },
     { url: '/cbd-hemp-flowers-indoor', label: 'Indoor CBD Flowers' },
     { url: '/cbd-hemp-flowers-greenhouse', label: 'Greenhouse CBD Flowers' },
+    { url: '/cbd-trim-small-buds-wholesale', label: 'CBD Trim & Small Buds' },
+    { url: '/moonrock-icerock-cbd-wholesale', label: 'MoonRock & Ice Rock' },
     { url: '/cbd-sample-packs', label: 'CBD Sample Packs' },
   ],
   'cbd-resins': [
+    { url: '/cbd-hash-wholesale-europe', label: 'CBD Hash Wholesale' },
+    { url: '/moroccan-cbd-hash-wholesale', label: 'Moroccan CBD Hash' },
+    { url: '/cbd-pollen-dry-sift-wholesale', label: 'CBD Pollen & Dry Sift' },
+    { url: '/thc-free-cbd-wholesale', label: '0% THC CBD' },
     { url: '/cbd-wholesaler-organic', label: 'Organic CBD Wholesale' },
-    { url: '/cbd-sample-packs', label: 'CBD Sample Packs' },
     { url: '/cbn-sleep-products', label: 'CBN & Sleep Products' },
   ],
   'cbd-oils': [
@@ -79,6 +84,10 @@ const relatedPagesByCategory: Record<string, { url: string; label: string }[]> =
     { url: '/legal', label: 'Legal Information' },
   ],
 };
+// Keep the commercial keyword in the title; the brand is what gets dropped when
+// space is tight. BaseLayout re-appends " | Greens Farmhouse" only if it fits.
+const pageTitle = `${product.name} | Wholesale CBD`;
+
 const strainGuide = getStrainByProductSlug(product.slug);
 const relatedPages = [
   ...(strainGuide ? [{ url: `/strains/${strainGuide.slug}`, label: `${strainGuide.name} Strain Guide` }] : []),
@@ -87,9 +96,7 @@ const relatedPages = [
 ---
 
 <BaseLayout
-  {/* Keep the commercial keyword; the brand is what gets dropped when space is
-      tight. BaseLayout re-appends " | Greens Farmhouse" only if it still fits. */}
-  title={`${product.name} | Wholesale CBD`}
+  title={pageTitle}
   description={product.description}
   canonicalURL={productUrl}
   ogType="product"

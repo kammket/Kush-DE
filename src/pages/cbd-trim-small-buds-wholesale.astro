@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentByline from '../components/ContentByline.astro';
+import ProductCard from '../components/ProductCard.astro';
+import WaLink from '../components/WaLink.astro';
+import { getProductBySlug } from '../data/products';
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "CBD Trim & Small Buds" },
+];
+
+const budgetTier = ['trim-greenhouse', 'purple-haze-greenhouse', 'cannatonic-greenhouse', 'bubba-kush-greenhouse'].map(s => getProductBySlug(s)!).filter(Boolean);
+const stepUp = ['og-kush-greenhouse', 'blueberry-greenhouse', 'orange-bud-greenhouse', 'super-skunk-greenhouse'].map(s => getProductBySlug(s)!).filter(Boolean);
+
+const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent("Hello! I'm interested in bulk CBD trim and small buds. What are your kilo prices?")}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CBD Trim and Small Buds Wholesale: The Volume Tier Explained",
+  "description": "Wholesale CBD trim and small buds from €0.19/g. Bulk feedstock for extraction, pre-rolls and value retail lines. EU-grown, lab-tested, kilo pricing, 24h European delivery.",
+  "url": "https://greensfarmhouse.com/cbd-trim-small-buds-wholesale",
+  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
+  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28"
+};
+
+const faqItems = [
+  {
+    question: "What is CBD trim?",
+    answer: "Trim is the smaller leaf and offcut material removed from hemp flowers during manicuring. It carries a lower cannabinoid density than the buds themselves but is far cheaper per gram, which makes it the standard input for extraction, pre-roll filler and value-tier products. It is sold by weight in bulk rather than as a display product."
+  },
+  {
+    question: "What are small buds?",
+    answer: "Small buds — also called popcorn buds, or petites têtes in French — are the smaller flowers from lower down the plant. They are the same material as top buds, cured the same way, just smaller and less visually striking. Aroma and cannabinoid content are broadly comparable, so they represent the best value per gram in the flower category and sell well wherever customers buy on price rather than appearance."
+  },
+  {
+    question: "What is the difference in price?",
+    answer: "Substantial. Our greenhouse trim starts from €0.19 per gram and small buds from €0.39, against roughly €0.69 to €1.19 for full-size greenhouse and indoor flower. For a shop building a value tier, or a producer buying extraction feedstock, that gap is the entire business case."
+  },
+  {
+    question: "What do wholesale customers use trim for?",
+    answer: "Three things, mostly. Extraction — trim is the standard feedstock for producing oils, distillate and isolate. Pre-rolls, where trim or a trim-and-small-bud blend keeps the unit cost workable. And value retail lines, where a lower price point brings in customers who would not buy premium indoor flower. Many of our volume customers buy trim continuously and premium flower occasionally."
+  },
+  {
+    question: "Is the quality lower?",
+    answer: "It is different rather than simply lower, and the distinction matters commercially. Trim has genuinely less cannabinoid density than flower — that is what makes it cheap. Small buds are essentially the same product as top buds in a smaller format, so the quality gap there is largely cosmetic. Both are grown, cured and lab-tested to the same standard as the rest of the catalogue, with a COA on every batch."
+  },
+  {
+    question: "What volumes do you supply?",
+    answer: "Trim and small buds are priced for volume, with rates stepping down as quantity increases — the tiers are shown on each product page and continue into kilo pricing. If you need a standing monthly quantity, message us and we will quote a contract rate rather than the published tier."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+  }))
+};
+
+const useCases = [
+  { icon: "⚗️", title: "Extraction feedstock", text: "The standard input for oils, distillate and isolate. Buy on cannabinoid content per euro rather than appearance — trim wins that calculation every time." },
+  { icon: "🚬", title: "Pre-roll production", text: "Trim, or a trim and small-bud blend, keeps unit cost low enough that pre-rolls carry a workable margin at retail price points customers accept." },
+  { icon: "🏷️", title: "Value retail tier", text: "A cheaper shelf line brings in price-sensitive customers who would never pick up premium indoor — and many of them trade up once they return." },
+];
+---
+
+<BaseLayout
+  title="CBD Trim & Small Buds Wholesale"
+  description="Wholesale CBD trim from €0.19/g, small buds from €0.39/g. Bulk feedstock for extraction, pre-rolls and value retail. EU-grown, lab-tested, kilo pricing."
+  canonicalURL="https://greensfarmhouse.com/cbd-trim-small-buds-wholesale"
+  jsonLd={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={breadcrumbs} />
+  </div>
+
+  <!-- Hero -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-lime-50 via-white to-primary/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-lime-100 text-lime-900 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">📦 Volume Tier</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-3">
+        CBD Trim &amp; Small Buds — <span class="text-primary">From €0.19/g</span>
+      </h1>
+      <div class="mb-4 flex justify-center"><ContentByline /></div>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+        The tier that makes the numbers work. Extraction feedstock, pre-roll filler and value
+        retail lines — same EU-grown hemp, same lab testing, a fraction of the per-gram cost of
+        premium indoor flower.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/products/trim-greenhouse" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors">
+          See Greenhouse Trim
+        </a>
+        <WaLink href={waUrl} class="px-6 py-3">Ask for Kilo Pricing</WaLink>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">The Value Tier</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Trim, small buds and the most affordable full-size greenhouse flowers in the catalogue.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {budgetTier.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/collections/cbd-flowers" class="text-primary font-semibold hover:underline">View all CBD flowers →</a>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">What Buyers Do With It</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {useCases.map(u => (
+          <div class="p-6 bg-white rounded-xl border border-gray-200">
+            <span class="text-4xl block mb-4">{u.icon}</span>
+            <h3 class="font-bold text-lg mb-2">{u.title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{u.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Honest comparison -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white border border-gray-200 rounded-xl p-6 md:p-8">
+        <h2 class="text-xl md:text-2xl font-bold mb-4">Trim and Small Buds Are Not the Same Thing</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          They get lumped together because both are cheap, but they behave differently and you
+          should buy them for different reasons.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          <strong class="text-gray-900">Trim</strong> is leaf and offcut. It genuinely has lower
+          cannabinoid density than flower — that is why it costs a fraction as much. Buy it for
+          extraction and production, where you are paying for cannabinoid content, not appearance.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          <strong class="text-gray-900">Small buds</strong> are real flowers, just smaller ones
+          from lower down the plant. Aroma and potency are broadly comparable to top buds; the
+          difference is mostly cosmetic. Buy them for a value retail shelf, where customers care
+          more about price than about the size of the bud in the jar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step up -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Ready to Trade Customers Up?</h2>
+      <p class="text-gray-600 mb-8 max-w-2xl">Full-size greenhouse flowers sit just above the value tier and give returning customers somewhere to go.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {stepUp.map(p => <ProductCard product={p} />)}
+      </div>
+      <a href="/cbd-hemp-flowers-indoor" class="text-primary font-semibold hover:underline">Or jump to premium indoor →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">CBD Trim &amp; Small Buds — FAQ</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="group bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
+              {f.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Buying by the Kilo?</h2>
+      <p class="text-green-100 mb-8 max-w-2xl mx-auto">Tell us your monthly volume and we will quote a contract rate rather than the published tier pricing.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <WaLink href={waUrl} class="px-6 py-3">Chat on WhatsApp</WaLink>
+        <a href="/cbd-flowers-bulk-europe" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">Bulk Flower Pricing</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
