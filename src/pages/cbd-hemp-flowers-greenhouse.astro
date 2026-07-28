@@ -38,15 +38,6 @@ const faqItems = [
 ];
 
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqItems.map(f => ({
-    "@type": "Question",
-    "name": f.question,
-    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
-  }))
-};
 ---
 
 <BaseLayout
@@ -164,5 +155,4 @@ const faqJsonLd = {
       </div>
     </div>
   </section>
-  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 </BaseLayout>

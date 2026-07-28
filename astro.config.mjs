@@ -1,7 +1,43 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { execFileSync } from 'node:child_process';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+
+/**
+ * Last git commit date for a source file, or null if unavailable.
+ * Google ignores `lastmod` when it isn't trustworthy, so we only emit dates
+ * backed by real commits — never a build timestamp, which would change on
+ * every deploy regardless of whether the content actually changed.
+ */
+function gitLastModified(file) {
+  try {
+    const out = execFileSync('git', ['log', '-1', '--format=%cI', '--', file], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    return out || null;
+  } catch {
+    return null; // no git history (shallow/exported checkout) — omit lastmod
+  }
+}
+
+/** URL path patterns → the source file whose commit date drives their content. */
+const LASTMOD_SOURCES = [
+  [/\/blog(\/|$)/, 'src/data/blog.ts'],
+  [/\/products\//, 'src/data/products.ts'],
+  [/\/collections(\/|$)/, 'src/data/products.ts'],
+  [/\/strains(\/|$)/, 'src/data/strains.ts'],
+];
+
+const lastmodCache = new Map();
+function lastmodFor(url) {
+  const { pathname } = new URL(url);
+  const source = LASTMOD_SOURCES.find(([re]) => re.test(pathname))?.[1];
+  if (!source) return undefined;
+  if (!lastmodCache.has(source)) lastmodCache.set(source, gitLastModified(source));
+  return lastmodCache.get(source) ?? undefined;
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +54,10 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
+      serialize: (item) => {
+        const lastmod = lastmodFor(item.url);
+        return lastmod ? { ...item, lastmod } : item;
+      },
       filter: (page) =>
         !page.includes('/cart') &&
         !page.includes('/checkout') &&

@@ -4,7 +4,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import WholesaleCta from '../../../components/WholesaleCta.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import RecentlyViewed from '../../../components/RecentlyViewed.astro';
-import { products, getProductBySlug, getProductsByCategory } from '../../../data/products';
+import { products, getProductBySlug, getProductsByCategory, buildProductOffers } from '../../../data/products';
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 import { categoryTranslations } from '../../../data/translations/categories';
@@ -50,7 +50,7 @@ const coaMessages: Record<string, string> = {
   fi: `Hei! Haluaisin nähdä laboratoriotodistuksen (COA) tuotteelle: ${product.name}`,
   pt: `Olá! Gostaria de ver o certificado de laboratório (COA) de: ${product.name}`,
 };
-const coaUrl = `https://wa.me/447346989289?text=${encodeURIComponent(coaMessages[locale] || coaMessages.en)}`;
+const coaUrl = `https://wa.me/420722562271?text=${encodeURIComponent(coaMessages[locale] || coaMessages.en)}`;
 
 // Related SEO landing pages per category; labels come from existing footer translations
 const relatedPagesByCategory: Record<string, { path: string; tKey: string }[]> = {
@@ -83,34 +83,24 @@ const relatedProducts = getProductsByCategory(product.categorySlug)
   .filter(p => p.id !== product.id && p.inStock)
   .slice(0, 4);
 
+const productUrl = getAbsoluteLocaleUrl(locale, `/products/${product.slug}`);
+const productImage = product.image.startsWith('http')
+  ? product.image
+  : `https://greensfarmhouse.com${product.image}`;
+
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": product.name,
   "description": description,
-  "image": product.image.startsWith('http') ? product.image : `https://greensfarmhouse.com${product.image}`,
-  "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
+  "image": productImage,
+  "url": productUrl,
+  "sku": product.id,
+  "itemCondition": "https://schema.org/NewCondition",
   "brand": { "@type": "Brand", "name": product.supplier },
   "category": catT?.name || product.category,
   "inLanguage": locale,
-  "offers": (product.variants && product.variants.length > 1) ? {
-    "@type": "AggregateOffer",
-    "lowPrice": Math.min(...product.variants.map(v => v.price)),
-    "highPrice": Math.max(...product.variants.map(v => v.price)),
-    "offerCount": product.variants.length,
-    "priceCurrency": "EUR",
-    "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-    "seller": { "@type": "Organization", "name": "Greens Farmhouse" },
-    "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
-  } : {
-    "@type": "Offer",
-    "price": product.priceNumeric,
-    "priceCurrency": "EUR",
-    "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-    "seller": { "@type": "Organization", "name": "Greens Farmhouse" },
-    "priceValidUntil": "2026-12-31",
-    "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
-  }
+  "offers": buildProductOffers(product, productUrl)
 };
 
 const breadcrumbs = [
@@ -121,11 +111,12 @@ const breadcrumbs = [
 ---
 
 <BaseLayout
-  title={`${product.name} | ${catT?.name || product.category} | Greens Farmhouse`}
+  title={product.name}
   description={description}
   locale={locale}
-  canonicalURL={getAbsoluteLocaleUrl(locale, `/products/${product.slug}`)}
+  canonicalURL={productUrl}
   ogType="product"
+  ogImage={productImage}
   jsonLd={productJsonLd}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

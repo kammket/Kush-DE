@@ -4,7 +4,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import WholesaleCta from '../../components/WholesaleCta.astro';
 import RecentlyViewed from '../../components/RecentlyViewed.astro';
-import { products, getProductBySlug, getProductsByCategory } from '../../data/products';
+import { products, getProductBySlug, getProductsByCategory, buildProductOffers } from '../../data/products';
 import { getStrainByProductSlug } from '../../data/strains';
 
 export function getStaticPaths() {
@@ -21,75 +21,26 @@ const relatedProducts = getProductsByCategory(product.categorySlug)
   .filter(p => p.id !== product.id && p.inStock)
   .slice(0, 4);
 
-const variantPrices = (product.variants ?? []).map(v => v.price);
-const availability = product.inStock
-  ? "https://schema.org/InStock"
-  : "https://schema.org/OutOfStock";
-const shippingDetails = {
-  "@type": "OfferShippingDetails",
-  "shippingRate": {
-    "@type": "MonetaryAmount",
-    "value": "0",
-    "currency": "EUR"
-  },
-  "shippingDestination": {
-    "@type": "DefinedRegion",
-    "addressCountry": "FR"
-  },
-  "deliveryTime": {
-    "@type": "ShippingDeliveryTime",
-    "handlingTime": {
-      "@type": "QuantitativeValue",
-      "minValue": 0,
-      "maxValue": 1,
-      "unitCode": "DAY"
-    },
-    "transitTime": {
-      "@type": "QuantitativeValue",
-      "minValue": 1,
-      "maxValue": 3,
-      "unitCode": "DAY"
-    }
-  }
-};
+const productUrl = `https://greensfarmhouse.com/products/${product.slug}`;
+const productImage = product.image.startsWith('http')
+  ? product.image
+  : `https://greensfarmhouse.com${product.image}`;
 
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": product.name,
   "description": product.description,
-  "image": product.image.startsWith('http') ? product.image : `https://greensfarmhouse.com${product.image}`,
-  "url": `https://greensfarmhouse.com/products/${product.slug}`,
+  "image": productImage,
+  "url": productUrl,
+  "sku": product.id,
+  "itemCondition": "https://schema.org/NewCondition",
   "brand": {
     "@type": "Brand",
     "name": product.supplier
   },
   "category": product.category,
-  "offers": variantPrices.length > 1 ? {
-    "@type": "AggregateOffer",
-    "lowPrice": Math.min(...variantPrices),
-    "highPrice": Math.max(...variantPrices),
-    "offerCount": variantPrices.length,
-    "priceCurrency": "EUR",
-    "availability": availability,
-    "seller": {
-      "@type": "Organization",
-      "name": "Greens Farmhouse"
-    },
-    "url": `https://greensfarmhouse.com/products/${product.slug}`
-  } : {
-    "@type": "Offer",
-    "price": product.priceNumeric,
-    "priceCurrency": "EUR",
-    "availability": availability,
-    "seller": {
-      "@type": "Organization",
-      "name": "Greens Farmhouse"
-    },
-    "priceValidUntil": "2026-12-31",
-    "url": `https://greensfarmhouse.com/products/${product.slug}`,
-    "shippingDetails": shippingDetails
-  }
+  "offers": buildProductOffers(product, productUrl)
 };
 
 const breadcrumbs = [
@@ -98,7 +49,7 @@ const breadcrumbs = [
   { name: product.name },
 ];
 
-const coaUrl = `https://wa.me/447346989289?text=${encodeURIComponent(`Hello! I would like to see the lab certificate (COA) for: ${product.name}`)}`;
+const coaUrl = `https://wa.me/420722562271?text=${encodeURIComponent(`Hello! I would like to see the lab certificate (COA) for: ${product.name}`)}`;
 
 const relatedPagesByCategory: Record<string, { url: string; label: string }[]> = {
   'cbd-flowers': [
@@ -136,10 +87,11 @@ const relatedPages = [
 ---
 
 <BaseLayout
-  title={`${product.name} | Wholesale CBD | Greens Farmhouse`}
+  title={product.name}
   description={product.description}
-  canonicalURL={`https://greensfarmhouse.com/products/${product.slug}`}
+  canonicalURL={productUrl}
   ogType="product"
+  ogImage={productImage}
   jsonLd={productJsonLd}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

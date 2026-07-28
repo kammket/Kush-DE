@@ -56,15 +56,6 @@ const faqItems = [
     answer: "Yes! For all purchases, we include free samples so you can discover new products from our range. This allows you to test different strains and products before placing larger wholesale orders."
   }
 ];
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqItems.map(f => ({
-    "@type": "Question",
-    "name": f.question,
-    "acceptedAnswer": { "@type": "Answer", "text": f.answer }
-  }))
-};
 ---
 
 <BaseLayout 
@@ -506,5 +497,4 @@ const faqJsonLd = {
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 </BaseLayout>

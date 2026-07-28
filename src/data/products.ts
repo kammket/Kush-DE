@@ -2077,3 +2077,79 @@ export function getSpecialOffers(): Product[] {
 export function getFeaturedProducts(): Product[] {
   return products.filter(p => p.inStock).slice(0, 8);
 }
+
+// ---------------------------------------------------------------------------
+// Product schema helpers — shared by the EN and localized product pages so both
+// emit identical offer markup.
+// ---------------------------------------------------------------------------
+
+/** Rolling one-year price validity, so the date never goes stale in the markup. */
+export function getPriceValidUntil(): string {
+  const d = new Date();
+  d.setFullYear(d.getFullYear() + 1);
+  return d.toISOString().slice(0, 10);
+}
+
+export const offerShippingDetails = {
+  "@type": "OfferShippingDetails",
+  "shippingRate": {
+    "@type": "MonetaryAmount",
+    "value": "0",
+    "currency": "EUR"
+  },
+  "shippingDestination": {
+    "@type": "DefinedRegion",
+    "addressCountry": "FR"
+  },
+  "deliveryTime": {
+    "@type": "ShippingDeliveryTime",
+    "handlingTime": {
+      "@type": "QuantitativeValue",
+      "minValue": 0,
+      "maxValue": 1,
+      "unitCode": "DAY"
+    },
+    "transitTime": {
+      "@type": "QuantitativeValue",
+      "minValue": 1,
+      "maxValue": 3,
+      "unitCode": "DAY"
+    }
+  }
+};
+
+/**
+ * Builds the schema.org `offers` node for a product.
+ * Multi-variant products get an AggregateOffer; single-price products get an Offer.
+ * Both branches carry the same shipping and price-validity data.
+ */
+export function buildProductOffers(product: Product, url: string) {
+  const availability = product.inStock
+    ? "https://schema.org/InStock"
+    : "https://schema.org/OutOfStock";
+  const seller = { "@type": "Organization", "name": "Greens Farmhouse" };
+  const common = {
+    "priceCurrency": "EUR",
+    availability,
+    seller,
+    url,
+    "priceValidUntil": getPriceValidUntil(),
+    "shippingDetails": offerShippingDetails,
+  };
+
+  const variantPrices = (product.variants ?? []).map(v => v.price);
+  if (variantPrices.length > 1) {
+    return {
+      "@type": "AggregateOffer",
+      "lowPrice": Math.min(...variantPrices),
+      "highPrice": Math.max(...variantPrices),
+      "offerCount": variantPrices.length,
+      ...common,
+    };
+  }
+  return {
+    "@type": "Offer",
+    "price": product.priceNumeric,
+    ...common,
+  };
+}

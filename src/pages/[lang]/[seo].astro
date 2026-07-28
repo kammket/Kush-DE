@@ -44,18 +44,6 @@ const jsonLd = {
   "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": tr.faq.map((f: { question: string; answer: string }) => ({
-    "@type": "Question",
-    "name": f.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": f.answer
-    }
-  }))
-};
 ---
 
 <BaseLayout
@@ -156,6 +144,4 @@ const faqJsonLd = {
     </div>
   </section>
 
-  <!-- FAQ Schema -->
-  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 </BaseLayout>
