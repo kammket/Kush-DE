@@ -10,7 +10,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'Add to Cart', buyNow: 'Buy Now', viewAll: 'View all', readMore: 'Read more →',
-      freeDelivery: 'Free delivery over €99', products: 'products', showing: 'Showing',
+      freeDelivery: 'Free delivery over €150', products: 'products', showing: 'Showing',
       sortBy: 'Sort by:', featured: 'Featured', priceLow: 'Price: Low to High',
       priceHigh: 'Price: High to Low', nameAZ: 'Name A-Z', outOfStock: 'Out of stock',
       inStock: 'In stock', contactUs: 'Contact Us', browseProducts: 'Browse Products',
@@ -46,7 +46,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Unbeatable Quality/Price', qualityDesc: '100% natural products',
       lab: 'Laboratory Analysis', labDesc: 'Certified < 0.3% THC',
-      delivery: 'Express Delivery', deliveryDesc: 'Free from €99 · Ships 24h',
+      delivery: 'Express Delivery', deliveryDesc: 'Free from €150 · Ships 24h',
       company: 'European Company', companyDesc: 'Products stored in France',
     },
     product: {
@@ -80,7 +80,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Organic Farming', whyOrganicDesc: 'CBD flowers, resins and oils from reliable suppliers in France, Switzerland and Italy, with organically grown hemp.',
       whyCheap: 'Cheap CBD, Premium Quality', whyCheapDesc: 'Best value for money on the market. All products certified premium quality and compliant with legislation.',
       whyCatalog: 'Comprehensive Catalog', whyCatalogDesc: 'Full range of CBD resins, hemp flowers and oils compliant with current legislation for all your B2B needs.',
-      whyFast: 'Fast Delivery', whyFastDesc: 'All orders shipped within 24 hours. Free delivery for orders over €99 across France and Europe.',
+      whyFast: 'Fast Delivery', whyFastDesc: 'All orders shipped within 24 hours. Free delivery for orders over €150 across France and Europe.',
       howTitle: 'How to Buy CBD in Bulk',
       faqTitle: 'Frequently Asked Questions',
       blogTitle: 'Information and Advice',
@@ -362,7 +362,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'In winkelwagen', buyNow: 'Nu kopen', viewAll: 'Alles bekijken', readMore: 'Lees meer →',
-      freeDelivery: 'Gratis levering vanaf €99', products: 'producten', showing: 'Tonen',
+      freeDelivery: 'Gratis levering vanaf €150', products: 'producten', showing: 'Tonen',
       sortBy: 'Sorteren op:', featured: 'Aanbevolen', priceLow: 'Prijs: laag naar hoog',
       priceHigh: 'Prijs: hoog naar laag', nameAZ: 'Naam A-Z', outOfStock: 'Uitverkocht',
       inStock: 'Op voorraad', contactUs: 'Neem Contact Op', browseProducts: 'Producten Bekijken',
@@ -398,7 +398,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Onverslaanbare Kwaliteit/Prijs', qualityDesc: '100% natuurlijke producten',
       lab: 'Laboratoriumanalyse', labDesc: 'Gecertificeerd < 0,3% THC',
-      delivery: 'Expreslevering', deliveryDesc: 'Gratis vanaf €99 · Verzending 24u',
+      delivery: 'Expreslevering', deliveryDesc: 'Gratis vanaf €150 · Verzending 24u',
       company: 'Europees Bedrijf', companyDesc: 'Producten opgeslagen in Frankrijk',
     },
     product: {
@@ -432,7 +432,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Biologische Teelt', whyOrganicDesc: 'CBD-bloemen, harsen en oliën van betrouwbare leveranciers in Frankrijk, Zwitserland en Italië.',
       whyCheap: 'Goedkope CBD, Premium Kwaliteit', whyCheapDesc: 'Beste prijs-kwaliteitverhouding op de markt. Alle producten gecertificeerd en wettelijk conform.',
       whyCatalog: 'Uitgebreide Catalogus', whyCatalogDesc: 'Compleet assortiment CBD-harsen, hennepbloemen en oliën voor al uw B2B-behoeften.',
-      whyFast: 'Snelle Levering', whyFastDesc: 'Alle bestellingen verzonden binnen 24 uur. Gratis levering vanaf €99 in Frankrijk en Europa.',
+      whyFast: 'Snelle Levering', whyFastDesc: 'Alle bestellingen verzonden binnen 24 uur. Gratis levering vanaf €150 in Frankrijk en Europa.',
       howTitle: 'Hoe CBD in Bulk te Kopen',
       faqTitle: 'Veelgestelde Vragen',
       blogTitle: 'Informatie en Advies',

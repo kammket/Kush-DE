@@ -56,6 +56,10 @@ export async function onRequestPost(context) {
     });
   }
 
+  // Returned to the browser so the confirmation screen can show the reference the
+  // customer needs to quote on their transfer, without waiting for the email.
+  let orderRef = null;
+
   try {
     if (type === "contact") {
       const { firstName, lastName, email, phone, company, contactSubject, message } = body;
@@ -121,7 +125,7 @@ export async function onRequestPost(context) {
 
     } else {
       // ORDER
-      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, total } = body;
+      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, total, firstTimeGift } = body;
 
       if (!firstName || !lastName || !email || !address || !city || !postal || !country) {
         return new Response(JSON.stringify({ error: "Missing required fields" }), {
@@ -130,7 +134,7 @@ export async function onRequestPost(context) {
         });
       }
 
-      const orderRef = `GF-${Date.now().toString(36).toUpperCase()}`;
+      orderRef = `GF-${Date.now().toString(36).toUpperCase()}`;
 
       let itemsHtml = "";
       if (Array.isArray(items)) {
@@ -183,6 +187,7 @@ export async function onRequestPost(context) {
         ${notes ? `<h3>Order Notes</h3><p style="white-space:pre-wrap;">${escapeHtml(notes)}</p>` : ""}
         <hr>
         <p style="color:#666;font-size:12px;">Payment: Bank Transfer (SEPA) — Order Reference: ${escapeHtml(orderRef)}</p>
+        ${firstTimeGift ? `<p style="background:#fef3c7;border:2px solid #f59e0b;border-radius:6px;padding:12px;font-weight:bold;color:#92400e;">🎁 FIRST-TIME CUSTOMER — include a free sample of a top product with this package.</p>` : ""}
       `;
 
       // Confirmation email to customer — order summary + bank transfer instructions
@@ -264,7 +269,7 @@ export async function onRequestPost(context) {
       ]);
     }
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, orderRef }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });

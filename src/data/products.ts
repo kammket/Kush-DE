@@ -40,7 +40,7 @@ export const categories: Category[] = [
     slug: "cbd-flowers",
     description: "Premium wholesale CBD flowers selected with the greatest care. Thanks to daily monitoring of our partner farms, we guarantee consistent quality that complies with French CBD legislation. Our priority is to offer the best value for money to our professional customers.",
     metaTitle: "Wholesale CBD Flowers | Premium Hemp Flowers | Greens Farmhouse",
-    metaDescription: "Buy premium CBD flowers wholesale. Greenhouse & indoor varieties including OG Kush, Gorilla Glue, Wedding Cake & more. Best prices for professionals. Free delivery over €99.",
+    metaDescription: "Buy premium CBD flowers wholesale. Greenhouse & indoor varieties including OG Kush, Gorilla Glue, Wedding Cake & more. Best prices for professionals. Free delivery over €150.",
     image: "/images/categories/cbd-flowers.jpg",
     productCount: 26,
   },
