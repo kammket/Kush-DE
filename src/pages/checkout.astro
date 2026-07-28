@@ -258,6 +258,14 @@ const breadcrumbs = [
         <div class="max-w-lg mx-auto">
           <p class="text-gray-600 mb-4">Our team has received your order and is reviewing it now.</p>
 
+          <!-- Shown only when the order could not be registered automatically. The
+               order is never discarded: the WhatsApp button below carries the full
+               order, so the customer always has a working route to us. -->
+          <div id="confirm-fallback" class="hidden bg-amber-50 border-2 border-amber-300 rounded-xl p-5 mb-6 text-left">
+            <h3 class="font-bold text-amber-900 mb-1 flex items-center gap-2"><span aria-hidden="true">⚠️</span> One quick step to finish</h3>
+            <p class="text-sm text-amber-900">We could not confirm your order by email just now. Your order details are safe — please tap the WhatsApp button below to send them straight to our team, and we will take it from there immediately.</p>
+          </div>
+
           <!-- Order reference: shown here so the customer has it immediately, without
                depending on the confirmation email arriving or escaping a spam filter. -->
           <div id="confirm-ref-box" class="hidden bg-white border-2 border-primary/30 rounded-xl p-5 mb-6">
@@ -386,6 +394,10 @@ const breadcrumbs = [
       btn.textContent = 'PROCESSING...';
       document.getElementById('checkout-error')?.classList.add('hidden');
 
+      // Generated here so the customer sees a reference even if the email service
+      // is unreachable, and so screen, inbox and our copy all quote the same one.
+      const orderRef = `GF-${Date.now().toString(36).toUpperCase()}`;
+
       const emailInput = document.getElementById('email') as HTMLInputElement;
       const confirmEmail = document.getElementById('confirm-email');
       if (confirmEmail) confirmEmail.textContent = emailInput?.value || '';
@@ -408,58 +420,39 @@ const breadcrumbs = [
         subtotal,
         shipping: freeShipping ? 'FREE' : '€9.90',
         total,
+        orderRef,
         firstTimeGift: (document.getElementById('first-time-gift') as HTMLInputElement)?.checked || false,
       };
 
+      // An order is never discarded because email failed. If the request does not
+      // succeed we still confirm, still show the reference, and route the customer
+      // to WhatsApp with the full order pre-filled so it always reaches the team.
+      let registered = false;
       try {
         const res = await fetch('/api/send-email', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(orderData),
         });
-
-        if (res.ok) {
-          // Surface the reference immediately rather than making the customer wait
-          // for the email to land before they can pay correctly.
-          try {
-            const data = await res.json();
-            if (data?.orderRef) {
-              const refEl = document.getElementById('confirm-ref');
-              if (refEl) refEl.textContent = data.orderRef;
-              document.getElementById('confirm-ref-box')?.classList.remove('hidden');
-            }
-          } catch {
-            // no reference returned — the email still carries it
-          }
-        }
-
-        if (!res.ok) {
-          let errorMsg = 'Failed to send order email. Please try again.';
-          try {
-            const errorData = await res.json();
-            if (errorData?.error) errorMsg = errorData.error;
-          } catch {
-            // ignore JSON parse errors
-          }
-          throw new Error(errorMsg);
-        }
-      } catch (err) {
-        btn.disabled = false;
-        btn.textContent = 'PLACE ORDER';
-        const errorEl = document.getElementById('checkout-error');
-        if (errorEl) {
-          errorEl.textContent = err instanceof Error ? err.message : 'Something went wrong. Please try again or contact us via WhatsApp.';
-          errorEl.classList.remove('hidden');
-          errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-        return;
+        registered = res.ok;
+      } catch {
+        registered = false;
       }
 
-      // Build WhatsApp order-summary link for the confirmation screen
+      const refEl = document.getElementById('confirm-ref');
+      if (refEl) refEl.textContent = orderRef;
+      document.getElementById('confirm-ref-box')?.classList.remove('hidden');
+      if (!registered) {
+        document.getElementById('confirm-fallback')?.classList.remove('hidden');
+      }
+
+      // WhatsApp summary doubles as the recovery path, so it carries everything
+      // needed to fulfil the order — reference, delivery address and gift flag.
       const waLink = document.getElementById('confirm-whatsapp') as HTMLAnchorElement | null;
       if (waLink) {
         const lines = [
           `Hello! I just placed an order on greensfarmhouse.com`,
+          `Order reference: ${orderRef}`,
           ``,
           `Order summary:`,
           ...orderData.items.map(i => `- ${i.quantity}x ${i.name} (${i.variant}) — €${(i.price * i.quantity).toFixed(2)}`),
@@ -470,12 +463,17 @@ const breadcrumbs = [
           ``,
           `Name: ${orderData.firstName} ${orderData.lastName}${orderData.company ? ` (${orderData.company})` : ''}`,
           `Email: ${orderData.email}`,
+          ...(orderData.phone ? [`Phone: ${orderData.phone}`] : []),
+          `Address: ${orderData.address}${orderData.address2 ? `, ${orderData.address2}` : ''}, ${orderData.postal} ${orderData.city}, ${orderData.country}`,
+          ...(orderData.firstTimeGift ? [``, `First-time customer — free sample requested.`] : []),
+          ...(orderData.notes ? [``, `Notes: ${orderData.notes}`] : []),
         ];
         waLink.href = `https://wa.me/420722562271?text=${encodeURIComponent(lines.join('\n'))}`;
       }
 
-      // Clear cart & show confirmation
-      clearCart();
+      // Only clear the cart once the order actually reached us. If it did not, the
+      // cart survives so the customer can retry rather than losing their basket.
+      if (registered) clearCart();
       formWrapper?.classList.add('hidden');
       confirmEl?.classList.remove('hidden');
 

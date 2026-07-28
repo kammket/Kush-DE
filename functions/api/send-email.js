@@ -107,7 +107,8 @@ export async function onRequestPost(context) {
         </div>
       `;
 
-      await Promise.all([
+      // Same reasoning as orders: losing the enquiry is the only real failure.
+      const [ownerResult, customerResult] = await Promise.allSettled([
         sendEmail(RESEND_API_KEY, {
           from: FROM_EMAIL,
           to: OWNER_EMAIL,
@@ -123,6 +124,11 @@ export async function onRequestPost(context) {
         }),
       ]);
 
+      if (ownerResult.status === "rejected") throw ownerResult.reason;
+      if (customerResult.status === "rejected") {
+        console.error("Customer acknowledgement email failed:", customerResult.reason);
+      }
+
     } else {
       // ORDER
       const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, total, firstTimeGift } = body;
@@ -134,7 +140,11 @@ export async function onRequestPost(context) {
         });
       }
 
-      orderRef = `GF-${Date.now().toString(36).toUpperCase()}`;
+      // Prefer the reference the browser already showed the customer, so the number
+      // on their screen, in their email and in our inbox is always the same one.
+      orderRef = /^GF-[A-Z0-9]{4,16}$/.test(String(body.orderRef || ""))
+        ? body.orderRef
+        : `GF-${Date.now().toString(36).toUpperCase()}`;
 
       let itemsHtml = "";
       if (Array.isArray(items)) {
@@ -252,7 +262,10 @@ export async function onRequestPost(context) {
         </div>
       `;
 
-      await Promise.all([
+      // allSettled, not all: the order reaching the team is what matters. If only
+      // the customer's confirmation fails — commonly because the sending domain is
+      // not yet verified for arbitrary recipients — the order must still count.
+      const [ownerResult, customerResult] = await Promise.allSettled([
         sendEmail(RESEND_API_KEY, {
           from: FROM_EMAIL,
           to: OWNER_EMAIL,
@@ -267,6 +280,23 @@ export async function onRequestPost(context) {
           html: customerHtml,
         }),
       ]);
+
+      if (ownerResult.status === "rejected") {
+        // Nobody has the order — this is the only case worth failing the request.
+        throw ownerResult.reason;
+      }
+      if (customerResult.status === "rejected") {
+        console.error("Customer confirmation email failed:", customerResult.reason);
+      }
+
+      return new Response(
+        JSON.stringify({
+          success: true,
+          orderRef,
+          customerEmailSent: customerResult.status === "fulfilled",
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      );
     }
 
     return new Response(JSON.stringify({ success: true, orderRef }), {
