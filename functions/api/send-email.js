@@ -131,7 +131,7 @@ export async function onRequestPost(context) {
 
     } else {
       // ORDER
-      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, total, firstTimeGift } = body;
+      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, total, firstTimeGift, discountPercent, discountAmount } = body;
 
       if (!firstName || !lastName || !email || !address || !city || !postal || !country) {
         return new Response(JSON.stringify({ error: "Missing required fields" }), {
@@ -196,6 +196,7 @@ export async function onRequestPost(context) {
 
         ${notes ? `<h3>Order Notes</h3><p style="white-space:pre-wrap;">${escapeHtml(notes)}</p>` : ""}
         <hr>
+        ${Number(discountPercent) > 0 ? `<p style="font-weight:bold;color:#15803d;">Volume discount applied: ${Number(discountPercent)}% — −€${Number(discountAmount).toFixed(2)}</p>` : ""}
         <p style="color:#666;font-size:12px;">Payment: Bank Transfer (SEPA) — Order Reference: ${escapeHtml(orderRef)}</p>
         ${firstTimeGift ? `<p style="background:#fef3c7;border:2px solid #f59e0b;border-radius:6px;padding:12px;font-weight:bold;color:#92400e;">🎁 FIRST-TIME CUSTOMER — include a free sample of a top product with this package.</p>` : ""}
       `;

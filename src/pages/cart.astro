@@ -50,6 +50,28 @@ const breadcrumbs = [
           </div>
         </div>
 
+        <!-- Volume discount ladder — the nudge that grows basket size -->
+        <div id="volume-panel" class="hidden bg-gradient-to-br from-accent/15 via-white to-primary/5 rounded-xl border-2 border-accent/40 p-5 mb-6">
+          <div class="flex items-center justify-between gap-3 mb-3">
+            <h2 class="text-sm font-bold text-gray-900 flex items-center gap-2">
+              <span aria-hidden="true">📦</span> Volume discount
+            </h2>
+            <span id="volume-badge" class="hidden text-xs font-bold px-2.5 py-1 rounded-full bg-primary text-white"></span>
+          </div>
+
+          <!-- Progress to the next tier -->
+          <div id="volume-progress-wrap" class="hidden">
+            <div class="h-2 w-full rounded-full bg-gray-200 overflow-hidden mb-2">
+              <div id="volume-bar" class="h-full bg-primary rounded-full transition-all duration-500" style="width:0%"></div>
+            </div>
+            <p id="volume-nudge" class="text-sm text-gray-800 font-medium"></p>
+          </div>
+          <p id="volume-max" class="hidden text-sm font-semibold text-primary">🎉 You've unlocked our best rate — 15% off this order.</p>
+
+          <!-- The full ladder, so the payoff for a bigger order is always visible -->
+          <ul id="volume-ladder" class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-center"></ul>
+        </div>
+
         <!-- Discount Code -->
         <div class="bg-white rounded-xl border border-gray-200 p-5 mb-6">
           <div class="flex flex-col sm:flex-row gap-3">
@@ -78,7 +100,7 @@ const breadcrumbs = [
               <span id="summary-subtotal" class="font-medium text-gray-900">€0.00</span>
             </div>
             <div id="summary-discount-row" class="hidden flex justify-between text-green-600">
-              <span>Discount (20%)</span>
+              <span id="summary-discount-label">Discount</span>
               <span id="summary-discount">−€0.00</span>
             </div>
             <div class="flex justify-between">
@@ -112,6 +134,71 @@ const breadcrumbs = [
 
 <script>
   import { getCart, removeFromCart, updateQuantity, getCartTotal } from '../scripts/cart';
+  import { discountTiers, getTier, getNextTierProgress, resolveDiscount } from '../data/discounts';
+
+  /**
+   * Renders the volume-discount panel: current tier, the gap to the next one, and
+   * the full ladder. The gap line is the part that actually grows basket size —
+   * an abstract "we offer volume discounts" does very little, whereas
+   * "add €47 to save €48" is a concrete, one-step-away action.
+   */
+  function renderVolumePanel(subtotal: number, resolved: { percent: number; source: string }) {
+    const panel = document.getElementById('volume-panel');
+    if (!panel) return;
+    panel.classList.remove('hidden');
+
+    const badge = document.getElementById('volume-badge');
+    const tier = getTier(subtotal);
+    if (badge) {
+      if (tier.percent > 0) {
+        badge.textContent = `${tier.percent}% OFF APPLIED`;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    const next = getNextTierProgress(subtotal);
+    const wrap = document.getElementById('volume-progress-wrap');
+    const maxNote = document.getElementById('volume-max');
+    const bar = document.getElementById('volume-bar');
+    const nudge = document.getElementById('volume-nudge');
+
+    if (next) {
+      wrap?.classList.remove('hidden');
+      maxNote?.classList.add('hidden');
+      if (bar) bar.style.width = `${next.progress}%`;
+      if (nudge) {
+        nudge.innerHTML = `Add <strong class="text-primary">€${next.amountAway.toFixed(2)}</strong> more to unlock `
+          + `<strong class="text-primary">${next.tier.percent}% off</strong> — you'd save `
+          + `<strong class="text-primary">€${next.saving.toFixed(2)}</strong>.`;
+      }
+    } else {
+      wrap?.classList.add('hidden');
+      maxNote?.classList.remove('hidden');
+    }
+
+    const ladder = document.getElementById('volume-ladder');
+    if (ladder) {
+      ladder.innerHTML = discountTiers
+        .filter(t => t.percent > 0)
+        .map(t => {
+          const active = subtotal >= t.min;
+          return `<li class="rounded-lg border px-2 py-2 ${active ? 'border-primary bg-primary/10' : 'border-gray-200 bg-white'}">
+            <span class="block text-sm font-bold ${active ? 'text-primary' : 'text-gray-900'}">${t.percent}%</span>
+            <span class="block text-[11px] ${active ? 'text-primary' : 'text-gray-500'}">from €${t.min}</span>
+          </li>`;
+        }).join('');
+    }
+
+    // When a promo code beats the tier, say so rather than silently overriding.
+    const msg = document.getElementById('discount-msg');
+    if (msg && resolved.source === 'volume' && discountApplied) {
+      msg.classList.remove('hidden', 'text-red-600');
+      msg.classList.add('text-green-600');
+      msg.textContent = `✓ Your ${tier.percent}% volume discount is larger than the code — we applied the better one.`;
+    }
+  }
 
   let discountApplied = false;
   const DISCOUNT_PCT = 0.20;
@@ -196,11 +283,13 @@ const breadcrumbs = [
       });
     });
 
-    // Summary
+    // Summary — volume tier and promo code do not stack; the better one wins.
     const subtotal = getCartTotal();
-    const discountAmt = discountApplied ? subtotal * DISCOUNT_PCT : 0;
+    const resolved = resolveDiscount(subtotal, discountApplied ? DISCOUNT_PCT * 100 : 0);
+    const discountAmt = resolved.amount;
     const total = subtotal - discountAmt;
     const freeShipping = total >= 150;
+    renderVolumePanel(subtotal, resolved);
 
     const subtotalEl = document.getElementById('summary-subtotal');
     const discountRow = document.getElementById('summary-discount-row');
@@ -210,9 +299,19 @@ const breadcrumbs = [
     const freeShipNote = document.getElementById('free-shipping-note');
 
     if (subtotalEl) subtotalEl.textContent = `€${subtotal.toFixed(2)}`;
-    if (discountApplied && discountRow && discountEl) {
-      discountRow.classList.remove('hidden');
-      discountEl.textContent = `−€${discountAmt.toFixed(2)}`;
+    if (discountRow && discountEl) {
+      if (resolved.percent > 0) {
+        discountRow.classList.remove('hidden');
+        discountEl.textContent = `−€${discountAmt.toFixed(2)}`;
+        const label = document.getElementById('summary-discount-label');
+        if (label) {
+          label.textContent = resolved.source === 'promo'
+            ? `Discount code (${resolved.percent}%)`
+            : `Volume discount (${resolved.percent}%)`;
+        }
+      } else {
+        discountRow.classList.add('hidden');
+      }
     }
     if (shippingEl) shippingEl.textContent = freeShipping ? 'FREE' : 'Calculated at checkout';
     if (totalEl) totalEl.textContent = `€${total.toFixed(2)}`;

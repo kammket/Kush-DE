@@ -201,6 +201,10 @@ const breadcrumbs = [
                   <span class="text-gray-600">Subtotal</span>
                   <span id="co-subtotal" class="font-medium">€0.00</span>
                 </div>
+                <div id="co-discount-row" class="hidden flex justify-between text-green-600">
+                  <span id="co-discount-label">Volume discount</span>
+                  <span id="co-discount" class="font-semibold">−€0.00</span>
+                </div>
                 <div class="flex justify-between">
                   <span class="text-gray-600">Shipping</span>
                   <span id="co-shipping" class="font-medium">FREE</span>
@@ -309,6 +313,7 @@ const breadcrumbs = [
 
 <script>
   import { getCart, getCartTotal, clearCart } from '../scripts/cart';
+  import { resolveDiscount } from '../data/discounts';
 
   const MIN_ORDER = 150;
 
@@ -360,11 +365,21 @@ const breadcrumbs = [
       `).join('');
     }
 
-    // Totals
-    const freeShipping = subtotal >= 150;
+    // Totals — volume discount comes off the subtotal before shipping is added.
+    const discount = resolveDiscount(subtotal);
+    const discounted = subtotal - discount.amount;
+    const freeShipping = discounted >= 150;
     document.getElementById('co-subtotal')!.textContent = `€${subtotal.toFixed(2)}`;
+    const discRow = document.getElementById('co-discount-row');
+    if (discount.percent > 0) {
+      discRow?.classList.remove('hidden');
+      document.getElementById('co-discount-label')!.textContent = `Volume discount (${discount.percent}%)`;
+      document.getElementById('co-discount')!.textContent = `−€${discount.amount.toFixed(2)}`;
+    } else {
+      discRow?.classList.add('hidden');
+    }
     document.getElementById('co-shipping')!.textContent = freeShipping ? 'FREE' : '€9.90';
-    const total = freeShipping ? subtotal : subtotal + 9.9;
+    const total = freeShipping ? discounted : discounted + 9.9;
     document.getElementById('co-total')!.textContent = `€${total.toFixed(2)}`;
 
     // Form submission
@@ -401,6 +416,8 @@ const breadcrumbs = [
         notes: (document.getElementById('notes') as HTMLTextAreaElement)?.value,
         items: cart.map(item => ({ name: item.name, variant: item.variantLabel, quantity: item.quantity, price: item.price })),
         subtotal,
+        discountPercent: discount.percent,
+        discountAmount: discount.amount,
         shipping: freeShipping ? 'FREE' : '€9.90',
         total,
         orderRef,
@@ -441,6 +458,7 @@ const breadcrumbs = [
           ...orderData.items.map(i => `- ${i.quantity}x ${i.name} (${i.variant}) — €${(i.price * i.quantity).toFixed(2)}`),
           ``,
           `Subtotal: €${subtotal.toFixed(2)}`,
+          ...(discount.percent > 0 ? [`Volume discount (${discount.percent}%): −€${discount.amount.toFixed(2)}`] : []),
           `Shipping: ${orderData.shipping}`,
           `Total: €${total.toFixed(2)}`,
           ``,
