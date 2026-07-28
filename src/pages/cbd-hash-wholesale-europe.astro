@@ -96,6 +96,8 @@ const hashTypes = [
     linkLabel: "0% THC range",
   },
 ];
+// English-only page: no localized versions exist, so BaseLayout must not emit
+// hreflang alternates — they would point at URLs that 404 (noHreflang below).
 ---
 
 <BaseLayout
@@ -103,6 +105,7 @@ const hashTypes = [
   description="Wholesale CBD hash and resin: Moroccan, Afghan, pollen/dry sift, filtered and 0% THC grades. Kilo pricing, COA with every batch, shipped across Europe in 24h."
   canonicalURL="https://greensfarmhouse.com/cbd-hash-wholesale-europe"
   jsonLd={jsonLd}
+  noHreflang={true}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 

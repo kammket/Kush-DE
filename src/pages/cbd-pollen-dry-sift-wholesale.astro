@@ -72,6 +72,8 @@ const process = [
   { step: "3", title: "Grade by micron", text: "Finer screens yield purer sift. The first, finest pass is the premium grade; later passes carry more plant matter." },
   { step: "4", title: "Press or leave loose", text: "Left loose it stays pollen. Pressed with warmth and pressure it becomes traditional hash." },
 ];
+// English-only page: no localized versions exist, so BaseLayout must not emit
+// hreflang alternates — they would point at URLs that 404 (noHreflang below).
 ---
 
 <BaseLayout
@@ -79,6 +81,7 @@ const process = [
   description="Wholesale CBD pollen, skuff and dry sift: solvent-free separated resin, entry to premium grade. Golden Static, 3X Filtered, COA every batch, 24h delivery."
   canonicalURL="https://greensfarmhouse.com/cbd-pollen-dry-sift-wholesale"
   jsonLd={jsonLd}
+  noHreflang={true}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 

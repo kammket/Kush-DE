@@ -64,6 +64,8 @@ const faqJsonLd = {
     "acceptedAnswer": { "@type": "Answer", "text": f.answer }
   }))
 };
+// English-only page: no localized versions exist, so BaseLayout must not emit
+// hreflang alternates — they would point at URLs that 404 (noHreflang below).
 ---
 
 <BaseLayout
@@ -71,6 +73,7 @@ const faqJsonLd = {
   description="Wholesale 0% THC CBD: resins 25–50% CBD, 99.8% isolate and 90% distillate, all non-detectable THC. For markets requiring THC-free products. COA included."
   canonicalURL="https://greensfarmhouse.com/thc-free-cbd-wholesale"
   jsonLd={jsonLd}
+  noHreflang={true}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 

@@ -70,6 +70,8 @@ const useCases = [
   { icon: "🚬", title: "Pre-roll production", text: "Trim, or a trim and small-bud blend, keeps unit cost low enough that pre-rolls carry a workable margin at retail price points customers accept." },
   { icon: "🏷️", title: "Value retail tier", text: "A cheaper shelf line brings in price-sensitive customers who would never pick up premium indoor — and many of them trade up once they return." },
 ];
+// English-only page: no localized versions exist, so BaseLayout must not emit
+// hreflang alternates — they would point at URLs that 404 (noHreflang below).
 ---
 
 <BaseLayout
@@ -77,6 +79,7 @@ const useCases = [
   description="Wholesale CBD trim from €0.19/g, small buds from €0.39/g. Bulk feedstock for extraction, pre-rolls and value retail. EU-grown, lab-tested, kilo pricing."
   canonicalURL="https://greensfarmhouse.com/cbd-trim-small-buds-wholesale"
   jsonLd={jsonLd}
+  noHreflang={true}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 

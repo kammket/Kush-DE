@@ -70,6 +70,8 @@ const layers = [
   { n: "2", title: "The extract coat", text: "CBD extract is applied to the surface, raising total cannabinoid content and giving the sift something to adhere to." },
   { n: "3", title: "The outer layer", text: "Rolled in pollen for MoonRock's golden finish, or in CBD isolate for Ice Rock's white crystalline shell." },
 ];
+// English-only page: no localized versions exist, so BaseLayout must not emit
+// hreflang alternates — they would point at URLs that 404 (noHreflang below).
 ---
 
 <BaseLayout
@@ -77,6 +79,7 @@ const layers = [
   description="Wholesale MoonRock and Ice Rock CBD: premium indoor flower coated in extract, rolled in pollen or isolate. Our highest-cannabinoid flower format. COA included."
   canonicalURL="https://greensfarmhouse.com/moonrock-icerock-cbd-wholesale"
   jsonLd={jsonLd}
+  noHreflang={true}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
