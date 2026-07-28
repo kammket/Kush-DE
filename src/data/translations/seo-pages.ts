@@ -29,6 +29,10 @@ export const seoPages: SeoPageData[] = [
   { slug: 'cbd-sample-packs', gradient: 'from-green-50 via-white to-lime-50', tag: '🌿', categories: ['cbd-flowers', 'cbd-resins'] },
   { slug: 'cbn-sleep-products', gradient: 'from-indigo-50 via-white to-primary/5', tag: '🌙', categories: ['cbd-resins', 'cbd-gummies'] },
   { slug: 'cbd-dropshipping-wholesale-europe', gradient: 'from-sky-50 via-white to-primary/5', tag: '🛒', categories: ['cbd-flowers', 'cbd-oils'] },
+  // Partially translated: DE and FR only. [seo].astro skips locales without copy,
+  // and hreflang is narrowed to match, so add locales here as translations land.
+  { slug: 'cbd-hash-wholesale-europe', gradient: 'from-amber-50 via-white to-primary/5', tag: '🧱', categories: ['cbd-resins', 'cbd-flowers'] },
+  { slug: 'moroccan-cbd-hash-wholesale', gradient: 'from-orange-50 via-white to-primary/5', emoji: '🇲🇦', categories: ['cbd-resins', 'cbd-flowers'] },
 ];
 
 // translations[slug][locale] = { title, desc, h1, heroTag, heroDesc, btnPrimary, btnSecondary, features: [{title, desc}], seoTitle, seoContent, faqTitle, faq: [{q,a}], ctaTitle, ctaDesc }
@@ -389,6 +393,122 @@ export const seoTranslations: Record<string, Record<string, SeoTranslation>> = {
     nl: { title: 'CBD Groothandel voor E-commerce Verkopers | Snelle Herbevoorrading', desc: 'CBD-groothandel voor online winkels. Minimale bestelling €150, verzending in 24u, zonder contract. Test met monsters, herbevoorraad bestsellers.', h1: 'CBD Groothandel voor E-commerce Verkopers', heroTag: '🛒 Gemaakt voor Online Verkopers', heroDesc: 'Runt u een CBD-webshop? Bestel wat u nodig heeft, wanneer u het nodig heeft — minimum €150, geen contract, geen exclusiviteit, verzending binnen 24 uur. Test nieuwe producten met proefpakketten voordat u zich vastlegt op volume.', btnPrimary: 'Praat over Herbevoorrading via WhatsApp', btnSecondary: 'Bekijk Volledige Catalogus', features: [{ icon: '💶', title: 'Laag Minimum van €150', desc: 'Herbevoorraad klein en vaak in plaats van kapitaal vast te leggen in onzekere voorraad.' }, { icon: '⚡', title: 'Verzending binnen 24 Uur', desc: 'Bestel deze week, ontvang voorraad binnen dagen. Geen maanden voorraad vooraf nodig.' }, { icon: '🧪', title: 'Test Voordat U Zich Vastlegt', desc: 'Vermeld een nieuw product eerst met een monster. Schaal de SKU\'s op die echt converteren.' }], productSections: [{ title: 'Begin met een Testbestelling', desc: 'Voordat u een nieuwe referentie aan uw winkel toevoegt, test u deze zelf.', category: 'cbd-flowers', browseLabel: 'Bekijk Alle Proefpakketten →' }, { title: 'Volledige Catalogus', desc: 'Bloemen, hars, oliën, gummies — de hele catalogus beschikbaar in groothandel.', category: 'cbd-oils', browseLabel: 'Bekijk Alle CBD-Oliën →' }], faqTitle: 'CBD Groothandel voor Online Verkopers — FAQ', faq: [{ question: 'Bieden jullie CBD-dropshipping aan?', answer: 'Wij verzenden geen blinde bestellingen rechtstreeks naar uw eindklanten onder uw merk — wij bieden snelle groothandelslevering met laag minimum: u bestelt voorraad, wij verzenden binnen 24 uur, u handelt uw eigen klantorders af. Voor de meeste online verkopers werkt dit beter, omdat u volledige controle behoudt over verpakking, merk en levertijden.' }, { question: 'Wat is de minimale bestelling voor online verkopers?', answer: '€150 — laag genoeg om klein en vaak te herbevoorraden zonder kapitaal vast te leggen in een grote voorraad, zoals de meeste online CBD-winkels daadwerkelijk verkopen.' }, { question: 'Kan ik beginnen met een kleine testbestelling?', answer: 'Ja. Ontdekkingspakketten en monsterbestellingen laten u een nieuw product vermelden voordat u zich vastlegt op volume. Zodra u weet wat verkoopt, schaalt u op met een volledige groothandelsbestelling.' }], ctaTitle: 'Klaar om Uw Winkel te Bevoorraden?', ctaDesc: 'Vertel ons via WhatsApp wat u verkoopt — wij wijzen u naar de juiste producten en verzenden uw eerste bestelling binnen 24 uur.', ctaBtnPrimary: 'Bekijk Alle Producten', ctaBtnSecondary: 'Neem Contact Op' },
     fi: { title: 'CBD Tukkukauppa Verkkokaupoille | Nopea Täydennys', desc: 'CBD-tukkutoimitus verkkokaupoille. Minimitilaus 150€, toimitus 24h, ei sopimusta. Testaa näytteillä, täydennä bestsellerit.', h1: 'CBD Tukkukauppa Verkkokaupoille', heroTag: '🛒 Suunniteltu Verkkomyyjille', heroDesc: 'Pyöritätkö CBD-verkkokauppaa? Tilaa mitä tarvitset, milloin tarvitset — minimi 150€, ei sopimusta, ei yksinoikeutta, toimitus 24 tunnissa. Testaa uusia tuotteita näytepakkauksilla ennen volyymiin sitoutumista.', btnPrimary: 'Keskustele Täydennyksestä WhatsAppissa', btnSecondary: 'Katso Koko Valikoima', features: [{ icon: '💶', title: 'Matala 150€ Minimi', desc: 'Täydennä pienissä erissä usein sen sijaan, että sitoisit pääomaa epävarmaan varastoon.' }, { icon: '⚡', title: 'Toimitus 24 Tunnissa', desc: 'Tilaa tällä viikolla, saat varaston käsiisi päivissä. Ei tarvetta esiostaa kuukausien varastoa.' }, { icon: '🧪', title: 'Testaa Ennen Sitoutumista', desc: 'Listaa uusi tuote ensin näytteellä. Skaalaa tuotteet, jotka oikeasti konvertoivat.' }], productSections: [{ title: 'Aloita Testitilauksella', desc: 'Ennen kuin lisäät uuden tuotteen kauppaasi, testaa se itse.', category: 'cbd-flowers', browseLabel: 'Katso Kaikki Näytepakkaukset →' }, { title: 'Koko Valikoima', desc: 'Kukat, hartsit, öljyt, kumikarkit — koko valikoima saatavilla tukussa.', category: 'cbd-oils', browseLabel: 'Katso Kaikki CBD-öljyt →' }], faqTitle: 'CBD Tukkukauppa Verkkomyyjille — UKK', faq: [{ question: 'Tarjoatteko CBD-dropshippingia?', answer: 'Emme lähetä sokkotilauksia suoraan loppuasiakkaillesi brändilläsi — tarjoamme nopean tukkutoimituksen matalalla minimillä: tilaat varastoa, toimitamme 24 tunnissa, sinä hoidat omat asiakastilauksesi. Useimmille verkkomyyjille tämä toimii paremmin, koska säilytät täyden hallinnan pakkauksesta, brändistä ja toimitusajoista.' }, { question: 'Mikä on minimitilaus verkkomyyjille?', answer: '150€ — tarpeeksi matala täydentääksesi pieniä eriä usein sitomatta pääomaa suureen varastoon, mikä vastaa sitä, miten useimmat CBD-verkkokaupat todella myyvät.' }, { question: 'Voinko aloittaa pienellä testitilauksella?', answer: 'Kyllä. Tutustumispakkaukset ja näytetilaukset antavat sinun listata uuden tuotteen ennen volyymiin sitoutumista. Kun tiedät mikä myy, skaalaa täydellä tukkutilauksella.' }], ctaTitle: 'Valmis Täyttämään Kauppasi?', ctaDesc: 'Kerro WhatsAppissa mitä myyt — ohjaamme sinut oikeisiin tuotteisiin ja toimitamme ensimmäisen tilauksesi 24 tunnissa.', ctaBtnPrimary: 'Katso Kaikki Tuotteet', ctaBtnSecondary: 'Ota Yhteyttä' },
     pt: { title: 'CBD por Grosso para Vendedores E-commerce | Reposição Rápida', desc: 'Fornecimento CBD por grosso para lojas online. Encomenda mínima 150€, envio em 24h, sem contrato. Teste com amostras, reponha os mais vendidos.', h1: 'CBD por Grosso para Vendedores E-commerce', heroTag: '🛒 Feito para Vendedores Online', heroDesc: 'Gere uma loja CBD online? Encomende o que precisa, quando precisa — mínimo 150€, sem contrato, sem exclusividade, envio em 24 horas. Teste novos produtos com packs de amostras antes de se comprometer em volume.', btnPrimary: 'Falar sobre Reposição no WhatsApp', btnSecondary: 'Ver Todo o Catálogo', features: [{ icon: '💶', title: 'Mínimo Baixo de 150€', desc: 'Reponha pouco e com frequência em vez de imobilizar capital em stock incerto.' }, { icon: '⚡', title: 'Envio em 24 Horas', desc: 'Encomende esta semana, receba o stock em dias. Não precisa de pré-comprar meses de stock.' }, { icon: '🧪', title: 'Teste Antes de se Comprometer', desc: 'Liste um novo produto primeiro com uma amostra. Escale as referências que realmente convertem.' }], productSections: [{ title: 'Comece com uma Encomenda de Teste', desc: 'Antes de adicionar uma nova referência à sua loja, teste-a você mesmo.', category: 'cbd-flowers', browseLabel: 'Ver Todos os Packs de Amostras →' }, { title: 'Catálogo Completo', desc: 'Flores, resinas, óleos, gomas — todo o catálogo disponível por grosso.', category: 'cbd-oils', browseLabel: 'Ver Todos os Óleos CBD →' }], faqTitle: 'CBD por Grosso para Vendedores Online — FAQ', faq: [{ question: 'Oferecem dropshipping de CBD?', answer: 'Não enviamos encomendas cegas diretamente aos seus clientes finais com a sua marca — oferecemos fornecimento grossista rápido com mínimo baixo: encomenda stock, enviamos em 24h, você trata das suas próprias encomendas de clientes. Para a maioria dos vendedores online isto funciona melhor, pois mantém controlo total sobre embalagem, marca e prazos.' }, { question: 'Qual é a encomenda mínima para vendedores online?', answer: '150€ — suficientemente baixo para repor pouco e com frequência sem imobilizar capital num stock grande, que é como a maioria das lojas CBD online realmente vende.' }, { question: 'Posso começar com uma pequena encomenda de teste?', answer: 'Sim. Os packs de descoberta e encomendas de amostra permitem listar um novo produto antes de se comprometer em volume. Assim que souber o que vende, escale com uma encomenda grossista completa.' }], ctaTitle: 'Pronto para Abastecer a Sua Loja?', ctaDesc: 'Diga-nos o que vende no WhatsApp — orientamo-lo para os produtos certos e enviamos a sua primeira encomenda em 24 horas.', ctaBtnPrimary: 'Ver Todos os Produtos', ctaBtnSecondary: 'Contactar' },
+  },
+  'cbd-hash-wholesale-europe': {
+    de: {
+      title: 'CBD Hash Großhandel Europa',
+      desc: 'CBD Hash und Harz im Großhandel: marokkanisch, afghanisch, Pollen/Dry Sift, gefiltert und 0% THC. Kilopreise, COA pro Charge, Versand in 24h.',
+      h1: 'CBD Hash Großhandel — Alle Qualitäten, ein Lieferant',
+      heroTag: '🧱 Hash & Harz',
+      heroDesc: 'Traditionelle marokkanische und afghanische Pressungen, loses Pollen und Dry Sift, mehrfach gefilterte Qualitäten mit hohem CBD-Anteil und eine eigene 0%-THC-Linie — über 20 Harze in einem Katalog, laborgeprüft, mit Staffelpreisen bis zum Kilo.',
+      btnPrimary: 'Alle Harze ansehen', btnSecondary: 'CBD Blüten ansehen',
+      features: [
+        { icon: '🇲🇦', title: 'Marokkanisch & Afghanisch', desc: 'Die klassischen Profile, die Ihre Kunden namentlich verlangen — weich und blumig oder dunkel und erdig.' },
+        { icon: '🌾', title: 'Pollen & Dry Sift', desc: 'Mechanisch getrennt, ohne Lösungsmittel. Der günstigste Einstieg in die Harz-Kategorie und der beste Weg, Blüten-Kunden zu Harz-Kunden zu machen.' },
+        { icon: '📄', title: 'COA pro Charge', desc: 'Jede Charge wird mit unabhängigem Analysezertifikat geliefert. Fragen Sie jedes COA vor der Bestellung per WhatsApp an.' }
+      ],
+      productSections: [
+        { title: 'CBD Harz & Hash — Großhandel', desc: 'Marokkanisch, Afghanisch, King Hassan, Ketama, Skuff-Pollen und gefilterte Qualitäten bis 50% CBD.', category: 'cbd-resins', browseLabel: 'Alle CBD Harze ansehen →' },
+        { title: 'CBD Blüten — Großhandel', desc: 'Das Ausgangsmaterial: Indoor- und Greenhouse-Blüten aus EU-Anbau, ab €0,19/g im Großhandel.', category: 'cbd-flowers', browseLabel: 'Alle CBD Blüten ansehen →' }
+      ],
+      faqTitle: 'CBD Hash Großhandel — FAQ',
+      faq: [
+        { question: 'Was ist CBD Hash?', answer: 'CBD Hash — auch CBD Harz oder Hanf-Hash genannt — ist ein Konzentrat aus den Harzdrüsen (Trichomen) der Hanfblüte statt aus der Blüte selbst. Die Trichome werden mechanisch getrennt, meist durch Sieben über feine Siebe, und anschließend zu Blöcken gepresst. Da im Harz der Großteil der Cannabinoide sitzt, ist Hash deutlich konzentrierter als die Blüte, bleibt aber innerhalb derselben gesetzlichen THC-Grenzen.' },
+        { question: 'Was ist der Unterschied zwischen Pollen, Dry Sift und Hash?', answer: 'Es sind Stufen desselben Prozesses. Pollen (auch Skuff oder Kief) ist das lose, sandige Harzpulver, das vor dem Pressen durch das Sieb fällt. Dry Sift bezeichnet die Siebmethode selbst. Hash entsteht, wenn dieses Pulver unter Wärme und Druck zu einem festen Block gepresst wird. Der Unterschied im Regal ist also Textur, Formbarkeit und Preispunkt.' },
+        { question: 'Wie hoch ist die Mindestbestellmenge?', answer: 'Unsere Harze beginnen bei kleinen Großhandelsmengen und skalieren bis zu Kilopreisen, wobei der Grammpreis auf jeder Staffel sinkt. Die Staffeln stehen auf jeder Produktseite. Wenn Sie sich noch nicht festlegen möchten, können Sie mit dem Harz-Entdeckerpaket mehrere Qualitäten in einer Bestellung testen.' },
+        { question: 'Darf ich CBD Hash in meinem Land verkaufen?', answer: 'CBD-Produkte unter der 0,3%-THC-Grenze sind EU-weit weitgehend zulässig, doch die Regeln speziell für Hash und Blüten unterscheiden sich erheblich zwischen den Mitgliedstaaten — manche Länder beschränken oder verbieten rauchbare Hanfformate, selbst wenn CBD-Öl frei verkäuflich ist. Prüfen Sie die Vorschriften in Ihrem Markt, bevor Sie einlisten; unsere Rechtsübersicht ist ein Ausgangspunkt, keine Rechtsberatung.' },
+        { question: 'Wie kalkuliere ich Hash im Laden?', answer: 'Hash erzielt in der Regel einen höheren Grammpreis als Blüten und eine bessere Marge, weil Kunden kleinere Mengen kaufen und nach Aroma und Textur statt nach Volumen beurteilen. Die meisten Händler führen drei Stufen — ein Einstiegs-Pollen, eine klassische Pressung und eine Premium- oder Hochprozent-Qualität — damit Kunden aufsteigen können.' }
+      ],
+      ctaTitle: 'Bauen Sie Ihr Hash-Regal auf',
+      ctaDesc: 'Nennen Sie uns Ihr Volumen und Ihren Zielpreis, und wir stellen eine Staffel zusammen — oder bestellen Sie zuerst ein Entdeckerpaket und beurteilen Sie das Material selbst.',
+      ctaBtnPrimary: 'Alle Harze ansehen', ctaBtnSecondary: 'Kontakt aufnehmen'
+    },
+    fr: {
+      title: 'Grossiste Hash CBD Europe',
+      desc: 'Hash et résine CBD en gros : marocain, afghan, pollen/dry sift, filtré et 0% THC. Tarifs au kilo, COA par lot, expédition en 24h.',
+      h1: 'Grossiste Hash CBD — Toutes les qualités, un seul fournisseur',
+      heroTag: '🧱 Hash & Résine',
+      heroDesc: 'Pressages marocains et afghans traditionnels, pollen et dry sift en vrac, qualités multi-filtrées à haute teneur et une gamme 0% THC dédiée — plus de 20 résines dans un seul catalogue, testées en laboratoire, avec des tarifs dégressifs jusqu\'au kilo.',
+      btnPrimary: 'Voir toutes les résines', btnSecondary: 'Voir les fleurs CBD',
+      features: [
+        { icon: '🇲🇦', title: 'Marocain & Afghan', desc: 'Les profils classiques que vos clients demandent par leur nom — souple et floral, ou sombre et terreux.' },
+        { icon: '🌾', title: 'Pollen & Dry Sift', desc: 'Séparation mécanique, sans solvant. L\'entrée de gamme de la catégorie résine et le meilleur moyen de convertir vos acheteurs de fleurs.' },
+        { icon: '📄', title: 'COA par lot', desc: 'Chaque lot est livré avec un certificat d\'analyse indépendant. Demandez n\'importe quel COA sur WhatsApp avant de commander.' }
+      ],
+      productSections: [
+        { title: 'Résine & Hash CBD — En gros', desc: 'Marocain, Afghan, King Hassan, Ketama, pollen Skuff et qualités filtrées jusqu\'à 50% de CBD.', category: 'cbd-resins', browseLabel: 'Voir toutes les résines CBD →' },
+        { title: 'Fleurs CBD — En gros', desc: 'La matière première : fleurs indoor et greenhouse cultivées en Europe, à partir de 0,19 €/g en gros.', category: 'cbd-flowers', browseLabel: 'Voir toutes les fleurs CBD →' }
+      ],
+      faqTitle: 'Grossiste Hash CBD — FAQ',
+      faq: [
+        { question: 'Qu\'est-ce que le hash CBD ?', answer: 'Le hash CBD — aussi appelé résine CBD ou hash de chanvre — est un concentré issu des glandes résineuses (trichomes) de la fleur de chanvre plutôt que de la fleur elle-même. Les trichomes sont séparés mécaniquement, généralement par tamisage à sec sur des tamis fins, puis pressés en blocs. Comme la résine concentre l\'essentiel des cannabinoïdes, le hash est nettement plus concentré que la fleur d\'origine, tout en respectant les mêmes limites légales de THC.' },
+        { question: 'Quelle différence entre pollen, dry sift et hash ?', answer: 'Ce sont des étapes du même procédé. Le pollen (aussi appelé skuff ou kief) est la poudre de résine sableuse qui traverse le tamis avant pressage. Le dry sift désigne la méthode de tamisage elle-même. Le hash est ce que l\'on obtient lorsque cette poudre est pressée sous chaleur et pression en un bloc solide. La différence en rayon tient donc à la texture, à la malléabilité et au positionnement prix.' },
+        { question: 'Quelle est la commande minimum ?', answer: 'Nos résines démarrent à de petites quantités de gros et montent jusqu\'aux tarifs au kilo, le prix au gramme diminuant à chaque palier. Les paliers figurent sur chaque fiche produit. Si vous préférez ne pas vous engager tout de suite, le pack découverte résines permet de tester plusieurs qualités en une seule commande.' },
+        { question: 'Puis-je vendre du hash CBD dans mon pays ?', answer: 'Les produits CBD sous le seuil de 0,3% de THC sont largement autorisés dans l\'UE, mais les règles propres au hash et aux fleurs varient fortement d\'un État membre à l\'autre — certains pays restreignent ou interdisent les formats fumables même là où l\'huile de CBD se vend librement. Vérifiez la réglementation de votre marché avant de référencer ; notre aperçu juridique est un point de départ, pas un conseil juridique.' },
+        { question: 'Comment positionner le hash en boutique ?', answer: 'Le hash supporte généralement un prix au gramme plus élevé que la fleur et une meilleure marge, car les clients achètent de plus petites quantités et jugent sur l\'arôme et la texture plutôt que sur le volume. La plupart des détaillants tiennent trois niveaux — un pollen d\'entrée de gamme, un pressage traditionnel, et une qualité premium ou à haute teneur — pour permettre la montée en gamme.' }
+      ],
+      ctaTitle: 'Construisez votre rayon hash',
+      ctaDesc: 'Indiquez-nous votre volume et votre prix cible, nous composerons un palier — ou commandez d\'abord un pack découverte et jugez la matière vous-même.',
+      ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Nous contacter'
+    },
+  },
+  'moroccan-cbd-hash-wholesale': {
+    de: {
+      title: 'Marokkanisches CBD Hash Großhandel',
+      desc: 'Marokkanisches CBD Hash im Großhandel: Ketama, King Hassan, Beldia und klassische Pressung. Rif-Tradition, 0%-THC-Optionen, COA pro Charge.',
+      h1: 'Marokkanisches CBD Hash — Ketama, Beldia & King Hassan',
+      heroTag: '🇲🇦 Rif-Tradition',
+      heroDesc: 'Der Pressstil, den europäische Kunden am besten kennen — weich, blumig, im Rif-Verfahren gesiebt, hergestellt aus EU-Hanf innerhalb der gesetzlichen THC-Grenzen. Erhältlich als klassische Pressung und als Linie ohne nachweisbares THC.',
+      btnPrimary: 'Marokkanische Harze ansehen', btnSecondary: 'CBD Blüten ansehen',
+      features: [
+        { icon: '🏔️', title: 'Ketama', desc: 'Eine Region im Rif-Gebirge, die seit Generationen für sorgfältiges Dry Sift steht. Der Name signalisiert einen Standard an Sauberkeit und Aroma.' },
+        { icon: '🌿', title: 'Beldia', desc: 'Die traditionelle marokkanische Landrasse, geschätzt für ihr charakteristisches Aroma. Unsere Version ist eine CBN+CBD-Pressung für das Abendsegment.' },
+        { icon: '👑', title: 'King Hassan', desc: 'Premium-Qualität aus dem saubersten Siebdurchgang — weniger Pflanzenmaterial, konzentrierteres Aromaprofil, entsprechend positioniert.' }
+      ],
+      productSections: [
+        { title: 'Marokkanische Harze — Großhandel', desc: 'Vier Pressungen mit jeweils eigenem Aroma, eigener Textur und eigenem Cannabinoid-Profil.', category: 'cbd-resins', browseLabel: 'Alle CBD Harze ansehen →' },
+        { title: 'Passende CBD Blüten', desc: 'Ergänzen Sie das Harz-Regal mit Indoor- und Greenhouse-Blüten aus demselben Katalog.', category: 'cbd-flowers', browseLabel: 'Alle CBD Blüten ansehen →' }
+      ],
+      faqTitle: 'Marokkanisches CBD Hash — FAQ',
+      faq: [
+        { question: 'Was macht Hash „marokkanisch"?', answer: 'Die Methode, nicht nur die Herkunft. Marokkanisches Hash entsteht, indem getrockneter Hanf über feine Siebe gesiebt wird, um das lose Harz — lokal Kif genannt — zu gewinnen, das anschließend mit sanfter Wärme zu Platten gepresst wird. Das Ergebnis ist charakteristisch weich und formbar, heller als afghanische Pressungen, mit blumigem, leicht würzigem Aroma.' },
+        { question: 'Was ist Ketama Hash?', answer: 'Ketama ist eine Region im marokkanischen Rif-Gebirge, die seit Generationen als Referenz für Qualitätsproduktion gilt. Der Name steht für einen bestimmten Standard an Dry Sift — sauber, aromatisch und sorgfältig gepresst. Wir führen ihn in zwei Varianten: eine CBG/CBD-Version mit breiterem Cannabinoid-Profil und eine Pressung mit 25% CBD und 0% THC für Märkte, die kein nachweisbares THC zulassen.' },
+        { question: 'Was ist Beldia?', answer: 'Beldia bezeichnet die traditionelle marokkanische Landrassen-Sorte, geschätzt eher für ihr Aroma als für reine Wirkstärke. Unser Le Beldia ist eine CBN+CBD-Pressung — der CBN-Anteil ordnet sie dem Abend- und Entspannungssegment zu und macht sie zur natürlichen Ergänzung eines Schlaf-Sortiments.' },
+        { question: 'Wie unterscheidet sich marokkanisches von afghanischem Hash?', answer: 'Beide werden gesiebt und gepresst, doch die Pressung unterscheidet sich. Der marokkanische Stil arbeitet mit weniger Hitze und Druck und ergibt einen weicheren, helleren, bröseligeren Block mit blumiger Note. Der afghanische Stil nutzt mehr Hitze und Druck für einen dunkleren, dichteren, öligeren Block mit erdigerem Aroma. Die meisten Regale profitieren von je einer Variante.' },
+        { question: 'Gibt es marokkanisches Hash ohne THC?', answer: 'Ja. Unser Ketama 25% CBD wird auf 0% THC gepresst, ebenso Soft 30%, Creamy Yellow 50% und Supreme 50% derselben Linie. Das sind die Qualitäten für Märkte, in denen Fertigprodukte kein nachweisbares THC enthalten dürfen, statt lediglich unter einem Schwellenwert zu bleiben.' }
+      ],
+      ctaTitle: 'Marokkanisches Hash im Großhandel bestellen',
+      ctaDesc: 'Staffelpreise bis zum Kilo, COA pro Charge, Versand innerhalb von 24 Stunden in ganz Europa.',
+      ctaBtnPrimary: 'Alle Harze ansehen', ctaBtnSecondary: 'Kontakt aufnehmen'
+    },
+    fr: {
+      title: 'Hash CBD Marocain en Gros',
+      desc: 'Hash CBD marocain en gros : Ketama, King Hassan, Beldia et pressage classique. Tradition du Rif, options 0% THC, COA par lot.',
+      h1: 'Hash CBD Marocain — Ketama, Beldia & King Hassan',
+      heroTag: '🇲🇦 Tradition du Rif',
+      heroDesc: 'Le style de pressage que les clients européens connaissent le mieux — souple, floral, tamisé à sec dans la tradition du Rif, produit à partir de chanvre européen dans les limites légales de THC. Disponible en pressages classiques et en gamme sans THC détectable.',
+      btnPrimary: 'Voir les résines marocaines', btnSecondary: 'Voir les fleurs CBD',
+      features: [
+        { icon: '🏔️', title: 'Ketama', desc: 'Une région du Rif qui incarne depuis des générations un tamisage à sec soigné. Le nom signale un standard de propreté et d\'arôme.' },
+        { icon: '🌿', title: 'Beldia', desc: 'La variété landrace marocaine traditionnelle, appréciée pour son arôme caractéristique. La nôtre est un pressage CBN+CBD pour le segment du soir.' },
+        { icon: '👑', title: 'King Hassan', desc: 'Qualité premium issue du tamisage le plus propre — moins de matière végétale, profil aromatique plus concentré, positionné en conséquence.' }
+      ],
+      productSections: [
+        { title: 'Résines marocaines — En gros', desc: 'Quatre pressages, chacun avec son arôme, sa texture et son profil de cannabinoïdes.', category: 'cbd-resins', browseLabel: 'Voir toutes les résines CBD →' },
+        { title: 'Fleurs CBD associées', desc: 'Complétez le rayon résine avec des fleurs indoor et greenhouse du même catalogue.', category: 'cbd-flowers', browseLabel: 'Voir toutes les fleurs CBD →' }
+      ],
+      faqTitle: 'Hash CBD Marocain — FAQ',
+      faq: [
+        { question: 'Qu\'est-ce qui rend un hash « marocain » ?', answer: 'La méthode, pas seulement l\'origine. Le hash marocain est obtenu en tamisant à sec du chanvre séché sur des tamis fins pour recueillir la résine libre — appelée localement kif — puis en la pressant en plaques avec une chaleur douce. Le résultat est caractéristiquement souple et malléable, plus clair que les pressages afghans, avec un arôme floral légèrement épicé.' },
+        { question: 'Qu\'est-ce que le hash Ketama ?', answer: 'Ketama est une région du Rif marocain qui sert de référence en matière de production de qualité depuis des générations. Le nom signale un standard particulier de dry sift — propre, aromatique et soigneusement pressé. Nous le proposons sous deux formes : une version CBG/CBD au profil de cannabinoïdes plus large, et un pressage à 25% de CBD et 0% de THC pour les marchés exigeant l\'absence de THC détectable.' },
+        { question: 'Qu\'est-ce que la Beldia ?', answer: 'La Beldia désigne la variété landrace marocaine traditionnelle, appréciée pour son arôme distinctif plutôt que pour sa puissance brute. Notre Le Beldia est un pressage CBN+CBD — la teneur en CBN le place dans le segment du soir et de la détente, ce qui en fait un complément naturel à une gamme sommeil.' },
+        { question: 'Quelle différence entre hash marocain et afghan ?', answer: 'Les deux sont tamisés à sec et pressés, mais le pressage diffère. Le style marocain emploie moins de chaleur et de pression, produisant un bloc plus souple, plus clair et plus friable, au nez floral. Le style afghan utilise davantage de chaleur et de pression pour un bloc plus sombre, plus dense et plus gras, à l\'arôme terreux. La plupart des rayons gagnent à proposer les deux.' },
+        { question: 'Proposez-vous du hash marocain sans THC ?', answer: 'Oui. Notre Ketama 25% CBD est pressé à 0% de THC, aux côtés de Soft 30%, Creamy Yellow 50% et Supreme 50% dans la même gamme sans THC détectable. Ce sont les qualités à référencer si vous vendez sur des marchés exigeant que les produits finis ne contiennent aucun THC détectable, plutôt que de simplement rester sous un seuil.' }
+      ],
+      ctaTitle: 'Commandez du hash marocain en gros',
+      ctaDesc: 'Tarifs dégressifs jusqu\'au kilo, COA par lot, expédition sous 24 heures partout en Europe.',
+      ctaBtnPrimary: 'Voir toutes les résines', ctaBtnSecondary: 'Nous contacter'
+    },
   },
 };
 

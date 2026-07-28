@@ -12,6 +12,9 @@ export function getStaticPaths() {
   const paths: { params: { lang: string; seo: string }; props: { lang: string; seo: string } }[] = [];
   for (const locale of supportedLocales) {
     for (const page of seoPages) {
+      // Only build a locale that actually has copy. Partially-translated pages would
+      // otherwise emit a redirect stub at a real URL.
+      if (!seoTranslations[page.slug]?.[locale]) continue;
       paths.push({ params: { lang: locale, seo: page.slug }, props: { lang: locale, seo: page.slug } });
     }
   }
@@ -34,6 +37,10 @@ const breadcrumbs = [
 const products1 = getProductsByCategory(tr.productSections[0]?.category || 'cbd-flowers').filter(p => p.inStock).slice(0, 4);
 const products2 = tr.productSections[1] ? getProductsByCategory(tr.productSections[1].category || 'cbd-oils').filter(p => p.inStock).slice(0, 4) : [];
 
+// Declare alternates only for locales this page exists in: EN (the root .astro page)
+// plus whichever locales have translated copy.
+const hreflangLocales = ['en', ...Object.keys(seoTranslations[seo] ?? {})] as Locale[];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -52,6 +59,7 @@ const jsonLd = {
   canonicalURL={`https://greensfarmhouse.com/${locale}/${seo}`}
   jsonLd={jsonLd}
   locale={locale}
+  hreflangLocales={hreflangLocales}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <Breadcrumbs items={breadcrumbs} />

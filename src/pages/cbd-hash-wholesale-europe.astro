@@ -5,6 +5,8 @@ import ContentByline from '../components/ContentByline.astro';
 import ProductCard from '../components/ProductCard.astro';
 import WaLink from '../components/WaLink.astro';
 import { getProductBySlug } from '../data/products';
+import { seoTranslations } from '../data/translations/seo-pages';
+import type { Locale } from '../i18n/config';
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
@@ -96,8 +98,9 @@ const hashTypes = [
     linkLabel: "0% THC range",
   },
 ];
-// English-only page: no localized versions exist, so BaseLayout must not emit
-// hreflang alternates — they would point at URLs that 404 (noHreflang below).
+// Alternates are derived from the translations that actually exist, so this list
+// can never claim a localized URL that was not built.
+const hreflangLocales = ['en', ...Object.keys(seoTranslations['cbd-hash-wholesale-europe'] ?? {})] as Locale[];
 ---
 
 <BaseLayout
@@ -105,7 +108,7 @@ const hashTypes = [
   description="Wholesale CBD hash and resin: Moroccan, Afghan, pollen/dry sift, filtered and 0% THC grades. Kilo pricing, COA with every batch, shipped across Europe in 24h."
   canonicalURL="https://greensfarmhouse.com/cbd-hash-wholesale-europe"
   jsonLd={jsonLd}
-  noHreflang={true}
+  hreflangLocales={hreflangLocales}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 

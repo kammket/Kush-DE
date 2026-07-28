@@ -18,6 +18,12 @@ interface Props {
   jsonLd?: object;
   noindex?: boolean;
   noHreflang?: boolean;
+  /**
+   * Locales this page actually exists in. Defaults to every locale.
+   * Pass a subset for partially-translated pages — declaring an alternate for a
+   * URL that does not exist is worse than declaring none at all.
+   */
+  hreflangLocales?: readonly Locale[];
 }
 
 const {
@@ -30,6 +36,7 @@ const {
   jsonLd,
   noindex = false,
   noHreflang = false,
+  hreflangLocales = allLocales,
 } = Astro.props;
 
 const siteName = 'Greens Farmhouse';
@@ -105,7 +112,7 @@ const searchNoResults: Record<string, string> = {
   <!-- Hreflang for all languages (language-only codes, matching the sitemap).
        Never emitted on noindex pages: declaring a language alternate for a page
        you have asked Google not to index is a contradictory signal. -->
-  {!noHreflang && !noindex && allLocales.map((loc) => (
+  {!noHreflang && !noindex && hreflangLocales.map((loc) => (
     <link rel="alternate" hreflang={loc} href={getAbsoluteLocaleUrl(loc, currentPath)} />
   ))}
   {!noHreflang && !noindex && <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl('en', currentPath)} />}
