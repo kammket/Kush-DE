@@ -111,7 +111,9 @@ const breadcrumbs = [
 ---
 
 <BaseLayout
-  title={product.name}
+  {/* Translated category keyword stays in the title — it is the money keyword for
+      each market and also what differentiates the 8 locales from one another. */}
+  title={`${product.name} | ${catT?.name || product.category}`}
   description={description}
   locale={locale}
   canonicalURL={productUrl}

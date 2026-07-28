@@ -87,7 +87,9 @@ const relatedPages = [
 ---
 
 <BaseLayout
-  title={product.name}
+  {/* Keep the commercial keyword; the brand is what gets dropped when space is
+      tight. BaseLayout re-appends " | Greens Farmhouse" only if it still fits. */}
+  title={`${product.name} | Wholesale CBD`}
   description={product.description}
   canonicalURL={productUrl}
   ogType="product"

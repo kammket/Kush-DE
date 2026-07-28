@@ -149,9 +149,10 @@ const jsonLd = {
 
 {/* Post bodies are not yet translated: canonical points to the English
     original and hreflang is suppressed until real translations exist. */}
-{/* Body copy is still English pending translation, so these are noindex,follow and
-    canonical to the EN original. Remove `noindex` per-locale as translations land. */}
-<BaseLayout title={metaTitle} description={metaExcerpt} locale={locale} jsonLd={jsonLd} canonicalURL={`https://greensfarmhouse.com/blog/${post.slug}/`} noHreflang={true} noindex={true}>
+{/* Body copy is still English pending translation; the canonical to the EN original
+    is what consolidates these. Deliberately NOT noindex — these pages may hold
+    existing rankings, so removing them from the index is not a safe default. */}
+<BaseLayout title={metaTitle} description={metaExcerpt} locale={locale} jsonLd={jsonLd} canonicalURL={`https://greensfarmhouse.com/blog/${post.slug}/`} noHreflang={true}>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
 
   <article class="py-8 md:py-12">
