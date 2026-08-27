@@ -281,7 +281,7 @@ const relatedPages = [
                   data-slug={product.slug}
                   data-name={product.name}
                   data-image={product.image}
-                  data-price={product.priceNumeric}
+                  data-price={product.variants && product.variants.length > 0 ? product.variants[0].price : product.priceNumeric}
                   data-variant-label={product.variants && product.variants.length > 0 ? product.variants[0].label : 'Default'}
                   class="w-full py-4 bg-primary text-white text-lg font-bold rounded-xl hover:bg-primary-dark transition-colors shadow-lg focus:outline-none focus:ring-4 focus:ring-primary/30"
                 >
