@@ -3513,6 +3513,374 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'cbd-for-sleep-cbn-melatonin': {
+    fr: {
+      title: 'CBD pour le Sommeil : Est-ce Efficace ? CBN, CBD et Mélatonine Expliqués',
+      excerpt: "Le sommeil est la raison numéro un pour laquelle les nouveaux clients essaient les produits cannabinoïdes. Voici comment le CBD, le CBN, et la mélatonine jouent chacun un rôle différent — et pourquoi les combiner devient l'approche standard.",
+      content: `
+        <h2>Le Sommeil Est la Raison n°1 pour Laquelle les Gens Essaient le CBD</h2>
+        <p>Dans le commerce de détail CBD, le soutien au sommeil se classe constamment comme la raison la plus courante pour laquelle les nouveaux clients franchissent la porte — devant le soulagement de la douleur ou le bien-être général. Mais "le CBD pour le sommeil" est en fait un mélange de trois composés distincts fonctionnant par des mécanismes différents, et comprendre chacun vous aide à recommander le bon produit plutôt que de simplement prendre ce qui est étiqueté "nuit".</p>
+
+        <h3>Le Rôle du CBD : Relaxation, Pas Sédation</h3>
+        <p>Le CBD lui-même n'est pas un sédatif — son effet sur le sommeil est généralement compris comme fonctionnant indirectement, en réduisant l'anxiété et les pensées qui s'emballent et qui maintiennent certaines personnes éveillées, plutôt qu'en induisant directement la somnolence. C'est pourquoi le CBD seul fonctionne bien pour certains clients et fait très peu pour d'autres : il s'attaque à une barrière spécifique au sommeil, pas au sommeil lui-même.</p>
+
+        <h3>CBN : Le Cannabinoïde le Plus Associé au Sommeil</h3>
+        <p>Le cannabinol (CBN) se forme lorsque le THC vieillit et s'oxyde, et c'est le cannabinoïde le plus systématiquement associé aux effets sédatifs et favorisant le sommeil en usage consommateur — c'est pourquoi les produits axés sur le CBN sont devenus le segment à la croissance la plus rapide du marché du sommeil cannabinoïde. Notre <a href="/cbn-sleep-products">collection de produits CBN et sommeil</a> couvre les résines riches en CBN construites spécifiquement autour de ce profil.</p>
+
+        <h3>Mélatonine : Le Propre Signal de Sommeil du Corps</h3>
+        <p>La mélatonine est l'hormone que le corps produit naturellement pour réguler le cycle veille-sommeil. Contrairement au CBD et au CBN, ce n'est pas du tout un cannabinoïde — c'est une aide au sommeil bien établie à part entière, c'est pourquoi la combiner avec des cannabinoïdes est devenue une stratégie de formulation populaire plutôt qu'un gadget marketing.</p>
+
+        <h3>Pourquoi les Produits Combinés Prennent le Dessus</h3>
+        <p>Notre <a href="/products/cbd-cbn-melatonin-oil">huile CBD + CBN + Mélatonine</a> combine les trois mécanismes en une seule formule : le CBD pour atténuer l'anxiété pré-sommeil, le CBN pour son profil sédatif, et la mélatonine pour soutenir le signal naturel de sommeil du corps. Nos <a href="/products/bonbons-1400mg-melatonin">bonbons gélifiés CBD mélatonine</a> offrent la même combinaison en format comestible pour les clients qui préfèrent ne pas utiliser de gouttes d'huile.</p>
+        <p>Pour les détaillants, c'est une véritable opportunité : une "étagère sommeil" dédiée présentant des résines CBN, des huiles combinées, et des bonbons gélifiés à la mélatonine capture immédiatement l'intention du client, plutôt que de le faire deviner lequel de vos produits CBD habituels pourrait aider avec le sommeil.</p>
+        <p>Ce sont des produits de bien-être général, pas des traitements médicaux — les clients souffrant de troubles du sommeil persistants devraient être encouragés à consulter un professionnel de santé. Pour un aperçu indépendant de ce qui est réellement connu sur les composés du cannabis et la santé, consultez la <a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">mise à jour consommateur de la FDA sur les produits cannabis et CBD</a>.</p>
+      `,
+    },
+    de: {
+      title: 'CBD für den Schlaf: Funktioniert es? CBN, CBD und Melatonin Erklärt',
+      excerpt: 'Schlaf ist der Hauptgrund, warum neue Kunden Cannabinoid-Produkte ausprobieren. Hier ist, wie CBD, CBN, und Melatonin jeweils eine unterschiedliche Rolle spielen — und warum ihre Kombination zum Standardansatz wird.',
+      content: `
+        <h2>Schlaf ist der #1-Grund, Warum Menschen CBD Ausprobieren</h2>
+        <p>Im CBD-Einzelhandel rangiert die Schlafunterstützung durchgängig als häufigster Grund, warum neue Kunden hereinkommen — vor Schmerzlinderung oder allgemeinem Wohlbefinden. Aber "CBD für den Schlaf" ist eigentlich eine Mischung aus drei verschiedenen Verbindungen, die durch unterschiedliche Mechanismen wirken, und das Verständnis jeder hilft Ihnen, das richtige Produkt zu empfehlen, anstatt einfach nach dem zu greifen, was mit "Nacht" beschriftet ist.</p>
+
+        <h3>Die Rolle von CBD: Entspannung, Nicht Sedierung</h3>
+        <p>CBD selbst ist kein Beruhigungsmittel — seine Wirkung auf den Schlaf wird allgemein so verstanden, dass es indirekt wirkt, indem es Angst und rasende Gedanken reduziert, die manche Menschen wach halten, anstatt direkt Schläfrigkeit zu induzieren. Deshalb funktioniert CBD allein bei manchen Kunden gut und tut bei anderen sehr wenig: es adressiert eine spezifische Schlafbarriere, nicht den Schlaf selbst.</p>
+
+        <h3>CBN: Das am Meisten mit Schlaf Assoziierte Cannabinoid</h3>
+        <p>Cannabinol (CBN) bildet sich, wenn THC altert und oxidiert, und es ist das Cannabinoid, das am konsistentesten mit sedierenden, schlafunterstützenden Effekten im Verbrauchsgebrauch assoziiert wird — weshalb CBN-fokussierte Produkte das am schnellsten wachsende Segment des Cannabinoid-Schlafmarktes geworden sind. Unsere <a href="/cbn-sleep-products">CBN- und Schlafprodukte-Kollektion</a> deckt CBN-reiche Harze ab, die speziell um dieses Profil herum aufgebaut sind.</p>
+
+        <h3>Melatonin: Das Körpereigene Schlafsignal</h3>
+        <p>Melatonin ist das Hormon, das der Körper natürlich produziert, um den Schlaf-Wach-Zyklus zu regulieren. Anders als CBD und CBN ist es überhaupt kein Cannabinoid — es ist ein gut etabliertes Schlafmittel aus eigenem Recht, weshalb die Kombination mit Cannabinoiden zu einer beliebten Formulierungsstrategie statt eines Marketing-Gimmicks geworden ist.</p>
+
+        <h3>Warum Kombinationsprodukte Übernehmen</h3>
+        <p>Unser <a href="/products/cbd-cbn-melatonin-oil">CBD + CBN + Melatonin-Öl</a> kombiniert alle drei Mechanismen in einer Formel: CBD, um Vor-Schlaf-Angst zu lindern, CBN für sein sedierendes Profil, und Melatonin zur Unterstützung des natürlichen Schlafsignals des Körpers. Unsere <a href="/products/bonbons-1400mg-melatonin">Melatonin-CBD-Gummibärchen</a> bieten die gleiche Kombination in einem essbaren Format für Kunden, die keine Öltropfen verwenden möchten.</p>
+        <p>Für Händler ist dies eine echte Gelegenheit: ein dediziertes "Schlaf-Regal" mit CBN-Harzen, Kombinationsölen, und Melatonin-Gummibärchen erfasst sofort die Kundenabsicht, anstatt sie raten zu lassen, welches Ihrer regulären CBD-Produkte beim Schlaf helfen könnte.</p>
+        <p>Dies sind allgemeine Wellness-Produkte, keine medizinischen Behandlungen — Kunden mit anhaltenden Schlafstörungen sollten ermutigt werden, mit einem Gesundheitsdienstleister zu sprechen. Für einen unabhängigen Überblick darüber, was tatsächlich über Cannabis-Verbindungen und Gesundheit bekannt ist, siehe das <a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">FDA-Verbraucher-Update zu Cannabis- und CBD-Produkten</a>.</p>
+      `,
+    },
+    es: {
+      title: '¿El CBD para Dormir Funciona? CBN, CBD y Melatonina Explicados',
+      excerpt: 'El sueño es la razón número uno por la que los nuevos clientes prueban productos con cannabinoides. Aquí está cómo el CBD, el CBN, y la melatonina juegan cada uno un papel diferente — y por qué combinarlos se está convirtiendo en el enfoque estándar.',
+      content: `
+        <h2>El Sueño es la Razón #1 por la que la Gente Prueba el CBD</h2>
+        <p>En el comercio minorista de CBD, el apoyo al sueño se clasifica constantemente como la razón más común por la que los nuevos clientes entran por la puerta — por delante del alivio del dolor o el bienestar general. Pero "CBD para dormir" es en realidad una mezcla de tres compuestos distintos que trabajan a través de diferentes mecanismos, y entender cada uno te ayuda a recomendar el producto correcto en lugar de simplemente tomar lo que está etiquetado como "noche".</p>
+
+        <h3>El Papel del CBD: Relajación, No Sedación</h3>
+        <p>El CBD en sí no es un sedante — su efecto sobre el sueño generalmente se entiende que funciona indirectamente, reduciendo la ansiedad y los pensamientos acelerados que mantienen despiertas a algunas personas, en lugar de inducir somnolencia directamente. Por eso el CBD solo funciona bien para algunos clientes y hace muy poco para otros: aborda una barrera específica para dormir, no el sueño en sí.</p>
+
+        <h3>CBN: El Cannabinoide Más Asociado con el Sueño</h3>
+        <p>El cannabinol (CBN) se forma a medida que el THC envejece y se oxida, y es el cannabinoide más consistentemente asociado con efectos sedantes que apoyan el sueño en uso de consumo — razón por la cual los productos enfocados en CBN se han convertido en el segmento de más rápido crecimiento del mercado de sueño cannabinoide. Nuestra <a href="/cbn-sleep-products">colección de productos CBN y sueño</a> cubre resinas ricas en CBN construidas específicamente en torno a este perfil.</p>
+
+        <h3>Melatonina: La Propia Señal de Sueño del Cuerpo</h3>
+        <p>La melatonina es la hormona que el cuerpo produce naturalmente para regular el ciclo sueño-vigilia. A diferencia del CBD y el CBN, no es un cannabinoide en absoluto — es una ayuda para dormir bien establecida por derecho propio, razón por la cual combinarla con cannabinoides se ha convertido en una estrategia de formulación popular en lugar de un truco de marketing.</p>
+
+        <h3>Por Qué los Productos Combinados Están Tomando el Control</h3>
+        <p>Nuestro <a href="/products/cbd-cbn-melatonin-oil">aceite CBD + CBN + Melatonina</a> combina los tres mecanismos en una fórmula: CBD para aliviar la ansiedad previa al sueño, CBN por su perfil sedante, y melatonina para apoyar la señal natural de sueño del cuerpo. Nuestras <a href="/products/bonbons-1400mg-melatonin">gomitas CBD melatonina</a> ofrecen la misma combinación en un formato comestible para clientes que prefieren no usar gotas de aceite.</p>
+        <p>Para los minoristas, esta es una oportunidad genuina: un "estante de sueño" dedicado con resinas CBN, aceites combinados, y gomitas de melatonina captura la intención del cliente inmediatamente, en lugar de hacerlos adivinar cuál de tus productos CBD regulares podría ayudar con el sueño.</p>
+        <p>Estos son productos generales de bienestar, no tratamientos médicos — se debe animar a los clientes con trastornos del sueño continuos a hablar con un proveedor de atención médica. Para una visión general independiente de lo que realmente se sabe sobre los compuestos del cannabis y la salud, consulta la <a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">actualización para consumidores de la FDA sobre productos de cannabis y CBD</a>.</p>
+      `,
+    },
+    it: {
+      title: 'CBD per il Sonno: Funziona Davvero? CBN, CBD e Melatonina Spiegati',
+      excerpt: "Il sonno è la ragione numero uno per cui i nuovi clienti provano i prodotti a base di cannabinoidi. Ecco come CBD, CBN, e melatonina giocano ciascuno un ruolo diverso — e perché combinarli sta diventando l'approccio standard.",
+      content: `
+        <h2>Il Sonno è la Ragione #1 per cui le Persone Provano il CBD</h2>
+        <p>Nel commercio al dettaglio del CBD, il supporto al sonno si classifica costantemente come la ragione più comune per cui i nuovi clienti varcano la porta — prima del sollievo dal dolore o del benessere generale. Ma "il CBD per il sonno" è in realtà una miscela di tre composti distinti che lavorano attraverso meccanismi diversi, e comprendere ciascuno ti aiuta a raccomandare il prodotto giusto piuttosto che prendere semplicemente ciò che è etichettato come "notte".</p>
+
+        <h3>Il Ruolo del CBD: Rilassamento, Non Sedazione</h3>
+        <p>Il CBD stesso non è un sedativo — il suo effetto sul sonno è generalmente inteso come indiretto, riducendo l'ansia e i pensieri incalzanti che tengono sveglie alcune persone, piuttosto che indurre direttamente sonnolenza. Ecco perché il CBD da solo funziona bene per alcuni clienti e fa molto poco per altri: affronta una barriera specifica al sonno, non il sonno stesso.</p>
+
+        <h3>CBN: Il Cannabinoide Più Associato al Sonno</h3>
+        <p>Il cannabinolo (CBN) si forma quando il THC invecchia e si ossida, ed è il cannabinoide più costantemente associato agli effetti sedativi e di supporto al sonno nell'uso da parte dei consumatori — motivo per cui i prodotti focalizzati sul CBN sono diventati il segmento in più rapida crescita del mercato del sonno cannabinoide. La nostra <a href="/cbn-sleep-products">collezione di prodotti CBN e sonno</a> copre resine ricche di CBN costruite specificamente attorno a questo profilo.</p>
+
+        <h3>Melatonina: Il Segnale di Sonno del Corpo Stesso</h3>
+        <p>La melatonina è l'ormone che il corpo produce naturalmente per regolare il ciclo sonno-veglia. A differenza di CBD e CBN, non è affatto un cannabinoide — è un aiuto per il sonno ben consolidato di per sé, motivo per cui combinarlo con i cannabinoidi è diventata una strategia di formulazione popolare piuttosto che un espediente di marketing.</p>
+
+        <h3>Perché i Prodotti Combinati Stanno Prendendo il Sopravvento</h3>
+        <p>Il nostro <a href="/products/cbd-cbn-melatonin-oil">olio CBD + CBN + Melatonina</a> combina tutti e tre i meccanismi in un'unica formula: CBD per alleviare l'ansia pre-sonno, CBN per il suo profilo sedativo, e melatonina per supportare il segnale naturale di sonno del corpo. Le nostre <a href="/products/bonbons-1400mg-melatonin">caramelle gommose CBD melatonina</a> offrono la stessa combinazione in un formato commestibile per i clienti che preferiscono non usare gocce di olio.</p>
+        <p>Per i rivenditori, questa è una vera opportunità: uno "scaffale del sonno" dedicato con resine CBN, oli combinati, e caramelle gommose alla melatonina cattura immediatamente l'intento del cliente, piuttosto che farli indovinare quale dei tuoi normali prodotti CBD potrebbe aiutare con il sonno.</p>
+        <p>Questi sono prodotti di benessere generale, non trattamenti medici — i clienti con disturbi del sonno persistenti dovrebbero essere incoraggiati a parlare con un operatore sanitario. Per una panoramica indipendente di ciò che è effettivamente noto sui composti della cannabis e la salute, consulta l'<a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">aggiornamento per i consumatori della FDA sui prodotti a base di cannabis e CBD</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'CBD voor Slaap: Werkt Het? CBN, CBD en Melatonine Uitgelegd',
+      excerpt: 'Slaap is de nummer één reden waarom nieuwe klanten cannabinoïdeproducten proberen. Hier is hoe CBD, CBN, en melatonine elk een andere rol spelen — en waarom het combineren ervan de standaardaanpak wordt.',
+      content: `
+        <h2>Slaap is de #1 Reden Waarom Mensen CBD Proberen</h2>
+        <p>In de CBD-detailhandel scoort slaapondersteuning consequent als de meest voorkomende reden waarom nieuwe klanten binnenkomen — vóór pijnverlichting of algemeen welzijn. Maar "CBD voor slaap" is eigenlijk een mengsel van drie verschillende verbindingen die via verschillende mechanismen werken, en het begrijpen van elk helpt u het juiste product aan te bevelen in plaats van gewoon te grijpen naar wat gelabeld is als "nacht".</p>
+
+        <h3>De Rol van CBD: Ontspanning, Geen Sedatie</h3>
+        <p>CBD zelf is geen kalmeringsmiddel — het effect op slaap wordt over het algemeen begrepen als indirect werkend, door het verminderen van angst en racende gedachten die sommige mensen wakker houden, in plaats van direct slaperigheid op te wekken. Dit is waarom CBD alleen goed werkt voor sommige klanten en heel weinig doet voor anderen: het pakt een specifieke barrière voor slaap aan, niet slaap zelf.</p>
+
+        <h3>CBN: Het Cannabinoïde Meest Geassocieerd met Slaap</h3>
+        <p>Cannabinol (CBN) vormt zich naarmate THC veroudert en oxideert, en het is het cannabinoïde dat het meest consistent wordt geassocieerd met kalmerende, slaapondersteunende effecten bij consumentengebruik — reden waarom CBN-gerichte producten het snelst groeiende segment van de cannabinoïde-slaapmarkt zijn geworden. Onze <a href="/cbn-sleep-products">CBN- en slaapproducten collectie</a> behandelt CBN-rijke harsen die specifiek rond dit profiel zijn gebouwd.</p>
+
+        <h3>Melatonine: Het Eigen Slaapsignaal van het Lichaam</h3>
+        <p>Melatonine is het hormoon dat het lichaam van nature produceert om de slaap-waakcyclus te reguleren. In tegenstelling tot CBD en CBN is het helemaal geen cannabinoïde — het is een goed gevestigd slaapmiddel op zichzelf, reden waarom het combineren met cannabinoïden een populaire formuleringsstrategie is geworden in plaats van een marketingtruc.</p>
+
+        <h3>Waarom Combinatieproducten het Overnemen</h3>
+        <p>Onze <a href="/products/cbd-cbn-melatonin-oil">CBD + CBN + Melatonine-olie</a> combineert alle drie mechanismen in één formule: CBD om pre-slaapangst te verlichten, CBN voor zijn kalmerende profiel, en melatonine om het natuurlijke slaapsignaal van het lichaam te ondersteunen. Onze <a href="/products/bonbons-1400mg-melatonin">melatonine CBD-gummies</a> bieden dezelfde combinatie in een eetbaar formaat voor klanten die liever geen oliedruppels gebruiken.</p>
+        <p>Voor retailers is dit een echte kans: een toegewijd "slaapschap" met CBN-harsen, combinatieoliën, en melatonine-gummies vangt de klantintentie onmiddellijk op, in plaats van hen te laten raden welk van uw reguliere CBD-producten kan helpen bij slaap.</p>
+        <p>Dit zijn algemene wellnessproducten, geen medische behandelingen — klanten met aanhoudende slaapstoornissen zouden moeten worden aangemoedigd om met een zorgverlener te praten. Voor een onafhankelijk overzicht van wat daadwerkelijk bekend is over cannabisverbindingen en gezondheid, zie de <a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">FDA-consumentenupdate over cannabis- en CBD-producten</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'CBD Unta Varten: Toimiiko Se? CBN, CBD ja Melatoniini Selitettynä',
+      excerpt: 'Uni on numero yksi syy, miksi uudet asiakkaat kokeilevat kannabinoiditutteita. Tässä on kuinka CBD, CBN, ja melatoniini kukin näyttelevät erilaista roolia — ja miksi niiden yhdistämisestä on tulossa vakiolähestymistapa.',
+      content: `
+        <h2>Uni on #1 Syy, Miksi Ihmiset Kokeilevat CBD:tä</h2>
+        <p>CBD-vähittäiskaupassa unen tukeminen sijoittuu johdonmukaisesti yleisimmäksi syyksi, miksi uudet asiakkaat astuvat ovesta sisään — kivunlievityksen tai yleisen hyvinvoinnin edelle. Mutta "CBD unta varten" on itse asiassa kolmen erillisen yhdisteen sekoitus, jotka toimivat eri mekanismien kautta, ja kunkin ymmärtäminen auttaa sinua suosittelemaan oikeaa tuotetta sen sijaan, että vain tarttuisit siihen, mikä on merkitty "yöksi".</p>
+
+        <h3>CBD:n Rooli: Rentoutuminen, Ei Sedaatio</h3>
+        <p>CBD itsessään ei ole rauhoittava aine — sen vaikutuksen uneen ymmärretään yleisesti toimivan epäsuorasti, vähentämällä ahdistusta ja kiitäviä ajatuksia, jotka pitävät joitakin ihmisiä hereillä, sen sijaan että se aiheuttaisi suoraan uneliaisuutta. Tämän vuoksi pelkkä CBD toimii hyvin joillekin asiakkaille ja tekee hyvin vähän muille: se puuttuu tiettyyn unen esteeseen, ei uneen itseensä.</p>
+
+        <h3>CBN: Uneen Eniten Yhdistetty Kannabinoidi</h3>
+        <p>Kannabinoli (CBN) muodostuu THC:n vanhetessa ja hapettuessa, ja se on kannabinoidi, joka yhdistetään johdonmukaisimmin rauhoittaviin, unta tukeviin vaikutuksiin kuluttajakäytössä — minkä vuoksi CBN-keskeisistä tuotteista on tullut kannabinoidien unimarkkinoiden nopeimmin kasvava segmentti. <a href="/cbn-sleep-products">CBN- ja unituotekokoelmamme</a> kattaa CBN-rikkaat hartsit, jotka on rakennettu erityisesti tämän profiilin ympärille.</p>
+
+        <h3>Melatoniini: Kehon Oma Unisignaali</h3>
+        <p>Melatoniini on hormoni, jota keho tuottaa luonnostaan säädelläkseen uni-valverytmiä. Toisin kuin CBD ja CBN, se ei ole lainkaan kannabinoidi — se on hyvin vakiintunut unilääke omana etunaan, minkä vuoksi sen yhdistämisestä kannabinoidien kanssa on tullut suosittu formulaatiostrategia markkinointikikan sijaan.</p>
+
+        <h3>Miksi Yhdistelmätuotteet Valtaavat Alaa</h3>
+        <p><a href="/products/cbd-cbn-melatonin-oil">CBD + CBN + Melatoniini -öljymme</a> yhdistää kaikki kolme mekanismia yhdeksi kaavaksi: CBD lievittämään esiunista ahdistusta, CBN sen rauhoittavan profiilin vuoksi, ja melatoniini tukemaan kehon luonnollista unisignaalia. <a href="/products/bonbons-1400mg-melatonin">Melatoniini CBD-kumimakeisemme</a> tarjoavat saman yhdistelmän syötävässä muodossa asiakkaille, jotka mieluummin eivät käytä öljytippoja.</p>
+        <p>Jälleenmyyjille tämä on aito mahdollisuus: omistettu "unihylly", jossa on CBN-hartseja, yhdistelmäöljyjä, ja melatoniinikumimakeisia, vangitsee asiakkaan aikomuksen välittömästi sen sijaan, että antaisi heidän arvata, mikä tavallisista CBD-tuotteistasi voisi auttaa unen kanssa.</p>
+        <p>Nämä ovat yleisiä hyvinvointituotteita, eivät lääketieteellisiä hoitoja — asiakkaita, joilla on jatkuvia unihäiriöitä, tulisi kannustaa puhumaan terveydenhuollon tarjoajan kanssa. Riippumattoman yleiskatsauksen saamiseksi siitä, mitä kannabiksen yhdisteistä ja terveydestä todella tiedetään, katso <a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">FDA:n kuluttajapäivitys kannabis- ja CBD-tuotteista</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'CBD para o Sono: Funciona? CBN, CBD e Melatonina Explicados',
+      excerpt: 'O sono é a razão número um pela qual novos clientes experimentam produtos com canabinoides. Aqui está como o CBD, o CBN, e a melatonina desempenham cada um um papel diferente — e porque combiná-los está a tornar-se a abordagem padrão.',
+      content: `
+        <h2>O Sono é a Razão #1 pela qual as Pessoas Experimentam CBD</h2>
+        <p>No retalho de CBD, o apoio ao sono classifica-se consistentemente como a razão mais comum pela qual novos clientes entram pela porta — à frente do alívio da dor ou do bem-estar geral. Mas "CBD para o sono" é na verdade uma mistura de três compostos distintos que atuam através de mecanismos diferentes, e compreender cada um ajuda a recomendar o produto certo em vez de simplesmente pegar no que está rotulado como "noite".</p>
+
+        <h3>O Papel do CBD: Relaxamento, Não Sedação</h3>
+        <p>O CBD em si não é um sedativo — o seu efeito no sono é geralmente entendido como funcionando indiretamente, reduzindo a ansiedade e os pensamentos acelerados que mantêm algumas pessoas acordadas, em vez de induzir sonolência diretamente. É por isso que o CBD sozinho funciona bem para alguns clientes e faz muito pouco para outros: aborda uma barreira específica ao sono, não o sono em si.</p>
+
+        <h3>CBN: O Canabinoide Mais Associado ao Sono</h3>
+        <p>O canabinol (CBN) forma-se à medida que o THC envelhece e oxida, e é o canabinoide mais consistentemente associado a efeitos sedativos e de apoio ao sono no uso pelo consumidor — razão pela qual os produtos focados em CBN se tornaram o segmento de mais rápido crescimento do mercado de sono canabinoide. A nossa <a href="/cbn-sleep-products">coleção de produtos CBN e sono</a> cobre resinas ricas em CBN construídas especificamente em torno deste perfil.</p>
+
+        <h3>Melatonina: O Próprio Sinal de Sono do Corpo</h3>
+        <p>A melatonina é a hormona que o corpo produz naturalmente para regular o ciclo sono-vigília. Ao contrário do CBD e do CBN, não é de todo um canabinoide — é um auxiliar de sono bem estabelecido por direito próprio, razão pela qual combiná-la com canabinoides se tornou uma estratégia de formulação popular em vez de um truque de marketing.</p>
+
+        <h3>Porque os Produtos Combinados Estão a Assumir o Controlo</h3>
+        <p>O nosso <a href="/products/cbd-cbn-melatonin-oil">óleo CBD + CBN + Melatonina</a> combina os três mecanismos numa fórmula: CBD para aliviar a ansiedade pré-sono, CBN pelo seu perfil sedativo, e melatonina para apoiar o sinal natural de sono do corpo. As nossas <a href="/products/bonbons-1400mg-melatonin">gomas CBD melatonina</a> oferecem a mesma combinação num formato comestível para clientes que preferem não usar gotas de óleo.</p>
+        <p>Para os retalhistas, esta é uma oportunidade genuína: uma "prateleira de sono" dedicada com resinas CBN, óleos combinados, e gomas de melatonina captura a intenção do cliente imediatamente, em vez de os fazer adivinhar qual dos seus produtos CBD regulares pode ajudar com o sono.</p>
+        <p>Estes são produtos gerais de bem-estar, não tratamentos médicos — os clientes com distúrbios do sono contínuos devem ser encorajados a falar com um profissional de saúde. Para uma visão geral independente do que é realmente conhecido sobre compostos de cannabis e saúde, veja a <a href="https://www.fda.gov/consumers/consumer-updates/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis" target="_blank" rel="noopener noreferrer">atualização para consumidores da FDA sobre produtos de cannabis e CBD</a>.</p>
+      `,
+    },
+  },
+  'is-cbd-legal-in-europe-country-guide': {
+    fr: {
+      title: 'Le CBD Est-il Légal en Europe ? Guide Pays par Pays 2026',
+      excerpt: "Le CBD est largement légal à travers l'UE sous le seuil de 0,3 % THC, mais l'application, les règles d'étiquetage, et les restrictions de format de produit varient considérablement selon le pays. Voici le tableau pratique pour acheteurs et revendeurs.",
+      content: `
+        <h2>Légal en Principe, Différent en Pratique</h2>
+        <p>Le CBD est légal à acheter, vendre, et expédier à travers l'Union Européenne tant qu'il est dérivé de variétés de chanvre industriel approuvées et reste sous le seuil légal de THC. Mais "légal à travers l'UE" ne signifie pas des règles identiques partout — les pays individuels interprètent différemment la réglementation sur les nouveaux aliments, les exigences d'étiquetage, et l'application. Voici le tableau pratique pays par pays pour nos principaux marchés de livraison.</p>
+
+        <h3>France</h3>
+        <p>Notre marché domestique. La France autorise les produits CBD avec un THC inférieur à 0,3 %, et la position réglementaire s'est considérablement stabilisée depuis les défis juridiques du début des années 2020. Consultez notre page <a href="/wholesale-cbd-flowers-france">fleurs CBD en gros France</a> pour des détails spécifiques au marché.</p>
+
+        <h3>Allemagne</h3>
+        <p>Le plus grand marché CBD d'Europe en volume. L'Allemagne suit le seuil standard de 0,3 % THC et dispose d'un secteur de détail CBD mature et bien établi. Détails sur notre <a href="/wholesale-cbd-flowers-germany">page en gros Allemagne</a>.</p>
+
+        <h3>Italie, Pays-Bas</h3>
+        <p>Les deux marchés autorisent les fleurs CBD et dérivés sous le seuil THC standard de l'UE, avec des canaux de vente en gros et au détail établis. Voir <a href="/wholesale-cbd-flowers-italy">Italie</a> et <a href="/wholesale-cbd-flowers-netherlands">Pays-Bas</a> pour les spécificités du marché.</p>
+
+        <h3>Belgique, Espagne, Luxembourg</h3>
+        <p>Ces marchés suivent le cadre standard de l'UE avec des environnements d'application généralement favorables pour les produits CBD conformes. Voir nos pages dédiées pour la <a href="/cbd-wholesaler-belgium">Belgique</a>, l'<a href="/cbd-wholesaler-spain">Espagne</a>, et le <a href="/cbd-wholesaler-luxembourg">Luxembourg</a>.</p>
+
+        <h3>Suisse</h3>
+        <p>Notablement différente : la Suisse n'est pas membre de l'UE et applique son propre seuil de THC plus permissif de 1 % plutôt que 0,3 %. Cela fait de la Suisse l'un des marchés CBD les plus matures d'Europe. Voir notre <a href="/cbd-wholesaler-switzerland">page Suisse</a> pour des détails spécifiques à ce marché.</p>
+
+        <h3>Malte</h3>
+        <p>Un membre de l'UE avec son propre cadre de licence spécifique pour les produits liés au cannabis. Voir notre <a href="/cbd-wholesaler-malta">page grossiste Malte</a> pour les détails du marché.</p>
+
+        <h3>La Seule Règle Qui Ne Change Pas : Les Limites de THC Ne Sont Pas Optionnelles</h3>
+        <p>Indépendamment des nuances spécifiques au pays, chaque produit que nous vendons est testé en laboratoire indépendant et vérifié en dessous de la limite légale de THC applicable avant d'être répertorié — voir nos <a href="/quality-and-testing">standards de qualité et tests</a> pour comprendre comment fonctionne cette vérification. Pour les produits commercialisés comme comestibles THC, cela signifie strictement en dessous de 0,20 % THC selon notre <a href="/legal-cannabis-europe">guide du cannabis légal</a>, pas le seuil de 0,3 % pour fleurs/résines.</p>
+        <p>La réglementation continue d'évoluer — le propre cadre de l'UE sur les Nouveaux Aliments, qui régit comment les extraits de CBD peuvent être commercialisés en tant qu'aliment ou compléments, est encore en cours de finalisation pays par pays. Pour le statut officiel et actuel du CBD sous les règles UE des Nouveaux Aliments, consultez la <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">page des décisions Novel Food de la Commission Européenne</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Ist CBD in Europa Legal? Länderweiser Leitfaden 2026',
+      excerpt: 'CBD ist unter dem EU-weiten 0,3 %-THC-Schwellenwert weitgehend legal, aber Durchsetzung, Kennzeichnungsregeln, und Produktformatbeschränkungen variieren erheblich je nach Land. Hier ist das praktische Bild für Käufer und Wiederverkäufer.',
+      content: `
+        <h2>Legal im Prinzip, Unterschiedlich in der Praxis</h2>
+        <p>CBD ist in der gesamten Europäischen Union legal zu kaufen, zu verkaufen, und zu versenden, solange es von genehmigten Industriehanfsorten stammt und unter dem gesetzlichen THC-Schwellenwert bleibt. Aber "legal in der gesamten EU" bedeutet nicht überall identische Regeln — einzelne Länder interpretieren Novel-Food-Regulierung, Kennzeichnungsanforderungen, und Durchsetzung unterschiedlich. Hier ist das praktische länderweise Bild für unsere wichtigsten Liefermärkte.</p>
+
+        <h3>Frankreich</h3>
+        <p>Unser Heimatmarkt. Frankreich erlaubt CBD-Produkte mit THC unter 0,3 %, und die regulatorische Position hat sich seit den rechtlichen Herausforderungen der frühen 2020er Jahre erheblich stabilisiert. Siehe unsere <a href="/wholesale-cbd-flowers-france">Großhandel CBD-Blüten Frankreich</a>-Seite für marktspezifische Details.</p>
+
+        <h3>Deutschland</h3>
+        <p>Europas größter CBD-Markt nach Volumen. Deutschland folgt dem Standard-0,3 %-THC-Schwellenwert und hat einen ausgereiften, gut etablierten CBD-Einzelhandelssektor. Details auf unserer <a href="/wholesale-cbd-flowers-germany">Deutschland-Großhandelsseite</a>.</p>
+
+        <h3>Italien, Niederlande</h3>
+        <p>Beide Märkte erlauben CBD-Blüten und -Derivate unter dem EU-Standard-THC-Schwellenwert, mit etablierten Großhandels- und Einzelhandelskanälen. Siehe <a href="/wholesale-cbd-flowers-italy">Italien</a> und <a href="/wholesale-cbd-flowers-netherlands">Niederlande</a> für marktspezifische Details.</p>
+
+        <h3>Belgien, Spanien, Luxemburg</h3>
+        <p>Diese Märkte folgen dem EU-Standardrahmen mit im Allgemeinen günstigen Durchsetzungsumgebungen für konforme CBD-Produkte. Siehe unsere dedizierten Seiten für <a href="/cbd-wholesaler-belgium">Belgien</a>, <a href="/cbd-wholesaler-spain">Spanien</a>, und <a href="/cbd-wholesaler-luxembourg">Luxemburg</a>.</p>
+
+        <h3>Schweiz</h3>
+        <p>Bemerkenswert anders: Die Schweiz ist kein EU-Mitglied und wendet ihren eigenen, freizügigeren THC-Schwellenwert von 1 % statt 0,3 % an. Dies macht die Schweiz zu einem der ausgereiftesten CBD-Märkte Europas. Siehe unsere <a href="/cbd-wholesaler-switzerland">Schweiz-Seite</a> für marktspezifische Details.</p>
+
+        <h3>Malta</h3>
+        <p>Ein EU-Mitglied mit eigenem spezifischem Lizenzrahmen für cannabisbezogene Produkte. Siehe unsere <a href="/cbd-wholesaler-malta">Malta-Großhändlerseite</a> für Marktdetails.</p>
+
+        <h3>Die Eine Regel, die Sich Nicht Ändert: THC-Grenzwerte Sind Nicht Optional</h3>
+        <p>Unabhängig von länderspezifischen Nuancen wird jedes von uns verkaufte Produkt unabhängig im Labor getestet und unter dem geltenden gesetzlichen THC-Grenzwert verifiziert, bevor es gelistet wird — siehe unsere <a href="/quality-and-testing">Qualitäts- und Teststandards</a> für die Funktionsweise dieser Verifizierung. Bei Produkten, die als THC-Esswaren vermarktet werden, bedeutet das streng unter 0,20 % THC gemäß unserem <a href="/legal-cannabis-europe">Leitfaden zu legalem Cannabis</a>, nicht der 0,3 %-Blüten-/Harz-Schwellenwert.</p>
+        <p>Die Regulierung entwickelt sich weiter — der eigene Novel-Food-Rahmen der EU, der regelt, wie CBD-Extrakte als Lebensmittel oder Nahrungsergänzungsmittel vermarktet werden können, wird noch Land für Land finalisiert. Für den offiziellen, aktuellen Status von CBD unter den EU-Novel-Food-Regeln siehe die <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">Novel-Food-Entscheidungsseite der Europäischen Kommission</a>.</p>
+      `,
+    },
+    es: {
+      title: '¿Es Legal el CBD en Europa? Guía País por País 2026',
+      excerpt: 'El CBD es ampliamente legal en toda la UE bajo el umbral del 0,3% de THC, pero la aplicación, las reglas de etiquetado, y las restricciones de formato de producto varían significativamente según el país. Aquí está el panorama práctico para compradores y revendedores.',
+      content: `
+        <h2>Legal en Principio, Diferente en la Práctica</h2>
+        <p>El CBD es legal comprar, vender, y enviar en toda la Unión Europea siempre que derive de variedades de cáñamo industrial aprobadas y permanezca por debajo del umbral legal de THC. Pero "legal en toda la UE" no significa reglas idénticas en todas partes — países individuales interpretan la regulación de nuevos alimentos, requisitos de etiquetado, y aplicación de manera diferente. Aquí está el panorama práctico país por país para nuestros mercados de entrega principales.</p>
+
+        <h3>Francia</h3>
+        <p>Nuestro mercado local. Francia permite productos CBD con THC por debajo del 0,3%, y la posición regulatoria se ha estabilizado considerablemente desde los desafíos legales de principios de la década de 2020. Consulta nuestra página de <a href="/wholesale-cbd-flowers-france">flores CBD al por mayor Francia</a> para detalles específicos del mercado.</p>
+
+        <h3>Alemania</h3>
+        <p>El mercado de CBD más grande de Europa por volumen. Alemania sigue el umbral estándar del 0,3% de THC y tiene un sector minorista de CBD maduro y bien establecido. Detalles en nuestra <a href="/wholesale-cbd-flowers-germany">página al por mayor de Alemania</a>.</p>
+
+        <h3>Italia, Países Bajos</h3>
+        <p>Ambos mercados permiten flores CBD y derivados bajo el umbral estándar de THC de la UE, con canales mayoristas y minoristas establecidos. Ver <a href="/wholesale-cbd-flowers-italy">Italia</a> y <a href="/wholesale-cbd-flowers-netherlands">Países Bajos</a> para especificidades del mercado.</p>
+
+        <h3>Bélgica, España, Luxemburgo</h3>
+        <p>Estos mercados siguen el marco estándar de la UE con entornos de aplicación generalmente favorables para productos CBD conformes. Ver nuestras páginas dedicadas para <a href="/cbd-wholesaler-belgium">Bélgica</a>, <a href="/cbd-wholesaler-spain">España</a>, y <a href="/cbd-wholesaler-luxembourg">Luxemburgo</a>.</p>
+
+        <h3>Suiza</h3>
+        <p>Notablemente diferente: Suiza no es miembro de la UE y aplica su propio umbral de THC más permisivo del 1% en lugar del 0,3%. Esto hace de Suiza uno de los mercados de CBD más maduros de Europa. Ver nuestra <a href="/cbd-wholesaler-switzerland">página de Suiza</a> para detalles específicos de ese mercado.</p>
+
+        <h3>Malta</h3>
+        <p>Un miembro de la UE con su propio marco de licencias específico para productos relacionados con el cannabis. Ver nuestra <a href="/cbd-wholesaler-malta">página de mayorista de Malta</a> para detalles del mercado.</p>
+
+        <h3>La Única Regla Que No Cambia: Los Límites de THC No Son Opcionales</h3>
+        <p>Independientemente de los matices específicos del país, cada producto que vendemos se prueba de forma independiente en laboratorio y se verifica por debajo del límite legal de THC aplicable antes de ser listado — ver nuestros <a href="/quality-and-testing">estándares de calidad y pruebas</a> para cómo funciona esa verificación. Para productos comercializados como comestibles THC, eso significa estrictamente por debajo del 0,20% de THC según nuestra <a href="/legal-cannabis-europe">guía de cannabis legal</a>, no el umbral del 0,3% de flores/resinas.</p>
+        <p>La regulación continúa evolucionando — el propio marco de Nuevos Alimentos de la UE, que rige cómo los extractos de CBD pueden comercializarse como alimento o suplementos, todavía se está finalizando país por país. Para el estado oficial y actual del CBD bajo las reglas de Nuevos Alimentos de la UE, consulta la <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">página de decisiones de Nuevos Alimentos de la Comisión Europea</a>.</p>
+      `,
+    },
+    it: {
+      title: "Il CBD è Legale in Europa? Guida Paese per Paese 2026",
+      excerpt: "Il CBD è ampiamente legale in tutta l'UE sotto la soglia dello 0,3% di THC, ma l'applicazione, le regole di etichettatura, e le restrizioni sul formato del prodotto variano significativamente da paese a paese. Ecco il quadro pratico per acquirenti e rivenditori.",
+      content: `
+        <h2>Legale in Principio, Diverso in Pratica</h2>
+        <p>Il CBD è legale da acquistare, vendere, e spedire in tutta l'Unione Europea purché derivi da varietà di canapa industriale approvate e rimanga sotto la soglia legale di THC. Ma "legale in tutta l'UE" non significa regole identiche ovunque — i singoli paesi interpretano diversamente la regolamentazione sui novel food, i requisiti di etichettatura, e l'applicazione. Ecco il quadro pratico paese per paese per i nostri principali mercati di consegna.</p>
+
+        <h3>Francia</h3>
+        <p>Il nostro mercato di origine. La Francia permette prodotti CBD con THC inferiore allo 0,3%, e la posizione normativa si è notevolmente stabilizzata dalle sfide legali dei primi anni 2020. Vedi la nostra pagina <a href="/wholesale-cbd-flowers-france">fiori CBD all'ingrosso Francia</a> per dettagli specifici del mercato.</p>
+
+        <h3>Germania</h3>
+        <p>Il più grande mercato CBD d'Europa per volume. La Germania segue la soglia standard dello 0,3% di THC e ha un settore al dettaglio CBD maturo e ben consolidato. Dettagli sulla nostra <a href="/wholesale-cbd-flowers-germany">pagina all'ingrosso Germania</a>.</p>
+
+        <h3>Italia, Paesi Bassi</h3>
+        <p>Entrambi i mercati permettono fiori CBD e derivati sotto la soglia standard THC UE, con canali all'ingrosso e al dettaglio consolidati. Vedi <a href="/wholesale-cbd-flowers-italy">Italia</a> e <a href="/wholesale-cbd-flowers-netherlands">Paesi Bassi</a> per specificità di mercato.</p>
+
+        <h3>Belgio, Spagna, Lussemburgo</h3>
+        <p>Questi mercati seguono il quadro standard UE con ambienti di applicazione generalmente favorevoli per prodotti CBD conformi. Vedi le nostre pagine dedicate per <a href="/cbd-wholesaler-belgium">Belgio</a>, <a href="/cbd-wholesaler-spain">Spagna</a>, e <a href="/cbd-wholesaler-luxembourg">Lussemburgo</a>.</p>
+
+        <h3>Svizzera</h3>
+        <p>Notevolmente diversa: la Svizzera non è membro dell'UE e applica la propria soglia THC più permissiva dell'1% anziché dello 0,3%. Questo rende la Svizzera uno dei mercati CBD più maturi d'Europa. Vedi la nostra <a href="/cbd-wholesaler-switzerland">pagina Svizzera</a> per dettagli specifici di quel mercato.</p>
+
+        <h3>Malta</h3>
+        <p>Un membro dell'UE con il proprio quadro di licenze specifico per i prodotti legati alla cannabis. Vedi la nostra <a href="/cbd-wholesaler-malta">pagina rivenditore Malta</a> per dettagli di mercato.</p>
+
+        <h3>L'Unica Regola che Non Cambia: I Limiti di THC Non Sono Opzionali</h3>
+        <p>Indipendentemente dalle sfumature specifiche del paese, ogni prodotto che vendiamo è testato in laboratorio in modo indipendente e verificato al di sotto del limite legale THC applicabile prima di essere elencato — vedi i nostri <a href="/quality-and-testing">standard di qualità e test</a> per come funziona quella verifica. Per i prodotti commercializzati come commestibili THC, ciò significa rigorosamente sotto lo 0,20% di THC secondo la nostra <a href="/legal-cannabis-europe">guida alla cannabis legale</a>, non la soglia dello 0,3% per fiori/resine.</p>
+        <p>La regolamentazione continua ad evolversi — il quadro Novel Food dell'UE stesso, che governa come gli estratti di CBD possono essere commercializzati come alimento o integratori, è ancora in fase di finalizzazione paese per paese. Per lo stato ufficiale e attuale del CBD secondo le regole Novel Food dell'UE, vedi la <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">pagina delle decisioni Novel Food della Commissione Europea</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Is CBD Legaal in Europa? Land-voor-Land Gids 2026',
+      excerpt: 'CBD is grotendeels legaal in de hele EU onder de 0,3%-THC-drempel, maar handhaving, etiketteringsregels, en beperkingen op productformaat variëren aanzienlijk per land. Hier is het praktische beeld voor kopers en wederverkopers.',
+      content: `
+        <h2>Legaal in Principe, Anders in de Praktijk</h2>
+        <p>CBD is legaal om te kopen, verkopen, en verzenden binnen de Europese Unie zolang het afkomstig is van goedgekeurde industriële hennepvariëteiten en onder de wettelijke THC-drempel blijft. Maar "legaal in de hele EU" betekent niet overal identieke regels — individuele landen interpreteren nieuwe voedingsmiddelenregelgeving, etiketteringsvereisten, en handhaving anders. Hier is het praktische land-voor-land beeld voor onze belangrijkste leveringsmarkten.</p>
+
+        <h3>Frankrijk</h3>
+        <p>Onze thuismarkt. Frankrijk staat CBD-producten toe met THC onder 0,3%, en de regelgevende positie is aanzienlijk gestabiliseerd sinds de juridische uitdagingen van begin jaren 2020. Zie onze <a href="/wholesale-cbd-flowers-france">groothandel CBD-bloemen Frankrijk</a>-pagina voor marktspecifieke details.</p>
+
+        <h3>Duitsland</h3>
+        <p>Europa's grootste CBD-markt qua volume. Duitsland volgt de standaard 0,3%-THC-drempel en heeft een volwassen, goed gevestigde CBD-retailsector. Details op onze <a href="/wholesale-cbd-flowers-germany">Duitsland-groothandelspagina</a>.</p>
+
+        <h3>Italië, Nederland</h3>
+        <p>Beide markten staan CBD-bloemen en -derivaten toe onder de EU-standaard THC-drempel, met gevestigde groothandels- en retailkanalen. Zie <a href="/wholesale-cbd-flowers-italy">Italië</a> en <a href="/wholesale-cbd-flowers-netherlands">Nederland</a> voor marktspecifieke informatie.</p>
+
+        <h3>België, Spanje, Luxemburg</h3>
+        <p>Deze markten volgen het EU-standaardkader met over het algemeen gunstige handhavingsomgevingen voor conforme CBD-producten. Zie onze speciale pagina's voor <a href="/cbd-wholesaler-belgium">België</a>, <a href="/cbd-wholesaler-spain">Spanje</a>, en <a href="/cbd-wholesaler-luxembourg">Luxemburg</a>.</p>
+
+        <h3>Zwitserland</h3>
+        <p>Opmerkelijk anders: Zwitserland is geen EU-lid en past zijn eigen, permissievere THC-drempel van 1% toe in plaats van 0,3%. Dit maakt Zwitserland een van de meest volwassen CBD-markten van Europa. Zie onze <a href="/cbd-wholesaler-switzerland">Zwitserland-pagina</a> voor details specifiek voor die markt.</p>
+
+        <h3>Malta</h3>
+        <p>Een EU-lid met een eigen specifiek vergunningskader voor cannabisgerelateerde producten. Zie onze <a href="/cbd-wholesaler-malta">Malta-groothandelspagina</a> voor marktdetails.</p>
+
+        <h3>De Ene Regel die Niet Verandert: THC-Limieten Zijn Niet Optioneel</h3>
+        <p>Ongeacht landspecifieke nuances wordt elk product dat we verkopen onafhankelijk labgetest en geverifieerd onder de toepasselijke wettelijke THC-limiet voordat het wordt vermeld — zie onze <a href="/quality-and-testing">kwaliteits- en teststandaarden</a> voor hoe die verificatie werkt. Voor producten die op de markt worden gebracht als THC-eetwaren betekent dit strikt onder 0,20% THC volgens onze <a href="/legal-cannabis-europe">gids voor legale cannabis</a>, niet de 0,3%-bloem/hars-drempel.</p>
+        <p>Regelgeving blijft evolueren — het eigen Novel Food-kader van de EU, dat regelt hoe CBD-extracten op de markt kunnen worden gebracht als voedsel of supplementen, wordt nog steeds per land afgerond. Voor de officiële, huidige status van CBD onder EU Novel Food-regels, zie de <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">Novel Food-beslissingenpagina van de Europese Commissie</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Onko CBD Laillista Euroopassa? Maakohtainen Opas 2026',
+      excerpt: 'CBD on laajalti laillista kautta EU:n 0,3 % THC-kynnyksen alla, mutta valvonta, merkintäsäännöt, ja tuotemuotorajoitukset vaihtelevat merkittävästi maittain. Tässä on käytännön kuva ostajille ja jälleenmyyjille.',
+      content: `
+        <h2>Laillista Periaatteessa, Erilaista Käytännössä</h2>
+        <p>CBD on laillista ostaa, myydä, ja lähettää kautta Euroopan unionin, kunhan se on peräisin hyväksytyistä teollisen hampun lajikkeista ja pysyy laillisen THC-kynnyksen alapuolella. Mutta "laillista kautta EU:n" ei tarkoita identtisiä sääntöjä kaikkialla — yksittäiset maat tulkitsevat uuselintarvikesääntelyä, merkintävaatimuksia, ja valvontaa eri tavoin. Tässä on käytännön maakohtainen kuva ydintoimitusmarkkinoillemme.</p>
+
+        <h3>Ranska</h3>
+        <p>Kotimarkkinamme. Ranska sallii CBD-tuotteet, joiden THC-pitoisuus on alle 0,3 %, ja sääntelyasema on vakiintunut huomattavasti 2020-luvun alun oikeudellisten haasteiden jälkeen. Katso <a href="/wholesale-cbd-flowers-france">tukku-CBD-kukat Ranska</a> -sivumme markkinakohtaisia yksityiskohtia varten.</p>
+
+        <h3>Saksa</h3>
+        <p>Euroopan suurin CBD-markkina volyymiltaan. Saksa noudattaa standardia 0,3 % THC-kynnystä ja sillä on kypsä, hyvin vakiintunut CBD-vähittäiskauppasektori. Yksityiskohdat <a href="/wholesale-cbd-flowers-germany">Saksan tukkusivullamme</a>.</p>
+
+        <h3>Italia, Alankomaat</h3>
+        <p>Molemmat markkinat sallivat CBD-kukat ja johdannaiset standardin EU THC-kynnyksen alla, vakiintuneilla tukku- ja vähittäiskanavilla. Katso <a href="/wholesale-cbd-flowers-italy">Italia</a> ja <a href="/wholesale-cbd-flowers-netherlands">Alankomaat</a> markkinakohtaisia yksityiskohtia varten.</p>
+
+        <h3>Belgia, Espanja, Luxemburg</h3>
+        <p>Nämä markkinat noudattavat EU:n standardikehystä yleisesti suotuisilla valvontaympäristöillä vaatimustenmukaisille CBD-tuotteille. Katso omistetut sivumme <a href="/cbd-wholesaler-belgium">Belgialle</a>, <a href="/cbd-wholesaler-spain">Espanjalle</a>, ja <a href="/cbd-wholesaler-luxembourg">Luxemburgille</a>.</p>
+
+        <h3>Sveitsi</h3>
+        <p>Huomattavan erilainen: Sveitsi ei ole EU:n jäsen ja soveltaa omaa, sallivampaa 1 % THC-kynnystä 0,3 %:n sijaan. Tämä tekee Sveitsistä yhden Euroopan kypsimmistä CBD-markkinoista. Katso <a href="/cbd-wholesaler-switzerland">Sveitsi-sivumme</a> kyseiselle markkinalle ominaisia yksityiskohtia varten.</p>
+
+        <h3>Malta</h3>
+        <p>EU-jäsen omalla erityisellä lisensointikehyksellään kannabikseen liittyville tuotteille. Katso <a href="/cbd-wholesaler-malta">Maltan tukkumyyjäsivumme</a> markkinatietoja varten.</p>
+
+        <h3>Yksi Sääntö, Joka Ei Muutu: THC-Rajat Eivät Ole Valinnaisia</h3>
+        <p>Maakohtaisista vivahteista riippumatta jokainen myymämme tuote on riippumattomasti laboratoriotestattu ja vahvistettu sovellettavan laillisen THC-rajan alapuolelle ennen listaamista — katso <a href="/quality-and-testing">laatu- ja testausstandardimme</a> nähdäksesi kuinka tämä vahvistus toimii. THC-syötäviksi markkinoiduille tuotteille tämä tarkoittaa tiukasti alle 0,20 % THC:tä <a href="/legal-cannabis-europe">laillisen kannabiksen oppaamme</a> mukaan, ei 0,3 %:n kukka-/hartsikynnystä.</p>
+        <p>Sääntely kehittyy jatkuvasti — EU:n oma uuselintarvikekehys, joka säätelee kuinka CBD-uutteita voidaan markkinoida ruokana tai lisäravinteina, viimeistellään edelleen maittain. Virallisen, ajantasaisen CBD:n statuksen saamiseksi EU:n uuselintarvikesääntöjen mukaan katso <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">Euroopan komission uuselintarvikepäätössivu</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'O CBD é Legal na Europa? Guia País por País 2026',
+      excerpt: 'O CBD é amplamente legal em toda a UE sob o limiar de 0,3% de THC, mas a aplicação, regras de rotulagem, e restrições de formato de produto variam significativamente por país. Aqui está o panorama prático para compradores e revendedores.',
+      content: `
+        <h2>Legal em Princípio, Diferente na Prática</h2>
+        <p>O CBD é legal comprar, vender, e enviar em toda a União Europeia desde que derive de variedades de cânhamo industrial aprovadas e permaneça abaixo do limiar legal de THC. Mas "legal em toda a UE" não significa regras idênticas em todo o lado — os países individuais interpretam a regulamentação de novos alimentos, requisitos de rotulagem, e aplicação de forma diferente. Aqui está o panorama prático país por país para os nossos principais mercados de entrega.</p>
+
+        <h3>França</h3>
+        <p>O nosso mercado doméstico. A França permite produtos CBD com THC abaixo de 0,3%, e a posição regulatória estabilizou consideravelmente desde os desafios legais do início da década de 2020. Veja a nossa página <a href="/wholesale-cbd-flowers-france">flores CBD por grosso França</a> para detalhes específicos do mercado.</p>
+
+        <h3>Alemanha</h3>
+        <p>O maior mercado de CBD da Europa por volume. A Alemanha segue o limiar padrão de 0,3% de THC e tem um setor retalhista de CBD maduro e bem estabelecido. Detalhes na nossa <a href="/wholesale-cbd-flowers-germany">página por grosso da Alemanha</a>.</p>
+
+        <h3>Itália, Países Baixos</h3>
+        <p>Ambos os mercados permitem flores CBD e derivados sob o limiar padrão de THC da UE, com canais grossistas e retalhistas estabelecidos. Ver <a href="/wholesale-cbd-flowers-italy">Itália</a> e <a href="/wholesale-cbd-flowers-netherlands">Países Baixos</a> para especificidades de mercado.</p>
+
+        <h3>Bélgica, Espanha, Luxemburgo</h3>
+        <p>Estes mercados seguem o quadro padrão da UE com ambientes de aplicação geralmente favoráveis para produtos CBD conformes. Ver as nossas páginas dedicadas para <a href="/cbd-wholesaler-belgium">Bélgica</a>, <a href="/cbd-wholesaler-spain">Espanha</a>, e <a href="/cbd-wholesaler-luxembourg">Luxemburgo</a>.</p>
+
+        <h3>Suíça</h3>
+        <p>Notavelmente diferente: a Suíça não é membro da UE e aplica o seu próprio limiar de THC mais permissivo de 1% em vez de 0,3%. Isto torna a Suíça um dos mercados de CBD mais maduros da Europa. Ver a nossa <a href="/cbd-wholesaler-switzerland">página da Suíça</a> para detalhes específicos desse mercado.</p>
+
+        <h3>Malta</h3>
+        <p>Um membro da UE com o seu próprio quadro de licenciamento específico para produtos relacionados com cannabis. Ver a nossa <a href="/cbd-wholesaler-malta">página de grossista de Malta</a> para detalhes de mercado.</p>
+
+        <h3>A Única Regra que Não Muda: Os Limites de THC Não São Opcionais</h3>
+        <p>Independentemente das nuances específicas do país, cada produto que vendemos é testado em laboratório de forma independente e verificado abaixo do limite legal de THC aplicável antes de ser listado — ver os nossos <a href="/quality-and-testing">padrões de qualidade e testes</a> para como essa verificação funciona. Para produtos comercializados como comestíveis THC, isso significa estritamente abaixo de 0,20% THC de acordo com o nosso <a href="/legal-cannabis-europe">guia de cannabis legal</a>, não o limiar de 0,3% para flores/resinas.</p>
+        <p>A regulamentação continua a evoluir — o próprio quadro de Novos Alimentos da UE, que rege como os extratos de CBD podem ser comercializados como alimento ou suplementos, ainda está a ser finalizado país por país. Para o estado oficial e atual do CBD sob as regras de Novos Alimentos da UE, veja a <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">página de decisões de Novos Alimentos da Comissão Europeia</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
