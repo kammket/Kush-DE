@@ -4305,6 +4305,316 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'how-to-read-cbd-coa-lab-report': {
+    fr: {
+      title: "Comment Lire un Certificat d'Analyse CBD (COA)",
+      excerpt: "Un COA est le seul document qui prouve ce qui se trouve réellement dans un produit CBD. Voici comment en lire un correctement, et les éléments spécifiques qui devraient vous faire rejeter un lot.",
+      content: `
+        <h2>Le Document Qui Compte Plus Que l'Étiquette</h2>
+        <p>Un Certificat d'Analyse est un rapport de laboratoire sur un lot spécifique de produit. C'est la seule preuve que ce qui est écrit sur l'emballage correspond à ce qui est dans le bocal — et si une autorité vous demande un jour de démontrer la conformité, c'est le COA que vous produirez, pas l'étiquette.</p>
+        <p>Chaque lot que nous expédions en porte un, et vous pouvez demander le certificat pour tout produit avant de commander. Voici comment le lire réellement.</p>
+
+        <h3>1. Vérifiez qu'il Correspond au Lot Devant Vous</h3>
+        <p>Le problème le plus courant avec les COA n'est pas la falsification — c'est que le certificat décrit un lot différent. Recherchez un numéro de lot, une date d'échantillonnage, et un nom de produit qui correspondent à ce qui vous a été envoyé. Un COA d'il y a dix-huit mois pour "Fleur CBD" ne vous dit rien sur le matériel dans votre étagère.</p>
+
+        <h3>2. Confirmez que le Laboratoire est Indépendant et Accrédité</h3>
+        <p>Le rapport devrait nommer un laboratoire tiers, pas le propre département qualité du producteur. Recherchez l'accréditation ISO/IEC 17025, la norme internationale pour la compétence des laboratoires d'essai. Un résultat interne non accrédité n'est pas sans valeur, mais ce n'est pas une preuve sur laquelle vous voudriez vous appuyer si contesté.</p>
+
+        <h3>3. Lisez le Profil de Cannabinoïdes</h3>
+        <p>Vous vérifiez deux choses. D'abord, que le chiffre du CBD soutient l'allégation faite sur l'emballage. Ensuite — et plus important encore — que le chiffre du THC se situe où il doit être pour votre marché. Notez que certains certificats rapportent à la fois le delta-9 THC et le "THC total", qui tient compte de la conversion du THCA en THC lors du chauffage. Sachez quel chiffre intéresse votre régulateur.</p>
+        <p>Cette distinction est exactement pourquoi notre <a href="/thc-free-cbd-wholesale">gamme 0 % THC</a> existe comme ligne séparée. "Non détecté" signifie que le laboratoire n'a trouvé aucun THC à sa limite de quantification — une allégation matériellement différente d'un produit se situant juste sous un seuil en pourcentage. Certains marchés exigent le premier et un produit conforme à 0,2 % échouera là.</p>
+
+        <h3>4. Ne Sautez Pas les Panels de Contaminants</h3>
+        <p>Un profil de cannabinoïdes seul est un COA incomplet. Un rapport complet devrait aussi couvrir :</p>
+        <ul>
+          <li><strong>Métaux lourds :</strong> plomb, arsenic, mercure, cadmium. Le chanvre est un bioaccumulateur connu, ce qui signifie qu'il extrait les contaminants du sol dans lequel il pousse — donc ce panel n'est pas une formalité.</li>
+          <li><strong>Pesticides :</strong> particulièrement pertinent si le produit est vendu comme biologique. Voir notre <a href="/cbd-wholesaler-organic">gamme biologique</a> pour le côté certifié du catalogue.</li>
+          <li><strong>Microbes et mycotoxines :</strong> moisissure et ses sous-produits, plus pertinents pour la fleur et tout ce qui est stocké dans des conditions humides.</li>
+          <li><strong>Solvants résiduels :</strong> pertinent seulement pour les produits extraits par solvant. Le matériel séparé mécaniquement comme le <a href="/cbd-pollen-dry-sift-wholesale">dry sift et pollen</a> n'implique jamais de solvants à aucune étape, ce qui fait partie de son attrait.</li>
+        </ul>
+
+        <h3>5. Comprendre "ND" et la Limite de Quantification</h3>
+        <p>"ND" signifie non détecté — mais la détection a toujours un seuil, listé sur le rapport comme le LOQ ou limite de quantification. "Non détecté à 0,01 %" et "non détecté à 0,5 %" sont des déclarations très différentes. Un laboratoire avec un LOQ élevé peut rapporter un résultat propre sur un matériel qu'un laboratoire plus sensible signalerait. Lisez le chiffre, pas seulement les lettres.</p>
+
+        <h3>Signaux d'Alarme Qui Devraient Arrêter une Commande</h3>
+        <ul>
+          <li>Aucun numéro de lot, ou un numéro de lot qui ne correspond pas à votre livraison.</li>
+          <li>Résultats de cannabinoïdes uniquement, sans aucun panel de contaminants.</li>
+          <li>Un laboratoire non nommé, ou un rapport sans référence d'accréditation.</li>
+          <li>Un fournisseur qui ne peut pas produire le certificat avant que vous commandiez, seulement après.</li>
+        </ul>
+        <p>Ce dernier point est le plus révélateur. Tout fournisseur sérieux vous enverra un COA sur demande sans hésitation — les nôtres sont disponibles via WhatsApp avant que vous vous engagiez à quoi que ce soit, et notre <a href="/quality-and-testing">page de tests</a> expose le processus en entier.</p>
+
+        <h3>Pourquoi Cela Vaut Votre Temps</h3>
+        <p>Lire correctement les certificats vous protège deux fois : contre le stockage de matériel qui échoue à l'inspection, et contre le stockage de matériel qui déçoit les clients. Les deux coûtent plus que les dix minutes qu'il faut pour vérifier. Si vous construisez une relation fournisseur à partir de zéro, notre guide pour <a href="/blog/choose-right-cbd-flower-supplier">choisir un fournisseur de fleurs CBD</a> couvre ce qu'il faut vérifier d'autre en plus de la paperasse.</p>
+        <p>Pour des informations sur la norme ISO/IEC 17025 elle-même, consultez l'<a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">aperçu officiel ISO des laboratoires d'essai et d'étalonnage</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Wie Man ein CBD-Analysezertifikat (COA) Liest',
+      excerpt: 'Ein COA ist das einzige Dokument, das beweist, was tatsächlich in einem CBD-Produkt enthalten ist. Hier ist, wie man eines richtig liest, und die spezifischen Dinge, die Sie eine Charge ablehnen lassen sollten.',
+      content: `
+        <h2>Das Dokument, das Wichtiger Ist als das Etikett</h2>
+        <p>Ein Analysezertifikat ist ein Laborbericht über eine spezifische Charge eines Produkts. Es ist der einzige Beweis dafür, dass das, was auf der Verpackung steht, mit dem übereinstimmt, was im Glas ist — und wenn Sie jemals von einer Behörde gebeten werden, Compliance nachzuweisen, ist es das COA, das Sie vorlegen werden, nicht das Etikett.</p>
+        <p>Jede Charge, die wir versenden, trägt eines, und Sie können das Zertifikat für jedes Produkt vor der Bestellung anfordern. Im Folgenden erfahren Sie, wie man es tatsächlich liest.</p>
+
+        <h3>1. Überprüfen Sie, ob es zur Charge vor Ihnen Passt</h3>
+        <p>Das häufigste Problem bei COAs ist nicht Fälschung — es ist, dass das Zertifikat eine andere Charge beschreibt. Suchen Sie nach einer Chargen- oder Losnummer, einem Probendatum, und einem Produktnamen, die mit dem übereinstimmen, was Ihnen gesendet wurde. Ein COA von vor achtzehn Monaten für "CBD-Blüte" sagt Ihnen nichts über das Material in Ihrem Regal.</p>
+
+        <h3>2. Bestätigen Sie, dass das Labor Unabhängig und Akkreditiert Ist</h3>
+        <p>Der Bericht sollte ein Drittlabor nennen, nicht die eigene Qualitätsabteilung des Produzenten. Suchen Sie nach ISO/IEC 17025-Akkreditierung, dem internationalen Standard für die Kompetenz von Prüflaboren. Ein nicht akkreditiertes internes Ergebnis ist nicht wertlos, aber es ist kein Beweis, auf den Sie sich bei einer Anfechtung verlassen möchten.</p>
+
+        <h3>3. Lesen Sie das Cannabinoidprofil</h3>
+        <p>Sie prüfen zwei Dinge. Erstens, dass die CBD-Zahl die auf der Verpackung gemachte Behauptung stützt. Zweitens — und wichtiger — dass die THC-Zahl dort liegt, wo sie für Ihren Markt sein muss. Beachten Sie, dass einige Zertifikate sowohl Delta-9-THC als auch "Gesamt-THC" melden, was die Umwandlung von THCA in THC beim Erhitzen berücksichtigt. Wissen Sie, welche Zahl Ihre Aufsichtsbehörde interessiert.</p>
+        <p>Diese Unterscheidung ist genau der Grund, warum unsere <a href="/thc-free-cbd-wholesale">0 % THC-Range</a> als separate Linie existiert. "Nicht nachgewiesen" bedeutet, dass das Labor an seiner Bestimmungsgrenze kein THC gefunden hat — eine wesentlich andere Behauptung als ein Produkt, das gerade unter einem Prozentsatzschwellenwert liegt. Einige Märkte verlangen Ersteres, und ein konformes 0,2 %-Produkt wird dort scheitern.</p>
+
+        <h3>4. Überspringen Sie Nicht die Kontaminanten-Panels</h3>
+        <p>Ein Cannabinoidprofil allein ist ein unvollständiges COA. Ein vollständiger Bericht sollte auch abdecken:</p>
+        <ul>
+          <li><strong>Schwermetalle:</strong> Blei, Arsen, Quecksilber, Cadmium. Hanf ist ein bekannter Bioakkumulator, was bedeutet, dass er Kontaminanten aus dem Boden zieht, in dem er wächst — dieses Panel ist also keine Formalität.</li>
+          <li><strong>Pestizide:</strong> besonders relevant, wenn das Produkt als Bio verkauft wird. Siehe unsere <a href="/cbd-wholesaler-organic">Bio-Range</a> für die zertifizierte Seite des Katalogs.</li>
+          <li><strong>Mikroben und Mykotoxine:</strong> Schimmel und seine Nebenprodukte, am relevantesten für Blüten und alles, was unter feuchten Bedingungen gelagert wird.</li>
+          <li><strong>Restlösungsmittel:</strong> nur relevant für lösungsmittelextrahierte Produkte. Mechanisch getrenntes Material wie <a href="/cbd-pollen-dry-sift-wholesale">Dry Sift und Pollen</a> beinhaltet zu keinem Zeitpunkt Lösungsmittel, was Teil seiner Attraktivität ist.</li>
+        </ul>
+
+        <h3>5. Verstehen Sie "ND" und die Bestimmungsgrenze</h3>
+        <p>"ND" bedeutet nicht nachgewiesen — aber Nachweis hat immer eine Schwelle, im Bericht als LOQ oder Bestimmungsgrenze aufgeführt. "Nicht nachgewiesen bei 0,01 %" und "nicht nachgewiesen bei 0,5 %" sind sehr unterschiedliche Aussagen. Ein Labor mit hohem LOQ kann ein sauberes Ergebnis auf Material melden, das ein empfindlicheres Labor markieren würde. Lesen Sie die Zahl, nicht nur die Buchstaben.</p>
+
+        <h3>Warnsignale, die eine Bestellung Stoppen Sollten</h3>
+        <ul>
+          <li>Keine Chargennummer, oder eine Chargennummer, die nicht zu Ihrer Lieferung passt.</li>
+          <li>Nur Cannabinoidergebnisse, ohne jegliche Kontaminanten-Panels.</li>
+          <li>Ein unbenanntes Labor, oder ein Bericht ohne Akkreditierungsreferenz.</li>
+          <li>Ein Lieferant, der das Zertifikat nicht vor Ihrer Bestellung vorlegen kann, nur danach.</li>
+        </ul>
+        <p>Letzteres ist das aufschlussreichste. Jeder ernsthafte Lieferant wird Ihnen auf Anfrage ohne Zögern ein COA senden — unsere sind über WhatsApp verfügbar, bevor Sie sich zu irgendetwas verpflichten, und unsere <a href="/quality-and-testing">Testseite</a> legt den Prozess vollständig dar.</p>
+
+        <h3>Warum Sich Das Lohnt</h3>
+        <p>Zertifikate richtig zu lesen, schützt Sie zweifach: vor der Lagerung von Material, das die Inspektion nicht besteht, und vor der Lagerung von Material, das Kunden enttäuscht. Beides kostet mehr als die zehn Minuten, die die Überprüfung dauert. Wenn Sie eine Lieferantenbeziehung von Grund auf aufbauen, deckt unser Leitfaden zur <a href="/blog/choose-right-cbd-flower-supplier">Auswahl eines CBD-Blütenlieferanten</a> ab, was neben der Papierarbeit zu überprüfen ist.</p>
+        <p>Für Hintergrundinformationen zum ISO/IEC 17025-Standard selbst siehe den <a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">offiziellen ISO-Überblick über Prüf- und Kalibrierlabore</a>.</p>
+      `,
+    },
+    es: {
+      title: 'Cómo Leer un Certificado de Análisis CBD (COA)',
+      excerpt: 'Un COA es el único documento que prueba lo que realmente hay en un producto CBD. Aquí está cómo leer uno correctamente, y las cosas específicas que deberían hacerte rechazar un lote.',
+      content: `
+        <h2>El Documento que Importa Más que la Etiqueta</h2>
+        <p>Un Certificado de Análisis es un informe de laboratorio sobre un lote específico de producto. Es la única evidencia de que lo escrito en el empaque coincide con lo que hay en el frasco — y si alguna autoridad te pide demostrar cumplimiento, es el COA lo que producirás, no la etiqueta.</p>
+        <p>Cada lote que enviamos lleva uno, y puedes solicitar el certificado para cualquier producto antes de pedir. Lo que sigue es cómo leerlo realmente.</p>
+
+        <h3>1. Verifica que Coincida con el Lote Frente a Ti</h3>
+        <p>El problema más común con los COA no es la falsificación — es que el certificado describe un lote diferente. Busca un número de lote, una fecha de muestreo, y un nombre de producto que coincidan con lo que te enviaron. Un COA de hace dieciocho meses para "Flor CBD" no te dice nada sobre el material en tu estante.</p>
+
+        <h3>2. Confirma que el Laboratorio Es Independiente y Acreditado</h3>
+        <p>El informe debería nombrar un laboratorio de terceros, no el propio departamento de calidad del productor. Busca la acreditación ISO/IEC 17025, el estándar internacional para la competencia de laboratorios de pruebas. Un resultado interno no acreditado no carece de valor, pero no es una evidencia en la que quisieras confiar si es cuestionado.</p>
+
+        <h3>3. Lee el Perfil de Cannabinoides</h3>
+        <p>Estás verificando dos cosas. Primero, que la cifra de CBD respalda la afirmación hecha en el empaque. Segundo — y más importante — que la cifra de THC esté donde necesita estar para tu mercado. Ten en cuenta que algunos certificados reportan tanto delta-9 THC como "THC total", que tiene en cuenta la conversión de THCA a THC cuando se calienta. Sabe qué cifra le importa a tu regulador.</p>
+        <p>Esta distinción es exactamente por qué existe nuestra <a href="/thc-free-cbd-wholesale">gama 0% THC</a> como línea separada. "No detectado" significa que el laboratorio no encontró THC en su límite de cuantificación — una afirmación materialmente diferente de un producto que se sitúa justo por debajo de un umbral porcentual. Algunos mercados requieren lo primero y un producto conforme al 0,2% fallará allí.</p>
+
+        <h3>4. No Te Saltes los Paneles de Contaminantes</h3>
+        <p>Un perfil de cannabinoides solo es un COA incompleto. Un informe completo también debería cubrir:</p>
+        <ul>
+          <li><strong>Metales pesados:</strong> plomo, arsénico, mercurio, cadmio. El cáñamo es un bioacumulador conocido, lo que significa que extrae contaminantes del suelo en el que crece — así que este panel no es una formalidad.</li>
+          <li><strong>Pesticidas:</strong> particularmente relevante si el producto se vende como orgánico. Ver nuestra <a href="/cbd-wholesaler-organic">gama orgánica</a> para el lado certificado del catálogo.</li>
+          <li><strong>Microbios y micotoxinas:</strong> moho y sus subproductos, más relevantes para la flor y cualquier cosa almacenada en condiciones húmedas.</li>
+          <li><strong>Solventes residuales:</strong> solo relevante para productos extraídos con solvente. El material separado mecánicamente como <a href="/cbd-pollen-dry-sift-wholesale">dry sift y polen</a> nunca implica solventes en ninguna etapa, lo cual es parte de su atractivo.</li>
+        </ul>
+
+        <h3>5. Entiende "ND" y el Límite de Cuantificación</h3>
+        <p>"ND" significa no detectado — pero la detección siempre tiene un umbral, listado en el informe como el LOQ o límite de cuantificación. "No detectado al 0,01%" y "no detectado al 0,5%" son declaraciones muy diferentes. Un laboratorio con un LOQ alto puede reportar un resultado limpio en material que un laboratorio más sensible marcaría. Lee el número, no solo las letras.</p>
+
+        <h3>Señales de Alerta que Deberían Detener un Pedido</h3>
+        <ul>
+          <li>Sin número de lote, o un número de lote que no coincide con tu entrega.</li>
+          <li>Solo resultados de cannabinoides, sin ningún panel de contaminantes en absoluto.</li>
+          <li>Un laboratorio sin nombre, o un informe sin referencia de acreditación.</li>
+          <li>Un proveedor que no puede producir el certificado antes de que pidas, solo después.</li>
+        </ul>
+        <p>Ese último es el más revelador. Cualquier proveedor serio te enviará un COA a solicitud sin dudarlo — los nuestros están disponibles por WhatsApp antes de que te comprometas a algo, y nuestra <a href="/quality-and-testing">página de pruebas</a> establece el proceso en su totalidad.</p>
+
+        <h3>Por Qué Vale la Pena Tu Tiempo</h3>
+        <p>Leer certificados correctamente te protege dos veces: de tener en stock material que falla la inspección, y de tener en stock material que decepciona a los clientes. Ambos cuestan más que los diez minutos que toma verificar. Si estás construyendo una relación con un proveedor desde cero, nuestra guía para <a href="/blog/choose-right-cbd-flower-supplier">elegir un proveedor de flores CBD</a> cubre qué más verificar junto con el papeleo.</p>
+        <p>Para información sobre el estándar ISO/IEC 17025 en sí, consulta la <a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">visión general oficial de ISO sobre laboratorios de pruebas y calibración</a>.</p>
+      `,
+    },
+    it: {
+      title: 'Come Leggere un Certificato di Analisi CBD (COA)',
+      excerpt: "Un COA è l'unico documento che dimostra cosa c'è effettivamente in un prodotto CBD. Ecco come leggerne uno correttamente, e le cose specifiche che dovrebbero farti rifiutare un lotto.",
+      content: `
+        <h2>Il Documento che Conta Più dell'Etichetta</h2>
+        <p>Un Certificato di Analisi è un rapporto di laboratorio su un lotto specifico di prodotto. È l'unica prova che ciò che è scritto sulla confezione corrisponde a ciò che è nel barattolo — e se ti viene mai chiesto da un'autorità di dimostrare la conformità, è il COA che produrrai, non l'etichetta.</p>
+        <p>Ogni lotto che spediamo ne porta uno, e puoi richiedere il certificato per qualsiasi prodotto prima di ordinare. Quello che segue è come leggerlo effettivamente.</p>
+
+        <h3>1. Controlla che Corrisponda al Lotto Davanti a Te</h3>
+        <p>Il problema più comune con i COA non è la falsificazione — è che il certificato descrive un lotto diverso. Cerca un numero di lotto, una data di campionamento, e un nome del prodotto che corrispondano a ciò che ti è stato inviato. Un COA di diciotto mesi fa per "Fiore CBD" non ti dice nulla sul materiale sul tuo scaffale.</p>
+
+        <h3>2. Conferma che il Laboratorio Sia Indipendente e Accreditato</h3>
+        <p>Il rapporto dovrebbe nominare un laboratorio terzo, non il dipartimento qualità del produttore stesso. Cerca l'accreditamento ISO/IEC 17025, lo standard internazionale per la competenza dei laboratori di prova. Un risultato interno non accreditato non è privo di valore, ma non è una prova su cui vorresti fare affidamento se contestato.</p>
+
+        <h3>3. Leggi il Profilo Cannabinoide</h3>
+        <p>Stai controllando due cose. Primo, che la cifra del CBD supporti l'affermazione fatta sulla confezione. Secondo — e più importante — che la cifra del THC sia dove deve essere per il tuo mercato. Nota che alcuni certificati riportano sia il delta-9 THC che il "THC totale", che tiene conto della conversione del THCA in THC quando riscaldato. Sappi quale cifra interessa al tuo regolatore.</p>
+        <p>Questa distinzione è esattamente il motivo per cui la nostra <a href="/thc-free-cbd-wholesale">gamma 0% THC</a> esiste come linea separata. "Non rilevato" significa che il laboratorio non ha trovato THC al suo limite di quantificazione — un'affermazione materialmente diversa da un prodotto che si trova appena sotto una soglia percentuale. Alcuni mercati richiedono il primo e un prodotto conforme allo 0,2% fallirà lì.</p>
+
+        <h3>4. Non Saltare i Pannelli dei Contaminanti</h3>
+        <p>Un profilo cannabinoide da solo è un COA incompleto. Un rapporto completo dovrebbe anche coprire:</p>
+        <ul>
+          <li><strong>Metalli pesanti:</strong> piombo, arsenico, mercurio, cadmio. La canapa è un noto bioaccumulatore, il che significa che estrae contaminanti dal suolo in cui cresce — quindi questo pannello non è una formalità.</li>
+          <li><strong>Pesticidi:</strong> particolarmente rilevante se il prodotto è venduto come biologico. Vedi la nostra <a href="/cbd-wholesaler-organic">gamma biologica</a> per il lato certificato del catalogo.</li>
+          <li><strong>Microbi e micotossine:</strong> muffa e i suoi sottoprodotti, più rilevanti per il fiore e qualsiasi cosa conservata in condizioni umide.</li>
+          <li><strong>Solventi residui:</strong> rilevante solo per i prodotti estratti con solvente. Il materiale separato meccanicamente come il <a href="/cbd-pollen-dry-sift-wholesale">dry sift e polline</a> non coinvolge mai solventi in nessuna fase, il che fa parte del suo fascino.</li>
+        </ul>
+
+        <h3>5. Comprendi "ND" e il Limite di Quantificazione</h3>
+        <p>"ND" significa non rilevato — ma il rilevamento ha sempre una soglia, elencata nel rapporto come LOQ o limite di quantificazione. "Non rilevato allo 0,01%" e "non rilevato allo 0,5%" sono affermazioni molto diverse. Un laboratorio con un LOQ alto può riportare un risultato pulito su materiale che un laboratorio più sensibile segnalerebbe. Leggi il numero, non solo le lettere.</p>
+
+        <h3>Segnali d'Allarme che Dovrebbero Fermare un Ordine</h3>
+        <ul>
+          <li>Nessun numero di lotto, o un numero di lotto che non corrisponde alla tua consegna.</li>
+          <li>Solo risultati di cannabinoidi, senza alcun pannello di contaminanti.</li>
+          <li>Un laboratorio non nominato, o un rapporto senza riferimento di accreditamento.</li>
+          <li>Un fornitore che non può produrre il certificato prima che tu ordini, solo dopo.</li>
+        </ul>
+        <p>Quest'ultimo è il più rivelatore. Qualsiasi fornitore serio ti invierà un COA su richiesta senza esitazione — i nostri sono disponibili tramite WhatsApp prima che tu ti impegni in qualsiasi cosa, e la nostra <a href="/quality-and-testing">pagina dei test</a> illustra il processo per intero.</p>
+
+        <h3>Perché Vale il Tuo Tempo</h3>
+        <p>Leggere correttamente i certificati ti protegge due volte: dall'immagazzinare materiale che fallisce l'ispezione, e dall'immagazzinare materiale che delude i clienti. Entrambi costano più dei dieci minuti che ci vogliono per controllare. Se stai costruendo una relazione con un fornitore da zero, la nostra guida a <a href="/blog/choose-right-cbd-flower-supplier">come scegliere un fornitore di fiori CBD</a> copre cos'altro verificare insieme alla documentazione.</p>
+        <p>Per informazioni di base sullo standard ISO/IEC 17025 stesso, vedi la <a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">panoramica ufficiale ISO sui laboratori di prova e calibrazione</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Hoe een CBD-Certificaat van Analyse (COA) te Lezen',
+      excerpt: 'Een COA is het enige document dat bewijst wat daadwerkelijk in een CBD-product zit. Hier is hoe u er een correct leest, en de specifieke dingen die u een batch zouden moeten laten afwijzen.',
+      content: `
+        <h2>Het Document dat Belangrijker Is dan het Etiket</h2>
+        <p>Een Certificaat van Analyse is een laboratoriumrapport over een specifieke batch van een product. Het is het enige bewijs dat wat op de verpakking staat overeenkomt met wat er in de pot zit — en als u ooit door een autoriteit wordt gevraagd om naleving aan te tonen, is het de COA die u zult overleggen, niet het etiket.</p>
+        <p>Elke batch die we verzenden draagt er een, en u kunt het certificaat voor elk product opvragen voordat u bestelt. Wat volgt is hoe u het daadwerkelijk leest.</p>
+
+        <h3>1. Controleer of het Overeenkomt met de Batch Voor U</h3>
+        <p>Het meest voorkomende probleem met COA's is geen vervalsing — het is dat het certificaat een andere batch beschrijft. Zoek naar een batch- of lotnummer, een monsterdatum, en een productnaam die overeenkomen met wat u werd toegezonden. Een COA van achttien maanden geleden voor "CBD-Bloem" vertelt u niets over het materiaal op uw schap.</p>
+
+        <h3>2. Bevestig dat het Laboratorium Onafhankelijk en Geaccrediteerd Is</h3>
+        <p>Het rapport zou een externe laboratorium moeten noemen, niet de eigen kwaliteitsafdeling van de producent. Zoek naar ISO/IEC 17025-accreditatie, de internationale standaard voor de competentie van testlaboratoria. Een niet-geaccrediteerd intern resultaat is niet waardeloos, maar het is geen bewijs waarop u zou willen vertrouwen als het wordt betwist.</p>
+
+        <h3>3. Lees het Cannabinoïdeprofiel</h3>
+        <p>U controleert twee dingen. Ten eerste, dat het CBD-cijfer de bewering op de verpakking ondersteunt. Ten tweede — en belangrijker — dat het THC-cijfer zich bevindt waar het voor uw markt moet zijn. Merk op dat sommige certificaten zowel delta-9 THC als "totale THC" rapporteren, wat rekening houdt met THCA die bij verhitting omzet in THC. Weet welk cijfer uw regelgever interesseert.</p>
+        <p>Dit onderscheid is precies waarom onze <a href="/thc-free-cbd-wholesale">0% THC-reeks</a> als aparte lijn bestaat. "Niet gedetecteerd" betekent dat het laboratorium geen THC vond bij zijn kwantificeringslimiet — een wezenlijk andere bewering dan een product dat net onder een percentagedrempel ligt. Sommige markten vereisen het eerste en een conform 0,2%-product zal daar falen.</p>
+
+        <h3>4. Sla de Verontreinigingspanelen Niet Over</h3>
+        <p>Een cannabinoïdeprofiel alleen is een onvolledige COA. Een volledig rapport zou ook moeten omvatten:</p>
+        <ul>
+          <li><strong>Zware metalen:</strong> lood, arseen, kwik, cadmium. Hennep is een bekende bioaccumulator, wat betekent dat het verontreinigingen uit de bodem trekt waarin het groeit — dus dit paneel is geen formaliteit.</li>
+          <li><strong>Pesticiden:</strong> vooral relevant als het product als biologisch wordt verkocht. Zie onze <a href="/cbd-wholesaler-organic">biologische reeks</a> voor de gecertificeerde kant van de catalogus.</li>
+          <li><strong>Microben en mycotoxines:</strong> schimmel en zijn bijproducten, het meest relevant voor bloem en alles wat in vochtige omstandigheden wordt bewaard.</li>
+          <li><strong>Restoplosmiddelen:</strong> alleen relevant voor met oplosmiddel geëxtraheerde producten. Mechanisch gescheiden materiaal zoals <a href="/cbd-pollen-dry-sift-wholesale">dry sift en pollen</a> gebruikt nooit oplosmiddelen in welke fase dan ook, wat deel uitmaakt van de aantrekkingskracht.</li>
+        </ul>
+
+        <h3>5. Begrijp "ND" en de Kwantificeringslimiet</h3>
+        <p>"ND" betekent niet gedetecteerd — maar detectie heeft altijd een drempel, vermeld op het rapport als de LOQ of kwantificeringslimiet. "Niet gedetecteerd bij 0,01%" en "niet gedetecteerd bij 0,5%" zijn zeer verschillende uitspraken. Een laboratorium met een hoge LOQ kan een schoon resultaat rapporteren op materiaal dat een gevoeliger laboratorium zou markeren. Lees het getal, niet alleen de letters.</p>
+
+        <h3>Waarschuwingssignalen die een Bestelling Zouden Moeten Stoppen</h3>
+        <ul>
+          <li>Geen batchnummer, of een batchnummer dat niet overeenkomt met uw levering.</li>
+          <li>Alleen cannabinoïderesultaten, zonder enige verontreinigingspanelen.</li>
+          <li>Een ongenoemd laboratorium, of een rapport zonder accreditatiereferentie.</li>
+          <li>Een leverancier die het certificaat niet kan produceren voordat u bestelt, alleen erna.</li>
+        </ul>
+        <p>Dat laatste is het meest veelzeggend. Elke serieuze leverancier zal u op verzoek zonder aarzeling een COA sturen — de onze zijn beschikbaar via WhatsApp voordat u zich ergens toe verbindt, en onze <a href="/quality-and-testing">testpagina</a> zet het proces volledig uiteen.</p>
+
+        <h3>Waarom Dit Uw Tijd Waard Is</h3>
+        <p>Certificaten correct lezen beschermt u tweemaal: tegen het aanhouden van materiaal dat de inspectie niet doorstaat, en tegen het aanhouden van materiaal dat klanten teleurstelt. Beide kosten meer dan de tien minuten die het kost om te controleren. Als u een leveranciersrelatie vanaf nul opbouwt, behandelt onze gids voor <a href="/blog/choose-right-cbd-flower-supplier">het kiezen van een CBD-bloemenleverancier</a> wat u nog meer moet verifiëren naast het papierwerk.</p>
+        <p>Voor achtergrondinformatie over de ISO/IEC 17025-standaard zelf, zie het <a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">officiële ISO-overzicht van test- en kalibratielaboratoria</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Kuinka Lukea CBD-Analyysitodistus (COA)',
+      excerpt: 'COA on ainoa asiakirja, joka todistaa, mitä CBD-tuotteessa todella on. Tässä on kuinka lukea sellainen oikein, ja tietyt asiat, jotka pitäisi saada sinut hylkäämään erä.',
+      content: `
+        <h2>Asiakirja, Joka Merkitsee Enemmän Kuin Etiketti</h2>
+        <p>Analyysitodistus on laboratorioraportti tietystä tuote-erästä. Se on ainoa todiste siitä, että pakkauksessa kirjoitettu vastaa purkin sisältöä — ja jos viranomainen joskus pyytää sinua osoittamaan vaatimustenmukaisuutta, se on COA, jonka esität, ei etiketti.</p>
+        <p>Jokainen toimittamamme erä sisältää sellaisen, ja voit pyytää todistusta mille tahansa tuotteelle ennen tilaamista. Seuraavassa on, kuinka sitä todella luetaan.</p>
+
+        <h3>1. Tarkista, Että Se Vastaa Edessäsi Olevaa Erää</h3>
+        <p>Yleisin ongelma COA:iden kanssa ei ole väärennös — se on, että todistus kuvaa eri erää. Etsi erä- tai eränumeroa, näytteenottopäivää, ja tuotenimeä, jotka vastaavat sinulle lähetettyä. Kahdeksantoista kuukautta vanha COA "CBD-kukalle" ei kerro sinulle mitään hyllylläsi olevasta materiaalista.</p>
+
+        <h3>2. Vahvista, Että Laboratorio On Riippumaton ja Akkreditoitu</h3>
+        <p>Raportin tulisi nimetä kolmannen osapuolen laboratorio, ei tuottajan omaa laatuosastoa. Etsi ISO/IEC 17025 -akkreditointia, kansainvälistä standardia testauslaboratorion pätevyydelle. Akkreditoimaton talon sisäinen tulos ei ole arvoton, mutta se ei ole todiste, johon haluaisit luottaa, jos sitä kyseenalaistetaan.</p>
+
+        <h3>3. Lue Kannabinoidiprofiili</h3>
+        <p>Tarkistat kaksi asiaa. Ensinnäkin, että CBD-luku tukee pakkauksessa esitettyä väitettä. Toiseksi — ja tärkeämpänä — että THC-luku on siellä, missä sen täytyy olla markkinoillesi. Huomaa, että jotkut todistukset raportoivat sekä delta-9 THC:n että "kokonais-THC:n", joka ottaa huomioon THCA:n muuttumisen THC:ksi kuumennettaessa. Tiedä, mikä luku kiinnostaa sääntelijääsi.</p>
+        <p>Tämä ero on täsmälleen syy, miksi <a href="/thc-free-cbd-wholesale">0 % THC -valikoimamme</a> on olemassa erillisenä linjana. "Ei havaittu" tarkoittaa, että laboratorio ei löytänyt THC:tä sen määritysrajalla — olennaisesti erilainen väite kuin tuote, joka sijaitsee juuri prosenttiosuuden kynnysarvon alapuolella. Jotkut markkinat vaativat edellistä, ja vaatimustenmukainen 0,2 % tuote epäonnistuu siellä.</p>
+
+        <h3>4. Älä Ohita Kontaminanttipaneeleja</h3>
+        <p>Pelkkä kannabinoidiprofiili on epätäydellinen COA. Täydellisen raportin tulisi myös kattaa:</p>
+        <ul>
+          <li><strong>Raskasmetallit:</strong> lyijy, arseeni, elohopea, kadmium. Hamppu on tunnettu biokertyjä, mikä tarkoittaa, että se vetää epäpuhtauksia maaperästä, jossa se kasvaa — joten tämä paneeli ei ole muodollisuus.</li>
+          <li><strong>Torjunta-aineet:</strong> erityisen tärkeitä, jos tuote myydään luomuna. Katso <a href="/cbd-wholesaler-organic">luomuvalikoimamme</a> luettelon sertifioitua puolta varten.</li>
+          <li><strong>Mikrobit ja mykotoksiinit:</strong> home ja sen sivutuotteet, tärkeimpiä kukalle ja kaikelle kosteissa olosuhteissa säilytetylle.</li>
+          <li><strong>Jäännösliuottimet:</strong> tärkeitä vain liuotinuutetuille tuotteille. Mekaanisesti erotettu materiaali kuten <a href="/cbd-pollen-dry-sift-wholesale">dry sift ja siitepöly</a> ei koskaan sisällä liuottimia missään vaiheessa, mikä on osa sen viehätystä.</li>
+        </ul>
+
+        <h3>5. Ymmärrä "ND" ja Määritysraja</h3>
+        <p>"ND" tarkoittaa ei havaittu — mutta havaitsemisella on aina kynnysarvo, listattu raportissa LOQ:na tai määritysrajana. "Ei havaittu 0,01 %:lla" ja "ei havaittu 0,5 %:lla" ovat hyvin erilaisia väitteitä. Laboratorio, jolla on korkea LOQ, voi raportoida puhtaan tuloksen materiaalista, jonka herkempi laboratorio merkitsisi. Lue luku, ei vain kirjaimia.</p>
+
+        <h3>Varoitusmerkit, Jotka Pitäisi Pysäyttää Tilaus</h3>
+        <ul>
+          <li>Ei eränumeroa, tai eränumero, joka ei vastaa toimitustasi.</li>
+          <li>Vain kannabinoiditulokset, ilman minkäänlaisia kontaminanttipaneeleja.</li>
+          <li>Nimeämätön laboratorio, tai raportti ilman akkreditointiviitettä.</li>
+          <li>Toimittaja, joka ei voi esittää todistusta ennen tilaamista, vain sen jälkeen.</li>
+        </ul>
+        <p>Tuo viimeinen on kaikkein paljastavin. Mikä tahansa vakavasti otettava toimittaja lähettää sinulle COA:n pyynnöstä epäröimättä — meidän ovat saatavilla WhatsAppin kautta ennen kuin sitoudut mihinkään, ja <a href="/quality-and-testing">testaussivumme</a> selittää prosessin kokonaisuudessaan.</p>
+
+        <h3>Miksi Tämä On Aikasi Arvoinen</h3>
+        <p>Todistusten oikea lukeminen suojaa sinua kahdesti: tarkastuksessa epäonnistuvan materiaalin varastoimiselta, ja asiakkaita pettävän materiaalin varastoimiselta. Molemmat maksavat enemmän kuin kymmenen minuuttia, jotka tarkistaminen vie. Jos rakennat toimittajasuhdetta alusta, oppaamme <a href="/blog/choose-right-cbd-flower-supplier">CBD-kukkatoimittajan valitsemiseen</a> kattaa, mitä muuta tarkistaa paperityön ohella.</p>
+        <p>Taustatietoja itse ISO/IEC 17025 -standardista varten, katso <a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">ISO:n virallinen yleiskatsaus testaus- ja kalibrointilaboratorioihin</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Como Ler um Certificado de Análise CBD (COA)',
+      excerpt: 'Um COA é o único documento que prova o que realmente está num produto CBD. Aqui está como ler um corretamente, e as coisas específicas que deveriam fazê-lo rejeitar um lote.',
+      content: `
+        <h2>O Documento que Importa Mais que o Rótulo</h2>
+        <p>Um Certificado de Análise é um relatório laboratorial sobre um lote específico de produto. É a única evidência de que o que está escrito na embalagem corresponde ao que está no frasco — e se alguma vez for pedido por uma autoridade para demonstrar conformidade, é o COA que apresentará, não o rótulo.</p>
+        <p>Cada lote que enviamos tem um, e pode solicitar o certificado para qualquer produto antes de encomendar. O que se segue é como realmente lê-lo.</p>
+
+        <h3>1. Verifique se Corresponde ao Lote à Sua Frente</h3>
+        <p>O problema mais comum com os COAs não é a falsificação — é que o certificado descreve um lote diferente. Procure um número de lote, uma data de amostragem, e um nome de produto que correspondam ao que lhe foi enviado. Um COA de dezoito meses atrás para "Flor CBD" não lhe diz nada sobre o material na sua prateleira.</p>
+
+        <h3>2. Confirme que o Laboratório é Independente e Acreditado</h3>
+        <p>O relatório deve nomear um laboratório terceiro, não o próprio departamento de qualidade do produtor. Procure a acreditação ISO/IEC 17025, o padrão internacional para a competência de laboratórios de ensaio. Um resultado interno não acreditado não é sem valor, mas não é uma evidência em que você gostaria de confiar se for contestado.</p>
+
+        <h3>3. Leia o Perfil de Canabinoides</h3>
+        <p>Está a verificar duas coisas. Primeiro, que o valor de CBD suporta a alegação feita na embalagem. Segundo — e mais importante — que o valor de THC está onde precisa de estar para o seu mercado. Note que alguns certificados relatam tanto o delta-9 THC como o "THC total", que contabiliza a conversão de THCA em THC quando aquecido. Saiba qual valor interessa ao seu regulador.</p>
+        <p>Esta distinção é exatamente o motivo pelo qual a nossa <a href="/thc-free-cbd-wholesale">gama 0% THC</a> existe como linha separada. "Não detetado" significa que o laboratório não encontrou THC no seu limite de quantificação — uma alegação materialmente diferente de um produto que se situa mesmo abaixo de um limiar percentual. Alguns mercados exigem o primeiro e um produto conforme a 0,2% falhará ali.</p>
+
+        <h3>4. Não Salte os Painéis de Contaminantes</h3>
+        <p>Um perfil de canabinoides sozinho é um COA incompleto. Um relatório completo também deve cobrir:</p>
+        <ul>
+          <li><strong>Metais pesados:</strong> chumbo, arsénio, mercúrio, cádmio. O cânhamo é um bioacumulador conhecido, o que significa que extrai contaminantes do solo em que cresce — por isso este painel não é uma formalidade.</li>
+          <li><strong>Pesticidas:</strong> particularmente relevante se o produto for vendido como orgânico. Veja a nossa <a href="/cbd-wholesaler-organic">gama orgânica</a> para o lado certificado do catálogo.</li>
+          <li><strong>Microbianos e micotoxinas:</strong> bolor e os seus subprodutos, mais relevantes para a flor e tudo o que é armazenado em condições húmidas.</li>
+          <li><strong>Solventes residuais:</strong> apenas relevante para produtos extraídos com solvente. Material separado mecanicamente como <a href="/cbd-pollen-dry-sift-wholesale">dry sift e pólen</a> nunca envolve solventes em nenhuma fase, o que faz parte do seu apelo.</li>
+        </ul>
+
+        <h3>5. Compreenda "ND" e o Limite de Quantificação</h3>
+        <p>"ND" significa não detetado — mas a deteção tem sempre um limiar, listado no relatório como o LOQ ou limite de quantificação. "Não detetado a 0,01%" e "não detetado a 0,5%" são afirmações muito diferentes. Um laboratório com um LOQ alto pode reportar um resultado limpo em material que um laboratório mais sensível assinalaria. Leia o número, não apenas as letras.</p>
+
+        <h3>Sinais de Alerta que Deveriam Parar uma Encomenda</h3>
+        <ul>
+          <li>Sem número de lote, ou um número de lote que não corresponde à sua entrega.</li>
+          <li>Apenas resultados de canabinoides, sem quaisquer painéis de contaminantes.</li>
+          <li>Um laboratório não nomeado, ou um relatório sem referência de acreditação.</li>
+          <li>Um fornecedor que não consegue apresentar o certificado antes de encomendar, apenas depois.</li>
+        </ul>
+        <p>Esse último é o mais revelador. Qualquer fornecedor sério enviar-lhe-á um COA a pedido sem hesitação — os nossos estão disponíveis via WhatsApp antes de se comprometer com qualquer coisa, e a nossa <a href="/quality-and-testing">página de testes</a> expõe o processo na íntegra.</p>
+
+        <h3>Porque Vale o Seu Tempo</h3>
+        <p>Ler certificados corretamente protege-o duas vezes: de armazenar material que falha na inspeção, e de armazenar material que dececiona os clientes. Ambos custam mais do que os dez minutos que leva a verificar. Se está a construir uma relação com fornecedor do zero, o nosso guia para <a href="/blog/choose-right-cbd-flower-supplier">escolher um fornecedor de flores CBD</a> cobre o que mais verificar juntamente com a documentação.</p>
+        <p>Para informação de base sobre o próprio padrão ISO/IEC 17025, veja a <a href="https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html" target="_blank" rel="noopener noreferrer">visão geral oficial da ISO sobre laboratórios de ensaio e calibração</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
