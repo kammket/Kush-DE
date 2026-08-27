@@ -624,6 +624,838 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'cbd-oil-wholesale-buying-guide': {
+    fr: {
+      title: "Guide d'Achat Huile CBD en Gros : Tout Savoir en 2026",
+      excerpt: "Apprenez à évaluer la qualité des huiles CBD, comprendre les rapports de laboratoire et maximiser vos marges lors des achats en gros.",
+      content: `
+        <h2>Guide d'Achat Huile CBD en Gros</h2>
+        <p>L'huile CBD est l'un des segments à la croissance la plus rapide du marché du bien-être. En tant que détaillant, comprendre les nuances des produits d'huile CBD vous aide à répondre aux besoins des clients et à optimiser votre inventaire.</p>
+
+        <h3>Comprendre les Concentrations d'Huile CBD</h3>
+        <p>Les <a href="/collections/cbd-oils">huiles CBD</a> sont disponibles en plusieurs concentrations, chacune servant différents segments de clientèle :</p>
+        <ul>
+          <li><strong>5 % CBD (500mg/10ml) :</strong> Concentration d'entrée de gamme, idéale pour débutants. Gros dès 1,49 €/unité au litre.</li>
+          <li><strong>10 % CBD (1000mg/10ml) :</strong> La concentration la plus populaire. Gros dès 1,75 €/unité au litre.</li>
+          <li><strong>20 % CBD (2000mg/10ml) :</strong> Concentration élevée pour utilisateurs expérimentés. Gros dès 2,49 €/unité au litre.</li>
+        </ul>
+
+        <h3>Huiles Spéciales</h3>
+        <p>Les huiles spéciales premium comme notre formule <a href="/products/cbd-cbn-melatonin-oil">CBD 10 % + CBN 10 % + Mélatonine</a> ciblent le marché croissant du bien-être sommeil et commandent des prix premium avec des marges exceptionnelles.</p>
+
+        <h3>Vrac vs Prêt à Vendre</h3>
+        <p>Considérez votre modèle d'affaires lors de la commande :</p>
+        <ul>
+          <li><strong>Vrac (au litre) :</strong> Coût par unité le plus bas, idéal si vous avez vos propres capacités d'embouteillage et d'étiquetage — voir notre <a href="/white-label-cbd-europe">offre marque blanche</a></li>
+          <li><strong>Prêt à Vendre :</strong> Pré-embouteillé avec étiquetage professionnel, prêt à vendre immédiatement</li>
+        </ul>
+
+        <h3>Indicateurs de Qualité à Vérifier</h3>
+        <p>Vérifiez toujours : Certificat d'Analyse (COA), méthode d'extraction (le CO2 est la référence), qualité de l'huile porteuse (huile de graine de chanvre bio préférée) et étiquetage approprié avec numéros de lot. Pour des informations indépendantes sur la sécurité et le dosage du CBD, utiles pour conseiller vos clients, consultez le <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Rapport de l'OMS sur le CBD</a>.</p>
+      `,
+    },
+    de: {
+      title: 'CBD-Öl Großhandel Einkaufsführer 2026',
+      excerpt: 'Lernen Sie, CBD-Öl-Qualität zu bewerten, Laborberichte zu verstehen und Ihre Margen beim Großhandelskauf zu maximieren.',
+      content: `
+        <h2>CBD-Öl Großhandel Einkaufsführer</h2>
+        <p>CBD-Öl ist eines der am schnellsten wachsenden Segmente im Wellness-Markt. Als Händler hilft Ihnen das Verständnis der Nuancen von CBD-Öl-Produkten, Kundenbedürfnisse zu erfüllen und Ihr Inventar zu optimieren.</p>
+
+        <h3>CBD-Öl-Konzentrationen Verstehen</h3>
+        <p><a href="/collections/cbd-oils">CBD-Öle</a> sind in mehreren Konzentrationen erhältlich, die jeweils unterschiedliche Kundensegmente bedienen:</p>
+        <ul>
+          <li><strong>5 % CBD (500mg/10ml):</strong> Einstiegskonzentration, ideal für Anfänger. Großhandel ab 1,49 €/Einheit pro Liter.</li>
+          <li><strong>10 % CBD (1000mg/10ml):</strong> Die beliebteste Konzentration. Großhandel ab 1,75 €/Einheit pro Liter.</li>
+          <li><strong>20 % CBD (2000mg/10ml):</strong> Hohe Konzentration für erfahrene Nutzer. Großhandel ab 2,49 €/Einheit pro Liter.</li>
+        </ul>
+
+        <h3>Spezialöle</h3>
+        <p>Premium-Spezialöle wie unsere <a href="/products/cbd-cbn-melatonin-oil">CBD 10 % + CBN 10 % + Melatonin</a>-Formel zielen auf den wachsenden Schlaf-Wellness-Markt ab und erzielen Premiumpreise mit außergewöhnlichen Margen.</p>
+
+        <h3>Bulk vs. Verkaufsfertig</h3>
+        <p>Berücksichtigen Sie Ihr Geschäftsmodell bei der Bestellung:</p>
+        <ul>
+          <li><strong>Bulk (pro Liter):</strong> Niedrigste Stückkosten, ideal wenn Sie eigene Abfüll- und Etikettierkapazitäten haben — siehe unser <a href="/white-label-cbd-europe">White-Label-Angebot</a></li>
+          <li><strong>Verkaufsfertig:</strong> Vorabgefüllt mit professioneller Etikettierung, sofort verkaufsbereit</li>
+        </ul>
+
+        <h3>Qualitätsindikatoren zum Prüfen</h3>
+        <p>Überprüfen Sie immer: Analysezertifikat (COA), Extraktionsmethode (CO2 ist der Goldstandard), Trägeröl-Qualität (bio Hanfsamenöl bevorzugt) und ordnungsgemäße Kennzeichnung mit Chargennummern. Für unabhängige Hintergrundinformationen zu CBD-Sicherheit und -Dosierung, nützlich für die Kundenberatung, siehe den <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">WHO-Bericht zu CBD</a>.</p>
+      `,
+    },
+    es: {
+      title: 'Guía Completa para Comprar Aceite CBD al por Mayor 2026',
+      excerpt: 'Aprenda a evaluar la calidad del aceite CBD, entender análisis de laboratorio y maximizar sus márgenes en compras mayoristas.',
+      content: `
+        <h2>Guía de Compra de Aceite CBD al por Mayor</h2>
+        <p>El aceite CBD es uno de los segmentos de más rápido crecimiento en el mercado del bienestar. Como minorista, entender los matices de los productos de aceite CBD te ayuda a satisfacer las necesidades del cliente y optimizar tu inventario.</p>
+
+        <h3>Entendiendo las Concentraciones de Aceite CBD</h3>
+        <p>Los <a href="/collections/cbd-oils">aceites CBD</a> están disponibles en varias concentraciones, cada una sirviendo a diferentes segmentos de clientes:</p>
+        <ul>
+          <li><strong>5% CBD (500mg/10ml):</strong> Concentración de nivel inicial, ideal para principiantes. Mayorista desde 1,49 €/unidad por litro.</li>
+          <li><strong>10% CBD (1000mg/10ml):</strong> La concentración más popular. Mayorista desde 1,75 €/unidad por litro.</li>
+          <li><strong>20% CBD (2000mg/10ml):</strong> Alta concentración para usuarios experimentados. Mayorista desde 2,49 €/unidad por litro.</li>
+        </ul>
+
+        <h3>Aceites Especiales</h3>
+        <p>Los aceites especiales premium como nuestra fórmula <a href="/products/cbd-cbn-melatonin-oil">CBD 10% + CBN 10% + Melatonina</a> apuntan al creciente mercado del bienestar del sueño y logran precios premium con márgenes excepcionales.</p>
+
+        <h3>A Granel vs Listo para Vender</h3>
+        <p>Considera tu modelo de negocio al pedir:</p>
+        <ul>
+          <li><strong>A Granel (por litro):</strong> Menor coste por unidad, ideal si tienes tu propia capacidad de embotellado y etiquetado — consulta nuestra <a href="/white-label-cbd-europe">oferta de marca blanca</a></li>
+          <li><strong>Listo para Vender:</strong> Pre-embotellado con etiquetado profesional, listo para vender inmediatamente</li>
+        </ul>
+
+        <h3>Indicadores de Calidad a Verificar</h3>
+        <p>Verifica siempre: Certificado de Análisis (COA), método de extracción (CO2 es el estándar de oro), calidad del aceite portador (aceite de semilla de cáñamo orgánico preferido) y etiquetado adecuado con números de lote. Para información independiente sobre seguridad y dosificación de CBD, útil para asesorar a tus clientes, consulta el <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Informe de la OMS sobre el CBD</a>.</p>
+      `,
+    },
+    it: {
+      title: "Guida all'Acquisto di Olio CBD all'Ingrosso 2026",
+      excerpt: "Scopri come valutare la qualità dell'olio CBD, leggere i report di laboratorio e massimizzare i margini sugli acquisti all'ingrosso.",
+      content: `
+        <h2>Guida all'Acquisto di Olio CBD all'Ingrosso</h2>
+        <p>L'olio CBD è uno dei segmenti in più rapida crescita nel mercato del benessere. Come rivenditore, comprendere le sfumature dei prodotti a base di olio CBD ti aiuta a soddisfare le esigenze dei clienti e ottimizzare il tuo inventario.</p>
+
+        <h3>Comprendere le Concentrazioni di Olio CBD</h3>
+        <p>Gli <a href="/collections/cbd-oils">oli CBD</a> sono disponibili in diverse concentrazioni, ciascuna adatta a diversi segmenti di clientela:</p>
+        <ul>
+          <li><strong>5% CBD (500mg/10ml):</strong> Concentrazione base, ideale per principianti. All'ingrosso da 1,49 €/unità al litro.</li>
+          <li><strong>10% CBD (1000mg/10ml):</strong> La concentrazione più popolare. All'ingrosso da 1,75 €/unità al litro.</li>
+          <li><strong>20% CBD (2000mg/10ml):</strong> Alta concentrazione per utenti esperti. All'ingrosso da 2,49 €/unità al litro.</li>
+        </ul>
+
+        <h3>Oli Speciali</h3>
+        <p>Gli oli speciali premium come la nostra formula <a href="/products/cbd-cbn-melatonin-oil">CBD 10% + CBN 10% + Melatonina</a> puntano al crescente mercato del benessere del sonno e ottengono prezzi premium con margini eccezionali.</p>
+
+        <h3>Sfuso vs Pronto per la Vendita</h3>
+        <p>Considera il tuo modello di business al momento dell'ordine:</p>
+        <ul>
+          <li><strong>Sfuso (al litro):</strong> Costo per unità più basso, ideale se hai una tua capacità di imbottigliamento ed etichettatura — vedi la nostra <a href="/white-label-cbd-europe">offerta white label</a></li>
+          <li><strong>Pronto per la Vendita:</strong> Pre-imbottigliato con etichettatura professionale, pronto per la vendita immediata</li>
+        </ul>
+
+        <h3>Indicatori di Qualità da Verificare</h3>
+        <p>Verifica sempre: Certificato di Analisi (COA), metodo di estrazione (il CO2 è lo standard di riferimento), qualità dell'olio vettore (olio di semi di canapa biologico preferito) ed etichettatura corretta con numeri di lotto. Per informazioni indipendenti sulla sicurezza e il dosaggio del CBD, utili per consigliare i clienti, consulta il <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Rapporto dell'OMS sul CBD</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'CBD-Olie Groothandel Koopgids 2026',
+      excerpt: 'Leer CBD-oliekwaliteit beoordelen, labrapporten begrijpen en uw marges maximaliseren bij groothandelsinkoop.',
+      content: `
+        <h2>CBD-Olie Groothandel Koopgids</h2>
+        <p>CBD-olie is een van de snelst groeiende segmenten in de wellnessmarkt. Als retailer helpt het begrijpen van de nuances van CBD-olieproducten u om aan klantbehoeften te voldoen en uw voorraad te optimaliseren.</p>
+
+        <h3>CBD-Olieconcentraties Begrijpen</h3>
+        <p><a href="/collections/cbd-oils">CBD-oliën</a> zijn verkrijgbaar in verschillende concentraties, elk gericht op verschillende klantsegmenten:</p>
+        <ul>
+          <li><strong>5% CBD (500mg/10ml):</strong> Instapconcentratie, ideaal voor beginners. Groothandel vanaf €1,49/eenheid per liter.</li>
+          <li><strong>10% CBD (1000mg/10ml):</strong> De populairste concentratie. Groothandel vanaf €1,75/eenheid per liter.</li>
+          <li><strong>20% CBD (2000mg/10ml):</strong> Hoge concentratie voor ervaren gebruikers. Groothandel vanaf €2,49/eenheid per liter.</li>
+        </ul>
+
+        <h3>Specialiteitsoliën</h3>
+        <p>Premium specialiteitsoliën zoals onze <a href="/products/cbd-cbn-melatonin-oil">CBD 10% + CBN 10% + Melatonine</a>-formule richten zich op de groeiende slaapwellnessmarkt en behalen premiumprijzen met uitzonderlijke marges.</p>
+
+        <h3>Bulk vs Verkoopklaar</h3>
+        <p>Overweeg uw bedrijfsmodel bij het bestellen:</p>
+        <ul>
+          <li><strong>Bulk (per liter):</strong> Laagste kosten per eenheid, ideaal als u eigen botteling en etikettering heeft — zie ons <a href="/white-label-cbd-europe">white label-aanbod</a></li>
+          <li><strong>Verkoopklaar:</strong> Voorgebotteld met professionele etikettering, direct verkoopklaar</li>
+        </ul>
+
+        <h3>Kwaliteitsindicatoren om te Controleren</h3>
+        <p>Controleer altijd: Certificaat van Analyse (COA), extractiemethode (CO2 is de gouden standaard), kwaliteit van de dragerolie (biologische hennepzaadolie de voorkeur) en juiste etikettering met batchnummers. Voor onafhankelijke achtergrond over CBD-veiligheid en dosering, nuttig bij het adviseren van klanten, zie het <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">WHO-rapport over CBD</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'CBD-öljyn Tukkuosto-opas 2026',
+      excerpt: 'Opi arvioimaan CBD-öljyn laatua, ymmärtämään laboratorioraportteja ja maksimoimaan katteesi tukkuostoissa.',
+      content: `
+        <h2>CBD-öljyn Tukkuosto-opas</h2>
+        <p>CBD-öljy on yksi hyvinvointimarkkinoiden nopeimmin kasvavista segmenteistä. Jälleenmyyjänä CBD-öljytuotteiden vivahteiden ymmärtäminen auttaa vastaamaan asiakastarpeisiin ja optimoimaan varastoasi.</p>
+
+        <h3>CBD-öljyn Pitoisuuksien Ymmärtäminen</h3>
+        <p><a href="/collections/cbd-oils">CBD-öljyjä</a> on saatavilla useissa pitoisuuksissa, kukin eri asiakassegmenteille:</p>
+        <ul>
+          <li><strong>5 % CBD (500mg/10ml):</strong> Aloituspitoisuus, ihanteellinen aloittelijoille. Tukussa alkaen 1,49 €/yksikkö litralta.</li>
+          <li><strong>10 % CBD (1000mg/10ml):</strong> Suosituin pitoisuus. Tukussa alkaen 1,75 €/yksikkö litralta.</li>
+          <li><strong>20 % CBD (2000mg/10ml):</strong> Korkea pitoisuus kokeneille käyttäjille. Tukussa alkaen 2,49 €/yksikkö litralta.</li>
+        </ul>
+
+        <h3>Erikoisöljyt</h3>
+        <p>Premium-erikoisöljyt kuten <a href="/products/cbd-cbn-melatonin-oil">CBD 10 % + CBN 10 % + Melatoniini</a> -kaavamme tähtäävät kasvavaan uni-hyvinvointimarkkinaan ja saavuttavat premium-hintoja poikkeuksellisilla katteilla.</p>
+
+        <h3>Bulkki vs Myyntivalmis</h3>
+        <p>Harkitse liiketoimintamalliasi tilatessasi:</p>
+        <ul>
+          <li><strong>Bulkki (litroittain):</strong> Alhaisin yksikköhinta, ihanteellinen jos sinulla on oma pullotus- ja merkintäkapasiteetti — katso <a href="/white-label-cbd-europe">private label -tarjontamme</a></li>
+          <li><strong>Myyntivalmis:</strong> Esipullotettu ammattimaisella merkinnällä, valmis myyntiin heti</li>
+        </ul>
+
+        <h3>Tarkistettavat Laatuindikaattorit</h3>
+        <p>Tarkista aina: Analyysitodistus (COA), uuttomenetelmä (CO2 on kultastandardi), kantajaöljyn laatu (luomu hampunsiemenöljyä suositaan) ja asianmukainen merkintä eränumeroineen. Riippumatonta taustatietoa CBD:n turvallisuudesta ja annostelusta, hyödyllistä asiakkaiden neuvomiseen, löydät <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">WHO:n CBD-raportista</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Guia de Compra de Óleo CBD por Grosso 2026',
+      excerpt: 'Aprenda a avaliar a qualidade do óleo CBD, entender relatórios laboratoriais e maximizar as suas margens em compras por grosso.',
+      content: `
+        <h2>Guia de Compra de Óleo CBD por Grosso</h2>
+        <p>O óleo CBD é um dos segmentos de crescimento mais rápido no mercado do bem-estar. Como retalhista, compreender as nuances dos produtos de óleo CBD ajuda-o a satisfazer as necessidades dos clientes e otimizar o seu inventário.</p>
+
+        <h3>Compreender as Concentrações de Óleo CBD</h3>
+        <p>Os <a href="/collections/cbd-oils">óleos CBD</a> estão disponíveis em várias concentrações, cada uma servindo diferentes segmentos de clientes:</p>
+        <ul>
+          <li><strong>5% CBD (500mg/10ml):</strong> Concentração de nível inicial, ideal para iniciantes. Grossista desde 1,49 €/unidade por litro.</li>
+          <li><strong>10% CBD (1000mg/10ml):</strong> A concentração mais popular. Grossista desde 1,75 €/unidade por litro.</li>
+          <li><strong>20% CBD (2000mg/10ml):</strong> Alta concentração para utilizadores experientes. Grossista desde 2,49 €/unidade por litro.</li>
+        </ul>
+
+        <h3>Óleos Especiais</h3>
+        <p>Óleos especiais premium como a nossa fórmula <a href="/products/cbd-cbn-melatonin-oil">CBD 10% + CBN 10% + Melatonina</a> visam o crescente mercado de bem-estar do sono e alcançam preços premium com margens excecionais.</p>
+
+        <h3>A Granel vs Pronto para Vender</h3>
+        <p>Considere o seu modelo de negócio ao encomendar:</p>
+        <ul>
+          <li><strong>A Granel (por litro):</strong> Menor custo por unidade, ideal se tiver a sua própria capacidade de engarrafamento e rotulagem — veja a nossa <a href="/white-label-cbd-europe">oferta de marca branca</a></li>
+          <li><strong>Pronto para Vender:</strong> Pré-engarrafado com rotulagem profissional, pronto para venda imediata</li>
+        </ul>
+
+        <h3>Indicadores de Qualidade a Verificar</h3>
+        <p>Verifique sempre: Certificado de Análise (COA), método de extração (CO2 é o padrão ouro), qualidade do óleo transportador (óleo de semente de cânhamo biológico preferido) e rotulagem adequada com números de lote. Para informação independente sobre segurança e dosagem de CBD, útil para aconselhar clientes, veja o <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Relatório da OMS sobre CBD</a>.</p>
+      `,
+    },
+  },
+  'european-cbd-regulations-2024': {
+    fr: {
+      title: 'Réglementations CBD Européennes 2026 : Ce que les Détaillants Doivent Savoir',
+      excerpt: 'Restez conforme aux dernières réglementations CBD à travers les marchés européens. Aperçu pays par pays des limites de THC, exigences d\'étiquetage et considérations légales.',
+      content: `
+        <h2>Réglementations CBD Européennes : Un Aperçu 2026</h2>
+        <p>Naviguer dans les réglementations CBD à travers l'Europe peut être un défi. Chaque pays a ses propres règles concernant les limites de THC, les types de produits et les exigences d'étiquetage. Voici ce que vous devez savoir.</p>
+
+        <h3>Cadre à l'Échelle de l'UE</h3>
+        <p>L'Union Européenne fournit un cadre de base, mais les États membres individuels peuvent définir leurs propres règles spécifiques. Considérations clés au niveau de l'UE :</p>
+        <ul>
+          <li>Le <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">Catalogue des Nouveaux Aliments de l'UE</a> classe les extraits de CBD comme Nouvel Aliment nécessitant une autorisation</li>
+          <li>La culture du chanvre est légale avec des variétés contenant moins de 0,3 % de THC (augmenté de 0,2 % en 2023)</li>
+          <li>Les produits cosmétiques contenant du CBD sont généralement autorisés sous le Règlement Cosmétique de l'UE</li>
+        </ul>
+
+        <h3>Réglementations Spécifiques par Pays</h3>
+        <h4>France</h4>
+        <p>La France autorise la vente de produits CBD dérivés de variétés de chanvre autorisées avec un THC inférieur à 0,3 %. La vente de fleurs de CBD brutes a été officiellement autorisée par le Conseil d'État français. Tous les produits doivent inclure un étiquetage approprié et des avertissements sanitaires.</p>
+
+        <h4>Allemagne</h4>
+        <p>L'Allemagne possède l'un des marchés CBD les plus développés d'Europe. Les produits CBD sont généralement légaux avec un THC inférieur à 0,2 %. Le pays évolue également vers la légalisation du cannabis, ce qui pourrait élargir les opportunités de marché.</p>
+
+        <h4>Italie</h4>
+        <p>L'Italie autorise les produits CBD avec un THC inférieur à 0,6 % (l'un des seuils les plus élevés d'Europe), ce qui en fait un marché favorable pour de nombreux types de produits. Les boutiques de "cannabis light" sont répandues.</p>
+
+        <h4>Espagne</h4>
+        <p>L'Espagne autorise les produits CBD à usage topique et comme "objets de collection" mais impose des restrictions sur les compléments alimentaires CBD et les produits ingérables. Le paysage réglementaire évolue.</p>
+
+        <h4>Pays-Bas</h4>
+        <p>Malgré sa réputation de tolérance envers le cannabis, les Pays-Bas ont des réglementations CBD relativement strictes. Les produits doivent contenir moins de 0,05 % de THC, et les réglementations sur les Nouveaux Aliments sont appliquées.</p>
+
+        <h3>Meilleures Pratiques pour la Conformité</h3>
+        <ul>
+          <li>Toujours obtenir et fournir des Certificats d'Analyse (COA) pour tous les produits</li>
+          <li>S'assurer que la teneur en THC respecte les limites légales de votre marché cible</li>
+          <li>Utiliser un étiquetage conforme avec les avertissements sanitaires et listes d'ingrédients requis</li>
+          <li>Conserver les registres de tous les tests de laboratoire et documentation des fournisseurs</li>
+          <li>Rester informé des changements réglementaires sur vos marchés</li>
+          <li>Travailler avec des fournisseurs qui priorisent la conformité (comme Greens Farmhouse)</li>
+        </ul>
+
+        <h3>Perspectives d'Avenir</h3>
+        <p>Le paysage réglementaire du CBD en Europe devient progressivement plus favorable. L'examen continu du CBD par l'UE en tant que Nouvel Aliment, combiné à une demande croissante des consommateurs, suggère une tendance vers des réglementations plus claires et plus permissives. Rester informé et conforme positionne votre entreprise pour un succès à long terme.</p>
+      `,
+    },
+    de: {
+      title: 'Europäische CBD-Vorschriften 2026: Was Händler Wissen Müssen',
+      excerpt: 'Bleiben Sie konform mit den neuesten CBD-Vorschriften in den europäischen Märkten. Länderweise Übersicht über THC-Grenzwerte, Kennzeichnungsanforderungen und rechtliche Überlegungen.',
+      content: `
+        <h2>Europäische CBD-Vorschriften: Ein Überblick 2026</h2>
+        <p>Die Navigation durch CBD-Vorschriften in Europa kann eine Herausforderung sein. Jedes Land hat eigene Regeln bezüglich THC-Grenzwerten, Produkttypen und Kennzeichnungsanforderungen. Hier ist, was Sie wissen müssen.</p>
+
+        <h3>EU-weiter Rahmen</h3>
+        <p>Die Europäische Union bietet einen Basisrahmen, aber einzelne Mitgliedstaaten können ihre eigenen spezifischen Regeln festlegen. Wichtige Überlegungen auf EU-Ebene:</p>
+        <ul>
+          <li>Der <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">EU-Katalog für neuartige Lebensmittel</a> klassifiziert CBD-Extrakte als neuartiges Lebensmittel, das eine Genehmigung erfordert</li>
+          <li>Der Hanfanbau ist legal mit Sorten, die weniger als 0,3 % THC enthalten (erhöht von 0,2 % im Jahr 2023)</li>
+          <li>Kosmetikprodukte mit CBD sind unter der EU-Kosmetikverordnung generell erlaubt</li>
+        </ul>
+
+        <h3>Länderspezifische Vorschriften</h3>
+        <h4>Frankreich</h4>
+        <p>Frankreich erlaubt den Verkauf von CBD-Produkten aus zugelassenen Hanfsorten mit THC unter 0,3 %. Der Verkauf roher CBD-Blüten wurde offiziell vom französischen Staatsrat genehmigt. Alle Produkte müssen ordnungsgemäße Kennzeichnung und Gesundheitswarnungen enthalten.</p>
+
+        <h4>Deutschland</h4>
+        <p>Deutschland hat einen der am weitesten entwickelten CBD-Märkte Europas. CBD-Produkte sind generell legal mit THC unter 0,2 %. Das Land bewegt sich auch in Richtung Cannabis-Legalisierung, was die Marktchancen erweitern könnte.</p>
+
+        <h4>Italien</h4>
+        <p>Italien erlaubt CBD-Produkte mit THC unter 0,6 % (einer der höchsten Schwellenwerte in Europa), was es zu einem günstigen Markt für viele Produkttypen macht. "Cannabis Light"-Läden sind weit verbreitet.</p>
+
+        <h4>Spanien</h4>
+        <p>Spanien erlaubt CBD-Produkte zur topischen Anwendung und als "Sammlerstücke", hat aber Einschränkungen bei CBD-Nahrungsergänzungsmitteln und einnehmbaren Produkten. Die regulatorische Landschaft entwickelt sich weiter.</p>
+
+        <h4>Niederlande</h4>
+        <p>Trotz ihres Rufs für Cannabis-Toleranz haben die Niederlande relativ strenge CBD-Vorschriften. Produkte müssen weniger als 0,05 % THC enthalten, und Vorschriften für neuartige Lebensmittel werden durchgesetzt.</p>
+
+        <h3>Best Practices für Compliance</h3>
+        <ul>
+          <li>Immer Analysezertifikate (COA) für alle Produkte einholen und bereitstellen</li>
+          <li>Sicherstellen, dass der THC-Gehalt innerhalb der gesetzlichen Grenzen für Ihren Zielmarkt liegt</li>
+          <li>Konforme Kennzeichnung mit erforderlichen Gesundheitswarnungen und Zutatenlisten verwenden</li>
+          <li>Aufzeichnungen aller Labortests und Lieferantendokumentation führen</li>
+          <li>Über regulatorische Änderungen in Ihren Märkten informiert bleiben</li>
+          <li>Mit Lieferanten zusammenarbeiten, die Compliance priorisieren (wie Greens Farmhouse)</li>
+        </ul>
+
+        <h3>Ausblick</h3>
+        <p>Die regulatorische Landschaft für CBD in Europa wird allmählich günstiger. Die laufende Überprüfung von CBD als neuartiges Lebensmittel durch die EU, kombiniert mit wachsender Verbrauchernachfrage, deutet auf einen Trend zu klareren und freizügigeren Vorschriften hin. Informiert und konform zu bleiben positioniert Ihr Unternehmen für langfristigen Erfolg.</p>
+      `,
+    },
+    es: {
+      title: 'Regulaciones CBD Europeas 2026: Lo que los Minoristas Deben Saber',
+      excerpt: 'Mantente conforme con las últimas regulaciones de CBD en los mercados europeos. Desglose país por país de límites de THC, requisitos de etiquetado y consideraciones legales.',
+      content: `
+        <h2>Regulaciones CBD Europeas: Un Resumen 2026</h2>
+        <p>Navegar por las regulaciones de CBD en Europa puede ser un desafío. Cada país tiene sus propias reglas sobre límites de THC, tipos de productos y requisitos de etiquetado. Esto es lo que necesitas saber.</p>
+
+        <h3>Marco a Nivel de la UE</h3>
+        <p>La Unión Europea proporciona un marco base, pero los estados miembros individuales pueden establecer sus propias reglas específicas. Consideraciones clave a nivel de la UE:</p>
+        <ul>
+          <li>El <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">Catálogo de Nuevos Alimentos de la UE</a> clasifica los extractos de CBD como Nuevo Alimento que requiere autorización</li>
+          <li>El cultivo de cáñamo es legal con variedades que contienen menos del 0,3% de THC (aumentado desde el 0,2% en 2023)</li>
+          <li>Los productos cosméticos que contienen CBD están generalmente permitidos bajo el Reglamento de Cosméticos de la UE</li>
+        </ul>
+
+        <h3>Regulaciones Específicas por País</h3>
+        <h4>Francia</h4>
+        <p>Francia permite la venta de productos CBD derivados de variedades de cáñamo autorizadas con THC inferior al 0,3%. La venta de flores CBD crudas fue oficialmente autorizada por el Consejo de Estado francés. Todos los productos deben incluir etiquetado adecuado y advertencias sanitarias.</p>
+
+        <h4>Alemania</h4>
+        <p>Alemania tiene uno de los mercados de CBD más desarrollados de Europa. Los productos CBD son generalmente legales con THC inferior al 0,2%. El país también se está moviendo hacia la legalización del cannabis, lo que puede expandir las oportunidades de mercado.</p>
+
+        <h4>Italia</h4>
+        <p>Italia permite productos CBD con THC inferior al 0,6% (uno de los umbrales más altos de Europa), convirtiéndolo en un mercado favorable para muchos tipos de productos. Las tiendas de "cannabis light" son generalizadas.</p>
+
+        <h4>España</h4>
+        <p>España permite productos CBD para uso tópico y como "artículos de coleccionista" pero tiene restricciones sobre suplementos alimenticios de CBD y productos ingeribles. El panorama regulatorio está evolucionando.</p>
+
+        <h4>Países Bajos</h4>
+        <p>A pesar de ser conocidos por la tolerancia al cannabis, los Países Bajos tienen regulaciones de CBD relativamente estrictas. Los productos deben contener menos del 0,05% de THC, y se aplican las regulaciones de Nuevos Alimentos.</p>
+
+        <h3>Mejores Prácticas para el Cumplimiento</h3>
+        <ul>
+          <li>Siempre obtén y proporciona Certificados de Análisis (COA) para todos los productos</li>
+          <li>Asegúrate de que el contenido de THC esté dentro de los límites legales de tu mercado objetivo</li>
+          <li>Usa etiquetado conforme con las advertencias sanitarias y listas de ingredientes requeridas</li>
+          <li>Mantén registros de todas las pruebas de laboratorio y documentación de proveedores</li>
+          <li>Mantente actualizado sobre cambios regulatorios en tus mercados</li>
+          <li>Trabaja con proveedores que priorizan el cumplimiento (como Greens Farmhouse)</li>
+        </ul>
+
+        <h3>Mirando Hacia Adelante</h3>
+        <p>El panorama regulatorio del CBD en Europa se está volviendo gradualmente más favorable. La revisión continua de la UE del CBD como Nuevo Alimento, combinada con la creciente demanda de los consumidores, sugiere una tendencia hacia regulaciones más claras y permisivas. Mantenerse informado y conforme posiciona tu negocio para el éxito a largo plazo.</p>
+      `,
+    },
+    it: {
+      title: 'Regolamenti CBD Europei 2026: Cosa Devono Sapere i Rivenditori',
+      excerpt: 'Rimani conforme alle ultime normative CBD nei mercati europei. Panoramica paese per paese dei limiti di THC, requisiti di etichettatura e considerazioni legali.',
+      content: `
+        <h2>Regolamenti CBD Europei: Una Panoramica 2026</h2>
+        <p>Navigare tra le normative CBD in Europa può essere impegnativo. Ogni paese ha le proprie regole riguardo ai limiti di THC, ai tipi di prodotto e ai requisiti di etichettatura. Ecco cosa devi sapere.</p>
+
+        <h3>Quadro a Livello UE</h3>
+        <p>L'Unione Europea fornisce un quadro di base, ma i singoli stati membri possono stabilire le proprie regole specifiche. Considerazioni chiave a livello UE:</p>
+        <ul>
+          <li>Il <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">Catalogo dei Novel Food dell'UE</a> classifica gli estratti di CBD come Novel Food che richiede autorizzazione</li>
+          <li>La coltivazione della canapa è legale con varietà contenenti meno dello 0,3% di THC (aumentato dallo 0,2% nel 2023)</li>
+          <li>I prodotti cosmetici contenenti CBD sono generalmente consentiti secondo il Regolamento Cosmetici UE</li>
+        </ul>
+
+        <h3>Normative Specifiche per Paese</h3>
+        <h4>Francia</h4>
+        <p>La Francia consente la vendita di prodotti CBD derivati da varietà di canapa autorizzate con THC inferiore allo 0,3%. La vendita di fiori CBD grezzi è stata ufficialmente autorizzata dal Consiglio di Stato francese. Tutti i prodotti devono includere un'etichettatura adeguata e avvertenze sanitarie.</p>
+
+        <h4>Germania</h4>
+        <p>La Germania ha uno dei mercati CBD più sviluppati d'Europa. I prodotti CBD sono generalmente legali con THC inferiore allo 0,2%. Il paese si sta anche muovendo verso la legalizzazione della cannabis, il che potrebbe ampliare le opportunità di mercato.</p>
+
+        <h4>Italia</h4>
+        <p>L'Italia consente prodotti CBD con THC inferiore allo 0,6% (una delle soglie più alte in Europa), rendendola un mercato favorevole per molti tipi di prodotto. I negozi di "cannabis light" sono diffusi.</p>
+
+        <h4>Spagna</h4>
+        <p>La Spagna consente prodotti CBD per uso topico e come "oggetti da collezione" ma ha restrizioni sugli integratori alimentari CBD e sui prodotti ingeribili. Il panorama normativo è in evoluzione.</p>
+
+        <h4>Paesi Bassi</h4>
+        <p>Nonostante siano noti per la tolleranza verso la cannabis, i Paesi Bassi hanno normative CBD relativamente severe. I prodotti devono contenere meno dello 0,05% di THC, e vengono applicate le normative sui Novel Food.</p>
+
+        <h3>Migliori Pratiche per la Conformità</h3>
+        <ul>
+          <li>Ottieni e fornisci sempre Certificati di Analisi (COA) per tutti i prodotti</li>
+          <li>Assicurati che il contenuto di THC sia entro i limiti legali del tuo mercato di riferimento</li>
+          <li>Usa un'etichettatura conforme con avvertenze sanitarie e liste degli ingredienti richieste</li>
+          <li>Conserva i registri di tutti i test di laboratorio e la documentazione dei fornitori</li>
+          <li>Rimani aggiornato sui cambiamenti normativi nei tuoi mercati</li>
+          <li>Lavora con fornitori che danno priorità alla conformità (come Greens Farmhouse)</li>
+        </ul>
+
+        <h3>Prospettive Future</h3>
+        <p>Il panorama normativo per il CBD in Europa sta gradualmente diventando più favorevole. La revisione in corso da parte dell'UE del CBD come Novel Food, combinata con la crescente domanda dei consumatori, suggerisce una tendenza verso normative più chiare e permissive. Rimanere informati e conformi posiziona la tua azienda per il successo a lungo termine.</p>
+      `,
+    },
+    nl: {
+      title: 'Europese CBD-Regelgeving 2026: Wat Retailers Moeten Weten',
+      excerpt: 'Blijf compliant met de laatste CBD-regelgeving in Europese markten. Land-voor-land overzicht van THC-limieten, etiketteringsvereisten en juridische overwegingen.',
+      content: `
+        <h2>Europese CBD-Regelgeving: Een Overzicht 2026</h2>
+        <p>Navigeren door CBD-regelgeving in Europa kan een uitdaging zijn. Elk land heeft eigen regels met betrekking tot THC-limieten, producttypen en etiketteringsvereisten. Dit is wat u moet weten.</p>
+
+        <h3>EU-breed Kader</h3>
+        <p>De Europese Unie biedt een basiskader, maar individuele lidstaten kunnen hun eigen specifieke regels vaststellen. Belangrijke overwegingen op EU-niveau:</p>
+        <ul>
+          <li>De <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">EU Novel Food Catalogus</a> classificeert CBD-extracten als Nieuw Voedingsmiddel dat autorisatie vereist</li>
+          <li>Hennepteelt is legaal met variëteiten die minder dan 0,3% THC bevatten (verhoogd van 0,2% in 2023)</li>
+          <li>Cosmetische producten met CBD zijn over het algemeen toegestaan onder de EU-cosmeticaverordening</li>
+        </ul>
+
+        <h3>Landspecifieke Regelgeving</h3>
+        <h4>Frankrijk</h4>
+        <p>Frankrijk staat de verkoop toe van CBD-producten afkomstig van goedgekeurde hennepvariëteiten met THC onder 0,3%. De verkoop van ruwe CBD-bloemen werd officieel goedgekeurd door de Franse Raad van State. Alle producten moeten juiste etikettering en gezondheidswaarschuwingen bevatten.</p>
+
+        <h4>Duitsland</h4>
+        <p>Duitsland heeft een van de meest ontwikkelde CBD-markten in Europa. CBD-producten zijn over het algemeen legaal met THC onder 0,2%. Het land beweegt zich ook richting cannabislegalisatie, wat marktkansen kan uitbreiden.</p>
+
+        <h4>Italië</h4>
+        <p>Italië staat CBD-producten toe met THC onder 0,6% (een van de hoogste drempels in Europa), waardoor het een gunstige markt is voor veel producttypen. "Cannabis light"-winkels zijn wijdverspreid.</p>
+
+        <h4>Spanje</h4>
+        <p>Spanje staat CBD-producten toe voor topisch gebruik en als "verzamelobjecten" maar heeft beperkingen op CBD-voedingssupplementen en inneembare producten. Het regelgevingslandschap evolueert.</p>
+
+        <h4>Nederland</h4>
+        <p>Ondanks bekend te staan om cannabistolerantie, heeft Nederland relatief strikte CBD-regelgeving. Producten moeten minder dan 0,05% THC bevatten, en Novel Food-regelgeving wordt gehandhaafd.</p>
+
+        <h3>Best Practices voor Naleving</h3>
+        <ul>
+          <li>Verkrijg en verstrek altijd Certificaten van Analyse (COA) voor alle producten</li>
+          <li>Zorg ervoor dat THC-gehalte binnen de wettelijke limieten voor uw doelmarkt valt</li>
+          <li>Gebruik conforme etikettering met vereiste gezondheidswaarschuwingen en ingrediëntenlijsten</li>
+          <li>Houd registraties bij van alle labtests en leveranciersdocumentatie</li>
+          <li>Blijf op de hoogte van regelgevingswijzigingen in uw markten</li>
+          <li>Werk samen met leveranciers die naleving prioriteren (zoals Greens Farmhouse)</li>
+        </ul>
+
+        <h3>Vooruitblik</h3>
+        <p>Het regelgevingslandschap voor CBD in Europa wordt geleidelijk gunstiger. De voortdurende beoordeling door de EU van CBD als Nieuw Voedingsmiddel, gecombineerd met groeiende consumentenvraag, suggereert een trend naar duidelijkere en permissievere regelgeving. Op de hoogte en compliant blijven positioneert uw bedrijf voor succes op lange termijn.</p>
+      `,
+    },
+    fi: {
+      title: 'Euroopan CBD-säädökset 2026: Mitä Jälleenmyyjien Tulee Tietää',
+      excerpt: 'Pysy vaatimustenmukaisena uusimpien CBD-säädösten kanssa Euroopan markkinoilla. Maakohtainen erittely THC-rajoista, merkintävaatimuksista ja oikeudellisista näkökohdista.',
+      content: `
+        <h2>Euroopan CBD-säädökset: Katsaus 2026</h2>
+        <p>CBD-säädösten navigointi Euroopassa voi olla haastavaa. Jokaisella maalla on omat sääntönsä THC-rajoista, tuotetyypeistä ja merkintävaatimuksista. Tässä on mitä sinun tulee tietää.</p>
+
+        <h3>EU-laajuinen Kehys</h3>
+        <p>Euroopan unioni tarjoaa peruskehyksen, mutta yksittäiset jäsenvaltiot voivat asettaa omat erityissääntönsä. Keskeiset EU-tason näkökohdat:</p>
+        <ul>
+          <li><a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">EU:n uuselintarvikeluettelo</a> luokittelee CBD-uutteet uuselintarvikkeeksi, joka vaatii lupaa</li>
+          <li>Hampun viljely on laillista lajikkeilla, jotka sisältävät alle 0,3 % THC:tä (nostettu 0,2 %:sta vuonna 2023)</li>
+          <li>CBD:tä sisältävät kosmeettiset tuotteet ovat yleensä sallittuja EU:n kosmetiikka-asetuksen mukaisesti</li>
+        </ul>
+
+        <h3>Maakohtaiset Säädökset</h3>
+        <h4>Ranska</h4>
+        <p>Ranska sallii hyväksytyistä hamppulajikkeista peräisin olevien CBD-tuotteiden myynnin THC-pitoisuuden ollessa alle 0,3 %. Raakojen CBD-kukkien myynti hyväksyttiin virallisesti Ranskan valtioneuvoston toimesta. Kaikissa tuotteissa on oltava asianmukainen merkintä ja terveysvaroitukset.</p>
+
+        <h4>Saksa</h4>
+        <p>Saksalla on yksi Euroopan kehittyneimmistä CBD-markkinoista. CBD-tuotteet ovat yleensä laillisia THC-pitoisuuden ollessa alle 0,2 %. Maa on myös siirtymässä kohti kannabiksen laillistamista, mikä voi laajentaa markkinamahdollisuuksia.</p>
+
+        <h4>Italia</h4>
+        <p>Italia sallii CBD-tuotteet, joiden THC-pitoisuus on alle 0,6 % (yksi Euroopan korkeimmista raja-arvoista), mikä tekee siitä suotuisan markkinan monille tuotetyypeille. "Cannabis light" -kaupat ovat yleisiä.</p>
+
+        <h4>Espanja</h4>
+        <p>Espanja sallii CBD-tuotteet paikalliseen käyttöön ja "keräilyesineinä", mutta sillä on rajoituksia CBD-ravintolisille ja nautittaville tuotteille. Sääntely-ympäristö kehittyy jatkuvasti.</p>
+
+        <h4>Alankomaat</h4>
+        <p>Huolimatta kannabistoleranssistaan tunnettuna maana, Alankomailla on suhteellisen tiukat CBD-säädökset. Tuotteiden on sisällettävä alle 0,05 % THC:tä, ja uuselintarvikesäädöksiä valvotaan.</p>
+
+        <h3>Parhaat Käytännöt Vaatimustenmukaisuuteen</h3>
+        <ul>
+          <li>Hanki ja toimita aina analyysitodistukset (COA) kaikille tuotteille</li>
+          <li>Varmista, että THC-pitoisuus on kohdemarkkinasi laillisten rajojen sisällä</li>
+          <li>Käytä vaatimustenmukaista merkintää vaadituilla terveysvaroituksilla ja ainesosaluetteloilla</li>
+          <li>Pidä kirjaa kaikista laboratoriotesteistä ja toimittajien dokumentaatiosta</li>
+          <li>Pysy ajan tasalla markkinoidesi sääntelymuutoksista</li>
+          <li>Tee yhteistyötä toimittajien kanssa, jotka priorisoivat vaatimustenmukaisuutta (kuten Greens Farmhouse)</li>
+        </ul>
+
+        <h3>Tulevaisuuden Näkymät</h3>
+        <p>CBD:n sääntely-ympäristö Euroopassa muuttuu vähitellen suotuisammaksi. EU:n jatkuva CBD:n tarkastelu uuselintarvikkeena, yhdistettynä kasvavaan kuluttajakysyntään, viittaa suuntaukseen kohti selkeämpiä ja sallivampia säädöksiä. Ajan tasalla ja vaatimustenmukaisena pysyminen asemoi yrityksesi pitkän aikavälin menestykseen.</p>
+      `,
+    },
+    pt: {
+      title: 'Regulamentações CBD Europeias 2026: O que os Retalhistas Precisam Saber',
+      excerpt: 'Mantenha-se em conformidade com as últimas regulamentações de CBD nos mercados europeus. Análise país por país de limites de THC, requisitos de rotulagem e considerações legais.',
+      content: `
+        <h2>Regulamentações CBD Europeias: Uma Visão Geral 2026</h2>
+        <p>Navegar pelas regulamentações de CBD na Europa pode ser um desafio. Cada país tem as suas próprias regras relativas a limites de THC, tipos de produtos e requisitos de rotulagem. Aqui está o que precisa de saber.</p>
+
+        <h3>Quadro à Escala da UE</h3>
+        <p>A União Europeia fornece um quadro base, mas os estados-membros individuais podem definir as suas próprias regras específicas. Considerações chave ao nível da UE:</p>
+        <ul>
+          <li>O <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">Catálogo de Novos Alimentos da UE</a> classifica os extratos de CBD como Novo Alimento que requer autorização</li>
+          <li>O cultivo de cânhamo é legal com variedades que contêm menos de 0,3% de THC (aumentado de 0,2% em 2023)</li>
+          <li>Produtos cosméticos contendo CBD são geralmente permitidos ao abrigo do Regulamento de Cosméticos da UE</li>
+        </ul>
+
+        <h3>Regulamentações Específicas por País</h3>
+        <h4>França</h4>
+        <p>A França permite a venda de produtos CBD derivados de variedades de cânhamo autorizadas com THC abaixo de 0,3%. A venda de flores CBD em bruto foi oficialmente autorizada pelo Conselho de Estado francês. Todos os produtos devem incluir rotulagem adequada e avisos de saúde.</p>
+
+        <h4>Alemanha</h4>
+        <p>A Alemanha tem um dos mercados de CBD mais desenvolvidos da Europa. Os produtos CBD são geralmente legais com THC abaixo de 0,2%. O país também está a caminhar para a legalização da canábis, o que pode expandir as oportunidades de mercado.</p>
+
+        <h4>Itália</h4>
+        <p>A Itália permite produtos CBD com THC abaixo de 0,6% (um dos limiares mais altos da Europa), tornando-a um mercado favorável para muitos tipos de produtos. As lojas de "cannabis light" são generalizadas.</p>
+
+        <h4>Espanha</h4>
+        <p>A Espanha permite produtos CBD para uso tópico e como "itens de coleção", mas tem restrições sobre suplementos alimentares de CBD e produtos ingeríveis. O panorama regulatório está em evolução.</p>
+
+        <h4>Países Baixos</h4>
+        <p>Apesar de serem conhecidos pela tolerância à canábis, os Países Baixos têm regulamentações de CBD relativamente rígidas. Os produtos devem conter menos de 0,05% de THC, e as regulamentações de Novos Alimentos são aplicadas.</p>
+
+        <h3>Melhores Práticas para Conformidade</h3>
+        <ul>
+          <li>Obtenha e forneça sempre Certificados de Análise (COA) para todos os produtos</li>
+          <li>Garanta que o teor de THC está dentro dos limites legais do seu mercado-alvo</li>
+          <li>Use rotulagem conforme com os avisos de saúde e listas de ingredientes exigidos</li>
+          <li>Mantenha registos de todos os testes laboratoriais e documentação de fornecedores</li>
+          <li>Mantenha-se atualizado sobre alterações regulatórias nos seus mercados</li>
+          <li>Trabalhe com fornecedores que priorizam a conformidade (como a Greens Farmhouse)</li>
+        </ul>
+
+        <h3>Perspetivas Futuras</h3>
+        <p>O panorama regulatório para o CBD na Europa está a tornar-se gradualmente mais favorável. A revisão contínua da UE do CBD como Novo Alimento, combinada com a crescente procura dos consumidores, sugere uma tendência para regulamentações mais claras e permissivas. Manter-se informado e em conformidade posiciona o seu negócio para o sucesso a longo prazo.</p>
+      `,
+    },
+  },
+  'manage-cbd-wholesale-stock': {
+    fr: {
+      title: 'Comment Gérer Efficacement Votre Stock CBD en Gros en 2026',
+      excerpt: 'Maîtrisez la gestion des stocks CBD avec notre guide expert. Rotation des stocks, prévision de la demande, meilleures pratiques de stockage et comment éviter les erreurs coûteuses.',
+      content: `
+        <h2>Gestion du Stock CBD : Le Guide de l'Acheteur en Gros</h2>
+        <p>Une gestion efficace des stocks fait la différence entre une entreprise CBD rentable et une entreprise qui peine. Avec des produits périssables comme les <a href="/collections/cbd-flowers">fleurs de CBD</a> et des articles sensibles au temps comme les <a href="/collections/cbd-oils">huiles CBD</a>, bien gérer votre stock est essentiel. Voici notre guide complet.</p>
+
+        <h3>1. Comprendre la Durée de Conservation des Produits CBD</h3>
+        <p>Tous les produits CBD ne vieillissent pas de la même façon. Comprendre la durée de conservation vous aide à planifier les achats et la rotation :</p>
+        <ul>
+          <li><strong>Fleurs CBD :</strong> Meilleures consommées dans les 6-12 mois si stockées dans des contenants hermétiques et sombres. La qualité se dégrade avec l'exposition à la lumière, la chaleur et l'air — les terpènes s'évaporent, l'arôme s'estompe.</li>
+          <li><strong>Résines/Hash CBD :</strong> Durée de conservation de 12-18 mois. Plus stables que les fleurs en raison d'une teneur en humidité plus faible. Stocker dans des conditions fraîches et sombres.</li>
+          <li><strong>Huiles CBD :</strong> 12-24 mois non ouvertes. Une fois ouvertes, utiliser dans les 6 mois. Stocker à l'abri de la lumière directe du soleil. Vérifier aussi la date d'expiration de l'huile porteuse.</li>
+          <li><strong>Comestibles/Bonbons CBD :</strong> Suivre les dates d'expiration imprimées. Typiquement 6-12 mois. Sensibles à la température — stocker en dessous de 25°C.</li>
+        </ul>
+
+        <h3>2. FIFO : Premier Entré, Premier Sorti</h3>
+        <p>Vendez toujours le stock le plus ancien en premier. Organisez votre espace de stockage pour que les nouvelles livraisons aillent à l'arrière et que le produit plus ancien reste devant. C'est particulièrement crucial pour les fleurs CBD et comestibles. Étiquetez chaque livraison avec la date de réception.</p>
+
+        <h3>3. Prévision de la Demande pour le CBD</h3>
+        <p>La demande de CBD suit des tendances que vous pouvez suivre :</p>
+        <ul>
+          <li><strong>Pics saisonniers :</strong> La demande culmine généralement en janvier (résolutions bien-être du Nouvel An), au printemps (saison extérieure), et novembre-décembre (cadeaux de fêtes)</li>
+          <li><strong>Tendances produits :</strong> Suivez quelles souches et produits gagnent ou perdent en popularité. Les fleurs premium en intérieur ont tendance à se vendre mieux en hiver ; l'inverse en été quand les clients sensibles au prix augmentent.</li>
+          <li><strong>Points de réapprovisionnement :</strong> Définissez des niveaux de stock minimum pour vos best-sellers. Quand le stock atteint ce seuil, réapprovisionnez immédiatement — n'attendez pas d'être en rupture.</li>
+        </ul>
+
+        <h3>4. Quantités de Commande Optimales</h3>
+        <p>Équilibrez les remises sur volume en gros avec les coûts de stockage. Notre tarification par paliers récompense les commandes plus importantes, mais le surstockage de produits périssables gaspille de l'argent. Une bonne règle : commandez un approvisionnement de 4 à 6 semaines pour les articles à vente rapide et de 2 à 3 semaines pour les articles plus lents. Utilisez notre <a href="/collections">catalogue de produits</a> pour planifier vos commandes.</p>
+
+        <h3>5. Meilleures Pratiques de Stockage</h3>
+        <p>Un stockage approprié préserve la qualité et la valeur :</p>
+        <ul>
+          <li>Stockez tous les produits CBD à 15-21°C</li>
+          <li>Maintenez l'humidité à 55-62 % pour les fleurs (utilisez des sachets d'humidité)</li>
+          <li>Gardez les produits dans leur emballage d'origine jusqu'à ce qu'ils soient prêts pour l'affichage en vente</li>
+          <li>Utilisez des contenants hermétiques pour les paquets de fleurs ouverts</li>
+          <li>Ne jamais stocker les produits CBD en plein soleil ou près de sources de chaleur</li>
+        </ul>
+
+        <h3>6. Suivez Vos Chiffres</h3>
+        <p>Utilisez une feuille de calcul simple ou une application d'inventaire pour suivre : unités reçues, unités vendues, niveau de stock actuel, coût par unité, prix de vente, et marge. Révisez chaque semaine. Ces données vous disent exactement quoi réapprovisionner et quoi solder ou arrêter. Lisez notre <a href="/blog/how-to-start-cbd-business">guide de démarrage d'entreprise</a> pour plus de pratiques commerciales fondamentales.</p>
+      `,
+    },
+    de: {
+      title: 'Wie Sie Ihren CBD-Großhandelsbestand 2026 Effektiv Verwalten',
+      excerpt: 'Meistern Sie die CBD-Bestandsverwaltung mit unserem Expertenleitfaden. Lernen Sie Lagerrotation, Bedarfsprognose, Best Practices für die Lagerung und wie Sie kostspielige Fehler vermeiden.',
+      content: `
+        <h2>CBD-Bestandsverwaltung: Das Playbook für Großhandelskäufer</h2>
+        <p>Effektive Bestandsverwaltung ist der Unterschied zwischen einem profitablen CBD-Geschäft und einem, das zu kämpfen hat. Mit verderblichen Produkten wie <a href="/collections/cbd-flowers">CBD-Blüten</a> und zeitsensiblen Artikeln wie <a href="/collections/cbd-oils">CBD-Ölen</a> ist es entscheidend, Ihre Bestandsverwaltung richtig zu machen. Hier ist unser umfassender Leitfaden.</p>
+
+        <h3>1. Haltbarkeit von CBD-Produkten Verstehen</h3>
+        <p>Nicht alle CBD-Produkte altern gleich. Das Verständnis der Haltbarkeit hilft Ihnen, Einkauf und Rotation zu planen:</p>
+        <ul>
+          <li><strong>CBD-Blüten:</strong> Am besten innerhalb von 6-12 Monaten verzehrt, wenn in luftdichten, dunklen Behältern gelagert. Die Qualität verschlechtert sich bei Licht-, Wärme- und Luftexposition — Terpene verdunsten, das Aroma verblasst.</li>
+          <li><strong>CBD-Harze/Hasch:</strong> 12-18 Monate Haltbarkeit. Stabiler als Blüten aufgrund geringeren Feuchtigkeitsgehalts. Kühl und dunkel lagern.</li>
+          <li><strong>CBD-Öle:</strong> 12-24 Monate ungeöffnet. Nach dem Öffnen innerhalb von 6 Monaten verwenden. Vor direktem Sonnenlicht schützen. Auch Ablaufdatum des Trägeröls prüfen.</li>
+          <li><strong>CBD-Esswaren/Gummibärchen:</strong> Aufgedruckte Ablaufdaten befolgen. Typischerweise 6-12 Monate. Temperaturempfindlich — unter 25°C lagern.</li>
+        </ul>
+
+        <h3>2. FIFO: First In, First Out</h3>
+        <p>Verkaufen Sie immer zuerst den ältesten Bestand. Organisieren Sie Ihren Lagerbereich so, dass neuere Lieferungen nach hinten und älteres Produkt nach vorne kommen. Dies ist besonders wichtig für CBD-Blüten und Esswaren. Kennzeichnen Sie jede Lieferung mit Eingangsdatum.</p>
+
+        <h3>3. Bedarfsprognose für CBD</h3>
+        <p>Die CBD-Nachfrage folgt Mustern, die Sie verfolgen können:</p>
+        <ul>
+          <li><strong>Saisonale Spitzen:</strong> Die Nachfrage steigt typischerweise im Januar (Neujahrs-Wellness-Vorsätze), im Frühling (Outdoor-Saison) und November-Dezember (Feiertagsgeschenke)</li>
+          <li><strong>Produkttrends:</strong> Verfolgen Sie, welche Sorten und Produkte an Popularität gewinnen oder verlieren. Premium-Indoor-Blüten verkaufen sich im Winter tendenziell besser; umgekehrt im Sommer, wenn preisbewusste Kunden zunehmen.</li>
+          <li><strong>Nachbestellpunkte:</strong> Legen Sie Mindestbestandsmengen für Ihre Bestseller fest. Wenn der Bestand diesen Schwellenwert erreicht, sofort nachbestellen — nicht warten, bis Sie ausverkauft sind.</li>
+        </ul>
+
+        <h3>4. Optimale Bestellmengen</h3>
+        <p>Balancieren Sie Großhandelsmengenrabatte gegen Lagerkosten. Unsere gestaffelten Preise belohnen größere Bestellungen, aber Überbevorratung verderblicher Produkte verschwendet Geld. Eine gute Regel: Bestellen Sie einen 4-6-Wochen-Vorrat der schnell verkauften Artikel und einen 2-3-Wochen-Vorrat der langsameren Artikel. Nutzen Sie unseren <a href="/collections">Produktkatalog</a>, um Ihre Bestellungen zu planen.</p>
+
+        <h3>5. Best Practices für die Lagerung</h3>
+        <p>Richtige Lagerung erhält Qualität und Wert:</p>
+        <ul>
+          <li>Lagern Sie alle CBD-Produkte bei 15-21°C</li>
+          <li>Halten Sie die Luftfeuchtigkeit bei 55-62 % für Blüten (verwenden Sie Feuchtigkeitspakete)</li>
+          <li>Bewahren Sie Produkte in der Originalverpackung auf, bis sie für die Verkaufsdisplay bereit sind</li>
+          <li>Verwenden Sie luftdichte Behälter für geöffnete Blütenpakete</li>
+          <li>Lagern Sie CBD-Produkte niemals in direktem Sonnenlicht oder in der Nähe von Wärmequellen</li>
+        </ul>
+
+        <h3>6. Verfolgen Sie Ihre Zahlen</h3>
+        <p>Verwenden Sie eine einfache Tabelle oder Bestands-App, um zu verfolgen: erhaltene Einheiten, verkaufte Einheiten, aktueller Bestandsstand, Kosten pro Einheit, Verkaufspreis und Marge. Wöchentlich überprüfen. Diese Daten sagen Ihnen genau, was nachbestellt und was reduziert oder eingestellt werden sollte. Lesen Sie unseren <a href="/blog/how-to-start-cbd-business">Leitfaden zur Geschäftsgründung</a> für weitere grundlegende Geschäftspraktiken.</p>
+      `,
+    },
+    es: {
+      title: 'Cómo Gestionar tu Stock CBD al por Mayor Eficazmente en 2026',
+      excerpt: 'Domina la gestión de inventario de CBD con nuestra guía experta. Aprende rotación de stock, previsión de demanda, mejores prácticas de almacenamiento y cómo evitar errores costosos.',
+      content: `
+        <h2>Gestión de Stock CBD: El Manual del Comprador Mayorista</h2>
+        <p>La gestión eficaz del inventario es la diferencia entre un negocio CBD rentable y uno que lucha. Con productos perecederos como las <a href="/collections/cbd-flowers">flores CBD</a> y artículos sensibles al tiempo como los <a href="/collections/cbd-oils">aceites CBD</a>, gestionar bien tu stock es crítico. Aquí está nuestra guía completa.</p>
+
+        <h3>1. Entendiendo la Vida Útil de los Productos CBD</h3>
+        <p>No todos los productos CBD envejecen igual. Entender la vida útil te ayuda a planificar compras y rotación:</p>
+        <ul>
+          <li><strong>Flores CBD:</strong> Mejor consumidas dentro de 6-12 meses si se almacenan en contenedores herméticos y oscuros. La calidad se degrada con la exposición a luz, calor y aire — los terpenos se evaporan, el aroma se desvanece.</li>
+          <li><strong>Resinas/Hachís CBD:</strong> 12-18 meses de vida útil. Más estables que las flores debido al menor contenido de humedad. Almacenar en condiciones frescas y oscuras.</li>
+          <li><strong>Aceites CBD:</strong> 12-24 meses sin abrir. Una vez abiertos, usar dentro de 6 meses. Almacenar lejos de la luz solar directa. Verificar también la caducidad del aceite portador.</li>
+          <li><strong>Comestibles/Gomitas CBD:</strong> Seguir las fechas de caducidad impresas. Típicamente 6-12 meses. Sensibles a la temperatura — almacenar por debajo de 25°C.</li>
+        </ul>
+
+        <h3>2. FIFO: Primero en Entrar, Primero en Salir</h3>
+        <p>Vende siempre primero el stock más antiguo. Organiza tu área de almacenamiento para que las entregas más nuevas vayan atrás y el producto más antiguo permanezca al frente. Esto es especialmente crítico para flores CBD y comestibles. Etiqueta cada envío con la fecha de recepción.</p>
+
+        <h3>3. Previsión de Demanda para CBD</h3>
+        <p>La demanda de CBD sigue patrones que puedes rastrear:</p>
+        <ul>
+          <li><strong>Picos estacionales:</strong> La demanda típicamente aumenta en enero (resoluciones de bienestar de Año Nuevo), primavera (temporada al aire libre), y noviembre-diciembre (regalos navideños)</li>
+          <li><strong>Tendencias de producto:</strong> Rastrea qué variedades y productos están ganando o perdiendo popularidad. Las flores premium de interior tienden a venderse más en invierno; lo contrario en verano cuando aumentan los clientes sensibles al precio.</li>
+          <li><strong>Puntos de reorden:</strong> Establece niveles mínimos de stock para tus más vendidos. Cuando el stock alcance ese umbral, reordena inmediatamente — no esperes hasta quedarte sin existencias.</li>
+        </ul>
+
+        <h3>4. Cantidades de Pedido Óptimas</h3>
+        <p>Equilibra los descuentos por volumen mayorista con los costes de mantenimiento. Nuestra tarificación escalonada recompensa pedidos más grandes, pero el exceso de stock de productos perecederos desperdicia dinero. Una buena regla: pide un suministro de 4-6 semanas de artículos de venta rápida y un suministro de 2-3 semanas de artículos más lentos. Usa nuestro <a href="/collections">catálogo de productos</a> para planificar tus pedidos.</p>
+
+        <h3>5. Mejores Prácticas de Almacenamiento</h3>
+        <p>El almacenamiento adecuado preserva calidad y valor:</p>
+        <ul>
+          <li>Almacena todos los productos CBD a 15-21°C</li>
+          <li>Mantén la humedad al 55-62% para flores (usa paquetes de humedad)</li>
+          <li>Mantén los productos en su embalaje original hasta que estén listos para exhibición minorista</li>
+          <li>Usa contenedores herméticos para paquetes de flores abiertos</li>
+          <li>Nunca almacenes productos CBD bajo luz solar directa o cerca de fuentes de calor</li>
+        </ul>
+
+        <h3>6. Rastrea tus Números</h3>
+        <p>Usa una hoja de cálculo simple o una app de inventario para rastrear: unidades recibidas, unidades vendidas, nivel de stock actual, coste por unidad, precio de venta, y margen. Revisa semanalmente. Estos datos te dicen exactamente qué reordenar y qué descontar o descontinuar. Lee nuestra <a href="/blog/how-to-start-cbd-business">guía de inicio de negocio</a> para más prácticas comerciales fundamentales.</p>
+      `,
+    },
+    it: {
+      title: "Come Gestire Efficacemente il Tuo Stock CBD all'Ingrosso nel 2026",
+      excerpt: "Padroneggia la gestione dell'inventario CBD con la nostra guida esperta. Rotazione dello stock, previsione della domanda, migliori pratiche di stoccaggio e come evitare errori costosi.",
+      content: `
+        <h2>Gestione dello Stock CBD: Il Playbook dell'Acquirente all'Ingrosso</h2>
+        <p>Una gestione efficace dell'inventario è la differenza tra un'attività CBD redditizia e una che fatica. Con prodotti deperibili come i <a href="/collections/cbd-flowers">fiori CBD</a> e articoli sensibili al tempo come gli <a href="/collections/cbd-oils">oli CBD</a>, gestire correttamente il tuo stock è fondamentale. Ecco la nostra guida completa.</p>
+
+        <h3>1. Comprendere la Durata di Conservazione dei Prodotti CBD</h3>
+        <p>Non tutti i prodotti CBD invecchiano allo stesso modo. Comprendere la durata di conservazione ti aiuta a pianificare acquisti e rotazione:</p>
+        <ul>
+          <li><strong>Fiori CBD:</strong> Meglio consumati entro 6-12 mesi se conservati in contenitori ermetici e bui. La qualità si degrada con l'esposizione a luce, calore e aria — i terpeni evaporano, l'aroma svanisce.</li>
+          <li><strong>Resine/Hashish CBD:</strong> 12-18 mesi di durata. Più stabili dei fiori grazie al minor contenuto di umidità. Conservare in condizioni fresche e buie.</li>
+          <li><strong>Oli CBD:</strong> 12-24 mesi non aperti. Una volta aperti, utilizzare entro 6 mesi. Conservare lontano dalla luce solare diretta. Controllare anche la scadenza dell'olio vettore.</li>
+          <li><strong>Commestibili/Gommose CBD:</strong> Seguire le date di scadenza stampate. Tipicamente 6-12 mesi. Sensibili alla temperatura — conservare sotto i 25°C.</li>
+        </ul>
+
+        <h3>2. FIFO: Primo Entrato, Primo Uscito</h3>
+        <p>Vendi sempre prima lo stock più vecchio. Organizza la tua area di stoccaggio in modo che le nuove consegne vadano sul retro e il prodotto più vecchio rimanga davanti. Questo è particolarmente critico per fiori CBD e commestibili. Etichetta ogni spedizione con la data di ricezione.</p>
+
+        <h3>3. Previsione della Domanda per il CBD</h3>
+        <p>La domanda di CBD segue schemi che puoi monitorare:</p>
+        <ul>
+          <li><strong>Picchi stagionali:</strong> La domanda tipicamente aumenta a gennaio (propositi di benessere per il nuovo anno), in primavera (stagione outdoor), e novembre-dicembre (regali natalizi)</li>
+          <li><strong>Tendenze di prodotto:</strong> Monitora quali varietà e prodotti stanno guadagnando o perdendo popolarità. I fiori premium indoor tendono a vendere di più in inverno; il contrario in estate quando aumentano i clienti sensibili al prezzo.</li>
+          <li><strong>Punti di riordino:</strong> Imposta livelli minimi di stock per i tuoi best seller. Quando lo stock raggiunge quella soglia, riordina immediatamente — non aspettare di esaurire le scorte.</li>
+        </ul>
+
+        <h3>4. Quantità di Ordine Ottimali</h3>
+        <p>Bilancia gli sconti sui volumi all'ingrosso con i costi di mantenimento. I nostri prezzi a livelli premiano gli ordini più grandi, ma l'eccesso di scorte di prodotti deperibili spreca denaro. Una buona regola: ordina una fornitura di 4-6 settimane per gli articoli a vendita rapida e una fornitura di 2-3 settimane per gli articoli più lenti. Usa il nostro <a href="/collections">catalogo prodotti</a> per pianificare i tuoi ordini.</p>
+
+        <h3>5. Migliori Pratiche di Stoccaggio</h3>
+        <p>Uno stoccaggio corretto preserva qualità e valore:</p>
+        <ul>
+          <li>Conserva tutti i prodotti CBD a 15-21°C</li>
+          <li>Mantieni l'umidità al 55-62% per i fiori (usa bustine di umidità)</li>
+          <li>Mantieni i prodotti nella confezione originale fino a quando non sono pronti per l'esposizione in negozio</li>
+          <li>Usa contenitori ermetici per le confezioni di fiori aperte</li>
+          <li>Non conservare mai i prodotti CBD alla luce solare diretta o vicino a fonti di calore</li>
+        </ul>
+
+        <h3>6. Monitora i Tuoi Numeri</h3>
+        <p>Usa un semplice foglio di calcolo o un'app di inventario per monitorare: unità ricevute, unità vendute, livello di stock attuale, costo per unità, prezzo di vendita, e margine. Rivedi settimanalmente. Questi dati ti dicono esattamente cosa riordinare e cosa scontare o interrompere. Leggi la nostra <a href="/blog/how-to-start-cbd-business">guida all'avvio di attività</a> per ulteriori pratiche commerciali fondamentali.</p>
+      `,
+    },
+    nl: {
+      title: 'Hoe U Uw CBD-Groothandelsvoorraad Effectief Beheert in 2026',
+      excerpt: 'Beheers CBD-voorraadbeheer met onze deskundige gids. Leer voorraadrotatie, vraagvoorspelling, beste opslagpraktijken en hoe u kostbare fouten vermijdt.',
+      content: `
+        <h2>CBD-Voorraadbeheer: Het Playbook van de Groothandelskoper</h2>
+        <p>Effectief voorraadbeheer is het verschil tussen een winstgevend CBD-bedrijf en een bedrijf dat worstelt. Met bederfelijke producten zoals <a href="/collections/cbd-flowers">CBD-bloemen</a> en tijdgevoelige artikelen zoals <a href="/collections/cbd-oils">CBD-oliën</a>, is het cruciaal om uw voorraadbeheer goed te doen. Hier is onze uitgebreide gids.</p>
+
+        <h3>1. Houdbaarheid van CBD-Producten Begrijpen</h3>
+        <p>Niet alle CBD-producten verouderen gelijk. Het begrijpen van houdbaarheid helpt u inkoop en rotatie te plannen:</p>
+        <ul>
+          <li><strong>CBD-Bloemen:</strong> Het beste binnen 6-12 maanden geconsumeerd als opgeslagen in luchtdichte, donkere containers. Kwaliteit vermindert bij blootstelling aan licht, hitte en lucht — terpenen verdampen, aroma vervaagt.</li>
+          <li><strong>CBD-Harsen/Hasj:</strong> 12-18 maanden houdbaarheid. Stabieler dan bloemen vanwege lager vochtgehalte. Koel en donker bewaren.</li>
+          <li><strong>CBD-Oliën:</strong> 12-24 maanden ongeopend. Eenmaal geopend, gebruik binnen 6 maanden. Bewaar uit direct zonlicht. Controleer ook de vervaldatum van de dragerolie.</li>
+          <li><strong>CBD-Eetwaren/Gummies:</strong> Volg gedrukte vervaldata. Doorgaans 6-12 maanden. Temperatuurgevoelig — bewaar onder 25°C.</li>
+        </ul>
+
+        <h3>2. FIFO: Eerst In, Eerst Uit</h3>
+        <p>Verkoop altijd eerst de oudste voorraad. Organiseer uw opslagruimte zodat nieuwere leveringen naar achteren gaan en ouder product vooraan blijft. Dit is vooral cruciaal voor CBD-bloemen en eetwaren. Label elke zending met ontvangstdatum.</p>
+
+        <h3>3. Vraagvoorspelling voor CBD</h3>
+        <p>CBD-vraag volgt patronen die u kunt volgen:</p>
+        <ul>
+          <li><strong>Seizoensgebonden pieken:</strong> Vraag piekt doorgaans in januari (nieuwjaars wellness-voornemens), lente (buitenseizoen), en november-december (feestdagen cadeaus)</li>
+          <li><strong>Producttrends:</strong> Volg welke soorten en producten populariteit winnen of verliezen. Premium indoor-bloemen verkopen doorgaans beter in de winter; omgekeerd in de zomer wanneer prijsgevoelige klanten toenemen.</li>
+          <li><strong>Bestelpunten:</strong> Stel minimale voorraadniveaus in voor uw bestsellers. Wanneer voorraad die drempel bereikt, direct bijbestellen — wacht niet tot u door de voorraad heen bent.</li>
+        </ul>
+
+        <h3>4. Optimale Bestelhoeveelheden</h3>
+        <p>Balanceer groothandelsvolumekortingen tegen opslagkosten. Onze gelaagde prijzen belonen grotere bestellingen, maar overvoorraad van bederfelijke producten verspilt geld. Een goede regel: bestel een voorraad van 4-6 weken voor snel verkopende artikelen en 2-3 weken voor langzamere artikelen. Gebruik onze <a href="/collections">productcatalogus</a> om uw bestellingen te plannen.</p>
+
+        <h3>5. Beste Opslagpraktijken</h3>
+        <p>Juiste opslag behoudt kwaliteit en waarde:</p>
+        <ul>
+          <li>Bewaar alle CBD-producten bij 15-21°C</li>
+          <li>Handhaaf vochtigheid op 55-62% voor bloemen (gebruik vochtigheidspakketten)</li>
+          <li>Houd producten in originele verpakking tot klaar voor verkoopdisplay</li>
+          <li>Gebruik luchtdichte containers voor geopende bloemverpakkingen</li>
+          <li>Bewaar CBD-producten nooit in direct zonlicht of nabij warmtebronnen</li>
+        </ul>
+
+        <h3>6. Volg Uw Cijfers</h3>
+        <p>Gebruik een eenvoudig spreadsheet of voorraad-app om te volgen: ontvangen eenheden, verkochte eenheden, huidig voorraadniveau, kosten per eenheid, verkoopprijs, en marge. Wekelijks beoordelen. Deze gegevens vertellen u precies wat u moet bijbestellen en wat u moet afprijzen of stopzetten. Lees onze <a href="/blog/how-to-start-cbd-business">gids voor bedrijfsstart</a> voor meer fundamentele zakelijke praktijken.</p>
+      `,
+    },
+    fi: {
+      title: 'Kuinka Hallita CBD-Tukkuvarastoasi Tehokkaasti Vuonna 2026',
+      excerpt: 'Hallitse CBD-varastonhallinta asiantuntijaoppaamme avulla. Opi varaston kierto, kysynnän ennustaminen, parhaat säilytyskäytännöt ja kuinka välttää kalliit virheet.',
+      content: `
+        <h2>CBD-Varastonhallinta: Tukkuostajan Käsikirja</h2>
+        <p>Tehokas varastonhallinta on ero kannattavan CBD-yrityksen ja kamppailevan yrityksen välillä. Pilaantuvien tuotteiden, kuten <a href="/collections/cbd-flowers">CBD-kukkien</a>, ja aikaherkkien tuotteiden, kuten <a href="/collections/cbd-oils">CBD-öljyjen</a>, kanssa varastonhallinnan oikein tekeminen on kriittistä. Tässä on kattava oppaamme.</p>
+
+        <h3>1. CBD-Tuotteiden Säilyvyyden Ymmärtäminen</h3>
+        <p>Kaikki CBD-tuotteet eivät vanhene samalla tavalla. Säilyvyyden ymmärtäminen auttaa suunnittelemaan ostoja ja kiertoa:</p>
+        <ul>
+          <li><strong>CBD-kukat:</strong> Parhaita käytettäväksi 6-12 kuukauden sisällä, jos säilytetään ilmatiiviissä, pimeissä astioissa. Laatu heikkenee valolle, lämmölle ja ilmalle altistuessa — terpeenit haihtuvat, aromi haalistuu.</li>
+          <li><strong>CBD-hartsit/hasis:</strong> 12-18 kuukauden säilyvyys. Vakaampia kuin kukat alemman kosteuspitoisuuden vuoksi. Säilytä viileässä ja pimeässä.</li>
+          <li><strong>CBD-öljyt:</strong> 12-24 kuukautta avaamattomana. Avaamisen jälkeen käytä 6 kuukauden sisällä. Säilytä poissa suorasta auringonvalosta. Tarkista myös kantajaöljyn vanhenemispäivä.</li>
+          <li><strong>CBD-syötävät/karkit:</strong> Noudata painettuja vanhenemispäiviä. Tyypillisesti 6-12 kuukautta. Lämpötilaherkkiä — säilytä alle 25°C:ssa.</li>
+        </ul>
+
+        <h3>2. FIFO: Ensin Sisään, Ensin Ulos</h3>
+        <p>Myy aina vanhin varasto ensin. Järjestä varastotilasi niin, että uudemmat toimitukset menevät taakse ja vanhempi tuote pysyy edessä. Tämä on erityisen kriittistä CBD-kukille ja syötäville. Merkitse jokainen toimitus vastaanottopäivällä.</p>
+
+        <h3>3. CBD:n Kysynnän Ennustaminen</h3>
+        <p>CBD-kysyntä noudattaa malleja, joita voit seurata:</p>
+        <ul>
+          <li><strong>Kausihuiput:</strong> Kysyntä yleensä nousee tammikuussa (uudenvuoden hyvinvointilupaukset), keväällä (ulkokausi), ja marras-joulukuussa (joululahjat)</li>
+          <li><strong>Tuotetrendit:</strong> Seuraa mitkä lajikkeet ja tuotteet kasvattavat tai menettävät suosiota. Premium sisäkasvatetut kukat myyvät yleensä paremmin talvella; päinvastoin kesällä kun hintatietoisia asiakkaita on enemmän.</li>
+          <li><strong>Tilauspisteet:</strong> Aseta minimivarastotasot myydyimmille tuotteillesi. Kun varasto saavuttaa kynnyksen, tilaa heti lisää — älä odota loppumista.</li>
+        </ul>
+
+        <h3>4. Optimaaliset Tilausmäärät</h3>
+        <p>Tasapainota tukkumyynnin määräalennukset varastointikustannuksiin. Porrastettu hinnoittelumme palkitsee suuremmat tilaukset, mutta pilaantuvien tuotteiden ylivarastointi tuhlaa rahaa. Hyvä sääntö: tilaa 4-6 viikon varasto nopeasti myyville tuotteille ja 2-3 viikon varasto hitaammille tuotteille. Käytä <a href="/collections">tuoteluetteloamme</a> tilaustesi suunnitteluun.</p>
+
+        <h3>5. Parhaat Säilytyskäytännöt</h3>
+        <p>Oikea säilytys säilyttää laadun ja arvon:</p>
+        <ul>
+          <li>Säilytä kaikkia CBD-tuotteita 15-21°C lämpötilassa</li>
+          <li>Ylläpidä kosteutta 55-62 % kukille (käytä kosteuspakkauksia)</li>
+          <li>Pidä tuotteet alkuperäispakkauksessa kunnes valmiita myyntinäyttöön</li>
+          <li>Käytä ilmatiiviitä astioita avatuille kukkapakkauksille</li>
+          <li>Älä koskaan säilytä CBD-tuotteita suorassa auringonvalossa tai lämmönlähteiden lähellä</li>
+        </ul>
+
+        <h3>6. Seuraa Lukujasi</h3>
+        <p>Käytä yksinkertaista laskentataulukkoa tai varastosovellusta seurataksesi: vastaanotettuja yksiköitä, myytyjä yksiköitä, nykyistä varastotasoa, yksikkökustannusta, myyntihintaa ja katetta. Tarkista viikoittain. Nämä tiedot kertovat tarkalleen mitä tilata lisää ja mitä alentaa tai lopettaa. Lue <a href="/blog/how-to-start-cbd-business">yrityksen käynnistysoppaamme</a> saadaksesi lisää perusliiketoimintakäytäntöjä.</p>
+      `,
+    },
+    pt: {
+      title: 'Como Gerir o Seu Stock CBD por Grosso Eficazmente em 2026',
+      excerpt: 'Domine a gestão de inventário de CBD com o nosso guia especializado. Aprenda rotação de stock, previsão de procura, melhores práticas de armazenamento e como evitar erros dispendiosos.',
+      content: `
+        <h2>Gestão de Stock CBD: O Manual do Comprador por Grosso</h2>
+        <p>A gestão eficaz de inventário é a diferença entre um negócio de CBD lucrativo e um que luta. Com produtos perecíveis como as <a href="/collections/cbd-flowers">flores CBD</a> e itens sensíveis ao tempo como os <a href="/collections/cbd-oils">óleos CBD</a>, gerir bem o seu stock é fundamental. Aqui está o nosso guia abrangente.</p>
+
+        <h3>1. Compreender o Prazo de Validade dos Produtos CBD</h3>
+        <p>Nem todos os produtos CBD envelhecem da mesma forma. Compreender o prazo de validade ajuda a planear compras e rotação:</p>
+        <ul>
+          <li><strong>Flores CBD:</strong> Melhor consumidas dentro de 6-12 meses se armazenadas em recipientes herméticos e escuros. A qualidade degrada-se com exposição à luz, calor e ar — os terpenos evaporam, o aroma desvanece.</li>
+          <li><strong>Resinas/Haxixe CBD:</strong> 12-18 meses de validade. Mais estáveis que as flores devido ao menor teor de humidade. Armazenar em condições frescas e escuras.</li>
+          <li><strong>Óleos CBD:</strong> 12-24 meses fechados. Uma vez abertos, usar dentro de 6 meses. Armazenar longe da luz solar direta. Verificar também a validade do óleo transportador.</li>
+          <li><strong>Comestíveis/Gomas CBD:</strong> Seguir as datas de validade impressas. Tipicamente 6-12 meses. Sensíveis à temperatura — armazenar abaixo de 25°C.</li>
+        </ul>
+
+        <h3>2. FIFO: Primeiro a Entrar, Primeiro a Sair</h3>
+        <p>Venda sempre primeiro o stock mais antigo. Organize a sua área de armazenamento para que as entregas mais recentes vão para trás e o produto mais antigo fique à frente. Isto é especialmente crítico para flores CBD e comestíveis. Rotule cada remessa com a data de receção.</p>
+
+        <h3>3. Previsão de Procura para CBD</h3>
+        <p>A procura de CBD segue padrões que pode acompanhar:</p>
+        <ul>
+          <li><strong>Picos sazonais:</strong> A procura tipicamente aumenta em janeiro (resoluções de bem-estar de Ano Novo), primavera (época ao ar livre), e novembro-dezembro (presentes de época festiva)</li>
+          <li><strong>Tendências de produto:</strong> Acompanhe quais variedades e produtos estão a ganhar ou perder popularidade. Flores premium de interior tendem a vender mais no inverno; o inverso no verão quando aumentam os clientes sensíveis ao preço.</li>
+          <li><strong>Pontos de reencomenda:</strong> Defina níveis mínimos de stock para os seus mais vendidos. Quando o stock atingir esse limiar, reencomende imediatamente — não espere ficar sem stock.</li>
+        </ul>
+
+        <h3>4. Quantidades de Encomenda Ótimas</h3>
+        <p>Equilibre os descontos por volume por grosso com os custos de manutenção. Os nossos preços escalonados recompensam encomendas maiores, mas o excesso de stock de produtos perecíveis desperdiça dinheiro. Uma boa regra: encomende um fornecimento de 4-6 semanas de artigos de venda rápida e um fornecimento de 2-3 semanas de artigos mais lentos. Use o nosso <a href="/collections">catálogo de produtos</a> para planear as suas encomendas.</p>
+
+        <h3>5. Melhores Práticas de Armazenamento</h3>
+        <p>O armazenamento adequado preserva qualidade e valor:</p>
+        <ul>
+          <li>Armazene todos os produtos CBD a 15-21°C</li>
+          <li>Mantenha a humidade a 55-62% para flores (use pacotes de humidade)</li>
+          <li>Mantenha os produtos na embalagem original até estarem prontos para exibição de venda</li>
+          <li>Use recipientes herméticos para embalagens de flores abertas</li>
+          <li>Nunca armazene produtos CBD sob luz solar direta ou perto de fontes de calor</li>
+        </ul>
+
+        <h3>6. Acompanhe os Seus Números</h3>
+        <p>Use uma folha de cálculo simples ou uma aplicação de inventário para acompanhar: unidades recebidas, unidades vendidas, nível de stock atual, custo por unidade, preço de venda, e margem. Reveja semanalmente. Estes dados dizem-lhe exatamente o que reencomendar e o que descontar ou descontinuar. Leia o nosso <a href="/blog/how-to-start-cbd-business">guia de arranque de negócio</a> para mais práticas empresariais fundamentais.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
