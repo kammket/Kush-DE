@@ -4615,6 +4615,204 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'hemp-vs-cannabis-vs-marijuana-difference': {
+    fr: {
+      title: 'Chanvre vs Cannabis vs Marijuana : Ce qui les Sépare Réellement',
+      excerpt: "Le chanvre et la marijuana sont la même espèce végétale. La seule chose qui les sépare est un seuil de THC inscrit dans la loi — c'est pourquoi la distinction est légale plutôt que botanique.",
+      content: `
+        <h2>Une Espèce, Deux Catégories Légales</h2>
+        <p>Le chanvre et la marijuana ne sont pas des plantes différentes. Les deux sont <em>Cannabis sativa</em>. Ce qui les sépare est un nombre inscrit dans la législation : la concentration de THC delta-9 que la plante est autorisée à contenir. En dessous de ce seuil, la plante est du chanvre et globalement légale à cultiver et échanger ; au-dessus, la même espèce devient une substance contrôlée.</p>
+        <p>Cela vaut la peine d'être compris précisément, car les clients posent constamment la question et une réponse confiante et précise au comptoir construit plus de confiance que n'importe quelle allégation marketing.</p>
+
+        <h3>Où se Situe le Seuil</h3>
+        <p>Dans l'Union Européenne, la limite pour la culture de chanvre industriel a été fixée à 0,3 % THC, ayant été précédemment de 0,2 %. Les États membres individuels appliquent leurs propres règles aux produits finis en plus de cela, et ces règles ne sont pas uniformes — certains plafonnent le THC en pourcentage du produit fini, d'autres exigent qu'aucun THC ne soit détectable du tout.</p>
+        <p>Notre <a href="/legal-cannabis-europe">aperçu légal pays par pays</a> couvre où se situent les différences, et le <a href="/blog/is-cbd-legal-in-europe-country-guide">guide légal sur le blog</a> entre dans le détail par marché. Traitez les deux comme un point de départ plutôt qu'un conseil juridique.</p>
+
+        <h3>"Marijuana" Est un Mot Réglementaire, Pas Botanique</h3>
+        <p>Il n'existe aucune catégorie botanique appelée marijuana. Le terme est entré dans l'usage courant à travers la politique des drogues plutôt que la science végétale, c'est pourquoi la plupart des documents industriels et réglementaires européens l'évitent entièrement et se réfèrent plutôt au cannabis, au chanvre, ou à une teneur spécifique en cannabinoïdes. Si vous rédigez du contenu produit, correspondre à cette convention vous fait paraître comme un fournisseur professionnel plutôt qu'une boutique de nouveautés.</p>
+
+        <h3>Ce Que Cela Signifie pour le Produit sur Votre Étagère</h3>
+        <p>Parce que les plantes sont la même espèce, le chanvre produit les mêmes familles de composés — cannabinoïdes, terpènes, flavonoïdes — juste dans des ratios différents. Le chanvre sélectionné pour la production de CBD est choisi pour exprimer un CBD élevé et un THC minimal. C'est pourquoi une fleur CBD peut ressembler, sentir, et se manipuler exactement comme du cannabis à forte teneur en THC tout en restant non intoxicante et légale.</p>
+        <p>C'est aussi pourquoi la similitude visuelle cause des problèmes pratiques. Les détaillants dans plusieurs marchés rapportent des problèmes de contrôle routier et d'inspection précisément parce que le matériel est indiscernable à l'œil. C'est tout l'argument pour garder un <a href="/blog/how-to-read-cbd-coa-lab-report">certificat d'analyse</a> avec votre stock plutôt que classé ailleurs.</p>
+
+        <h3>CBD, THC et les Autres Cannabinoïdes</h3>
+        <p>Le CBD et le THC sont les deux plus connus de plus d'une centaine de cannabinoïdes, mais ils ne sont pas les seuls à avoir une pertinence commerciale. Le <a href="/blog/what-is-cbg-complete-guide">CBG</a> est le composé précurseur à partir duquel les autres sont synthétisés, et le <a href="/cbn-sleep-products">CBN</a> se forme lorsque le THC vieillit et s'oxyde. Pour une comparaison directe des deux composés vedettes, consultez notre guide <a href="/blog/cbd-vs-thc-difference">CBD versus THC</a>.</p>
+
+        <h3>Conclusion Pratique pour les Détaillants</h3>
+        <p>Quand un client demande si ce que vous vendez est "la même chose que l'herbe", la réponse honnête est : même plante, chimie différente, statut légal différent. Cette réponse est précise, facile à retenir, et ne survend pas. Tout le reste — puissance, arôme, format — découle de la chimie plutôt que de l'étiquette.</p>
+        <p>Parcourez à quoi cela ressemble en pratique dans nos <a href="/collections/cbd-flowers">fleurs CBD</a>, <a href="/collections/cbd-resins">résines</a>, et <a href="/thc-free-cbd-wholesale">ligne 0 % THC</a>.</p>
+        <p>Pour le cadre réglementaire derrière le seuil de chanvre de l'UE, consultez l'aperçu de la Commission Européenne sur le <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">chanvre dans l'agriculture de l'UE</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Hanf vs Cannabis vs Marihuana: Was Sie Tatsächlich Trennt',
+      excerpt: 'Hanf und Marihuana sind dieselbe Pflanzenart. Das Einzige, was sie trennt, ist ein gesetzlich festgelegter THC-Schwellenwert — deshalb ist die Unterscheidung rechtlich und nicht botanisch.',
+      content: `
+        <h2>Eine Art, Zwei Rechtliche Kategorien</h2>
+        <p>Hanf und Marihuana sind keine verschiedenen Pflanzen. Beide sind <em>Cannabis sativa</em>. Was sie trennt, ist eine in Gesetzen festgeschriebene Zahl: die Konzentration von Delta-9-THC, die die Pflanze enthalten darf. Unter diesem Schwellenwert ist die Pflanze Hanf und weitgehend rechtmäßig anzubauen und zu handeln; darüber wird dieselbe Art zu einem kontrollierten Stoff.</p>
+        <p>Dies zu verstehen lohnt sich genau, weil Kunden diese Frage ständig stellen und eine selbstbewusste, genaue Antwort am Tresen mehr Vertrauen aufbaut als jede Marketingaussage.</p>
+
+        <h3>Wo der Schwellenwert Liegt</h3>
+        <p>In der Europäischen Union wurde die Grenze für den industriellen Hanfanbau auf 0,3 % THC festgelegt, nachdem sie zuvor bei 0,2 % lag. Einzelne Mitgliedstaaten wenden zusätzlich ihre eigenen Regeln auf Fertigprodukte an, und diese Regeln sind nicht einheitlich — manche begrenzen THC als Prozentsatz des Fertigprodukts, andere verlangen, dass überhaupt kein THC nachweisbar ist.</p>
+        <p>Unser <a href="/legal-cannabis-europe">länderweiser rechtlicher Überblick</a> deckt ab, wo die Unterschiede liegen, und der <a href="/blog/is-cbd-legal-in-europe-country-guide">rechtliche Leitfaden im Blog</a> geht ins Detail je Markt. Behandeln Sie beide als Ausgangspunkt und nicht als Rechtsberatung.</p>
+
+        <h3>"Marihuana" Ist Ein Regulatorisches Wort, Kein Botanisches</h3>
+        <p>Es gibt keine botanische Kategorie namens Marihuana. Der Begriff kam durch Drogenpolitik statt Pflanzenwissenschaft in den allgemeinen Gebrauch, weshalb die meisten europäischen Branchen- und Regulierungsdokumente ihn vollständig vermeiden und stattdessen auf Cannabis, Hanf, oder spezifischen Cannabinoidgehalt verweisen. Wenn Sie Produkttexte schreiben, lässt Sie die Anpassung an diese Konvention wie einen professionellen Lieferanten statt einen Neuheitenladen klingen.</p>
+
+        <h3>Was Das für das Produkt in Ihrem Regal Bedeutet</h3>
+        <p>Da die Pflanzen dieselbe Art sind, produziert Hanf dieselben Verbindungsfamilien — Cannabinoide, Terpene, Flavonoide — nur in unterschiedlichen Verhältnissen. Für die CBD-Produktion gezüchteter Hanf wird ausgewählt, um hohes CBD und minimales THC zu exprimieren. Deshalb kann eine CBD-Blüte genau wie THC-reiches Cannabis aussehen, riechen, und sich anfühlen, während sie nicht berauschend und rechtmäßig bleibt.</p>
+        <p>Es ist auch der Grund, warum die visuelle Ähnlichkeit praktische Probleme verursacht. Händler in mehreren Märkten berichten von Straßenkontroll- und Inspektionsproblemen genau deshalb, weil das Material mit bloßem Auge nicht unterscheidbar ist. Dies ist das gesamte Argument dafür, ein <a href="/blog/how-to-read-cbd-coa-lab-report">Analysezertifikat</a> bei Ihrem Bestand zu behalten, anstatt es wegzulegen.</p>
+
+        <h3>CBD, THC und die Anderen Cannabinoide</h3>
+        <p>CBD und THC sind die zwei bekanntesten von weit über hundert Cannabinoiden, aber sie sind nicht die einzigen mit kommerzieller Relevanz. <a href="/blog/what-is-cbg-complete-guide">CBG</a> ist die Vorläuferverbindung, aus der die anderen synthetisiert werden, und <a href="/cbn-sleep-products">CBN</a> bildet sich, wenn THC altert und oxidiert. Für einen direkten Vergleich der beiden Hauptverbindungen siehe unseren Leitfaden zu <a href="/blog/cbd-vs-thc-difference">CBD versus THC</a>.</p>
+
+        <h3>Praktische Erkenntnis für Händler</h3>
+        <p>Wenn ein Kunde fragt, ob das, was Sie verkaufen, "dasselbe wie Gras" ist, lautet die ehrliche Antwort: gleiche Pflanze, unterschiedliche Chemie, unterschiedlicher rechtlicher Status. Diese Antwort ist genau, leicht zu merken, und übertreibt nicht. Alles andere — Potenz, Aroma, Format — folgt aus der Chemie und nicht aus dem Etikett.</p>
+        <p>Durchsuchen Sie, wie das in der Praxis aussieht, in unseren <a href="/collections/cbd-flowers">CBD-Blüten</a>, <a href="/collections/cbd-resins">Harzen</a>, und der <a href="/thc-free-cbd-wholesale">0 % THC-Linie</a>.</p>
+        <p>Für den regulatorischen Rahmen hinter dem EU-Hanfschwellenwert siehe den Überblick der Europäischen Kommission über <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">Hanf in der EU-Landwirtschaft</a>.</p>
+      `,
+    },
+    es: {
+      title: 'Cáñamo vs Cannabis vs Marihuana: Qué los Separa Realmente',
+      excerpt: 'El cáñamo y la marihuana son la misma especie de planta. Lo único que los separa es un umbral de THC escrito en la ley — por eso la distinción es legal en lugar de botánica.',
+      content: `
+        <h2>Una Especie, Dos Categorías Legales</h2>
+        <p>El cáñamo y la marihuana no son plantas diferentes. Ambas son <em>Cannabis sativa</em>. Lo que las separa es un número escrito en la legislación: la concentración de THC delta-9 que se permite que la planta contenga. Por debajo de ese umbral la planta es cáñamo y ampliamente lícita de cultivar y comerciar; por encima, la misma especie se convierte en una sustancia controlada.</p>
+        <p>Vale la pena entender esto con precisión, porque los clientes preguntan constantemente y una respuesta segura y precisa en el mostrador construye más confianza que cualquier afirmación de marketing.</p>
+
+        <h3>Dónde Está el Umbral</h3>
+        <p>En la Unión Europea, el límite para el cultivo de cáñamo industrial se ha fijado en 0,3% THC, habiendo sido anteriormente 0,2%. Los estados miembros individuales aplican sus propias reglas a los productos terminados además de eso, y esas reglas no son uniformes — algunos limitan el THC como porcentaje del producto terminado, otros requieren que no se pueda detectar THC en absoluto.</p>
+        <p>Nuestra <a href="/legal-cannabis-europe">visión legal país por país</a> cubre dónde caen las diferencias, y la <a href="/blog/is-cbd-legal-in-europe-country-guide">guía legal en el blog</a> entra en detalle por mercado. Trata a ambos como un punto de partida en lugar de asesoramiento legal.</p>
+
+        <h3>"Marihuana" es una Palabra Regulatoria, No Botánica</h3>
+        <p>No existe una categoría botánica llamada marihuana. El término entró en uso común a través de la política de drogas en lugar de la ciencia vegetal, razón por la cual la mayoría de los documentos industriales y regulatorios europeos lo evitan completamente y se refieren en su lugar a cannabis, cáñamo, o contenido específico de cannabinoides. Si estás escribiendo textos de producto, ajustarse a esa convención te hace sonar como un proveedor profesional en lugar de una tienda de novedades.</p>
+
+        <h3>Lo Que Esto Significa para el Producto en tu Estante</h3>
+        <p>Debido a que las plantas son la misma especie, el cáñamo produce las mismas familias de compuestos — cannabinoides, terpenos, flavonoides — solo en proporciones diferentes. El cáñamo criado para la producción de CBD se selecciona para expresar alto CBD y THC mínimo. Por eso una flor CBD puede verse, oler, y manejarse exactamente como cannabis de alto THC mientras permanece no intoxicante y lícita.</p>
+        <p>También es por eso que la similitud visual causa problemas prácticos. Los minoristas en varios mercados reportan problemas de control de carretera e inspección precisamente porque el material es indistinguible a simple vista. Este es todo el argumento para mantener un <a href="/blog/how-to-read-cbd-coa-lab-report">certificado de análisis</a> con tu stock en lugar de archivado en otro lugar.</p>
+
+        <h3>CBD, THC y los Otros Cannabinoides</h3>
+        <p>El CBD y el THC son los dos más conocidos de bastante más de cien cannabinoides, pero no son los únicos con relevancia comercial. El <a href="/blog/what-is-cbg-complete-guide">CBG</a> es el compuesto precursor a partir del cual se sintetizan los demás, y el <a href="/cbn-sleep-products">CBN</a> se forma a medida que el THC envejece y se oxida. Para una comparación directa de los dos compuestos principales, consulta nuestra guía de <a href="/blog/cbd-vs-thc-difference">CBD versus THC</a>.</p>
+
+        <h3>Conclusión Práctica para Minoristas</h3>
+        <p>Cuando un cliente pregunta si lo que estás vendiendo es "lo mismo que la marihuana", la respuesta honesta es: misma planta, química diferente, estatus legal diferente. Esa respuesta es precisa, fácil de recordar, y no exagera. Todo lo demás — potencia, aroma, formato — sigue de la química en lugar de la etiqueta.</p>
+        <p>Explora cómo se ve eso en la práctica en nuestras <a href="/collections/cbd-flowers">flores CBD</a>, <a href="/collections/cbd-resins">resinas</a>, y <a href="/thc-free-cbd-wholesale">línea 0% THC</a>.</p>
+        <p>Para el marco regulatorio detrás del umbral de cáñamo de la UE, consulta la visión general de la Comisión Europea sobre el <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">cáñamo en la agricultura de la UE</a>.</p>
+      `,
+    },
+    it: {
+      title: 'Canapa vs Cannabis vs Marijuana: Cosa le Separa Realmente',
+      excerpt: 'La canapa e la marijuana sono la stessa specie vegetale. L\'unica cosa che le separa è una soglia di THC scritta nella legge — motivo per cui la distinzione è legale piuttosto che botanica.',
+      content: `
+        <h2>Una Specie, Due Categorie Legali</h2>
+        <p>La canapa e la marijuana non sono piante diverse. Entrambe sono <em>Cannabis sativa</em>. Ciò che le separa è un numero scritto nella legislazione: la concentrazione di THC delta-9 che la pianta può contenere. Sotto quella soglia la pianta è canapa e ampiamente lecita da coltivare e commerciare; sopra, la stessa specie diventa una sostanza controllata.</p>
+        <p>Vale la pena capirlo con precisione, perché i clienti fanno costantemente la domanda e una risposta sicura e accurata al banco costruisce più fiducia di qualsiasi affermazione di marketing.</p>
+
+        <h3>Dove si Trova la Soglia</h3>
+        <p>Nell'Unione Europea, il limite per la coltivazione di canapa industriale è stato fissato allo 0,3% di THC, essendo precedentemente dello 0,2%. I singoli stati membri applicano le proprie regole ai prodotti finiti in aggiunta a ciò, e queste regole non sono uniformi — alcuni limitano il THC come percentuale del prodotto finito, altri richiedono che non sia rilevabile alcun THC.</p>
+        <p>La nostra <a href="/legal-cannabis-europe">panoramica legale paese per paese</a> copre dove cadono le differenze, e la <a href="/blog/is-cbd-legal-in-europe-country-guide">guida legale sul blog</a> entra nel dettaglio per mercato. Trattali entrambi come un punto di partenza piuttosto che una consulenza legale.</p>
+
+        <h3>"Marijuana" è una Parola Normativa, Non Botanica</h3>
+        <p>Non esiste una categoria botanica chiamata marijuana. Il termine è entrato nell'uso comune attraverso la politica sulle droghe piuttosto che la scienza vegetale, motivo per cui la maggior parte dei documenti industriali e normativi europei lo evita completamente e si riferisce invece a cannabis, canapa, o contenuto specifico di cannabinoidi. Se stai scrivendo testi di prodotto, allinearti a quella convenzione ti fa suonare come un fornitore professionale piuttosto che un negozio di novità.</p>
+
+        <h3>Cosa Significa Questo per il Prodotto sul Tuo Scaffale</h3>
+        <p>Poiché le piante sono la stessa specie, la canapa produce le stesse famiglie di composti — cannabinoidi, terpeni, flavonoidi — solo in rapporti diversi. La canapa allevata per la produzione di CBD è selezionata per esprimere alto CBD e THC minimo. Ecco perché un fiore CBD può apparire, odorare, e maneggiarsi esattamente come cannabis ad alto THC pur rimanendo non inebriante e lecito.</p>
+        <p>È anche il motivo per cui la somiglianza visiva causa problemi pratici. I rivenditori in diversi mercati segnalano problemi di controllo stradale e ispezione proprio perché il materiale è indistinguibile a occhio nudo. Questo è l'intero argomento per tenere un <a href="/blog/how-to-read-cbd-coa-lab-report">certificato di analisi</a> con la tua scorta piuttosto che archiviato altrove.</p>
+
+        <h3>CBD, THC e gli Altri Cannabinoidi</h3>
+        <p>CBD e THC sono i due più noti tra ben oltre cento cannabinoidi, ma non sono gli unici con rilevanza commerciale. Il <a href="/blog/what-is-cbg-complete-guide">CBG</a> è il composto precursore da cui gli altri vengono sintetizzati, e il <a href="/cbn-sleep-products">CBN</a> si forma quando il THC invecchia e si ossida. Per un confronto diretto dei due composti principali, vedi la nostra guida a <a href="/blog/cbd-vs-thc-difference">CBD contro THC</a>.</p>
+
+        <h3>Conclusione Pratica per i Rivenditori</h3>
+        <p>Quando un cliente chiede se ciò che stai vendendo è "la stessa cosa dell'erba", la risposta onesta è: stessa pianta, chimica diversa, status legale diverso. Quella risposta è accurata, facile da ricordare, e non esagera. Tutto il resto — potenza, aroma, formato — deriva dalla chimica piuttosto che dall'etichetta.</p>
+        <p>Sfoglia come appare questo in pratica nei nostri <a href="/collections/cbd-flowers">fiori CBD</a>, <a href="/collections/cbd-resins">resine</a>, e nella <a href="/thc-free-cbd-wholesale">linea 0% THC</a>.</p>
+        <p>Per il quadro normativo dietro la soglia della canapa UE, vedi la panoramica della Commissione Europea sulla <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">canapa nell'agricoltura dell'UE</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Hennep vs Cannabis vs Marihuana: Wat Ze Werkelijk Scheidt',
+      excerpt: 'Hennep en marihuana zijn dezelfde plantensoort. Het enige dat ze scheidt is een THC-drempel die in de wet is vastgelegd — daarom is het onderscheid juridisch in plaats van botanisch.',
+      content: `
+        <h2>Eén Soort, Twee Juridische Categorieën</h2>
+        <p>Hennep en marihuana zijn geen verschillende planten. Beide zijn <em>Cannabis sativa</em>. Wat ze scheidt is een getal dat in de wetgeving is vastgelegd: de concentratie delta-9 THC die de plant mag bevatten. Onder die drempel is de plant hennep en over het algemeen legaal om te verbouwen en te verhandelen; erboven wordt dezelfde soort een gecontroleerde stof.</p>
+        <p>Dit is de moeite waard om precies te begrijpen, omdat klanten voortdurend de vraag stellen en een zelfverzekerd, nauwkeurig antwoord aan de toonbank meer vertrouwen opbouwt dan welke marketingbewering dan ook.</p>
+
+        <h3>Waar de Drempel Ligt</h3>
+        <p>In de Europese Unie is de limiet voor industriële hennepteelt vastgesteld op 0,3% THC, na eerder 0,2% te zijn geweest. Individuele lidstaten passen hun eigen regels toe op eindproducten bovenop dat, en die regels zijn niet uniform — sommige maximaliseren THC als percentage van het eindproduct, andere vereisen dat er helemaal geen THC detecteerbaar is.</p>
+        <p>Ons <a href="/legal-cannabis-europe">land-voor-land juridisch overzicht</a> behandelt waar de verschillen vallen, en de <a href="/blog/is-cbd-legal-in-europe-country-guide">juridische gids op de blog</a> gaat in op de details per markt. Behandel beide als een startpunt in plaats van juridisch advies.</p>
+
+        <h3>"Marihuana" Is een Regelgevend Woord, Geen Botanisch</h3>
+        <p>Er bestaat geen botanische categorie genaamd marihuana. De term kwam in algemeen gebruik via drugsbeleid in plaats van plantenwetenschap, daarom vermijden de meeste Europese branche- en regelgevende documenten het volledig en verwijzen ze in plaats daarvan naar cannabis, hennep, of specifiek cannabinoïdegehalte. Als u productcopy schrijft, laat het aanpassen aan die conventie u klinken als een professionele leverancier in plaats van een noviteitenwinkel.</p>
+
+        <h3>Wat Dit Betekent voor het Product op Uw Schap</h3>
+        <p>Omdat de planten dezelfde soort zijn, produceert hennep dezelfde families van verbindingen — cannabinoïden, terpenen, flavonoïden — alleen in verschillende verhoudingen. Hennep gefokt voor CBD-productie wordt geselecteerd om hoog CBD en minimaal THC tot expressie te brengen. Daarom kan een CBD-bloem er precies uitzien, ruiken, en aanvoelen als hoog-THC cannabis terwijl het niet-bedwelmend en legaal blijft.</p>
+        <p>Het is ook waarom de visuele gelijkenis praktische problemen veroorzaakt. Retailers in verschillende markten melden problemen bij wegcontroles en inspecties juist omdat het materiaal met het blote oog niet te onderscheiden is. Dit is het hele argument voor het bewaren van een <a href="/blog/how-to-read-cbd-coa-lab-report">certificaat van analyse</a> bij uw voorraad in plaats van elders opgeborgen.</p>
+
+        <h3>CBD, THC en de Andere Cannabinoïden</h3>
+        <p>CBD en THC zijn de twee meest bekende van ruim honderd cannabinoïden, maar het zijn niet de enige met commerciële relevantie. <a href="/blog/what-is-cbg-complete-guide">CBG</a> is de precursorverbinding waaruit de andere worden gesynthetiseerd, en <a href="/cbn-sleep-products">CBN</a> vormt zich naarmate THC veroudert en oxideert. Voor een directe vergelijking van de twee belangrijkste verbindingen, zie onze gids voor <a href="/blog/cbd-vs-thc-difference">CBD versus THC</a>.</p>
+
+        <h3>Praktische Conclusie voor Retailers</h3>
+        <p>Wanneer een klant vraagt of wat u verkoopt "hetzelfde als wiet" is, is het eerlijke antwoord: dezelfde plant, andere chemie, andere juridische status. Dat antwoord is nauwkeurig, gemakkelijk te onthouden, en overdrijft niet. Al het andere — potentie, aroma, formaat — volgt uit de chemie in plaats van het etiket.</p>
+        <p>Blader door hoe dat er in de praktijk uitziet in onze <a href="/collections/cbd-flowers">CBD-bloemen</a>, <a href="/collections/cbd-resins">harsen</a>, en <a href="/thc-free-cbd-wholesale">0% THC-lijn</a>.</p>
+        <p>Voor het regelgevingskader achter de EU-hennepdrempel, zie het overzicht van de Europese Commissie over <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">hennep in de EU-landbouw</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Hamppu vs Kannabis vs Marihuana: Mikä Todella Erottaa Ne',
+      excerpt: 'Hamppu ja marihuana ovat samaa kasvilajia. Ainoa asia, joka erottaa ne, on lakiin kirjattu THC-kynnysarvo — minkä vuoksi ero on lainsäädännöllinen eikä kasvitieteellinen.',
+      content: `
+        <h2>Yksi Laji, Kaksi Lainsäädännöllistä Kategoriaa</h2>
+        <p>Hamppu ja marihuana eivät ole eri kasveja. Molemmat ovat <em>Cannabis sativaa</em>. Ne erottaa toisistaan lainsäädäntöön kirjattu luku: delta-9 THC:n pitoisuus, jonka kasvi saa sisältää. Tuon kynnysarvon alapuolella kasvi on hamppua ja laajalti laillista viljellä ja käydä kauppaa; sen yläpuolella sama laji muuttuu valvotuksi aineeksi.</p>
+        <p>Tämän ymmärtäminen tarkasti kannattaa, koska asiakkaat kysyvät kysymystä jatkuvasti, ja itsevarma, tarkka vastaus tiskillä rakentaa enemmän luottamusta kuin mikään markkinointiväite.</p>
+
+        <h3>Missä Kynnysarvo Sijaitsee</h3>
+        <p>Euroopan unionissa teollisen hampun viljelyn raja on asetettu 0,3 % THC:hen, kun se aiemmin oli 0,2 %. Yksittäiset jäsenvaltiot soveltavat omia sääntöjään valmiisiin tuotteisiin sen lisäksi, eivätkä nämä säännöt ole yhtenäisiä — jotkut asettavat THC:lle prosenttiosuuskaton valmiista tuotteesta, toiset vaativat, ettei THC:tä saa olla lainkaan havaittavissa.</p>
+        <p><a href="/legal-cannabis-europe">Maakohtainen laillinen yleiskatsauksemme</a> kattaa, mihin erot osuvat, ja <a href="/blog/is-cbd-legal-in-europe-country-guide">blogin laillinen opas</a> menee yksityiskohtiin markkinoittain. Käsittele molempia lähtökohtana eikä oikeudellisena neuvontana.</p>
+
+        <h3>"Marihuana" On Sääntelysana, Ei Kasvitieteellinen</h3>
+        <p>Marihuana-nimistä kasvitieteellistä kategoriaa ei ole olemassa. Termi tuli yleiseen käyttöön huumepolitiikan kautta eikä kasvitieteen, minkä vuoksi useimmat eurooppalaiset toimiala- ja sääntelyasiakirjat välttävät sitä kokonaan ja viittaavat sen sijaan kannabikseen, hamppuun, tai tiettyyn kannabinoidipitoisuuteen. Jos kirjoitat tuotetekstejä, tuon käytännön noudattaminen saa sinut kuulostamaan ammattimaiselta toimittajalta uutuustavarakaupan sijaan.</p>
+
+        <h3>Mitä Tämä Tarkoittaa Hyllylläsi Olevalle Tuotteelle</h3>
+        <p>Koska kasvit ovat samaa lajia, hamppu tuottaa samoja yhdisteperheitä — kannabinoideja, terpeenejä, flavonoideja — vain eri suhteissa. CBD-tuotantoon jalostettu hamppu on valittu ilmentämään korkeaa CBD:tä ja minimaalista THC:tä. Siksi CBD-kukka voi näyttää, tuoksua, ja tuntua täsmälleen samalta kuin korkean THC:n kannabis pysyen silti ei-päihdyttävänä ja laillisena.</p>
+        <p>Se on myös syy, miksi visuaalinen samankaltaisuus aiheuttaa käytännön ongelmia. Jälleenmyyjät useilla markkinoilla raportoivat tienvarsi- ja tarkastusongelmia juuri siksi, että materiaali on erottamaton silmämääräisesti. Tämä on koko peruste sille, miksi <a href="/blog/how-to-read-cbd-coa-lab-report">analyysitodistus</a> tulisi pitää varastosi mukana eikä arkistoituna muualle.</p>
+
+        <h3>CBD, THC ja Muut Kannabinoidit</h3>
+        <p>CBD ja THC ovat kaksi tunnetuinta yli sadasta kannabinoidista, mutta ne eivät ole ainoat kaupallisesti merkittävät. <a href="/blog/what-is-cbg-complete-guide">CBG</a> on esiasteyhdiste, josta muut syntetisoituvat, ja <a href="/cbn-sleep-products">CBN</a> muodostuu THC:n vanhetessa ja hapettuessa. Suoraa vertailua kahden pääyhdisteen välillä varten, katso oppaamme <a href="/blog/cbd-vs-thc-difference">CBD:stä verrattuna THC:hen</a>.</p>
+
+        <h3>Käytännön Johtopäätös Jälleenmyyjille</h3>
+        <p>Kun asiakas kysyy, onko myymäsi tuote "sama kuin ruoho", rehellinen vastaus on: sama kasvi, eri kemia, eri lainsäädännöllinen asema. Tuo vastaus on tarkka, helppo muistaa, eikä liioittele. Kaikki muu — teho, aromi, muoto — seuraa kemiasta eikä etiketistä.</p>
+        <p>Selaa, miltä tämä näyttää käytännössä <a href="/collections/cbd-flowers">CBD-kukissamme</a>, <a href="/collections/cbd-resins">hartseissamme</a>, ja <a href="/thc-free-cbd-wholesale">0 % THC -linjassamme</a>.</p>
+        <p>EU:n hamppukynnyksen takana olevaa sääntelykehystä varten katso Euroopan komission yleiskatsaus <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">hampusta EU:n maataloudessa</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Cânhamo vs Cannabis vs Marijuana: O Que Realmente os Separa',
+      excerpt: 'O cânhamo e a marijuana são a mesma espécie de planta. A única coisa que os separa é um limiar de THC escrito na lei — razão pela qual a distinção é legal em vez de botânica.',
+      content: `
+        <h2>Uma Espécie, Duas Categorias Legais</h2>
+        <p>O cânhamo e a marijuana não são plantas diferentes. Ambas são <em>Cannabis sativa</em>. O que as separa é um número escrito na legislação: a concentração de THC delta-9 que a planta pode conter. Abaixo desse limiar a planta é cânhamo e amplamente lícita de cultivar e comercializar; acima, a mesma espécie torna-se uma substância controlada.</p>
+        <p>Vale a pena entender isto com precisão, porque os clientes fazem constantemente a pergunta e uma resposta confiante e precisa ao balcão constrói mais confiança do que qualquer alegação de marketing.</p>
+
+        <h3>Onde Está o Limiar</h3>
+        <p>Na União Europeia, o limite para o cultivo de cânhamo industrial foi fixado em 0,3% THC, tendo sido anteriormente 0,2%. Os estados-membros individuais aplicam as suas próprias regras aos produtos acabados além disso, e essas regras não são uniformes — alguns limitam o THC como percentagem do produto acabado, outros exigem que nenhum THC seja detetável.</p>
+        <p>O nosso <a href="/legal-cannabis-europe">panorama legal país por país</a> cobre onde caem as diferenças, e o <a href="/blog/is-cbd-legal-in-europe-country-guide">guia legal no blog</a> entra em detalhe por mercado. Trate ambos como um ponto de partida em vez de aconselhamento jurídico.</p>
+
+        <h3>"Marijuana" é uma Palavra Regulatória, Não Botânica</h3>
+        <p>Não existe uma categoria botânica chamada marijuana. O termo entrou em uso comum através da política de drogas em vez da ciência vegetal, razão pela qual a maioria dos documentos industriais e regulatórios europeus o evita completamente e refere-se, em vez disso, a cannabis, cânhamo, ou teor específico de canabinoides. Se está a escrever texto de produto, alinhar-se com essa convenção faz-lhe soar como um fornecedor profissional em vez de uma loja de novidades.</p>
+
+        <h3>O Que Isto Significa para o Produto na Sua Prateleira</h3>
+        <p>Como as plantas são a mesma espécie, o cânhamo produz as mesmas famílias de compostos — canabinoides, terpenos, flavonoides — apenas em proporções diferentes. O cânhamo criado para produção de CBD é selecionado para expressar CBD elevado e THC mínimo. É por isso que uma flor CBD pode parecer, cheirar, e manusear-se exatamente como cannabis de alto THC, permanecendo não intoxicante e lícita.</p>
+        <p>É também por isso que a semelhança visual causa problemas práticos. Retalhistas em vários mercados relatam problemas de controlo rodoviário e inspeção precisamente porque o material é indistinguível a olho nu. Este é todo o argumento para manter um <a href="/blog/how-to-read-cbd-coa-lab-report">certificado de análise</a> com o seu stock em vez de arquivado noutro lugar.</p>
+
+        <h3>CBD, THC e os Outros Canabinoides</h3>
+        <p>O CBD e o THC são os dois mais conhecidos de bem mais de cem canabinoides, mas não são os únicos com relevância comercial. O <a href="/blog/what-is-cbg-complete-guide">CBG</a> é o composto precursor a partir do qual os outros são sintetizados, e o <a href="/cbn-sleep-products">CBN</a> forma-se à medida que o THC envelhece e oxida. Para uma comparação direta dos dois compostos principais, veja o nosso guia de <a href="/blog/cbd-vs-thc-difference">CBD versus THC</a>.</p>
+
+        <h3>Conclusão Prática para Retalhistas</h3>
+        <p>Quando um cliente pergunta se o que está a vender é "a mesma coisa que erva", a resposta honesta é: mesma planta, química diferente, estatuto legal diferente. Essa resposta é precisa, fácil de lembrar, e não exagera. Tudo o resto — potência, aroma, formato — segue da química em vez do rótulo.</p>
+        <p>Explore como isso se parece na prática nas nossas <a href="/collections/cbd-flowers">flores CBD</a>, <a href="/collections/cbd-resins">resinas</a>, e <a href="/thc-free-cbd-wholesale">linha 0% THC</a>.</p>
+        <p>Para o enquadramento regulatório por trás do limiar de cânhamo da UE, veja o panorama da Comissão Europeia sobre <a href="https://agriculture.ec.europa.eu/farming/crop-productions-and-plant-based-products/hemp_en" target="_blank" rel="noopener noreferrer">cânhamo na agricultura da UE</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
