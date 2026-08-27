@@ -3159,6 +3159,360 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'full-spectrum-vs-broad-spectrum-vs-isolate': {
+    fr: {
+      title: 'Full-Spectrum vs Broad-Spectrum vs Isolat CBD : Quelle est la Différence ?',
+      excerpt: "Ces trois termes décrivent la quantité du profil original de cannabinoïdes et terpènes de la plante de chanvre qui survit à l'extraction — et cela change l'effet, la teneur légale en THC, et le prix.",
+      content: `
+        <h2>Trois Résultats d'Extraction, Trois Produits Différents</h2>
+        <p>"Full-spectrum," "broad-spectrum," et "isolat" décrivent la quantité du profil chimique original de la plante de chanvre qui reste après extraction et traitement. Comprendre la différence compte à la fois pour la conformité et pour associer le bon produit au bon client.</p>
+
+        <h3>Full-Spectrum : Le Profil de la Plante Entière</h3>
+        <p>Les extraits full-spectrum conservent la gamme complète de cannabinoïdes naturellement présents dans la plante — CBD, traces de THC (sous la limite légale de 0,3 %), CBG, CBN, et le profil complet de terpènes. Beaucoup de clients préfèrent les produits full-spectrum en raison de la théorie de "l'effet d'entourage" — l'idée que les cannabinoïdes et terpènes fonctionnent mieux ensemble que n'importe quel composé isolé. Nos <a href="/collections/cbd-flowers">fleurs CBD</a> et la plupart de nos <a href="/collections/cbd-resins">résines</a> sont naturellement full-spectrum, puisqu'elles sont du matériel végétal minimalement transformé.</p>
+
+        <h3>Broad-Spectrum : Tout Sauf le THC</h3>
+        <p>Les extraits broad-spectrum commencent comme full-spectrum, puis passent par un processus supplémentaire pour retirer spécifiquement le THC tout en conservant les autres cannabinoïdes et terpènes. Cela plaît aux clients qui veulent le profil multi-cannabinoïde sans aucun THC du tout — utile pour quiconque préoccupé par les tests de dépistage ou opérant sur un marché avec des règles particulièrement strictes. Nos références de résine et d'huile 0 % THC relèvent de cette catégorie.</p>
+
+        <h3>Isolat : CBD Pur, Rien d'Autre</h3>
+        <p>L'isolat est le CBD sous sa forme la plus pure — généralement pur à 99 %+, avec tous les autres composés végétaux retirés. Notre <a href="/products/isolat-99-cbd">Isolat CBD 99,8 %</a> appartient à cette catégorie : une poudre cristalline blanche sans THC, terpènes, ou autres cannabinoïdes détectables. C'est la base préférée pour un dosage précis, les formulations cosmétiques, et tout produit où un ingrédient complètement neutre, sans saveur, incolore est requis.</p>
+        <p>Notre <a href="/products/distillate-90-cbd">Distillat CBD 90 %</a> se situe entre broad-spectrum et isolat — hautement raffiné mais conservant légèrement plus de la complexité originale des cannabinoïdes que l'isolat pur.</p>
+
+        <h3>Lequel Devriez-vous Stocker ou Utiliser ?</h3>
+        <ul>
+          <li><strong>Full-spectrum :</strong> Idéal pour les clients qui veulent l'expérience complète de la plante et ne se préoccupent pas des traces de THC.</li>
+          <li><strong>Broad-spectrum :</strong> Idéal pour les clients qui veulent plusieurs cannabinoïdes mais ont besoin d'un THC garanti à zéro.</li>
+          <li><strong>Isolat :</strong> Idéal pour la fabrication en marque blanche, le dosage précis, et les marchés sensibles au THC.</li>
+        </ul>
+        <p>Si vous formulez votre propre gamme de produits, notre <a href="/white-label-cbd-europe">page CBD marque blanche</a> couvre les options en gros dans les trois catégories, avec documentation de laboratoire pour chacune.</p>
+        <p>Pour les définitions techniques standard de l'industrie de ces termes, consultez l'<a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">Association Européenne du Chanvre Industriel (EIHA)</a>, l'organisme commercial paneuropéen pour le secteur du chanvre.</p>
+      `,
+    },
+    de: {
+      title: 'Full-Spectrum vs Broad-Spectrum vs Isolat CBD: Was ist der Unterschied?',
+      excerpt: 'Diese drei Begriffe beschreiben, wie viel des ursprünglichen Cannabinoid- und Terpenprofils der Hanfpflanze die Extraktion übersteht — und es verändert die Wirkung, den legalen THC-Gehalt, und den Preispunkt.',
+      content: `
+        <h2>Drei Extraktionsergebnisse, Drei Verschiedene Produkte</h2>
+        <p>"Full-Spectrum," "Broad-Spectrum," und "Isolat" beschreiben, wie viel des ursprünglichen chemischen Profils der Hanfpflanze nach Extraktion und Verarbeitung verbleibt. Das Verständnis des Unterschieds ist sowohl für die Compliance als auch für die Zuordnung des richtigen Produkts zum richtigen Kunden wichtig.</p>
+
+        <h3>Full-Spectrum: Das Ganze-Pflanze-Profil</h3>
+        <p>Full-Spectrum-Extrakte behalten das vollständige Spektrum von Cannabinoiden, die natürlich in der Pflanze vorhanden sind — CBD, Spuren-THC (unter dem gesetzlichen Grenzwert von 0,3 %), CBG, CBN, und das vollständige Terpenprofil. Viele Kunden bevorzugen Full-Spectrum-Produkte wegen der "Entourage-Effekt"-Theorie — der Idee, dass Cannabinoide und Terpene besser zusammenarbeiten als jede einzelne Verbindung isoliert. Unsere <a href="/collections/cbd-flowers">CBD-Blüten</a> und die meisten <a href="/collections/cbd-resins">Harze</a> sind natürlicherweise Full-Spectrum, da sie minimal verarbeitetes Pflanzenmaterial sind.</p>
+
+        <h3>Broad-Spectrum: Alles Außer THC</h3>
+        <p>Broad-Spectrum-Extrakte beginnen als Full-Spectrum, durchlaufen dann einen zusätzlichen Prozess, um THC spezifisch zu entfernen, während andere Cannabinoide und Terpene erhalten bleiben. Dies spricht Kunden an, die das Multi-Cannabinoid-Profil ohne jegliches THC wollen — nützlich für jeden, der sich um Drogentests sorgt oder auf einem Markt mit besonders strengen Regeln tätig ist. Unsere 0 % THC Harz- und Ölreferenzen fallen in diese Kategorie.</p>
+
+        <h3>Isolat: Reines CBD, Sonst Nichts</h3>
+        <p>Isolat ist CBD in seiner reinsten Form — typischerweise 99 %+ rein, mit allen anderen Pflanzenverbindungen entfernt. Unser <a href="/products/isolat-99-cbd">99,8 % CBD-Isolat</a> ist diese Kategorie: ein weißes kristallines Pulver ohne nachweisbares THC, Terpene, oder andere Cannabinoide. Es ist die bevorzugte Basis für präzise Dosierung, kosmetische Formulierungen, und jedes Produkt, bei dem eine völlig neutrale, geschmacklose, farblose Zutat erforderlich ist.</p>
+        <p>Unser <a href="/products/distillate-90-cbd">90 % CBD-Destillat</a> liegt zwischen Broad-Spectrum und Isolat — hochraffiniert, aber mit etwas mehr der ursprünglichen Cannabinoid-Komplexität als reines Isolat.</p>
+
+        <h3>Was Sollten Sie Vorrätig Haben oder Verwenden?</h3>
+        <ul>
+          <li><strong>Full-Spectrum:</strong> Am besten für Kunden, die das komplette Pflanzenerlebnis wollen und sich nicht um Spuren-THC sorgen.</li>
+          <li><strong>Broad-Spectrum:</strong> Am besten für Kunden, die mehrere Cannabinoide wollen, aber garantiert null THC benötigen.</li>
+          <li><strong>Isolat:</strong> Am besten für White-Label-Herstellung, präzise Dosierung, und THC-sensible Märkte.</li>
+        </ul>
+        <p>Wenn Sie Ihre eigene Produktlinie formulieren, deckt unsere <a href="/white-label-cbd-europe">White-Label-CBD-Seite</a> Großhandelsoptionen in allen drei Kategorien ab, mit Labordokumentation für jede.</p>
+        <p>Für die branchenüblichen technischen Definitionen dieser Begriffe siehe die <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>, das paneuropäische Handelsgremium für den Hanfsektor.</p>
+      `,
+    },
+    es: {
+      title: 'Full-Spectrum vs Broad-Spectrum vs Aislado CBD: ¿Cuál es la Diferencia?',
+      excerpt: 'Estos tres términos describen cuánto del perfil original de cannabinoides y terpenos de la planta de cáñamo sobrevive a la extracción — y cambia el efecto, el contenido legal de THC, y el precio.',
+      content: `
+        <h2>Tres Resultados de Extracción, Tres Productos Diferentes</h2>
+        <p>"Full-spectrum," "broad-spectrum," y "aislado" describen cuánto del perfil químico original de la planta de cáñamo permanece después de la extracción y procesamiento. Entender la diferencia importa tanto para el cumplimiento normativo como para emparejar el producto correcto con el cliente correcto.</p>
+
+        <h3>Full-Spectrum: El Perfil de la Planta Completa</h3>
+        <p>Los extractos full-spectrum conservan la gama completa de cannabinoides naturalmente presentes en la planta — CBD, trazas de THC (por debajo del límite legal del 0,3%), CBG, CBN, y el perfil completo de terpenos. Muchos clientes prefieren productos full-spectrum debido a la teoría del "efecto séquito" — la idea de que los cannabinoides y terpenos funcionan mejor juntos que cualquier compuesto único aislado. Nuestras <a href="/collections/cbd-flowers">flores CBD</a> y la mayoría de las <a href="/collections/cbd-resins">resinas</a> son naturalmente full-spectrum, ya que son material vegetal mínimamente procesado.</p>
+
+        <h3>Broad-Spectrum: Todo Excepto el THC</h3>
+        <p>Los extractos broad-spectrum comienzan como full-spectrum, luego pasan por un proceso adicional para eliminar específicamente el THC mientras conservan otros cannabinoides y terpenos. Esto atrae a clientes que quieren el perfil multi-cannabinoide sin nada de THC — útil para cualquiera preocupado por las pruebas de drogas u operando en un mercado con reglas especialmente estrictas. Nuestras referencias de resina y aceite 0% THC caen en esta categoría.</p>
+
+        <h3>Aislado: CBD Puro, Nada Más</h3>
+        <p>El aislado es CBD en su forma más pura — típicamente 99%+ puro, con todos los demás compuestos vegetales eliminados. Nuestro <a href="/products/isolat-99-cbd">Aislado CBD 99,8%</a> es esta categoría: un polvo cristalino blanco sin THC, terpenos, u otros cannabinoides detectables. Es la base preferida para dosificación precisa, formulaciones cosméticas, y cualquier producto donde se requiera un ingrediente completamente neutro, sin sabor, incoloro.</p>
+        <p>Nuestro <a href="/products/distillate-90-cbd">Destilado CBD 90%</a> se sitúa entre broad-spectrum y aislado — altamente refinado pero conservando ligeramente más de la complejidad original de cannabinoides que el aislado puro.</p>
+
+        <h3>¿Cuál Deberías Tener en Stock o Usar?</h3>
+        <ul>
+          <li><strong>Full-spectrum:</strong> Mejor para clientes que quieren la experiencia completa de la planta y no les preocupan las trazas de THC.</li>
+          <li><strong>Broad-spectrum:</strong> Mejor para clientes que quieren múltiples cannabinoides pero necesitan THC garantizado en cero.</li>
+          <li><strong>Aislado:</strong> Mejor para fabricación de marca blanca, dosificación precisa, y mercados sensibles al THC.</li>
+        </ul>
+        <p>Si estás formulando tu propia línea de productos, nuestra <a href="/white-label-cbd-europe">página de CBD de marca blanca</a> cubre opciones a granel en las tres categorías, con documentación de laboratorio para cada una.</p>
+        <p>Para las definiciones técnicas estándar de la industria de estos términos, consulta la <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">Asociación Europea de Cáñamo Industrial (EIHA)</a>, el organismo comercial paneuropeo para el sector del cáñamo.</p>
+      `,
+    },
+    it: {
+      title: 'Full-Spectrum vs Broad-Spectrum vs Isolato CBD: Qual è la Differenza?',
+      excerpt: "Questi tre termini descrivono quanto del profilo originale di cannabinoidi e terpeni della pianta di canapa sopravvive all'estrazione — e cambia l'effetto, il contenuto legale di THC, e il prezzo.",
+      content: `
+        <h2>Tre Risultati di Estrazione, Tre Prodotti Diversi</h2>
+        <p>"Full-spectrum," "broad-spectrum," e "isolato" descrivono quanto del profilo chimico originale della pianta di canapa rimane dopo l'estrazione e la lavorazione. Comprendere la differenza è importante sia per la conformità che per abbinare il prodotto giusto al cliente giusto.</p>
+
+        <h3>Full-Spectrum: Il Profilo dell'Intera Pianta</h3>
+        <p>Gli estratti full-spectrum mantengono la gamma completa di cannabinoidi naturalmente presenti nella pianta — CBD, tracce di THC (sotto il limite legale dello 0,3%), CBG, CBN, e il profilo terpenico completo. Molti clienti preferiscono i prodotti full-spectrum a causa della teoria dell'"effetto entourage" — l'idea che cannabinoidi e terpeni funzionino meglio insieme rispetto a qualsiasi singolo composto isolato. I nostri <a href="/collections/cbd-flowers">fiori CBD</a> e la maggior parte delle <a href="/collections/cbd-resins">resine</a> sono naturalmente full-spectrum, essendo materiale vegetale minimamente lavorato.</p>
+
+        <h3>Broad-Spectrum: Tutto Tranne il THC</h3>
+        <p>Gli estratti broad-spectrum iniziano come full-spectrum, poi passano attraverso un processo aggiuntivo per rimuovere specificamente il THC mantenendo altri cannabinoidi e terpeni. Questo attira i clienti che vogliono il profilo multi-cannabinoide senza alcun THC — utile per chiunque sia preoccupato per i test antidroga o operi in un mercato con regole particolarmente severe. Le nostre referenze di resina e olio 0% THC rientrano in questa categoria.</p>
+
+        <h3>Isolato: CBD Puro, Nient'Altro</h3>
+        <p>L'isolato è il CBD nella sua forma più pura — tipicamente puro al 99%+, con tutti gli altri composti vegetali rimossi. Il nostro <a href="/products/isolat-99-cbd">Isolato CBD 99,8%</a> è questa categoria: una polvere cristallina bianca senza THC, terpeni, o altri cannabinoidi rilevabili. È la base preferita per dosaggio preciso, formulazioni cosmetiche, e qualsiasi prodotto in cui è richiesto un ingrediente completamente neutro, insapore, incolore.</p>
+        <p>Il nostro <a href="/products/distillate-90-cbd">Distillato CBD 90%</a> si colloca tra broad-spectrum e isolato — altamente raffinato ma mantiene leggermente più della complessità originale dei cannabinoidi rispetto all'isolato puro.</p>
+
+        <h3>Quale Dovresti Tenere in Stock o Usare?</h3>
+        <ul>
+          <li><strong>Full-spectrum:</strong> Ideale per clienti che vogliono l'esperienza completa della pianta e non sono preoccupati dalle tracce di THC.</li>
+          <li><strong>Broad-spectrum:</strong> Ideale per clienti che vogliono più cannabinoidi ma necessitano di THC garantito a zero.</li>
+          <li><strong>Isolato:</strong> Ideale per la produzione white label, dosaggio preciso, e mercati sensibili al THC.</li>
+        </ul>
+        <p>Se stai formulando la tua linea di prodotti, la nostra <a href="/white-label-cbd-europe">pagina CBD white label</a> copre opzioni all'ingrosso in tutte e tre le categorie, con documentazione di laboratorio per ciascuna.</p>
+        <p>Per le definizioni tecniche standard del settore di questi termini, consulta l'<a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>, l'organismo commerciale paneuropeo per il settore della canapa.</p>
+      `,
+    },
+    nl: {
+      title: 'Full-Spectrum vs Broad-Spectrum vs Isolaat CBD: Wat is het Verschil?',
+      excerpt: 'Deze drie termen beschrijven hoeveel van het oorspronkelijke cannabinoïde- en terpeenprofiel van de hennepplant de extractie overleeft — en het verandert het effect, het legale THC-gehalte, en het prijspunt.',
+      content: `
+        <h2>Drie Extractieresultaten, Drie Verschillende Producten</h2>
+        <p>"Full-spectrum," "broad-spectrum," en "isolaat" beschrijven hoeveel van het oorspronkelijke chemische profiel van de hennepplant overblijft na extractie en verwerking. Het begrijpen van het verschil is belangrijk zowel voor naleving als voor het matchen van het juiste product met de juiste klant.</p>
+
+        <h3>Full-Spectrum: Het Hele-Plant Profiel</h3>
+        <p>Full-spectrum extracten behouden het volledige bereik van cannabinoïden die van nature aanwezig zijn in de plant — CBD, spoor-THC (onder de wettelijke limiet van 0,3%), CBG, CBN, en het volledige terpeenprofiel. Veel klanten geven de voorkeur aan full-spectrum producten vanwege de "entourage-effect" theorie — het idee dat cannabinoïden en terpenen beter samenwerken dan elke enkele verbinding geïsoleerd. Onze <a href="/collections/cbd-flowers">CBD-bloemen</a> en de meeste <a href="/collections/cbd-resins">harsen</a> zijn van nature full-spectrum, aangezien ze minimaal verwerkt plantmateriaal zijn.</p>
+
+        <h3>Broad-Spectrum: Alles Behalve THC</h3>
+        <p>Broad-spectrum extracten beginnen als full-spectrum, gaan dan door een extra proces om specifiek THC te verwijderen terwijl andere cannabinoïden en terpenen behouden blijven. Dit spreekt klanten aan die het multi-cannabinoïdeprofiel willen zonder enige THC — nuttig voor iedereen die zich zorgen maakt over drugstesten of actief is op een markt met bijzonder strenge regels. Onze 0% THC hars- en olie-referenties vallen in deze categorie.</p>
+
+        <h3>Isolaat: Puur CBD, Niets Anders</h3>
+        <p>Isolaat is CBD in zijn puurste vorm — meestal 99%+ zuiver, met alle andere plantverbindingen verwijderd. Ons <a href="/products/isolat-99-cbd">99,8% CBD-isolaat</a> valt in deze categorie: een wit kristallijn poeder zonder detecteerbaar THC, terpenen, of andere cannabinoïden. Het is de voorkeursbasis voor precieze dosering, cosmetische formuleringen, en elk product waarbij een volledig neutraal, smaakloos, kleurloos ingrediënt vereist is.</p>
+        <p>Onze <a href="/products/distillate-90-cbd">90% CBD-destillaat</a> zit tussen broad-spectrum en isolaat in — sterk geraffineerd maar met iets meer van de oorspronkelijke cannabinoïdecomplexiteit dan puur isolaat.</p>
+
+        <h3>Welke Moet U Op Voorraad Hebben of Gebruiken?</h3>
+        <ul>
+          <li><strong>Full-spectrum:</strong> Het beste voor klanten die de complete plantervaring willen en zich geen zorgen maken over spoor-THC.</li>
+          <li><strong>Broad-spectrum:</strong> Het beste voor klanten die meerdere cannabinoïden willen maar gegarandeerd nul THC nodig hebben.</li>
+          <li><strong>Isolaat:</strong> Het beste voor white-label productie, precieze dosering, en THC-gevoelige markten.</li>
+        </ul>
+        <p>Als u uw eigen productlijn formuleert, behandelt onze <a href="/white-label-cbd-europe">white label CBD-pagina</a> bulkopties in alle drie de categorieën, met labdocumentatie voor elk.</p>
+        <p>Voor de branchestandaard technische definities van deze termen, zie de <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>, het pan-Europese handelsorgaan voor de hennepsector.</p>
+      `,
+    },
+    fi: {
+      title: 'Full-Spectrum vs Broad-Spectrum vs Isolaatti CBD: Mikä on Ero?',
+      excerpt: 'Nämä kolme termiä kuvaavat, kuinka paljon hamppukasvin alkuperäisestä kannabinoidi- ja terpeeniprofiilista säilyy uuton jälkeen — ja se muuttaa vaikutusta, laillista THC-pitoisuutta, ja hintapistettä.',
+      content: `
+        <h2>Kolme Uuttotulosta, Kolme Erilaista Tuotetta</h2>
+        <p>"Full-spectrum," "broad-spectrum," ja "isolaatti" kuvaavat, kuinka paljon hamppukasvin alkuperäisestä kemiallisesta profiilista jää jäljelle uuton ja käsittelyn jälkeen. Eron ymmärtäminen on tärkeää sekä vaatimustenmukaisuuden että oikean tuotteen oikealle asiakkaalle sovittamisen kannalta.</p>
+
+        <h3>Full-Spectrum: Koko Kasvin Profiili</h3>
+        <p>Full-spectrum-uutteet säilyttävät kasvissa luonnostaan esiintyvien kannabinoidien koko kirjon — CBD:n, jäämä-THC:n (alle laillisen 0,3 %:n rajan), CBG:n, CBN:n, ja täyden terpeeniprofiilin. Monet asiakkaat suosivat full-spectrum-tuotteita "entourage-vaikutus" -teorian vuoksi — ajatuksen, että kannabinoidit ja terpeenit toimivat paremmin yhdessä kuin mikään yksittäinen yhdiste eristettynä. <a href="/collections/cbd-flowers">CBD-kukkamme</a> ja useimmat <a href="/collections/cbd-resins">hartsimme</a> ovat luonnostaan full-spectrum, koska ne ovat minimaalisesti käsiteltyä kasviainesta.</p>
+
+        <h3>Broad-Spectrum: Kaikki Paitsi THC</h3>
+        <p>Broad-spectrum-uutteet alkavat full-spectrum-muodossa, käyvät sitten läpi lisäprosessin THC:n poistamiseksi erityisesti säilyttäen muut kannabinoidit ja terpeenit. Tämä vetoaa asiakkaisiin, jotka haluavat monikannabinoidiprofiilin ilman minkäänlaista THC:tä — hyödyllinen kaikille, jotka ovat huolissaan huumetestauksesta tai toimivat markkinoilla, joilla on erityisen tiukat säännöt. 0 % THC -hartsi- ja öljyviitteemme kuuluvat tähän kategoriaan.</p>
+
+        <h3>Isolaatti: Puhdas CBD, Ei Muuta</h3>
+        <p>Isolaatti on CBD puhtaimmassa muodossaan — tyypillisesti 99 %+ puhdasta, kaikki muut kasviyhdisteet poistettuina. <a href="/products/isolat-99-cbd">99,8 % CBD-isolaattimme</a> kuuluu tähän kategoriaan: valkoinen kiteinen jauhe ilman havaittavaa THC:tä, terpeenejä, tai muita kannabinoideja. Se on suosituin pohja tarkkaan annosteluun, kosmeettisiin formulaatioihin, ja mihin tahansa tuotteeseen, jossa vaaditaan täysin neutraali, mauton, väritön ainesosa.</p>
+        <p><a href="/products/distillate-90-cbd">90 % CBD-tislaatemme</a> sijoittuu broad-spectrumin ja isolaatin väliin — erittäin puhdistettu mutta säilyttää hieman enemmän alkuperäistä kannabinoidien monimutkaisuutta kuin puhdas isolaatti.</p>
+
+        <h3>Mitä Sinun Tulisi Pitää Varastossa tai Käyttää?</h3>
+        <ul>
+          <li><strong>Full-spectrum:</strong> Paras asiakkaille, jotka haluavat täydellisen kasvikokemuksen eivätkä ole huolissaan jäämä-THC:stä.</li>
+          <li><strong>Broad-spectrum:</strong> Paras asiakkaille, jotka haluavat useita kannabinoideja mutta tarvitsevat taatun nollan THC:n.</li>
+          <li><strong>Isolaatti:</strong> Paras private label -valmistukseen, tarkkaan annosteluun, ja THC-herkille markkinoille.</li>
+        </ul>
+        <p>Jos muotoilet omaa tuotelinjaasi, <a href="/white-label-cbd-europe">private label CBD -sivumme</a> kattaa tukkuvaihtoehdot kaikissa kolmessa kategoriassa, laboratoriodokumentaatiolla kullekin.</p>
+        <p>Näiden termien alan standardin mukaisia teknisiä määritelmiä varten katso <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>, hamppusektorin yleiseurooppalainen kauppajärjestö.</p>
+      `,
+    },
+    pt: {
+      title: 'Full-Spectrum vs Broad-Spectrum vs Isolado CBD: Qual é a Diferença?',
+      excerpt: 'Estes três termos descrevem quanto do perfil original de canabinoides e terpenos da planta de cânhamo sobrevive à extração — e isso muda o efeito, o teor legal de THC, e o preço.',
+      content: `
+        <h2>Três Resultados de Extração, Três Produtos Diferentes</h2>
+        <p>"Full-spectrum," "broad-spectrum," e "isolado" descrevem quanto do perfil químico original da planta de cânhamo permanece após a extração e processamento. Compreender a diferença importa tanto para a conformidade como para associar o produto certo ao cliente certo.</p>
+
+        <h3>Full-Spectrum: O Perfil da Planta Inteira</h3>
+        <p>Os extratos full-spectrum retêm a gama completa de canabinoides naturalmente presentes na planta — CBD, vestígios de THC (abaixo do limite legal de 0,3%), CBG, CBN, e o perfil completo de terpenos. Muitos clientes preferem produtos full-spectrum devido à teoria do "efeito comitiva" — a ideia de que canabinoides e terpenos funcionam melhor juntos do que qualquer composto único isolado. As nossas <a href="/collections/cbd-flowers">flores CBD</a> e a maioria das <a href="/collections/cbd-resins">resinas</a> são naturalmente full-spectrum, uma vez que são material vegetal minimamente processado.</p>
+
+        <h3>Broad-Spectrum: Tudo Exceto o THC</h3>
+        <p>Os extratos broad-spectrum começam como full-spectrum, depois passam por um processo adicional para remover especificamente o THC enquanto retêm outros canabinoides e terpenos. Isto atrai clientes que querem o perfil multi-canabinoide sem qualquer THC — útil para qualquer pessoa preocupada com testes de drogas ou que opere num mercado com regras particularmente rígidas. As nossas referências de resina e óleo 0% THC enquadram-se nesta categoria.</p>
+
+        <h3>Isolado: CBD Puro, Nada Mais</h3>
+        <p>O isolado é o CBD na sua forma mais pura — tipicamente 99%+ puro, com todos os outros compostos vegetais removidos. O nosso <a href="/products/isolat-99-cbd">Isolado CBD 99,8%</a> é desta categoria: um pó cristalino branco sem THC, terpenos, ou outros canabinoides detetáveis. É a base preferida para dosagem precisa, formulações cosméticas, e qualquer produto onde é necessário um ingrediente completamente neutro, sem sabor, incolor.</p>
+        <p>O nosso <a href="/products/distillate-90-cbd">Destilado CBD 90%</a> situa-se entre broad-spectrum e isolado — altamente refinado mas retendo ligeiramente mais da complexidade original de canabinoides do que o isolado puro.</p>
+
+        <h3>Qual Deveria Ter em Stock ou Usar?</h3>
+        <ul>
+          <li><strong>Full-spectrum:</strong> Melhor para clientes que querem a experiência completa da planta e não estão preocupados com vestígios de THC.</li>
+          <li><strong>Broad-spectrum:</strong> Melhor para clientes que querem múltiplos canabinoides mas precisam de THC garantidamente zero.</li>
+          <li><strong>Isolado:</strong> Melhor para fabrico de marca branca, dosagem precisa, e mercados sensíveis ao THC.</li>
+        </ul>
+        <p>Se está a formular a sua própria linha de produtos, a nossa <a href="/white-label-cbd-europe">página de CBD de marca branca</a> cobre opções por grosso nas três categorias, com documentação laboratorial para cada uma.</p>
+        <p>Para as definições técnicas padrão do setor destes termos, veja a <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">Associação Europeia de Cânhamo Industrial (EIHA)</a>, o organismo comercial pan-europeu para o setor do cânhamo.</p>
+      `,
+    },
+  },
+  'how-is-cbd-extracted-co2-vs-ethanol': {
+    fr: {
+      title: 'Comment le CBD Est-il Extrait ? Extraction CO2 vs Éthanol Expliquée',
+      excerpt: "La méthode d'extraction utilisée pour extraire le CBD du chanvre brut affecte la pureté, le coût, et le profil du produit final. Voici comment l'extraction CO2 et éthanol se comparent réellement.",
+      content: `
+        <h2>De la Plante au Produit : Comment Fonctionne Réellement l'Extraction</h2>
+        <p>Avant que le CBD n'atteigne une bouteille d'huile ou un distillat, il doit être séparé du matériel végétal brut. Les deux méthodes dominantes en production commerciale sont l'extraction CO2 et l'extraction éthanol — chacune avec un coût, une pureté, et un profil d'équipement différents.</p>
+
+        <h3>Extraction CO2</h3>
+        <p>L'extraction au CO2 supercritique utilise du dioxyde de carbone sous haute pression et température contrôlée, dans un état entre liquide et gaz, pour extraire les cannabinoïdes et terpènes du matériel végétal. Cette méthode est prisée pour sa précision — les opérateurs peuvent affiner la pression et la température pour extraire sélectivement des composés spécifiques — et elle ne laisse aucun solvant résiduel dans le produit final, puisque le CO2 retourne simplement à l'état gazeux à pression normale.</p>
+        <p>Le compromis est le coût : l'extraction CO2 nécessite un équipement spécialisé coûteux, la rendant mieux adaptée aux productions à grande échelle et à haute valeur.</p>
+
+        <h3>Extraction Éthanol</h3>
+        <p>L'extraction éthanol trempe le matériel végétal dans de l'éthanol de qualité alimentaire, qui dissout les cannabinoïdes et terpènes de la matière végétale. L'éthanol est ensuite évaporé, laissant un extrait concentré. Cette méthode est plus rapide et moins capitalistique que l'extraction CO2, la rendant populaire auprès des producteurs de taille moyenne, mais elle peut aussi extraire plus de chlorophylle végétale et d'autres composés indésirables dans l'extrait si elle n'est pas soigneusement contrôlée, nécessitant des étapes de filtration supplémentaires.</p>
+
+        <h3>Ce Que Cela Signifie pour les Produits que Vous Achetez</h3>
+        <p>Les deux méthodes, correctement réalisées, produisent un extrait propre et conforme — la méthode elle-même n'est pas un indicateur fiable de qualité à elle seule. Ce qui compte, c'est ce qui se passe après l'extraction : l'hivernisation pour retirer les cires et lipides, et les tests de laboratoire indépendants pour confirmer la teneur en cannabinoïdes et l'absence de résidus de solvant. Chaque lot derrière notre <a href="/products/distillate-90-cbd">distillat CBD 90 %</a> et notre <a href="/products/isolat-99-cbd">isolat CBD 99,8 %</a> passe par ce processus complet, vérifié par un certificat d'analyse.</p>
+        <p>Consultez notre <a href="/quality-and-testing">page des standards de qualité et tests</a> pour la décomposition complète de la façon dont chaque produit — quelle que soit la méthode d'extraction — est vérifié avant d'être mis en vente.</p>
+
+        <h3>Pour les Marques Formulant Leurs Propres Produits</h3>
+        <p>Si vous construisez une gamme marque blanche et décidez entre distillat et isolat comme base, la méthode d'extraction et le niveau de raffinement affectent directement la neutralité de saveur, la solubilité, et le coût. Notre <a href="/white-label-cbd-europe">guide CBD marque blanche</a> détaille quel matériau de base convient à quel format de produit.</p>
+        <p>Pour les standards techniques auxquels travaille l'industrie européenne du chanvre, consultez l'<a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">Association Européenne du Chanvre Industriel (EIHA)</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Wie Wird CBD Extrahiert? CO2- vs Ethanol-Extraktion Erklärt',
+      excerpt: 'Die Extraktionsmethode, mit der CBD aus rohem Hanf gewonnen wird, beeinflusst Reinheit, Kosten, und das Profil des Endprodukts. Hier ist, wie sich CO2- und Ethanol-Extraktion tatsächlich vergleichen.',
+      content: `
+        <h2>Von der Pflanze zum Produkt: Wie Extraktion Tatsächlich Funktioniert</h2>
+        <p>Bevor CBD eine Ölflasche oder ein Destillat erreicht, muss es vom rohen Pflanzenmaterial getrennt werden. Die zwei dominierenden Methoden in der kommerziellen Produktion sind CO2-Extraktion und Ethanol-Extraktion — jede mit unterschiedlichen Kosten, Reinheit, und Ausrüstungsprofil.</p>
+
+        <h3>CO2-Extraktion</h3>
+        <p>Überkritische CO2-Extraktion verwendet Kohlendioxid unter hohem Druck und kontrollierter Temperatur, in einem Zustand zwischen flüssig und gasförmig, um Cannabinoide und Terpene aus dem Pflanzenmaterial zu extrahieren. Diese Methode wird für ihre Präzision geschätzt — Betreiber können Druck und Temperatur feinabstimmen, um selektiv bestimmte Verbindungen zu extrahieren — und sie hinterlässt kein Restlösungsmittel im Endprodukt, da CO2 bei normalem Druck einfach zu Gas zurückkehrt.</p>
+        <p>Der Kompromiss sind die Kosten: CO2-Extraktion erfordert teure Spezialausrüstung, was sie besser für großangelegte, hochwertige Produktionsläufe geeignet macht.</p>
+
+        <h3>Ethanol-Extraktion</h3>
+        <p>Bei der Ethanol-Extraktion wird das Pflanzenmaterial in Ethanol in Lebensmittelqualität eingeweicht, das Cannabinoide und Terpene aus dem Pflanzenmaterial löst. Das Ethanol wird dann verdampft, wobei ein konzentrierter Extrakt zurückbleibt. Diese Methode ist schneller und weniger kapitalintensiv als CO2-Extraktion, was sie bei mittelgroßen Produzenten beliebt macht, kann aber auch mehr pflanzliches Chlorophyll und andere unerwünschte Verbindungen in den Extrakt ziehen, wenn sie nicht sorgfältig kontrolliert wird, was zusätzliche Filtrationsschritte erfordert.</p>
+
+        <h3>Was Das für die Produkte Bedeutet, die Sie Kaufen</h3>
+        <p>Beide Methoden produzieren, ordnungsgemäß durchgeführt, sauberen, konformen Extrakt — die Methode selbst ist allein kein zuverlässiger Qualitätsindikator. Was zählt, ist, was nach der Extraktion passiert: Winterisierung zur Entfernung von Wachsen und Lipiden, und unabhängige Labortests zur Bestätigung des Cannabinoidgehalts und der Abwesenheit von Lösungsmittelrückständen. Jede Charge hinter unserem <a href="/products/distillate-90-cbd">90 % CBD-Destillat</a> und <a href="/products/isolat-99-cbd">99,8 % CBD-Isolat</a> durchläuft diesen vollständigen Prozess, verifiziert durch ein Analysezertifikat.</p>
+        <p>Siehe unsere <a href="/quality-and-testing">Qualitäts- und Teststandards-Seite</a> für die vollständige Aufschlüsselung, wie jedes Produkt — unabhängig von der Extraktionsmethode — verifiziert wird, bevor es zum Verkauf gelistet wird.</p>
+
+        <h3>Für Marken, die Ihre Eigenen Produkte Formulieren</h3>
+        <p>Wenn Sie eine White-Label-Linie aufbauen und zwischen Destillat und Isolat als Basis entscheiden, beeinflussen Extraktionsmethode und Raffinierungsgrad direkt Geschmacksneutralität, Löslichkeit, und Kosten. Unser <a href="/white-label-cbd-europe">White-Label-CBD-Leitfaden</a> führt durch, welches Basismaterial zu welchem Produktformat passt.</p>
+        <p>Für die technischen Standards, an denen die europäische Hanfindustrie arbeitet, siehe die <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>.</p>
+      `,
+    },
+    es: {
+      title: '¿Cómo se Extrae el CBD? Extracción con CO2 vs Etanol Explicada',
+      excerpt: 'El método de extracción utilizado para extraer CBD del cáñamo crudo afecta la pureza, el coste, y el perfil del producto final. Así es como se comparan realmente la extracción con CO2 y etanol.',
+      content: `
+        <h2>De la Planta al Producto: Cómo Funciona Realmente la Extracción</h2>
+        <p>Antes de que el CBD llegue a una botella de aceite o un destilado, debe separarse del material vegetal crudo. Los dos métodos dominantes en la producción comercial son la extracción con CO2 y la extracción con etanol — cada uno con un coste, pureza, y perfil de equipo diferentes.</p>
+
+        <h3>Extracción con CO2</h3>
+        <p>La extracción con CO2 supercrítico usa dióxido de carbono bajo alta presión y temperatura controlada, en un estado entre líquido y gas, para extraer cannabinoides y terpenos del material vegetal. Este método es apreciado por su precisión — los operadores pueden ajustar finamente la presión y temperatura para extraer selectivamente compuestos específicos — y no deja solvente residual en el producto final, ya que el CO2 simplemente vuelve a forma gaseosa a presión normal.</p>
+        <p>La contrapartida es el coste: la extracción con CO2 requiere equipo especializado costoso, haciéndola más adecuada para producciones a gran escala y de alto valor.</p>
+
+        <h3>Extracción con Etanol</h3>
+        <p>La extracción con etanol empapa el material vegetal en etanol de grado alimenticio, que disuelve los cannabinoides y terpenos de la materia vegetal. El etanol se evapora entonces, dejando atrás un extracto concentrado. Este método es más rápido y menos intensivo en capital que la extracción con CO2, haciéndolo popular entre productores de tamaño mediano, pero también puede extraer más clorofila vegetal y otros compuestos no deseados en el extracto si no se controla cuidadosamente, requiriendo pasos de filtración adicionales.</p>
+
+        <h3>Lo Que Esto Significa para los Productos que Compras</h3>
+        <p>Ambos métodos, hechos correctamente, producen extracto limpio y conforme — el método en sí no es un indicador confiable de calidad por sí solo. Lo que importa es qué sucede después de la extracción: la invernación para eliminar ceras y lípidos, y pruebas de laboratorio independientes para confirmar el contenido de cannabinoides y la ausencia de residuos de solventes. Cada lote detrás de nuestro <a href="/products/distillate-90-cbd">destilado CBD 90%</a> y <a href="/products/isolat-99-cbd">aislado CBD 99,8%</a> pasa por este proceso completo, verificado por un certificado de análisis.</p>
+        <p>Consulta nuestra <a href="/quality-and-testing">página de estándares de calidad y pruebas</a> para el desglose completo de cómo se verifica cada producto — independientemente del método de extracción — antes de ser listado para la venta.</p>
+
+        <h3>Para Marcas que Formulan Sus Propios Productos</h3>
+        <p>Si estás construyendo una línea de marca blanca y decidiendo entre destilado y aislado como base, el método de extracción y el nivel de refinamiento afectan directamente la neutralidad de sabor, solubilidad, y coste. Nuestra <a href="/white-label-cbd-europe">guía de CBD de marca blanca</a> explica qué material base se adapta a qué formato de producto.</p>
+        <p>Para los estándares técnicos con los que trabaja la industria europea del cáñamo, consulta la <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">Asociación Europea de Cáñamo Industrial (EIHA)</a>.</p>
+      `,
+    },
+    it: {
+      title: 'Come Viene Estratto il CBD? Estrazione CO2 vs Etanolo Spiegata',
+      excerpt: "Il metodo di estrazione utilizzato per estrarre il CBD dalla canapa grezza influisce sulla purezza, sul costo, e sul profilo del prodotto finale. Ecco come si confrontano realmente l'estrazione con CO2 ed etanolo.",
+      content: `
+        <h2>Dalla Pianta al Prodotto: Come Funziona Realmente l'Estrazione</h2>
+        <p>Prima che il CBD raggiunga una bottiglia di olio o un distillato, deve essere separato dal materiale vegetale grezzo. I due metodi dominanti nella produzione commerciale sono l'estrazione con CO2 e l'estrazione con etanolo — ciascuno con un costo, purezza, e profilo di attrezzatura diversi.</p>
+
+        <h3>Estrazione con CO2</h3>
+        <p>L'estrazione con CO2 supercritica utilizza anidride carbonica ad alta pressione e temperatura controllata, in uno stato tra liquido e gas, per estrarre cannabinoidi e terpeni dal materiale vegetale. Questo metodo è apprezzato per la sua precisione — gli operatori possono regolare finemente pressione e temperatura per estrarre selettivamente composti specifici — e non lascia solvente residuo nel prodotto finale, poiché la CO2 ritorna semplicemente allo stato gassoso a pressione normale.</p>
+        <p>Il compromesso è il costo: l'estrazione con CO2 richiede attrezzature specializzate costose, rendendola più adatta a produzioni su larga scala e ad alto valore.</p>
+
+        <h3>Estrazione con Etanolo</h3>
+        <p>L'estrazione con etanolo immerge il materiale vegetale in etanolo di grado alimentare, che dissolve i cannabinoidi e i terpeni dalla materia vegetale. L'etanolo viene quindi evaporato, lasciando un estratto concentrato. Questo metodo è più veloce e meno capital-intensivo dell'estrazione con CO2, rendendolo popolare tra i produttori di medie dimensioni, ma può anche estrarre più clorofilla vegetale e altri composti indesiderati nell'estratto se non controllato attentamente, richiedendo ulteriori passaggi di filtrazione.</p>
+
+        <h3>Cosa Significa Questo per i Prodotti che Acquisti</h3>
+        <p>Entrambi i metodi, se eseguiti correttamente, producono estratto pulito e conforme — il metodo stesso non è un indicatore affidabile di qualità da solo. Ciò che conta è cosa succede dopo l'estrazione: l'invernizzazione per rimuovere cere e lipidi, e test di laboratorio indipendenti per confermare il contenuto di cannabinoidi e l'assenza di residui di solventi. Ogni lotto dietro il nostro <a href="/products/distillate-90-cbd">distillato CBD 90%</a> e <a href="/products/isolat-99-cbd">isolato CBD 99,8%</a> passa attraverso questo processo completo, verificato da un certificato di analisi.</p>
+        <p>Vedi la nostra <a href="/quality-and-testing">pagina degli standard di qualità e test</a> per la ripartizione completa di come ogni prodotto — indipendentemente dal metodo di estrazione — viene verificato prima di essere elencato per la vendita.</p>
+
+        <h3>Per i Marchi che Formulano i Propri Prodotti</h3>
+        <p>Se stai costruendo una linea white label e decidendo tra distillato e isolato come base, il metodo di estrazione e il livello di raffinazione influenzano direttamente la neutralità del sapore, la solubilità, e il costo. La nostra <a href="/white-label-cbd-europe">guida CBD white label</a> illustra quale materiale di base si adatta a quale formato di prodotto.</p>
+        <p>Per gli standard tecnici a cui lavora l'industria europea della canapa, vedi l'<a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Hoe Wordt CBD Geëxtraheerd? CO2 vs Ethanol Extractie Uitgelegd',
+      excerpt: 'De extractiemethode die wordt gebruikt om CBD uit ruwe hennep te halen, beïnvloedt zuiverheid, kosten, en het profiel van het eindproduct. Zo vergelijken CO2- en ethanolextractie zich werkelijk.',
+      content: `
+        <h2>Van Plant naar Product: Hoe Extractie Werkelijk Werkt</h2>
+        <p>Voordat CBD een oliefles of een destillaat bereikt, moet het worden gescheiden van het ruwe plantmateriaal. De twee dominante methoden in commerciële productie zijn CO2-extractie en ethanolextractie — elk met een ander kosten-, zuiverheids-, en apparatuurprofiel.</p>
+
+        <h3>CO2-Extractie</h3>
+        <p>Superkritische CO2-extractie gebruikt kooldioxide onder hoge druk en gecontroleerde temperatuur, in een staat tussen vloeistof en gas, om cannabinoïden en terpenen uit het plantmateriaal te halen. Deze methode wordt geprezen om zijn precisie — operators kunnen druk en temperatuur fijn afstemmen om selectief specifieke verbindingen te extraheren — en het laat geen resterend oplosmiddel achter in het eindproduct, aangezien CO2 bij normale druk gewoon terugkeert naar gasvorm.</p>
+        <p>De afweging is kosten: CO2-extractie vereist dure gespecialiseerde apparatuur, waardoor het beter geschikt is voor grootschalige, hoogwaardige productieruns.</p>
+
+        <h3>Ethanolextractie</h3>
+        <p>Ethanolextractie weekt het plantmateriaal in ethanol van voedselkwaliteit, dat cannabinoïden en terpenen uit het plantmateriaal oplost. De ethanol wordt vervolgens verdampt, waarbij een geconcentreerd extract achterblijft. Deze methode is sneller en minder kapitaalintensief dan CO2-extractie, waardoor het populair is bij middelgrote producenten, maar het kan ook meer plantchlorofyl en andere ongewenste verbindingen in het extract trekken als het niet zorgvuldig wordt gecontroleerd, wat extra filtratiestappen vereist.</p>
+
+        <h3>Wat Dit Betekent voor de Producten die U Koopt</h3>
+        <p>Beide methoden produceren, correct uitgevoerd, schoon, conform extract — de methode zelf is op zichzelf geen betrouwbare indicator van kwaliteit. Wat telt is wat er gebeurt na extractie: winterisatie om wassen en lipiden te verwijderen, en onafhankelijke labtests om cannabinoïde-inhoud en de afwezigheid van oplosmiddelresidu te bevestigen. Elke batch achter ons <a href="/products/distillate-90-cbd">90% CBD-destillaat</a> en <a href="/products/isolat-99-cbd">99,8% CBD-isolaat</a> doorloopt dit volledige proces, geverifieerd door een certificaat van analyse.</p>
+        <p>Zie onze <a href="/quality-and-testing">kwaliteits- en teststandaarden-pagina</a> voor de volledige uitsplitsing van hoe elk product — ongeacht de extractiemethode — wordt geverifieerd voordat het te koop wordt aangeboden.</p>
+
+        <h3>Voor Merken die Hun Eigen Producten Formuleren</h3>
+        <p>Als u een white-label lijn bouwt en beslist tussen destillaat en isolaat als basis, beïnvloeden extractiemethode en verfijningsniveau rechtstreeks smaakneutraliteit, oplosbaarheid, en kosten. Onze <a href="/white-label-cbd-europe">white label CBD-gids</a> loopt door welk basismateriaal bij welk productformaat past.</p>
+        <p>Voor de technische normen waaraan de Europese hennepindustrie werkt, zie de <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Kuinka CBD Uutetaan? CO2- vs Etanoliuutto Selitettynä',
+      excerpt: 'Uuttomenetelmä, jota käytetään CBD:n irrottamiseen raa\'asta hampusta, vaikuttaa puhtauteen, kustannuksiin, ja lopputuotteen profiiliin. Tässä on kuinka CO2- ja etanoliuutto todella vertautuvat.',
+      content: `
+        <h2>Kasvista Tuotteeksi: Kuinka Uutto Todella Toimii</h2>
+        <p>Ennen kuin CBD saavuttaa öljypullon tai tislaatteen, se on erotettava raa\'asta kasviaineksesta. Kaksi hallitsevaa menetelmää kaupallisessa tuotannossa ovat CO2-uutto ja etanoliuutto — kummallakin on erilainen kustannus, puhtaus, ja laitteistoprofiili.</p>
+
+        <h3>CO2-Uutto</h3>
+        <p>Ylikriittinen CO2-uutto käyttää hiilidioksidia korkeassa paineessa ja säädellyssä lämpötilassa, tilassa nesteen ja kaasun välillä, kannabinoidien ja terpeenien irrottamiseksi kasviaineksesta. Tätä menetelmää arvostetaan sen tarkkuudesta — operaattorit voivat hienosäätää painetta ja lämpötilaa tiettyjen yhdisteiden valikoivaan uuttamiseen — eikä se jätä jäännösliuotinta lopputuotteeseen, koska CO2 palaa yksinkertaisesti kaasumuotoon normaalipaineessa.</p>
+        <p>Kompromissi on kustannus: CO2-uutto vaatii kalliita erikoislaitteita, mikä tekee siitä paremmin soveltuvan suuren mittakaavan, korkean arvon tuotantoerille.</p>
+
+        <h3>Etanoliuutto</h3>
+        <p>Etanoliuutossa kasviaines liotetaan elintarvikelaatuisessa etanolissa, joka liuottaa kannabinoideja ja terpeenejä kasviaineksesta. Etanoli haihdutetaan sitten pois, jättäen jäljelle konsentroituneen uutteen. Tämä menetelmä on nopeampi ja vähemmän pääomaintensiivinen kuin CO2-uutto, mikä tekee siitä suositun keskikokoisten tuottajien keskuudessa, mutta se voi myös vetää enemmän kasvin klorofylliä ja muita ei-toivottuja yhdisteitä uutteeseen, jos sitä ei valvota huolellisesti, mikä vaatii lisää suodatusvaiheita.</p>
+
+        <h3>Mitä Tämä Tarkoittaa Ostamillesi Tuotteille</h3>
+        <p>Molemmat menetelmät, oikein tehtynä, tuottavat puhdasta, vaatimustenmukaista uutetta — menetelmä itsessään ei ole yksinään luotettava laadun indikaattori. Tärkeää on se, mitä tapahtuu uuton jälkeen: talvistus vahojen ja lipidien poistamiseksi, ja riippumaton laboratoriotestaus kannabinoidipitoisuuden ja liuotinjäämien puuttumisen vahvistamiseksi. Jokainen erä <a href="/products/distillate-90-cbd">90 % CBD-tislaatemme</a> ja <a href="/products/isolat-99-cbd">99,8 % CBD-isolaattimme</a> takana käy läpi tämän täyden prosessin, vahvistettuna analyysitodistuksella.</p>
+        <p>Katso <a href="/quality-and-testing">laatu- ja testausstandardisivumme</a> saadaksesi täyden erittelyn siitä, kuinka jokainen tuote — riippumatta uuttomenetelmästä — vahvistetaan ennen kuin se listataan myyntiin.</p>
+
+        <h3>Brändeille, Jotka Muotoilevat Omia Tuotteitaan</h3>
+        <p>Jos rakennat private label -linjaa ja päätät tislaatteen ja isolaatin välillä pohjana, uuttomenetelmä ja jalostustaso vaikuttavat suoraan makuneutraaliuteen, liukoisuuteen, ja kustannuksiin. <a href="/white-label-cbd-europe">Private label CBD -oppaamme</a> käy läpi, mikä pohjamateriaali sopii mihinkin tuotemuotoon.</p>
+        <p>Teknisiä standardeja varten, joiden parissa Euroopan hampputeollisuus työskentelee, katso <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Como o CBD é Extraído? Extração CO2 vs Etanol Explicada',
+      excerpt: 'O método de extração usado para extrair CBD do cânhamo bruto afeta a pureza, o custo, e o perfil do produto final. Aqui está como a extração com CO2 e etanol realmente se comparam.',
+      content: `
+        <h2>Da Planta ao Produto: Como a Extração Realmente Funciona</h2>
+        <p>Antes de o CBD chegar a uma garrafa de óleo ou um destilado, tem de ser separado do material vegetal bruto. Os dois métodos dominantes na produção comercial são a extração com CO2 e a extração com etanol — cada um com um custo, pureza, e perfil de equipamento diferentes.</p>
+
+        <h3>Extração com CO2</h3>
+        <p>A extração com CO2 supercrítico usa dióxido de carbono sob alta pressão e temperatura controlada, num estado entre líquido e gás, para extrair canabinoides e terpenos do material vegetal. Este método é apreciado pela sua precisão — os operadores podem ajustar a pressão e temperatura para extrair seletivamente compostos específicos — e não deixa solvente residual no produto final, já que o CO2 simplesmente retorna à forma gasosa em pressão normal.</p>
+        <p>O compromisso é o custo: a extração com CO2 requer equipamento especializado caro, tornando-a mais adequada para produções em larga escala e de alto valor.</p>
+
+        <h3>Extração com Etanol</h3>
+        <p>A extração com etanol embebe o material vegetal em etanol de grau alimentar, que dissolve canabinoides e terpenos da matéria vegetal. O etanol é então evaporado, deixando um extrato concentrado. Este método é mais rápido e menos intensivo em capital do que a extração com CO2, tornando-o popular entre produtores de média dimensão, mas também pode extrair mais clorofila vegetal e outros compostos indesejados para o extrato se não for cuidadosamente controlado, exigindo passos de filtração adicionais.</p>
+
+        <h3>O que Isto Significa para os Produtos que Compra</h3>
+        <p>Ambos os métodos, feitos corretamente, produzem extrato limpo e conforme — o método em si não é um indicador fiável de qualidade por si só. O que importa é o que acontece após a extração: a hibernação para remover ceras e lípidos, e testes laboratoriais independentes para confirmar o teor de canabinoides e a ausência de resíduos de solventes. Cada lote por trás do nosso <a href="/products/distillate-90-cbd">destilado CBD 90%</a> e <a href="/products/isolat-99-cbd">isolado CBD 99,8%</a> passa por este processo completo, verificado por um certificado de análise.</p>
+        <p>Veja a nossa <a href="/quality-and-testing">página de padrões de qualidade e testes</a> para o detalhamento completo de como cada produto — independentemente do método de extração — é verificado antes de ser listado para venda.</p>
+
+        <h3>Para Marcas que Formulam os Seus Próprios Produtos</h3>
+        <p>Se está a construir uma linha de marca branca e a decidir entre destilado e isolado como base, o método de extração e o nível de refinamento afetam diretamente a neutralidade de sabor, solubilidade, e custo. O nosso <a href="/white-label-cbd-europe">guia de CBD de marca branca</a> percorre qual material base se adequa a qual formato de produto.</p>
+        <p>Para os padrões técnicos com que a indústria europeia do cânhamo trabalha, veja a <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">Associação Europeia de Cânhamo Industrial (EIHA)</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
