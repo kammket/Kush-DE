@@ -2642,6 +2642,360 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'cbd-dosage-guide-how-much-to-take': {
+    fr: {
+      title: 'Guide de Dosage CBD : Combien d\'Huile CBD Devriez-vous Prendre ?',
+      excerpt: "Il n'y a pas de dose CBD unique et correcte — cela dépend de la concentration, du poids corporel, et de l'usage prévu. Voici un cadre pratique pour aider les clients à trouver leur point de départ.",
+      content: `
+        <h2>Pourquoi Il N'y a Pas de Dose CBD Universelle</h2>
+        <p>Contrairement aux médicaments avec un dosage standardisé, le dosage du CBD varie selon l'individu, la concentration du produit, et l'usage prévu. C'est l'une des questions les plus courantes que reçoivent les détaillants, et la réponse honnête est "ça dépend" — mais cela ne signifie pas qu'il n'existe pas de cadre utile pour guider les acheteurs débutants.</p>
+
+        <h3>Commencer Bas, Aller Lentement</h3>
+        <p>L'approche la plus largement recommandée, reprise dans les directives des consommateurs et des régulateurs, est de commencer avec une dose faible et d'augmenter progressivement sur des jours ou des semaines jusqu'à atteindre l'effet désiré. Pour l'<a href="/collections/cbd-oils">huile CBD</a>, cela signifie généralement commencer avec quelques gouttes d'une concentration plus faible (5 % ou 10 %) plutôt que de passer directement à un produit à 20 %.</p>
+
+        <h3>Un Cadre de Démarrage Pratique</h3>
+        <ul>
+          <li><strong>Utilisateurs débutants :</strong> Commencez avec une huile à 5-10 %, quelques gouttes (environ 5-10mg de CBD) une fois par jour.</li>
+          <li><strong>Utilisateurs réguliers recherchant un effet plus fort :</strong> Huile 10-20 %, en augmentant progressivement la dose selon la réponse.</li>
+          <li><strong>Clients axés sur le sommeil :</strong> Considérez nos <a href="/cbn-sleep-products">produits combinant CBN et mélatonine</a>, formulés spécifiquement pour un usage nocturne plutôt qu'un dosage diurne général.</li>
+          <li><strong>Acheteurs en gros formulant leurs propres produits :</strong> Nos <a href="/white-label-cbd-europe">huiles en gros marque blanche</a> vous permettent de contrôler précisément la concentration à travers votre propre gamme de produits.</li>
+        </ul>
+
+        <h3>La Concentration Compte Plus Que Les Gens Ne Le Réalisent</h3>
+        <p>Une erreur courante est de supposer que "plus de gouttes = plus d'effet" sans tenir compte de la concentration. Deux gouttes d'une huile à 20 % délivrent environ le double de CBD que deux gouttes d'une huile à 10 %. Notre <a href="/blog/cbd-oil-wholesale-buying-guide">guide d'achat d'huile CBD</a> décompose exactement comment lire les étiquettes de concentration et calculer le mg par goutte pour les conseils en vente au détail.</p>
+
+        <h3>Échantillonnez Avant de Recommander à Grande Échelle</h3>
+        <p>Si vous conseillez des clients ou stockez une nouvelle concentration, il vaut la peine de tester le produit vous-même d'abord. Nos <a href="/cbd-sample-packs">packs d'échantillons</a> vous permettent, à vous et votre personnel, d'essayer différentes concentrations avant de vous engager dans une commande complète en gros — véritablement utile quand vous devez parler avec confiance aux clients du dosage.</p>
+        <p>Pour la revue indépendante la plus rigoureuse disponible sur le dosage et les données de sécurité du CBD, consultez le <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Rapport de Revue Critique du Cannabidiol de l'Organisation Mondiale de la Santé</a>.</p>
+      `,
+    },
+    de: {
+      title: 'CBD-Dosierungsleitfaden: Wie Viel CBD-Öl Sollten Sie Einnehmen?',
+      excerpt: 'Es gibt keine einzige korrekte CBD-Dosis — sie hängt von Konzentration, Körpergewicht, und Verwendungszweck ab. Hier ist ein praktisches Rahmenwerk, um Kunden zu helfen, ihren Ausgangspunkt zu finden.',
+      content: `
+        <h2>Warum Es Keine Universelle CBD-Dosis Gibt</h2>
+        <p>Anders als bei Medikamenten mit standardisierter Dosierung variiert die CBD-Dosierung je nach Individuum, Produktkonzentration, und beabsichtigter Verwendung. Dies ist eine der häufigsten Fragen, die Händler erhalten, und die ehrliche Antwort ist "es kommt darauf an" — aber das bedeutet nicht, dass es kein nützliches Rahmenwerk gibt, um Erstkäufer zu leiten.</p>
+
+        <h3>Niedrig Anfangen, Langsam Vorgehen</h3>
+        <p>Der am weitesten empfohlene Ansatz, der sowohl in Verbraucher- als auch regulatorischen Leitlinien wiederholt wird, ist mit einer niedrigen Dosis zu beginnen und über Tage oder Wochen schrittweise zu erhöhen, bis die gewünschte Wirkung erreicht ist. Bei <a href="/collections/cbd-oils">CBD-Öl</a> bedeutet das typischerweise, mit wenigen Tropfen einer niedrigeren Konzentration (5 % oder 10 %) zu beginnen, anstatt direkt zu einem 20 %-Produkt zu springen.</p>
+
+        <h3>Ein Praktisches Startrahmenwerk</h3>
+        <ul>
+          <li><strong>Erstnutzer:</strong> Beginnen Sie mit einem 5-10 %-Öl, wenigen Tropfen (etwa 5-10mg CBD) einmal täglich.</li>
+          <li><strong>Regelmäßige Nutzer, die eine stärkere Wirkung suchen:</strong> 10-20 %-Öl, die Dosis schrittweise basierend auf der Reaktion erhöhen.</li>
+          <li><strong>Schlaffokussierte Kunden:</strong> Erwägen Sie unsere <a href="/cbn-sleep-products">CBN- und Melatonin-Kombinationsprodukte</a>, die speziell für die abendliche Verwendung statt für allgemeine Tagesdosierung formuliert sind.</li>
+          <li><strong>Großabnehmer, die eigene Produkte formulieren:</strong> Unsere <a href="/white-label-cbd-europe">White-Label-Großhandelsöle</a> lassen Sie die Konzentration in Ihrer eigenen Produktlinie präzise kontrollieren.</li>
+        </ul>
+
+        <h3>Konzentration Ist Wichtiger, Als die Leute Denken</h3>
+        <p>Ein häufiger Fehler ist anzunehmen, dass "mehr Tropfen = mehr Wirkung" bedeutet, ohne die Konzentration zu berücksichtigen. Zwei Tropfen eines 20 %-Öls liefern etwa doppelt so viel CBD wie zwei Tropfen eines 10 %-Öls. Unser <a href="/blog/cbd-oil-wholesale-buying-guide">CBD-Öl-Kaufleitfaden</a> schlüsselt genau auf, wie man Konzentrationsetiketten liest und mg pro Tropfen für Einzelhandelsberatung berechnet.</p>
+
+        <h3>Probieren Sie Vor Der Empfehlung im Großen Maßstab</h3>
+        <p>Wenn Sie Kunden beraten oder eine neue Konzentration vorrätig haben, lohnt es sich, das Produkt zunächst selbst zu testen. Unsere <a href="/cbd-sample-packs">Probierpakete</a> ermöglichen Ihnen und Ihrem Personal, verschiedene Konzentrationen auszuprobieren, bevor Sie sich zu einer vollständigen Großhandelsbestellung verpflichten — wirklich nützlich, wenn Sie Kunden gegenüber selbstbewusst über Dosierung sprechen müssen.</p>
+        <p>Für die rigoroseste unabhängige Überprüfung der verfügbaren CBD-Dosierungs- und Sicherheitsdaten siehe den <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">WHO-Bericht zur kritischen Überprüfung von Cannabidiol</a>.</p>
+      `,
+    },
+    es: {
+      title: 'Guía de Dosificación de CBD: ¿Cuánto Aceite CBD Deberías Tomar?',
+      excerpt: 'No hay una única dosis correcta de CBD — depende de la concentración, el peso corporal, y para qué lo estás usando. Aquí hay un marco práctico para ayudar a los clientes a encontrar su punto de partida.',
+      content: `
+        <h2>Por Qué No Hay Una Dosis Universal de CBD</h2>
+        <p>A diferencia de los medicamentos con dosificación estandarizada, la dosificación del CBD varía según el individuo, la concentración del producto, y el uso previsto. Esta es una de las preguntas más comunes que reciben los minoristas, y la respuesta honesta es "depende" — pero eso no significa que no exista un marco útil para guiar a los compradores primerizos.</p>
+
+        <h3>Empieza Bajo, Ve Despacio</h3>
+        <p>El enfoque más ampliamente recomendado, repetido en las directrices tanto de consumidores como reguladoras, es comenzar con una dosis baja e incrementar gradualmente durante días o semanas hasta alcanzar el efecto deseado. Para el <a href="/collections/cbd-oils">aceite CBD</a>, esto típicamente significa comenzar con unas pocas gotas de una concentración menor (5% o 10%) en lugar de saltar directamente a un producto del 20%.</p>
+
+        <h3>Un Marco de Inicio Práctico</h3>
+        <ul>
+          <li><strong>Usuarios primerizos:</strong> Comienza con un aceite del 5-10%, unas pocas gotas (aproximadamente 5-10mg CBD) una vez al día.</li>
+          <li><strong>Usuarios regulares buscando un efecto más fuerte:</strong> Aceite del 10-20%, aumentando la dosis gradualmente según la respuesta.</li>
+          <li><strong>Clientes enfocados en el sueño:</strong> Considera nuestros <a href="/cbn-sleep-products">productos combinados de CBN y melatonina</a>, formulados específicamente para uso nocturno en lugar de dosificación diurna general.</li>
+          <li><strong>Compradores mayoristas formulando sus propios productos:</strong> Nuestros <a href="/white-label-cbd-europe">aceites mayoristas de marca blanca</a> te permiten controlar la concentración con precisión en toda tu propia línea de productos.</li>
+        </ul>
+
+        <h3>La Concentración Importa Más de lo que la Gente se Da Cuenta</h3>
+        <p>Un error común es asumir que "más gotas = más efecto" sin tener en cuenta la concentración. Dos gotas de un aceite del 20% entregan aproximadamente el doble de CBD que dos gotas de un aceite del 10%. Nuestra <a href="/blog/cbd-oil-wholesale-buying-guide">guía de compra de aceite CBD</a> desglosa exactamente cómo leer las etiquetas de concentración y calcular mg por gota para asesoramiento minorista.</p>
+
+        <h3>Prueba Antes de Recomendar a Escala</h3>
+        <p>Si estás asesorando a clientes o teniendo en stock una nueva concentración, vale la pena probar el producto tú mismo primero. Nuestros <a href="/cbd-sample-packs">packs de muestra</a> te permiten a ti y a tu personal probar diferentes concentraciones antes de comprometerte con un pedido mayorista completo — genuinamente útil cuando necesitas hablar con confianza a los clientes sobre la dosificación.</p>
+        <p>Para la revisión independiente más rigurosa disponible sobre dosificación y datos de seguridad del CBD, consulta el <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Informe de Revisión Crítica del Cannabidiol de la Organización Mundial de la Salud</a>.</p>
+      `,
+    },
+    it: {
+      title: 'Guida al Dosaggio del CBD: Quanto Olio CBD Dovresti Assumere?',
+      excerpt: "Non esiste un'unica dose corretta di CBD — dipende dalla concentrazione, dal peso corporeo, e da cosa lo stai usando. Ecco un quadro pratico per aiutare i clienti a trovare il loro punto di partenza.",
+      content: `
+        <h2>Perché Non Esiste una Dose Universale di CBD</h2>
+        <p>A differenza dei farmaci con dosaggio standardizzato, il dosaggio del CBD varia in base all'individuo, alla concentrazione del prodotto, e all'uso previsto. Questa è una delle domande più comuni che ricevono i rivenditori, e la risposta onesta è "dipende" — ma questo non significa che non esista un quadro utile per guidare gli acquirenti alle prime armi.</p>
+
+        <h3>Inizia in Basso, Vai Piano</h3>
+        <p>L'approccio più ampiamente raccomandato, ripreso sia nelle linee guida dei consumatori che regolatorie, è iniziare con una dose bassa e aumentare gradualmente nel corso di giorni o settimane fino a raggiungere l'effetto desiderato. Per l'<a href="/collections/cbd-oils">olio CBD</a>, questo tipicamente significa iniziare con poche gocce di una concentrazione più bassa (5% o 10%) piuttosto che passare direttamente a un prodotto al 20%.</p>
+
+        <h3>Un Quadro di Partenza Pratico</h3>
+        <ul>
+          <li><strong>Utenti alle prime armi:</strong> Inizia con un olio al 5-10%, poche gocce (circa 5-10mg CBD) una volta al giorno.</li>
+          <li><strong>Utenti regolari che cercano un effetto più forte:</strong> Olio al 10-20%, aumentando gradualmente la dose in base alla risposta.</li>
+          <li><strong>Clienti orientati al sonno:</strong> Considera i nostri <a href="/cbn-sleep-products">prodotti combinati CBN e melatonina</a>, formulati specificamente per l'uso serale piuttosto che per il dosaggio diurno generale.</li>
+          <li><strong>Acquirenti all'ingrosso che formulano i propri prodotti:</strong> I nostri <a href="/white-label-cbd-europe">oli all'ingrosso white label</a> ti permettono di controllare con precisione la concentrazione in tutta la tua linea di prodotti.</li>
+        </ul>
+
+        <h3>La Concentrazione Conta Più di Quanto le Persone Si Rendano Conto</h3>
+        <p>Un errore comune è presumere che "più gocce = più effetto" senza tenere conto della concentrazione. Due gocce di un olio al 20% forniscono circa il doppio del CBD di due gocce di un olio al 10%. La nostra <a href="/blog/cbd-oil-wholesale-buying-guide">guida all'acquisto di olio CBD</a> illustra esattamente come leggere le etichette di concentrazione e calcolare i mg per goccia per la consulenza al dettaglio.</p>
+
+        <h3>Campiona Prima di Raccomandare su Larga Scala</h3>
+        <p>Se stai consigliando i clienti o stai per stoccare una nuova concentrazione, vale la pena testare il prodotto tu stesso prima. I nostri <a href="/cbd-sample-packs">pacchetti campione</a> permettono a te e al tuo staff di provare diverse concentrazioni prima di impegnarsi in un ordine all'ingrosso completo — genuinamente utile quando devi parlare con sicurezza ai clienti riguardo al dosaggio.</p>
+        <p>Per la revisione indipendente più rigorosa disponibile sui dati di dosaggio e sicurezza del CBD, consulta il <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Rapporto di Revisione Critica del Cannabidiolo dell'Organizzazione Mondiale della Sanità</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'CBD-Doseringsgids: Hoeveel CBD-Olie Zou U Moeten Innemen?',
+      excerpt: 'Er is geen enkele juiste CBD-dosis — het hangt af van concentratie, lichaamsgewicht, en waarvoor u het gebruikt. Hier is een praktisch kader om klanten te helpen hun startpunt te vinden.',
+      content: `
+        <h2>Waarom Er Geen Universele CBD-Dosis Is</h2>
+        <p>In tegenstelling tot medicijnen met gestandaardiseerde dosering, varieert CBD-dosering per individu, productconcentratie, en beoogd gebruik. Dit is een van de meest voorkomende vragen die retailers krijgen, en het eerlijke antwoord is "het hangt ervan af" — maar dat betekent niet dat er geen nuttig kader is om starterskopers te begeleiden.</p>
+
+        <h3>Begin Laag, Ga Langzaam</h3>
+        <p>De meest algemeen aanbevolen aanpak, herhaald in zowel consumenten- als regelgevingsrichtlijnen, is om te beginnen met een lage dosis en geleidelijk te verhogen over dagen of weken totdat het gewenste effect wordt bereikt. Voor <a href="/collections/cbd-oils">CBD-olie</a> betekent dit meestal beginnen met een paar druppels van een lagere concentratie (5% of 10%) in plaats van direct over te stappen naar een 20%-product.</p>
+
+        <h3>Een Praktisch Startkader</h3>
+        <ul>
+          <li><strong>Eerste gebruikers:</strong> Begin met een 5-10% olie, een paar druppels (ongeveer 5-10mg CBD) eenmaal daags.</li>
+          <li><strong>Regelmatige gebruikers die een sterker effect zoeken:</strong> 10-20% olie, geleidelijk opbouwend gebaseerd op reactie.</li>
+          <li><strong>Slaapgerichte klanten:</strong> Overweeg onze <a href="/cbn-sleep-products">CBN- en melatonine-combinatieproducten</a>, specifiek geformuleerd voor avondgebruik in plaats van algemene dagdosering.</li>
+          <li><strong>Bulkkopers die hun eigen producten formuleren:</strong> Onze <a href="/white-label-cbd-europe">white-label bulkoliën</a> laten u de concentratie precies controleren over uw eigen productlijn.</li>
+        </ul>
+
+        <h3>Concentratie Is Belangrijker Dan Mensen Beseffen</h3>
+        <p>Een veelvoorkomende fout is aannemen dat "meer druppels = meer effect" zonder rekening te houden met concentratie. Twee druppels van een 20% olie leveren ongeveer het dubbele van CBD dan twee druppels van een 10% olie. Onze <a href="/blog/cbd-oil-wholesale-buying-guide">CBD-olie koopgids</a> legt precies uit hoe u concentratie-etiketten leest en mg per druppel berekent voor retailadvies.</p>
+
+        <h3>Test Voordat U Op Schaal Aanbeveelt</h3>
+        <p>Als u klanten adviseert of een nieuwe concentratie op voorraad neemt, is het de moeite waard om het product eerst zelf te testen. Onze <a href="/cbd-sample-packs">proefpakketten</a> laten u en uw personeel verschillende concentraties uitproberen voordat u zich vastlegt op een volledige groothandelsbestelling — oprecht nuttig wanneer u met vertrouwen tegen klanten over dosering moet praten.</p>
+        <p>Voor de meest rigoureuze onafhankelijke beoordeling van CBD-dosering en veiligheidsgegevens beschikbaar, zie het <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">WHO-rapport over de kritische beoordeling van Cannabidiol</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'CBD-Annosteluopas: Kuinka Paljon CBD-Öljyä Sinun Tulisi Ottaa?',
+      excerpt: 'Yhtä oikeaa CBD-annosta ei ole — se riippuu pitoisuudesta, kehon painosta, ja mihin sitä käytät. Tässä on käytännöllinen kehys, joka auttaa asiakkaita löytämään aloituspisteensä.',
+      content: `
+        <h2>Miksi Universaalia CBD-Annosta Ei Ole</h2>
+        <p>Toisin kuin standardoidusti annostellut lääkkeet, CBD-annostelu vaihtelee yksilön, tuotteen pitoisuuden, ja käyttötarkoituksen mukaan. Tämä on yksi yleisimmistä kysymyksistä, joita jälleenmyyjät saavat, ja rehellinen vastaus on "se riippuu" — mutta se ei tarkoita, ettei olisi hyödyllistä kehystä ensikertalaisten ostajien opastamiseen.</p>
+
+        <h3>Aloita Matalalta, Etene Hitaasti</h3>
+        <p>Laajimmin suositeltu lähestymistapa, jota toistetaan sekä kuluttaja- että sääntely-ohjeissa, on aloittaa pienellä annoksella ja lisätä sitä asteittain päivien tai viikkojen aikana, kunnes haluttu vaikutus saavutetaan. <a href="/collections/cbd-oils">CBD-öljyn</a> kohdalla tämä tarkoittaa tyypillisesti aloittamista muutamalla tipalla matalampaa pitoisuutta (5 % tai 10 %) sen sijaan, että hypättäisiin suoraan 20 % tuotteeseen.</p>
+
+        <h3>Käytännöllinen Aloituskehys</h3>
+        <ul>
+          <li><strong>Ensikertalaiset käyttäjät:</strong> Aloita 5-10 % öljyllä, muutamalla tipalla (noin 5-10mg CBD) kerran päivässä.</li>
+          <li><strong>Säännölliset käyttäjät, jotka etsivät vahvempaa vaikutusta:</strong> 10-20 % öljy, kasvattaen annosta asteittain vasteen perusteella.</li>
+          <li><strong>Uneen keskittyneet asiakkaat:</strong> Harkitse <a href="/cbn-sleep-products">CBN- ja melatoniiniyhdistelmätuotteitamme</a>, jotka on muotoiltu erityisesti iltakäyttöön yleisen päiväannostelun sijaan.</li>
+          <li><strong>Tukkuostajat, jotka muotoilevat omia tuotteitaan:</strong> <a href="/white-label-cbd-europe">Private label -tukkuöljymme</a> antavat sinun hallita pitoisuutta tarkasti koko omassa tuotelinjassasi.</li>
+        </ul>
+
+        <h3>Pitoisuus On Tärkeämpi Kuin Ihmiset Tajuavat</h3>
+        <p>Yleinen virhe on olettaa, että "enemmän tippoja = enemmän vaikutusta" ottamatta huomioon pitoisuutta. Kaksi tippaa 20 % öljyä antaa noin kaksinkertaisen määrän CBD:tä verrattuna kahteen tippaan 10 % öljyä. <a href="/blog/cbd-oil-wholesale-buying-guide">CBD-öljyn ostoopaamme</a> erittelee tarkalleen, kuinka pitoisuusmerkintöjä luetaan ja lasketaan mg tippaa kohti vähittäiskaupan neuvontaa varten.</p>
+
+        <h3>Testaa Ennen Suuren Mittakaavan Suosittelua</h3>
+        <p>Jos neuvot asiakkaita tai otat varastoon uuden pitoisuuden, kannattaa testata tuote ensin itse. <a href="/cbd-sample-packs">Näytepakettimme</a> antavat sinulle ja henkilökunnallesi mahdollisuuden kokeilla eri pitoisuuksia ennen kuin sitoudut täyteen tukkutilaukseen — aidosti hyödyllistä, kun sinun täytyy puhua asiakkaille itsevarmasti annostelusta.</p>
+        <p>Tarkimman riippumattoman katsauksen saatavilla olevaan CBD-annosteluun ja turvallisuustietoihin löydät <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Maailman terveysjärjestön Kannabidiolin kriittisen arviointiraportista</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Guia de Dosagem CBD: Quanto Óleo CBD Deveria Tomar?',
+      excerpt: 'Não existe uma única dose correta de CBD — depende da concentração, peso corporal, e para que está a usar. Aqui está um quadro prático para ajudar os clientes a encontrar o seu ponto de partida.',
+      content: `
+        <h2>Porque Não Há Uma Dose Universal de CBD</h2>
+        <p>Ao contrário dos medicamentos com dosagem padronizada, a dosagem de CBD varia por indivíduo, concentração do produto, e uso pretendido. Esta é uma das perguntas mais comuns que os retalhistas recebem, e a resposta honesta é "depende" — mas isso não significa que não exista um quadro útil para guiar compradores de primeira vez.</p>
+
+        <h3>Comece Baixo, Vá Devagar</h3>
+        <p>A abordagem mais amplamente recomendada, repetida tanto nas orientações do consumidor como regulatórias, é começar com uma dose baixa e aumentar gradualmente ao longo de dias ou semanas até atingir o efeito desejado. Para o <a href="/collections/cbd-oils">óleo CBD</a>, isto tipicamente significa começar com algumas gotas de uma concentração mais baixa (5% ou 10%) em vez de saltar diretamente para um produto de 20%.</p>
+
+        <h3>Um Quadro de Início Prático</h3>
+        <ul>
+          <li><strong>Utilizadores de primeira vez:</strong> Comece com um óleo de 5-10%, algumas gotas (aproximadamente 5-10mg CBD) uma vez por dia.</li>
+          <li><strong>Utilizadores regulares que procuram um efeito mais forte:</strong> Óleo de 10-20%, aumentando a dose gradualmente com base na resposta.</li>
+          <li><strong>Clientes focados no sono:</strong> Considere os nossos <a href="/cbn-sleep-products">produtos combinados de CBN e melatonina</a>, formulados especificamente para uso noturno em vez de dosagem diurna geral.</li>
+          <li><strong>Compradores por grosso que formulam os seus próprios produtos:</strong> Os nossos <a href="/white-label-cbd-europe">óleos por grosso de marca branca</a> permitem-lhe controlar a concentração com precisão em toda a sua própria linha de produtos.</li>
+        </ul>
+
+        <h3>A Concentração Importa Mais do que as Pessoas Percebem</h3>
+        <p>Um erro comum é assumir que "mais gotas = mais efeito" sem ter em conta a concentração. Duas gotas de um óleo de 20% entregam aproximadamente o dobro do CBD de duas gotas de um óleo de 10%. O nosso <a href="/blog/cbd-oil-wholesale-buying-guide">guia de compra de óleo CBD</a> detalha exatamente como ler rótulos de concentração e calcular mg por gota para aconselhamento retalhista.</p>
+
+        <h3>Experimente Antes de Recomendar em Escala</h3>
+        <p>Se está a aconselhar clientes ou a ter em stock uma nova concentração, vale a pena testar o produto você mesmo primeiro. Os nossos <a href="/cbd-sample-packs">packs de amostra</a> permitem que você e a sua equipa experimentem diferentes concentrações antes de se comprometerem com uma encomenda por grosso completa — genuinamente útil quando precisa de falar com confiança aos clientes sobre dosagem.</p>
+        <p>Para a revisão independente mais rigorosa disponível sobre dados de dosagem e segurança do CBD, veja o <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">Relatório de Revisão Crítica do Canabidiol da Organização Mundial da Saúde</a>.</p>
+      `,
+    },
+  },
+  'what-is-cbg-complete-guide': {
+    fr: {
+      title: "Qu'est-ce que le CBG ? Le Guide Complet du Cannabigérol",
+      excerpt: 'Le CBG est souvent appelé le "cannabinoïde mère" car d\'autres cannabinoïdes en sont synthétisés. Voici ce qui le rend différent du CBD, et quels produits en contiennent réellement.',
+      content: `
+        <h2>CBG : Le "Cannabinoïde Mère"</h2>
+        <p>Le cannabigérol (CBG) est un cannabinoïde non intoxicant qui mérite son surnom de "cannabinoïde mère" car le CBGA — son précurseur acide — est le composé à partir duquel la plante synthétise le THC, le CBD, et le CBC à mesure qu'elle mûrit. Les jeunes plants de chanvre sont naturellement plus riches en CBG ; à mesure que la plante grandit, des enzymes convertissent la plupart en d'autres cannabinoïdes, c'est pourquoi les produits à dominante CBG sont relativement rares et proviennent généralement de chanvre récolté plus tôt ou spécifiquement cultivé pour une teneur en CBG plus élevée.</p>
+
+        <h3>En Quoi le CBG Diffère du CBD</h3>
+        <p>Les deux sont non intoxicants, mais ils interagissent différemment avec le système endocannabinoïde. On comprend que le CBG agit comme un agoniste partiel sur les récepteurs CB1 et CB2, et influence d'autres voies de signalisation, lui donnant un profil distinct du CBD. Comme le CBD, il ne produit pas de high.</p>
+
+        <h3>Produits CBG dans Notre Catalogue</h3>
+        <p>Le CBG est souvent mélangé avec du CBD plutôt que vendu isolément, puisque les deux cannabinoïdes se trouvent fréquemment ensemble dans le même matériel végétal :</p>
+        <ul>
+          <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a> :</strong> Une souche de fleur riche en CBG avec un arôme sucré de banane, cultivée en serre.</li>
+          <li><strong><a href="/products/aya-cbd-cbg-resin">Résine Aya CBD/CBG</a> :</strong> Une résine combinant les deux cannabinoïdes avec un profil de terpènes terreux et floral.</li>
+          <li><strong><a href="/products/ketama-cbg-cbd-resin">Résine Ketama CBG/CBD</a> :</strong> Inspirée de la région traditionnelle marocaine de Ketama, avec une teneur combinée en cannabinoïdes élevée.</li>
+        </ul>
+        <p>Parcourez les collections complètes de <a href="/collections/cbd-flowers">fleurs CBD</a> et de <a href="/collections/cbd-resins">résines CBD</a> pour voir la disponibilité actuelle de ces références et d'autres riches en cannabinoïdes.</p>
+
+        <h3>Pourquoi Stocker des Produits CBG</h3>
+        <p>Le CBG reste une niche relativement peu desservie comparée au CBD grand public — ce qui en fait un véritable différenciateur pour les boutiques prêtes à éduquer les clients à ce sujet. Il attire aussi généralement un segment de clientèle curieux et engagé qui recherche les cannabinoïdes en profondeur et est plus susceptible de devenir des clients récurrents à dépense plus élevée.</p>
+        <p>Pour le détail pharmacologique complet sur les mécanismes du CBG et l'état actuel de la recherche, consultez cette revue évaluée par des pairs : <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Cannabigérol (CBG) : Une Revue Complète de Ses Mécanismes Moléculaires et Potentiel Thérapeutique (PMC)</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Was ist CBG? Der Vollständige Leitfaden zu Cannabigerol',
+      excerpt: 'CBG wird oft als "Muttercannabinoid" bezeichnet, weil andere Cannabinoide daraus synthetisiert werden. Hier ist, was es von CBD unterscheidet, und welche Produkte es tatsächlich enthalten.',
+      content: `
+        <h2>CBG: Das "Muttercannabinoid"</h2>
+        <p>Cannabigerol (CBG) ist ein nicht berauschendes Cannabinoid, das sich seinen Spitznamen "Muttercannabinoid" verdient, weil CBGA — sein saurer Vorläufer — die Verbindung ist, aus der die Pflanze THC, CBD, und CBC synthetisiert, während sie reift. Junge Hanfpflanzen sind natürlicherweise reicher an CBG; wenn die Pflanze wächst, wandeln Enzyme das meiste davon in andere Cannabinoide um, weshalb CBG-dominante Produkte vergleichsweise selten sind und typischerweise von früher geerntetem oder speziell auf höheren CBG-Gehalt gezüchtetem Hanf stammen.</p>
+
+        <h3>Wie sich CBG von CBD Unterscheidet</h3>
+        <p>Beide sind nicht berauschend, aber sie interagieren unterschiedlich mit dem Endocannabinoid-System. Man versteht, dass CBG als partieller Agonist sowohl an CB1- als auch CB2-Rezeptoren wirkt und andere Signalwege beeinflusst, was ihm ein von CBD unterschiedliches Profil verleiht. Wie CBD erzeugt es keinen Rausch.</p>
+
+        <h3>CBG-Produkte in Unserem Katalog</h3>
+        <p>CBG wird oft mit CBD gemischt, anstatt isoliert verkauft zu werden, da die beiden Cannabinoide häufig zusammen im gleichen Pflanzenmaterial gefunden werden:</p>
+        <ul>
+          <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a>:</strong> Eine CBG-reiche Blütensorte mit süßem Bananenaroma, im Gewächshaus angebaut.</li>
+          <li><strong><a href="/products/aya-cbd-cbg-resin">Aya CBD/CBG Harz</a>:</strong> Ein Harz, das beide Cannabinoide mit einem erdig-blumigen Terpenprofil kombiniert.</li>
+          <li><strong><a href="/products/ketama-cbg-cbd-resin">Ketama CBG/CBD Harz</a>:</strong> Inspiriert von der traditionellen marokkanischen Ketama-Region, mit hohem kombinierten Cannabinoidgehalt.</li>
+        </ul>
+        <p>Durchsuchen Sie die vollständigen Kollektionen von <a href="/collections/cbd-flowers">CBD-Blüten</a> und <a href="/collections/cbd-resins">CBD-Harzen</a>, um die aktuelle Verfügbarkeit dieser und anderer cannabinoidreicher Referenzen zu sehen.</p>
+
+        <h3>Warum CBG-Produkte Vorrätig Haben</h3>
+        <p>CBG bleibt eine vergleichsweise unterversorgte Nische im Vergleich zu Mainstream-CBD — was es zu einem echten Differenzierungsmerkmal für Läden macht, die bereit sind, Kunden darüber aufzuklären. Es zieht auch tendenziell ein neugieriges, engagiertes Kundensegment an, das Cannabinoide eingehend recherchiert und eher zu wiederkehrenden Kunden mit höheren Ausgaben wird.</p>
+        <p>Für die vollständigen pharmakologischen Details zu den Mechanismen von CBG und dem aktuellen Forschungsstand siehe diese peer-reviewte Übersicht: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Cannabigerol (CBG): Eine Umfassende Übersicht seiner Molekularen Mechanismen und Therapeutischen Potenzials (PMC)</a>.</p>
+      `,
+    },
+    es: {
+      title: '¿Qué es el CBG? La Guía Completa del Cannabigerol',
+      excerpt: 'El CBG a menudo se le llama el "cannabinoide madre" porque otros cannabinoides se sintetizan a partir de él. Esto es lo que lo hace diferente del CBD, y qué productos realmente lo contienen.',
+      content: `
+        <h2>CBG: El "Cannabinoide Madre"</h2>
+        <p>El cannabigerol (CBG) es un cannabinoide no intoxicante que se gana su apodo de "cannabinoide madre" porque el CBGA — su precursor ácido — es el compuesto a partir del cual la planta sintetiza THC, CBD, y CBC a medida que madura. Las plantas jóvenes de cáñamo son naturalmente más ricas en CBG; a medida que la planta crece, las enzimas convierten la mayor parte en otros cannabinoides, razón por la cual los productos dominantes en CBG son comparativamente raros y típicamente provienen de cáñamo cosechado antes o cultivado específicamente para un mayor contenido de CBG.</p>
+
+        <h3>En Qué Se Diferencia el CBG del CBD</h3>
+        <p>Ambos no son intoxicantes, pero interactúan de forma diferente con el sistema endocannabinoide. Se entiende que el CBG actúa como un agonista parcial en ambos receptores CB1 y CB2, e influye en otras vías de señalización, dándole un perfil distinto del CBD. Como el CBD, no produce colocón.</p>
+
+        <h3>Productos CBG en Nuestro Catálogo</h3>
+        <p>El CBG a menudo se mezcla con CBD en lugar de venderse aislado, ya que los dos cannabinoides se encuentran frecuentemente juntos en el mismo material vegetal:</p>
+        <ul>
+          <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a>:</strong> Una variedad de flor rica en CBG con un aroma dulce a plátano, cultivada en invernadero.</li>
+          <li><strong><a href="/products/aya-cbd-cbg-resin">Resina Aya CBD/CBG</a>:</strong> Una resina que combina ambos cannabinoides con un perfil de terpenos terroso y floral.</li>
+          <li><strong><a href="/products/ketama-cbg-cbd-resin">Resina Ketama CBG/CBD</a>:</strong> Inspirada en la tradicional región marroquí de Ketama, con un alto contenido combinado de cannabinoides.</li>
+        </ul>
+        <p>Explora las colecciones completas de <a href="/collections/cbd-flowers">flores CBD</a> y <a href="/collections/cbd-resins">resinas CBD</a> para ver la disponibilidad actual de estas y otras referencias ricas en cannabinoides.</p>
+
+        <h3>Por Qué Tener en Stock Productos CBG</h3>
+        <p>El CBG sigue siendo un nicho comparativamente poco atendido en comparación con el CBD convencional — lo que lo convierte en un verdadero diferenciador para tiendas dispuestas a educar a los clientes al respecto. También tiende a atraer un segmento de clientes curiosos y comprometidos que investigan los cannabinoides en profundidad y son más propensos a convertirse en clientes recurrentes de mayor gasto.</p>
+        <p>Para el detalle farmacológico completo sobre los mecanismos del CBG y el estado actual de la investigación, consulta esta revisión evaluada por pares: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Cannabigerol (CBG): Una Revisión Completa de sus Mecanismos Moleculares y Potencial Terapéutico (PMC)</a>.</p>
+      `,
+    },
+    it: {
+      title: "Cos'è il CBG? La Guida Completa al Cannabigerolo",
+      excerpt: 'Il CBG è spesso chiamato il "cannabinoide madre" perché altri cannabinoidi vengono sintetizzati da esso. Ecco cosa lo rende diverso dal CBD, e quali prodotti lo contengono effettivamente.',
+      content: `
+        <h2>CBG: Il "Cannabinoide Madre"</h2>
+        <p>Il cannabigerolo (CBG) è un cannabinoide non inebriante che si guadagna il soprannome di "cannabinoide madre" perché il CBGA — il suo precursore acido — è il composto da cui la pianta sintetizza THC, CBD, e CBC man mano che matura. Le piante giovani di canapa sono naturalmente più ricche di CBG; man mano che la pianta cresce, gli enzimi convertono la maggior parte in altri cannabinoidi, motivo per cui i prodotti a dominanza CBG sono comparativamente rari e tipicamente provengono da canapa raccolta prima o coltivata specificamente per un contenuto di CBG più elevato.</p>
+
+        <h3>In Cosa il CBG Differisce dal CBD</h3>
+        <p>Entrambi sono non inebrianti, ma interagiscono diversamente con il sistema endocannabinoide. Si comprende che il CBG agisce come agonista parziale sia sui recettori CB1 che CB2, e influenza altre vie di segnalazione, dandogli un profilo distinto dal CBD. Come il CBD, non produce sballo.</p>
+
+        <h3>Prodotti CBG nel Nostro Catalogo</h3>
+        <p>Il CBG viene spesso miscelato con CBD piuttosto che venduto isolatamente, poiché i due cannabinoidi si trovano frequentemente insieme nello stesso materiale vegetale:</p>
+        <ul>
+          <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a>:</strong> Una varietà di fiori ricca di CBG con un aroma dolce di banana, coltivata in serra.</li>
+          <li><strong><a href="/products/aya-cbd-cbg-resin">Resina Aya CBD/CBG</a>:</strong> Una resina che combina entrambi i cannabinoidi con un profilo terpenico terroso e floreale.</li>
+          <li><strong><a href="/products/ketama-cbg-cbd-resin">Resina Ketama CBG/CBD</a>:</strong> Ispirata alla tradizionale regione marocchina di Ketama, con un alto contenuto combinato di cannabinoidi.</li>
+        </ul>
+        <p>Sfoglia le collezioni complete di <a href="/collections/cbd-flowers">fiori CBD</a> e <a href="/collections/cbd-resins">resine CBD</a> per vedere la disponibilità attuale di questi e altri riferimenti ricchi di cannabinoidi.</p>
+
+        <h3>Perché Tenere in Stock Prodotti CBG</h3>
+        <p>Il CBG rimane una nicchia comparativamente poco servita rispetto al CBD mainstream — il che lo rende un vero differenziatore per i negozi disposti a educare i clienti al riguardo. Tende anche ad attrarre un segmento di clientela curioso ed impegnato che ricerca approfonditamente i cannabinoidi ed è più propenso a diventare clienti abituali con una spesa più elevata.</p>
+        <p>Per il dettaglio farmacologico completo sui meccanismi del CBG e lo stato attuale della ricerca, consulta questa revisione peer-reviewed: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Cannabigerolo (CBG): Una Revisione Completa dei Suoi Meccanismi Molecolari e Potenziale Terapeutico (PMC)</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Wat is CBG? De Volledige Gids voor Cannabigerol',
+      excerpt: 'CBG wordt vaak het "moedercannabinoïde" genoemd omdat andere cannabinoïden eruit worden gesynthetiseerd. Dit is wat het anders maakt dan CBD, en welke producten het daadwerkelijk bevatten.',
+      content: `
+        <h2>CBG: Het "Moedercannabinoïde"</h2>
+        <p>Cannabigerol (CBG) is een niet-bedwelmend cannabinoïde dat zijn bijnaam "moedercannabinoïde" verdient omdat CBGA — zijn zure precursor — de verbinding is waaruit de plant THC, CBD, en CBC synthetiseert naarmate deze rijpt. Jonge hennepplanten zijn van nature rijker aan CBG; naarmate de plant groeit, zetten enzymen het meeste om in andere cannabinoïden, wat verklaart waarom CBG-dominante producten relatief zeldzaam zijn en meestal afkomstig zijn van eerder geoogste hennep of specifiek gekweekt voor hoger CBG-gehalte.</p>
+
+        <h3>Hoe CBG Verschilt van CBD</h3>
+        <p>Beide zijn niet-bedwelmend, maar ze interageren verschillend met het endocannabinoïdesysteem. Men begrijpt dat CBG fungeert als een partiële agonist bij zowel CB1- als CB2-receptoren, en andere signaalpaden beïnvloedt, wat het een ander profiel dan CBD geeft. Net als CBD produceert het geen high.</p>
+
+        <h3>CBG-Producten in Onze Catalogus</h3>
+        <p>CBG wordt vaak gemengd met CBD in plaats van geïsoleerd verkocht, aangezien de twee cannabinoïden vaak samen worden aangetroffen in hetzelfde plantenmateriaal:</p>
+        <ul>
+          <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a>:</strong> Een CBG-rijke bloemsoort met een zoet bananenaroma, gekweekt in kasomstandigheden.</li>
+          <li><strong><a href="/products/aya-cbd-cbg-resin">Aya CBD/CBG Hars</a>:</strong> Een hars die beide cannabinoïden combineert met een aards, bloemig terpeenprofiel.</li>
+          <li><strong><a href="/products/ketama-cbg-cbd-resin">Ketama CBG/CBD Hars</a>:</strong> Geïnspireerd door de traditionele Marokkaanse Ketama-regio, met een hoog gecombineerd cannabinoïdegehalte.</li>
+        </ul>
+        <p>Blader door de volledige collecties <a href="/collections/cbd-flowers">CBD-bloemen</a> en <a href="/collections/cbd-resins">CBD-harsen</a> om de huidige beschikbaarheid van deze en andere cannabinoïderijke referenties te zien.</p>
+
+        <h3>Waarom CBG-Producten Op Voorraad Houden</h3>
+        <p>CBG blijft een relatief onderbediende niche vergeleken met mainstream CBD — wat het een echt onderscheidend kenmerk maakt voor winkels die bereid zijn klanten hierover te informeren. Het trekt ook vaak een nieuwsgierig, betrokken klantsegment aan dat cannabinoïden diepgaand onderzoekt en eerder terugkerende klanten met hogere uitgaven wordt.</p>
+        <p>Voor het volledige farmacologische detail over de mechanismen van CBG en de huidige onderzoeksstatus, zie deze peer-reviewde review: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Cannabigerol (CBG): Een Uitgebreide Review van Zijn Moleculaire Mechanismen en Therapeutisch Potentieel (PMC)</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Mikä on CBG? Täydellinen Opas Kannabigeroliin',
+      excerpt: 'CBG:tä kutsutaan usein "äitikannabinoidiksi", koska muut kannabinoidit syntetisoidaan siitä. Tässä on mikä tekee siitä erilaisen kuin CBD, ja mitkä tuotteet todella sisältävät sitä.',
+      content: `
+        <h2>CBG: "Äitikannabinoidi"</h2>
+        <p>Kannabigeroli (CBG) on ei-päihdyttävä kannabinoidi, joka ansaitsee "äitikannabinoidi"-lempinimensä, koska CBGA — sen hapan esiaste — on yhdiste, josta kasvi syntetisoi THC:tä, CBD:tä, ja CBC:tä kypsyessään. Nuoret hamppukasvit ovat luonnostaan CBG-pitoisempia; kasvin kasvaessa entsyymit muuttavat suurimman osan siitä muiksi kannabinoideiksi, minkä vuoksi CBG-valtaiset tuotteet ovat suhteellisen harvinaisia ja ovat tyypillisesti peräisin aikaisemmin korjatusta tai erityisesti korkeampaan CBG-pitoisuuteen jalostetusta hampusta.</p>
+
+        <h3>Kuinka CBG Eroaa CBD:stä</h3>
+        <p>Molemmat ovat ei-päihdyttäviä, mutta ne vaikuttavat endokannabinoidijärjestelmään eri tavoin. CBG:n ymmärretään toimivan osittaisena agonistina sekä CB1- että CB2-reseptoreissa, ja vaikuttavan muihin signalointireitteihin, mikä antaa sille CBD:stä poikkeavan profiilin. Kuten CBD, se ei tuota huumaustilaa.</p>
+
+        <h3>CBG-Tuotteet Luettelossamme</h3>
+        <p>CBG sekoitetaan usein CBD:n kanssa sen sijaan, että sitä myytäisiin eristettynä, koska nämä kaksi kannabinoidia löytyvät usein yhdessä samasta kasviaineksesta:</p>
+        <ul>
+          <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a>:</strong> CBG-rikas kukkalajike makealla banaaninaromilla, kasvatettu kasvihuoneolosuhteissa.</li>
+          <li><strong><a href="/products/aya-cbd-cbg-resin">Aya CBD/CBG-hartsi</a>:</strong> Hartsi, joka yhdistää molemmat kannabinoidit maanläheisellä, kukkaisella terpeeniprofiililla.</li>
+          <li><strong><a href="/products/ketama-cbg-cbd-resin">Ketama CBG/CBD-hartsi</a>:</strong> Inspiroitunut perinteisestä marokkolaisesta Ketama-alueesta, korkealla yhdistetyllä kannabinoidipitoisuudella.</li>
+        </ul>
+        <p>Selaa koko <a href="/collections/cbd-flowers">CBD-kukkien</a> ja <a href="/collections/cbd-resins">CBD-hartsien</a> valikoimaa nähdäksesi näiden ja muiden kannabinoidirikkaiden tuotteiden nykyisen saatavuuden.</p>
+
+        <h3>Miksi Pitää CBG-Tuotteita Varastossa</h3>
+        <p>CBG pysyy suhteellisen huonosti palveltuna markkinarakona verrattuna valtavirran CBD:hen — mikä tekee siitä aidon erottautumistekijän kaupoille, jotka ovat valmiita kouluttamaan asiakkaita siitä. Se houkuttelee myös yleensä uteliaan, sitoutuneen asiakassegmentin, joka tutkii kannabinoideja syvällisesti ja on todennäköisemmin toistuvia, korkeamman kulutuksen asiakkaita.</p>
+        <p>Täydellisen farmakologisen yksityiskohdan CBG:n mekanismeista ja nykyisestä tutkimustilanteesta löydät tästä vertaisarvioidusta katsauksesta: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Kannabigeroli (CBG): Kattava Katsaus Sen Molekyylimekanismeihin ja Terapeuttiseen Potentiaaliin (PMC)</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'O que é o CBG? O Guia Completo do Canabigerol',
+      excerpt: 'O CBG é frequentemente chamado de "canabinoide mãe" porque outros canabinoides são sintetizados a partir dele. Aqui está o que o torna diferente do CBD, e quais produtos realmente o contêm.',
+      content: `
+        <h2>CBG: O "Canabinoide Mãe"</h2>
+        <p>O canabigerol (CBG) é um canabinoide não intoxicante que ganha a alcunha de "canabinoide mãe" porque o CBGA — o seu precursor ácido — é o composto a partir do qual a planta sintetiza THC, CBD, e CBC à medida que amadurece. As plantas jovens de cânhamo são naturalmente mais ricas em CBG; à medida que a planta cresce, enzimas convertem a maior parte em outros canabinoides, razão pela qual os produtos dominantes em CBG são comparativamente raros e tipicamente provêm de cânhamo colhido mais cedo ou cultivado especificamente para maior teor de CBG.</p>
+
+        <h3>Em Que o CBG Difere do CBD</h3>
+        <p>Ambos são não intoxicantes, mas interagem de forma diferente com o sistema endocanabinoide. Entende-se que o CBG atua como agonista parcial tanto nos recetores CB1 como CB2, e influencia outras vias de sinalização, dando-lhe um perfil distinto do CBD. Como o CBD, não produz um efeito eufórico.</p>
+
+        <h3>Produtos CBG no Nosso Catálogo</h3>
+        <p>O CBG é frequentemente misturado com CBD em vez de vendido isoladamente, já que os dois canabinoides são frequentemente encontrados juntos no mesmo material vegetal:</p>
+        <ul>
+          <li><strong><a href="/products/banana-cream-cbg-greenhouse">Banana Cream CBG</a>:</strong> Uma variedade de flor rica em CBG com um aroma doce a banana, cultivada em estufa.</li>
+          <li><strong><a href="/products/aya-cbd-cbg-resin">Resina Aya CBD/CBG</a>:</strong> Uma resina que combina ambos os canabinoides com um perfil de terpenos terroso e floral.</li>
+          <li><strong><a href="/products/ketama-cbg-cbd-resin">Resina Ketama CBG/CBD</a>:</strong> Inspirada na tradicional região marroquina de Ketama, com um alto teor combinado de canabinoides.</li>
+        </ul>
+        <p>Explore as coleções completas de <a href="/collections/cbd-flowers">flores CBD</a> e <a href="/collections/cbd-resins">resinas CBD</a> para ver a disponibilidade atual destas e outras referências ricas em canabinoides.</p>
+
+        <h3>Porque Ter em Stock Produtos CBG</h3>
+        <p>O CBG permanece um nicho comparativamente pouco atendido em comparação com o CBD convencional — o que o torna um verdadeiro diferenciador para lojas dispostas a educar os clientes sobre ele. Também tende a atrair um segmento de clientes curiosos e envolvidos que pesquisam canabinoides em profundidade e são mais propensos a tornar-se clientes recorrentes com maior gasto.</p>
+        <p>Para o detalhe farmacológico completo sobre os mecanismos do CBG e o estado atual da investigação, veja esta revisão revista por pares: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11597810/" target="_blank" rel="noopener noreferrer">Canabigerol (CBG): Uma Revisão Abrangente dos Seus Mecanismos Moleculares e Potencial Terapêutico (PMC)</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
