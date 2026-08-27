@@ -1985,6 +1985,337 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'best-selling-cbd-products': {
+    fr: {
+      title: 'Produits CBD les Plus Vendus en 2026 : Que Devraient Stocker les Détaillants',
+      excerpt: "Découvrez les produits CBD les plus performants pour 2026. Perspectives basées sur les données concernant les fleurs, résines, huiles et comestibles qui offrent les meilleures ventes et marges pour les détaillants.",
+      content: `
+        <h2>Produits CBD les Plus Vendus en 2026</h2>
+        <p>Savoir quels produits stocker est la moitié de la bataille pour les détaillants CBD. Basé sur les données de vente de milliers de détaillants européens que nous approvisionnons, voici les produits CBD les plus performants pour 2026 — et pourquoi ils se vendent.</p>
+
+        <h3>Meilleures Fleurs CBD</h3>
+        <p>Les <a href="/collections/cbd-flowers">fleurs CBD</a> restent la catégorie de produits n°1 en volume, représentant environ 45 % de toutes les ventes CBD en gros. Les meilleures ventes en 2026 :</p>
+        <ul>
+          <li><strong>Amnesia CBD :</strong> Le best-seller perpétuel à travers l'Europe. Les clients adorent les effets à dominante sativa et l'arôme agrumes/haze. Meilleure vente en France, en <a href="/cbd-wholesaler-belgium">Belgique</a>, et en <a href="/cbd-wholesaler-spain">Espagne</a>.</li>
+          <li><strong>Gorilla Glue CBD :</strong> Terreux, piquant, et populaire. Fort taux de rachat. Les variétés d'intérieur commandent des prix premium.</li>
+          <li><strong>Gelato CBD :</strong> Arôme sucré, façon dessert. Croissance rapide chez les jeunes générations. Excellent pour les clients des <a href="/cbd-in-tobacco-shops">buralistes</a>.</li>
+          <li><strong>Wedding Cake CBD :</strong> Vanille, sucré, crémeux. Souche premium d'intérieur avec de bonnes marges.</li>
+          <li><strong>OG Kush CBD :</strong> Un classique qui ne se démode jamais. Vendeur fiable sur tous les marchés.</li>
+        </ul>
+
+        <h3>Meilleures Résines et Hash CBD</h3>
+        <p>Les <a href="/collections/cbd-resins">résines CBD</a> sont la catégorie n°2, en croissance rapide à environ 30 % des ventes :</p>
+        <ul>
+          <li><strong>Afghan Hash CBD :</strong> Look et texture traditionnels. Le hash CBD n°1 vendu en Europe. Extrêmement populaire en <a href="/cbd-wholesaler-switzerland">Suisse</a> et au <a href="/cbd-wholesaler-luxembourg">Luxembourg</a>.</li>
+          <li><strong>Ketama CBD Hash :</strong> Un autre classique qui résonne auprès des consommateurs. Qualité et arôme constants.</li>
+          <li><strong>CBD Crumble (85 % CBD) :</strong> Concentré premium avec des marges exceptionnelles. Attire les utilisateurs expérimentés recherchant la puissance.</li>
+          <li><strong>Ice Rock / Moon Rock CBD :</strong> Produits accrocheurs qui suscitent des achats par curiosité. Excellents sujets de conversation en boutique.</li>
+        </ul>
+
+        <h3>Meilleures Huiles CBD</h3>
+        <p>Les <a href="/collections/cbd-oils">huiles CBD</a> sont la catégorie qui croît le plus vite, populaire dans les pharmacies, magasins bien-être, et en ligne :</p>
+        <ul>
+          <li><strong>Huile CBD 10 % (Full Spectrum) :</strong> Le point idéal de concentration et prix. Meilleure vente sur tous les marchés.</li>
+          <li><strong>Huile CBD 20 % (Full Spectrum) :</strong> Segment premium. Utilisateurs expérimentés qui savent ce qu'ils veulent. Marge par unité plus élevée.</li>
+          <li><strong>CBD + CBN + Mélatonine (10 %+10 %) :</strong> Formule sommeil. Huile spécialisée à la croissance la plus rapide. Les consommateurs recherchent activement cette combinaison.</li>
+          <li><strong>Huiles CBD Aromatisées (Cerise, Menthe, Pêche) :</strong> Marché en expansion. Attire les consommateurs qui n'aiment pas le goût naturel du chanvre.</li>
+        </ul>
+
+        <h3>Catégories Émergentes pour 2026</h3>
+        <ul>
+          <li><strong><a href="/cbn-sleep-products">CBN et Produits Sommeil</a> :</strong> Les résines CBN et formules à la mélatonine sont le segment de cannabinoïde légal à la croissance la plus rapide en Europe</li>
+          <li><strong>Comestibles CBD :</strong> Les <a href="/collections/cbd-gummies">bonbons gélifiés</a> et confiseries croissent de plus de 40 % d'année en année</li>
+          <li><strong><a href="/cbd-wholesaler-organic">CBD Biologique</a> :</strong> Segment premium en croissance alors que les consommateurs soucieux de leur santé exigent des produits sans pesticides et cultivés durablement</li>
+          <li><strong>Cosmétiques CBD :</strong> Topiques, sérums, et soins de la peau infusés au CBD</li>
+        </ul>
+
+        <h3>Stratégie de Stock pour 2026</h3>
+        <p>Notre répartition de produits recommandée pour un inventaire de vente au détail CBD équilibré : 40-45 % fleurs (5-10 souches couvrant intérieur et serre), 25-30 % résines/hash (4-6 variétés), 15-20 % huiles (3 concentrations + spécialités), et 10-15 % comestibles et accessoires. Ajustez selon votre clientèle et les préférences de votre marché local. Lisez notre <a href="/blog/manage-cbd-wholesale-stock">guide de gestion de stock</a> pour des conseils d'inventaire détaillés.</p>
+      `,
+    },
+    de: {
+      title: 'Bestverkaufte CBD-Produkte 2026: Was Händler Vorrätig Haben Sollten',
+      excerpt: 'Entdecken Sie die leistungsstärksten CBD-Produkte für 2026. Datengestützte Einblicke, welche Blüten, Harze, Öle und Esswaren die besten Verkäufe und Margen für Händler liefern.',
+      content: `
+        <h2>Bestverkaufte CBD-Produkte 2026</h2>
+        <p>Zu wissen, welche Produkte Sie vorrätig haben sollten, ist die halbe Miete für CBD-Händler. Basierend auf Verkaufsdaten von Tausenden europäischer Händler, die wir beliefern, hier die leistungsstärksten CBD-Produkte für 2026 — und warum sie sich verkaufen.</p>
+
+        <h3>Top CBD-Blüten</h3>
+        <p><a href="/collections/cbd-flowers">CBD-Blüten</a> bleiben die #1-Produktkategorie nach Volumen und machen etwa 45 % aller CBD-Großhandelsverkäufe aus. Die Bestseller 2026:</p>
+        <ul>
+          <li><strong>Amnesia CBD:</strong> Der immerwährende Bestseller in ganz Europa. Kunden lieben die sativa-dominanten Effekte und das Zitrus-/Haze-Aroma. Top-Verkäufer in Frankreich, <a href="/cbd-wholesaler-belgium">Belgien</a>, und <a href="/cbd-wholesaler-spain">Spanien</a>.</li>
+          <li><strong>Gorilla Glue CBD:</strong> Erdig, würzig, und beliebt. Starke Wiederkaufsrate. Indoor-Sorten erzielen Premium-Preise.</li>
+          <li><strong>Gelato CBD:</strong> Süßes, dessertartiges Aroma. Wächst schnell bei jüngeren Zielgruppen. Ausgezeichnet für Kunden im <a href="/cbd-in-tobacco-shops">Tabakladen</a>.</li>
+          <li><strong>Wedding Cake CBD:</strong> Vanille, süß, cremig. Premium-Indoor-Sorte mit hohen Margen.</li>
+          <li><strong>OG Kush CBD:</strong> Ein Klassiker, der nie aus der Mode kommt. Zuverlässiger Verkäufer in allen Märkten.</li>
+        </ul>
+
+        <h3>Top CBD-Harze & Haschisch</h3>
+        <p><a href="/collections/cbd-resins">CBD-Harze</a> sind die #2-Kategorie und wachsen schnell auf etwa 30 % der Verkäufe:</p>
+        <ul>
+          <li><strong>Afghan Hash CBD:</strong> Traditionelles Aussehen und Gefühl. Das meistverkaufte CBD-Haschisch in Europa. Extrem beliebt in der <a href="/cbd-wholesaler-switzerland">Schweiz</a> und in <a href="/cbd-wholesaler-luxembourg">Luxemburg</a>.</li>
+          <li><strong>Ketama CBD Haschisch:</strong> Ein weiterer Klassiker, der bei Verbrauchern ankommt. Konsistente Qualität und Aroma.</li>
+          <li><strong>CBD Crumble (85 % CBD):</strong> Premium-Konzentrat mit außergewöhnlichen Margen. Spricht erfahrene Nutzer an, die Potenz suchen.</li>
+          <li><strong>Ice Rock / Moon Rock CBD:</strong> Auffällige Produkte, die Neugierkäufe antreiben. Großartige Gesprächsanreger im Einzelhandel.</li>
+        </ul>
+
+        <h3>Top CBD-Öle</h3>
+        <p><a href="/collections/cbd-oils">CBD-Öle</a> sind die am schnellsten wachsende Kategorie, beliebt in Apotheken, Wellness-Läden, und online:</p>
+        <ul>
+          <li><strong>CBD-Öl 10 % (Full Spectrum):</strong> Der Sweet Spot aus Konzentration und Preis. Bestseller in allen Märkten.</li>
+          <li><strong>CBD-Öl 20 % (Full Spectrum):</strong> Premium-Segment. Erfahrene Nutzer, die wissen, was sie wollen. Höhere Marge pro Einheit.</li>
+          <li><strong>CBD + CBN + Melatonin (10 %+10 %):</strong> Schlafformel. Am schnellsten wachsendes Spezialöl. Verbraucher suchen aktiv nach dieser Kombination.</li>
+          <li><strong>Aromatisierte CBD-Öle (Kirsche, Minze, Pfirsich):</strong> Wachsender Markt. Spricht Verbraucher an, die den natürlichen Hanfgeschmack nicht mögen.</li>
+        </ul>
+
+        <h3>Aufkommende Kategorien für 2026</h3>
+        <ul>
+          <li><strong><a href="/cbn-sleep-products">CBN & Schlafprodukte</a>:</strong> CBN-Harze und Melatonin-Formeln sind das am schnellsten wachsende legale Cannabinoid-Segment in Europa</li>
+          <li><strong>CBD-Esswaren:</strong> <a href="/collections/cbd-gummies">Gummibärchen</a> und Süßigkeiten wachsen jährlich um über 40 %</li>
+          <li><strong><a href="/cbd-wholesaler-organic">Bio-CBD</a>:</strong> Premium-Segment wächst, da gesundheitsbewusste Verbraucher pestizidfreie, nachhaltig angebaute Produkte fordern</li>
+          <li><strong>CBD-Kosmetik:</strong> Topika, Seren, und CBD-angereicherte Hautpflege</li>
+        </ul>
+
+        <h3>Bevorratungsstrategie für 2026</h3>
+        <p>Unsere empfohlene Produktaufteilung für ein ausgewogenes CBD-Einzelhandelsinventar: 40-45 % Blüten (5-10 Sorten, Indoor und Gewächshaus abdeckend), 25-30 % Harze/Haschisch (4-6 Sorten), 15-20 % Öle (3 Konzentrationen + Spezialitäten), und 10-15 % Esswaren und Zubehör. Anpassen basierend auf Ihrem Kundenstamm und lokalen Marktpräferenzen. Lesen Sie unseren <a href="/blog/manage-cbd-wholesale-stock">Bestandsverwaltungsleitfaden</a> für detaillierte Inventartipps.</p>
+      `,
+    },
+    es: {
+      title: 'Productos CBD Más Vendidos en 2026: Qué Deberían Tener los Minoristas',
+      excerpt: 'Descubre los productos CBD de mejor rendimiento para 2026. Perspectivas basadas en datos sobre qué flores, resinas, aceites y comestibles ofrecen las mejores ventas y márgenes para minoristas.',
+      content: `
+        <h2>Productos CBD Más Vendidos en 2026</h2>
+        <p>Saber qué productos tener en stock es la mitad de la batalla para los minoristas de CBD. Basado en datos de ventas de miles de minoristas europeos a los que abastecemos, aquí están los productos CBD de mejor rendimiento para 2026 — y por qué se venden.</p>
+
+        <h3>Mejores Flores CBD</h3>
+        <p>Las <a href="/collections/cbd-flowers">flores CBD</a> siguen siendo la categoría de producto #1 por volumen, representando aproximadamente el 45% de todas las ventas mayoristas de CBD. Los más vendidos en 2026:</p>
+        <ul>
+          <li><strong>Amnesia CBD:</strong> El best-seller perenne en toda Europa. Los clientes aman los efectos de dominancia sativa y el aroma cítrico/haze. Más vendido en Francia, <a href="/cbd-wholesaler-belgium">Bélgica</a>, y <a href="/cbd-wholesaler-spain">España</a>.</li>
+          <li><strong>Gorilla Glue CBD:</strong> Terroso, penetrante, y popular. Fuerte tasa de recompra. Las variedades de interior alcanzan precios premium.</li>
+          <li><strong>Gelato CBD:</strong> Aroma dulce, tipo postre. Crece rápido entre las generaciones más jóvenes. Excelente para clientes de <a href="/cbd-in-tobacco-shops">estancos</a>.</li>
+          <li><strong>Wedding Cake CBD:</strong> Vainilla, dulce, cremoso. Variedad premium de interior con altos márgenes.</li>
+          <li><strong>OG Kush CBD:</strong> Un clásico que nunca pasa de moda. Vendedor fiable en todos los mercados.</li>
+        </ul>
+
+        <h3>Mejores Resinas y Hachís CBD</h3>
+        <p>Las <a href="/collections/cbd-resins">resinas CBD</a> son la categoría #2, creciendo rápido al aproximadamente 30% de las ventas:</p>
+        <ul>
+          <li><strong>Hachís Afgano CBD:</strong> Aspecto y textura tradicionales. El hachís CBD más vendido en Europa. Extremadamente popular en <a href="/cbd-wholesaler-switzerland">Suiza</a> y <a href="/cbd-wholesaler-luxembourg">Luxemburgo</a>.</li>
+          <li><strong>Hachís CBD Ketama:</strong> Otro clásico que resuena con los consumidores. Calidad y aroma consistentes.</li>
+          <li><strong>CBD Crumble (85% CBD):</strong> Concentrado premium con márgenes excepcionales. Atrae a usuarios experimentados que buscan potencia.</li>
+          <li><strong>Ice Rock / Moon Rock CBD:</strong> Productos llamativos que impulsan compras por curiosidad. Excelentes iniciadores de conversación en tiendas.</li>
+        </ul>
+
+        <h3>Mejores Aceites CBD</h3>
+        <p>Los <a href="/collections/cbd-oils">aceites CBD</a> son la categoría de más rápido crecimiento, popular en farmacias, tiendas de bienestar, y online:</p>
+        <ul>
+          <li><strong>Aceite CBD 10% (Full Spectrum):</strong> El punto óptimo de concentración y precio. Más vendido en todos los mercados.</li>
+          <li><strong>Aceite CBD 20% (Full Spectrum):</strong> Segmento premium. Usuarios experimentados que saben lo que quieren. Mayor margen por unidad.</li>
+          <li><strong>CBD + CBN + Melatonina (10%+10%):</strong> Fórmula para dormir. El aceite especializado de más rápido crecimiento. Los consumidores buscan activamente esta combinación.</li>
+          <li><strong>Aceites CBD Saborizados (Cereza, Menta, Melocotón):</strong> Mercado en expansión. Atrae a consumidores a quienes no les gusta el sabor natural del cáñamo.</li>
+        </ul>
+
+        <h3>Categorías Emergentes para 2026</h3>
+        <ul>
+          <li><strong><a href="/cbn-sleep-products">CBN y Productos para Dormir</a>:</strong> Las resinas CBN y fórmulas de melatonina son el segmento de cannabinoide legal de más rápido crecimiento en Europa</li>
+          <li><strong>Comestibles CBD:</strong> Las <a href="/collections/cbd-gummies">gomitas</a> y dulces crecen más del 40% año tras año</li>
+          <li><strong><a href="/cbd-wholesaler-organic">CBD Orgánico</a>:</strong> Segmento premium en crecimiento a medida que los consumidores conscientes de la salud exigen productos libres de pesticidas y cultivados sosteniblemente</li>
+          <li><strong>Cosméticos CBD:</strong> Tópicos, sérums, y cuidado de la piel infusionado con CBD</li>
+        </ul>
+
+        <h3>Estrategia de Stock para 2026</h3>
+        <p>Nuestra división de productos recomendada para un inventario minorista de CBD equilibrado: 40-45% flores (5-10 variedades cubriendo interior e invernadero), 25-30% resinas/hachís (4-6 variedades), 15-20% aceites (3 concentraciones + especialidades), y 10-15% comestibles y accesorios. Ajusta según tu base de clientes y preferencias del mercado local. Lee nuestra <a href="/blog/manage-cbd-wholesale-stock">guía de gestión de stock</a> para consejos detallados de inventario.</p>
+      `,
+    },
+    it: {
+      title: 'Prodotti CBD Più Venduti nel 2026: Cosa Dovrebbero Avere in Stock i Rivenditori',
+      excerpt: "Scopri i prodotti CBD con le migliori performance per il 2026. Approfondimenti basati sui dati su quali fiori, resine, oli e commestibili offrono le migliori vendite e margini per i rivenditori.",
+      content: `
+        <h2>Prodotti CBD Più Venduti nel 2026</h2>
+        <p>Sapere quali prodotti tenere in stock è metà della battaglia per i rivenditori di CBD. Basandoci sui dati di vendita di migliaia di rivenditori europei che riforniamo, ecco i prodotti CBD con le migliori performance per il 2026 — e perché si vendono.</p>
+
+        <h3>Migliori Fiori CBD</h3>
+        <p>I <a href="/collections/cbd-flowers">fiori CBD</a> rimangono la categoria di prodotto #1 per volume, rappresentando circa il 45% di tutte le vendite CBD all'ingrosso. I best seller nel 2026:</p>
+        <ul>
+          <li><strong>Amnesia CBD:</strong> Il best-seller perenne in tutta Europa. I clienti amano gli effetti a dominanza sativa e l'aroma agrumato/haze. Più venduto in Francia, <a href="/cbd-wholesaler-belgium">Belgio</a>, e <a href="/cbd-wholesaler-spain">Spagna</a>.</li>
+          <li><strong>Gorilla Glue CBD:</strong> Terroso, pungente, e popolare. Forte tasso di riacquisto. Le varietà indoor ottengono prezzi premium.</li>
+          <li><strong>Gelato CBD:</strong> Aroma dolce, simile a un dessert. Crescita rapida tra le generazioni più giovani. Eccellente per i clienti delle <a href="/cbd-in-tobacco-shops">tabaccherie</a>.</li>
+          <li><strong>Wedding Cake CBD:</strong> Vaniglia, dolce, cremoso. Varietà premium indoor con alti margini.</li>
+          <li><strong>OG Kush CBD:</strong> Un classico che non passa mai di moda. Venditore affidabile in tutti i mercati.</li>
+        </ul>
+
+        <h3>Migliori Resine e Hashish CBD</h3>
+        <p>Le <a href="/collections/cbd-resins">resine CBD</a> sono la categoria #2, in rapida crescita a circa il 30% delle vendite:</p>
+        <ul>
+          <li><strong>Hashish Afghan CBD:</strong> Aspetto e sensazione tradizionali. L'hashish CBD più venduto in Europa. Estremamente popolare in <a href="/cbd-wholesaler-switzerland">Svizzera</a> e <a href="/cbd-wholesaler-luxembourg">Lussemburgo</a>.</li>
+          <li><strong>Hashish CBD Ketama:</strong> Un altro classico che risuona con i consumatori. Qualità e aroma costanti.</li>
+          <li><strong>CBD Crumble (85% CBD):</strong> Concentrato premium con margini eccezionali. Attira utenti esperti in cerca di potenza.</li>
+          <li><strong>Ice Rock / Moon Rock CBD:</strong> Prodotti accattivanti che guidano acquisti per curiosità. Ottimi spunti di conversazione nei negozi.</li>
+        </ul>
+
+        <h3>Migliori Oli CBD</h3>
+        <p>Gli <a href="/collections/cbd-oils">oli CBD</a> sono la categoria in più rapida crescita, popolare in farmacie, negozi di benessere, e online:</p>
+        <ul>
+          <li><strong>Olio CBD 10% (Full Spectrum):</strong> Il punto ideale di concentrazione e prezzo. Più venduto in tutti i mercati.</li>
+          <li><strong>Olio CBD 20% (Full Spectrum):</strong> Segmento premium. Utenti esperti che sanno cosa vogliono. Margine per unità più alto.</li>
+          <li><strong>CBD + CBN + Melatonina (10%+10%):</strong> Formula per il sonno. Olio speciale in più rapida crescita. I consumatori cercano attivamente questa combinazione.</li>
+          <li><strong>Oli CBD Aromatizzati (Ciliegia, Menta, Pesca):</strong> Mercato in espansione. Attira consumatori a cui non piace il sapore naturale della canapa.</li>
+        </ul>
+
+        <h3>Categorie Emergenti per il 2026</h3>
+        <ul>
+          <li><strong><a href="/cbn-sleep-products">CBN e Prodotti per il Sonno</a>:</strong> Le resine CBN e le formule di melatonina sono il segmento di cannabinoide legale in più rapida crescita in Europa</li>
+          <li><strong>Commestibili CBD:</strong> Le <a href="/collections/cbd-gummies">caramelle gommose</a> e i dolciumi crescono di oltre il 40% anno su anno</li>
+          <li><strong><a href="/cbd-wholesaler-organic">CBD Biologico</a>:</strong> Segmento premium in crescita mentre i consumatori attenti alla salute richiedono prodotti privi di pesticidi e coltivati in modo sostenibile</li>
+          <li><strong>Cosmetici CBD:</strong> Topici, sieri, e cura della pelle infusa di CBD</li>
+        </ul>
+
+        <h3>Strategia di Stock per il 2026</h3>
+        <p>La nostra suddivisione di prodotti raccomandata per un inventario al dettaglio CBD equilibrato: 40-45% fiori (5-10 varietà che coprono indoor e serra), 25-30% resine/hashish (4-6 varietà), 15-20% oli (3 concentrazioni + specialità), e 10-15% commestibili e accessori. Regola in base alla tua base clienti e alle preferenze del mercato locale. Leggi la nostra <a href="/blog/manage-cbd-wholesale-stock">guida alla gestione dello stock</a> per consigli dettagliati sull'inventario.</p>
+      `,
+    },
+    nl: {
+      title: 'Best Verkopende CBD-Producten in 2026: Wat Retailers Op Voorraad Moeten Hebben',
+      excerpt: 'Ontdek de best presterende CBD-producten voor 2026. Datagedreven inzichten over welke bloemen, harsen, oliën en eetwaren de beste verkopen en marges voor retailers leveren.',
+      content: `
+        <h2>Best Verkopende CBD-Producten in 2026</h2>
+        <p>Weten welke producten u op voorraad moet hebben is het halve werk voor CBD-retailers. Gebaseerd op verkoopgegevens van duizenden Europese retailers die wij bevoorraden, hier zijn de best presterende CBD-producten voor 2026 — en waarom ze verkopen.</p>
+
+        <h3>Top CBD-Bloemen</h3>
+        <p><a href="/collections/cbd-flowers">CBD-bloemen</a> blijven de #1 productcategorie op volume, goed voor ongeveer 45% van alle groothandelsverkopen van CBD. De bestsellers in 2026:</p>
+        <ul>
+          <li><strong>Amnesia CBD:</strong> De eeuwige bestseller door heel Europa. Klanten houden van de sativa-dominante effecten en het citrus/haze-aroma. Topverkoper in Frankrijk, <a href="/cbd-wholesaler-belgium">België</a>, en <a href="/cbd-wholesaler-spain">Spanje</a>.</li>
+          <li><strong>Gorilla Glue CBD:</strong> Aards, doordringend, en populair. Sterk herhaalaankooppercentage. Indoor-variëteiten behalen premiumprijzen.</li>
+          <li><strong>Gelato CBD:</strong> Zoet, dessertachtig aroma. Snel groeiend onder jongere doelgroepen. Uitstekend voor klanten van <a href="/cbd-in-tobacco-shops">tabakszaken</a>.</li>
+          <li><strong>Wedding Cake CBD:</strong> Vanille, zoet, romig. Premium indoor-soort met hoge marges.</li>
+          <li><strong>OG Kush CBD:</strong> Een klassieker die nooit uit de mode raakt. Betrouwbare verkoper op alle markten.</li>
+        </ul>
+
+        <h3>Top CBD-Harsen & Hasj</h3>
+        <p><a href="/collections/cbd-resins">CBD-harsen</a> zijn de #2-categorie, snel groeiend naar ongeveer 30% van de verkopen:</p>
+        <ul>
+          <li><strong>Afghan Hash CBD:</strong> Traditionele look en gevoel. De #1 verkopende CBD-hasj in Europa. Extreem populair in <a href="/cbd-wholesaler-switzerland">Zwitserland</a> en <a href="/cbd-wholesaler-luxembourg">Luxemburg</a>.</li>
+          <li><strong>Ketama CBD Hasj:</strong> Nog een klassieker die aanslaat bij consumenten. Consistente kwaliteit en aroma.</li>
+          <li><strong>CBD Crumble (85% CBD):</strong> Premium concentraat met uitzonderlijke marges. Spreekt ervaren gebruikers aan die potentie zoeken.</li>
+          <li><strong>Ice Rock / Moon Rock CBD:</strong> Opvallende producten die nieuwsgierigheidsaankopen stimuleren. Geweldige gespreksstarters in retailomgevingen.</li>
+        </ul>
+
+        <h3>Top CBD-Oliën</h3>
+        <p><a href="/collections/cbd-oils">CBD-oliën</a> zijn de snelst groeiende categorie, populair in apotheken, wellnesswinkels, en online:</p>
+        <ul>
+          <li><strong>CBD-olie 10% (Full Spectrum):</strong> De sweet spot van concentratie en prijs. Bestseller op alle markten.</li>
+          <li><strong>CBD-olie 20% (Full Spectrum):</strong> Premiumsegment. Ervaren gebruikers die weten wat ze willen. Hogere marge per eenheid.</li>
+          <li><strong>CBD + CBN + Melatonine (10%+10%):</strong> Slaapformule. Snelst groeiende specialiteitsolie. Consumenten zoeken actief naar deze combinatie.</li>
+          <li><strong>Gearomatiseerde CBD-Oliën (Kers, Munt, Perzik):</strong> Groeiende markt. Spreekt consumenten aan die de natuurlijke hennepsmaak niet lusten.</li>
+        </ul>
+
+        <h3>Opkomende Categorieën voor 2026</h3>
+        <ul>
+          <li><strong><a href="/cbn-sleep-products">CBN & Slaapproducten</a>:</strong> CBN-harsen en melatonineformules zijn het snelst groeiende legale cannabinoïdesegment in Europa</li>
+          <li><strong>CBD-Eetwaren:</strong> <a href="/collections/cbd-gummies">Gummies</a> en snoep groeien meer dan 40% jaar-op-jaar</li>
+          <li><strong><a href="/cbd-wholesaler-organic">Biologische CBD</a>:</strong> Premiumsegment groeit naarmate gezondheidsbewuste consumenten pesticidevrije, duurzaam geteelde producten eisen</li>
+          <li><strong>CBD-Cosmetica:</strong> Topicals, serums, en met CBD verrijkte huidverzorging</li>
+        </ul>
+
+        <h3>Voorraadstrategie voor 2026</h3>
+        <p>Onze aanbevolen productverdeling voor een gebalanceerde CBD-retailvoorraad: 40-45% bloemen (5-10 soorten die indoor en kas dekken), 25-30% harsen/hasj (4-6 variëteiten), 15-20% oliën (3 concentraties + specialiteiten), en 10-15% eetwaren en accessoires. Pas aan op basis van uw klantenbestand en lokale marktvoorkeuren. Lees onze <a href="/blog/manage-cbd-wholesale-stock">voorraadbeheergids</a> voor gedetailleerde voorraadtips.</p>
+      `,
+    },
+    fi: {
+      title: 'Parhaiten Myyvät CBD-Tuotteet 2026: Mitä Jälleenmyyjien Tulisi Pitää Varastossa',
+      excerpt: 'Löydä parhaiten menestyvät CBD-tuotteet vuodelle 2026. Datavetoisia näkemyksiä siitä, mitkä kukat, hartsit, öljyt ja syötävät tuottavat parhaat myynnit ja katteet jälleenmyyjille.',
+      content: `
+        <h2>Parhaiten Myyvät CBD-Tuotteet 2026</h2>
+        <p>Tietäminen, mitä tuotteita pitää varastossa, on puolet CBD-jälleenmyyjien taistelusta. Perustuen tuhansien eurooppalaisten jälleenmyyjien myyntitietoihin, joita toimitamme, tässä ovat parhaiten menestyvät CBD-tuotteet vuodelle 2026 — ja miksi ne myyvät.</p>
+
+        <h3>Parhaat CBD-Kukat</h3>
+        <p><a href="/collections/cbd-flowers">CBD-kukat</a> pysyvät volyymiltaan #1-tuoteryhmänä, muodostaen noin 45 % kaikesta CBD-tukkumyynnistä. Parhaiten myyvät vuonna 2026:</p>
+        <ul>
+          <li><strong>Amnesia CBD:</strong> Ikuinen bestseller kautta Euroopan. Asiakkaat rakastavat sativa-valtaisia vaikutuksia ja sitrus/haze-aromia. Myydyin Ranskassa, <a href="/cbd-wholesaler-belgium">Belgiassa</a>, ja <a href="/cbd-wholesaler-spain">Espanjassa</a>.</li>
+          <li><strong>Gorilla Glue CBD:</strong> Maanläheinen, pistävä, ja suosittu. Vahva uusintaostoprosentti. Sisäkasvatetut lajikkeet saavuttavat premium-hintoja.</li>
+          <li><strong>Gelato CBD:</strong> Makea, jälkiruokamainen aromi. Kasvaa nopeasti nuorempien ikäryhmien keskuudessa. Erinomainen <a href="/cbd-in-tobacco-shops">tupakkakauppojen</a> asiakkaille.</li>
+          <li><strong>Wedding Cake CBD:</strong> Vanilja, makea, kermainen. Premium sisäkasvatettu lajike korkeilla katteilla.</li>
+          <li><strong>OG Kush CBD:</strong> Klassikko, joka ei koskaan mene pois muodista. Luotettava myyjä kaikilla markkinoilla.</li>
+        </ul>
+
+        <h3>Parhaat CBD-Hartsit ja Hasis</h3>
+        <p><a href="/collections/cbd-resins">CBD-hartsit</a> ovat #2-tuoteryhmä, kasvaen nopeasti noin 30 %:iin myynnistä:</p>
+        <ul>
+          <li><strong>Afghan Hash CBD:</strong> Perinteinen ulkonäkö ja tuntuma. Euroopan myydyin CBD-hasis. Erittäin suosittu <a href="/cbd-wholesaler-switzerland">Sveitsissä</a> ja <a href="/cbd-wholesaler-luxembourg">Luxemburgissa</a>.</li>
+          <li><strong>Ketama CBD Hasis:</strong> Toinen klassikko, joka resonoi kuluttajien kanssa. Johdonmukainen laatu ja aromi.</li>
+          <li><strong>CBD Crumble (85 % CBD):</strong> Premium-konsentraatti poikkeuksellisilla katteilla. Vetoaa kokeneisiin käyttäjiin, jotka etsivät tehoa.</li>
+          <li><strong>Ice Rock / Moon Rock CBD:</strong> Silmiinpistävät tuotteet, jotka ajavat uteliaisuusostoksia. Loistavia keskustelunaiheita vähittäiskaupassa.</li>
+        </ul>
+
+        <h3>Parhaat CBD-Öljyt</h3>
+        <p><a href="/collections/cbd-oils">CBD-öljyt</a> ovat nopeimmin kasvava tuoteryhmä, suosittu apteekeissa, hyvinvointikaupoissa, ja verkossa:</p>
+        <ul>
+          <li><strong>CBD-öljy 10 % (Full Spectrum):</strong> Konsentraation ja hinnan makea kohta. Myydyin kaikilla markkinoilla.</li>
+          <li><strong>CBD-öljy 20 % (Full Spectrum):</strong> Premium-segmentti. Kokeneet käyttäjät, jotka tietävät mitä haluavat. Korkeampi kate yksikköä kohti.</li>
+          <li><strong>CBD + CBN + Melatoniini (10 %+10 %):</strong> Unikaava. Nopeimmin kasvava erikoisöljy. Kuluttajat etsivät aktiivisesti tätä yhdistelmää.</li>
+          <li><strong>Maustetut CBD-öljyt (Kirsikka, Minttu, Persikka):</strong> Kasvava markkina. Vetoaa kuluttajiin, jotka eivät pidä hampun luonnollisesta mausta.</li>
+        </ul>
+
+        <h3>Nousevat Kategoriat 2026</h3>
+        <ul>
+          <li><strong><a href="/cbn-sleep-products">CBN ja Unituotteet</a>:</strong> CBN-hartsit ja melatoniinikaavat ovat Euroopan nopeimmin kasvava laillinen kannabinoidisegmentti</li>
+          <li><strong>CBD-Syötävät:</strong> <a href="/collections/cbd-gummies">Kumimakeiset</a> ja karkit kasvavat yli 40 % vuosittain</li>
+          <li><strong><a href="/cbd-wholesaler-organic">Luomu-CBD</a>:</strong> Premium-segmentti kasvaa, kun terveystietoiset kuluttajat vaativat torjunta-aineettomia, kestävästi kasvatettuja tuotteita</li>
+          <li><strong>CBD-Kosmetiikka:</strong> Paikallishoidot, seerumit, ja CBD-rikastettu ihonhoito</li>
+        </ul>
+
+        <h3>Varastointistrategia 2026</h3>
+        <p>Suosittelemamme tuotejako tasapainoiselle CBD-vähittäisvarastolle: 40-45 % kukkia (5-10 lajiketta kattaen sisä- ja kasvihuoneviljelyn), 25-30 % hartseja/hasista (4-6 lajiketta), 15-20 % öljyjä (3 pitoisuutta + erikoisuudet), ja 10-15 % syötäviä ja lisätarvikkeita. Säädä asiakaskuntasi ja paikallisten markkinamieltymysten perusteella. Lue <a href="/blog/manage-cbd-wholesale-stock">varastonhallintaoppaamme</a> saadaksesi yksityiskohtaisia varastovinkkejä.</p>
+      `,
+    },
+    pt: {
+      title: 'Produtos CBD Mais Vendidos em 2026: O que os Retalhistas Devem Ter em Stock',
+      excerpt: 'Descubra os produtos CBD com melhor desempenho para 2026. Perceções baseadas em dados sobre quais flores, resinas, óleos e comestíveis oferecem as melhores vendas e margens para retalhistas.',
+      content: `
+        <h2>Produtos CBD Mais Vendidos em 2026</h2>
+        <p>Saber quais produtos manter em stock é metade da batalha para os retalhistas de CBD. Com base em dados de vendas de milhares de retalhistas europeus que fornecemos, aqui estão os produtos CBD com melhor desempenho para 2026 — e porque vendem.</p>
+
+        <h3>Melhores Flores CBD</h3>
+        <p>As <a href="/collections/cbd-flowers">flores CBD</a> permanecem a categoria de produto #1 em volume, representando aproximadamente 45% de todas as vendas grossistas de CBD. Os mais vendidos em 2026:</p>
+        <ul>
+          <li><strong>Amnesia CBD:</strong> O best-seller perene em toda a Europa. Os clientes adoram os efeitos de dominância sativa e o aroma cítrico/haze. Mais vendido em França, <a href="/cbd-wholesaler-belgium">Bélgica</a>, e <a href="/cbd-wholesaler-spain">Espanha</a>.</li>
+          <li><strong>Gorilla Glue CBD:</strong> Terroso, pungente, e popular. Forte taxa de recompra. As variedades de interior alcançam preços premium.</li>
+          <li><strong>Gelato CBD:</strong> Aroma doce, tipo sobremesa. Crescimento rápido entre gerações mais jovens. Excelente para clientes de <a href="/cbd-in-tobacco-shops">tabacarias</a>.</li>
+          <li><strong>Wedding Cake CBD:</strong> Baunilha, doce, cremoso. Variedade premium de interior com altas margens.</li>
+          <li><strong>OG Kush CBD:</strong> Um clássico que nunca sai de moda. Vendedor confiável em todos os mercados.</li>
+        </ul>
+
+        <h3>Melhores Resinas e Haxixe CBD</h3>
+        <p>As <a href="/collections/cbd-resins">resinas CBD</a> são a categoria #2, crescendo rapidamente para aproximadamente 30% das vendas:</p>
+        <ul>
+          <li><strong>Haxixe Afegão CBD:</strong> Aparência e textura tradicionais. O haxixe CBD mais vendido na Europa. Extremamente popular na <a href="/cbd-wholesaler-switzerland">Suíça</a> e no <a href="/cbd-wholesaler-luxembourg">Luxemburgo</a>.</li>
+          <li><strong>Haxixe CBD Ketama:</strong> Outro clássico que ressoa com os consumidores. Qualidade e aroma consistentes.</li>
+          <li><strong>CBD Crumble (85% CBD):</strong> Concentrado premium com margens excecionais. Atrai utilizadores experientes que procuram potência.</li>
+          <li><strong>Ice Rock / Moon Rock CBD:</strong> Produtos chamativos que impulsionam compras por curiosidade. Ótimos iniciadores de conversa em ambientes retalhistas.</li>
+        </ul>
+
+        <h3>Melhores Óleos CBD</h3>
+        <p>Os <a href="/collections/cbd-oils">óleos CBD</a> são a categoria de mais rápido crescimento, popular em farmácias, lojas de bem-estar, e online:</p>
+        <ul>
+          <li><strong>Óleo CBD 10% (Full Spectrum):</strong> O ponto ideal de concentração e preço. Mais vendido em todos os mercados.</li>
+          <li><strong>Óleo CBD 20% (Full Spectrum):</strong> Segmento premium. Utilizadores experientes que sabem o que querem. Margem por unidade mais elevada.</li>
+          <li><strong>CBD + CBN + Melatonina (10%+10%):</strong> Fórmula para dormir. Óleo especializado de mais rápido crescimento. Os consumidores procuram ativamente esta combinação.</li>
+          <li><strong>Óleos CBD Aromatizados (Cereja, Menta, Pêssego):</strong> Mercado em expansão. Atrai consumidores que não gostam do sabor natural do cânhamo.</li>
+        </ul>
+
+        <h3>Categorias Emergentes para 2026</h3>
+        <ul>
+          <li><strong><a href="/cbn-sleep-products">CBN e Produtos para o Sono</a>:</strong> As resinas CBN e fórmulas de melatonina são o segmento de canabinoide legal de mais rápido crescimento na Europa</li>
+          <li><strong>Comestíveis CBD:</strong> As <a href="/collections/cbd-gummies">gomas</a> e doces crescem mais de 40% ano a ano</li>
+          <li><strong><a href="/cbd-wholesaler-organic">CBD Orgânico</a>:</strong> Segmento premium em crescimento à medida que consumidores preocupados com a saúde exigem produtos livres de pesticidas e cultivados de forma sustentável</li>
+          <li><strong>Cosméticos CBD:</strong> Tópicos, séruns, e cuidados de pele infundidos com CBD</li>
+        </ul>
+
+        <h3>Estratégia de Stock para 2026</h3>
+        <p>A nossa divisão de produtos recomendada para um inventário retalhista de CBD equilibrado: 40-45% flores (5-10 variedades cobrindo interior e estufa), 25-30% resinas/haxixe (4-6 variedades), 15-20% óleos (3 concentrações + especialidades), e 10-15% comestíveis e acessórios. Ajuste com base na sua base de clientes e preferências do mercado local. Leia o nosso <a href="/blog/manage-cbd-wholesale-stock">guia de gestão de stock</a> para dicas detalhadas de inventário.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
