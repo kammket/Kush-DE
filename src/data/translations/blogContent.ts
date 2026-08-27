@@ -4065,6 +4065,246 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'what-are-terpenes-cbd-guide': {
+    fr: {
+      title: 'Que Sont les Terpènes ? Un Guide Pratique pour les Détaillants CBD',
+      excerpt: "Les terpènes sont les composés aromatiques qui donnent à chaque souche CBD son odeur et son caractère. Ils sont aussi le meilleur prédicteur unique de savoir si un client reviendra pour le même produit une deuxième fois.",
+      content: `
+        <h2>Terpènes : Ce Que les Clients Achètent Réellement</h2>
+        <p>Les terpènes sont des composés aromatiques produits dans les mêmes glandes résineuses que les cannabinoïdes. Ils ne sont pas uniques au chanvre — le limonène est ce qui fait que la peau d'agrume sent les agrumes, le pinène est ce qui fait que les forêts de pins sentent le pin — mais la combinaison particulière qu'une plante produit est ce qui donne à chaque souche son caractère reconnaissable.</p>
+        <p>Cela compte commercialement plus que la plupart des détaillants ne le réalisent. Les clients debout au comptoir ne peuvent pas percevoir un pourcentage de CBD. Ils peuvent percevoir l'odeur, immédiatement et sans explication. Quand quelqu'un dit qu'une fleur est "meilleure" qu'une autre à la même teneur en CBD, il décrit presque toujours son profil de terpènes.</p>
+
+        <h3>Les Terpènes Que Vous Rencontrerez le Plus Souvent</h3>
+        <ul>
+          <li><strong>Myrcène :</strong> terreux, musqué, légèrement herbacé. Le terpène le plus commun dans la plupart des variétés de chanvre et une grande partie de ce que les gens décrivent comme une odeur "classique".</li>
+          <li><strong>Limonène :</strong> agrumes brillants. Présent de manière importante dans des souches comme <a href="/products/lemon-haze-crumble">Lemon Haze</a> et un vendeur fiable car l'arôme se lit comme "frais" pour presque tout le monde.</li>
+          <li><strong>Pinène :</strong> pin et romarin acérés. Souvent présent aux côtés du myrcène et contribue au côté "vert" dans le matériel de serre.</li>
+          <li><strong>Caryophyllène :</strong> poivre et clou de girofle. Inhabituel parmi les terpènes en ce qu'il interagit aussi directement avec les récepteurs cannabinoïdes.</li>
+          <li><strong>Linalol :</strong> floral, type lavande. Commun dans les souches commercialisées vers le segment du soir.</li>
+        </ul>
+
+        <h3>Pourquoi la Teneur en Terpènes S'estompe — Et Ce Que Cela Vous Coûte</h3>
+        <p>Les terpènes sont volatils. Ils s'évaporent avec l'exposition à la chaleur, la lumière, et l'air, c'est pourquoi une fleur qui sentait remarquablement bien à son arrivée peut sentir le foin deux mois plus tard dans un bocal mal stocké. La teneur en cannabinoïdes aura à peine bougé ; la chose que les clients jugent réellement se sera effondrée.</p>
+        <p>C'est la raison pratique pour laquelle la discipline de stockage compte dans une boutique CBD, et nous couvrons les spécificités dans notre guide pour <a href="/blog/how-to-store-cbd-flowers-resins-fresh">garder les fleurs et résines CBD fraîches</a>. Si vous achetez en volume, la préservation des terpènes est la différence entre vendre un kilo entier et devoir le solder.</p>
+
+        <h3>Terpènes dans la Résine et le Hash</h3>
+        <p>Parce que la résine est faite à partir des trichomes eux-mêmes, le hash concentre les terpènes avec les cannabinoïdes — c'est pourquoi un bon pressage traditionnel a un nez bien plus intense que la fleur dont il provient. C'est aussi pourquoi un pressage trop chauffé endommage un produit : trop de chaleur pendant la production chasse exactement les composés qui justifient le prix.</p>
+        <p>La différence est plus facile à remarquer en comparant un <a href="/moroccan-cbd-hash-wholesale">pressage marocain traditionnel</a> à un grade fortement raffiné. La filtration multi-passages retire la matière végétale mais retire aussi la teneur en terpènes, ce qui est le compromis honnête derrière notre <a href="/thc-free-cbd-wholesale">gamme 0 % THC</a> : plus propre et plus riche en CBD, moins complexe aromatiquement.</p>
+
+        <h3>Comment Utiliser les Terpènes Lors de l'Achat</h3>
+        <p>Demandez le panel de terpènes, pas seulement le chiffre de cannabinoïdes. Beaucoup de certificats rapportent les deux. Une fleur à 12 % CBD avec un profil de terpènes riche et stratifié se vendra mieux qu'une fleur à 16 % qui ne sent rien, et générera l'achat répété qui construit réellement une boutique.</p>
+        <p>Quand vous commandez des échantillons — de nos <a href="/cbd-sample-packs">packs d'échantillons</a> ou d'un <a href="/products/flower-discovery-pack">pack découverte</a> — sentez-les côte à côte avant de vous engager sur le volume. C'est le contrôle qualité le moins cher à votre disposition.</p>
+        <p>Une note sur ce que nous n'affirmons pas : les terpènes sont fréquemment commercialisés avec des effets spécifiques attachés à chaque composé. La recherche à ce sujet est précoce et contestée, et le cas commercial honnête pour les terpènes n'en dépend pas. L'arôme guide le choix au comptoir et guide l'achat répété — c'est suffisant.</p>
+
+        <h3>Par Où Commencer</h3>
+        <p>Construisez votre étagère autour de la diversité aromatique plutôt que du pourcentage seul. Stockez un agrume-avant, un terreux, un sucré ou style dessert, et laissez les clients choisir par l'odeur. Parcourez la disponibilité actuelle dans <a href="/collections/cbd-flowers">fleurs CBD</a> et <a href="/collections/cbd-resins">résines CBD</a>, ou lisez nos <a href="/best-cbd-strains">guides de souches</a> pour un détail profil par profil.</p>
+      `,
+    },
+    de: {
+      title: 'Was Sind Terpene? Ein Praktischer Leitfaden für CBD-Händler',
+      excerpt: 'Terpene sind die aromatischen Verbindungen, die jeder CBD-Sorte ihren Geruch und Charakter geben. Sie sind auch der beste einzelne Prädiktor dafür, ob ein Kunde für dasselbe Produkt zweimal zurückkommt.',
+      content: `
+        <h2>Terpene: Was Kunden Tatsächlich Kaufen</h2>
+        <p>Terpene sind aromatische Verbindungen, die in denselben Harzdrüsen wie Cannabinoide produziert werden. Sie sind nicht einzigartig für Hanf — Limonen ist das, was Zitrusschale nach Zitrus riechen lässt, Pinen ist das, was Kiefernwälder nach Kiefer riechen lässt — aber die besondere Kombination, die eine Pflanze produziert, ist das, was jeder Sorte ihren erkennbaren Charakter gibt.</p>
+        <p>Dies ist kommerziell wichtiger, als die meisten Händler erkennen. Kunden, die an einem Tresen stehen, können einen CBD-Prozentsatz nicht wahrnehmen. Sie können Geruch wahrnehmen, sofort und ohne Erklärung. Wenn jemand sagt, eine Blüte sei "besser" als eine andere bei gleichem CBD-Gehalt, beschreiben sie fast immer ihr Terpenprofil.</p>
+
+        <h3>Die Terpene, Denen Sie am Häufigsten Begegnen Werden</h3>
+        <ul>
+          <li><strong>Myrcen:</strong> erdig, moschusartig, leicht kräuterig. Das häufigste Terpen in den meisten Hanfsorten und ein großer Teil dessen, was Menschen als "klassischen" Geruch beschreiben.</li>
+          <li><strong>Limonen:</strong> helles Zitrus. Prominent in Sorten wie <a href="/products/lemon-haze-crumble">Lemon Haze</a> und ein zuverlässiger Verkäufer, weil das Aroma für fast jeden als "frisch" gelesen wird.</li>
+          <li><strong>Pinen:</strong> scharfer Kiefer und Rosmarin. Oft neben Myrcen vorhanden und trägt zur "grünen" Kante in Gewächshausmaterial bei.</li>
+          <li><strong>Caryophyllen:</strong> Pfeffer und Nelke. Unter Terpenen ungewöhnlich, da es auch direkt mit Cannabinoidrezeptoren interagiert.</li>
+          <li><strong>Linalool:</strong> blumig, lavendelartig. Häufig in Sorten, die auf das Abendsegment ausgerichtet sind.</li>
+        </ul>
+
+        <h3>Warum Terpengehalt Verblasst — Und Was Es Sie Kostet</h3>
+        <p>Terpene sind flüchtig. Sie verdunsten bei Hitze-, Licht- und Luftexposition, weshalb eine Blüte, die bei Ankunft bemerkenswert roch, zwei Monate später in einem schlecht gelagerten Glas wie Heu riechen kann. Der Cannabinoidgehalt wird sich kaum bewegt haben; das, was Kunden tatsächlich beurteilen, wird zusammengebrochen sein.</p>
+        <p>Dies ist der praktische Grund, warum Lagerdisziplin in einem CBD-Laden wichtig ist, und wir behandeln die Einzelheiten in unserem Leitfaden zum <a href="/blog/how-to-store-cbd-flowers-resins-fresh">Frischhalten von CBD-Blüten und Harzen</a>. Wenn Sie in großen Mengen kaufen, ist Terpenerhaltung der Unterschied zwischen dem Verkauf eines Kilos und dessen Reduzierung.</p>
+
+        <h3>Terpene in Harz und Haschisch</h3>
+        <p>Da Harz aus den Trichomen selbst hergestellt wird, konzentriert Haschisch Terpene zusammen mit Cannabinoiden — weshalb eine gute traditionelle Pressung eine weit intensivere Nase hat als die Blüte, aus der sie stammt. Es ist auch der Grund, warum überhitzte Pressung ein Produkt schädigt: zu viel Hitze während der Produktion vertreibt genau die Verbindungen, die den Preis rechtfertigen.</p>
+        <p>Der Unterschied ist am einfachsten zu bemerken, wenn man eine <a href="/moroccan-cbd-hash-wholesale">traditionelle marokkanische Pressung</a> mit einer stark raffinierten Qualität vergleicht. Mehrstufige Filtration entfernt Pflanzenmaterial, streift aber auch Terpengehalt ab, was der ehrliche Kompromiss hinter unserer <a href="/thc-free-cbd-wholesale">0 % THC-Range</a> ist: sauberer und höher im CBD-Gehalt, aromatisch weniger komplex.</p>
+
+        <h3>Wie Man Terpene beim Kauf Verwendet</h3>
+        <p>Fragen Sie nach dem Terpenpanel, nicht nur nach der Cannabinoidzahl. Viele Zertifikate berichten beides. Eine Blüte mit 12 % CBD und einem reichen, geschichteten Terpenprofil wird besser verkaufen als eine 16 %-Blüte, die nach nichts riecht, und wird den Wiederholungskauf generieren, der einen Laden tatsächlich aufbaut.</p>
+        <p>Wenn Sie Proben bestellen — von unseren <a href="/cbd-sample-packs">Probierpaketen</a> oder einem <a href="/products/flower-discovery-pack">Entdeckungspaket</a> — riechen Sie sie nebeneinander, bevor Sie sich für ein Volumen entscheiden. Es ist die günstigste Qualitätskontrolle, die Ihnen zur Verfügung steht.</p>
+        <p>Eine Anmerkung zu dem, was wir nicht behaupten: Terpene werden häufig mit spezifischen Effekten vermarktet, die jeder Verbindung zugeschrieben werden. Die Forschung dazu ist früh und umstritten, und der ehrliche kommerzielle Fall für Terpene hängt nicht davon ab. Aroma treibt die Wahl am Tresen an und treibt Wiederholungskäufe an — das ist genug.</p>
+
+        <h3>Wo Man Anfangen Sollte</h3>
+        <p>Bauen Sie Ihr Regal um aromatische Vielfalt statt nur um den Prozentsatz auf. Lagern Sie eine zitrusbetonte, eine erdige, eine süße oder dessertartige, und lassen Sie Kunden nach Geruch wählen. Durchsuchen Sie die aktuelle Verfügbarkeit in <a href="/collections/cbd-flowers">CBD-Blüten</a> und <a href="/collections/cbd-resins">CBD-Harzen</a>, oder lesen Sie unsere <a href="/best-cbd-strains">Sortenleitfäden</a> für Profil-für-Profil-Details.</p>
+      `,
+    },
+    es: {
+      title: '¿Qué Son los Terpenos? Una Guía Práctica para Minoristas de CBD',
+      excerpt: 'Los terpenos son los compuestos aromáticos que dan a cada variedad CBD su olor y carácter. También son el mejor predictor único de si un cliente volverá por el mismo producto dos veces.',
+      content: `
+        <h2>Terpenos: Lo Que los Clientes Realmente Están Comprando</h2>
+        <p>Los terpenos son compuestos aromáticos producidos en las mismas glándulas resinosas que los cannabinoides. No son exclusivos del cáñamo — el limoneno es lo que hace que la cáscara de cítricos huela a cítricos, el pineno es lo que hace que los bosques de pinos huelan a pino — pero la combinación particular que produce una planta es lo que le da a cada variedad su carácter reconocible.</p>
+        <p>Esto importa comercialmente más de lo que la mayoría de los minoristas se dan cuenta. Los clientes de pie en un mostrador no pueden percibir un porcentaje de CBD. Pueden percibir el olor, inmediatamente y sin explicación. Cuando alguien dice que una flor es "mejor" que otra con el mismo contenido de CBD, casi siempre está describiendo su perfil de terpenos.</p>
+
+        <h3>Los Terpenos que Más Encontrarás</h3>
+        <ul>
+          <li><strong>Mirceno:</strong> terroso, almizclado, ligeramente herbal. El terpeno más común en la mayoría de las variedades de cáñamo y una gran parte de lo que la gente describe como olor "clásico".</li>
+          <li><strong>Limoneno:</strong> cítrico brillante. Prominente en variedades como <a href="/products/lemon-haze-crumble">Lemon Haze</a> y un vendedor fiable porque el aroma se lee como "fresco" para casi todos.</li>
+          <li><strong>Pineno:</strong> pino y romero agudos. A menudo presente junto al mirceno y contribuye al matiz "verde" en material de invernadero.</li>
+          <li><strong>Cariofileno:</strong> pimienta y clavo. Inusual entre los terpenos en que también interactúa directamente con los receptores cannabinoides.</li>
+          <li><strong>Linalol:</strong> floral, tipo lavanda. Común en variedades comercializadas hacia el segmento nocturno.</li>
+        </ul>
+
+        <h3>Por Qué se Desvanece el Contenido de Terpenos — Y Lo Que Te Cuesta</h3>
+        <p>Los terpenos son volátiles. Se evaporan con la exposición al calor, luz, y aire, por eso una flor que olía notable a su llegada puede oler a heno dos meses después en un frasco mal almacenado. El contenido de cannabinoides apenas se habrá movido; lo que los clientes realmente juzgan se habrá colapsado.</p>
+        <p>Esta es la razón práctica por la que la disciplina de almacenamiento importa en una tienda de CBD, y cubrimos los detalles en nuestra guía para <a href="/blog/how-to-store-cbd-flowers-resins-fresh">mantener frescas las flores y resinas CBD</a>. Si compras en volumen, la preservación de terpenos es la diferencia entre vender un kilo completo y tener que rebajarlo.</p>
+
+        <h3>Terpenos en Resina y Hachís</h3>
+        <p>Debido a que la resina está hecha de los propios tricomas, el hachís concentra terpenos junto con cannabinoides — por eso un buen prensado tradicional tiene una nariz mucho más intensa que la flor de la que proviene. También es por eso que el prensado sobrecalentado daña un producto: demasiado calor durante la producción expulsa exactamente los compuestos que justifican el precio.</p>
+        <p>La diferencia es más fácil de notar comparando un <a href="/moroccan-cbd-hash-wholesale">prensado marroquí tradicional</a> con un grado muy refinado. La filtración multi-paso elimina material vegetal pero también elimina el contenido de terpenos, que es el compromiso honesto detrás de nuestra <a href="/thc-free-cbd-wholesale">gama 0% THC</a>: más limpia y más alta en CBD, menos compleja aromáticamente.</p>
+
+        <h3>Cómo Usar los Terpenos al Comprar</h3>
+        <p>Pide el panel de terpenos, no solo la cifra de cannabinoides. Muchos certificados reportan ambos. Una flor con 12% CBD con un perfil de terpenos rico y en capas se venderá más que una flor al 16% que no huele a nada, y generará la compra repetida que realmente construye una tienda.</p>
+        <p>Cuando pidas muestras — de nuestros <a href="/cbd-sample-packs">packs de muestra</a> o un <a href="/products/flower-discovery-pack">pack de descubrimiento</a> — huélelas lado a lado antes de comprometerte con un volumen. Es el control de calidad más barato disponible para ti.</p>
+        <p>Una nota sobre lo que no estamos afirmando: los terpenos se comercializan frecuentemente con efectos específicos adjuntos a cada compuesto. La investigación al respecto es temprana y disputada, y el caso comercial honesto para los terpenos no depende de ello. El aroma impulsa la elección en el mostrador e impulsa la compra repetida — eso es suficiente.</p>
+
+        <h3>Por Dónde Empezar</h3>
+        <p>Construye tu estante en torno a la diversidad aromática en lugar de solo el porcentaje. Ten en stock un cítrico, uno terroso, uno dulce o estilo postre, y deja que los clientes elijan por olfato. Explora la disponibilidad actual en <a href="/collections/cbd-flowers">flores CBD</a> y <a href="/collections/cbd-resins">resinas CBD</a>, o lee nuestras <a href="/best-cbd-strains">guías de variedades</a> para detalles perfil por perfil.</p>
+      `,
+    },
+    it: {
+      title: 'Cosa Sono i Terpeni? Una Guida Pratica per i Rivenditori CBD',
+      excerpt: 'I terpeni sono i composti aromatici che danno a ciascuna varietà CBD il suo odore e carattere. Sono anche il miglior singolo predittore se un cliente tornerà per lo stesso prodotto due volte.',
+      content: `
+        <h2>Terpeni: Cosa Stanno Realmente Acquistando i Clienti</h2>
+        <p>I terpeni sono composti aromatici prodotti nelle stesse ghiandole resinose dei cannabinoidi. Non sono esclusivi della canapa — il limonene è ciò che fa odorare la buccia degli agrumi come agrumi, il pinene è ciò che fa odorare le foreste di pini come pino — ma la particolare combinazione che una pianta produce è ciò che dà a ciascuna varietà il suo carattere riconoscibile.</p>
+        <p>Questo conta commercialmente più di quanto la maggior parte dei rivenditori si renda conto. I clienti in piedi a un banco non possono percepire una percentuale di CBD. Possono percepire l'odore, immediatamente e senza spiegazione. Quando qualcuno dice che un fiore è "migliore" di un altro allo stesso contenuto di CBD, sta quasi sempre descrivendo il suo profilo terpenico.</p>
+
+        <h3>I Terpeni che Incontrerai Più Spesso</h3>
+        <ul>
+          <li><strong>Mircene:</strong> terroso, muschiato, leggermente erbaceo. Il terpene più comune nella maggior parte delle varietà di canapa e gran parte di ciò che le persone descrivono come odore "classico".</li>
+          <li><strong>Limonene:</strong> agrumi brillanti. Prominente in varietà come <a href="/products/lemon-haze-crumble">Lemon Haze</a> ed è un venditore affidabile perché l'aroma si legge come "fresco" per quasi tutti.</li>
+          <li><strong>Pinene:</strong> pino acuto e rosmarino. Spesso presente insieme al mircene e contribuisce al lato "verde" nel materiale da serra.</li>
+          <li><strong>Cariofillene:</strong> pepe e chiodi di garofano. Insolito tra i terpeni in quanto interagisce anche direttamente con i recettori cannabinoidi.</li>
+          <li><strong>Linalolo:</strong> floreale, simile alla lavanda. Comune nelle varietà commercializzate verso il segmento serale.</li>
+        </ul>
+
+        <h3>Perché il Contenuto di Terpeni Svanisce — E Cosa Ti Costa</h3>
+        <p>I terpeni sono volatili. Evaporano con l'esposizione a calore, luce, e aria, motivo per cui un fiore che odorava straordinariamente all'arrivo può odorare di fieno due mesi dopo in un barattolo mal conservato. Il contenuto di cannabinoidi si sarà a malapena mosso; ciò che i clienti effettivamente giudicano sarà crollato.</p>
+        <p>Questa è la ragione pratica per cui la disciplina di conservazione conta in un negozio CBD, e trattiamo i dettagli nella nostra guida a <a href="/blog/how-to-store-cbd-flowers-resins-fresh">mantenere freschi fiori e resine CBD</a>. Se acquisti in volume, la conservazione dei terpeni è la differenza tra vendere un chilo intero e doverlo scontare.</p>
+
+        <h3>Terpeni nella Resina e nell'Hashish</h3>
+        <p>Poiché la resina è fatta dai tricomi stessi, l'hashish concentra i terpeni insieme ai cannabinoidi — motivo per cui una buona pressatura tradizionale ha un naso molto più intenso del fiore da cui proviene. È anche il motivo per cui una pressatura surriscaldata danneggia un prodotto: troppo calore durante la produzione scaccia esattamente i composti che giustificano il prezzo.</p>
+        <p>La differenza è più facile da notare confrontando una <a href="/moroccan-cbd-hash-wholesale">pressatura marocchina tradizionale</a> con un grado altamente raffinato. La filtrazione multi-passaggio rimuove materia vegetale ma elimina anche il contenuto di terpeni, che è il compromesso onesto dietro la nostra <a href="/thc-free-cbd-wholesale">gamma 0% THC</a>: più pulita e più alta in CBD, meno complessa aromaticamente.</p>
+
+        <h3>Come Usare i Terpeni Quando Acquisti</h3>
+        <p>Chiedi il pannello dei terpeni, non solo la cifra dei cannabinoidi. Molti certificati riportano entrambi. Un fiore al 12% CBD con un profilo terpenico ricco e stratificato venderà più di un fiore al 16% che non odora di nulla, e genererà l'acquisto ripetuto che effettivamente costruisce un negozio.</p>
+        <p>Quando ordini campioni — dai nostri <a href="/cbd-sample-packs">pacchetti campione</a> o un <a href="/products/flower-discovery-pack">pacchetto scoperta</a> — annusali fianco a fianco prima di impegnarti nel volume. È il controllo qualità più economico a tua disposizione.</p>
+        <p>Una nota su ciò che non stiamo affermando: i terpeni sono frequentemente commercializzati con effetti specifici attribuiti a ciascun composto. La ricerca a riguardo è precoce e contestata, e il caso commerciale onesto per i terpeni non dipende da essa. L'aroma guida la scelta al banco e guida l'acquisto ripetuto — questo è sufficiente.</p>
+
+        <h3>Da Dove Iniziare</h3>
+        <p>Costruisci il tuo scaffale attorno alla diversità aromatica piuttosto che solo alla percentuale. Tieni in stock un agrumato, un terroso, un dolce o stile dessert, e lascia che i clienti scelgano in base all'odore. Sfoglia la disponibilità attuale in <a href="/collections/cbd-flowers">fiori CBD</a> e <a href="/collections/cbd-resins">resine CBD</a>, o leggi le nostre <a href="/best-cbd-strains">guide alle varietà</a> per dettagli profilo per profilo.</p>
+      `,
+    },
+    nl: {
+      title: 'Wat Zijn Terpenen? Een Praktische Gids voor CBD-Retailers',
+      excerpt: 'Terpenen zijn de aromatische verbindingen die elke CBD-soort zijn geur en karakter geven. Ze zijn ook de beste enkele voorspeller of een klant terugkomt voor hetzelfde product twee keer.',
+      content: `
+        <h2>Terpenen: Wat Klanten Daadwerkelijk Kopen</h2>
+        <p>Terpenen zijn aromatische verbindingen geproduceerd in dezelfde harsklieren als cannabinoïden. Ze zijn niet uniek voor hennep — limoneen is wat citrusschil naar citrus laat ruiken, pineen is wat dennenbossen naar den laat ruiken — maar de specifieke combinatie die een plant produceert is wat elke soort zijn herkenbare karakter geeft.</p>
+        <p>Dit is commercieel belangrijker dan de meeste retailers beseffen. Klanten die aan een toonbank staan, kunnen geen CBD-percentage waarnemen. Ze kunnen geur waarnemen, onmiddellijk en zonder uitleg. Wanneer iemand zegt dat een bloem "beter" is dan een andere bij hetzelfde CBD-gehalte, beschrijven ze bijna altijd het terpeenprofiel.</p>
+
+        <h3>De Terpenen Die U het Vaakst Zult Tegenkomen</h3>
+        <ul>
+          <li><strong>Myrceen:</strong> aards, muskusachtig, licht kruidig. Het meest voorkomende terpeen in de meeste hennepvariëteiten en een groot deel van wat mensen beschrijven als een "klassieke" geur.</li>
+          <li><strong>Limoneen:</strong> heldere citrus. Prominent aanwezig in soorten zoals <a href="/products/lemon-haze-crumble">Lemon Haze</a> en een betrouwbare verkoper omdat het aroma voor bijna iedereen als "fris" leest.</li>
+          <li><strong>Pineen:</strong> scherpe den en rozemarijn. Vaak aanwezig naast myrceen en draagt bij aan de "groene" rand in kasmateriaal.</li>
+          <li><strong>Caryofylleen:</strong> peper en kruidnagel. Ongewoon onder terpenen doordat het ook direct interageert met cannabinoïdereceptoren.</li>
+          <li><strong>Linalool:</strong> bloemig, lavendelachtig. Veelvoorkomend in soorten die op het avondsegment gericht zijn.</li>
+        </ul>
+
+        <h3>Waarom Terpeeninhoud Vervaagt — En Wat Het U Kost</h3>
+        <p>Terpenen zijn vluchtig. Ze verdampen bij blootstelling aan hitte, licht, en lucht, daarom vervaagt het aroma voordat de potentie dat doet. Een bloem die bij aankomst opmerkelijk rook, kan twee maanden later naar hooi ruiken in een slecht opgeslagen pot. Het cannabinoïdegehalte zal nauwelijks zijn veranderd; wat klanten daadwerkelijk beoordelen zal zijn ingestort.</p>
+        <p>Dit is de praktische reden waarom opslagdiscipline belangrijk is in een CBD-winkel, en we behandelen de specifieke details in onze gids voor <a href="/blog/how-to-store-cbd-flowers-resins-fresh">het vers houden van CBD-bloemen en harsen</a>. Als u in volume koopt, is terpeenbehoud het verschil tussen het verkopen van een hele kilo en het moeten afprijzen ervan.</p>
+
+        <h3>Terpenen in Hars en Hasj</h3>
+        <p>Omdat hars gemaakt is van de trichomen zelf, concentreert hasj terpenen samen met cannabinoïden — daarom heeft een goede traditionele persing een veel intensere neus dan de bloem waarvan het afkomstig is. Het is ook waarom oververhitte persing een product beschadigt: te veel hitte tijdens de productie drijft precies de verbindingen weg die de prijs rechtvaardigen.</p>
+        <p>Het verschil is het gemakkelijkst op te merken door een <a href="/moroccan-cbd-hash-wholesale">traditionele Marokkaanse persing</a> te vergelijken met een sterk geraffineerde graad. Meervoudige filtratie verwijdert plantmateriaal maar strip ook terpeeninhoud, wat de eerlijke afweging is achter onze <a href="/thc-free-cbd-wholesale">0% THC-reeks</a>: schoner en hoger in CBD, minder aromatisch complex.</p>
+
+        <h3>Hoe Terpenen te Gebruiken Bij het Kopen</h3>
+        <p>Vraag naar het terpeenpanel, niet alleen het cannabinoïdecijfer. Veel certificaten rapporteren beide. Een bloem met 12% CBD met een rijk, gelaagd terpeenprofiel zal beter verkopen dan een bloem van 16% die naar niets ruikt, en zal de herhaalaankoop genereren die een winkel daadwerkelijk opbouwt.</p>
+        <p>Wanneer u monsters bestelt — van onze <a href="/cbd-sample-packs">proefpakketten</a> of een <a href="/products/flower-discovery-pack">ontdekkingspakket</a> — ruik ze naast elkaar voordat u zich vastlegt op volume. Het is de goedkoopste kwaliteitscontrole die u tot uw beschikking heeft.</p>
+        <p>Een opmerking over wat we niet beweren: terpenen worden vaak op de markt gebracht met specifieke effecten die aan elke verbinding zijn gekoppeld. Het onderzoek daarnaar is vroeg en betwist, en het eerlijke commerciële argument voor terpenen hangt daar niet van af. Aroma stuurt keuze aan de toonbank en stuurt herhaalaankoop aan — dat is genoeg.</p>
+
+        <h3>Waar te Beginnen</h3>
+        <p>Bouw uw schap rond aromatische diversiteit in plaats van alleen percentage. Voorraad één citrusgericht, één aards, één zoet of dessertachtig, en laat klanten kiezen op geur. Blader door de huidige beschikbaarheid in <a href="/collections/cbd-flowers">CBD-bloemen</a> en <a href="/collections/cbd-resins">CBD-harsen</a>, of lees onze <a href="/best-cbd-strains">soortgidsen</a> voor profiel-per-profiel details.</p>
+      `,
+    },
+    fi: {
+      title: 'Mitä Ovat Terpeenit? Käytännön Opas CBD-Jälleenmyyjille',
+      excerpt: 'Terpeenit ovat aromaattisia yhdisteitä, jotka antavat jokaiselle CBD-lajikkeelle sen tuoksun ja luonteen. Ne ovat myös paras yksittäinen ennustaja siitä, palaako asiakas saman tuotteen luo kahdesti.',
+      content: `
+        <h2>Terpeenit: Mitä Asiakkaat Todella Ostavat</h2>
+        <p>Terpeenit ovat aromaattisia yhdisteitä, jotka tuotetaan samoissa hartsirauhasissa kuin kannabinoidit. Ne eivät ole ainutlaatuisia hampulle — limoneeni saa sitrushedelmän kuoren tuoksumaan sitrukselta, pineeni saa mäntymetsät tuoksumaan männyltä — mutta erityinen yhdistelmä, jonka kasvi tuottaa, antaa jokaiselle lajikkeelle sen tunnistettavan luonteen.</p>
+        <p>Tämä on kaupallisesti tärkeämpää kuin useimmat jälleenmyyjät tajuavat. Tiskillä seisovat asiakkaat eivät voi havaita CBD-prosenttia. He voivat havaita hajun, välittömästi ja ilman selitystä. Kun joku sanoo kukan olevan "parempi" kuin toinen samalla CBD-pitoisuudella, he kuvailevat lähes aina sen terpeeniprofiilia.</p>
+
+        <h3>Terpeenit, Joita Kohtaat Useimmin</h3>
+        <ul>
+          <li><strong>Myrseeni:</strong> maanläheinen, myski, hieman yrttinen. Yleisin terpeeni useimmissa hamppulajikkeissa ja suuri osa siitä, mitä ihmiset kuvailevat "klassiseksi" tuoksuksi.</li>
+          <li><strong>Limoneeni:</strong> kirkas sitrus. Näkyvä lajikkeissa kuten <a href="/products/lemon-haze-crumble">Lemon Haze</a> ja luotettava myyjä, koska aromi luetaan "tuoreeksi" lähes kaikille.</li>
+          <li><strong>Pineeni:</strong> terävä mänty ja rosmariini. Usein läsnä myrseenin rinnalla ja edistää "vihreää" reunaa kasvihuonemateriaalissa.</li>
+          <li><strong>Kariofylleeni:</strong> pippuri ja neilikka. Epätavallinen terpeenien joukossa siinä, että se myös vaikuttaa suoraan kannabinoidireseptoreihin.</li>
+          <li><strong>Linalooli:</strong> kukkainen, laventelinkaltainen. Yleinen iltasegmenttiin markkinoiduissa lajikkeissa.</li>
+        </ul>
+
+        <h3>Miksi Terpeenipitoisuus Haalistuu — Ja Mitä Se Maksaa Sinulle</h3>
+        <p>Terpeenit ovat haihtuvia. Ne haihtuvat lämmölle, valolle, ja ilmalle altistuessa, minkä vuoksi kukka, joka tuoksui huomattavalta saapuessaan, voi tuoksua heinältä kaksi kuukautta myöhemmin huonosti säilytetyssä purkissa. Kannabinoidipitoisuus on tuskin muuttunut; se, mitä asiakkaat todella arvioivat, on romahtanut.</p>
+        <p>Tämä on käytännön syy siihen, miksi säilytyskuri on tärkeää CBD-kaupassa, ja käymme yksityiskohdat läpi oppaassamme <a href="/blog/how-to-store-cbd-flowers-resins-fresh">CBD-kukkien ja hartsien tuoreena pitämisestä</a>. Jos ostat suurina määrinä, terpeenien säilyttäminen on ero kilon myymisen ja sen alentamisen välillä.</p>
+
+        <h3>Terpeenit Hartsissa ja Hasiksessa</h3>
+        <p>Koska hartsi valmistetaan itse trikomeista, hasis konsentroi terpeenejä yhdessä kannabinoidien kanssa — minkä vuoksi hyvällä perinteisellä puristuksella on paljon intensiivisempi tuoksu kuin kukalla, josta se on peräisin. Se on myös syy, miksi ylikuumennettu puristus vahingoittaa tuotetta: liika lämpö tuotannon aikana karkottaa juuri ne yhdisteet, jotka oikeuttavat hinnan.</p>
+        <p>Ero on helpoin huomata vertaamalla <a href="/moroccan-cbd-hash-wholesale">perinteistä marokkolaista puristusta</a> voimakkaasti puhdistettuun laatuun. Monivaiheinen suodatus poistaa kasviainesta mutta poistaa myös terpeenipitoisuutta, mikä on rehellinen kompromissi <a href="/thc-free-cbd-wholesale">0 % THC -valikoimamme</a> takana: puhtaampi ja korkeampi CBD-pitoisuus, vähemmän aromaattisesti monimutkainen.</p>
+
+        <h3>Kuinka Käyttää Terpeenejä Ostaessa</h3>
+        <p>Kysy terpeenipaneelia, ei vain kannabinoidilukua. Monet todistukset raportoivat molemmat. Kukka, jossa on 12 % CBD:tä rikkaalla, kerroksellisella terpeeniprofiililla, myy paremmin kuin 16 % kukka, joka ei tuoksu miltään, ja se synnyttää uusintaoston, joka todella rakentaa kaupan.</p>
+        <p>Kun tilaat näytteitä — <a href="/cbd-sample-packs">näytepaketeistamme</a> tai <a href="/products/flower-discovery-pack">löytöpaketista</a> — haista niitä rinnakkain ennen sitoutumista volyymiin. Se on halvin laadunvalvonta, joka on käytettävissäsi.</p>
+        <p>Huomautus siitä, mitä emme väitä: terpeenejä markkinoidaan usein tiettyihin vaikutuksiin liitettynä kuhunkin yhdisteeseen. Tutkimus siitä on varhaisessa vaiheessa ja kiistanalainen, eikä rehellinen kaupallinen peruste terpeeneille riipu siitä. Aromi ohjaa valintaa tiskillä ja ohjaa uusintaostoa — se riittää.</p>
+
+        <h3>Mistä Aloittaa</h3>
+        <p>Rakenna hyllysi aromien monimuotoisuuden ympärille pelkän prosenttiosuuden sijaan. Pidä varastossa yksi sitruspainotteinen, yksi maanläheinen, yksi makea tai jälkiruokamainen, ja anna asiakkaiden valita hajun perusteella. Selaa nykyistä saatavuutta <a href="/collections/cbd-flowers">CBD-kukissa</a> ja <a href="/collections/cbd-resins">CBD-hartseissa</a>, tai lue <a href="/best-cbd-strains">lajikeoppaamme</a> profiili profiililta -yksityiskohtia varten.</p>
+      `,
+    },
+    pt: {
+      title: 'O que São Terpenos? Um Guia Prático para Retalhistas de CBD',
+      excerpt: 'Os terpenos são os compostos aromáticos que dão a cada variedade CBD o seu cheiro e carácter. São também o melhor preditor único de se um cliente voltará pelo mesmo produto duas vezes.',
+      content: `
+        <h2>Terpenos: O Que os Clientes Estão Realmente a Comprar</h2>
+        <p>Os terpenos são compostos aromáticos produzidos nas mesmas glândulas de resina que os canabinoides. Não são exclusivos do cânhamo — o limoneno é o que faz a casca de citrinos cheirar a citrinos, o pineno é o que faz as florestas de pinheiros cheirar a pinheiro — mas a combinação particular que uma planta produz é o que dá a cada variedade o seu carácter reconhecível.</p>
+        <p>Isto importa comercialmente mais do que a maioria dos retalhistas percebe. Os clientes de pé num balcão não conseguem perceber uma percentagem de CBD. Conseguem perceber o cheiro, imediatamente e sem explicação. Quando alguém diz que uma flor é "melhor" do que outra com o mesmo teor de CBD, está quase sempre a descrever o seu perfil de terpenos.</p>
+
+        <h3>Os Terpenos que Vai Encontrar Mais Frequentemente</h3>
+        <ul>
+          <li><strong>Mirceno:</strong> terroso, almiscarado, ligeiramente herbal. O terpeno mais comum na maioria das variedades de cânhamo e grande parte do que as pessoas descrevem como cheiro "clássico".</li>
+          <li><strong>Limoneno:</strong> citrinos brilhantes. Proeminente em variedades como <a href="/products/lemon-haze-crumble">Lemon Haze</a> e um vendedor fiável porque o aroma é lido como "fresco" para quase todos.</li>
+          <li><strong>Pineno:</strong> pinheiro afiado e alecrim. Frequentemente presente junto ao mirceno e contribui para o toque "verde" em material de estufa.</li>
+          <li><strong>Cariofileno:</strong> pimenta e cravinho. Incomum entre os terpenos por também interagir diretamente com os recetores canabinoides.</li>
+          <li><strong>Linalol:</strong> floral, tipo lavanda. Comum em variedades comercializadas para o segmento noturno.</li>
+        </ul>
+
+        <h3>Porque o Teor de Terpenos Desvanece — E O Que Isso Lhe Custa</h3>
+        <p>Os terpenos são voláteis. Evaporam com a exposição ao calor, luz, e ar, razão pela qual uma flor que cheirava notavelmente bem à chegada pode cheirar a feno dois meses depois num frasco mal armazenado. O teor de canabinoides mal se terá movido; a coisa que os clientes realmente julgam terá colapsado.</p>
+        <p>Esta é a razão prática pela qual a disciplina de armazenamento importa numa loja de CBD, e cobrimos as especificidades no nosso guia para <a href="/blog/how-to-store-cbd-flowers-resins-fresh">manter as flores e resinas CBD frescas</a>. Se está a comprar em volume, a preservação de terpenos é a diferença entre vender um quilo inteiro e ter de o descontar.</p>
+
+        <h3>Terpenos em Resina e Haxixe</h3>
+        <p>Como a resina é feita a partir dos próprios tricomas, o haxixe concentra terpenos juntamente com canabinoides — razão pela qual uma boa prensagem tradicional tem um nariz muito mais intenso do que a flor de onde veio. É também por isso que a prensagem sobreaquecida danifica um produto: demasiado calor durante a produção afasta exatamente os compostos que justificam o preço.</p>
+        <p>A diferença é mais fácil de notar comparando uma <a href="/moroccan-cbd-hash-wholesale">prensagem marroquina tradicional</a> com um grau altamente refinado. A filtração multi-passagem remove matéria vegetal mas também remove teor de terpenos, que é o compromisso honesto por trás da nossa <a href="/thc-free-cbd-wholesale">gama 0% THC</a>: mais limpa e mais alta em CBD, menos complexa aromaticamente.</p>
+
+        <h3>Como Usar Terpenos Ao Comprar</h3>
+        <p>Peça o painel de terpenos, não apenas o valor de canabinoides. Muitos certificados reportam ambos. Uma flor a 12% CBD com um perfil de terpenos rico e em camadas venderá mais do que uma flor a 16% que não cheira a nada, e gerará a compra repetida que realmente constrói uma loja.</p>
+        <p>Quando encomendar amostras — dos nossos <a href="/cbd-sample-packs">packs de amostra</a> ou de um <a href="/products/flower-discovery-pack">pack de descoberta</a> — cheire-as lado a lado antes de se comprometer com o volume. É o controlo de qualidade mais barato à sua disposição.</p>
+        <p>Uma nota sobre o que não estamos a afirmar: os terpenos são frequentemente comercializados com efeitos específicos associados a cada composto. A investigação sobre isso está numa fase inicial e é contestada, e o caso comercial honesto para os terpenos não depende disso. O aroma impulsiona a escolha ao balcão e impulsiona a compra repetida — isso é suficiente.</p>
+
+        <h3>Por Onde Começar</h3>
+        <p>Construa a sua prateleira em torno da diversidade aromática em vez de apenas a percentagem. Tenha em stock um cítrico, um terroso, um doce ou estilo sobremesa, e deixe os clientes escolherem pelo cheiro. Explore a disponibilidade atual em <a href="/collections/cbd-flowers">flores CBD</a> e <a href="/collections/cbd-resins">resinas CBD</a>, ou leia os nossos <a href="/best-cbd-strains">guias de variedades</a> para detalhes perfil por perfil.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
