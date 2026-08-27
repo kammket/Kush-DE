@@ -3881,6 +3881,190 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'how-to-store-cbd-flowers-resins-fresh': {
+    fr: {
+      title: 'Comment Conserver les Fleurs et Résines CBD Fraîches',
+      excerpt: "La fleur CBD perd puissance et arôme lorsqu'exposée à la lumière, l'air, la chaleur, ou une mauvaise humidité. Voici comment stocker correctement fleurs et résines, que vous déteniez un stock de détail ou un approvisionnement personnel.",
+      content: `
+        <h2>La Fraîcheur Est un Problème de Stockage, Pas Seulement de Récolte</h2>
+        <p>Une fleur CBD parfaitement cultivée et parfaitement affinée peut quand même se dégrader rapidement si elle est mal stockée par la suite. La lumière, l'exposition à l'air, la chaleur, et une humidité incorrecte accélèrent tous la dégradation des cannabinoïdes et terpènes — ce qui signifie que le stockage compte tout autant que la qualité d'approvisionnement au départ, pour les détaillants détenant du stock comme pour les acheteurs individuels.</p>
+
+        <h3>Les Quatre Ennemis de la Fleur Fraîche</h3>
+        <ul>
+          <li><strong>Lumière :</strong> L'exposition aux UV dégrade les cannabinoïdes au fil du temps. Stockez la fleur dans des contenants opaques, pas des bocaux transparents sur une étagère ensoleillée.</li>
+          <li><strong>Air :</strong> L'exposition à l'oxygène assèche la fleur et accélère la perte de terpènes, c'est pourquoi l'arôme s'estompe avant que la puissance ne le fasse. Les contenants hermétiques sont essentiels.</li>
+          <li><strong>Chaleur :</strong> Le stockage chaud accélère la dégradation. Une température ambiante fraîche et stable est idéale — évitez de stocker près de fenêtres, radiateurs, ou dans des réserves chaudes.</li>
+          <li><strong>Humidité :</strong> Trop sec et la fleur devient friable, perdant les trichomes (où la plupart des cannabinoïdes et terpènes sont concentrés) à la moindre manipulation. Trop humide et le risque de moisissure augmente. Une plage d'humidité stable autour de 55-59 % est généralement recommandée pour la fleur affinée.</li>
+        </ul>
+
+        <h3>Stockage Pratique pour Détaillants</h3>
+        <p>Si vous détenez un stock en gros de <a href="/collections/cbd-flowers">fleurs CBD</a>, des contenants hermétiques en verre ou de qualité alimentaire stockés dans une réserve fraîche et sombre préserveront la qualité bien plus longtemps que des bacs ou sacs laissés sous l'éclairage de vente au détail. Pour un inventaire à volume plus élevé, les sachets de contrôle d'humidité (largement utilisés dans l'industrie du cigare et du tabac premium) sont un moyen peu coûteux de maintenir la bonne plage d'humidité à travers tout un lot.</p>
+
+        <h3>Les Résines Sont Plus Indulgentes, Mais Pas Immunisées</h3>
+        <p>Les <a href="/collections/cbd-resins">résines et hash CBD</a> sont généralement plus stables que la fleur — moins de surface exposée à l'air, et une structure plus dense qui résiste à la perte d'humidité. Néanmoins, les mêmes principes s'appliquent : gardez les résines emballées ou dans des contenants scellés, loin de la chaleur et de la lumière directe, et elles conserveront leur qualité significativement plus longtemps qu'une fleur stockée de la même manière.</p>
+
+        <h3>Testez Avant de Vous Engager sur un Stock Nécessitant Beaucoup de Stockage</h3>
+        <p>Si vous n'êtes pas sûr de la façon dont une souche spécifique tient sur des semaines de stockage, nos <a href="/cbd-sample-packs">packs d'échantillons</a> sont un moyen à faible risque de tester le comportement de conservation d'une petite quantité avant de commander le volume nécessaire pour justifier un stockage à long terme.</p>
+        <p>Pour des conseils scientifiques sur le séchage, l'affinage, et la manipulation post-récolte des fleurs de chanvre, consultez le <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">guide de l'Oregon State University Extension sur le traitement post-récolte des fleurs de chanvre</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Wie Man CBD-Blüten und Harze Frisch Lagert',
+      excerpt: 'CBD-Blüten verlieren an Potenz und Aroma, wenn sie Licht, Luft, Hitze, oder falscher Luftfeuchtigkeit ausgesetzt sind. Hier ist, wie man Blüten und Harze richtig lagert, egal ob Sie Einzelhandelsbestand oder eine persönliche Versorgung halten.',
+      content: `
+        <h2>Frische Ist ein Lagerungsproblem, Nicht Nur ein Erntesproblem</h2>
+        <p>Eine perfekt angebaute, perfekt ausgehärtete CBD-Blüte kann sich trotzdem schnell verschlechtern, wenn sie danach schlecht gelagert wird. Licht, Luftexposition, Hitze, und falsche Luftfeuchtigkeit beschleunigen alle den Abbau von Cannabinoiden und Terpenen — was bedeutet, dass Lagerung genauso wichtig ist wie die Beschaffungsqualität von Anfang an, sowohl für Händler mit Lagerbestand als auch für einzelne Käufer.</p>
+
+        <h3>Die Vier Feinde Frischer Blüte</h3>
+        <ul>
+          <li><strong>Licht:</strong> UV-Exposition baut Cannabinoide im Laufe der Zeit ab. Lagern Sie Blüten in undurchsichtigen Behältern, nicht in klaren Gläsern auf einem sonnenbeschienenen Regal.</li>
+          <li><strong>Luft:</strong> Sauerstoffexposition trocknet die Blüte aus und beschleunigt den Terpenverlust, weshalb das Aroma verblasst, bevor die Potenz es tut. Luftdichte Behälter sind essentiell.</li>
+          <li><strong>Hitze:</strong> Warme Lagerung beschleunigt die Zersetzung. Kühle, stabile Raumtemperatur ist ideal — vermeiden Sie Lagerung in der Nähe von Fenstern, Heizungen, oder in warmen Lagerräumen.</li>
+          <li><strong>Luftfeuchtigkeit:</strong> Zu trocken und die Blüte wird brüchig, verliert Trichome (wo die meisten Cannabinoide und Terpene konzentriert sind) bei der geringsten Handhabung. Zu feucht und das Schimmelrisiko steigt. Ein stabiler Feuchtigkeitsbereich in den mittleren bis hohen 50er Prozenten wird im Allgemeinen für ausgehärtete Blüte empfohlen.</li>
+        </ul>
+
+        <h3>Praktische Lagerung für Händler</h3>
+        <p>Wenn Sie Großhandelsbestand an <a href="/collections/cbd-flowers">CBD-Blüten</a> halten, bewahren luftdichte Glas- oder Lebensmittelqualitätsbehälter, die in einem kühlen, dunklen Lagerraum aufbewahrt werden, die Qualität weit länger als Behälter oder Beutel, die unter Einzelhandelsbeleuchtung liegen. Für Inventar mit höherem Volumen sind Feuchtigkeitskontrollpakete (weit verbreitet in der Zigarren- und Premium-Tabakindustrie) eine kostengünstige Möglichkeit, den richtigen Feuchtigkeitsbereich über eine ganze Charge aufrechtzuerhalten.</p>
+
+        <h3>Harze Sind Nachsichtiger, Aber Nicht Immun</h3>
+        <p><a href="/collections/cbd-resins">CBD-Harze und Haschisch</a> sind im Allgemeinen stabiler als Blüten — weniger Oberfläche der Luft ausgesetzt, und eine dichtere Struktur, die Feuchtigkeitsverlust widersteht. Dennoch gelten die gleichen Prinzipien: Halten Sie Harze eingewickelt oder in versiegelten Behältern, fern von Hitze und direktem Licht, und sie werden ihre Qualität deutlich länger halten als auf die gleiche Weise gelagerte Blüten.</p>
+
+        <h3>Testen Sie, Bevor Sie Sich auf Lagerintensiven Bestand Festlegen</h3>
+        <p>Wenn Sie unsicher sind, wie sich eine bestimmte Sorte über Wochen der Lagerung hält, sind unsere <a href="/cbd-sample-packs">Probierpakete</a> eine risikoarme Möglichkeit, das Lagerverhalten einer kleinen Menge zu testen, bevor Sie das Volumen bestellen, das Sie zur Rechtfertigung einer langfristigen Lagerung benötigen würden.</p>
+        <p>Für wissenschaftlich fundierte Anleitung zum Trocknen, Aushärten, und der Nacherntebehandlung von Hanfblüten siehe den <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">Leitfaden der Oregon State University Extension zur Nachernteverarbeitung von Hanfblüten</a>.</p>
+      `,
+    },
+    es: {
+      title: 'Cómo Almacenar Flores y Resinas CBD para Mantenerlas Frescas',
+      excerpt: 'La flor CBD pierde potencia y aroma cuando se expone a luz, aire, calor, o humedad incorrecta. Aquí está cómo almacenar flores y resinas adecuadamente, ya sea que tengas stock minorista o un suministro personal.',
+      content: `
+        <h2>La Frescura es un Problema de Almacenamiento, No Solo un Problema de Cosecha</h2>
+        <p>Una flor CBD perfectamente cultivada y perfectamente curada aún puede degradarse rápidamente si se almacena mal después. La luz, la exposición al aire, el calor, y la humedad incorrecta aceleran la descomposición de cannabinoides y terpenos — lo que significa que el almacenamiento importa tanto como la calidad de abastecimiento en primer lugar, tanto para minoristas que tienen stock como para compradores individuales.</p>
+
+        <h3>Los Cuatro Enemigos de la Flor Fresca</h3>
+        <ul>
+          <li><strong>Luz:</strong> La exposición UV degrada los cannabinoides con el tiempo. Almacena la flor en contenedores opacos, no en frascos transparentes en un estante soleado.</li>
+          <li><strong>Aire:</strong> La exposición al oxígeno seca la flor y acelera la pérdida de terpenos, por eso el aroma se desvanece antes que la potencia. Los contenedores herméticos son esenciales.</li>
+          <li><strong>Calor:</strong> El almacenamiento cálido acelera la degradación. Una temperatura ambiente fresca y estable es ideal — evita almacenar cerca de ventanas, calentadores, o en almacenes cálidos.</li>
+          <li><strong>Humedad:</strong> Demasiado seco y la flor se vuelve quebradiza, perdiendo tricomas (donde se concentran la mayoría de los cannabinoides y terpenos) con el más mínimo manejo. Demasiado húmedo y el riesgo de moho aumenta. Un rango de humedad estable en el medio-alto 50 por ciento generalmente se recomienda para flor curada.</li>
+        </ul>
+
+        <h3>Almacenamiento Práctico para Minoristas</h3>
+        <p>Si tienes stock mayorista de <a href="/collections/cbd-flowers">flores CBD</a>, contenedores herméticos de vidrio o grado alimenticio almacenados en un almacén fresco y oscuro preservarán la calidad mucho más tiempo que contenedores o bolsas dejadas bajo iluminación minorista. Para inventario de mayor volumen, los paquetes de control de humedad (ampliamente utilizados en la industria del cigarro y tabaco premium) son una forma económica de mantener el rango de humedad correcto en todo un lote.</p>
+
+        <h3>Las Resinas Son Más Indulgentes, Pero No Inmunes</h3>
+        <p>Las <a href="/collections/cbd-resins">resinas y hachís CBD</a> son generalmente más estables que la flor — menos superficie expuesta al aire, y una estructura más densa que resiste la pérdida de humedad. Aún así, los mismos principios aplican: mantén las resinas envueltas o en contenedores sellados, lejos del calor y luz directa, y mantendrán su calidad significativamente más tiempo que la flor almacenada de la misma manera.</p>
+
+        <h3>Prueba Antes de Comprometerte con Stock que Requiere Mucho Almacenamiento</h3>
+        <p>Si no estás seguro de cómo se mantiene una variedad específica durante semanas de almacenamiento, nuestros <a href="/cbd-sample-packs">packs de muestra</a> son una forma de bajo riesgo de probar el comportamiento de conservación de una pequeña cantidad antes de pedir el volumen que necesitarías para justificar el almacenamiento a largo plazo.</p>
+        <p>Para orientación basada en ciencia sobre el secado, curado, y manejo post-cosecha de flores de cáñamo, consulta la <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">guía de la Extensión de la Universidad Estatal de Oregón sobre el procesamiento post-cosecha de flores de cáñamo</a>.</p>
+      `,
+    },
+    it: {
+      title: 'Come Conservare Fiori e Resine CBD per Mantenerli Freschi',
+      excerpt: "Il fiore CBD perde potenza e aroma quando esposto a luce, aria, calore, o umidità sbagliata. Ecco come conservare correttamente fiori e resine, sia che tu abbia scorte al dettaglio o una scorta personale.",
+      content: `
+        <h2>La Freschezza è un Problema di Conservazione, Non Solo di Raccolto</h2>
+        <p>Un fiore CBD perfettamente coltivato e perfettamente curato può comunque degradarsi rapidamente se conservato male in seguito. Luce, esposizione all'aria, calore, e umidità scorretta accelerano tutti la scomposizione di cannabinoidi e terpeni — il che significa che la conservazione conta tanto quanto la qualità dell'approvvigionamento in primo luogo, sia per i rivenditori con scorte che per gli acquirenti individuali.</p>
+
+        <h3>I Quattro Nemici del Fiore Fresco</h3>
+        <ul>
+          <li><strong>Luce:</strong> L'esposizione ai raggi UV degrada i cannabinoidi nel tempo. Conserva il fiore in contenitori opachi, non in barattoli trasparenti su uno scaffale soleggiato.</li>
+          <li><strong>Aria:</strong> L'esposizione all'ossigeno secca il fiore e accelera la perdita di terpeni, motivo per cui l'aroma svanisce prima della potenza. I contenitori ermetici sono essenziali.</li>
+          <li><strong>Calore:</strong> La conservazione calda accelera il degrado. Una temperatura ambiente fresca e stabile è ideale — evita di conservare vicino a finestre, riscaldatori, o in magazzini caldi.</li>
+          <li><strong>Umidità:</strong> Troppo secco e il fiore diventa fragile, perdendo tricomi (dove sono concentrati la maggior parte dei cannabinoidi e terpeni) al minimo maneggiamento. Troppo umido e il rischio di muffa aumenta. Un intervallo di umidità stabile nel medio-alto 50% è generalmente raccomandato per il fiore curato.</li>
+        </ul>
+
+        <h3>Conservazione Pratica per Rivenditori</h3>
+        <p>Se detieni scorte all'ingrosso di <a href="/collections/cbd-flowers">fiori CBD</a>, contenitori ermetici in vetro o di grado alimentare conservati in un magazzino fresco e buio preserveranno la qualità molto più a lungo di contenitori o sacchetti lasciati sotto l'illuminazione al dettaglio. Per inventari di volume maggiore, i pacchetti di controllo dell'umidità (ampiamente utilizzati nell'industria del sigaro e del tabacco premium) sono un modo economico per mantenere il giusto intervallo di umidità su un intero lotto.</p>
+
+        <h3>Le Resine Sono Più Indulgenti, Ma Non Immuni</h3>
+        <p>Le <a href="/collections/cbd-resins">resine e hashish CBD</a> sono generalmente più stabili del fiore — meno superficie esposta all'aria, e una struttura più densa che resiste alla perdita di umidità. Tuttavia, gli stessi principi si applicano: tieni le resine avvolte o in contenitori sigillati, lontano da calore e luce diretta, e manterranno la loro qualità significativamente più a lungo del fiore conservato allo stesso modo.</p>
+
+        <h3>Testa Prima di Impegnarti in Scorte ad Alta Intensità di Conservazione</h3>
+        <p>Se non sei sicuro di come una specifica varietà tenga durante settimane di conservazione, i nostri <a href="/cbd-sample-packs">pacchetti campione</a> sono un modo a basso rischio per testare il comportamento di conservazione di una piccola quantità prima di ordinare il volume necessario per giustificare la conservazione a lungo termine.</p>
+        <p>Per una guida basata sulla scienza sull'essiccazione, la cura, e la gestione post-raccolto dei fiori di canapa, consulta la <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">guida dell'Oregon State University Extension alla lavorazione post-raccolto dei fiori di canapa</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Hoe CBD-Bloemen en Harsen Vers te Bewaren',
+      excerpt: 'CBD-bloem verliest potentie en aroma bij blootstelling aan licht, lucht, hitte, of verkeerde vochtigheid. Hier is hoe u bloemen en harsen correct opslaat, of u nu retailvoorraad of een persoonlijke voorraad heeft.',
+      content: `
+        <h2>Versheid is een Opslagprobleem, Niet Alleen een Oogstprobleem</h2>
+        <p>Een perfect gekweekte, perfect geharde CBD-bloem kan nog steeds snel achteruitgaan als deze daarna slecht wordt opgeslagen. Licht, luchtblootstelling, hitte, en onjuiste vochtigheid versnellen allemaal de afbraak van cannabinoïden en terpenen — wat betekent dat opslag net zo belangrijk is als inkoopkwaliteit in de eerste plaats, voor retailers met voorraad en individuele kopers.</p>
+
+        <h3>De Vier Vijanden van Verse Bloem</h3>
+        <ul>
+          <li><strong>Licht:</strong> UV-blootstelling breekt cannabinoïden na verloop van tijd af. Bewaar bloem in ondoorzichtige containers, niet in doorzichtige potten op een zonnig schap.</li>
+          <li><strong>Lucht:</strong> Zuurstofblootstelling droogt bloem uit en versnelt terpeenverlies, daarom vervaagt het aroma voordat de potentie dat doet. Luchtdichte containers zijn essentieel.</li>
+          <li><strong>Hitte:</strong> Warme opslag versnelt afbraak. Koele, stabiele kamertemperatuur is ideaal — vermijd opslag bij ramen, verwarmingen, of in warme opslagruimtes.</li>
+          <li><strong>Vochtigheid:</strong> Te droog en de bloem wordt broos, verliest trichomen (waar de meeste cannabinoïden en terpenen geconcentreerd zijn) bij de geringste hantering. Te vochtig en schimmelrisico neemt toe. Een stabiel vochtigheidsbereik in de middelhoge 50 procent wordt over het algemeen aanbevolen voor geharde bloem.</li>
+        </ul>
+
+        <h3>Praktische Opslag voor Retailers</h3>
+        <p>Als u groothandelsvoorraad van <a href="/collections/cbd-flowers">CBD-bloemen</a> heeft, zullen luchtdichte glazen of voedselveilige containers opgeslagen in een koele, donkere opslagruimte de kwaliteit veel langer behouden dan bakken of zakken achtergelaten onder retailverlichting. Voor voorraad met hoger volume zijn vochtigheidsregelpakketten (veel gebruikt in de sigaren- en premium tabaksindustrie) een goedkope manier om het juiste vochtigheidsbereik over een hele partij te handhaven.</p>
+
+        <h3>Harsen Zijn Toleranter, Maar Niet Immuun</h3>
+        <p><a href="/collections/cbd-resins">CBD-harsen en hasj</a> zijn over het algemeen stabieler dan bloem — minder oppervlak blootgesteld aan lucht, en een dichtere structuur die vochtverlies weerstaat. Toch gelden dezelfde principes: houd harsen verpakt of in verzegelde containers, weg van hitte en direct licht, en ze behouden hun kwaliteit aanzienlijk langer dan bloem op dezelfde manier opgeslagen.</p>
+
+        <h3>Test Voordat U Zich Vastlegt op Opslagintensieve Voorraad</h3>
+        <p>Als u niet zeker weet hoe een specifieke soort standhoudt over weken opslag, zijn onze <a href="/cbd-sample-packs">proefpakketten</a> een laagrisico manier om het houdbaarheidsgedrag van een kleine hoeveelheid te testen voordat u het volume bestelt dat u nodig zou hebben om langdurige opslag te rechtvaardigen.</p>
+        <p>Voor wetenschappelijk onderbouwde begeleiding over het drogen, harden, en na-oogstbehandeling van hennepbloemen, zie de <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">gids van Oregon State University Extension over na-oogstverwerking van hennepbloemen</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Kuinka Säilyttää CBD-Kukat ja Hartsit Tuoreena',
+      excerpt: 'CBD-kukka menettää tehoa ja aromia altistuessaan valolle, ilmalle, lämmölle, tai väärälle kosteudelle. Tässä on kuinka säilyttää kukkia ja hartseja oikein, oletpa vähittäismyyjä varastoineen tai yksityishenkilö omalla varastollaan.',
+      content: `
+        <h2>Tuoreus On Säilytysongelma, Ei Vain Sadonkorjuuongelma</h2>
+        <p>Täydellisesti kasvatettu, täydellisesti kypsytetty CBD-kukka voi silti heikentyä nopeasti, jos se säilytetään huonosti jälkikäteen. Valo, ilmalle altistuminen, lämpö, ja väärä kosteus kaikki nopeuttavat kannabinoidien ja terpeenien hajoamista — mikä tarkoittaa, että säilytys on yhtä tärkeää kuin hankintalaatu alun perin, sekä varastoa pitäville jälleenmyyjille että yksittäisille ostajille.</p>
+
+        <h3>Tuoreen Kukan Neljä Vihollista</h3>
+        <ul>
+          <li><strong>Valo:</strong> UV-altistus heikentää kannabinoideja ajan myötä. Säilytä kukka läpinäkymättömissä astioissa, ei kirkkaissa purkeissa aurinkoisella hyllyllä.</li>
+          <li><strong>Ilma:</strong> Happialtistus kuivattaa kukan ja nopeuttaa terpeenien menetystä, minkä vuoksi aromi haalistuu ennen tehoa. Ilmatiiviit astiat ovat välttämättömiä.</li>
+          <li><strong>Lämpö:</strong> Lämmin säilytys nopeuttaa hajoamista. Viileä, vakaa huonelämpötila on ihanteellinen — vältä säilytystä ikkunoiden, lämmittimien lähellä, tai lämpimissä varastotiloissa.</li>
+          <li><strong>Kosteus:</strong> Liian kuiva ja kukka muuttuu hauraaksi, menettäen trikomeja (joissa suurin osa kannabinoideista ja terpeeneistä on keskittynyt) pienimmälläkin käsittelyllä. Liian kostea ja homeriski kasvaa. Vakaa kosteusalue keskikorkealla 50 prosentin alueella suositellaan yleisesti kypsytetylle kukalle.</li>
+        </ul>
+
+        <h3>Käytännön Säilytys Jälleenmyyjille</h3>
+        <p>Jos pidät tukkuvarastoa <a href="/collections/cbd-flowers">CBD-kukista</a>, ilmatiiviit lasi- tai elintarvikelaatuiset astiat säilytettynä viileässä, pimeässä varastotilassa säilyttävät laadun paljon pidempään kuin astiat tai pussit vähittäismyynnin valaistuksen alla. Suuremman volyymin varastolle kosteudenhallintapakkaukset (laajasti käytössä sikari- ja premium-tupakkateollisuudessa) ovat edullinen tapa ylläpitää oikea kosteusalue koko erässä.</p>
+
+        <h3>Hartsit Ovat Anteeksiantavampia, Mutta Eivät Immuuneja</h3>
+        <p><a href="/collections/cbd-resins">CBD-hartsit ja hasis</a> ovat yleensä vakaampia kuin kukka — vähemmän pinta-alaa alttiina ilmalle, ja tiheämpi rakenne, joka kestää kosteuden menetystä. Silti samat periaatteet pätevät: pidä hartsit käärittyinä tai suljetuissa astioissa, poissa lämmöstä ja suorasta valosta, ja ne säilyttävät laatunsa huomattavasti pidempään kuin samalla tavalla säilytetty kukka.</p>
+
+        <h3>Testaa Ennen Sitoutumista Säilytysintensiiviseen Varastoon</h3>
+        <p>Jos et ole varma, kuinka tietty lajike kestää viikkojen säilytyksen, <a href="/cbd-sample-packs">näytepakettimme</a> ovat matalan riskin tapa testata pienen määrän säilytyskäyttäytymistä ennen kuin tilaat volyymin, jota tarvitsisit oikeuttamaan pitkäaikaisen säilytyksen.</p>
+        <p>Tieteeseen perustuvaa ohjeistusta hampunkukkien kuivaamisesta, kypsyttämisestä, ja sadonkorjuun jälkeisestä käsittelystä varten, katso <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">Oregon State University Extensionin oppaan hampunkukkien sadonkorjuun jälkeiseen käsittelyyn</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Como Armazenar Flores e Resinas CBD para Mantê-las Frescas',
+      excerpt: 'A flor CBD perde potência e aroma quando exposta à luz, ar, calor, ou humidade incorreta. Aqui está como armazenar flores e resinas corretamente, quer tenha stock retalhista ou um fornecimento pessoal.',
+      content: `
+        <h2>A Frescura é um Problema de Armazenamento, Não Apenas de Colheita</h2>
+        <p>Uma flor CBD perfeitamente cultivada, perfeitamente curada ainda pode degradar-se rapidamente se for mal armazenada depois. Luz, exposição ao ar, calor, e humidade incorreta aceleram todos a decomposição de canabinoides e terpenos — o que significa que o armazenamento importa tanto quanto a qualidade do abastecimento em primeiro lugar, tanto para retalhistas com stock como para compradores individuais.</p>
+
+        <h3>Os Quatro Inimigos da Flor Fresca</h3>
+        <ul>
+          <li><strong>Luz:</strong> A exposição UV degrada os canabinoides ao longo do tempo. Armazene a flor em recipientes opacos, não em frascos transparentes numa prateleira ensolarada.</li>
+          <li><strong>Ar:</strong> A exposição ao oxigénio seca a flor e acelera a perda de terpenos, razão pela qual o aroma desvanece antes da potência. Recipientes herméticos são essenciais.</li>
+          <li><strong>Calor:</strong> O armazenamento quente acelera a degradação. Uma temperatura ambiente fresca e estável é ideal — evite armazenar perto de janelas, aquecedores, ou em armazéns quentes.</li>
+          <li><strong>Humidade:</strong> Demasiado seco e a flor torna-se quebradiça, perdendo tricomas (onde a maioria dos canabinoides e terpenos estão concentrados) ao mínimo manuseamento. Demasiado húmido e o risco de bolor aumenta. Um intervalo de humidade estável na faixa média-alta dos 50% é geralmente recomendado para flor curada.</li>
+        </ul>
+
+        <h3>Armazenamento Prático para Retalhistas</h3>
+        <p>Se tem stock por grosso de <a href="/collections/cbd-flowers">flores CBD</a>, recipientes herméticos de vidro ou de grau alimentar armazenados num armazém fresco e escuro preservarão a qualidade muito mais tempo do que caixas ou sacos deixados sob iluminação retalhista. Para inventário de maior volume, pacotes de controlo de humidade (amplamente usados na indústria do charuto e tabaco premium) são uma forma económica de manter o intervalo de humidade correto em todo um lote.</p>
+
+        <h3>As Resinas São Mais Tolerantes, Mas Não Imunes</h3>
+        <p>As <a href="/collections/cbd-resins">resinas e haxixe CBD</a> são geralmente mais estáveis do que a flor — menos área de superfície exposta ao ar, e uma estrutura mais densa que resiste à perda de humidade. Ainda assim, os mesmos princípios aplicam-se: mantenha as resinas embrulhadas ou em recipientes selados, longe do calor e luz direta, e manterão a sua qualidade significativamente mais tempo do que a flor armazenada da mesma forma.</p>
+
+        <h3>Teste Antes de Se Comprometer com Stock de Armazenamento Intensivo</h3>
+        <p>Se não tem certeza de como uma variedade específica aguenta ao longo de semanas de armazenamento, os nossos <a href="/cbd-sample-packs">packs de amostra</a> são uma forma de baixo risco de testar o comportamento de conservação de uma pequena quantidade antes de encomendar o volume que precisaria para justificar o armazenamento a longo prazo.</p>
+        <p>Para orientação baseada em ciência sobre secagem, cura, e manuseamento pós-colheita de flores de cânhamo, veja o <a href="https://extension.oregonstate.edu/crop-production/hemp/post-harvest-processing-hemp-flowers" target="_blank" rel="noopener noreferrer">guia da Oregon State University Extension sobre processamento pós-colheita de flores de cânhamo</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
