@@ -2996,6 +2996,169 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'cbd-drug-interactions-what-to-know': {
+    fr: {
+      title: 'CBD et Interactions Médicamenteuses : Ce que les Détaillants Devraient Dire aux Clients',
+      excerpt: 'Le CBD peut interagir avec certains médicaments en affectant les enzymes hépatiques qui les métabolisent. Voici ce que montre la recherche, et comment avoir cette conversation de manière responsable au comptoir.',
+      content: `
+        <h2>Le CBD N'est Pas Sans Risque — Voici le Tableau Honnête</h2>
+        <p>Le CBD a un excellent profil de sécurité comparé à de nombreuses substances, mais "naturel" ne signifie pas "sans interactions". Le CBD est métabolisé par des enzymes hépatiques de la famille du cytochrome P450 — le même système enzymatique responsable de métaboliser une grande part des médicaments sur ordonnance. C'est une information véritablement utile pour quiconque vend des produits CBD, pas une raison d'éviter la catégorie.</p>
+
+        <h3>Comment Fonctionne l'Interaction</h3>
+        <p>La recherche clinique a montré que le CBD inhibe plusieurs enzymes du cytochrome P450, y compris CYP3A4, CYP2C9, et CYP2C19 — des enzymes responsables de métaboliser un large éventail de médicaments courants. Quand le CBD inhibe ces enzymes, les médicaments qui en dépendent pour leur élimination peuvent s'accumuler à des niveaux plus élevés que prévu dans la circulation sanguine, ou s'éliminer plus lentement que prévu.</p>
+        <p>Cela ne signifie pas que le CBD est dangereux à utiliser avec tous les médicaments — la signification clinique dépend fortement du médicament spécifique, de sa fenêtre thérapeutique, et de la dose de CBD impliquée. Cela signifie qu'il vaut la peine d'y réfléchir un instant plutôt que de supposer une absence totale d'interaction.</p>
+
+        <h3>Ce Que Cela Signifie en Pratique</h3>
+        <ul>
+          <li>Les clients prenant régulièrement des médicaments sur ordonnance — surtout des anticoagulants, des médicaments anti-épileptiques, ou des médicaments à fenêtre de dosage sûre étroite — devraient consulter un professionnel de santé avant de commencer le CBD, non pas parce que c'est dangereux par défaut, mais parce que des interactions sont véritablement possibles.</li>
+          <li>Cela s'applique à tous les formats : <a href="/collections/cbd-oils">huiles CBD</a>, <a href="/collections/cbd-flowers">fleurs</a>, et <a href="/collections/cbd-gummies">comestibles</a> sont tous métabolisés de la même manière une fois absorbés.</li>
+          <li>C'est une information générale, pas un avis médical — les détaillants devraient diriger les questions spécifiques sur les médicaments vers un pharmacien ou un médecin plutôt que d'y répondre directement.</li>
+        </ul>
+
+        <h3>Pourquoi Cela Construit la Confiance, Pas la Peur</h3>
+        <p>Les détaillants qui mentionnent cela de manière proactive — plutôt que de prétendre que le CBD est entièrement sans risque — construisent plus de crédibilité avec les clients informés, particulièrement le segment croissant axé sur le bien-être qui fait des recherches avant d'acheter. C'est aussi cohérent avec notre approche de chaque produit : chaque lot que nous vendons est <a href="/quality-and-testing">testé en laboratoire indépendant</a>, donc la teneur réelle en cannabinoïdes que consomment les clients est vérifiée, pas devinée.</p>
+        <p>Pour les données cliniques détaillées sur les interactions du CBD avec le cytochrome P450, consultez cette étude évaluée par des pairs : <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Évaluation des Interactions Médicamenteuses Cannabinoïdes Médiées par le Cytochrome P450 chez des Participants Adultes en Bonne Santé (PMC)</a>.</p>
+      `,
+    },
+    de: {
+      title: 'CBD und Arzneimittelwechselwirkungen: Was Händler Kunden Sagen Sollten',
+      excerpt: 'CBD kann mit bestimmten Medikamenten interagieren, indem es die Leberenzyme beeinflusst, die sie verstoffwechseln. Hier ist, was die Forschung zeigt, und wie man dieses Gespräch verantwortungsvoll am Tresen führt.',
+      content: `
+        <h2>CBD Ist Nicht Risikofrei — Hier Ist das Ehrliche Bild</h2>
+        <p>CBD hat im Vergleich zu vielen Substanzen ein ausgezeichnetes Sicherheitsprofil, aber "natürlich" bedeutet nicht "keine Wechselwirkungen". CBD wird von Leberenzymen der Cytochrom-P450-Familie verstoffwechselt — demselben Enzymsystem, das für die Verstoffwechselung eines großen Teils verschreibungspflichtiger Medikamente verantwortlich ist. Dies ist eine wirklich nützliche Information für jeden, der CBD-Produkte verkauft, kein Grund, die Kategorie zu meiden.</p>
+
+        <h3>Wie die Wechselwirkung Funktioniert</h3>
+        <p>Klinische Forschung hat gezeigt, dass CBD mehrere Cytochrom-P450-Enzyme hemmt, einschließlich CYP3A4, CYP2C9, und CYP2C19 — Enzyme, die für die Verstoffwechselung eines breiten Spektrums häufiger Medikamente verantwortlich sind. Wenn CBD diese Enzyme hemmt, können Medikamente, die auf sie für die Ausscheidung angewiesen sind, sich auf höhere als erwartete Werte im Blutkreislauf aufbauen, oder langsamer als beabsichtigt ausgeschieden werden.</p>
+        <p>Dies bedeutet nicht, dass CBD gefährlich ist, neben allen Medikamenten verwendet zu werden — die klinische Bedeutung hängt stark vom spezifischen Medikament, seinem therapeutischen Fenster, und der beteiligten CBD-Dosis ab. Es bedeutet, dass es einen Moment des Nachdenkens wert ist, anstatt eine Annahme von null Wechselwirkung.</p>
+
+        <h3>Was Dies in der Praxis Bedeutet</h3>
+        <ul>
+          <li>Kunden mit regelmäßiger verschreibungspflichtiger Medikation — besonders Blutverdünner, Antiepileptika, oder Medikamente mit engem sicheren Dosisbereich — sollten vor Beginn von CBD einen Gesundheitsdienstleister konsultieren, nicht weil es standardmäßig gefährlich ist, sondern weil Wechselwirkungen wirklich möglich sind.</li>
+          <li>Dies gilt für alle Formate: <a href="/collections/cbd-oils">CBD-Öle</a>, <a href="/collections/cbd-flowers">Blüten</a>, und <a href="/collections/cbd-gummies">Esswaren</a> werden alle auf die gleiche Weise verstoffwechselt, sobald sie absorbiert wurden.</li>
+          <li>Dies sind allgemeine Informationen, keine medizinische Beratung — Händler sollten spezifische Medikamentenfragen an einen Apotheker oder Arzt weiterleiten, anstatt sie direkt zu beantworten.</li>
+        </ul>
+
+        <h3>Warum Dies Vertrauen Aufbaut, Nicht Angst</h3>
+        <p>Händler, die dies proaktiv erwähnen — anstatt zu behaupten, CBD sei völlig risikofrei — bauen mehr Glaubwürdigkeit bei informierten Kunden auf, besonders beim wachsenden wellnessorientierten Segment, das vor dem Kauf recherchiert. Es ist auch konsistent mit unserem Ansatz für jedes Produkt: jede Charge, die wir verkaufen, ist <a href="/quality-and-testing">unabhängig labortestet</a>, sodass der tatsächliche Cannabinoidgehalt, den Kunden konsumieren, verifiziert ist, nicht erraten.</p>
+        <p>Für die detaillierten klinischen Daten zu den Cytochrom-P450-Wechselwirkungen von CBD siehe diese peer-reviewte Studie: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Bewertung von Cytochrom-P450-vermittelten Cannabinoid-Arzneimittel-Wechselwirkungen bei Gesunden Erwachsenen Teilnehmern (PMC)</a>.</p>
+      `,
+    },
+    es: {
+      title: 'CBD e Interacciones Medicamentosas: Qué Deberían Decir los Minoristas a los Clientes',
+      excerpt: 'El CBD puede interactuar con ciertos medicamentos al afectar las enzimas hepáticas que los metabolizan. Esto es lo que muestra la investigación, y cómo tener esa conversación de manera responsable en el mostrador.',
+      content: `
+        <h2>El CBD No Está Libre de Riesgos — Aquí Está el Panorama Honesto</h2>
+        <p>El CBD tiene un excelente perfil de seguridad comparado con muchas sustancias, pero "natural" no significa "sin interacciones". El CBD es metabolizado por enzimas hepáticas de la familia del citocromo P450 — el mismo sistema enzimático responsable de metabolizar una gran parte de los medicamentos recetados. Esta es información genuinamente útil para cualquiera que venda productos CBD, no una razón para evitar la categoría.</p>
+
+        <h3>Cómo Funciona la Interacción</h3>
+        <p>La investigación clínica ha demostrado que el CBD inhibe varias enzimas del citocromo P450, incluyendo CYP3A4, CYP2C9, y CYP2C19 — enzimas responsables de metabolizar una amplia gama de medicamentos comunes. Cuando el CBD inhibe estas enzimas, los medicamentos que dependen de ellas para su eliminación pueden acumularse a niveles más altos de lo esperado en el torrente sanguíneo, o eliminarse más lentamente de lo previsto.</p>
+        <p>Esto no significa que el CBD sea peligroso de usar junto con todos los medicamentos — la significancia clínica depende en gran medida del medicamento específico, su ventana terapéutica, y la dosis de CBD involucrada. Sí significa que vale la pena pensarlo un momento en lugar de asumir cero interacción.</p>
+
+        <h3>Lo Que Esto Significa en la Práctica</h3>
+        <ul>
+          <li>Los clientes con medicación recetada regular — especialmente anticoagulantes, medicamentos anticonvulsivos, o medicamentos con un rango de dosis segura estrecho — deberían consultar con un proveedor de atención médica antes de comenzar con CBD, no porque sea peligroso por defecto, sino porque las interacciones son genuinamente posibles.</li>
+          <li>Esto se aplica en todos los formatos: <a href="/collections/cbd-oils">aceites CBD</a>, <a href="/collections/cbd-flowers">flores</a>, y <a href="/collections/cbd-gummies">comestibles</a> se metabolizan todos de la misma manera una vez absorbidos.</li>
+          <li>Esta es información general, no consejo médico — los minoristas deberían dirigir preguntas específicas sobre medicamentos a un farmacéutico o médico en lugar de responderlas directamente.</li>
+        </ul>
+
+        <h3>Por Qué Esto Construye Confianza, No Miedo</h3>
+        <p>Los minoristas que mencionan esto proactivamente — en lugar de afirmar que el CBD es completamente libre de riesgos — construyen más credibilidad con clientes informados, particularmente el creciente segmento enfocado en el bienestar que investiga antes de comprar. También es consistente con cómo abordamos cada producto: cada lote que vendemos es <a href="/quality-and-testing">probado en laboratorio de forma independiente</a>, por lo que el contenido real de cannabinoides que los clientes están consumiendo está verificado, no adivinado.</p>
+        <p>Para los datos clínicos detallados sobre las interacciones del CBD con el citocromo P450, consulta este estudio evaluado por pares: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Evaluación de Interacciones Medicamentosas Cannabinoides Mediadas por Citocromo P450 en Participantes Adultos Sanos (PMC)</a>.</p>
+      `,
+    },
+    it: {
+      title: 'CBD e Interazioni Farmacologiche: Cosa Dovrebbero Dire i Rivenditori ai Clienti',
+      excerpt: 'Il CBD può interagire con alcuni farmaci influenzando gli enzimi epatici che li metabolizzano. Ecco cosa mostra la ricerca, e come affrontare questa conversazione responsabilmente al banco.',
+      content: `
+        <h2>Il CBD Non è Privo di Rischi — Ecco il Quadro Onesto</h2>
+        <p>Il CBD ha un eccellente profilo di sicurezza rispetto a molte sostanze, ma "naturale" non significa "nessuna interazione". Il CBD viene metabolizzato da enzimi epatici della famiglia del citocromo P450 — lo stesso sistema enzimatico responsabile del metabolismo di gran parte dei farmaci da prescrizione. Questa è un'informazione genuinamente utile per chiunque venda prodotti CBD, non una ragione per evitare la categoria.</p>
+
+        <h3>Come Funziona l'Interazione</h3>
+        <p>La ricerca clinica ha dimostrato che il CBD inibisce diversi enzimi del citocromo P450, inclusi CYP3A4, CYP2C9, e CYP2C19 — enzimi responsabili del metabolismo di un'ampia gamma di farmaci comuni. Quando il CBD inibisce questi enzimi, i farmaci che dipendono da essi per la clearance possono accumularsi a livelli più alti del previsto nel flusso sanguigno, o eliminarsi più lentamente del previsto.</p>
+        <p>Questo non significa che il CBD sia pericoloso da usare insieme a tutti i farmaci — il significato clinico dipende fortemente dal farmaco specifico, dalla sua finestra terapeutica, e dalla dose di CBD coinvolta. Significa che vale la pena rifletterci un momento piuttosto che presumere zero interazione.</p>
+
+        <h3>Cosa Significa Questo in Pratica</h3>
+        <ul>
+          <li>I clienti con farmaci da prescrizione regolari — specialmente anticoagulanti, farmaci antiepilettici, o farmaci con una finestra di dosaggio sicuro ristretta — dovrebbero consultare un operatore sanitario prima di iniziare il CBD, non perché sia pericoloso per impostazione predefinita, ma perché le interazioni sono genuinamente possibili.</li>
+          <li>Questo si applica in tutti i formati: <a href="/collections/cbd-oils">oli CBD</a>, <a href="/collections/cbd-flowers">fiori</a>, e <a href="/collections/cbd-gummies">commestibili</a> vengono tutti metabolizzati allo stesso modo una volta assorbiti.</li>
+          <li>Questa è informazione generale, non consiglio medico — i rivenditori dovrebbero indirizzare le domande specifiche sui farmaci a un farmacista o medico piuttosto che rispondere direttamente.</li>
+        </ul>
+
+        <h3>Perché Questo Costruisce Fiducia, Non Paura</h3>
+        <p>I rivenditori che menzionano proattivamente questo — piuttosto che affermare che il CBD sia completamente privo di rischi — costruiscono più credibilità con i clienti informati, particolarmente il crescente segmento orientato al benessere che fa ricerche prima di acquistare. È anche coerente con come affrontiamo ogni prodotto: ogni lotto che vendiamo è <a href="/quality-and-testing">testato in laboratorio in modo indipendente</a>, quindi il contenuto effettivo di cannabinoidi che i clienti stanno consumando è verificato, non ipotizzato.</p>
+        <p>Per i dati clinici dettagliati sulle interazioni del CBD con il citocromo P450, consulta questo studio peer-reviewed: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Valutazione delle Interazioni Farmacologiche Cannabinoidi Mediate dal Citocromo P450 in Partecipanti Adulti Sani (PMC)</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'CBD en Geneesmiddeleninteracties: Wat Retailers Klanten Moeten Vertellen',
+      excerpt: 'CBD kan interageren met bepaalde medicijnen door de leverenzymen te beïnvloeden die ze metaboliseren. Hier is wat het onderzoek toont, en hoe u dit gesprek verantwoord aan de toonbank voert.',
+      content: `
+        <h2>CBD is Niet Risicovrij — Hier is het Eerlijke Beeld</h2>
+        <p>CBD heeft een uitstekend veiligheidsprofiel vergeleken met veel stoffen, maar "natuurlijk" betekent niet "geen interacties". CBD wordt gemetaboliseerd door leverenzymen uit de cytochroom P450-familie — hetzelfde enzymsysteem dat verantwoordelijk is voor het metaboliseren van een groot deel van voorgeschreven medicijnen. Dit is oprecht nuttige informatie voor iedereen die CBD-producten verkoopt, geen reden om de categorie te vermijden.</p>
+
+        <h3>Hoe de Interactie Werkt</h3>
+        <p>Klinisch onderzoek heeft aangetoond dat CBD verschillende cytochroom P450-enzymen remt, waaronder CYP3A4, CYP2C9, en CYP2C19 — enzymen verantwoordelijk voor het metaboliseren van een breed scala aan veelvoorkomende medicijnen. Wanneer CBD deze enzymen remt, kunnen medicijnen die voor klaring op hen vertrouwen, zich opbouwen tot hogere dan verwachte niveaus in de bloedbaan, of langzamer klaren dan bedoeld.</p>
+        <p>Dit betekent niet dat CBD gevaarlijk is om naast alle medicijnen te gebruiken — de klinische betekenis hangt sterk af van het specifieke medicijn, het therapeutische venster, en de betrokken CBD-dosis. Het betekent wel dat het een moment van nadenken waard is in plaats van een aanname van nul interactie.</p>
+
+        <h3>Wat Dit Betekent in de Praktijk</h3>
+        <ul>
+          <li>Klanten met regelmatige voorgeschreven medicatie — vooral bloedverdunners, anti-epileptica, of medicijnen met een smal veilig doseringsbereik — zouden een zorgverlener moeten raadplegen voordat ze met CBD beginnen, niet omdat het standaard gevaarlijk is, maar omdat interacties oprecht mogelijk zijn.</li>
+          <li>Dit geldt voor alle formaten: <a href="/collections/cbd-oils">CBD-oliën</a>, <a href="/collections/cbd-flowers">bloemen</a>, en <a href="/collections/cbd-gummies">eetwaren</a> worden allemaal op dezelfde manier gemetaboliseerd zodra ze zijn geabsorbeerd.</li>
+          <li>Dit is algemene informatie, geen medisch advies — retailers zouden specifieke medicatievragen moeten doorverwijzen naar een apotheker of arts in plaats van ze direct te beantwoorden.</li>
+        </ul>
+
+        <h3>Waarom Dit Vertrouwen Opbouwt, Geen Angst</h3>
+        <p>Retailers die dit proactief vermelden — in plaats van te beweren dat CBD volledig risicovrij is — bouwen meer geloofwaardigheid op bij geïnformeerde klanten, vooral het groeiende wellnessgerichte segment dat onderzoek doet voordat het koopt. Het is ook consistent met hoe we elk product benaderen: elke batch die we verkopen wordt <a href="/quality-and-testing">onafhankelijk labgetest</a>, dus de daadwerkelijke cannabinoïde-inhoud die klanten consumeren is geverifieerd, niet geraden.</p>
+        <p>Voor de gedetailleerde klinische gegevens over de cytochroom P450-interacties van CBD, zie deze peer-reviewde studie: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Evaluatie van Cytochroom P450-Gemedieerde Cannabinoïde-Geneesmiddeleninteracties bij Gezonde Volwassen Deelnemers (PMC)</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'CBD ja Lääkeaineinteraktiot: Mitä Jälleenmyyjien Tulisi Kertoa Asiakkaille',
+      excerpt: 'CBD voi olla vuorovaikutuksessa tiettyjen lääkkeiden kanssa vaikuttamalla maksaentsyymeihin, jotka metaboloivat niitä. Tässä on mitä tutkimus osoittaa, ja kuinka käydä tämä keskustelu vastuullisesti tiskillä.',
+      content: `
+        <h2>CBD Ei Ole Riskitön — Tässä on Rehellinen Kuva</h2>
+        <p>CBD:llä on erinomainen turvallisuusprofiili verrattuna moniin aineisiin, mutta "luonnollinen" ei tarkoita "ei interaktioita". CBD metaboloituu sytokromi P450 -perheen maksaentsyymien toimesta — samalla entsyymijärjestelmällä, joka vastaa suuren osan reseptilääkkeiden metaboloinnista. Tämä on aidosti hyödyllistä tietoa kenelle tahansa, joka myy CBD-tuotteita, ei syy välttää kategoriaa.</p>
+
+        <h3>Kuinka Interaktio Toimii</h3>
+        <p>Kliininen tutkimus on osoittanut, että CBD estää useita sytokromi P450 -entsyymejä, mukaan lukien CYP3A4, CYP2C9, ja CYP2C19 — entsyymejä, jotka vastaavat laajan valikoiman yleisten lääkkeiden metaboloinnista. Kun CBD estää näitä entsyymejä, lääkkeet, jotka ovat riippuvaisia niistä poistumisen suhteen, voivat kertyä odotettua korkeammille tasoille verenkiertoon, tai poistua hitaammin kuin tarkoitettu.</p>
+        <p>Tämä ei tarkoita, että CBD:n käyttö kaikkien lääkkeiden kanssa olisi vaarallista — kliininen merkitys riippuu voimakkaasti tietystä lääkkeestä, sen terapeuttisesta ikkunasta, ja mukana olevasta CBD-annoksesta. Se tarkoittaa, että asiaa kannattaa hetki miettiä sen sijaan, että oletetaan nolla interaktiota.</p>
+
+        <h3>Mitä Tämä Tarkoittaa Käytännössä</h3>
+        <ul>
+          <li>Asiakkaiden, jotka käyttävät säännöllistä reseptilääkitystä — erityisesti verenohennuslääkkeitä, epilepsialääkkeitä, tai lääkkeitä, joilla on kapea turvallinen annosikkuna — tulisi tarkistaa asia terveydenhuollon tarjoajalta ennen CBD:n aloittamista, ei siksi että se olisi oletusarvoisesti vaarallista, vaan koska interaktiot ovat aidosti mahdollisia.</li>
+          <li>Tämä koskee kaikkia muotoja: <a href="/collections/cbd-oils">CBD-öljyt</a>, <a href="/collections/cbd-flowers">kukat</a>, ja <a href="/collections/cbd-gummies">syötävät</a> metaboloituvat kaikki samalla tavalla imeytymisen jälkeen.</li>
+          <li>Tämä on yleistä tietoa, ei lääketieteellistä neuvontaa — jälleenmyyjien tulisi ohjata tietyt lääkekysymykset farmaseutille tai lääkärille sen sijaan, että vastaisivat niihin suoraan.</li>
+        </ul>
+
+        <h3>Miksi Tämä Rakentaa Luottamusta, Ei Pelkoa</h3>
+        <p>Jälleenmyyjät, jotka mainitsevat tämän ennakoivasti — sen sijaan että väittäisivät CBD:n olevan täysin riskitön — rakentavat enemmän uskottavuutta valistuneiden asiakkaiden keskuudessa, erityisesti kasvavan hyvinvointiin keskittyvän segmentin, joka tutkii asioita ennen ostamista. Se on myös yhdenmukaista sen kanssa, miten lähestymme jokaista tuotetta: jokainen myymämme erä on <a href="/quality-and-testing">riippumattomasti laboratoriotestattu</a>, joten asiakkaiden kuluttama todellinen kannabinoidipitoisuus on vahvistettu, ei arvattu.</p>
+        <p>Yksityiskohtaiset kliiniset tiedot CBD:n sytokromi P450 -interaktioista löydät tästä vertaisarvioidusta tutkimuksesta: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Sytokromi P450 -välitteisten Kannabinoidi-Lääkeaineinteraktioiden Arviointi Terveillä Aikuisilla Osallistujilla (PMC)</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'CBD e Interações Medicamentosas: O que os Retalhistas Devem Dizer aos Clientes',
+      excerpt: 'O CBD pode interagir com certos medicamentos ao afetar as enzimas hepáticas que os metabolizam. Aqui está o que a investigação mostra, e como ter essa conversa de forma responsável ao balcão.',
+      content: `
+        <h2>O CBD Não Está Isento de Risco — Aqui Está o Quadro Honesto</h2>
+        <p>O CBD tem um excelente perfil de segurança comparado com muitas substâncias, mas "natural" não significa "sem interações". O CBD é metabolizado por enzimas hepáticas da família do citocromo P450 — o mesmo sistema enzimático responsável por metabolizar uma grande parte dos medicamentos com receita. Esta é uma informação genuinamente útil para qualquer pessoa que venda produtos CBD, não uma razão para evitar a categoria.</p>
+
+        <h3>Como Funciona a Interação</h3>
+        <p>A investigação clínica demonstrou que o CBD inibe várias enzimas do citocromo P450, incluindo CYP3A4, CYP2C9, e CYP2C19 — enzimas responsáveis por metabolizar uma vasta gama de medicamentos comuns. Quando o CBD inibe estas enzimas, os medicamentos que dependem delas para a depuração podem acumular-se a níveis mais elevados do que o esperado na corrente sanguínea, ou depurar mais lentamente do que pretendido.</p>
+        <p>Isto não significa que o CBD seja perigoso de usar juntamente com todos os medicamentos — o significado clínico depende fortemente do medicamento específico, da sua janela terapêutica, e da dose de CBD envolvida. Significa que vale a pena pensar um momento em vez de assumir zero interação.</p>
+
+        <h3>O que Isto Significa na Prática</h3>
+        <ul>
+          <li>Clientes com medicação regular com receita — especialmente anticoagulantes, medicamentos antiepiléticos, ou medicamentos com uma janela de dosagem segura estreita — deveriam consultar um profissional de saúde antes de iniciar o CBD, não porque seja perigoso por defeito, mas porque as interações são genuinamente possíveis.</li>
+          <li>Isto aplica-se a todos os formatos: <a href="/collections/cbd-oils">óleos CBD</a>, <a href="/collections/cbd-flowers">flores</a>, e <a href="/collections/cbd-gummies">comestíveis</a> são todos metabolizados da mesma forma uma vez absorvidos.</li>
+          <li>Esta é informação geral, não aconselhamento médico — os retalhistas devem direcionar questões específicas sobre medicamentos para um farmacêutico ou médico em vez de as responder diretamente.</li>
+        </ul>
+
+        <h3>Porque Isto Constrói Confiança, Não Medo</h3>
+        <p>Retalhistas que mencionam isto proativamente — em vez de afirmar que o CBD é completamente isento de risco — constroem mais credibilidade com clientes informados, particularmente o crescente segmento focado no bem-estar que pesquisa antes de comprar. Também é consistente com a forma como abordamos cada produto: cada lote que vendemos é <a href="/quality-and-testing">testado em laboratório de forma independente</a>, portanto o teor real de canabinoides que os clientes estão a consumir é verificado, não adivinhado.</p>
+        <p>Para os dados clínicos detalhados sobre as interações do CBD com o citocromo P450, veja este estudo revisto por pares: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11059946/" target="_blank" rel="noopener noreferrer">Avaliação das Interações Medicamentosas Canabinoides Mediadas pelo Citocromo P450 em Participantes Adultos Saudáveis (PMC)</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
