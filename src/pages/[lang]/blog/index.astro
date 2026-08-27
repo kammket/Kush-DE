@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import { blogPosts } from '../../../data/blog';
+import { getBlogTranslation } from '../../../data/translations/blogContent';
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 
@@ -54,9 +55,7 @@ const blogJsonLd = {
 };
 ---
 
-{/* Post content is English-only for now: canonical to the English blog index and no
-    hreflang until translations exist. See [lang]/blog/[slug].astro. */}
-<BaseLayout title={tr.title} description={tr.desc} locale={locale} jsonLd={blogJsonLd} canonicalURL="https://greensfarmhouse.com/blog/" noHreflang={true}>
+<BaseLayout title={tr.title} description={tr.desc} locale={locale} jsonLd={blogJsonLd} canonicalURL={getAbsoluteLocaleUrl(locale, '/blog')}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
 
   <section class="py-10 md:py-14">
@@ -67,7 +66,11 @@ const blogJsonLd = {
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {sortedPosts.map((post, i) => (
+        {sortedPosts.map((post, i) => {
+          const trPost = getBlogTranslation(post.slug, locale);
+          const title = trPost?.title ?? post.title;
+          const excerpt = trPost?.excerpt ?? post.excerpt;
+          return (
           <article class={`bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow ${i === 0 ? 'md:col-span-2 lg:col-span-2' : ''}`}>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
@@ -75,9 +78,9 @@ const blogJsonLd = {
                 <span class="text-xs text-gray-400">{post.readTime}</span>
               </div>
               <h2 class={`font-bold text-gray-900 mb-2 ${i === 0 ? 'text-xl md:text-2xl' : 'text-lg'}`}>
-                <a href={lp(`/blog/${post.slug}`)} class="hover:text-primary transition-colors">{post.title}</a>
+                <a href={lp(`/blog/${post.slug}`)} class="hover:text-primary transition-colors">{title}</a>
               </h2>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+              <p class="text-sm text-gray-600 mb-4 line-clamp-3">{excerpt}</p>
               <div class="flex items-center justify-between">
                 <time class="text-xs text-gray-400" datetime={post.date}>
                   {new Date(post.date).toLocaleDateString(dateLocale[locale] || 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -86,7 +89,8 @@ const blogJsonLd = {
               </div>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
 
       <!-- Newsletter -->

@@ -55,7 +55,7 @@ export const blogPosts: BlogPost[] = [
       <p>At Greens Farmhouse, we provide all of these benefits and more, serving over 5,000 professional clients across Europe.</p>
       
       <h3>5. Building Your Brand and Sales Channels</h3>
-      <p>Success in the CBD market requires a strong brand identity and effective sales channels. Consider investing in professional product photography, SEO-optimized website content, social media marketing, and customer education materials.</p>
+      <p>Success in the CBD market requires a strong brand identity and effective sales channels. Consider investing in professional product photography, SEO-optimized website content, social media marketing, and customer education materials. The <a href="https://eiha.org/" target="_blank" rel="noopener noreferrer">European Industrial Hemp Association (EIHA)</a>, the pan-European hemp trade body, is also a useful resource for tracking industry standards as you build your brand.</p>
       
       <h3>6. Managing Margins and Profitability</h3>
       <p>Wholesale CBD products typically offer retail margins of 50-200%, depending on the product category and your pricing strategy. Buying in larger quantities significantly improves your cost per unit and overall profitability.</p>
@@ -176,7 +176,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       
       <h3>Quality Indicators to Check</h3>
-      <p>Always verify: Certificate of Analysis (COA), extraction method (CO2 is gold standard), carrier oil quality (organic hemp seed oil preferred), and proper labeling with batch numbers.</p>
+      <p>Always verify: Certificate of Analysis (COA), extraction method (CO2 is gold standard), carrier oil quality (organic hemp seed oil preferred), and proper labeling with batch numbers. For independent background on CBD safety and dosing that's useful when advising customers, see the <a href="https://www.who.int/publications/m/item/cannabidiol" target="_blank" rel="noopener noreferrer">World Health Organization's Cannabidiol Critical Review Report</a>.</p>
     `,
   },
   {
@@ -193,7 +193,7 @@ export const blogPosts: BlogPost[] = [
       <h3>EU-Wide Framework</h3>
       <p>The European Union provides a baseline framework, but individual member states can set their own specific rules. Key EU-level considerations include:</p>
       <ul>
-        <li>The EU Novel Food Catalogue classifies CBD extracts as Novel Food requiring authorization</li>
+        <li>The <a href="https://food.ec.europa.eu/food-safety/novel-food/decisions-terminating-procedure_en" target="_blank" rel="noopener noreferrer">EU Novel Food Catalogue</a> classifies CBD extracts as Novel Food requiring authorization</li>
         <li>Hemp cultivation is legal with varieties containing less than 0.3% THC (increased from 0.2% in 2023)</li>
         <li>Cosmetic products containing CBD are generally allowed under EU Cosmetics Regulation</li>
       </ul>

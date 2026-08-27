@@ -4,6 +4,8 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import QuickAnswer from '../../components/QuickAnswer.astro';
 import ContentByline from '../../components/ContentByline.astro';
 import { blogPosts } from '../../data/blog';
+import { getBlogTranslation } from '../../data/translations/blogContent';
+import { supportedLocales } from '../../i18n/config';
 
 export function getStaticPaths() {
   return blogPosts.map((post) => ({
@@ -13,6 +15,9 @@ export function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+// hreflang only turns on once every locale has a real translation for this post —
+// otherwise Google would be told alternates exist that don't.
+const fullyTranslated = supportedLocales.every(l => !!getBlogTranslation(post.slug, l));
 
 // Related posts: prefer the same category, then fall back to filling with others.
 // Taking the first three of the full list would show identical links on every post,
@@ -60,7 +65,7 @@ const jsonLd = {
   title={post.title}
   description={post.excerpt}
   jsonLd={jsonLd}
-  noHreflang={true}
+  noHreflang={!fullyTranslated}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <Breadcrumbs items={breadcrumbs} />

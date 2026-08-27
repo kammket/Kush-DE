@@ -4,6 +4,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import QuickAnswer from '../../../components/QuickAnswer.astro';
 import ContentByline from '../../../components/ContentByline.astro';
 import { blogPosts, getBlogPostBySlug } from '../../../data/blog';
+import { getBlogTranslation } from '../../../data/translations/blogContent';
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 
@@ -23,7 +24,19 @@ const lp = (path: string) => getLocalePath(path, locale);
 const post = getBlogPostBySlug(slug);
 if (!post) return Astro.redirect(lp('/blog'));
 
-// Translated blog post titles and meta descriptions for SEO
+const localePrefix = '/' + locale;
+const trPost = getBlogTranslation(slug, locale);
+const hasTranslation = !!trPost;
+// hreflang only turns on once every locale has a real translation for this post —
+// otherwise an alternate would be advertised that doesn't actually exist yet.
+const fullyTranslated = supportedLocales.every(l => !!getBlogTranslation(slug, l));
+const displayTitle = trPost?.title ?? post.title;
+const displayExcerpt = trPost?.excerpt ?? post.excerpt;
+const displayContent = trPost
+  ? trPost.content.replace(/href="\//g, 'href="' + localePrefix + '/')
+  : post.content;
+
+// DEPRECATED — kept only until every post above is fully translated via blogContent.ts.
 const blogMeta: Record<string, Record<string, { title: string; excerpt: string }>> = {
   'how-to-start-cbd-business': {
     es: { title: 'Cómo Iniciar un Negocio de CBD en Europa: Guía Completa 2026', excerpt: 'Todo lo que necesitas saber para lanzar un negocio de CBD exitoso en Europa, desde regulaciones hasta proveedores mayoristas.' },
@@ -100,8 +113,8 @@ const blogMeta: Record<string, Record<string, { title: string; excerpt: string }
 };
 
 const postMeta = blogMeta[slug]?.[locale];
-const metaTitle = postMeta?.title || post.title;
-const metaExcerpt = postMeta?.excerpt || post.excerpt;
+const metaTitle = displayTitle || postMeta?.title || post.title;
+const metaExcerpt = displayExcerpt || postMeta?.excerpt || post.excerpt;
 
 const dateLocale: Record<string, string> = { es: 'es-ES', fr: 'fr-FR', de: 'de-DE', nl: 'nl-NL', it: 'it-IT', fi: 'fi-FI', pt: 'pt-PT' };
 
@@ -125,7 +138,10 @@ const readMore: Record<string, string> = {
 };
 
 const ct = cta[locale] || cta['es'];
-const related = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
+const related = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3).map(r => {
+  const rt = getBlogTranslation(r.slug, locale);
+  return { slug: r.slug, category: r.category, title: rt?.title ?? r.title, excerpt: rt?.excerpt ?? r.excerpt };
+});
 
 const breadcrumbs = [
   { name: t(locale, 'nav.home'), url: lp('/') },
@@ -147,10 +163,17 @@ const jsonLd = {
 };
 ---
 
-{/* Post bodies are not yet translated: canonical points to the English original and
-    hreflang is suppressed until real translations exist. Deliberately NOT noindex —
-    these pages may hold existing rankings, so deindexing is not a safe default. */}
-<BaseLayout title={metaTitle} description={metaExcerpt} locale={locale} jsonLd={jsonLd} canonicalURL={`https://greensfarmhouse.com/blog/${post.slug}/`} noHreflang={true}>
+{/* Once a post is fully translated in blogContent.ts, it gets a self-referencing
+    canonical and the full hreflang cluster. Posts not yet translated keep the
+    honest fallback: canonical to the English original, hreflang suppressed. */}
+<BaseLayout
+  title={metaTitle}
+  description={metaExcerpt}
+  locale={locale}
+  jsonLd={jsonLd}
+  canonicalURL={hasTranslation ? getAbsoluteLocaleUrl(locale, `/blog/${post.slug}`) : `https://greensfarmhouse.com/blog/${post.slug}/`}
+  noHreflang={!fullyTranslated}
+>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><Breadcrumbs items={breadcrumbs} /></div>
 
   <article class="py-8 md:py-12">
@@ -161,14 +184,14 @@ const jsonLd = {
           <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">{post.category}</span>
           <span class="text-sm text-gray-400">{post.readTime}</span>
         </div>
-        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{post.title}</h1>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{displayTitle}</h1>
         <ContentByline locale={locale} date={post.date} />
       </header>
 
       <!-- Content -->
       <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-a:text-primary mb-12">
-        <QuickAnswer>{post.excerpt}</QuickAnswer>
-        <div set:html={post.content} />
+        <QuickAnswer>{displayExcerpt}</QuickAnswer>
+        <div set:html={displayContent} />
       </div>
 
       <!-- CTA -->

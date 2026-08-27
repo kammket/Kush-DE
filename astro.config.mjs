@@ -3,6 +3,17 @@ import { defineConfig } from 'astro/config';
 import { execFileSync } from 'node:child_process';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import { blogTranslations } from './src/data/translations/blogContent.ts';
+
+const NON_EN_LOCALES = ['es', 'fr', 'de', 'nl', 'it', 'fi', 'pt'];
+
+/** A localized blog post is only sitemap-worthy once every locale has a real
+ *  translation — otherwise it's still canonical to the English original and
+ *  listing it here would contradict its own canonical tag. */
+function isFullyTranslatedBlogPost(slug) {
+  const perLocale = blogTranslations[slug];
+  return !!perLocale && NON_EN_LOCALES.every((l) => !!perLocale[l]);
+}
 
 /**
  * Last git commit date for a source file, or null if unavailable.
@@ -66,8 +77,14 @@ export default defineConfig({
         !page.includes('/404') &&
         !page.includes('/compare') &&
         !page.includes('/search') &&
-        // localized blog pages canonical to the English original until translated
-        !/\/(es|fr|de|nl|it|fi|pt)\/blog(\/|$)/.test(page),
+        // Localized blog posts stay out of the sitemap until fully translated
+        // (still canonical to English until then). Locale blog indexes are
+        // always genuinely localized, so they're never excluded here.
+        (() => {
+          const m = page.match(/\/(es|fr|de|nl|it|fi|pt)\/blog\/([^/]+)\/?$/);
+          if (!m) return true;
+          return isFullyTranslatedBlogPost(m[2]);
+        })(),
       i18n: {
         defaultLocale: 'en',
         locales: {
