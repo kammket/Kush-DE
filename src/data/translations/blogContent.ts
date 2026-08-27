@@ -2316,6 +2316,332 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'cbd-vs-thc-difference': {
+    fr: {
+      title: 'CBD vs THC : Quelle est la Différence ? (Guide Complet 2026)',
+      excerpt: "Le CBD et le THC sont les deux cannabinoïdes les plus connus de la plante de cannabis, mais ils se comportent de façon complètement différente. Voici la différence en termes d'effets, de légalité, et ce que cela signifie pour votre gamme de produits.",
+      content: `
+        <h2>CBD vs THC : Même Plante, Molécules Complètement Différentes</h2>
+        <p>Le CBD (cannabidiol) et le THC (tétrahydrocannabinol) sont tous deux extraits de la plante de cannabis/chanvre, et interagissent tous deux avec le système endocannabinoïde du corps — mais c'est là que s'arrête la similitude. Comprendre la différence compte, que vous soyez un détaillant expliquant les produits aux clients ou un acheteur essayant de comprendre des étiquettes déroutantes.</p>
+
+        <h3>La Différence Fondamentale : La Psychoactivité</h3>
+        <p>Le THC est psychoactif — c'est la molécule responsable du "high" associé à la marijuana. Le CBD n'est pas intoxicant : il ne produit pas de high, peu importe la quantité consommée. C'est la distinction la plus importante, et c'est pourquoi les produits CBD sont légaux à travers l'UE alors que le cannabis à forte teneur en THC ne l'est pas.</p>
+        <p>Les deux molécules interagissent avec les récepteurs cannabinoïdes (CB1 et CB2), mais se lient différemment. Le THC se lie directement et fortement aux récepteurs CB1 du cerveau, produisant des effets intoxicants. Le CBD a une interaction beaucoup plus faible et indirecte avec ces récepteurs, et est généralement associé à la relaxation sans altération.</p>
+
+        <h3>Statut Légal en Europe</h3>
+        <p>C'est là que la différence pratique compte vraiment pour les acheteurs et détaillants. Les produits CBD sont légaux à travers l'UE à condition que la teneur en THC reste sous le seuil légal — 0,3 % en France et dans la plupart des états membres. Les <a href="/collections/cbd-flowers">fleurs CBD</a>, <a href="/collections/cbd-resins">résines</a>, et <a href="/collections/cbd-oils">huiles</a> relèvent toutes de cette règle. Les produits à teneur en THC plus élevée restent des substances contrôlées dans toute l'UE.</p>
+        <p>Notre <a href="/legal-cannabis-europe">guide du Cannabis Légal en Europe</a> décompose exactement ce qui est légal à acheter et à vendre, y compris notre gamme de <a href="/collections/thc-gummies">bonbons THC légaux</a>, précisément dosée sous le seuil UE de 0,20 %.</p>
+
+        <h3>Effets : À Quoi S'attendre</h3>
+        <ul>
+          <li><strong>THC :</strong> Euphorie, perception altérée, appétit accru, anxiété potentielle à fortes doses. Intoxicant et altérant.</li>
+          <li><strong>CBD :</strong> Relaxation, aucune altération, aucune intoxication. Largement utilisé aux côtés du CBN pour le soutien du sommeil et dans le cadre de routines bien-être générales.</li>
+        </ul>
+
+        <h3>Que Devriez-vous Stocker ?</h3>
+        <p>Pour une entreprise de vente au détail légalement conforme dans l'UE, le CBD est le fondement de la catégorie — fleurs, résines, huiles, et bonbons gélifiés avec THC inférieur à 0,3 %. Notre <a href="/best-cbd-strains">guide des Meilleures Souches CBD</a> couvre les variétés de fleurs qui convertissent le mieux en vente au détail. Pour les clients demandant spécifiquement une option légale plus forte, nos bonbons gélifiés THC conformes UE à 10mg, 25mg, et 50mg comblent ce vide sans franchir aucune ligne légale.</p>
+        <p>Pour un regard plus approfondi sur la façon dont le CBD et le THC sont recherchés et réglementés, le Centre National Américain pour la Santé Complémentaire et Intégrative publie un aperçu accessible de la science : <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Cannabis, Marijuana, et Cannabinoïdes : Ce que Vous Devez Savoir (NCCIH)</a>.</p>
+      `,
+    },
+    de: {
+      title: 'CBD vs THC: Was ist der Unterschied? (Vollständiger Leitfaden 2026)',
+      excerpt: 'CBD und THC sind die zwei bekanntesten Cannabinoide der Cannabispflanze, verhalten sich aber völlig unterschiedlich. Hier ist der Unterschied in Wirkung, Legalität, und was es für Ihre Produktpalette bedeutet.',
+      content: `
+        <h2>CBD vs THC: Gleiche Pflanze, Völlig Unterschiedliche Moleküle</h2>
+        <p>CBD (Cannabidiol) und THC (Tetrahydrocannabinol) werden beide aus der Cannabis-/Hanfpflanze extrahiert, und beide interagieren mit dem körpereigenen Endocannabinoid-System — aber hier endet die Ähnlichkeit. Das Verständnis des Unterschieds ist wichtig, egal ob Sie ein Händler sind, der Kunden Produkte erklärt, oder ein Käufer, der verwirrende Etiketten verstehen möchte.</p>
+
+        <h3>Der Kernunterschied: Psychoaktivität</h3>
+        <p>THC ist psychoaktiv — es ist das Molekül, das für den mit Marihuana verbundenen "Rausch" verantwortlich ist. CBD ist nicht berauschend: es erzeugt keinen Rausch, egal wie viel konsumiert wird. Dies ist die wichtigste Unterscheidung, und deshalb sind CBD-Produkte in der gesamten EU legal, während THC-reiches Cannabis es nicht ist.</p>
+        <p>Beide Moleküle interagieren mit Cannabinoid-Rezeptoren (CB1 und CB2), binden aber unterschiedlich. THC bindet direkt und stark an CB1-Rezeptoren im Gehirn und erzeugt berauschende Effekte. CBD hat eine viel schwächere, indirekte Interaktion mit diesen Rezeptoren und wird allgemein mit Entspannung ohne Beeinträchtigung in Verbindung gebracht.</p>
+
+        <h3>Rechtlicher Status in Europa</h3>
+        <p>Hier ist der praktische Unterschied wirklich wichtig für Käufer und Händler. CBD-Produkte sind in der gesamten EU legal, sofern der THC-Gehalt unter dem gesetzlichen Grenzwert bleibt — 0,3 % in Frankreich und den meisten Mitgliedstaaten. <a href="/collections/cbd-flowers">CBD-Blüten</a>, <a href="/collections/cbd-resins">Harze</a>, und <a href="/collections/cbd-oils">Öle</a> fallen alle unter diese Regel. Produkte mit höherem THC-Gehalt bleiben in der gesamten EU kontrollierte Substanzen.</p>
+        <p>Unser <a href="/legal-cannabis-europe">Leitfaden zu Legalem Cannabis in Europa</a> schlüsselt genau auf, was legal zu kaufen und zu verkaufen ist, einschließlich unserer <a href="/collections/thc-gummies">legalen THC-Gummibärchen</a>-Linie, die präzise unter dem EU-Schwellenwert von 0,20 % dosiert ist.</p>
+
+        <h3>Wirkungen: Was zu Erwarten Ist</h3>
+        <ul>
+          <li><strong>THC:</strong> Euphorie, veränderte Wahrnehmung, erhöhter Appetit, potenzielle Angst bei hohen Dosen. Berauschend und beeinträchtigend.</li>
+          <li><strong>CBD:</strong> Entspannung, keine Beeinträchtigung, keine Berauschung. Weit verbreitet neben CBN zur Schlafunterstützung und als Teil allgemeiner Wellness-Routinen.</li>
+        </ul>
+
+        <h3>Was Sollten Sie Vorrätig Haben?</h3>
+        <p>Für ein rechtskonformes EU-Einzelhandelsgeschäft ist CBD die Grundlage der Kategorie — Blüten, Harze, Öle, und Gummibärchen mit THC unter 0,3 %. Unser <a href="/best-cbd-strains">Leitfaden zu den Besten CBD-Sorten</a> deckt die Blütensorten ab, die im Einzelhandel am besten konvertieren. Für Kunden, die speziell nach einer stärkeren legalen Option fragen, füllen unsere EU-konformen THC-Gummibärchen mit 10mg, 25mg, und 50mg diese Lücke, ohne rechtliche Grenzen zu überschreiten.</p>
+        <p>Für einen tieferen Einblick, wie CBD und THC erforscht und reguliert werden, veröffentlicht das US National Center for Complementary and Integrative Health einen zugänglichen Überblick über die Wissenschaft: <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Cannabis, Marihuana, und Cannabinoide: Was Sie Wissen Müssen (NCCIH)</a>.</p>
+      `,
+    },
+    es: {
+      title: 'CBD vs THC: ¿Cuál es la Diferencia? (Guía Completa 2026)',
+      excerpt: 'El CBD y el THC son los dos cannabinoides más conocidos de la planta de cannabis, pero se comportan de forma completamente diferente. Aquí está la diferencia en efectos, legalidad, y lo que significa para tu gama de productos.',
+      content: `
+        <h2>CBD vs THC: Misma Planta, Moléculas Completamente Diferentes</h2>
+        <p>El CBD (cannabidiol) y el THC (tetrahidrocannabinol) se extraen ambos de la planta de cannabis/cáñamo, y ambos interactúan con el sistema endocannabinoide del cuerpo — pero ahí termina la similitud. Entender la diferencia importa ya seas un minorista explicando productos a clientes o un comprador tratando de entender etiquetas confusas.</p>
+
+        <h3>La Diferencia Fundamental: La Psicoactividad</h3>
+        <p>El THC es psicoactivo — es la molécula responsable del "colocón" asociado con la marihuana. El CBD no es intoxicante: no produce colocón, sin importar cuánto se consuma. Esta es la distinción más importante, y es por eso que los productos CBD son legales en toda la UE mientras que el cannabis con alto contenido de THC no lo es.</p>
+        <p>Ambas moléculas interactúan con los receptores cannabinoides (CB1 y CB2), pero se unen de manera diferente. El THC se une directa y fuertemente a los receptores CB1 en el cerebro, produciendo efectos intoxicantes. El CBD tiene una interacción mucho más débil e indirecta con estos receptores, y generalmente se asocia con relajación sin deterioro.</p>
+
+        <h3>Estatus Legal en Europa</h3>
+        <p>Aquí es donde la diferencia práctica realmente importa para compradores y minoristas. Los productos CBD son legales en toda la UE siempre que el contenido de THC permanezca por debajo del umbral legal — 0,3% en Francia y la mayoría de los estados miembros. Las <a href="/collections/cbd-flowers">flores CBD</a>, <a href="/collections/cbd-resins">resinas</a>, y <a href="/collections/cbd-oils">aceites</a> caen todos bajo esta regla. Los productos con mayor contenido de THC siguen siendo sustancias controladas en toda la UE.</p>
+        <p>Nuestra <a href="/legal-cannabis-europe">guía de Cannabis Legal en Europa</a> desglosa exactamente qué es legal comprar y vender, incluyendo nuestra línea de <a href="/collections/thc-gummies">gomitas THC legales</a>, dosificada con precisión bajo el umbral UE del 0,20%.</p>
+
+        <h3>Efectos: Qué Esperar</h3>
+        <ul>
+          <li><strong>THC:</strong> Euforia, percepción alterada, apetito aumentado, ansiedad potencial en dosis altas. Intoxicante y deteriorante.</li>
+          <li><strong>CBD:</strong> Relajación, sin deterioro, sin intoxicación. Ampliamente usado junto con CBN para apoyo al sueño y como parte de rutinas de bienestar general.</li>
+        </ul>
+
+        <h3>¿Cuál Deberías Tener en Stock?</h3>
+        <p>Para un negocio minorista legalmente conforme en la UE, el CBD es la base de la categoría — flores, resinas, aceites, y gomitas con THC por debajo del 0,3%. Nuestra <a href="/best-cbd-strains">guía de Mejores Variedades CBD</a> cubre las variedades de flores que mejor convierten en venta al por menor. Para clientes que preguntan específicamente por una opción legal más fuerte, nuestras gomitas THC conformes con la UE en 10mg, 25mg, y 50mg llenan ese vacío sin cruzar ninguna línea legal.</p>
+        <p>Para una mirada más profunda sobre cómo se investiga y regula el CBD y el THC, el Centro Nacional de Salud Complementaria e Integrativa de EE.UU. publica un resumen accesible de la ciencia: <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Cannabis, Marihuana, y Cannabinoides: Lo Que Necesitas Saber (NCCIH)</a>.</p>
+      `,
+    },
+    it: {
+      title: 'CBD vs THC: Qual è la Differenza? (Guida Completa 2026)',
+      excerpt: 'CBD e THC sono i due cannabinoidi più conosciuti della pianta di cannabis, ma si comportano in modo completamente diverso. Ecco la differenza in effetti, legalità, e cosa significa per la tua gamma di prodotti.',
+      content: `
+        <h2>CBD vs THC: Stessa Pianta, Molecole Completamente Diverse</h2>
+        <p>Il CBD (cannabidiolo) e il THC (tetraidrocannabinolo) sono entrambi estratti dalla pianta di cannabis/canapa, ed entrambi interagiscono con il sistema endocannabinoide del corpo — ma qui finisce la somiglianza. Comprendere la differenza conta sia che tu sia un rivenditore che spiega i prodotti ai clienti sia un acquirente che cerca di capire etichette confuse.</p>
+
+        <h3>La Differenza Fondamentale: La Psicoattività</h3>
+        <p>Il THC è psicoattivo — è la molecola responsabile dello "sballo" associato alla marijuana. Il CBD non è inebriante: non produce sballo, indipendentemente da quanto ne venga consumato. Questa è la distinzione più importante, ed è per questo che i prodotti CBD sono legali in tutta l'UE mentre la cannabis ad alto contenuto di THC non lo è.</p>
+        <p>Entrambe le molecole interagiscono con i recettori cannabinoidi (CB1 e CB2), ma si legano diversamente. Il THC si lega direttamente e fortemente ai recettori CB1 nel cervello, producendo effetti inebrianti. Il CBD ha un'interazione molto più debole e indiretta con questi recettori, ed è generalmente associato al rilassamento senza compromissione.</p>
+
+        <h3>Status Legale in Europa</h3>
+        <p>È qui che la differenza pratica conta davvero per acquirenti e rivenditori. I prodotti CBD sono legali in tutta l'UE a condizione che il contenuto di THC rimanga sotto la soglia legale — 0,3% in Francia e nella maggior parte degli stati membri. I <a href="/collections/cbd-flowers">fiori CBD</a>, le <a href="/collections/cbd-resins">resine</a>, e gli <a href="/collections/cbd-oils">oli</a> rientrano tutti in questa regola. I prodotti con contenuto di THC più elevato rimangono sostanze controllate in tutta l'UE.</p>
+        <p>La nostra <a href="/legal-cannabis-europe">guida alla Cannabis Legale in Europa</a> illustra esattamente cosa è legale acquistare e vendere, inclusa la nostra linea di <a href="/collections/thc-gummies">caramelle gommose THC legali</a>, dosata con precisione sotto la soglia UE dello 0,20%.</p>
+
+        <h3>Effetti: Cosa Aspettarsi</h3>
+        <ul>
+          <li><strong>THC:</strong> Euforia, percezione alterata, aumento dell'appetito, potenziale ansia ad alte dosi. Inebriante e compromettente.</li>
+          <li><strong>CBD:</strong> Rilassamento, nessuna compromissione, nessuna intossicazione. Ampiamente usato insieme al CBN per il supporto al sonno e come parte di routine di benessere generale.</li>
+        </ul>
+
+        <h3>Cosa Dovresti Avere in Stock?</h3>
+        <p>Per un'attività di vendita al dettaglio legalmente conforme nell'UE, il CBD è la base della categoria — fiori, resine, oli, e caramelle gommose con THC inferiore allo 0,3%. La nostra <a href="/best-cbd-strains">guida alle Migliori Varietà CBD</a> copre le varietà di fiori che convertono meglio al dettaglio. Per i clienti che chiedono specificamente un'opzione legale più forte, le nostre caramelle gommose THC conformi UE da 10mg, 25mg, e 50mg colmano questo vuoto senza attraversare alcun confine legale.</p>
+        <p>Per uno sguardo più approfondito su come CBD e THC vengono studiati e regolamentati, il Centro Nazionale Statunitense per la Salute Complementare e Integrativa pubblica una panoramica accessibile della scienza: <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Cannabis, Marijuana, e Cannabinoidi: Cosa Devi Sapere (NCCIH)</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'CBD vs THC: Wat is het Verschil? (Volledige Gids 2026)',
+      excerpt: 'CBD en THC zijn de twee bekendste cannabinoïden in de cannabisplant, maar ze gedragen zich compleet anders. Hier is het verschil in effecten, legaliteit, en wat het betekent voor uw productassortiment.',
+      content: `
+        <h2>CBD vs THC: Dezelfde Plant, Compleet Andere Moleculen</h2>
+        <p>CBD (cannabidiol) en THC (tetrahydrocannabinol) worden beide uit de cannabis-/hennepplant geëxtraheerd, en beide interageren met het endocannabinoïdesysteem van het lichaam — maar daar houdt de gelijkenis op. Het begrijpen van het verschil is belangrijk, of u nu een retailer bent die producten aan klanten uitlegt of een shopper die verwarrende etiketten probeert te begrijpen.</p>
+
+        <h3>Het Kernverschil: Psychoactiviteit</h3>
+        <p>THC is psychoactief — het is het molecuul verantwoordelijk voor de "high" geassocieerd met marihuana. CBD is niet-bedwelmend: het produceert geen high, hoeveel er ook wordt geconsumeerd. Dit is het belangrijkste onderscheid, en het is waarom CBD-producten legaal zijn door de hele EU terwijl cannabis met hoog THC-gehalte dat niet is.</p>
+        <p>Beide moleculen interageren met cannabinoïdereceptoren (CB1 en CB2), maar binden verschillend. THC bindt direct en sterk aan CB1-receptoren in de hersenen, wat bedwelmende effecten produceert. CBD heeft een veel zwakkere, indirecte interactie met deze receptoren, en wordt over het algemeen geassocieerd met ontspanning zonder beperking.</p>
+
+        <h3>Juridische Status in Europa</h3>
+        <p>Hier is waar het praktische verschil echt belangrijk is voor kopers en retailers. CBD-producten zijn legaal door de hele EU mits het THC-gehalte onder de wettelijke drempel blijft — 0,3% in Frankrijk en de meeste lidstaten. <a href="/collections/cbd-flowers">CBD-bloemen</a>, <a href="/collections/cbd-resins">harsen</a>, en <a href="/collections/cbd-oils">oliën</a> vallen allemaal onder deze regel. Producten met hoger THC-gehalte blijven gecontroleerde stoffen door de hele EU.</p>
+        <p>Onze <a href="/legal-cannabis-europe">gids voor Legale Cannabis in Europa</a> legt precies uit wat legaal is om te kopen en te verkopen, inclusief onze lijn <a href="/collections/thc-gummies">legale THC-gummies</a>, die precies gedoseerd is onder de EU-drempel van 0,20%.</p>
+
+        <h3>Effecten: Wat te Verwachten</h3>
+        <ul>
+          <li><strong>THC:</strong> Euforie, veranderde waarneming, verhoogde eetlust, potentiële angst bij hoge doses. Bedwelmend en beperkend.</li>
+          <li><strong>CBD:</strong> Ontspanning, geen beperking, geen bedwelming. Veel gebruikt naast CBN voor slaapondersteuning en als onderdeel van algemene wellnessroutines.</li>
+        </ul>
+
+        <h3>Wat Moet U Op Voorraad Hebben?</h3>
+        <p>Voor een wettelijk conform EU-retailbedrijf is CBD de basis van de categorie — bloemen, harsen, oliën, en gummies met THC onder 0,3%. Onze <a href="/best-cbd-strains">gids voor Beste CBD-Soorten</a> behandelt de bloemvariëteiten die het beste converteren in de retail. Voor klanten die specifiek vragen naar een sterkere legale optie, vullen onze EU-conforme THC-gummies op 10mg, 25mg, en 50mg dat gat zonder enige wettelijke grens te overschrijden.</p>
+        <p>Voor een diepere blik op hoe CBD en THC worden onderzocht en gereguleerd, publiceert het Amerikaanse National Center for Complementary and Integrative Health een toegankelijk overzicht van de wetenschap: <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Cannabis, Marihuana, en Cannabinoïden: Wat U Moet Weten (NCCIH)</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'CBD vs THC: Mikä on Ero? (Täydellinen Opas 2026)',
+      excerpt: 'CBD ja THC ovat kannabiskasvin kaksi tunnetuinta kannabinoidia, mutta ne käyttäytyvät täysin eri tavalla. Tässä on ero vaikutuksissa, laillisuudessa, ja mitä se tarkoittaa tuotevalikoimallesi.',
+      content: `
+        <h2>CBD vs THC: Sama Kasvi, Täysin Erilaiset Molekyylit</h2>
+        <p>CBD (kannabidioli) ja THC (tetrahydrokannabinoli) uutetaan molemmat kannabis-/hamppukasvista, ja molemmat vaikuttavat kehon endokannabinoidijärjestelmään — mutta siihen samankaltaisuus loppuukin. Eron ymmärtäminen on tärkeää sekä jälleenmyyjälle, joka selittää tuotteita asiakkaille, että ostajalle, joka yrittää ymmärtää hämmentäviä merkintöjä.</p>
+
+        <h3>Ydinero: Psykoaktiivisuus</h3>
+        <p>THC on psykoaktiivinen — se on molekyyli, joka vastaa marihuanaan liitetystä "huumaustilasta". CBD ei ole päihdyttävä: se ei tuota huumaustilaa riippumatta kulutetusta määrästä. Tämä on yksittäinen tärkein ero, ja siksi CBD-tuotteet ovat laillisia kautta EU:n, kun taas korkean THC-pitoisuuden kannabis ei ole.</p>
+        <p>Molemmat molekyylit vaikuttavat kannabinoidireseptoreihin (CB1 ja CB2), mutta sitoutuvat eri tavoin. THC sitoutuu suoraan ja voimakkaasti aivojen CB1-reseptoreihin, tuottaen päihdyttäviä vaikutuksia. CBD:llä on paljon heikompi, epäsuora vuorovaikutus näiden reseptorien kanssa, ja se yhdistetään yleensä rentoutumiseen ilman heikentymistä.</p>
+
+        <h3>Laillinen Asema Euroopassa</h3>
+        <p>Tässä käytännön ero on todella tärkeä ostajille ja jälleenmyyjille. CBD-tuotteet ovat laillisia kautta EU:n edellyttäen, että THC-pitoisuus pysyy laillisen kynnysarvon alapuolella — 0,3 % Ranskassa ja useimmissa jäsenvaltioissa. <a href="/collections/cbd-flowers">CBD-kukat</a>, <a href="/collections/cbd-resins">hartsit</a>, ja <a href="/collections/cbd-oils">öljyt</a> kuuluvat kaikki tämän säännön piiriin. Korkeamman THC-pitoisuuden tuotteet pysyvät valvottuina aineina kautta EU:n.</p>
+        <p><a href="/legal-cannabis-europe">Laillinen Kannabis Euroopassa -oppaamme</a> erittelee tarkalleen, mikä on laillista ostaa ja myydä, mukaan lukien <a href="/collections/thc-gummies">lailliset THC-kumimakeisemme</a>, jotka on annosteltu tarkasti alle EU:n 0,20 % kynnysarvon.</p>
+
+        <h3>Vaikutukset: Mitä Odottaa</h3>
+        <ul>
+          <li><strong>THC:</strong> Euforia, muuttunut havaintokyky, lisääntynyt ruokahalu, mahdollinen ahdistus suurilla annoksilla. Päihdyttävä ja heikentävä.</li>
+          <li><strong>CBD:</strong> Rentoutuminen, ei heikentymistä, ei päihtymystä. Laajasti käytetty yhdessä CBN:n kanssa unen tukemiseen ja osana yleisiä hyvinvointirutiineja.</li>
+        </ul>
+
+        <h3>Mitä Sinun Tulisi Pitää Varastossa?</h3>
+        <p>Laillisesti vaatimustenmukaiselle EU-vähittäisliiketoiminnalle CBD on kategorian perusta — kukat, hartsit, öljyt, ja kumimakeiset THC-pitoisuudella alle 0,3 %. <a href="/best-cbd-strains">Parhaat CBD-lajikkeet -oppaamme</a> kattaa kukkalajikkeet, jotka konvertoivat parhaiten vähittäiskaupassa. Asiakkaille, jotka kysyvät nimenomaan vahvempaa laillista vaihtoehtoa, EU-vaatimustenmukaiset THC-kumimakeisemme 10mg, 25mg, ja 50mg annoksina täyttävät tämän aukon ylittämättä laillisia rajoja.</p>
+        <p>Syvempää tietoa siitä, miten CBD:tä ja THC:tä tutkitaan ja säännellään, Yhdysvaltain kansallinen täydentävän ja integratiivisen terveyden keskus julkaisee helposti lähestyttävän yleiskatsauksen tieteestä: <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Kannabis, Marihuana, ja Kannabinoidit: Mitä Sinun Tulee Tietää (NCCIH)</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'CBD vs THC: Qual é a Diferença? (Guia Completo 2026)',
+      excerpt: 'O CBD e o THC são os dois canabinoides mais conhecidos da planta de cannabis, mas comportam-se de forma completamente diferente. Aqui está a diferença em efeitos, legalidade, e o que significa para a sua gama de produtos.',
+      content: `
+        <h2>CBD vs THC: Mesma Planta, Moléculas Completamente Diferentes</h2>
+        <p>O CBD (canabidiol) e o THC (tetrahidrocanabinol) são ambos extraídos da planta de cannabis/cânhamo, e ambos interagem com o sistema endocanabinoide do corpo — mas é aí que a semelhança termina. Compreender a diferença importa, seja você um retalhista a explicar produtos a clientes ou um comprador a tentar dar sentido a rótulos confusos.</p>
+
+        <h3>A Diferença Central: Psicoatividade</h3>
+        <p>O THC é psicoativo — é a molécula responsável pelo "efeito" associado à marijuana. O CBD não é intoxicante: não produz um efeito eufórico, independentemente da quantidade consumida. Esta é a distinção mais importante, e é por isso que os produtos CBD são legais em toda a UE enquanto a cannabis com alto teor de THC não é.</p>
+        <p>Ambas as moléculas interagem com recetores canabinoides (CB1 e CB2), mas ligam-se de forma diferente. O THC liga-se direta e fortemente aos recetores CB1 no cérebro, produzindo efeitos intoxicantes. O CBD tem uma interação muito mais fraca e indireta com estes recetores, e é geralmente associado ao relaxamento sem comprometimento.</p>
+
+        <h3>Estatuto Legal na Europa</h3>
+        <p>É aqui que a diferença prática realmente importa para compradores e retalhistas. Os produtos CBD são legais em toda a UE desde que o teor de THC permaneça abaixo do limiar legal — 0,3% em França e na maioria dos estados-membros. As <a href="/collections/cbd-flowers">flores CBD</a>, <a href="/collections/cbd-resins">resinas</a>, e <a href="/collections/cbd-oils">óleos</a> enquadram-se todos nesta regra. Produtos com teor de THC mais elevado permanecem substâncias controladas em toda a UE.</p>
+        <p>O nosso <a href="/legal-cannabis-europe">guia de Cannabis Legal na Europa</a> detalha exatamente o que é legal comprar e vender, incluindo a nossa linha de <a href="/collections/thc-gummies">gomas THC legais</a>, precisamente dosada abaixo do limiar UE de 0,20%.</p>
+
+        <h3>Efeitos: O que Esperar</h3>
+        <ul>
+          <li><strong>THC:</strong> Euforia, perceção alterada, apetite aumentado, ansiedade potencial em doses elevadas. Intoxicante e comprometedor.</li>
+          <li><strong>CBD:</strong> Relaxamento, sem comprometimento, sem intoxicação. Amplamente usado juntamente com CBN para apoio ao sono e como parte de rotinas gerais de bem-estar.</li>
+        </ul>
+
+        <h3>O que Deveria Ter em Stock?</h3>
+        <p>Para um negócio de retalho legalmente conforme na UE, o CBD é a base da categoria — flores, resinas, óleos, e gomas com THC abaixo de 0,3%. O nosso <a href="/best-cbd-strains">guia de Melhores Variedades CBD</a> cobre as variedades de flores que melhor convertem no retalho. Para clientes que perguntam especificamente sobre uma opção legal mais forte, as nossas gomas THC conformes com a UE em 10mg, 25mg, e 50mg preenchem essa lacuna sem cruzar qualquer linha legal.</p>
+        <p>Para um olhar mais aprofundado sobre como o CBD e o THC são pesquisados e regulamentados, o Centro Nacional de Saúde Complementar e Integrativa dos EUA publica uma visão geral acessível da ciência: <a href="https://www.nccih.nih.gov/health/cannabis-marijuana-and-cannabinoids-what-you-need-to-know" target="_blank" rel="noopener noreferrer">Cannabis, Marijuana, e Canabinoides: O que Precisa de Saber (NCCIH)</a>.</p>
+      `,
+    },
+  },
+  'how-long-does-cbd-stay-in-your-system': {
+    fr: {
+      title: 'Combien de Temps le CBD Reste-t-il dans Votre Organisme ? (Guide 2026)',
+      excerpt: "La demi-vie d'élimination du CBD varie énormément selon le format du produit et le schéma de dosage — de quelques heures à plusieurs jours. Voici ce que montre réellement la recherche, et ce que cela signifie si vous êtes testé.",
+      content: `
+        <h2>Il N'y a Pas de Réponse Unique — Format et Dose Changent Tout</h2>
+        <p>"Combien de temps le CBD reste-t-il dans votre organisme" n'a pas de réponse universelle unique, car la demi-vie d'élimination du CBD dépend fortement de la façon dont il a été pris, de la dose, et si l'usage est occasionnel ou régulier. C'est une chose véritablement utile à comprendre correctement, tant pour les détaillants que les clients, plutôt que de répéter les réponses simplifiées à outrance qui circulent en ligne.</p>
+
+        <h3>Ce Que Montre la Recherche</h3>
+        <p>Une revue systématique d'études pharmacocinétiques humaines a révélé que la demi-vie du CBD varie d'environ 1-2 heures après vapotage ou fumage, à 2-5 heures après capsules d'huile orale, jusqu'à plusieurs jours avec un dosage oral quotidien chronique alors que le CBD s'accumule dans les tissus adipeux. En termes pratiques : une dose unique d'<a href="/collections/cbd-oils">huile CBD</a> s'élimine du corps beaucoup plus rapidement que la même dose prise quotidiennement pendant des semaines.</p>
+        <p>Cette variabilité explique pourquoi des affirmations générales comme "le CBD quitte votre organisme en 3 jours" ne sont pas fiables. Le format, la fréquence, le métabolisme individuel, et le pourcentage de graisse corporelle jouent tous un rôle.</p>
+
+        <h3>Le CBD Apparaît-il sur un Test de Dépistage de Drogue ?</h3>
+        <p>Les tests de dépistage standards ciblent les métabolites du THC, pas le CBD lui-même — l'isolat de CBD pur ne devrait pas déclencher un résultat positif. Cependant, la plupart des produits CBD, y compris les <a href="/collections/cbd-flowers">fleurs</a> et huiles à spectre complet, contiennent des traces de THC (jusqu'à la limite légale de 0,3 %). Avec un usage régulier et à haut volume, ces traces de THC peuvent s'accumuler suffisamment pour déclencher un test positif dans des essais sensibles.</p>
+        <p>Pour les clients testés régulièrement, le choix le plus sûr est un produit vérifié à 0 % THC — nos gammes de résine et d'huile dans cette catégorie sont certifiées en laboratoire sans THC, pas seulement conformes en "quantité de trace". Renseignez-vous spécifiquement à ce sujet via notre <a href="/quality-and-testing">page qualité et tests</a>, qui explique comment chaque lot est vérifié.</p>
+
+        <h3>Ce Que Cela Signifie pour les Détaillants</h3>
+        <p>Les clients posant cette question sont généralement préoccupés par les tests de dépistage de drogue, pas par le timing récréatif. Orientez-les vers des produits véritablement 0 % THC plutôt que de supposer qu'un "produit CBD" est automatiquement sûr pour les tests — la distinction entre "sous la limite légale" et "zéro THC" compte énormément ici, et il vaut la peine de l'expliquer clairement au comptoir.</p>
+        <p>Pour les données complètes derrière ces plages de demi-vie, consultez la revue systématique évaluée par des pairs de la <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">pharmacocinétique du CBD chez l'humain (Frontiers in Pharmacology)</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Wie Lange Bleibt CBD in Ihrem System? (Leitfaden 2026)',
+      excerpt: 'Die Eliminationshalbwertszeit von CBD variiert enorm je nach Produktformat und Dosierungsmuster — von einigen Stunden bis zu mehreren Tagen. Hier ist, was die Forschung tatsächlich zeigt, und was es bedeutet, wenn Sie getestet werden.',
+      content: `
+        <h2>Es Gibt Keine Einzelne Antwort — Format und Dosis Ändern Alles</h2>
+        <p>"Wie lange bleibt CBD in Ihrem System" hat keine universelle Antwort, weil die Eliminationshalbwertszeit von CBD stark davon abhängt, wie es eingenommen wurde, der Dosis, und ob der Konsum gelegentlich oder regelmäßig erfolgt. Dies ist etwas, das sowohl Händler als auch Kunden richtig verstehen sollten, anstatt die übervereinfachten Antworten zu wiederholen, die online kursieren.</p>
+
+        <h3>Was die Forschung Zeigt</h3>
+        <p>Eine systematische Überprüfung humaner pharmakokinetischer Studien ergab, dass die Halbwertszeit von CBD von etwa 1-2 Stunden nach Verdampfen oder Rauchen, bis 2-5 Stunden nach oralen Ölkapseln, bis zu mehreren Tagen bei chronischer täglicher oraler Dosierung reicht, da sich CBD im Fettgewebe ansammelt. Praktisch bedeutet das: eine einzelne Dosis <a href="/collections/cbd-oils">CBD-Öl</a> wird weit schneller aus dem Körper eliminiert als dieselbe Dosis, die täglich über Wochen eingenommen wird.</p>
+        <p>Diese Variabilität ist der Grund, warum pauschale Aussagen wie "CBD verlässt Ihr System in 3 Tagen" unzuverlässig sind. Format, Häufigkeit, individueller Stoffwechsel, und Körperfettanteil spielen alle eine Rolle.</p>
+
+        <h3>Erscheint CBD bei einem Drogentest?</h3>
+        <p>Standard-Drogentests zielen auf THC-Metaboliten, nicht auf CBD selbst — reines CBD-Isolat sollte kein positives Ergebnis auslösen. Die meisten CBD-Produkte, einschließlich Vollspektrum-<a href="/collections/cbd-flowers">Blüten</a> und Öle, enthalten jedoch Spuren von THC (bis zum gesetzlichen Grenzwert von 0,3 %). Bei regelmäßigem, hochvolumigem Gebrauch kann sich dieses Spuren-THC ausreichend ansammeln, um bei empfindlichen Assays einen positiven Test auszulösen.</p>
+        <p>Für Kunden, die regelmäßig getestet werden, ist die sicherste Wahl ein verifiziertes 0 %-THC-Produkt — unsere Harz- und Öllinien in dieser Kategorie sind laborzertifiziert THC-frei, nicht nur "Spurenmenge"-konform. Fragen Sie speziell danach über unsere <a href="/quality-and-testing">Qualitäts- und Testseite</a>, die erklärt, wie jede Charge verifiziert wird.</p>
+
+        <h3>Was Das für Händler Bedeutet</h3>
+        <p>Kunden, die diese Frage stellen, machen sich normalerweise Sorgen über Drogentests, nicht über den Freizeit-Zeitpunkt. Verweisen Sie sie auf echte 0 %-THC-Produkte, anstatt anzunehmen, dass jedes "CBD-Produkt" automatisch für Tests sicher ist — die Unterscheidung zwischen "unter dem gesetzlichen Grenzwert" und "null THC" ist hier von großer Bedeutung, und es lohnt sich, dies am Tresen klar zu erklären.</p>
+        <p>Für die vollständigen Daten hinter diesen Halbwertszeitbereichen siehe die peer-reviewte <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">systematische Überprüfung der CBD-Pharmakokinetik beim Menschen (Frontiers in Pharmacology)</a>.</p>
+      `,
+    },
+    es: {
+      title: '¿Cuánto Tiempo Permanece el CBD en tu Sistema? (Guía 2026)',
+      excerpt: 'La vida media de eliminación del CBD varía enormemente según el formato del producto y el patrón de dosificación — desde unas pocas horas hasta varios días. Esto es lo que muestra realmente la investigación, y lo que significa si te están haciendo pruebas.',
+      content: `
+        <h2>No Hay una Sola Respuesta — El Formato y la Dosis lo Cambian Todo</h2>
+        <p>"Cuánto tiempo permanece el CBD en tu sistema" no tiene una respuesta universal única, porque la vida media de eliminación del CBD depende en gran medida de cómo se tomó, la dosis, y si el uso es ocasional o regular. Esto es algo genuinamente útil que tanto minoristas como clientes entiendan correctamente, en lugar de repetir las respuestas demasiado simplificadas que circulan en línea.</p>
+
+        <h3>Lo Que Muestra la Investigación</h3>
+        <p>Una revisión sistemática de estudios farmacocinéticos humanos encontró que la vida media del CBD oscila entre aproximadamente 1-2 horas después de vapear o fumar, a 2-5 horas después de cápsulas de aceite oral, hasta varios días con dosificación oral diaria crónica ya que el CBD se acumula en tejido graso. En términos prácticos: una dosis única de <a href="/collections/cbd-oils">aceite CBD</a> se elimina del cuerpo mucho más rápido que la misma dosis tomada diariamente durante semanas.</p>
+        <p>Esta variabilidad es la razón por la que afirmaciones generales como "el CBD sale de tu sistema en 3 días" no son fiables. El formato, frecuencia, metabolismo individual, y porcentaje de grasa corporal juegan todos un papel.</p>
+
+        <h3>¿Aparece el CBD en una Prueba de Drogas?</h3>
+        <p>Las pruebas de drogas estándar apuntan a metabolitos del THC, no al CBD en sí — el aislado de CBD puro no debería desencadenar un resultado positivo. Sin embargo, la mayoría de los productos CBD, incluyendo <a href="/collections/cbd-flowers">flores</a> de espectro completo y aceites, contienen trazas de THC (hasta el límite legal del 0,3%). Con uso regular y de alto volumen, ese THC traza puede acumularse lo suficiente como para desencadenar una prueba positiva en ensayos sensibles.</p>
+        <p>Para clientes que son testeados regularmente, la opción más segura es un producto verificado con 0% THC — nuestras líneas de resina y aceite en esta categoría están certificadas en laboratorio como libres de THC, no solo conformes con "cantidad de traza". Pregunta específicamente sobre esto a través de nuestra <a href="/quality-and-testing">página de calidad y pruebas</a>, que explica cómo se verifica cada lote.</p>
+
+        <h3>Lo Que Esto Significa para los Minoristas</h3>
+        <p>Los clientes que hacen esta pregunta generalmente están preocupados por las pruebas de drogas, no por el momento recreativo. Dirígelos hacia productos genuinamente 0% THC en lugar de asumir que cualquier "producto CBD" es automáticamente seguro para las pruebas — la distinción entre "bajo el límite legal" y "cero THC" importa mucho aquí, y vale la pena explicarlo claramente en el mostrador.</p>
+        <p>Para los datos completos detrás de estos rangos de vida media, consulta la revisión sistemática revisada por pares de la <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">farmacocinética del CBD en humanos (Frontiers in Pharmacology)</a>.</p>
+      `,
+    },
+    it: {
+      title: "Quanto Tempo Rimane il CBD nel Tuo Organismo? (Guida 2026)",
+      excerpt: "L'emivita di eliminazione del CBD varia enormemente in base al formato del prodotto e allo schema di dosaggio — da poche ore a diversi giorni. Ecco cosa mostra realmente la ricerca, e cosa significa se vieni sottoposto a test.",
+      content: `
+        <h2>Non C'è Un'Unica Risposta — Formato e Dose Cambiano Tutto</h2>
+        <p>"Quanto tempo rimane il CBD nel tuo organismo" non ha una risposta universale unica, perché l'emivita di eliminazione del CBD dipende fortemente da come è stato assunto, dalla dose, e se l'uso è occasionale o regolare. Questa è una cosa genuinamente utile da comprendere correttamente sia per i rivenditori che per i clienti, piuttosto che ripetere le risposte eccessivamente semplificate che circolano online.</p>
+
+        <h3>Cosa Mostra la Ricerca</h3>
+        <p>Una revisione sistematica di studi farmacocinetici umani ha rilevato che l'emivita del CBD varia da circa 1-2 ore dopo lo svapo o il fumo, a 2-5 ore dopo capsule di olio orale, fino a diversi giorni con dosaggio orale giornaliero cronico poiché il CBD si accumula nel tessuto adiposo. In termini pratici: una singola dose di <a href="/collections/cbd-oils">olio CBD</a> viene eliminata dal corpo molto più rapidamente della stessa dose assunta ogni giorno per settimane.</p>
+        <p>Questa variabilità è il motivo per cui affermazioni generiche come "il CBD lascia il tuo organismo in 3 giorni" non sono affidabili. Formato, frequenza, metabolismo individuale, e percentuale di grasso corporeo giocano tutti un ruolo.</p>
+
+        <h3>Il CBD Compare in un Test Antidroga?</h3>
+        <p>I test antidroga standard mirano ai metaboliti del THC, non al CBD stesso — l'isolato di CBD puro non dovrebbe scatenare un risultato positivo. Tuttavia, la maggior parte dei prodotti CBD, inclusi i <a href="/collections/cbd-flowers">fiori</a> a spettro completo e gli oli, contengono tracce di THC (fino al limite legale dello 0,3%). Con un uso regolare e ad alto volume, quel THC in tracce può accumularsi abbastanza da scatenare un test positivo in analisi sensibili.</p>
+        <p>Per i clienti sottoposti a test regolari, la scelta più sicura è un prodotto verificato allo 0% THC — le nostre linee di resina e olio in questa categoria sono certificate in laboratorio come prive di THC, non solo conformi alla "quantità in tracce". Chiedi specificamente di questi tramite la nostra <a href="/quality-and-testing">pagina qualità e test</a>, che spiega come viene verificato ogni lotto.</p>
+
+        <h3>Cosa Significa Questo per i Rivenditori</h3>
+        <p>I clienti che pongono questa domanda sono di solito preoccupati per i test antidroga, non per la tempistica ricreativa. Indirizzali verso prodotti genuinamente allo 0% THC piuttosto che presumere che qualsiasi "prodotto CBD" sia automaticamente sicuro per i test — la distinzione tra "sotto il limite legale" e "zero THC" conta molto qui, e vale la pena spiegarla chiaramente al banco.</p>
+        <p>Per i dati completi dietro questi intervalli di emivita, vedi la revisione sistematica peer-reviewed della <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">farmacocinetica del CBD nell'uomo (Frontiers in Pharmacology)</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Hoe Lang Blijft CBD in Uw Systeem? (Gids 2026)',
+      excerpt: 'De eliminatiehalfwaardetijd van CBD varieert enorm per productformaat en doseringspatroon — van een paar uur tot meerdere dagen. Dit is wat het onderzoek daadwerkelijk toont, en wat het betekent als u wordt getest.',
+      content: `
+        <h2>Er is Geen Enkel Antwoord — Formaat en Dosis Veranderen Alles</h2>
+        <p>"Hoe lang blijft CBD in uw systeem" heeft geen universeel antwoord, omdat de eliminatiehalfwaardetijd van CBD sterk afhangt van hoe het werd ingenomen, de dosis, en of het gebruik incidenteel of regelmatig is. Dit is iets dat zowel retailers als klanten oprecht nuttig zouden vinden om correct te begrijpen, in plaats van de oververeenvoudigde antwoorden te herhalen die online circuleren.</p>
+
+        <h3>Wat het Onderzoek Toont</h3>
+        <p>Een systematische review van humane farmacokinetische studies vond dat de halfwaardetijd van CBD varieert van ongeveer 1-2 uur na verdampen of roken, tot 2-5 uur na orale oliecapsules, tot meerdere dagen bij chronische dagelijkse orale dosering doordat CBD zich ophoopt in vetweefsel. In praktische termen: een enkele dosis <a href="/collections/cbd-oils">CBD-olie</a> verlaat het lichaam veel sneller dan dezelfde dosis wekenlang dagelijks ingenomen.</p>
+        <p>Deze variabiliteit is waarom algemene uitspraken zoals "CBD verlaat uw systeem in 3 dagen" onbetrouwbaar zijn. Formaat, frequentie, individueel metabolisme, en lichaamsvetpercentage spelen allemaal een rol.</p>
+
+        <h3>Verschijnt CBD op een Drugstest?</h3>
+        <p>Standaard drugstests richten zich op THC-metabolieten, niet op CBD zelf — puur CBD-isolaat zou geen positief resultaat moeten veroorzaken. De meeste CBD-producten, inclusief volspectrum <a href="/collections/cbd-flowers">bloemen</a> en oliën, bevatten echter sporen van THC (tot de wettelijke limiet van 0,3%). Bij regelmatig, hoogvolume gebruik kan dat spoor-THC voldoende ophopen om een positieve test te veroorzaken in gevoelige assays.</p>
+        <p>Voor klanten die regelmatig worden getest, is de veiligste keuze een geverifieerd 0% THC-product — onze hars- en olielijnen in deze categorie zijn labgecertificeerd THC-vrij, niet alleen "spoorhoeveelheid"-conform. Vraag hier specifiek naar via onze <a href="/quality-and-testing">kwaliteits- en testpagina</a>, die uitlegt hoe elke batch wordt geverifieerd.</p>
+
+        <h3>Wat Dit Betekent voor Retailers</h3>
+        <p>Klanten die deze vraag stellen, maken zich meestal zorgen over drugstesten, niet over recreatieve timing. Wijs hen naar echt 0% THC-producten in plaats van aan te nemen dat elk "CBD-product" automatisch veilig is voor tests — het onderscheid tussen "onder de wettelijke limiet" en "nul THC" is hier heel belangrijk, en het is de moeite waard om dit duidelijk uit te leggen aan de toonbank.</p>
+        <p>Voor de volledige gegevens achter deze halfwaardetijdbereiken, zie de peer-reviewed <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">systematische review van CBD-farmacokinetiek bij mensen (Frontiers in Pharmacology)</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Kuinka Kauan CBD Pysyy Elimistössäsi? (Opas 2026)',
+      excerpt: 'CBD:n eliminaation puoliintumisaika vaihtelee valtavasti tuotemuodon ja annostelumallin mukaan — muutamasta tunnista useisiin päiviin. Tässä on mitä tutkimus todella osoittaa, ja mitä se tarkoittaa, jos sinua testataan.',
+      content: `
+        <h2>Yhtä Vastausta Ei Ole — Muoto ja Annos Muuttavat Kaiken</h2>
+        <p>"Kuinka kauan CBD pysyy elimistössäsi" -kysymyksellä ei ole yhtä universaalia vastausta, koska CBD:n eliminaation puoliintumisaika riippuu voimakkaasti siitä, miten se otettiin, annoksesta, ja onko käyttö satunnaista vai säännöllistä. Tämä on aidosti hyödyllinen asia sekä jälleenmyyjien että asiakkaiden ymmärtää oikein, sen sijaan että toistetaan verkossa kiertäviä liian yksinkertaistettuja vastauksia.</p>
+
+        <h3>Mitä Tutkimus Osoittaa</h3>
+        <p>Systemaattinen katsaus ihmisten farmakokineettisiin tutkimuksiin havaitsi, että CBD:n puoliintumisaika vaihtelee noin 1-2 tunnista höyrystämisen tai polttamisen jälkeen, 2-5 tuntiin suun kautta otettujen öljykapselien jälkeen, useisiin päiviin kroonisen päivittäisen suun kautta annostelun kanssa, kun CBD kertyy rasvakudokseen. Käytännössä tämä tarkoittaa: yksittäinen annos <a href="/collections/cbd-oils">CBD-öljyä</a> poistuu elimistöstä paljon nopeammin kuin sama annos otettuna päivittäin viikkojen ajan.</p>
+        <p>Tämä vaihtelevuus on syy siihen, miksi yleiset väitteet kuten "CBD poistuu elimistöstäsi 3 päivässä" ovat epäluotettavia. Muoto, tiheys, yksilöllinen aineenvaihdunta, ja kehon rasvaprosentti vaikuttavat kaikki asiaan.</p>
+
+        <h3>Näkyykö CBD Huumetestissä?</h3>
+        <p>Standardit huumetestit kohdistuvat THC-metaboliitteihin, ei itse CBD:hen — puhtaan CBD-isolaatin ei pitäisi laukaista positiivista tulosta. Kuitenkin useimmat CBD-tuotteet, mukaan lukien täysspektrin <a href="/collections/cbd-flowers">kukat</a> ja öljyt, sisältävät jäämiä THC:tä (aina laillisen 0,3 %:n rajan asti). Säännöllisellä, suurella käyttömäärällä tuo jäämä-THC voi kertyä tarpeeksi laukaistakseen positiivisen testin herkissä määrityksissä.</p>
+        <p>Säännöllisesti testatuille asiakkaille turvallisin valinta on vahvistettu 0 % THC -tuote — hartsi- ja öljylinjamme tässä kategoriassa ovat laboratoriosertifioituja THC-vapaita, ei vain "jäämämäärän" mukaisia. Kysy tästä nimenomaisesti <a href="/quality-and-testing">laatu- ja testaussivumme</a> kautta, joka selittää kuinka jokainen erä vahvistetaan.</p>
+
+        <h3>Mitä Tämä Tarkoittaa Jälleenmyyjille</h3>
+        <p>Tätä kysymystä esittävät asiakkaat ovat yleensä huolissaan huumetestauksesta, eivät virkistyskäytön ajoituksesta. Ohjaa heidät aidosti 0 % THC -tuotteisiin sen sijaan, että oletat minkä tahansa "CBD-tuotteen" olevan automaattisesti turvallinen testeille — ero "laillisen rajan alle" ja "nolla THC" välillä on täällä erittäin tärkeä, ja se kannattaa selittää selkeästi tiskillä.</p>
+        <p>Täydelliset tiedot näiden puoliintumisaikavälien takana löydät vertaisarvioidusta <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">CBD:n farmakokinetiikan systemaattisesta katsauksesta ihmisillä (Frontiers in Pharmacology)</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Quanto Tempo o CBD Permanece no Seu Organismo? (Guia 2026)',
+      excerpt: 'A meia-vida de eliminação do CBD varia enormemente consoante o formato do produto e o padrão de dosagem — de algumas horas a vários dias. Aqui está o que a investigação realmente mostra, e o que significa se estiver a ser testado.',
+      content: `
+        <h2>Não Há Uma Única Resposta — Formato e Dose Mudam Tudo</h2>
+        <p>"Quanto tempo o CBD permanece no seu organismo" não tem uma resposta universal única, porque a meia-vida de eliminação do CBD depende fortemente de como foi tomado, da dose, e se o uso é ocasional ou regular. Isto é algo genuinamente útil tanto para retalhistas como para clientes compreenderem corretamente, em vez de repetir as respostas demasiado simplificadas que circulam online.</p>
+
+        <h3>O que a Investigação Mostra</h3>
+        <p>Uma revisão sistemática de estudos farmacocinéticos humanos descobriu que a meia-vida do CBD varia de aproximadamente 1-2 horas após vaporizar ou fumar, a 2-5 horas após cápsulas de óleo oral, até vários dias com dosagem oral diária crónica à medida que o CBD se acumula no tecido adiposo. Em termos práticos: uma única dose de <a href="/collections/cbd-oils">óleo CBD</a> é eliminada do corpo muito mais rapidamente do que a mesma dose tomada diariamente durante semanas.</p>
+        <p>Esta variabilidade é a razão pela qual afirmações genéricas como "o CBD sai do seu organismo em 3 dias" não são fiáveis. Formato, frequência, metabolismo individual, e percentagem de gordura corporal desempenham todos um papel.</p>
+
+        <h3>O CBD Aparece Num Teste de Drogas?</h3>
+        <p>Os testes de drogas padrão visam metabolitos de THC, não o CBD em si — o isolado de CBD puro não deveria desencadear um resultado positivo. No entanto, a maioria dos produtos CBD, incluindo <a href="/collections/cbd-flowers">flores</a> de espectro completo e óleos, contêm vestígios de THC (até ao limite legal de 0,3%). Com uso regular e de alto volume, esse THC vestigial pode acumular-se o suficiente para desencadear um teste positivo em ensaios sensíveis.</p>
+        <p>Para clientes testados regularmente, a escolha mais segura é um produto verificado com 0% THC — as nossas linhas de resina e óleo nesta categoria são certificadas em laboratório como isentas de THC, não apenas conformes com "quantidade vestigial". Pergunte especificamente sobre estas através da nossa <a href="/quality-and-testing">página de qualidade e testes</a>, que explica como cada lote é verificado.</p>
+
+        <h3>O que Isto Significa para Retalhistas</h3>
+        <p>Os clientes que fazem esta pergunta estão geralmente preocupados com testes de drogas, não com o momento recreativo. Direcione-os para produtos genuinamente 0% THC em vez de assumir que qualquer "produto CBD" é automaticamente seguro para testes — a distinção entre "abaixo do limite legal" e "zero THC" importa muito aqui, e vale a pena explicar isto claramente ao balcão.</p>
+        <p>Para os dados completos por trás destes intervalos de meia-vida, veja a revisão sistemática revista por pares da <a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.01365/full" target="_blank" rel="noopener noreferrer">farmacocinética do CBD em humanos (Frontiers in Pharmacology)</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
