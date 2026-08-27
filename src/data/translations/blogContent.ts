@@ -4813,6 +4813,239 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'how-cbd-hash-is-made-dry-sift-bubble-charas': {
+    fr: {
+      title: 'Comment le Hash CBD est Fabriqué : Dry Sift, Bubble Hash et Charas',
+      excerpt: "Chaque hash que vous stockez provient d'une des trois méthodes de séparation. Savoir laquelle est laquelle explique la texture, l'arôme, et — plus utilement — la différence de prix.",
+      content: `
+        <h2>La Séparation Est Toute l'Histoire</h2>
+        <p>Le hash n'est pas un ingrédient ajouté au chanvre. C'est du chanvre avec tout retiré sauf la résine. Les trichomes — les glandes résineuses à la surface de la fleur — contiennent la plupart des cannabinoïdes et terpènes ; la fabrication du hash est simplement l'affaire de séparer ces glandes du matériel végétal aussi proprement que possible.</p>
+        <p>Trois méthodes dominent, et chacune produit un produit reconnaissablement différent. Si vous stockez de la résine, pouvoir expliquer laquelle est laquelle fait la différence entre vendre sur le prix et vendre sur la qualité.</p>
+
+        <h3>1. Dry Sift — Mécanique, Sans Solvant, Traditionnel</h3>
+        <p>La fleur séchée est agitée sur des tamis à mailles fines. Les glandes résineuses sont fragiles une fois affinées et se cassent, tombant à travers le tamis tandis que la matière végétale reste au-dessus. Ce qui se collecte en dessous est une poudre de résine libre — le pollen, aussi appelé skuff ou kief.</p>
+        <p>La taille du tamis détermine le grade. Les premiers passages les plus fins donnent le sift le plus propre ; les passages ultérieurs portent progressivement plus de matière végétale et se vendent moins cher. Laissez la poudre libre et elle reste pollen ; pressez-la sous chaleur et pression et elle devient hash traditionnel. C'est la méthode derrière notre <a href="/cbd-pollen-dry-sift-wholesale">gamme pollen et dry sift</a> et derrière les <a href="/moroccan-cbd-hash-wholesale">pressages classiques de style marocain</a>.</p>
+        <p>Un raffinement à connaître est la séparation statique, qui utilise l'électricité statique pour attirer les têtes de résine loin de la matière végétale résiduelle. Elle produit un résultat plus pâle et plus propre que le tamisage seul — notre <a href="/products/golden-static-resin">Golden Static</a> est fabriqué de cette manière.</p>
+
+        <h3>2. Séparation à l'Eau Glacée — Bubble Hash</h3>
+        <p>Le matériel végétal est agité dans de l'eau glacée. Le froid rend les trichomes suffisamment fragiles pour se détacher, et parce que la résine ne se dissout pas dans l'eau, elle peut être capturée dans une série de sacs filtrants progressivement plus fins. Le nom vient de la façon dont le bubble hash de haute qualité bouillonne (bubble) lorsque la chaleur est appliquée.</p>
+        <p>La séparation à l'eau glacée peut produire un produit très propre, mais elle est plus exigeante en équipement que le tamisage à sec et le matériel doit être séché avec soin par la suite — l'humidité résiduelle est ce qui ruine un lot. Comme le dry sift, elle n'utilise aucun solvant à aucun moment.</p>
+
+        <h3>3. Charas — Frotté à la Main, Plante Fraîche</h3>
+        <p>Le charas est fabriqué à partir de plantes vivantes plutôt que de matériel séché. Des fleurs fraîches sont frottées entre les mains jusqu'à ce que la résine s'accumule sur la peau, qui est ensuite collectée et roulée. C'est la plus ancienne des trois méthodes et de loin la plus laborieuse, c'est pourquoi le véritable charas est rare et cher par rapport au produit tamisé.</p>
+
+        <h3>Qu'en Est-il des Grades Filtrés et à Haut Pourcentage ?</h3>
+        <p>Au-delà des trois méthodes traditionnelles se trouvent des étapes de raffinement modernes. La filtration multi-passages prend le matériel tamisé et le fait passer par des étapes successives, chacune retirant plus de matière végétale — notre <a href="/products/3x-filtered-cbg-cbd-resin">3X Filtré</a> en est un exemple. Le résultat est plus propre, plus pâle, et plus riche en teneur en cannabinoïdes.</p>
+        <p>Il y a un compromis honnête ici qu'il vaut la peine de partager avec les clients. Le raffinement retire les terpènes avec la matière végétale, donc un grade fortement filtré est plus puissant mais moins complexe aromatiquement qu'un bon pressage traditionnel. Aucun n'est "meilleur" — ils servent des clients qui achètent selon différents critères. Notre <a href="/thc-free-cbd-wholesale">ligne 0 % THC</a> se situe à l'extrémité de ce spectre.</p>
+
+        <h3>Comment Juger Ce Qui Vous Est Proposé</h3>
+        <p>La texture et l'arôme vous en disent la plupart. Une bonne résine s'assouplit avec la chaleur et garde sa forme au froid ; un matériel qui s'effrite en poussière au froid ou reste graisseux à température ambiante a généralement été mal fabriqué ou mal stocké. Un nez plat, semblable au foin, signifie généralement un matériel vieux ou un pressage surchauffé, quelles que soient les allégations de pourcentage.</p>
+        <p>Ensuite, lisez la documentation — notre guide pour <a href="/blog/how-to-read-cbd-coa-lab-report">lire un certificat d'analyse</a> couvre ce qu'il faut rechercher, y compris le panel de solvants résiduels dont le hash séparé mécaniquement ne devrait jamais avoir besoin.</p>
+
+        <h3>Construire l'Étagère</h3>
+        <p>La plupart des étagères de résine réussies portent trois niveaux : un pollen d'entrée, un pressage traditionnel de milieu de gamme, et un grade premium ou à haut pourcentage. Cette structure permet aux clients de monter en gamme plutôt que de forcer un seul point de prix. Notre <a href="/cbd-hash-wholesale-europe">gamme de hash en gros</a> est organisée pour rendre cette échelle simple, et le <a href="/products/resins-discovery-pack">pack découverte résines</a> vous permet de comparer les grades avant de vous engager sur le volume.</p>
+        <p>Pour une comparaison plus large entre résine et fleur en tant que catégorie, consultez notre guide <a href="/blog/cbd-flowers-vs-resins-guide">fleurs CBD contre résines</a>.</p>
+      `,
+    },
+    de: {
+      title: 'Wie CBD-Haschisch Hergestellt Wird: Dry Sift, Bubble Hash und Charas',
+      excerpt: 'Jedes Haschisch, das Sie vorrätig haben, stammt aus einer von drei Trennmethoden. Zu wissen, welche welche ist, erklärt die Textur, das Aroma, und — am nützlichsten — den Preisunterschied.',
+      content: `
+        <h2>Trennung Ist die Ganze Geschichte</h2>
+        <p>Haschisch ist keine Zutat, die Hanf hinzugefügt wird. Es ist Hanf mit allem außer dem Harz entfernt. Die Trichome — die Harzdrüsen auf der Oberfläche der Blüte — enthalten die meisten Cannabinoide und Terpene; die Haschischherstellung ist einfach das Geschäft, diese Drüsen so sauber wie möglich vom Pflanzenmaterial zu trennen.</p>
+        <p>Drei Methoden dominieren, und jede produziert ein erkennbar anderes Produkt. Wenn Sie Harz vorrätig haben, ist die Fähigkeit zu erklären, welche welche ist, der Unterschied zwischen dem Verkauf auf Preis- und dem Verkauf auf Qualitätsbasis.</p>
+
+        <h3>1. Dry Sift — Mechanisch, Lösungsmittelfrei, Traditionell</h3>
+        <p>Getrocknete Blüte wird über feinen Maschensieben aufgerührt. Die Harzdrüsen sind spröde, wenn sie ausgehärtet sind, und brechen ab, fallen durch das Sieb, während das Pflanzenmaterial oben bleibt. Was sich darunter sammelt, ist loses Harzpulver — Pollen, auch Skuff oder Kief genannt.</p>
+        <p>Die Siebgröße bestimmt die Qualität. Die feinsten frühen Durchgänge ergeben das sauberste Sift; spätere Durchgänge tragen zunehmend mehr Pflanzenmaterial und verkaufen sich für weniger. Lassen Sie das Pulver lose und es bleibt Pollen; pressen Sie es unter Wärme und Druck und es wird traditionelles Haschisch. Dies ist die Methode hinter unserer <a href="/cbd-pollen-dry-sift-wholesale">Pollen- und Dry-Sift-Range</a> und hinter klassischen <a href="/moroccan-cbd-hash-wholesale">marokkanischen Pressungen</a>.</p>
+        <p>Eine erwähnenswerte Verfeinerung ist die statische Trennung, die statische Elektrizität nutzt, um Harzköpfe von restlichem Pflanzenmaterial wegzuziehen. Sie produziert ein blasseres, saubereres Ergebnis als Siebung allein — unser <a href="/products/golden-static-resin">Golden Static</a> wird auf diese Weise hergestellt.</p>
+
+        <h3>2. Eiswasser-Trennung — Bubble Hash</h3>
+        <p>Pflanzenmaterial wird in Eiswasser aufgerührt. Die Kälte macht die Trichome spröde genug, um sich abzulösen, und weil sich Harz nicht in Wasser löst, kann es in einer Reihe von zunehmend feineren Filterbeuteln aufgefangen werden. Der Name kommt von der Art, wie hochwertiges Bubble Hash beim Erhitzen sprudelt (bubble).</p>
+        <p>Eiswassertrennung kann ein sehr sauberes Produkt produzieren, ist aber ausrüstungsintensiver als Dry Sifting, und das Material muss danach sorgfältig getrocknet werden — Restfeuchtigkeit ist das, was eine Charge ruiniert. Wie Dry Sift verwendet es zu keinem Zeitpunkt Lösungsmittel.</p>
+
+        <h3>3. Charas — Handgerieben, Frische Pflanze</h3>
+        <p>Charas wird aus lebenden Pflanzen statt aus getrocknetem Material hergestellt. Frische Blüten werden zwischen den Händen gerieben, bis sich Harz auf der Haut ansammelt, welches dann gesammelt und gerollt wird. Es ist die älteste der drei Methoden und bei weitem die arbeitsintensivste, weshalb echtes Charas relativ zum gesiebten Produkt selten und teuer ist.</p>
+
+        <h3>Was Ist mit Gefilterten und Hochprozentigen Qualitäten?</h3>
+        <p>Über die drei traditionellen Methoden hinaus gibt es moderne Verfeinerungsschritte. Mehrstufige Filtration nimmt gesiebtes Material und führt es durch aufeinanderfolgende Stufen, wobei jede mehr Pflanzenmaterial entfernt — unser <a href="/products/3x-filtered-cbg-cbd-resin">3X Gefiltert</a> ist ein Beispiel. Das Ergebnis ist sauberer, blasser, und höher im Cannabinoidgehalt.</p>
+        <p>Hier gibt es einen ehrlichen Kompromiss, der es wert ist, Kunden mitgeteilt zu werden. Verfeinerung streift Terpene zusammen mit Pflanzenmaterial ab, sodass eine stark gefilterte Qualität stärker, aber aromatisch weniger komplex ist als eine gute traditionelle Pressung. Keines ist "besser" — sie dienen Kunden, die nach unterschiedlichen Kriterien kaufen. Unsere <a href="/thc-free-cbd-wholesale">0 % THC-Linie</a> liegt am fernen Ende dieses Spektrums.</p>
+
+        <h3>Wie Man Beurteilt, Was Ihnen Angeboten Wird</h3>
+        <p>Textur und Aroma sagen Ihnen das meiste. Gutes Harz weicht mit Wärme auf und behält seine Form bei Kälte; Material, das kalt zu Staub zerfällt oder bei Raumtemperatur fettig bleibt, wurde normalerweise schlecht hergestellt oder gelagert. Eine flache, heuartige Nase bedeutet im Allgemeinen altes Material oder überhitzte Pressung, unabhängig von den Prozentangaben.</p>
+        <p>Lesen Sie dann die Unterlagen — unser Leitfaden zum <a href="/blog/how-to-read-cbd-coa-lab-report">Lesen eines Analysezertifikats</a> deckt ab, worauf zu achten ist, einschließlich des Restlösungsmittel-Panels, das mechanisch getrenntes Haschisch niemals benötigen sollte.</p>
+
+        <h3>Das Regal Aufbauen</h3>
+        <p>Die meisten erfolgreichen Harzregale führen drei Stufen: einen Einstiegspollen, eine mittelklassige traditionelle Pressung, und eine Premium- oder hochprozentige Qualität. Diese Struktur lässt Kunden aufsteigen, anstatt einen einzigen Preispunkt zu erzwingen. Unsere <a href="/cbd-hash-wholesale-europe">Haschisch-Großhandelsrange</a> ist so organisiert, dass diese Leiter unkompliziert ist, und das <a href="/products/resins-discovery-pack">Harz-Entdeckungspaket</a> lässt Sie Qualitäten vergleichen, bevor Sie sich auf ein Volumen festlegen.</p>
+        <p>Für einen breiteren Vergleich von Harz gegen Blüte als Kategorie siehe unseren Leitfaden zu <a href="/blog/cbd-flowers-vs-resins-guide">CBD-Blüten gegen Harze</a>.</p>
+      `,
+    },
+    es: {
+      title: 'Cómo se Hace el Hachís CBD: Dry Sift, Bubble Hash y Charas',
+      excerpt: 'Cada hachís que tienes en stock proviene de uno de tres métodos de separación. Saber cuál es cuál explica la textura, el aroma, y — lo más útil — la diferencia de precio.',
+      content: `
+        <h2>La Separación Es Toda la Historia</h2>
+        <p>El hachís no es un ingrediente añadido al cáñamo. Es cáñamo con todo excepto la resina eliminado. Los tricomas — las glándulas de resina en la superficie de la flor — contienen la mayoría de los cannabinoides y terpenos; la fabricación de hachís es simplemente el negocio de separar esas glándulas de la materia vegetal de la forma más limpia posible.</p>
+        <p>Tres métodos dominan, y cada uno produce un producto reconociblemente diferente. Si tienes resina en stock, poder explicar cuál es cuál es la diferencia entre vender por precio y vender por calidad.</p>
+
+        <h3>1. Dry Sift — Mecánico, Sin Solventes, Tradicional</h3>
+        <p>La flor seca se agita sobre tamices de malla fina. Las glándulas de resina son quebradizas cuando están curadas y se rompen, cayendo a través de la malla mientras la materia vegetal permanece arriba. Lo que se acumula debajo es polvo de resina suelto — polen, también llamado skuff o kief.</p>
+        <p>El tamaño de la malla determina el grado. Los primeros pases más finos producen el sift más limpio; los pases posteriores llevan progresivamente más materia vegetal y se venden por menos. Deja el polvo suelto y permanece como polen; prénsalo bajo calor y presión y se convierte en hachís tradicional. Este es el método detrás de nuestra <a href="/cbd-pollen-dry-sift-wholesale">gama de polen y dry sift</a> y detrás de los <a href="/moroccan-cbd-hash-wholesale">prensados clásicos de estilo marroquí</a>.</p>
+        <p>Un refinamiento que vale la pena conocer es la separación estática, que usa electricidad estática para atraer las cabezas de resina lejos de la materia vegetal residual. Produce un resultado más pálido y limpio que solo el tamizado — nuestro <a href="/products/golden-static-resin">Golden Static</a> se fabrica de esta manera.</p>
+
+        <h3>2. Separación por Agua Helada — Bubble Hash</h3>
+        <p>El material vegetal se agita en agua helada. El frío hace que los tricomas sean lo suficientemente quebradizos para desprenderse, y como la resina no se disuelve en agua, puede capturarse en una serie de bolsas filtrantes progresivamente más finas. El nombre viene de la forma en que el bubble hash de alta calidad burbujea (bubble) cuando se aplica calor.</p>
+        <p>La separación por agua helada puede producir un producto muy limpio, pero requiere más equipo que el tamizado en seco y el material debe secarse con cuidado después — la humedad residual es lo que arruina un lote. Como el dry sift, no usa solventes en ningún punto.</p>
+
+        <h3>3. Charas — Frotado a Mano, Planta Fresca</h3>
+        <p>El charas se hace a partir de plantas vivas en lugar de material seco. Las flores frescas se frotan entre las manos hasta que la resina se acumula en la piel, la cual luego se recoge y se enrolla. Es el más antiguo de los tres métodos y con diferencia el más intensivo en mano de obra, razón por la cual el charas genuino es raro y caro en relación con el producto tamizado.</p>
+
+        <h3>¿Qué Pasa con los Grados Filtrados y de Alto Porcentaje?</h3>
+        <p>Más allá de los tres métodos tradicionales hay pasos de refinamiento modernos. La filtración multi-paso toma material tamizado y lo pasa a través de etapas sucesivas, cada una eliminando más materia vegetal — nuestro <a href="/products/3x-filtered-cbg-cbd-resin">3X Filtrado</a> es un ejemplo. El resultado es más limpio, más pálido, y más alto en contenido de cannabinoides.</p>
+        <p>Hay una compensación honesta aquí que vale la pena contar a los clientes. El refinamiento elimina terpenos junto con materia vegetal, así que un grado muy filtrado es más potente pero menos complejo aromáticamente que un buen prensado tradicional. Ninguno es "mejor" — sirven a clientes que compran según diferentes criterios. Nuestra <a href="/thc-free-cbd-wholesale">línea 0% THC</a> se sitúa en el extremo lejano de ese espectro.</p>
+
+        <h3>Cómo Juzgar Lo Que Te Ofrecen</h3>
+        <p>La textura y el aroma te dicen la mayor parte. La buena resina se ablanda con el calor y mantiene su forma en frío; el material que se desmorona en polvo en frío o permanece grasoso a temperatura ambiente generalmente se ha hecho o almacenado mal. Una nariz plana, similar al heno, generalmente significa material viejo o prensado sobrecalentado, sean cuales sean las afirmaciones de porcentaje.</p>
+        <p>Luego lee la documentación — nuestra guía para <a href="/blog/how-to-read-cbd-coa-lab-report">leer un certificado de análisis</a> cubre qué buscar, incluyendo el panel de solventes residuales que el hachís separado mecánicamente nunca debería necesitar.</p>
+
+        <h3>Construyendo el Estante</h3>
+        <p>La mayoría de los estantes de resina exitosos llevan tres niveles: un polen de entrada, un prensado tradicional de gama media, y un grado premium o de alto porcentaje. Esa estructura permite a los clientes subir de categoría en lugar de forzar un único punto de precio. Nuestra <a href="/cbd-hash-wholesale-europe">gama mayorista de hachís</a> está organizada para hacer que esa escalera sea sencilla, y el <a href="/products/resins-discovery-pack">pack de descubrimiento de resinas</a> te permite comparar grados antes de comprometerte con el volumen.</p>
+        <p>Para una comparación más amplia de resina contra flor como categoría, consulta nuestra guía <a href="/blog/cbd-flowers-vs-resins-guide">flores CBD versus resinas</a>.</p>
+      `,
+    },
+    it: {
+      title: "Come Viene Fatto l'Hashish CBD: Dry Sift, Bubble Hash e Charas",
+      excerpt: "Ogni hashish che tieni in stock proviene da uno dei tre metodi di separazione. Sapere quale è quale spiega la consistenza, l'aroma, e — cosa più utile — la differenza di prezzo.",
+      content: `
+        <h2>La Separazione È Tutta la Storia</h2>
+        <p>L'hashish non è un ingrediente aggiunto alla canapa. È canapa con tutto tranne la resina rimosso. I tricomi — le ghiandole resinose sulla superficie del fiore — contengono la maggior parte dei cannabinoidi e terpeni; la produzione di hashish è semplicemente l'attività di separare quelle ghiandole dal materiale vegetale nel modo più pulito possibile.</p>
+        <p>Tre metodi dominano, e ciascuno produce un prodotto riconoscibilmente diverso. Se tieni resina in stock, essere in grado di spiegare quale è quale fa la differenza tra vendere sul prezzo e vendere sulla qualità.</p>
+
+        <h3>1. Dry Sift — Meccanico, Senza Solventi, Tradizionale</h3>
+        <p>Il fiore essiccato viene agitato su setacci a maglia fine. Le ghiandole resinose sono fragili quando sono curate e si staccano, cadendo attraverso la maglia mentre la materia vegetale rimane sopra. Ciò che si raccoglie sotto è polvere di resina sciolta — polline, chiamato anche skuff o kief.</p>
+        <p>La dimensione della maglia determina il grado. I primi passaggi più fini producono il sift più pulito; i passaggi successivi portano progressivamente più materia vegetale e si vendono a meno. Lascia la polvere sciolta e rimane polline; pressala sotto calore e pressione e diventa hashish tradizionale. Questo è il metodo dietro la nostra <a href="/cbd-pollen-dry-sift-wholesale">gamma di polline e dry sift</a> e dietro le classiche <a href="/moroccan-cbd-hash-wholesale">pressature in stile marocchino</a>.</p>
+        <p>Un raffinamento degno di nota è la separazione statica, che usa l'elettricità statica per attrarre le teste di resina lontano dalla materia vegetale residua. Produce un risultato più pallido e pulito rispetto alla sola setacciatura — il nostro <a href="/products/golden-static-resin">Golden Static</a> è prodotto in questo modo.</p>
+
+        <h3>2. Separazione con Acqua Ghiacciata — Bubble Hash</h3>
+        <p>Il materiale vegetale viene agitato in acqua ghiacciata. Il freddo rende i tricomi abbastanza fragili da staccarsi, e poiché la resina non si dissolve in acqua può essere catturata in una serie di sacchetti filtro progressivamente più fini. Il nome deriva dal modo in cui il bubble hash di alta qualità fa le bolle (bubble) quando viene applicato calore.</p>
+        <p>La separazione con acqua ghiacciata può produrre un prodotto molto pulito, ma richiede più attrezzatura del dry sifting e il materiale deve essere asciugato con cura in seguito — l'umidità residua è ciò che rovina un lotto. Come il dry sift, non usa solventi in nessuna fase.</p>
+
+        <h3>3. Charas — Sfregato a Mano, Pianta Fresca</h3>
+        <p>Il charas è fatto da piante vive piuttosto che da materiale essiccato. I fiori freschi vengono sfregati tra le mani finché la resina si accumula sulla pelle, che viene poi raccolta e arrotolata. È il più antico dei tre metodi e di gran lunga il più laborioso, motivo per cui il vero charas è raro e costoso rispetto al prodotto setacciato.</p>
+
+        <h3>E i Gradi Filtrati e ad Alta Percentuale?</h3>
+        <p>Oltre ai tre metodi tradizionali ci sono passaggi di raffinamento moderni. La filtrazione multi-passaggio prende materiale setacciato e lo fa passare attraverso fasi successive, ciascuna rimuovendo più materia vegetale — il nostro <a href="/products/3x-filtered-cbg-cbd-resin">3X Filtrato</a> è un esempio. Il risultato è più pulito, più pallido, e più alto nel contenuto di cannabinoidi.</p>
+        <p>C'è un compromesso onesto qui che vale la pena raccontare ai clienti. Il raffinamento elimina i terpeni insieme alla materia vegetale, quindi un grado fortemente filtrato è più potente ma meno complesso aromaticamente di una buona pressatura tradizionale. Nessuno è "migliore" — servono clienti che acquistano secondo criteri diversi. La nostra <a href="/thc-free-cbd-wholesale">linea 0% THC</a> si trova all'estremità di quello spettro.</p>
+
+        <h3>Come Giudicare Cosa Ti Viene Offerto</h3>
+        <p>La consistenza e l'aroma ti dicono la maggior parte. La buona resina si ammorbidisce con il calore e mantiene la sua forma a freddo; il materiale che si sgretola in polvere a freddo o rimane grasso a temperatura ambiente è generalmente stato fatto o conservato male. Un naso piatto, simile al fieno, generalmente significa materiale vecchio o pressatura surriscaldata, indipendentemente dalle affermazioni di percentuale.</p>
+        <p>Poi leggi la documentazione — la nostra guida a <a href="/blog/how-to-read-cbd-coa-lab-report">come leggere un certificato di analisi</a> copre cosa cercare, incluso il pannello dei solventi residui di cui l'hashish separato meccanicamente non dovrebbe mai aver bisogno.</p>
+
+        <h3>Costruire lo Scaffale</h3>
+        <p>La maggior parte degli scaffali di resina di successo porta tre livelli: un polline di ingresso, una pressatura tradizionale di fascia media, e un grado premium o ad alta percentuale. Quella struttura permette ai clienti di fare upgrade piuttosto che forzare un unico punto di prezzo. La nostra <a href="/cbd-hash-wholesale-europe">gamma all'ingrosso di hashish</a> è organizzata per rendere quella scala semplice, e il <a href="/products/resins-discovery-pack">pacchetto scoperta resine</a> ti permette di confrontare i gradi prima di impegnarti nel volume.</p>
+        <p>Per un confronto più ampio tra resina e fiore come categoria, vedi la nostra guida <a href="/blog/cbd-flowers-vs-resins-guide">fiori CBD contro resine</a>.</p>
+      `,
+    },
+    nl: {
+      title: 'Hoe CBD-Hasj Wordt Gemaakt: Dry Sift, Bubble Hash en Charas',
+      excerpt: 'Elke hasj die u op voorraad heeft, komt uit een van drie scheidingsmethoden. Weten welke welke is, verklaart de textuur, het aroma, en — het nuttigst — het prijsverschil.',
+      content: `
+        <h2>Scheiding Is het Hele Verhaal</h2>
+        <p>Hasj is geen ingrediënt dat aan hennep wordt toegevoegd. Het is hennep waarbij alles behalve de hars is verwijderd. De trichomen — de harsklieren op het oppervlak van de bloem — bevatten de meeste cannabinoïden en terpenen; hasj maken is gewoonweg de zaak van het zo schoon mogelijk scheiden van die klieren van het plantmateriaal.</p>
+        <p>Drie methoden domineren, en elk produceert een herkenbaar ander product. Als u hars op voorraad heeft, is het kunnen uitleggen welke welke is het verschil tussen verkopen op prijs en verkopen op kwaliteit.</p>
+
+        <h3>1. Dry Sift — Mechanisch, Oplosmiddelvrij, Traditioneel</h3>
+        <p>Gedroogde bloem wordt geroerd over fijnmazige zeven. De harsklieren zijn broos wanneer geharde en breken af, vallend door de maas terwijl het plantmateriaal erboven blijft. Wat zich eronder verzamelt is los harspoeder — pollen, ook wel skuff of kief genoemd.</p>
+        <p>De maasgrootte bepaalt de graad. De fijnste vroege passages leveren de schoonste sift op; latere passages dragen geleidelijk meer plantmateriaal en verkopen voor minder. Laat het poeder los en het blijft pollen; pers het onder warmte en druk en het wordt traditionele hasj. Dit is de methode achter onze <a href="/cbd-pollen-dry-sift-wholesale">pollen- en dry-sift-reeks</a> en achter klassieke <a href="/moroccan-cbd-hash-wholesale">Marokkaanse persingen</a>.</p>
+        <p>Een verfijning die het waard is om te kennen is statische scheiding, die statische elektriciteit gebruikt om harskoppen weg te trekken van resterend plantmateriaal. Het produceert een bleker, schoner resultaat dan zeven alleen — onze <a href="/products/golden-static-resin">Golden Static</a> wordt op deze manier gemaakt.</p>
+
+        <h3>2. IJswaterscheiding — Bubble Hash</h3>
+        <p>Plantmateriaal wordt geroerd in ijswater. De kou maakt de trichomen broos genoeg om los te breken, en omdat hars niet oplost in water, kan het worden opgevangen in een reeks steeds fijnere filterzakken. De naam komt van hoe hoogwaardige bubble hash bubbelt (bubble) wanneer hitte wordt toegepast.</p>
+        <p>IJswaterscheiding kan een zeer schoon product produceren, maar het is apparatuurintensiever dan dry sifting en het materiaal moet daarna zorgvuldig worden gedroogd — resterende vochtigheid is wat een partij ruïneert. Net als dry sift gebruikt het geen oplosmiddelen op enig moment.</p>
+
+        <h3>3. Charas — Met de Hand Gewreven, Verse Plant</h3>
+        <p>Charas wordt gemaakt van levende planten in plaats van gedroogd materiaal. Verse bloemen worden tussen de handen gewreven totdat hars zich op de huid ophoopt, die dan wordt verzameld en gerold. Het is de oudste van de drie methoden en verreweg de meest arbeidsintensieve, daarom is echte charas zeldzaam en duur ten opzichte van gezeefd product.</p>
+
+        <h3>Hoe Zit het met Gefilterde en Hoge-Percentage Kwaliteiten?</h3>
+        <p>Voorbij de drie traditionele methoden liggen moderne verfijningsstappen. Meervoudige filtratie neemt gezeefd materiaal en leidt het door opeenvolgende fasen, elk verwijderend meer plantmateriaal — onze <a href="/products/3x-filtered-cbg-cbd-resin">3X Gefilterd</a> is een voorbeeld. Het resultaat is schoner, bleker, en hoger in cannabinoïde-inhoud.</p>
+        <p>Er is hier een eerlijke afweging die het waard is om aan klanten te vertellen. Verfijning strip terpenen samen met plantmateriaal, dus een zwaar gefilterde kwaliteit is krachtiger maar minder aromatisch complex dan een goede traditionele persing. Geen is "beter" — ze bedienen klanten die op verschillende criteria kopen. Onze <a href="/thc-free-cbd-wholesale">0% THC-lijn</a> ligt aan het verre uiteinde van dat spectrum.</p>
+
+        <h3>Hoe te Beoordelen Wat U Aangeboden Wordt</h3>
+        <p>Textuur en aroma vertellen u het meeste. Goede hars verzacht met warmte en behoudt zijn vorm bij koude; materiaal dat koud tot stof verkruimelt of vettig blijft bij kamertemperatuur is meestal slecht gemaakt of opgeslagen. Een platte, hooiachtige neus betekent over het algemeen oud materiaal of oververhitte persing, wat de percentage-beweringen ook zijn.</p>
+        <p>Lees dan het papierwerk — onze gids voor <a href="/blog/how-to-read-cbd-coa-lab-report">het lezen van een certificaat van analyse</a> behandelt waar op te letten, inclusief het restoplosmiddelenpaneel dat mechanisch gescheiden hasj nooit zou moeten nodig hebben.</p>
+
+        <h3>Het Schap Bouwen</h3>
+        <p>De meeste succesvolle harsschappen dragen drie niveaus: een instap-pollen, een middenklasse traditionele persing, en één premium of hoog-percentage kwaliteit. Die structuur laat klanten opwaarderen in plaats van een enkel prijspunt af te dwingen. Onze <a href="/cbd-hash-wholesale-europe">hasj groothandelsreeks</a> is georganiseerd om die ladder eenvoudig te maken, en het <a href="/products/resins-discovery-pack">harsen ontdekkingspakket</a> laat u kwaliteiten vergelijken voordat u zich vastlegt op volume.</p>
+        <p>Voor een bredere vergelijking van hars tegenover bloem als categorie, zie onze gids <a href="/blog/cbd-flowers-vs-resins-guide">CBD-bloemen versus harsen</a>.</p>
+      `,
+    },
+    fi: {
+      title: 'Kuinka CBD-Hasis Valmistetaan: Dry Sift, Bubble Hash ja Charas',
+      excerpt: 'Jokainen varastossasi oleva hasis on peräisin yhdestä kolmesta erotusmenetelmästä. Tietäminen, mikä on mikä, selittää rakenteen, aromin, ja — hyödyllisimmin — hintaeron.',
+      content: `
+        <h2>Erotus On Koko Tarina</h2>
+        <p>Hasis ei ole hamppuun lisätty ainesosa. Se on hamppua, josta on poistettu kaikki paitsi hartsi. Trikomit — kukan pinnalla olevat hartsirauhaset — sisältävät suurimman osan kannabinoideista ja terpeeneistä; hasiksen valmistus on yksinkertaisesti niiden rauhasten erottamista kasviaineksesta mahdollisimman puhtaasti.</p>
+        <p>Kolme menetelmää hallitsevat, ja jokainen tuottaa tunnistettavasti erilaisen tuotteen. Jos pidät hartsia varastossa, kyky selittää, mikä on mikä, on ero hinnalla myymisen ja laadulla myymisen välillä.</p>
+
+        <h3>1. Dry Sift — Mekaaninen, Liuotinvapaa, Perinteinen</h3>
+        <p>Kuivattua kukkaa ravistellaan hienojen verkkojen päällä. Hartsirauhaset ovat hauraita kypsytettyinä ja irtoavat, pudoten verkon läpi kasviaineksen jäädessä yläpuolelle. Alle kertyvä on löysää hartsijauhetta — siitepölyä, jota kutsutaan myös skuffiksi tai kiefiksi.</p>
+        <p>Verkon koko määrittää laadun. Hienoimmat varhaiset läpikäynnit tuottavat puhtaimman siftin; myöhemmät läpikäynnit kuljettavat yhä enemmän kasviainesta ja myyvät halvemmalla. Jätä jauhe löysäksi ja se pysyy siitepölynä; purista se lämmön ja paineen alla ja siitä tulee perinteistä hasista. Tämä on menetelmä <a href="/cbd-pollen-dry-sift-wholesale">siitepöly- ja dry sift -valikoimamme</a> ja klassisten <a href="/moroccan-cbd-hash-wholesale">marokkolaistyylisten puristusten</a> takana.</p>
+        <p>Tuntemisen arvoinen tarkennus on staattinen erotus, joka käyttää staattista sähköä vetämään hartsipäät pois jäljelle jääneestä kasviaineksesta. Se tuottaa vaaleamman, puhtaamman tuloksen kuin pelkkä seulonta — <a href="/products/golden-static-resin">Golden Staticimme</a> valmistetaan tällä tavalla.</p>
+
+        <h3>2. Jäävesierotus — Bubble Hash</h3>
+        <p>Kasviainesta ravistellaan jäävedessä. Kylmyys tekee trikomeista tarpeeksi hauraita irrotakseen, ja koska hartsi ei liukene veteen, se voidaan kerätä sarjaan yhä hienompia suodatinpusseja. Nimi tulee tavasta, jolla korkealaatuinen bubble hash kuplii (bubble), kun lämpöä lisätään.</p>
+        <p>Jäävesierotus voi tuottaa hyvin puhtaan tuotteen, mutta se vaatii enemmän laitteistoa kuin dry sifting, ja materiaali on kuivattava huolellisesti jälkikäteen — jäännöskosteus on se, mikä pilaa erän. Kuten dry sift, se ei käytä liuottimia missään vaiheessa.</p>
+
+        <h3>3. Charas — Käsin Hierottu, Tuore Kasvi</h3>
+        <p>Charas valmistetaan elävistä kasveista kuivatun materiaalin sijaan. Tuoreita kukkia hierotaan käsien välissä, kunnes hartsia kertyy iholle, joka sitten kerätään ja rullataan. Se on vanhin kolmesta menetelmästä ja ylivoimaisesti työvoimaintensiivisin, minkä vuoksi aito charas on harvinaista ja kallista seulottuun tuotteeseen verrattuna.</p>
+
+        <h3>Entä Suodatetut ja Korkean Prosentin Laadut?</h3>
+        <p>Kolmen perinteisen menetelmän lisäksi on moderneja jalostusvaiheita. Monivaiheinen suodatus ottaa seulotun materiaalin ja vie sen läpi peräkkäisten vaiheiden, joista jokainen poistaa enemmän kasviainesta — <a href="/products/3x-filtered-cbg-cbd-resin">3X Suodatettu</a> -tuotteemme on esimerkki. Tulos on puhtaampi, vaaleampi, ja korkeampi kannabinoidipitoisuudeltaan.</p>
+        <p>Tässä on rehellinen kompromissi, joka kannattaa kertoa asiakkaille. Jalostus poistaa terpeenejä yhdessä kasviaineksen kanssa, joten voimakkaasti suodatettu laatu on tehokkaampi mutta vähemmän aromaattisesti monimutkainen kuin hyvä perinteinen puristus. Kumpikaan ei ole "parempi" — ne palvelevat asiakkaita, jotka ostavat eri kriteerien mukaan. <a href="/thc-free-cbd-wholesale">0 % THC -linjamme</a> sijaitsee tuon spektrin kaukaisessa päässä.</p>
+
+        <h3>Kuinka Arvioida, Mitä Sinulle Tarjotaan</h3>
+        <p>Rakenne ja aromi kertovat suurimman osan. Hyvä hartsi pehmenee lämmöllä ja pitää muotonsa kylmänä; materiaali, joka murenee pölyksi kylmänä tai pysyy rasvaisena huoneenlämmössä, on yleensä tehty tai säilytetty huonosti. Litteä, heinänkaltainen tuoksu tarkoittaa yleensä vanhaa materiaalia tai ylikuumennettua puristusta, olivat prosenttiväitteet mitä tahansa.</p>
+        <p>Lue sitten paperityö — oppaamme <a href="/blog/how-to-read-cbd-coa-lab-report">analyysitodistuksen lukemiseen</a> kattaa, mitä etsiä, mukaan lukien jäännösliuotinpaneelin, jota mekaanisesti erotettu hasis ei koskaan pitäisi tarvita.</p>
+
+        <h3>Hyllyn Rakentaminen</h3>
+        <p>Useimmat menestyvät hartsihyllyt kantavat kolmea tasoa: aloitussiitepölyä, keskitason perinteistä puristusta, ja yhtä premium- tai korkean prosentin laatua. Tuo rakenne antaa asiakkaiden vaihtaa ylöspäin sen sijaan, että pakotettaisiin yksi hintapiste. <a href="/cbd-hash-wholesale-europe">Hasiksen tukkumyyntivalikoimamme</a> on järjestetty tekemään tuosta tikkaasta suoraviivainen, ja <a href="/products/resins-discovery-pack">hartsien löytöpaketti</a> antaa sinun vertailla laatuja ennen sitoutumista volyymiin.</p>
+        <p>Laajempaa vertailua hartsista fioria vastaan kategoriana varten, katso oppaamme <a href="/blog/cbd-flowers-vs-resins-guide">CBD-kukat vastaan hartsit</a>.</p>
+      `,
+    },
+    pt: {
+      title: 'Como o Haxixe CBD é Feito: Dry Sift, Bubble Hash e Charas',
+      excerpt: 'Todo o haxixe que tem em stock vem de um dos três métodos de separação. Saber qual é qual explica a textura, o aroma, e — mais utilmente — a diferença de preço.',
+      content: `
+        <h2>A Separação É Toda a História</h2>
+        <p>O haxixe não é um ingrediente adicionado ao cânhamo. É cânhamo com tudo removido exceto a resina. Os tricomas — as glândulas de resina na superfície da flor — contêm a maioria dos canabinoides e terpenos; fazer haxixe é simplesmente o negócio de separar essas glândulas da matéria vegetal da forma mais limpa possível.</p>
+        <p>Três métodos dominam, e cada um produz um produto reconhecivelmente diferente. Se tem resina em stock, ser capaz de explicar qual é qual é a diferença entre vender pelo preço e vender pela qualidade.</p>
+
+        <h3>1. Dry Sift — Mecânico, Sem Solventes, Tradicional</h3>
+        <p>A flor seca é agitada sobre peneiras de malha fina. As glândulas de resina são quebradiças quando curadas e soltam-se, caindo através da malha enquanto a matéria vegetal permanece acima. O que se acumula por baixo é pó de resina solto — pólen, também chamado skuff ou kief.</p>
+        <p>O tamanho da malha determina o grau. As primeiras passagens mais finas produzem o sift mais limpo; passagens posteriores carregam progressivamente mais matéria vegetal e vendem por menos. Deixe o pó solto e permanece pólen; prense-o sob calor e pressão e torna-se haxixe tradicional. Este é o método por trás da nossa <a href="/cbd-pollen-dry-sift-wholesale">gama de pólen e dry sift</a> e por trás das clássicas <a href="/moroccan-cbd-hash-wholesale">prensagens de estilo marroquino</a>.</p>
+        <p>Um refinamento que vale a pena conhecer é a separação estática, que usa eletricidade estática para atrair as cabeças de resina para longe da matéria vegetal residual. Produz um resultado mais pálido e limpo do que a peneiração sozinha — o nosso <a href="/products/golden-static-resin">Golden Static</a> é feito desta forma.</p>
+
+        <h3>2. Separação por Água Gelada — Bubble Hash</h3>
+        <p>O material vegetal é agitado em água gelada. O frio torna os tricomas quebradiços o suficiente para se soltarem, e como a resina não se dissolve em água, pode ser apanhada numa série de sacos filtrantes progressivamente mais finos. O nome vem da forma como o bubble hash de alta qualidade borbulha (bubble) quando o calor é aplicado.</p>
+        <p>A separação por água gelada pode produzir um produto muito limpo, mas é mais intensiva em equipamento do que a peneiração a seco e o material deve ser seco cuidadosamente depois — a humidade residual é o que arruína um lote. Como o dry sift, não usa solventes em nenhum momento.</p>
+
+        <h3>3. Charas — Esfregado à Mão, Planta Fresca</h3>
+        <p>O charas é feito a partir de plantas vivas em vez de material seco. Flores frescas são esfregadas entre as mãos até a resina se acumular na pele, que é depois recolhida e enrolada. É o mais antigo dos três métodos e de longe o mais intensivo em mão de obra, razão pela qual o charas genuíno é raro e caro em relação ao produto peneirado.</p>
+
+        <h3>E Quanto aos Graus Filtrados e de Alta Percentagem?</h3>
+        <p>Além dos três métodos tradicionais existem etapas de refinamento modernas. A filtração multi-passagem pega em material peneirado e passa-o por etapas sucessivas, cada uma removendo mais matéria vegetal — o nosso <a href="/products/3x-filtered-cbg-cbd-resin">3X Filtrado</a> é um exemplo. O resultado é mais limpo, mais pálido, e mais alto em teor de canabinoides.</p>
+        <p>Há um compromisso honesto aqui que vale a pena contar aos clientes. O refinamento remove terpenos juntamente com matéria vegetal, então um grau fortemente filtrado é mais potente mas menos complexo aromaticamente do que uma boa prensagem tradicional. Nenhum é "melhor" — servem clientes que compram segundo critérios diferentes. A nossa <a href="/thc-free-cbd-wholesale">linha 0% THC</a> situa-se na extremidade distante desse espectro.</p>
+
+        <h3>Como Julgar o Que Lhe É Oferecido</h3>
+        <p>A textura e o aroma dizem-lhe a maior parte. Boa resina amolece com o calor e mantém a sua forma quando fria; material que se esfarela em pó a frio ou permanece gorduroso à temperatura ambiente foi geralmente mal feito ou mal armazenado. Um nariz plano, tipo feno, geralmente significa material velho ou prensagem sobreaquecida, sejam quais forem as alegações de percentagem.</p>
+        <p>Depois leia a documentação — o nosso guia para <a href="/blog/how-to-read-cbd-coa-lab-report">ler um certificado de análise</a> cobre o que procurar, incluindo o painel de solventes residuais que o haxixe separado mecanicamente nunca deveria precisar.</p>
+
+        <h3>Construindo a Prateleira</h3>
+        <p>A maioria das prateleiras de resina bem-sucedidas tem três níveis: um pólen de entrada, uma prensagem tradicional de gama média, e um grau premium ou de alta percentagem. Essa estrutura permite aos clientes fazer upgrade em vez de forçar um único ponto de preço. A nossa <a href="/cbd-hash-wholesale-europe">gama de haxixe por grosso</a> está organizada para tornar essa escada simples, e o <a href="/products/resins-discovery-pack">pack de descoberta de resinas</a> permite-lhe comparar graus antes de se comprometer com o volume.</p>
+        <p>Para uma comparação mais ampla de resina versus flor como categoria, veja o nosso guia <a href="/blog/cbd-flowers-vs-resins-guide">flores CBD versus resinas</a>.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
