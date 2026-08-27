@@ -5258,6 +5258,218 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'hhc-thcp-semi-synthetic-cannabinoids-europe': {
+    fr: {
+      title: "HHC, THCP et Cannabinoïdes Semi-Synthétiques : Un Briefing pour Détaillants",
+      excerpt: "Les cannabinoïdes semi-synthétiques sont passés de nouveauté à priorité réglementaire en quelques années. Voici ce qu'ils sont, pourquoi ils sont apparus, et pourquoi les stocker est une catégorie de risque différente du CBD.",
+      content: `
+        <h2>D'Où Viennent Ces Composés</h2>
+        <p>L'hexahydrocannabinol (HHC) a été le premier cannabinoïde semi-synthétique signalé dans l'Union Européenne, et est surveillé par le Système d'Alerte Précoce de l'UE depuis octobre 2022. Il n'est pas extrait de la plante comme l'est le CBD — il est produit en modifiant chimiquement le CBD extrait de chanvre à faible teneur en THC.</p>
+        <p>Cette voie de production est toute la raison d'être de cette catégorie. Partir de CBD dérivé de chanvre légal et le convertir en un composé différent et intoxicant a placé ces produits dans un espace réglementaire qui n'avait pas été écrit en les ayant à l'esprit. Des composés apparentés incluant le HHC-P et le THCP ont suivi le même chemin commercial.</p>
+        <p>L'Agence de l'Union Européenne sur les Drogues couvre l'émergence de cette catégorie dans son briefing sur <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">le HHC et l'évolution du marché des cannabinoïdes</a>, et maintient une page thématique plus large sur les <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">cannabinoïdes synthétiques</a>.</p>
+
+        <h3>Pourquoi Ce N'est Pas le Même Risque que le CBD</h3>
+        <p>Trois différences comptent pour quiconque décide quoi mettre sur une étagère.</p>
+        <ul>
+          <li><strong>Ces composés sont intoxicants.</strong> Contrairement au CBD, le HHC et ses proches produisent des effets psychoactifs. Quelle que soit la position légale sur un marché donné, cela change entièrement la conversation client et le devoir de diligence.</li>
+          <li><strong>La position réglementaire a évolué rapidement.</strong> Les cannabinoïdes semi-synthétiques ont fait l'objet d'interdictions nationales, de classification en substances contrôlées, et de mesures de contrôle internationales — avec différents pays agissant à différents moments. Un produit légal quand commandé peut ne pas être légal quand il arrive.</li>
+          <li><strong>La base de preuves est mince.</strong> Ce sont des composés récents avec beaucoup moins de recherche publiée derrière eux que le CBD. C'est une véritable inconnue, pas une objection marketing.</li>
+        </ul>
+
+        <h3>Le Problème Pratique pour les Détaillants</h3>
+        <p>L'attrait commercial est évident — les produits intoxicants portent des marges plus élevées et attirent des clients que le CBD seul n'attire pas. La difficulté est que le risque n'est pas réparti uniformément à travers votre entreprise. Stocker une substance contrôlée, même sans le savoir, est un problème d'ordre différent d'un litige d'étiquetage, et cela peut affecter la banque, l'assurance, et les licences bien au-delà de la ligne de produit individuelle.</p>
+        <p>Parce que les positions nationales diffèrent et ont changé à plusieurs reprises, la seule approche fiable est de vérifier le statut actuel sur votre propre marché au moment de la commande, auprès d'une autorité nationale plutôt que de la page marketing d'un fournisseur.</p>
+
+        <h3>Ce Que Nous Stockons, et Pourquoi</h3>
+        <p>Notre catalogue est construit sur des produits dérivés du chanvre, testés en laboratoire, dans les limites légales de THC — <a href="/collections/cbd-flowers">fleurs</a>, <a href="/cbd-hash-wholesale-europe">hash et résine</a>, <a href="/collections/cbd-oils">huiles</a>, et comestibles — plutôt que des cannabinoïdes semi-synthétiques. C'est une décision de positionnement délibérée. Cela garde le tableau de conformité de nos clients simple et signifie qu'un certificat d'analyse est une documentation suffisante pour ce qu'ils vendent.</p>
+        <p>Pour les détaillants qui veulent des produits qui se vendent mieux sans entrer dans cette catégorie de risque, les voies pratiques sont l'arôme et la qualité plutôt que l'intoxication : <a href="/cbd-hemp-flowers-indoor">fleurs d'intérieur premium</a>, <a href="/thc-free-cbd-wholesale">résines filtrées à haut pourcentage</a>, ou formats de nouveauté comme <a href="/moonrock-icerock-cbd-wholesale">MoonRock et Ice Rock</a> qui commandent une prime sur la présentation.</p>
+
+        <h3>Si Vous Décidez Quand Même de les Stocker</h3>
+        <p>Vérifiez le statut légal par écrit, d'une source nationale, datée. Conservez la documentation pour chaque lot. Vérifiez rigoureusement l'âge. Et comprenez que la position réglementaire peut changer entre la commande et la vente — plusieurs marchés sont passés de permissifs à interdits en une seule saison.</p>
+        <p>Pour le tableau juridique plus large sur les cannabinoïdes en Europe, consultez notre <a href="/legal-cannabis-europe">aperçu par pays</a> et le guide du blog sur la <a href="/blog/is-cbd-legal-in-europe-country-guide">légalité du CBD à travers l'Europe</a>. Comme pour tout le contenu réglementaire ici, c'est une information générale pour détaillants plutôt qu'un conseil juridique.</p>
+      `,
+    },
+    de: {
+      title: 'HHC, THCP und Halbsynthetische Cannabinoide: Ein Briefing für Händler',
+      excerpt: 'Halbsynthetische Cannabinoide wechselten in wenigen Jahren von Neuheit zu regulatorischer Priorität. Hier ist, was sie sind, warum sie erschienen, und warum ihre Bevorratung eine andere Risikokategorie als CBD ist.',
+      content: `
+        <h2>Woher Diese Verbindungen Kamen</h2>
+        <p>Hexahydrocannabinol (HHC) war das erste in der Europäischen Union gemeldete halbsynthetische Cannabinoid und wird seit Oktober 2022 vom EU-Frühwarnsystem überwacht. Es wird nicht wie CBD aus der Pflanze extrahiert — es wird durch chemische Modifikation von aus THC-armem Hanf extrahiertem CBD hergestellt.</p>
+        <p>Dieser Produktionsweg ist der ganze Grund, warum die Kategorie existiert. Vom rechtmäßigen hanfabgeleiteten CBD ausgehend und es in eine andere, berauschende Verbindung umzuwandeln, platzierte diese Produkte in einem regulatorischen Raum, der nicht mit ihnen im Sinn geschrieben worden war. Verwandte Verbindungen einschließlich HHC-P und THCP folgten demselben kommerziellen Pfad.</p>
+        <p>Die EU-Drogenagentur behandelt das Auftreten dieser Kategorie in ihrem Briefing zu <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">HHC und dem sich entwickelnden Cannabinoidmarkt</a>, und unterhält eine breitere Themenseite zu <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">synthetischen Cannabinoiden</a>.</p>
+
+        <h3>Warum Dies Nicht Dasselbe Risiko wie CBD Ist</h3>
+        <p>Drei Unterschiede sind wichtig für jeden, der entscheidet, was ins Regal kommt.</p>
+        <ul>
+          <li><strong>Diese Verbindungen sind berauschend.</strong> Anders als CBD produzieren HHC und seine Verwandten psychoaktive Effekte. Unabhängig von der rechtlichen Position in einem gegebenen Markt ändert dies das Kundengespräch und die Sorgfaltspflicht vollständig.</li>
+          <li><strong>Die regulatorische Position hat sich schnell verändert.</strong> Halbsynthetische Cannabinoide waren Gegenstand nationaler Verbote, Einstufung als kontrollierte Substanz, und internationaler Kontrollmaßnahmen — wobei verschiedene Länder zu verschiedenen Zeiten handelten. Ein bei Bestellung rechtmäßiges Produkt ist bei Ankunft möglicherweise nicht mehr rechtmäßig.</li>
+          <li><strong>Die Evidenzbasis ist dünn.</strong> Dies sind neue Verbindungen mit weit weniger veröffentlichter Forschung dahinter als CBD. Das ist ein echtes Unbekanntes, kein Marketingeinwand.</li>
+        </ul>
+
+        <h3>Das Praktische Problem für Händler</h3>
+        <p>Der kommerzielle Reiz ist offensichtlich — berauschende Produkte tragen höhere Margen und ziehen Kunden an, die CBD allein nicht anzieht. Die Schwierigkeit ist, dass das Risiko nicht gleichmäßig über Ihr Geschäft verteilt ist. Das Vorrätighaben eines kontrollierten Stoffes, selbst unwissentlich, ist ein Problem anderer Größenordnung als ein Kennzeichnungsstreit, und es kann Bankwesen, Versicherung, und Lizenzen weit über die einzelne Produktlinie hinaus beeinflussen.</p>
+        <p>Da sich nationale Positionen unterscheiden und sich wiederholt geändert haben, ist der einzige zuverlässige Ansatz, den aktuellen Status in Ihrem eigenen Markt zum Zeitpunkt der Bestellung zu verifizieren, von einer nationalen Behörde statt von der Marketingseite eines Lieferanten.</p>
+
+        <h3>Was Wir Vorrätig Haben, und Warum</h3>
+        <p>Unser Katalog basiert auf hanfabgeleiteten, labortesteten Produkten innerhalb legaler THC-Grenzwerte — <a href="/collections/cbd-flowers">Blüten</a>, <a href="/cbd-hash-wholesale-europe">Haschisch und Harz</a>, <a href="/collections/cbd-oils">Öle</a>, und Esswaren — statt halbsynthetischer Cannabinoide. Das ist eine bewusste Positionierungsentscheidung. Es hält das Compliance-Bild unserer Kunden unkompliziert und bedeutet, dass ein Analysezertifikat ausreichende Dokumentation für das ist, was sie verkaufen.</p>
+        <p>Für Händler, die stärker verkaufende Produkte wollen, ohne in diese Risikokategorie zu treten, sind die praktischen Wege Aroma und Qualität statt Berauschung: <a href="/cbd-hemp-flowers-indoor">Premium-Indoor-Blüte</a>, hochprozentige <a href="/thc-free-cbd-wholesale">gefilterte Harze</a>, oder Neuheitsformate wie <a href="/moonrock-icerock-cbd-wholesale">MoonRock und Ice Rock</a>, die einen Aufpreis auf Präsentation verlangen.</p>
+
+        <h3>Wenn Sie Sich Doch für die Bevorratung Entscheiden</h3>
+        <p>Verifizieren Sie den rechtlichen Status schriftlich, von einer nationalen Quelle, datiert. Bewahren Sie Dokumentation für jede Charge auf. Kontrollieren Sie das Alter rigoros. Und verstehen Sie, dass sich die regulatorische Position zwischen Bestellung und Verkauf ändern kann — mehrere Märkte sind innerhalb einer einzigen Saison von freizügig zu verboten gewechselt.</p>
+        <p>Für das breitere rechtliche Bild zu Cannabinoiden in Europa siehe unseren <a href="/legal-cannabis-europe">Länderüberblick</a> und den Blog-Leitfaden zur <a href="/blog/is-cbd-legal-in-europe-country-guide">CBD-Legalität in ganz Europa</a>. Wie bei allen regulatorischen Inhalten hier ist dies allgemeine Information für Händler und keine Rechtsberatung.</p>
+      `,
+    },
+    es: {
+      title: 'HHC, THCP y Cannabinoides Semi-Sintéticos: Un Informe para Minoristas',
+      excerpt: 'Los cannabinoides semi-sintéticos pasaron de novedad a prioridad regulatoria en pocos años. Aquí está qué son, por qué aparecieron, y por qué tenerlos en stock es una categoría de riesgo diferente al CBD.',
+      content: `
+        <h2>De Dónde Vinieron Estos Compuestos</h2>
+        <p>El hexahidrocannabinol (HHC) fue el primer cannabinoide semi-sintético reportado en la Unión Europea, y ha sido monitoreado por el Sistema de Alerta Temprana de la UE desde octubre de 2022. No se extrae de la planta como se hace con el CBD — se produce modificando químicamente CBD extraído de cáñamo bajo en THC.</p>
+        <p>Esa ruta de producción es toda la razón por la que existe la categoría. Comenzando desde CBD derivado de cáñamo lícito y convirtiéndolo en un compuesto diferente, intoxicante, colocó estos productos en un espacio regulatorio que no había sido escrito teniéndolos en mente. Compuestos relacionados incluyendo HHC-P y THCP siguieron la misma ruta comercial.</p>
+        <p>La Agencia de Drogas de la Unión Europea cubre la aparición de esta categoría en su informe sobre <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">el HHC y el mercado de cannabinoides en evolución</a>, y mantiene una página temática más amplia sobre <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">cannabinoides sintéticos</a>.</p>
+
+        <h3>Por Qué Esto No Es el Mismo Riesgo que el CBD</h3>
+        <p>Tres diferencias importan para cualquiera que decida qué poner en un estante.</p>
+        <ul>
+          <li><strong>Estos compuestos son intoxicantes.</strong> A diferencia del CBD, el HHC y sus parientes producen efectos psicoactivos. Sea cual sea la posición legal en un mercado dado, esto cambia completamente la conversación con el cliente y el deber de cuidado.</li>
+          <li><strong>La posición regulatoria se ha movido rápidamente.</strong> Los cannabinoides semi-sintéticos han sido objeto de prohibiciones nacionales, clasificación como sustancia controlada, y medidas de control internacionales — con diferentes países actuando en diferentes momentos. Un producto lícito cuando se pide puede no ser lícito cuando llega.</li>
+          <li><strong>La base de evidencia es escasa.</strong> Estos son compuestos recientes con mucha menos investigación publicada detrás de ellos que el CBD. Eso es una incógnita genuina, no una objeción de marketing.</li>
+        </ul>
+
+        <h3>El Problema Práctico para Minoristas</h3>
+        <p>El atractivo comercial es obvio — los productos intoxicantes conllevan márgenes más altos y atraen clientes que el CBD solo no atrae. La dificultad es que el riesgo no está distribuido uniformemente por todo tu negocio. Tener en stock una sustancia controlada, incluso sin saberlo, es un problema de un orden diferente a una disputa de etiquetado, y puede afectar la banca, el seguro, y las licencias mucho más allá de la línea de producto individual.</p>
+        <p>Debido a que las posiciones nacionales difieren y han cambiado repetidamente, el único enfoque confiable es verificar el estado actual en tu propio mercado en el momento de pedir, de una autoridad nacional en lugar de la página de marketing de un proveedor.</p>
+
+        <h3>Lo Que Tenemos en Stock, y Por Qué</h3>
+        <p>Nuestro catálogo está construido sobre productos derivados del cáñamo, probados en laboratorio, dentro de límites legales de THC — <a href="/collections/cbd-flowers">flores</a>, <a href="/cbd-hash-wholesale-europe">hachís y resina</a>, <a href="/collections/cbd-oils">aceites</a>, y comestibles — en lugar de cannabinoides semi-sintéticos. Esa es una decisión de posicionamiento deliberada. Mantiene el panorama de cumplimiento de nuestros clientes sencillo y significa que un certificado de análisis es documentación suficiente para lo que están vendiendo.</p>
+        <p>Para minoristas que quieren productos que vendan más fuerte sin entrar en esa categoría de riesgo, las rutas prácticas son el aroma y la calidad en lugar de la intoxicación: <a href="/cbd-hemp-flowers-indoor">flor premium de interior</a>, <a href="/thc-free-cbd-wholesale">resinas filtradas de alto porcentaje</a>, o formatos novedosos como <a href="/moonrock-icerock-cbd-wholesale">MoonRock e Ice Rock</a> que exigen una prima por presentación.</p>
+
+        <h3>Si Decides Tenerlos en Stock de Todos Modos</h3>
+        <p>Verifica el estado legal por escrito, de una fuente nacional, fechado. Mantén documentación para cada lote. Verifica rigurosamente la edad. Y entiende que la posición regulatoria puede cambiar entre pedir y vender — varios mercados han pasado de permisivos a prohibidos dentro de una sola temporada.</p>
+        <p>Para el panorama legal más amplio sobre cannabinoides en Europa, consulta nuestra <a href="/legal-cannabis-europe">visión general por país</a> y la guía del blog sobre la <a href="/blog/is-cbd-legal-in-europe-country-guide">legalidad del CBD en toda Europa</a>. Como con todo el contenido regulatorio aquí, esto es información general para minoristas en lugar de asesoramiento legal.</p>
+      `,
+    },
+    it: {
+      title: 'HHC, THCP e Cannabinoidi Semi-Sintetici: Un Briefing per Rivenditori',
+      excerpt: "I cannabinoidi semi-sintetici sono passati da novità a priorità normativa in pochi anni. Ecco cosa sono, perché sono apparsi, e perché tenerli in stock è una categoria di rischio diversa dal CBD.",
+      content: `
+        <h2>Da Dove Provengono Questi Composti</h2>
+        <p>L'esaidrocannabinolo (HHC) è stato il primo cannabinoide semi-sintetico segnalato nell'Unione Europea, ed è monitorato dal Sistema di Allerta Precoce dell'UE da ottobre 2022. Non viene estratto dalla pianta come il CBD — viene prodotto modificando chimicamente il CBD estratto da canapa a basso contenuto di THC.</p>
+        <p>Quella via di produzione è l'intera ragione per cui esiste la categoria. Partendo da CBD legale derivato dalla canapa e convertendolo in un composto diverso, inebriante, ha posizionato questi prodotti in uno spazio normativo che non era stato scritto pensando a loro. Composti correlati inclusi HHC-P e THCP hanno seguito lo stesso percorso commerciale.</p>
+        <p>L'Agenzia dell'Unione Europea sulle Droghe copre l'emergere di questa categoria nel suo briefing su <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">l'HHC e il mercato dei cannabinoidi in evoluzione</a>, e mantiene una pagina tematica più ampia sui <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">cannabinoidi sintetici</a>.</p>
+
+        <h3>Perché Questo Non È lo Stesso Rischio del CBD</h3>
+        <p>Tre differenze contano per chiunque decida cosa mettere su uno scaffale.</p>
+        <ul>
+          <li><strong>Questi composti sono inebrianti.</strong> A differenza del CBD, l'HHC e i suoi parenti producono effetti psicoattivi. Qualunque sia la posizione legale in un dato mercato, questo cambia completamente la conversazione con il cliente e il dovere di diligenza.</li>
+          <li><strong>La posizione normativa si è mossa rapidamente.</strong> I cannabinoidi semi-sintetici sono stati oggetto di divieti nazionali, classificazione come sostanza controllata, e misure di controllo internazionali — con paesi diversi che agiscono in momenti diversi. Un prodotto lecito quando ordinato potrebbe non essere lecito quando arriva.</li>
+          <li><strong>La base di prove è scarsa.</strong> Questi sono composti recenti con molta meno ricerca pubblicata dietro di essi rispetto al CBD. Questa è un'incognita genuina, non un'obiezione di marketing.</li>
+        </ul>
+
+        <h3>Il Problema Pratico per i Rivenditori</h3>
+        <p>L'attrattiva commerciale è ovvia — i prodotti inebrianti portano margini più alti e attirano clienti che il CBD da solo non attira. La difficoltà è che il rischio non è distribuito uniformemente in tutta la tua attività. Tenere in stock una sostanza controllata, anche inconsapevolmente, è un problema di ordine diverso rispetto a una controversia sull'etichettatura, e può influenzare banche, assicurazioni, e licenze ben oltre la singola linea di prodotto.</p>
+        <p>Poiché le posizioni nazionali differiscono e sono cambiate ripetutamente, l'unico approccio affidabile è verificare lo stato attuale nel tuo mercato al momento dell'ordine, da un'autorità nazionale piuttosto che dalla pagina di marketing di un fornitore.</p>
+
+        <h3>Cosa Teniamo in Stock, e Perché</h3>
+        <p>Il nostro catalogo è costruito su prodotti derivati dalla canapa, testati in laboratorio, entro i limiti legali di THC — <a href="/collections/cbd-flowers">fiori</a>, <a href="/cbd-hash-wholesale-europe">hashish e resina</a>, <a href="/collections/cbd-oils">oli</a>, e commestibili — piuttosto che cannabinoidi semi-sintetici. Questa è una decisione di posizionamento deliberata. Mantiene il quadro di conformità dei nostri clienti semplice e significa che un certificato di analisi è documentazione sufficiente per ciò che stanno vendendo.</p>
+        <p>Per i rivenditori che vogliono prodotti che vendano di più senza entrare in quella categoria di rischio, i percorsi pratici sono l'aroma e la qualità piuttosto che l'inebriamento: <a href="/cbd-hemp-flowers-indoor">fiore premium indoor</a>, <a href="/thc-free-cbd-wholesale">resine filtrate ad alta percentuale</a>, o formati di novità come <a href="/moonrock-icerock-cbd-wholesale">MoonRock e Ice Rock</a> che comandano un premio sulla presentazione.</p>
+
+        <h3>Se Decidi Comunque di Tenerli in Stock</h3>
+        <p>Verifica lo stato legale per iscritto, da una fonte nazionale, datata. Mantieni documentazione per ogni lotto. Verifica rigorosamente l'età. E comprendi che la posizione normativa può cambiare tra l'ordine e la vendita — diversi mercati sono passati da permissivi a proibiti nel giro di una singola stagione.</p>
+        <p>Per il quadro legale più ampio sui cannabinoidi in Europa, vedi la nostra <a href="/legal-cannabis-europe">panoramica per paese</a> e la guida del blog sulla <a href="/blog/is-cbd-legal-in-europe-country-guide">legalità del CBD in tutta Europa</a>. Come con tutti i contenuti normativi qui, questa è informazione generale per rivenditori piuttosto che consulenza legale.</p>
+      `,
+    },
+    nl: {
+      title: 'HHC, THCP en Semi-Synthetische Cannabinoïden: Een Briefing voor Retailers',
+      excerpt: 'Semi-synthetische cannabinoïden gingen in enkele jaren van nieuwigheid naar regelgevende prioriteit. Hier is wat ze zijn, waarom ze verschenen, en waarom ze op voorraad houden een andere risicocategorie is dan CBD.',
+      content: `
+        <h2>Waar Deze Verbindingen Vandaan Kwamen</h2>
+        <p>Hexahydrocannabinol (HHC) was het eerste semi-synthetische cannabinoïde gemeld in de Europese Unie, en wordt sinds oktober 2022 gemonitord door het EU Vroegtijdig Waarschuwingssysteem. Het wordt niet uit de plant geëxtraheerd zoals CBD — het wordt geproduceerd door chemische modificatie van CBD geëxtraheerd uit hennep met laag THC-gehalte.</p>
+        <p>Die productieroute is de hele reden waarom de categorie bestaat. Beginnend met wettige, van hennep afgeleide CBD en het omzetten in een andere, bedwelmende verbinding plaatste deze producten in een regelgevende ruimte die niet met hen in gedachten was geschreven. Verwante verbindingen inclusief HHC-P en THCP volgden hetzelfde commerciële pad.</p>
+        <p>Het Europese Drugsagentschap behandelt de opkomst van deze categorie in zijn briefing over <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">HHC en de evoluerende cannabinoïdemarkt</a>, en onderhoudt een bredere themapagina over <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">synthetische cannabinoïden</a>.</p>
+
+        <h3>Waarom Dit Niet Hetzelfde Risico Is als CBD</h3>
+        <p>Drie verschillen zijn belangrijk voor iedereen die beslist wat op een schap gaat.</p>
+        <ul>
+          <li><strong>Deze verbindingen zijn bedwelmend.</strong> In tegenstelling tot CBD produceren HHC en zijn verwanten psychoactieve effecten. Wat de juridische positie in een bepaalde markt ook is, dit verandert het klantgesprek en de zorgplicht volledig.</li>
+          <li><strong>De regelgevende positie beweegt snel.</strong> Semi-synthetische cannabinoïden zijn onderwerp geweest van nationale verboden, indeling als gecontroleerde stof, en internationale controlemaatregelen — met verschillende landen die op verschillende tijdstippen handelen. Een product dat wettig is bij bestelling is mogelijk niet meer wettig bij aankomst.</li>
+          <li><strong>De bewijsbasis is dun.</strong> Dit zijn recente verbindingen met veel minder gepubliceerd onderzoek erachter dan CBD. Dat is een echte onbekende, geen marketingbezwaar.</li>
+        </ul>
+
+        <h3>Het Praktische Probleem voor Retailers</h3>
+        <p>De commerciële aantrekkingskracht is duidelijk — bedwelmende producten dragen hogere marges en trekken klanten aan die CBD alleen niet aantrekt. Het probleem is dat het risico niet gelijkmatig verdeeld is over uw bedrijf. Een gecontroleerde stof op voorraad hebben, zelfs onbewust, is een probleem van een andere orde dan een etiketteringsgeschil, en het kan bankieren, verzekering, en vergunningen ver voorbij de individuele productlijn beïnvloeden.</p>
+        <p>Omdat nationale posities verschillen en herhaaldelijk zijn veranderd, is de enige betrouwbare aanpak om de huidige status in uw eigen markt te verifiëren op het moment van bestellen, van een nationale autoriteit in plaats van de marketingpagina van een leverancier.</p>
+
+        <h3>Wat Wij Op Voorraad Hebben, en Waarom</h3>
+        <p>Onze catalogus is gebouwd op van hennep afgeleide, labgeteste producten binnen legale THC-limieten — <a href="/collections/cbd-flowers">bloemen</a>, <a href="/cbd-hash-wholesale-europe">hasj en hars</a>, <a href="/collections/cbd-oils">oliën</a>, en eetwaren — in plaats van semi-synthetische cannabinoïden. Dat is een bewuste positioneringsbeslissing. Het houdt het nalevingsbeeld van onze klanten eenvoudig en betekent dat een certificaat van analyse voldoende documentatie is voor wat ze verkopen.</p>
+        <p>Voor retailers die sterker verkopende producten willen zonder in die risicocategorie te stappen, zijn de praktische routes aroma en kwaliteit in plaats van bedwelming: <a href="/cbd-hemp-flowers-indoor">premium indoor bloem</a>, hoog-percentage <a href="/thc-free-cbd-wholesale">gefilterde harsen</a>, of noviteitsformaten zoals <a href="/moonrock-icerock-cbd-wholesale">MoonRock en Ice Rock</a> die een premie op presentatie vragen.</p>
+
+        <h3>Als U Toch Besluit Ze Op Voorraad Te Nemen</h3>
+        <p>Verifieer de juridische status schriftelijk, van een nationale bron, gedateerd. Bewaar documentatie voor elke batch. Controleer leeftijd rigoureus. En begrijp dat de regelgevende positie kan veranderen tussen bestellen en verkopen — verschillende markten zijn binnen één seizoen overgegaan van permissief naar verboden.</p>
+        <p>Voor het bredere juridische beeld over cannabinoïden in Europa, zie ons <a href="/legal-cannabis-europe">landenoverzicht</a> en de bloggids over <a href="/blog/is-cbd-legal-in-europe-country-guide">CBD-legaliteit in heel Europa</a>. Zoals bij alle regelgevende inhoud hier, is dit algemene informatie voor retailers in plaats van juridisch advies.</p>
+      `,
+    },
+    fi: {
+      title: 'HHC, THCP ja Puolisynteettiset Kannabinoidit: Jälleenmyyjän Tiedotus',
+      excerpt: 'Puolisynteettiset kannabinoidit siirtyivät uutuudesta sääntelyprioriteetiksi muutamassa vuodessa. Tässä on mitä ne ovat, miksi ne ilmestyivät, ja miksi niiden varastointi on eri riskikategoria kuin CBD.',
+      content: `
+        <h2>Mistä Nämä Yhdisteet Tulivat</h2>
+        <p>Heksahydrokannabinoli (HHC) oli ensimmäinen Euroopan unionissa raportoitu puolisynteettinen kannabinoidi, ja sitä on seurannut EU:n varhaisvaroitusjärjestelmä lokakuusta 2022 lähtien. Sitä ei uuteta kasvista kuten CBD:tä — se tuotetaan muokkaamalla kemiallisesti matalan THC-pitoisuuden hampusta uutettua CBD:tä.</p>
+        <p>Tuo tuotantoreitti on koko syy siihen, miksi kategoria on olemassa. Lähtien laillisesta hampusta johdetusta CBD:stä ja muuttamalla se erilaiseksi, päihdyttäväksi yhdisteeksi asetti nämä tuotteet sääntelytilaan, jota ei ollut kirjoitettu ne mielessä pitäen. Sukulaisyhdisteet kuten HHC-P ja THCP seurasivat samaa kaupallista polkua.</p>
+        <p>Euroopan unionin huumausainevirasto käsittelee tämän kategorian ilmaantumista tiedotteessaan <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">HHC:stä ja kehittyvistä kannabinoidimarkkinoista</a>, ja ylläpitää laajempaa aihesivua <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">synteettisistä kannabinoideista</a>.</p>
+
+        <h3>Miksi Tämä Ei Ole Sama Riski Kuin CBD</h3>
+        <p>Kolme eroa on tärkeitä kenelle tahansa, joka päättää, mitä laittaa hyllylle.</p>
+        <ul>
+          <li><strong>Nämä yhdisteet ovat päihdyttäviä.</strong> Toisin kuin CBD, HHC ja sen sukulaiset tuottavat psykoaktiivisia vaikutuksia. Riippumatta lainsäädännöllisestä asemasta tietyillä markkinoilla, tämä muuttaa asiakaskeskustelun ja huolellisuusvelvoitteen kokonaan.</li>
+          <li><strong>Sääntelyasema on liikkunut nopeasti.</strong> Puolisynteettiset kannabinoidit ovat olleet kansallisten kieltojen, valvottujen aineiden luokittelun, ja kansainvälisten valvontatoimien kohteena — eri maiden toimiessa eri aikoina. Tilattaessa laillinen tuote ei välttämättä ole laillinen saapuessaan.</li>
+          <li><strong>Näyttöpohja on ohut.</strong> Nämä ovat tuoreita yhdisteitä, joiden takana on paljon vähemmän julkaistua tutkimusta kuin CBD:llä. Se on aito tuntematon, ei markkinointivastalause.</li>
+        </ul>
+
+        <h3>Käytännön Ongelma Jälleenmyyjille</h3>
+        <p>Kaupallinen houkutus on ilmeinen — päihdyttävät tuotteet tuovat korkeampia katteita ja houkuttelevat asiakkaita, joita pelkkä CBD ei houkuttele. Vaikeus on siinä, ettei riski jakaudu tasaisesti liiketoimintasi eri osiin. Valvotun aineen varastointi, jopa tietämättään, on erilainen ongelmaluokka kuin merkintäriita, ja se voi vaikuttaa pankkitoimintaan, vakuutukseen, ja lupiin paljon yksittäistä tuotelinjaa laajemmin.</p>
+        <p>Koska kansalliset kannat eroavat toisistaan ja ovat muuttuneet toistuvasti, ainoa luotettava lähestymistapa on vahvistaa nykyinen tila omilla markkinoillasi tilaushetkellä kansalliselta viranomaiselta eikä toimittajan markkinointisivulta.</p>
+
+        <h3>Mitä Meillä On Varastossa, ja Miksi</h3>
+        <p>Luettelomme perustuu hampusta johdettuihin, laboratoriotestattuihin tuotteisiin laillisten THC-rajojen sisällä — <a href="/collections/cbd-flowers">kukkiin</a>, <a href="/cbd-hash-wholesale-europe">hasikseen ja hartsiin</a>, <a href="/collections/cbd-oils">öljyihin</a>, ja syötäviin — puolisynteettisten kannabinoidien sijaan. Se on harkittu asemointipäätös. Se pitää asiakkaidemme vaatimustenmukaisuuskuvan yksinkertaisena ja tarkoittaa, että analyysitodistus on riittävä dokumentaatio sille, mitä he myyvät.</p>
+        <p>Jälleenmyyjille, jotka haluavat vahvemmin myyviä tuotteita astumatta tähän riskikategoriaan, käytännön reitit ovat aromi ja laatu päihdyttävyyden sijaan: <a href="/cbd-hemp-flowers-indoor">premium sisäkasvatettu kukka</a>, korkean prosentin <a href="/thc-free-cbd-wholesale">suodatetut hartsit</a>, tai uutuusmuodot kuten <a href="/moonrock-icerock-cbd-wholesale">MoonRock ja Ice Rock</a>, jotka vaativat lisähinnan esittelystä.</p>
+
+        <h3>Jos Päätät Kuitenkin Varastoida Niitä</h3>
+        <p>Vahvista laillinen tila kirjallisesti, kansallisesta lähteestä, päivätty. Pidä dokumentaatio jokaisesta erästä. Tarkista ikä tiukasti. Ja ymmärrä, että sääntelyasema voi muuttua tilaamisen ja myymisen välillä — useat markkinat ovat siirtyneet salliviksi kielletyiksi yhden kauden sisällä.</p>
+        <p>Laajempaa oikeudellista kuvaa kannabinoideista Euroopassa varten, katso <a href="/legal-cannabis-europe">maakohtainen yleiskatsauksemme</a> ja blogin opas <a href="/blog/is-cbd-legal-in-europe-country-guide">CBD:n laillisuudesta kautta Euroopan</a>. Kuten kaiken sääntelysisällön kanssa täällä, tämä on yleistä tietoa jälleenmyyjille eikä oikeudellista neuvontaa.</p>
+      `,
+    },
+    pt: {
+      title: 'HHC, THCP e Canabinoides Semi-Sintéticos: Um Briefing para Retalhistas',
+      excerpt: 'Os canabinoides semi-sintéticos passaram de novidade a prioridade regulatória em poucos anos. Aqui está o que são, porque apareceram, e porque tê-los em stock é uma categoria de risco diferente do CBD.',
+      content: `
+        <h2>De Onde Vieram Estes Compostos</h2>
+        <p>O hexahidrocanabinol (HHC) foi o primeiro canabinoide semi-sintético reportado na União Europeia, e é monitorizado pelo Sistema de Alerta Precoce da UE desde outubro de 2022. Não é extraído da planta como o CBD — é produzido modificando quimicamente CBD extraído de cânhamo com baixo teor de THC.</p>
+        <p>Essa via de produção é toda a razão pela qual a categoria existe. Partindo de CBD lícito derivado de cânhamo e convertendo-o num composto diferente, intoxicante, colocou estes produtos num espaço regulatório que não tinha sido escrito a pensar neles. Compostos relacionados incluindo HHC-P e THCP seguiram o mesmo caminho comercial.</p>
+        <p>A Agência da União Europeia sobre Drogas cobre o surgimento desta categoria no seu briefing sobre <a href="https://www.euda.europa.eu/news/2023/new-cannabinoid-hhc-spotlight-market-evolves_en" target="_blank" rel="noopener noreferrer">o HHC e o mercado de canabinoides em evolução</a>, e mantém uma página temática mais ampla sobre <a href="https://www.euda.europa.eu/topics/synthetic-cannabinoids_en" target="_blank" rel="noopener noreferrer">canabinoides sintéticos</a>.</p>
+
+        <h3>Porque Isto Não é o Mesmo Risco que o CBD</h3>
+        <p>Três diferenças importam para quem decide o que colocar numa prateleira.</p>
+        <ul>
+          <li><strong>Estes compostos são intoxicantes.</strong> Ao contrário do CBD, o HHC e os seus parentes produzem efeitos psicoativos. Seja qual for a posição legal num determinado mercado, isto muda completamente a conversa com o cliente e o dever de cuidado.</li>
+          <li><strong>A posição regulatória tem-se movido rapidamente.</strong> Os canabinoides semi-sintéticos têm sido objeto de proibições nacionais, classificação como substância controlada, e medidas de controlo internacionais — com diferentes países a agir em momentos diferentes. Um produto lícito quando encomendado pode não ser lícito quando chega.</li>
+          <li><strong>A base de evidência é escassa.</strong> Estes são compostos recentes com muito menos investigação publicada por trás deles do que o CBD. Isso é uma incógnita genuína, não uma objeção de marketing.</li>
+        </ul>
+
+        <h3>O Problema Prático para Retalhistas</h3>
+        <p>O apelo comercial é óbvio — produtos intoxicantes trazem margens mais altas e atraem clientes que o CBD sozinho não atrai. A dificuldade é que o risco não está distribuído uniformemente pelo seu negócio. Ter em stock uma substância controlada, mesmo sem saber, é um problema de ordem diferente de uma disputa de rotulagem, e pode afetar banca, seguros, e licenças muito além da linha de produto individual.</p>
+        <p>Como as posições nacionais diferem e mudaram repetidamente, a única abordagem fiável é verificar o estado atual no seu próprio mercado no momento da encomenda, junto de uma autoridade nacional em vez da página de marketing de um fornecedor.</p>
+
+        <h3>O Que Temos em Stock, e Porquê</h3>
+        <p>O nosso catálogo é construído sobre produtos derivados de cânhamo, testados em laboratório, dentro dos limites legais de THC — <a href="/collections/cbd-flowers">flores</a>, <a href="/cbd-hash-wholesale-europe">haxixe e resina</a>, <a href="/collections/cbd-oils">óleos</a>, e comestíveis — em vez de canabinoides semi-sintéticos. Essa é uma decisão de posicionamento deliberada. Mantém o panorama de conformidade dos nossos clientes simples e significa que um certificado de análise é documentação suficiente para o que estão a vender.</p>
+        <p>Para retalhistas que querem produtos que vendam mais forte sem entrar nessa categoria de risco, os caminhos práticos são o aroma e a qualidade em vez da intoxicação: <a href="/cbd-hemp-flowers-indoor">flor premium de interior</a>, <a href="/thc-free-cbd-wholesale">resinas filtradas de alta percentagem</a>, ou formatos de novidade como <a href="/moonrock-icerock-cbd-wholesale">MoonRock e Ice Rock</a> que exigem um prémio pela apresentação.</p>
+
+        <h3>Se Decidir Tê-los em Stock de Qualquer Forma</h3>
+        <p>Verifique o estado legal por escrito, de uma fonte nacional, datado. Mantenha documentação para cada lote. Verifique a idade rigorosamente. E compreenda que a posição regulatória pode mudar entre encomendar e vender — vários mercados passaram de permissivos a proibidos dentro de uma única época.</p>
+        <p>Para o panorama legal mais amplo sobre canabinoides na Europa, veja o nosso <a href="/legal-cannabis-europe">panorama por país</a> e o guia do blog sobre a <a href="/blog/is-cbd-legal-in-europe-country-guide">legalidade do CBD em toda a Europa</a>. Como acontece com todo o conteúdo regulatório aqui, isto é informação geral para retalhistas em vez de aconselhamento jurídico.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
