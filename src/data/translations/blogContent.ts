@@ -5046,6 +5046,218 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
       `,
     },
   },
+  'eu-novel-food-cbd-what-retailers-need-to-know': {
+    fr: {
+      title: 'Nouveaux Aliments UE et CBD : Ce que les Détaillants Doivent Vraiment Savoir',
+      excerpt: "Le CBD ingérable se trouve dans un schéma d'attente réglementaire dans l'UE. Comprendre pourquoi compte pour ce que vous stockez, comment vous l'étiquetez, et ce que vous pouvez affirmer en toute sécurité.",
+      content: `
+        <h2>Pourquoi les Comestibles CBD Sont Traités Différemment</h2>
+        <p>L'UE classe les aliments sans historique significatif de consommation avant mai 1997 comme "nouveaux aliments", régis par le <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">Règlement (UE) 2015/2283</a>. Les produits de cette catégorie nécessitent une autorisation de mise sur le marché avant de pouvoir être légalement vendus comme aliments.</p>
+        <p>La Commission Européenne considère que les extraits de cannabinoïdes entrent dans cette définition. C'est la racine de la situation dans laquelle tout détaillant de CBD ingérable opère actuellement — et cela s'applique aux huiles, capsules, et comestibles d'une façon qui ne s'applique pas aux produits non vendus pour consommation.</p>
+
+        <h3>Où en Sont Actuellement les Évaluations</h3>
+        <p>L'EFSA, l'Autorité Européenne de Sécurité des Aliments, évalue les demandes de nouveaux aliments au nom de la Commission. En 2022, son panel a conclu qu'il ne pouvait pas terminer les évaluations de sécurité du CBD en raison de lacunes de données significatives, et les évaluations ont été suspendues en attendant des preuves supplémentaires. Le <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">résumé en langage clair de cette déclaration par l'EFSA</a> expose le raisonnement, et sa <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">page thématique sur les nouveaux aliments</a> suit la position actuelle.</p>
+        <p>La conséquence pratique est un long schéma d'attente : un grand nombre de demandes soumises, évaluations suspendues, et application laissée largement aux États membres individuels entre-temps. C'est pourquoi la réalité légale pour les comestibles CBD diffère tant d'un pays à l'autre.</p>
+
+        <h3>Ce Que Cela Signifie en Pratique</h3>
+        <ul>
+          <li><strong>L'application est nationale, pas uniforme.</strong> Un produit vendu sans difficulté dans un État membre peut être traité comme un nouvel aliment non autorisé dans un autre. Vérifiez votre propre marché plutôt que de supposer une cohérence à l'échelle de l'UE.</li>
+          <li><strong>Le format du produit change l'analyse.</strong> Les règles sur les nouveaux aliments s'attachent à l'alimentation. Les produits non présentés pour consommation relèvent de règles différentes — c'est l'une des raisons pour lesquelles le côté fleurs et résines du marché s'est développé sur une voie réglementaire distincte des huiles et comestibles.</li>
+          <li><strong>Les allégations sont un problème juridique distinct.</strong> Les allégations de santé sur les aliments sont régies par leur propre régime et ne sont pas quelque chose qu'un COA peut soutenir. Décrire ce qu'est un produit reste sûr ; décrire ce qu'il fait généralement pour un corps ne l'est généralement pas.</li>
+        </ul>
+
+        <h3>Comment Réduire Votre Exposition</h3>
+        <p>Trois choses sont sous votre contrôle indépendamment de la façon dont la position réglementaire évolue.</p>
+        <p><strong>Gardez la documentation avec le stock.</strong> Les certificats d'analyse au niveau du lot sont la base de preuve pour toute conversation avec un inspecteur. Notre guide pour <a href="/blog/how-to-read-cbd-coa-lab-report">lire un COA</a> couvre ce que contient un complet, et notre <a href="/quality-and-testing">processus de test</a> explique ce qui accompagne chaque lot.</p>
+        <p><strong>Soyez conservateur avec les allégations.</strong> La tentation commerciale est d'en dire plus que ce que soutient la preuve. Un texte produit descriptif et factuel est à la fois plus sûr et, dans un marché encombré de sur-affirmation, plus crédible.</p>
+        <p><strong>Connaissez la règle THC de votre propre marché.</strong> Certains marchés fixent un seuil en pourcentage ; d'autres exigent qu'aucun THC ne soit détectable dans le produit fini. Si vous vendez dans le second type, un produit conforme à 0,2 % ne sera pas qualifié — c'est pourquoi notre <a href="/thc-free-cbd-wholesale">gamme 0 % THC</a> existe comme ligne distincte plutôt qu'un angle marketing.</p>
+
+        <h3>Que Surveiller</h3>
+        <p>La position est véritablement instable et vaut la peine d'être revérifiée plutôt que supposée. La page nouveaux aliments de l'EFSA est la source primaire pour le statut d'évaluation ; les autorités nationales de sécurité alimentaire publient leurs propres positions d'application, qui comptent en pratique plus au quotidien. Notre <a href="/legal-cannabis-europe">aperçu par pays</a> et <a href="/blog/is-cbd-legal-in-europe-country-guide">guide légal</a> résument le paysage, mais aucun ne remplace la vérification de votre propre juridiction.</p>
+        <p>Cet article est une information générale pour les détaillants, pas un conseil juridique. Si vous prenez des décisions de stockage avec de l'argent réel derrière, prenez conseil spécifique à votre marché.</p>
+      `,
+    },
+    de: {
+      title: 'EU Novel Food und CBD: Was Händler Tatsächlich Wissen Müssen',
+      excerpt: 'Essbares CBD befindet sich in der EU in einem regulatorischen Wartemuster. Zu verstehen warum ist wichtig für das, was Sie vorrätig haben, wie Sie es kennzeichnen, und was Sie sicher behaupten können.',
+      content: `
+        <h2>Warum CBD-Esswaren Anders Behandelt Werden</h2>
+        <p>Die EU klassifiziert Lebensmittel ohne signifikante Verzehrgeschichte vor Mai 1997 als "neuartige Lebensmittel", geregelt durch die <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">Verordnung (EU) 2015/2283</a>. Produkte in dieser Kategorie erfordern eine Zulassung vor dem Inverkehrbringen, bevor sie rechtmäßig als Lebensmittel verkauft werden können.</p>
+        <p>Die Europäische Kommission vertritt die Position, dass Cannabinoidextrakte in diese Definition fallen. Das ist die Wurzel der Situation, in der sich jeder Händler von essbarem CBD derzeit befindet — und es gilt für Öle, Kapseln, und Esswaren auf eine Weise, die nicht für Produkte gilt, die nicht zum Verzehr verkauft werden.</p>
+
+        <h3>Wo die Bewertungen Derzeit Stehen</h3>
+        <p>Die EFSA, die Europäische Behörde für Lebensmittelsicherheit, bewertet Anträge auf neuartige Lebensmittel im Auftrag der Kommission. 2022 kam ihr Gremium zu dem Schluss, dass es die Sicherheitsbewertungen von CBD aufgrund erheblicher Datenlücken nicht abschließen könne, und Bewertungen wurden bis zu weiteren Beweisen ausgesetzt. Die <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">verständliche Zusammenfassung dieser Erklärung der EFSA</a> legt die Begründung dar, und ihre <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">Themenseite zu neuartigen Lebensmitteln</a> verfolgt die aktuelle Position.</p>
+        <p>Die praktische Konsequenz ist ein langes Wartemuster: eine große Anzahl eingereichter Anträge, pausierte Bewertungen, und Durchsetzung, die in der Zwischenzeit größtenteils den einzelnen Mitgliedstaaten überlassen bleibt. Deshalb unterscheidet sich die rechtliche Realität für CBD-Esswaren so stark von einem Land zum nächsten.</p>
+
+        <h3>Was Dies in der Praxis Bedeutet</h3>
+        <ul>
+          <li><strong>Durchsetzung ist national, nicht einheitlich.</strong> Ein Produkt, das in einem Mitgliedstaat problemlos verkauft wird, kann in einem anderen als nicht autorisiertes neuartiges Lebensmittel behandelt werden. Prüfen Sie Ihren eigenen Markt, anstatt EU-weite Konsistenz anzunehmen.</li>
+          <li><strong>Produktformat ändert die Analyse.</strong> Regeln für neuartige Lebensmittel gelten für Lebensmittel. Produkte, die nicht zum Verzehr präsentiert werden, unterliegen anderen Regeln — was einer der Gründe ist, warum sich die Blüten- und Harzseite des Marktes auf einem separaten regulatorischen Weg von Ölen und Esswaren entwickelt hat.</li>
+          <li><strong>Behauptungen sind ein separates rechtliches Problem.</strong> Gesundheitsbezogene Angaben zu Lebensmitteln unterliegen ihrem eigenen Regime und sind nicht etwas, das ein COA unterstützen kann. Zu beschreiben, was ein Produkt ist, bleibt sicher; zu beschreiben, was es allgemein für einen Körper tut, ist es normalerweise nicht.</li>
+        </ul>
+
+        <h3>Wie Sie Ihre Exposition Reduzieren</h3>
+        <p>Drei Dinge liegen in Ihrer Kontrolle, unabhängig davon, wie sich die regulatorische Position entwickelt.</p>
+        <p><strong>Bewahren Sie Dokumentation mit dem Bestand auf.</strong> Analysezertifikate auf Chargenebene sind die Beweisbasis für jedes Gespräch mit einem Prüfer. Unser Leitfaden zum <a href="/blog/how-to-read-cbd-coa-lab-report">Lesen eines COA</a> deckt ab, was ein vollständiges enthält, und unser <a href="/quality-and-testing">Testprozess</a> erklärt, was mit jeder Charge versendet wird.</p>
+        <p><strong>Seien Sie konservativ mit Behauptungen.</strong> Die kommerzielle Versuchung besteht darin, mehr zu sagen, als die Beweise unterstützen. Beschreibende, faktische Produkttexte sind sowohl sicherer als auch, in einem mit Übertreibungen überfüllten Markt, glaubwürdiger.</p>
+        <p><strong>Kennen Sie die THC-Regel Ihres eigenen Marktes.</strong> Manche Märkte setzen einen Prozentsatz-Schwellenwert; andere verlangen kein nachweisbares THC im Fertigprodukt. Wenn Sie in den zweiten Typ verkaufen, wird ein konformes 0,2 %-Produkt dort nicht qualifizieren — weshalb unsere <a href="/thc-free-cbd-wholesale">0 % THC-Range</a> als eigenständige Linie existiert statt als Marketingwinkel.</p>
+
+        <h3>Worauf zu Achten Ist</h3>
+        <p>Die Position ist wirklich ungeklärt und es lohnt sich, sie erneut zu überprüfen statt anzunehmen. Die Novel-Food-Seite der EFSA ist die primäre Quelle für den Bewertungsstatus; nationale Lebensmittelsicherheitsbehörden veröffentlichen ihre eigenen Durchsetzungspositionen, die im Alltag praktisch mehr zählen. Unser <a href="/legal-cannabis-europe">Länderüberblick</a> und <a href="/blog/is-cbd-legal-in-europe-country-guide">rechtlicher Leitfaden</a> fassen die Landschaft zusammen, ersetzen aber keines von beiden die Überprüfung Ihrer eigenen Rechtsordnung.</p>
+        <p>Dieser Artikel ist allgemeine Information für Händler, keine Rechtsberatung. Wenn Sie Bestandsentscheidungen mit echtem Geld dahinter treffen, holen Sie sich marktspezifische Beratung.</p>
+      `,
+    },
+    es: {
+      title: 'Novel Food UE y CBD: Lo que los Minoristas Realmente Necesitan Saber',
+      excerpt: 'El CBD ingerible se encuentra en un patrón regulatorio de espera en la UE. Entender por qué importa para lo que tienes en stock, cómo lo etiquetas, y lo que puedes afirmar de forma segura.',
+      content: `
+        <h2>Por Qué los Comestibles CBD se Tratan de Forma Diferente</h2>
+        <p>La UE clasifica los alimentos sin historial significativo de consumo antes de mayo de 1997 como "nuevos alimentos", regidos por el <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">Reglamento (UE) 2015/2283</a>. Los productos en esa categoría requieren autorización previa a la comercialización antes de poder venderse legalmente como alimentos.</p>
+        <p>La Comisión Europea sostiene que los extractos de cannabinoides caen dentro de esta definición. Esa es la raíz de la situación en la que actualmente opera todo minorista de CBD ingerible — y se aplica a aceites, cápsulas, y comestibles de una forma que no se aplica a productos no vendidos para consumo.</p>
+
+        <h3>Dónde Están Actualmente las Evaluaciones</h3>
+        <p>La EFSA, la Autoridad Europea de Seguridad Alimentaria, evalúa las solicitudes de nuevos alimentos en nombre de la Comisión. En 2022 su panel concluyó que no podía completar las evaluaciones de seguridad del CBD debido a importantes lagunas de datos, y las evaluaciones se suspendieron a la espera de más evidencia. El <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">resumen en lenguaje sencillo de esa declaración de la EFSA</a> expone el razonamiento, y su <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">página temática de nuevos alimentos</a> sigue la posición actual.</p>
+        <p>La consecuencia práctica es un largo patrón de espera: un gran número de solicitudes presentadas, evaluaciones pausadas, y aplicación dejada en gran medida a los estados miembros individuales mientras tanto. Por eso la realidad legal para los comestibles CBD difiere tanto de un país a otro.</p>
+
+        <h3>Lo Que Esto Significa en la Práctica</h3>
+        <ul>
+          <li><strong>La aplicación es nacional, no uniforme.</strong> Un producto vendido sin dificultad en un estado miembro puede ser tratado como un nuevo alimento no autorizado en otro. Verifica tu propio mercado en lugar de asumir consistencia en toda la UE.</li>
+          <li><strong>El formato del producto cambia el análisis.</strong> Las reglas de nuevos alimentos se aplican a los alimentos. Los productos no presentados para consumo se rigen por reglas diferentes — una de las razones por las que el lado de flores y resinas del mercado se ha desarrollado en una vía regulatoria separada de los aceites y comestibles.</li>
+          <li><strong>Las afirmaciones son un problema legal separado.</strong> Las declaraciones de salud en los alimentos se rigen por su propio régimen y no son algo que un COA pueda respaldar. Describir qué es un producto sigue siendo seguro; describir qué hace generalmente por un cuerpo generalmente no lo es.</li>
+        </ul>
+
+        <h3>Cómo Reducir tu Exposición</h3>
+        <p>Tres cosas están bajo tu control independientemente de cómo se desarrolle la posición regulatoria.</p>
+        <p><strong>Mantén la documentación con el stock.</strong> Los certificados de análisis a nivel de lote son la base de evidencia para cualquier conversación con un inspector. Nuestra guía para <a href="/blog/how-to-read-cbd-coa-lab-report">leer un COA</a> cubre qué contiene uno completo, y nuestro <a href="/quality-and-testing">proceso de pruebas</a> explica qué se envía con cada lote.</p>
+        <p><strong>Sé conservador con las afirmaciones.</strong> La tentación comercial es decir más de lo que la evidencia respalda. El texto de producto descriptivo y fáctico es tanto más seguro como, en un mercado abarrotado de exageraciones, más creíble.</p>
+        <p><strong>Conoce la regla de THC de tu propio mercado.</strong> Algunos mercados establecen un umbral porcentual; otros requieren que no se detecte THC en el producto terminado. Si vendes en el segundo tipo, un producto conforme al 0,2% no calificará allí — por eso nuestra <a href="/thc-free-cbd-wholesale">gama 0% THC</a> existe como línea distinta en lugar de un ángulo de marketing.</p>
+
+        <h3>Qué Vigilar</h3>
+        <p>La posición es genuinamente inestable y vale la pena reverificarla en lugar de asumirla. La página de nuevos alimentos de la EFSA es la fuente primaria para el estado de evaluación; las autoridades nacionales de seguridad alimentaria publican sus propias posiciones de aplicación, que en la práctica importan más día a día. Nuestra <a href="/legal-cannabis-europe">visión general por país</a> y <a href="/blog/is-cbd-legal-in-europe-country-guide">guía legal</a> resumen el panorama, pero ninguna sustituye la verificación de tu propia jurisdicción.</p>
+        <p>Este artículo es información general para minoristas, no asesoramiento legal. Si estás tomando decisiones de stock con dinero real detrás, obtén asesoramiento específico para tu mercado.</p>
+      `,
+    },
+    it: {
+      title: 'Novel Food UE e CBD: Cosa Devono Realmente Sapere i Rivenditori',
+      excerpt: "Il CBD commestibile si trova in uno schema di attesa normativa nell'UE. Capire perché conta per ciò che tieni in stock, come lo etichetti, e ciò che puoi affermare in sicurezza.",
+      content: `
+        <h2>Perché i Commestibili CBD Sono Trattati Diversamente</h2>
+        <p>L'UE classifica gli alimenti senza una storia significativa di consumo prima di maggio 1997 come "novel food", regolati dal <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">Regolamento (UE) 2015/2283</a>. I prodotti in quella categoria richiedono un'autorizzazione pre-commercializzazione prima di poter essere legalmente venduti come alimenti.</p>
+        <p>La Commissione Europea sostiene la posizione che gli estratti di cannabinoidi rientrino in questa definizione. Questa è la radice della situazione in cui ogni rivenditore di CBD commestibile sta attualmente operando — e si applica a oli, capsule, e commestibili in un modo che non si applica ai prodotti non venduti per il consumo.</p>
+
+        <h3>Dove Si Trovano Attualmente le Valutazioni</h3>
+        <p>L'EFSA, l'Autorità Europea per la Sicurezza Alimentare, valuta le domande di novel food per conto della Commissione. Nel 2022 il suo panel ha concluso di non poter completare le valutazioni di sicurezza del CBD a causa di significative lacune nei dati, e le valutazioni sono state sospese in attesa di ulteriori prove. Il <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">riassunto in linguaggio semplice di quella dichiarazione dell'EFSA</a> espone il ragionamento, e la sua <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">pagina tematica sui novel food</a> traccia la posizione attuale.</p>
+        <p>La conseguenza pratica è un lungo schema di attesa: un gran numero di domande presentate, valutazioni sospese, e applicazione lasciata in gran parte ai singoli stati membri nel frattempo. Ecco perché la realtà legale per i commestibili CBD differisce così tanto da un paese all'altro.</p>
+
+        <h3>Cosa Significa Questo in Pratica</h3>
+        <ul>
+          <li><strong>L'applicazione è nazionale, non uniforme.</strong> Un prodotto venduto senza difficoltà in uno stato membro può essere trattato come un novel food non autorizzato in un altro. Controlla il tuo mercato piuttosto che presumere coerenza a livello UE.</li>
+          <li><strong>Il formato del prodotto cambia l'analisi.</strong> Le regole sui novel food si applicano al cibo. I prodotti non presentati per il consumo rientrano in regole diverse — una ragione per cui il lato fiori e resine del mercato si è sviluppato su un percorso normativo separato da oli e commestibili.</li>
+          <li><strong>Le affermazioni sono un problema legale separato.</strong> Le indicazioni sulla salute sugli alimenti sono regolate dal proprio regime e non sono qualcosa che un COA può supportare. Descrivere cosa sia un prodotto rimane sicuro; descrivere cosa fa generalmente per un corpo generalmente non lo è.</li>
+        </ul>
+
+        <h3>Come Ridurre la Tua Esposizione</h3>
+        <p>Tre cose sono sotto il tuo controllo indipendentemente da come si sviluppa la posizione normativa.</p>
+        <p><strong>Tieni la documentazione con lo stock.</strong> I certificati di analisi a livello di lotto sono la base di prova per qualsiasi conversazione con un ispettore. La nostra guida a <a href="/blog/how-to-read-cbd-coa-lab-report">come leggere un COA</a> copre cosa contiene uno completo, e il nostro <a href="/quality-and-testing">processo di test</a> spiega cosa viene spedito con ogni lotto.</p>
+        <p><strong>Sii conservativo con le affermazioni.</strong> La tentazione commerciale è dire più di quanto le prove supportino. Un testo del prodotto descrittivo e fattuale è sia più sicuro che, in un mercato affollato di esagerazioni, più credibile.</p>
+        <p><strong>Conosci la regola THC del tuo mercato.</strong> Alcuni mercati fissano una soglia percentuale; altri richiedono che nessun THC sia rilevabile nel prodotto finito. Se vendi nel secondo tipo, un prodotto conforme allo 0,2% non si qualificherà lì — motivo per cui la nostra <a href="/thc-free-cbd-wholesale">gamma 0% THC</a> esiste come linea distinta piuttosto che un angolo di marketing.</p>
+
+        <h3>Cosa Osservare</h3>
+        <p>La posizione è genuinamente instabile e vale la pena ricontrollarla piuttosto che presumerla. La pagina novel food dell'EFSA è la fonte primaria per lo stato di valutazione; le autorità nazionali per la sicurezza alimentare pubblicano le proprie posizioni di applicazione, che in pratica contano di più giorno per giorno. La nostra <a href="/legal-cannabis-europe">panoramica per paese</a> e <a href="/blog/is-cbd-legal-in-europe-country-guide">guida legale</a> riassumono il panorama, ma nessuna delle due sostituisce il controllo della tua giurisdizione.</p>
+        <p>Questo articolo è informazione generale per i rivenditori, non consulenza legale. Se stai prendendo decisioni di stoccaggio con soldi veri dietro, ottieni consulenza specifica per il tuo mercato.</p>
+      `,
+    },
+    nl: {
+      title: 'EU Novel Food en CBD: Wat Retailers Echt Moeten Weten',
+      excerpt: 'Eetbare CBD zit in de EU in een regelgevend wachtpatroon. Begrijpen waarom is belangrijk voor wat u op voorraad heeft, hoe u het etiketteert, en wat u veilig kunt beweren.',
+      content: `
+        <h2>Waarom CBD-Eetwaren Anders Worden Behandeld</h2>
+        <p>De EU classificeert voedingsmiddelen zonder significante consumptiegeschiedenis vóór mei 1997 als "nieuwe voedingsmiddelen", geregeld door <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">Verordening (EU) 2015/2283</a>. Producten in die categorie vereisen goedkeuring vóór het op de markt brengen voordat ze legaal als voedsel kunnen worden verkocht.</p>
+        <p>De Europese Commissie neemt het standpunt in dat cannabinoïde-extracten binnen deze definitie vallen. Dat is de kern van de situatie waarin elke retailer van eetbare CBD momenteel opereert — en het geldt voor oliën, capsules, en eetwaren op een manier die niet geldt voor producten die niet voor consumptie worden verkocht.</p>
+
+        <h3>Waar de Beoordelingen Momenteel Staan</h3>
+        <p>EFSA, de Europese Autoriteit voor Voedselveiligheid, beoordeelt nieuwe-voedingsmiddelenaanvragen namens de Commissie. In 2022 concludeerde het panel dat het de veiligheidsbeoordelingen van CBD niet kon voltooien vanwege significante gegevenshiaten, en beoordelingen werden opgeschort in afwachting van meer bewijs. De <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">samenvatting in eenvoudige taal van die EFSA-verklaring</a> zet de redenering uiteen, en de <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">nieuwe-voedingsmiddelen themapagina</a> volgt de huidige positie.</p>
+        <p>Het praktische gevolg is een lang wachtpatroon: een groot aantal ingediende aanvragen, gepauzeerde beoordelingen, en handhaving die ondertussen grotendeels aan individuele lidstaten wordt overgelaten. Daarom verschilt de juridische realiteit voor CBD-eetwaren zo sterk van het ene land tot het andere.</p>
+
+        <h3>Wat Dit Betekent in de Praktijk</h3>
+        <ul>
+          <li><strong>Handhaving is nationaal, niet uniform.</strong> Een product dat zonder problemen in de ene lidstaat wordt verkocht, kan in een andere worden behandeld als een niet-geautoriseerd nieuw voedingsmiddel. Controleer uw eigen markt in plaats van EU-brede consistentie aan te nemen.</li>
+          <li><strong>Productformaat verandert de analyse.</strong> Regels voor nieuwe voedingsmiddelen gelden voor voedsel. Producten die niet voor consumptie worden gepresenteerd, vallen onder andere regels — een van de redenen waarom de bloem- en harskant van de markt zich op een aparte regelgevende weg heeft ontwikkeld dan oliën en eetwaren.</li>
+          <li><strong>Claims zijn een apart juridisch probleem.</strong> Gezondheidsclaims op voedingsmiddelen worden geregeld door hun eigen regime en zijn niet iets dat een COA kan ondersteunen. Beschrijven wat een product is, blijft veilig; beschrijven wat het over het algemeen voor een lichaam doet, meestal niet.</li>
+        </ul>
+
+        <h3>Hoe Uw Blootstelling te Verminderen</h3>
+        <p>Drie dingen liggen binnen uw controle, ongeacht hoe de regelgevende positie zich ontwikkelt.</p>
+        <p><strong>Houd documentatie bij de voorraad.</strong> Certificaten van analyse op batchniveau zijn de bewijsbasis voor elk gesprek met een inspecteur. Onze gids voor <a href="/blog/how-to-read-cbd-coa-lab-report">het lezen van een COA</a> behandelt wat een volledige bevat, en ons <a href="/quality-and-testing">testproces</a> legt uit wat er met elke batch wordt verzonden.</p>
+        <p><strong>Wees conservatief met claims.</strong> De commerciële verleiding is om meer te zeggen dan het bewijs ondersteunt. Beschrijvende, feitelijke productcopy is zowel veiliger als, in een markt die overvol is met overdrijving, geloofwaardiger.</p>
+        <p><strong>Ken de THC-regel van uw eigen markt.</strong> Sommige markten stellen een percentagedrempel in; andere vereisen dat er geen detecteerbare THC in het eindproduct zit. Als u verkoopt in het tweede type, komt een conform 0,2%-product daar niet in aanmerking — daarom bestaat onze <a href="/thc-free-cbd-wholesale">0% THC-reeks</a> als aparte lijn in plaats van een marketinghoek.</p>
+
+        <h3>Waar Op te Letten</h3>
+        <p>De positie is echt onbepaald en het is de moeite waard om te herverifiëren in plaats van aan te nemen. De nieuwe-voedingsmiddelenpagina van EFSA is de primaire bron voor beoordelingsstatus; nationale voedselveiligheidsautoriteiten publiceren hun eigen handhavingsposities, die in de praktijk meer dagelijks belangrijk zijn. Ons <a href="/legal-cannabis-europe">landenoverzicht</a> en <a href="/blog/is-cbd-legal-in-europe-country-guide">juridische gids</a> vatten het landschap samen, maar geen van beide vervangt het controleren van uw eigen rechtsgebied.</p>
+        <p>Dit artikel is algemene informatie voor retailers, geen juridisch advies. Als u voorraadbeslissingen neemt met echt geld erachter, neem dan marktspecifiek advies.</p>
+      `,
+    },
+    fi: {
+      title: 'EU:n Uuselintarvikkeet ja CBD: Mitä Jälleenmyyjien Todella Tulee Tietää',
+      excerpt: 'Nautittava CBD on EU:ssa sääntely-odotusmallissa. Sen ymmärtäminen miksi on tärkeää sille, mitä pidät varastossa, kuinka merkitset sen, ja mitä voit turvallisesti väittää.',
+      content: `
+        <h2>Miksi CBD-Syötäviä Kohdellaan Eri Tavalla</h2>
+        <p>EU luokittelee elintarvikkeet, joilla ei ole merkittävää kulutushistoriaa ennen toukokuuta 1997, "uuselintarvikkeiksi", joita säätelee <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">asetus (EU) 2015/2283</a>. Tähän kategoriaan kuuluvat tuotteet vaativat markkinoille saattamista edeltävän luvan ennen kuin niitä voidaan laillisesti myydä elintarvikkeena.</p>
+        <p>Euroopan komissio pitää kantaa, että kannabinoidiuutteet kuuluvat tähän määritelmään. Se on juuri sitä tilannetta, jossa jokainen nautittavan CBD:n jälleenmyyjä tällä hetkellä toimii — ja se koskee öljyjä, kapseleita, ja syötäviä tavalla, joka ei koske tuotteita, joita ei myydä kulutukseen.</p>
+
+        <h3>Missä Arvioinnit Tällä Hetkellä Seisovat</h3>
+        <p>EFSA, Euroopan elintarviketurvallisuusviranomainen, arvioi uuselintarvikehakemuksia komission puolesta. Vuonna 2022 sen paneeli päätteli, ettei se voinut saattaa loppuun CBD:n turvallisuusarviointeja merkittävien tietopuutteiden vuoksi, ja arvioinnit asetettiin odottamaan lisänäyttöä. EFSA:n oma <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">selkokielinen tiivistelmä tästä lausunnosta</a> selittää perustelut, ja sen <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">uuselintarvikkeiden aihesivu</a> seuraa nykyistä asemaa.</p>
+        <p>Käytännön seuraus on pitkä odotusmalli: suuri määrä jätettyjä hakemuksia, keskeytettyjä arviointeja, ja valvonta jätetty sillä välin suurelta osin yksittäisille jäsenvaltioille. Siksi CBD-syötävien oikeudellinen todellisuus eroaa niin paljon maasta toiseen.</p>
+
+        <h3>Mitä Tämä Tarkoittaa Käytännössä</h3>
+        <ul>
+          <li><strong>Valvonta on kansallista, ei yhtenäistä.</strong> Tuote, jota myydään vaikeuksitta yhdessä jäsenvaltiossa, saatetaan käsitellä luvattomana uuselintarvikkeena toisessa. Tarkista omat markkinasi sen sijaan, että oletat EU:n laajuista yhtenäisyyttä.</li>
+          <li><strong>Tuotemuoto muuttaa analyysia.</strong> Uuselintarvikesäännöt liittyvät ruokaan. Tuotteet, joita ei esitetä kulutukseen, kuuluvat eri sääntöjen piiriin — mikä on yksi syy siihen, miksi markkinoiden kukka- ja hartsipuoli on kehittynyt erilliseltä sääntelypolulta kuin öljyt ja syötävät.</li>
+          <li><strong>Väitteet ovat erillinen oikeudellinen ongelma.</strong> Elintarvikkeiden terveysväitteitä säätelee oma järjestelmänsä, eikä se ole jotain, mitä COA voi tukea. Sen kuvaaminen, mikä tuote on, pysyy turvallisena; sen kuvaaminen, mitä se yleisesti tekee kehossa, ei yleensä ole.</li>
+        </ul>
+
+        <h3>Kuinka Vähentää Altistumistasi</h3>
+        <p>Kolme asiaa on hallinnassasi riippumatta siitä, kuinka sääntelyasema kehittyy.</p>
+        <p><strong>Pidä dokumentaatio varaston mukana.</strong> Eräkohtaiset analyysitodistukset ovat todistepohja kaikille keskusteluille tarkastajan kanssa. Oppaamme <a href="/blog/how-to-read-cbd-coa-lab-report">COA:n lukemiseen</a> kattaa, mitä täydellinen sisältää, ja <a href="/quality-and-testing">testausprosessimme</a> selittää, mitä jokaisen erän mukana toimitetaan.</p>
+        <p><strong>Ole konservatiivinen väitteiden kanssa.</strong> Kaupallinen kiusaus on sanoa enemmän kuin näyttö tukee. Kuvaileva, tosiasiallinen tuoteteksti on sekä turvallisempaa että, liioitteluista täynnä olevilla markkinoilla, uskottavampaa.</p>
+        <p><strong>Tunne omien markkinoidesi THC-sääntö.</strong> Jotkut markkinat asettavat prosenttikynnyksen; toiset vaativat, ettei valmiissa tuotteessa saa olla havaittavaa THC:tä. Jos myyt jälkimmäisen tyyppisillä markkinoilla, vaatimustenmukainen 0,2 % tuote ei kelpaa siellä — minkä vuoksi <a href="/thc-free-cbd-wholesale">0 % THC -valikoimamme</a> on olemassa erillisenä linjana eikä markkinointikulmana.</p>
+
+        <h3>Mitä Seurata</h3>
+        <p>Asema on aidosti epävakaa ja kannattaa tarkistaa uudelleen sen sijaan, että oletetaan. EFSA:n uuselintarvikesivu on ensisijainen lähde arviointitilanteelle; kansalliset elintarviketurvallisuusviranomaiset julkaisevat omat valvonta-asemansa, jotka merkitsevät käytännössä enemmän päivittäin. <a href="/legal-cannabis-europe">Maakohtainen yleiskatsauksemme</a> ja <a href="/blog/is-cbd-legal-in-europe-country-guide">laillinen oppaamme</a> tiivistävät maiseman, mutta kumpikaan ei korvaa oman lainkäyttöalueesi tarkistamista.</p>
+        <p>Tämä artikkeli on yleistä tietoa jälleenmyyjille, ei oikeudellista neuvontaa. Jos teet varastopäätöksiä oikean rahan ollessa kyseessä, hanki markkinoillesi erityistä neuvontaa.</p>
+      `,
+    },
+    pt: {
+      title: 'Novos Alimentos UE e CBD: O que os Retalhistas Realmente Precisam Saber',
+      excerpt: 'O CBD ingerível encontra-se num padrão regulatório de espera na UE. Compreender porquê importa para o que tem em stock, como o rotula, e o que pode afirmar em segurança.',
+      content: `
+        <h2>Porque os Comestíveis CBD São Tratados de Forma Diferente</h2>
+        <p>A UE classifica os alimentos sem histórico significativo de consumo antes de maio de 1997 como "novos alimentos", regidos pelo <a href="https://eur-lex.europa.eu/eli/reg/2015/2283/oj" target="_blank" rel="noopener noreferrer">Regulamento (UE) 2015/2283</a>. Os produtos nessa categoria requerem autorização pré-comercialização antes de poderem ser legalmente vendidos como alimento.</p>
+        <p>A Comissão Europeia assume a posição de que os extratos de canabinoides se enquadram nesta definição. Essa é a raiz da situação em que todo retalhista de CBD ingerível está atualmente a operar — e aplica-se a óleos, cápsulas, e comestíveis de uma forma que não se aplica a produtos não vendidos para consumo.</p>
+
+        <h3>Onde Estão Atualmente as Avaliações</h3>
+        <p>A EFSA, a Autoridade Europeia para a Segurança dos Alimentos, avalia pedidos de novos alimentos em nome da Comissão. Em 2022 o seu painel concluiu que não podia completar as avaliações de segurança do CBD devido a lacunas de dados significativas, e as avaliações foram suspensas na expectativa de mais evidências. O <a href="https://www.efsa.europa.eu/en/plain-language-summary/statement-safety-cannabidiol-novel-food" target="_blank" rel="noopener noreferrer">resumo em linguagem simples dessa declaração da EFSA</a> expõe o raciocínio, e a sua <a href="https://www.efsa.europa.eu/en/topics/topic/novel-food" target="_blank" rel="noopener noreferrer">página temática de novos alimentos</a> acompanha a posição atual.</p>
+        <p>A consequência prática é um longo padrão de espera: um grande número de pedidos submetidos, avaliações pausadas, e aplicação deixada em grande parte aos estados-membros individuais entretanto. É por isso que a realidade legal para os comestíveis CBD difere tanto de um país para outro.</p>
+
+        <h3>O que Isto Significa na Prática</h3>
+        <ul>
+          <li><strong>A aplicação é nacional, não uniforme.</strong> Um produto vendido sem dificuldade num estado-membro pode ser tratado como um novo alimento não autorizado noutro. Verifique o seu próprio mercado em vez de assumir consistência em toda a UE.</li>
+          <li><strong>O formato do produto muda a análise.</strong> As regras de novos alimentos aplicam-se a alimentos. Produtos não apresentados para consumo enquadram-se em regras diferentes — uma razão pela qual o lado das flores e resinas do mercado se desenvolveu num percurso regulatório separado dos óleos e comestíveis.</li>
+          <li><strong>As alegações são um problema legal separado.</strong> As alegações de saúde em alimentos são regidas pelo seu próprio regime e não são algo que um COA possa suportar. Descrever o que um produto é permanece seguro; descrever o que faz geralmente a um corpo geralmente não é.</li>
+        </ul>
+
+        <h3>Como Reduzir a Sua Exposição</h3>
+        <p>Três coisas estão sob o seu controlo independentemente de como a posição regulatória se desenvolve.</p>
+        <p><strong>Mantenha documentação com o stock.</strong> Certificados de análise ao nível do lote são a base de evidência para qualquer conversa com um inspetor. O nosso guia para <a href="/blog/how-to-read-cbd-coa-lab-report">ler um COA</a> cobre o que um completo contém, e o nosso <a href="/quality-and-testing">processo de testes</a> explica o que é enviado com cada lote.</p>
+        <p><strong>Seja conservador com as alegações.</strong> A tentação comercial é dizer mais do que a evidência suporta. Texto de produto descritivo e factual é tanto mais seguro como, num mercado sobrecarregado de exageros, mais credível.</p>
+        <p><strong>Conheça a regra de THC do seu próprio mercado.</strong> Alguns mercados definem um limiar percentual; outros exigem que nenhum THC seja detetável no produto acabado. Se vende no segundo tipo, um produto conforme a 0,2% não se qualificará ali — razão pela qual a nossa <a href="/thc-free-cbd-wholesale">gama 0% THC</a> existe como linha distinta em vez de um ângulo de marketing.</p>
+
+        <h3>O que Observar</h3>
+        <p>A posição é genuinamente instável e vale a pena reverificar em vez de assumir. A página de novos alimentos da EFSA é a fonte primária para o estado de avaliação; as autoridades nacionais de segurança alimentar publicam as suas próprias posições de aplicação, que na prática importam mais no dia a dia. O nosso <a href="/legal-cannabis-europe">panorama por país</a> e <a href="/blog/is-cbd-legal-in-europe-country-guide">guia legal</a> resumem o panorama, mas nenhum substitui a verificação da sua própria jurisdição.</p>
+        <p>Este artigo é informação geral para retalhistas, não aconselhamento jurídico. Se está a tomar decisões de stock com dinheiro real por trás, obtenha aconselhamento específico para o seu mercado.</p>
+      `,
+    },
+  },
 };
 
 export function getBlogTranslation(slug: string, locale: Locale): BlogTranslation | undefined {
