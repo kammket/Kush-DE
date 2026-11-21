@@ -1,3 +1,10 @@
+import { buildCatalogPriceMap, lookupPrice } from "../../src/data/catalogPrices.ts";
+import { computeTotals, MIN_ORDER } from "../../src/data/pricing.ts";
+
+// Same catalogue and pricing rules the checkout uses. Orders are re-priced from
+// these, so an edited or out-of-date browser price can never reach an invoice.
+const CATALOG = buildCatalogPriceMap();
+
 async function sendEmail(apiKey, { from, to, subject, html, replyTo }) {
   const payload = { from, to: Array.isArray(to) ? to : [to], subject, html };
   if (replyTo) payload.reply_to = replyTo;
@@ -131,7 +138,7 @@ export async function onRequestPost(context) {
 
     } else {
       // ORDER
-      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, shippingCost, total, firstTimeGift, discountPercent, discountAmount, discountLabel } = body;
+      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, total, firstTimeGift, promoCode } = body;
 
       if (!firstName || !lastName || !email || !address || !city || !postal || !country) {
         return new Response(JSON.stringify({ error: "Missing required fields" }), {
@@ -146,39 +153,58 @@ export async function onRequestPost(context) {
         ? body.orderRef
         : `GF-${Date.now().toString(36).toUpperCase()}`;
 
-      let itemsHtml = "";
-      if (Array.isArray(items)) {
-        itemsHtml = items.map((item) =>
-          `<tr>
-            <td style="padding:8px;border:1px solid #ddd;">${escapeHtml(item.name)}</td>
-            <td style="padding:8px;border:1px solid #ddd;">${escapeHtml(item.variant || "")}</td>
-            <td style="padding:8px;border:1px solid #ddd;text-align:center;">${Number(item.quantity)}</td>
-            <td style="padding:8px;border:1px solid #ddd;text-align:right;">€${Number(item.price).toFixed(2)}</td>
-            <td style="padding:8px;border:1px solid #ddd;text-align:right;">€${(Number(item.price) * Number(item.quantity)).toFixed(2)}</td>
-          </tr>`
-        ).join("");
-      }
-
-      // The discount row both emails show, so Subtotal − Discount + Shipping visibly
-      // adds up to Total. Older clients sent no label; fall back to the percentage.
-      const hasDiscount = Number(discountPercent) > 0 && Number(discountAmount) > 0;
-      const discountText = escapeHtml(String(discountLabel || `Discount (${Number(discountPercent)}%)`));
-      const discountRowHtml = (style) => hasDiscount
-        ? `<tr><td style="${style}">${discountText}</td><td style="${style}text-align:right;color:#15803d;">−€${Number(discountAmount).toFixed(2)}</td></tr>`
+      // Authoritative pricing: each line re-priced from the catalogue, totals
+      // recomputed with the checkout's own rules (volume tier vs promo code,
+      // €200 free-shipping threshold, zone rates).
+      const lines = (Array.isArray(items) ? items : []).map((i) => {
+        const quantity = Math.floor(Number(i.quantity));
+        const catalogPrice = i.slug ? lookupPrice(CATALOG, String(i.slug), String(i.variant || "")) : null;
+        return {
+          name: String(i.name || ""),
+          variant: String(i.variant || ""),
+          quantity: quantity > 0 ? quantity : 0,
+          price: catalogPrice ?? Number(i.price || 0),
+          known: catalogPrice !== null && quantity > 0,
+        };
+      });
+      const unmatched = lines.filter((l) => !l.known);
+      const subtotalCents = lines.reduce((sum, l) => sum + Math.round(l.price * l.quantity * 100), 0);
+      const totals = computeTotals(subtotalCents / 100, { promoCode, country: String(country) });
+      const shippingText = totals.shipping.free
+        ? "FREE"
+        : totals.shipping.cost !== null ? `€${totals.shipping.cost.toFixed(2)}` : "To be quoted (outside Europe)";
+      const discountText = totals.discount.source === "promo"
+        ? `Discount code ${totals.discount.code} (${totals.discount.percent}%)`
+        : `Volume discount (${totals.discount.percent}%)`;
+      const discountRowHtml = (style) => totals.discount.amount > 0
+        ? `<tr><td style="${style}">${escapeHtml(discountText)}</td><td style="${style}text-align:right;color:#15803d;">−€${totals.discount.amount.toFixed(2)}</td></tr>`
         : "";
+      const shownTotal = Number(total);
+      const screenDiffers = Number.isFinite(shownTotal) && Math.abs(Math.round(shownTotal * 100) - Math.round(totals.total * 100)) > 1;
 
-      // Totals arrive from the browser. Re-add them here and flag any order whose
-      // figures do not reconcile, so the team checks it before sending bank details.
-      const cents = (n) => Math.round(Number(n || 0) * 100);
-      const itemsCents = Array.isArray(items)
-        ? items.reduce((s, i) => s + Math.round(Number(i.price) * Number(i.quantity) * 100), 0)
-        : 0;
-      const expectedTotalCents = cents(subtotal) - (hasDiscount ? cents(discountAmount) : 0) + cents(shippingCost);
-      const totalsMismatch = Math.abs(itemsCents - cents(subtotal)) > 1 || Math.abs(expectedTotalCents - cents(total)) > 1;
+      const warnings = [
+        unmatched.length ? `${unmatched.length} line(s) could not be matched to the current catalogue (product or variant changed). The browser price was used for those lines — check them before sending payment details.` : "",
+        screenDiffers ? `The customer's checkout showed a total of €${shownTotal.toFixed(2)}; current catalogue prices give €${totals.total.toFixed(2)}. Both emails use the catalogue figure — confirm with the customer before they pay.` : "",
+        !totals.meetsMinimum ? `This order is below the €${MIN_ORDER} minimum.` : "",
+        totals.shipping.cost === null && !totals.shipping.free ? `Destination is outside the published shipping zones — quote shipping to the customer before they pay.` : "",
+      ].filter(Boolean);
+      const warningHtml = warnings.map((w) =>
+        `<p style="background:#fee2e2;border:2px solid #dc2626;border-radius:6px;padding:12px;font-weight:bold;color:#991b1b;">⚠ ${escapeHtml(w)}</p>`
+      ).join("");
+
+      const itemsHtml = lines.map((item) =>
+        `<tr>
+            <td style="padding:8px;border:1px solid #ddd;">${escapeHtml(item.name)}</td>
+            <td style="padding:8px;border:1px solid #ddd;">${escapeHtml(item.variant)}</td>
+            <td style="padding:8px;border:1px solid #ddd;text-align:center;">${item.quantity}</td>
+            <td style="padding:8px;border:1px solid #ddd;text-align:right;">€${item.price.toFixed(2)}</td>
+            <td style="padding:8px;border:1px solid #ddd;text-align:right;">€${(item.price * item.quantity).toFixed(2)}</td>
+          </tr>`
+      ).join("");
 
       // Email to owner — full order details
       const ownerHtml = `
-        ${totalsMismatch ? `<p style="background:#fee2e2;border:2px solid #dc2626;border-radius:6px;padding:12px;font-weight:bold;color:#991b1b;">⚠ The totals on this order do not add up (items €${(itemsCents / 100).toFixed(2)}, subtotal €${Number(subtotal).toFixed(2)}, total €${Number(total).toFixed(2)}). Check the prices before sending payment details.</p>` : ""}
+        ${warningHtml}
         <h2>New Order Received — ${escapeHtml(orderRef)}</h2>
         <h3>Customer Information</h3>
         <table style="border-collapse:collapse;width:100%;max-width:600px;">
@@ -207,10 +233,10 @@ export async function onRequestPost(context) {
 
         <h3>Order Totals</h3>
         <table style="border-collapse:collapse;width:100%;max-width:300px;">
-          <tr><td style="padding:6px 8px;">Subtotal</td><td style="padding:6px 8px;text-align:right;">€${Number(subtotal).toFixed(2)}</td></tr>
+          <tr><td style="padding:6px 8px;">Subtotal</td><td style="padding:6px 8px;text-align:right;">€${totals.subtotal.toFixed(2)}</td></tr>
           ${discountRowHtml("padding:6px 8px;")}
-          <tr><td style="padding:6px 8px;">Shipping</td><td style="padding:6px 8px;text-align:right;">${escapeHtml(String(shipping))}</td></tr>
-          <tr style="font-weight:bold;font-size:1.1em;"><td style="padding:6px 8px;border-top:2px solid #333;">Total</td><td style="padding:6px 8px;border-top:2px solid #333;text-align:right;">€${Number(total).toFixed(2)}</td></tr>
+          <tr><td style="padding:6px 8px;">Shipping</td><td style="padding:6px 8px;text-align:right;">${shippingText}</td></tr>
+          <tr style="font-weight:bold;font-size:1.1em;"><td style="padding:6px 8px;border-top:2px solid #333;">Total</td><td style="padding:6px 8px;border-top:2px solid #333;text-align:right;">€${totals.total.toFixed(2)}</td></tr>
         </table>
 
         ${notes ? `<h3>Order Notes</h3><p style="white-space:pre-wrap;">${escapeHtml(notes)}</p>` : ""}
@@ -241,19 +267,19 @@ export async function onRequestPost(context) {
                   <th style="padding:8px;border:1px solid #ddd;text-align:right;">Total</th>
                 </tr>
               </thead>
-              <tbody>${Array.isArray(items) ? items.map((item) =>
+              <tbody>${lines.map((item) =>
                 `<tr>
                   <td style="padding:8px;border:1px solid #ddd;">${escapeHtml(item.name)}${item.variant ? " — " + escapeHtml(item.variant) : ""}</td>
-                  <td style="padding:8px;border:1px solid #ddd;text-align:center;">${Number(item.quantity)}</td>
-                  <td style="padding:8px;border:1px solid #ddd;text-align:right;">€${(Number(item.price) * Number(item.quantity)).toFixed(2)}</td>
+                  <td style="padding:8px;border:1px solid #ddd;text-align:center;">${item.quantity}</td>
+                  <td style="padding:8px;border:1px solid #ddd;text-align:right;">€${(item.price * item.quantity).toFixed(2)}</td>
                 </tr>`
-              ).join("") : ""}</tbody>
+              ).join("")}</tbody>
             </table>
             <table style="width:100%;max-width:300px;margin:12px 0 0 auto;">
-              <tr><td style="padding:4px 8px;color:#555;">Subtotal</td><td style="padding:4px 8px;text-align:right;color:#555;">€${Number(subtotal).toFixed(2)}</td></tr>
+              <tr><td style="padding:4px 8px;color:#555;">Subtotal</td><td style="padding:4px 8px;text-align:right;color:#555;">€${totals.subtotal.toFixed(2)}</td></tr>
               ${discountRowHtml("padding:4px 8px;color:#555;")}
-              <tr><td style="padding:4px 8px;color:#555;">Shipping</td><td style="padding:4px 8px;text-align:right;color:#555;">${escapeHtml(String(shipping))}</td></tr>
-              <tr style="font-weight:bold;"><td style="padding:4px 8px;border-top:2px solid #333;">Total</td><td style="padding:4px 8px;border-top:2px solid #333;text-align:right;">€${Number(total).toFixed(2)}</td></tr>
+              <tr><td style="padding:4px 8px;color:#555;">Shipping</td><td style="padding:4px 8px;text-align:right;color:#555;">${shippingText}</td></tr>
+              <tr style="font-weight:bold;"><td style="padding:4px 8px;border-top:2px solid #333;">Total</td><td style="padding:4px 8px;border-top:2px solid #333;text-align:right;">€${totals.total.toFixed(2)}</td></tr>
             </table>
 
             <h3 style="color:#333;margin-top:24px;">Payment Instructions</h3>
@@ -289,7 +315,7 @@ export async function onRequestPost(context) {
         sendEmail(RESEND_API_KEY, {
           from: FROM_EMAIL,
           to: OWNER_EMAIL,
-          subject: `[New Order] ${orderRef} — ${firstName} ${lastName} — €${Number(total).toFixed(2)}`,
+          subject: `[New Order] ${orderRef} — ${firstName} ${lastName} — €${totals.total.toFixed(2)}`,
           html: ownerHtml,
           replyTo: email,
         }),

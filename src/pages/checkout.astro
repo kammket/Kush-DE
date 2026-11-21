@@ -1,15 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import { getCountryOptions } from '../data/countries';
+import { getGroupedCountryOptions } from '../data/countries';
 
-const countryOptions = getCountryOptions('en');
+const countryGroups = getGroupedCountryOptions('en');
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
   { name: "Cart", url: "/cart" },
   { name: "Checkout" },
 ];
+import { buildCatalogPriceMap } from '../data/catalogPrices';
+const catalogPrices = buildCatalogPriceMap();
 ---
 
 <BaseLayout
@@ -24,6 +26,8 @@ const breadcrumbs = [
   <section class="py-6 md:py-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">Checkout</h1>
+      <script type="application/json" id="catalog-prices" set:html={JSON.stringify(catalogPrices)} />
+      <p id="cart-sync-note" class="hidden mb-6 p-3 rounded-lg bg-blue-50 border border-blue-200 text-sm text-blue-800" data-repriced="Prices in your cart have been updated to our current prices." data-removed="Items that are no longer available were removed from your cart."></p>
 
       <!-- Empty redirect -->
       <div id="checkout-empty" class="hidden text-center py-16">
@@ -91,9 +95,12 @@ const breadcrumbs = [
                     <div>
                       <label for="country" class="block text-sm font-medium text-gray-700 mb-1">Country *</label>
                       <select id="country" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white">
-                        {countryOptions.map(c => (
-                          <option value={c.code} selected={c.code === 'FR'}>{c.name}</option>
-                        ))}
+                        <optgroup label="Europe">
+                          {countryGroups.europe.map(c => <option value={c.code} selected={c.code === 'FR'}>{c.name}</option>)}
+                        </optgroup>
+                        <optgroup label="Rest of the world — shipping quoted">
+                          {countryGroups.rest.map(c => <option value={c.code}>{c.name}</option>)}
+                        </optgroup>
                       </select>
                     </div>
                   </div>
@@ -313,7 +320,7 @@ const breadcrumbs = [
 </BaseLayout>
 
 <script>
-  import { getCart, getCartTotal, clearCart, getPromoCode } from '../scripts/cart';
+  import { getCart, getCartTotal, clearCart, getPromoCode, syncCartWithCatalog } from '../scripts/cart';
   import { computeTotals, type OrderTotals } from '../data/pricing';
 
   const selectedCountry = () => (document.getElementById('country') as HTMLSelectElement | null)?.value || 'FR';
@@ -350,7 +357,17 @@ const breadcrumbs = [
     return t;
   }
 
+  /** Re-price the stored cart from today's catalogue and tell the customer if anything changed. */
+  function syncPrices() {
+    const { repriced, removed } = syncCartWithCatalog();
+    const note = document.getElementById('cart-sync-note');
+    if (!note || (!repriced && !removed)) return;
+    note.textContent = [repriced ? note.dataset.repriced : '', removed ? note.dataset.removed : ''].filter(Boolean).join(' ');
+    note.classList.remove('hidden');
+  }
+
   function initCheckout() {
+    syncPrices();
     const cart = getCart();
     const emptyEl = document.getElementById('checkout-empty');
     const formWrapper = document.getElementById('checkout-form-wrapper');
@@ -437,7 +454,8 @@ const breadcrumbs = [
         postal: (document.getElementById('postal') as HTMLInputElement)?.value,
         country: (document.getElementById('country') as HTMLSelectElement)?.value,
         notes: (document.getElementById('notes') as HTMLTextAreaElement)?.value,
-        items: cart.map(item => ({ name: item.name, variant: item.variantLabel, quantity: item.quantity, price: item.price })),
+        items: getCart().map(item => ({ slug: item.slug, name: item.name, variant: item.variantLabel, quantity: item.quantity, price: item.price })),
+        promoCode: getPromoCode(),
         subtotal,
         discountPercent: discount.percent,
         discountAmount: discount.amount,

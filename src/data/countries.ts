@@ -1,3 +1,4 @@
+import { SHIPPING_ZONES } from './pricing';
 // All ISO 3166-1 alpha-2 country codes. Names are localized at build time
 // via Intl.DisplayNames, so no per-language translation maps are needed.
 export const countryCodes = [
@@ -34,4 +35,18 @@ export function getCountryOptions(locale: string): CountryOption[] {
   return countryCodes
     .map((code) => ({ code, name: displayNames.of(code) ?? code }))
     .sort((a, b) => collator.compare(a.name, b.name));
+}
+
+/**
+ * Country options split into the destinations we have a published shipping rate
+ * for (Europe) and everywhere else, where shipping is quoted by the team. Shown
+ * as two <optgroup>s so customers see up front which side they are on.
+ */
+export function getGroupedCountryOptions(locale: string): { europe: CountryOption[]; rest: CountryOption[] } {
+  const zoned = new Set(SHIPPING_ZONES.flatMap((z) => z.countries));
+  const all = getCountryOptions(locale);
+  return {
+    europe: all.filter((c) => zoned.has(c.code)),
+    rest: all.filter((c) => !zoned.has(c.code)),
+  };
 }

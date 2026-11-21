@@ -6,6 +6,8 @@ const breadcrumbs = [
   { name: "Home", url: "/" },
   { name: "Shopping Cart" },
 ];
+import { buildCatalogPriceMap } from '../data/catalogPrices';
+const catalogPrices = buildCatalogPriceMap();
 ---
 
 <BaseLayout
@@ -20,6 +22,8 @@ const breadcrumbs = [
   <section class="py-6 md:py-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">Shopping Cart</h1>
+      <script type="application/json" id="catalog-prices" set:html={JSON.stringify(catalogPrices)} />
+      <p id="cart-sync-note" class="hidden mb-6 p-3 rounded-lg bg-blue-50 border border-blue-200 text-sm text-blue-800" data-repriced="Prices in your cart have been updated to our current prices." data-removed="Items that are no longer available were removed from your cart."></p>
 
       <!-- Empty Cart -->
       <div id="cart-empty" class="hidden text-center py-16">
@@ -133,7 +137,7 @@ const breadcrumbs = [
 </BaseLayout>
 
 <script>
-  import { getCart, removeFromCart, updateQuantity, getCartTotal, getPromoCode, setPromoCode, clearPromoCode } from '../scripts/cart';
+  import { getCart, removeFromCart, updateQuantity, getCartTotal, getPromoCode, setPromoCode, clearPromoCode, syncCartWithCatalog } from '../scripts/cart';
   import { discountTiers, getTier, getNextTierProgress, topTierPercent } from '../data/discounts';
   import { computeTotals, promoPercent, FREE_SHIPPING_THRESHOLD } from '../data/pricing';
 
@@ -353,7 +357,17 @@ const breadcrumbs = [
     discountMsg.textContent = `✓ Code ${code} applied — ${promoPercent(code)}% off!`;
   }
 
+  /** Re-price the stored cart from today's catalogue and tell the customer if anything changed. */
+  function syncPrices() {
+    const { repriced, removed } = syncCartWithCatalog();
+    const note = document.getElementById('cart-sync-note');
+    if (!note || (!repriced && !removed)) return;
+    note.textContent = [repriced ? note.dataset.repriced : '', removed ? note.dataset.removed : ''].filter(Boolean).join(' ');
+    note.classList.remove('hidden');
+  }
+
   function initCartPage() {
+    syncPrices();
     const applyBtn = document.getElementById('apply-discount');
     const codeInput = document.getElementById('discount-code') as HTMLInputElement | null;
     const discountMsg = document.getElementById('discount-msg');

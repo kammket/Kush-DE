@@ -63,6 +63,35 @@ export function getCartCount(): number {
   return getCart().reduce((sum, c) => sum + c.quantity, 0);
 }
 
+/**
+ * Re-prices the stored cart against the current catalogue (embedded in the page
+ * as JSON with id="catalog-prices"). Lines whose product or variant no longer
+ * exists are removed. Returns what changed so the page can tell the customer.
+ */
+export function syncCartWithCatalog(): { repriced: number; removed: number } {
+  let map: Record<string, { name: string; prices: Record<string, number> }>;
+  try {
+    map = JSON.parse(document.getElementById('catalog-prices')?.textContent || '');
+  } catch {
+    return { repriced: 0, removed: 0 }; // no map on this page — leave the cart alone
+  }
+  let repriced = 0;
+  let removed = 0;
+  let renamed = false;
+  const next = getCart().filter((item) => {
+    const entry = map[item.slug];
+    const price = entry?.prices[item.variantLabel];
+    if (typeof price !== 'number') { removed++; return false; }
+    if (Math.abs(price - item.price) > 0.001) { item.price = price; repriced++; }
+    if (entry.name !== item.name) { item.name = entry.name; renamed = true; }
+    return true;
+  });
+  if (repriced || removed || renamed) {
+    saveCart(next); // broadcasts, so the header count follows any removal
+  }
+  return { repriced, removed };
+}
+
 /** Sum of line items, rounded to cents so every page shows the same figure. */
 export function getCartTotal(): number {
   const raw = getCart().reduce((sum, c) => sum + c.price * c.quantity, 0);

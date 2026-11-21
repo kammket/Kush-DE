@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { supportedLocales, type Locale } from '../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../i18n/utils';
-import { getCountryOptions } from '../../data/countries';
+import { getGroupedCountryOptions } from '../../data/countries';
 
 export function getStaticPaths() {
   return supportedLocales.map(lang => ({ params: { lang }, props: { lang } }));
@@ -29,6 +29,29 @@ const breadcrumbs = [
   { name: t(locale, 'nav.cart'), url: lp('/cart') },
   { name: tr.h1 },
 ];
+import { buildCatalogPriceMap } from '../../data/catalogPrices';
+const catalogPrices = buildCatalogPriceMap();
+const syncMsgs: Record<string, { repriced: string; removed: string }> = {
+  es: { repriced: 'Hemos actualizado los precios de su carrito a los precios actuales.', removed: 'Se han eliminado del carrito los artículos que ya no están disponibles.' },
+  fr: { repriced: 'Les prix de votre panier ont été mis à jour avec nos tarifs actuels.', removed: 'Les articles qui ne sont plus disponibles ont été retirés de votre panier.' },
+  de: { repriced: 'Die Preise in Ihrem Warenkorb wurden auf unsere aktuellen Preise aktualisiert.', removed: 'Nicht mehr verfügbare Artikel wurden aus Ihrem Warenkorb entfernt.' },
+  nl: { repriced: 'De prijzen in uw winkelwagen zijn bijgewerkt naar onze huidige prijzen.', removed: 'Artikelen die niet meer beschikbaar zijn, zijn uit uw winkelwagen verwijderd.' },
+  it: { repriced: 'I prezzi nel carrello sono stati aggiornati ai prezzi attuali.', removed: 'Gli articoli non più disponibili sono stati rimossi dal carrello.' },
+  fi: { repriced: 'Ostoskorisi hinnat on päivitetty nykyisiin hintoihin.', removed: 'Tuotteet, jotka eivät ole enää saatavilla, on poistettu ostoskorista.' },
+  pt: { repriced: 'Os preços do seu carrinho foram atualizados para os preços atuais.', removed: 'Os artigos que já não estão disponíveis foram removidos do carrinho.' },
+};
+const syncMsg = syncMsgs[locale] ?? syncMsgs.fr;
+const countryGroups = getGroupedCountryOptions(locale);
+const groupLabels: Record<string, { europe: string; rest: string }> = {
+  es: { europe: 'Europa', rest: 'Resto del mundo — envío bajo presupuesto' },
+  fr: { europe: 'Europe', rest: 'Reste du monde — frais de port sur devis' },
+  de: { europe: 'Europa', rest: 'Übrige Welt — Versand auf Anfrage' },
+  nl: { europe: 'Europa', rest: 'Rest van de wereld — verzending op offerte' },
+  it: { europe: 'Europa', rest: 'Resto del mondo — spedizione su preventivo' },
+  fi: { europe: 'Eurooppa', rest: 'Muu maailma – toimitus tarjouksen mukaan' },
+  pt: { europe: 'Europa', rest: 'Resto do mundo — envio sob orçamento' },
+};
+const groupLabel = groupLabels[locale] ?? groupLabels.fr;
 ---
 
 <BaseLayout title={`${tr.h1} | Greens Farmhouse`} description={tr.emptyDesc} locale={locale} noindex={true}>
@@ -37,6 +60,8 @@ const breadcrumbs = [
   <section class="py-6 md:py-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">{tr.h1}</h1>
+      <script type="application/json" id="catalog-prices" set:html={JSON.stringify(catalogPrices)} />
+      <p id="cart-sync-note" class="hidden mb-6 p-3 rounded-lg bg-blue-50 border border-blue-200 text-sm text-blue-800" data-repriced={syncMsg.repriced} data-removed={syncMsg.removed}></p>
 
       <!-- Empty -->
       <div id="checkout-empty" class="hidden text-center py-16">
@@ -73,7 +98,8 @@ const breadcrumbs = [
                     <div><label for="postal" class="block text-sm font-medium text-gray-700 mb-1">{tr.postal}</label><input type="text" id="postal" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" /></div>
                     <div><label for="country" class="block text-sm font-medium text-gray-700 mb-1">{tr.country}</label>
                       <select id="country" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white">
-                        {getCountryOptions(locale).map(c => <option value={c.code} selected={c.code === 'FR'}>{c.name}</option>)}
+                        <optgroup label={groupLabel.europe}>{countryGroups.europe.map(c => <option value={c.code} selected={c.code === 'FR'}>{c.name}</option>)}</optgroup>
+                        <optgroup label={groupLabel.rest}>{countryGroups.rest.map(c => <option value={c.code}>{c.name}</option>)}</optgroup>
                       </select>
                     </div>
                   </div>
@@ -266,7 +292,7 @@ const breadcrumbs = [
 </BaseLayout>
 
 <script>
-  import { getCart, getCartTotal, clearCart, getPromoCode } from '../../scripts/cart';
+  import { getCart, getCartTotal, clearCart, getPromoCode, syncCartWithCatalog } from '../../scripts/cart';
   import { computeTotals, type OrderTotals } from '../../data/pricing';
 
   const strings = () => (document.getElementById('co-shipping') as HTMLElement | null)?.dataset ?? {};
@@ -308,7 +334,17 @@ const breadcrumbs = [
     return t;
   }
 
+  /** Re-price the stored cart from today's catalogue and tell the customer if anything changed. */
+  function syncPrices() {
+    const { repriced, removed } = syncCartWithCatalog();
+    const note = document.getElementById('cart-sync-note');
+    if (!note || (!repriced && !removed)) return;
+    note.textContent = [repriced ? note.dataset.repriced : '', removed ? note.dataset.removed : ''].filter(Boolean).join(' ');
+    note.classList.remove('hidden');
+  }
+
   function initCheckout() {
+    syncPrices();
     const cart = getCart();
     const emptyEl = document.getElementById('checkout-empty');
     const formWrapper = document.getElementById('checkout-form-wrapper');
@@ -396,7 +432,8 @@ const breadcrumbs = [
         postal: (document.getElementById('postal') as HTMLInputElement)?.value,
         country: (document.getElementById('country') as HTMLSelectElement)?.value,
         notes: (document.getElementById('notes') as HTMLTextAreaElement)?.value,
-        items: cart.map(item => ({ name: item.name, variant: item.variantLabel, quantity: item.quantity, price: item.price })),
+        items: getCart().map(item => ({ slug: item.slug, name: item.name, variant: item.variantLabel, quantity: item.quantity, price: item.price })),
+        promoCode: getPromoCode(),
         subtotal,
         discountPercent: discount.percent,
         discountAmount: discount.amount,

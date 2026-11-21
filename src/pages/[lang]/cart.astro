@@ -27,6 +27,18 @@ const breadcrumbs = [
   { name: t(locale, 'nav.home'), url: lp('/') },
   { name: tr.h1 },
 ];
+import { buildCatalogPriceMap } from '../../data/catalogPrices';
+const catalogPrices = buildCatalogPriceMap();
+const syncMsgs: Record<string, { repriced: string; removed: string }> = {
+  es: { repriced: 'Hemos actualizado los precios de su carrito a los precios actuales.', removed: 'Se han eliminado del carrito los artículos que ya no están disponibles.' },
+  fr: { repriced: 'Les prix de votre panier ont été mis à jour avec nos tarifs actuels.', removed: 'Les articles qui ne sont plus disponibles ont été retirés de votre panier.' },
+  de: { repriced: 'Die Preise in Ihrem Warenkorb wurden auf unsere aktuellen Preise aktualisiert.', removed: 'Nicht mehr verfügbare Artikel wurden aus Ihrem Warenkorb entfernt.' },
+  nl: { repriced: 'De prijzen in uw winkelwagen zijn bijgewerkt naar onze huidige prijzen.', removed: 'Artikelen die niet meer beschikbaar zijn, zijn uit uw winkelwagen verwijderd.' },
+  it: { repriced: 'I prezzi nel carrello sono stati aggiornati ai prezzi attuali.', removed: 'Gli articoli non più disponibili sono stati rimossi dal carrello.' },
+  fi: { repriced: 'Ostoskorisi hinnat on päivitetty nykyisiin hintoihin.', removed: 'Tuotteet, jotka eivät ole enää saatavilla, on poistettu ostoskorista.' },
+  pt: { repriced: 'Os preços do seu carrinho foram atualizados para os preços atuais.', removed: 'Os artigos que já não estão disponíveis foram removidos do carrinho.' },
+};
+const syncMsg = syncMsgs[locale] ?? syncMsgs.fr;
 ---
 
 <BaseLayout title={`${tr.h1} | Greens Farmhouse`} description={tr.emptyDesc} locale={locale} noindex={true}>
@@ -53,6 +65,8 @@ const breadcrumbs = [
   <section class="py-6 md:py-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">{tr.h1}</h1>
+      <script type="application/json" id="catalog-prices" set:html={JSON.stringify(catalogPrices)} />
+      <p id="cart-sync-note" class="hidden mb-6 p-3 rounded-lg bg-blue-50 border border-blue-200 text-sm text-blue-800" data-repriced={syncMsg.repriced} data-removed={syncMsg.removed}></p>
 
       <!-- Empty Cart -->
       <div id="cart-empty" class="hidden text-center py-16">
@@ -133,7 +147,7 @@ const breadcrumbs = [
 </BaseLayout>
 
 <script>
-  import { getCart, removeFromCart, updateQuantity, getCartTotal, getPromoCode, setPromoCode, clearPromoCode } from '../../scripts/cart';
+  import { getCart, removeFromCart, updateQuantity, getCartTotal, getPromoCode, setPromoCode, clearPromoCode, syncCartWithCatalog } from '../../scripts/cart';
   import { discountTiers, getTier, getNextTierProgress, topTierPercent } from '../../data/discounts';
   import { computeTotals, promoPercent } from '../../data/pricing';
 
@@ -317,7 +331,17 @@ const breadcrumbs = [
     }
   }
 
+  /** Re-price the stored cart from today's catalogue and tell the customer if anything changed. */
+  function syncPrices() {
+    const { repriced, removed } = syncCartWithCatalog();
+    const note = document.getElementById('cart-sync-note');
+    if (!note || (!repriced && !removed)) return;
+    note.textContent = [repriced ? note.dataset.repriced : '', removed ? note.dataset.removed : ''].filter(Boolean).join(' ');
+    note.classList.remove('hidden');
+  }
+
   function initCartPage() {
+    syncPrices();
     const applyBtn = document.getElementById('apply-discount');
     const codeInput = document.getElementById('discount-code') as HTMLInputElement | null;
     const discountMsg = document.getElementById('discount-msg');
