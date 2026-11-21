@@ -5,6 +5,7 @@ import QuickAnswer from '../../components/QuickAnswer.astro';
 import ContentByline from '../../components/ContentByline.astro';
 import { blogPosts } from '../../data/blog';
 import { getBlogTranslation } from '../../data/translations/blogContent';
+import { getBlogSeoTitle } from '../../data/translations/blogSeoTitles';
 import { supportedLocales } from '../../i18n/config';
 
 export function getStaticPaths() {
@@ -40,6 +41,8 @@ const jsonLd = {
   "datePublished": post.date,
   "dateModified": post.date,
   "url": `https://greensfarmhouse.com/blog/${post.slug}`,
+  "inLanguage": "en",
+  "image": "https://greensfarmhouse.com/images/og-default.jpg",
   "author": {
     "@type": "Organization",
     "name": "Greens Farmhouse",
@@ -51,7 +54,7 @@ const jsonLd = {
     "url": "https://greensfarmhouse.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://greensfarmhouse.com/logo.png"
+      "url": "https://greensfarmhouse.com/images/logo.png"
     }
   },
   "mainEntityOfPage": {
@@ -62,7 +65,7 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title={post.title}
+  title={getBlogSeoTitle(post.slug, 'en') ?? post.title}
   description={post.excerpt}
   jsonLd={jsonLd}
   noHreflang={!fullyTranslated}

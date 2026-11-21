@@ -6,6 +6,7 @@ import ContentByline from '../../../components/ContentByline.astro';
 import { blogPosts, getBlogPostBySlug } from '../../../data/blog';
 import { getBlogTranslation } from '../../../data/translations/blogContent';
 import { seoPages, seoTranslations } from '../../../data/translations/seo-pages';
+import { getBlogSeoTitle } from '../../../data/translations/blogSeoTitles';
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 
@@ -169,18 +170,27 @@ const jsonLd = {
   "description": metaExcerpt,
   "url": `https://greensfarmhouse.com${lp(`/blog/${post.slug}`)}`,
   "inLanguage": locale,
+  "image": "https://greensfarmhouse.com/images/og-default.jpg",
   "datePublished": post.date,
   "dateModified": post.date,
-  "author": { "@type": "Organization", "name": "Greens Farmhouse" },
-  "publisher": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" }
+  "author": { "@type": "Organization", "name": "Greens Farmhouse", "url": "https://greensfarmhouse.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Greens Farmhouse",
+    "url": "https://greensfarmhouse.com",
+    "logo": { "@type": "ImageObject", "url": "https://greensfarmhouse.com/images/logo.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://greensfarmhouse.com${lp(`/blog/${post.slug}`)}/` }
 };
+// Only translated posts get a short search title; untranslated ones fall back to English copy.
+const searchTitle = (hasTranslation && getBlogSeoTitle(post.slug, locale)) || metaTitle;
 ---
 
 {/* Once a post is fully translated in blogContent.ts, it gets a self-referencing
     canonical and the full hreflang cluster. Posts not yet translated keep the
     honest fallback: canonical to the English original, hreflang suppressed. */}
 <BaseLayout
-  title={metaTitle}
+  title={searchTitle}
   description={metaExcerpt}
   locale={locale}
   jsonLd={jsonLd}

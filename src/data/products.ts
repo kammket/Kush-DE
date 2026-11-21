@@ -130,7 +130,7 @@ export const products: Product[] = [
   },
   {
     id: "purple-haze-greenhouse",
-    name: "Petites Têtes Purple Haze Greenhouse",
+    name: "Purple Haze Greenhouse Small Buds",
     slug: "purple-haze-greenhouse",
     category: "Wholesale CBD Flowers",
     categorySlug: "cbd-flowers",

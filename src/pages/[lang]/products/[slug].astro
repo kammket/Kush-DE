@@ -105,7 +105,14 @@ const productJsonLd = {
 
 // The translated category keyword stays in the title — it is the money keyword for
 // each market and what differentiates the 8 locales from one another.
-const pageTitle = `${product.name} | ${catT?.name || product.category}`;
+// Long product names plus the category label overflow the ~60-char title Google
+// shows; fall back to a one-word "wholesale" so the buying-intent term survives.
+const wholesaleWord: Record<string, string> = {
+  de: 'Großhandel', es: 'Mayorista', fr: 'Grossiste', it: 'Ingrosso',
+  nl: 'Groothandel', fi: 'Tukkumyynti', pt: 'Grossista',
+};
+const fullTitle = `${product.name} | ${catT?.name || product.category}`;
+const pageTitle = fullTitle.length <= 60 ? fullTitle : `${product.name} | ${wholesaleWord[locale] ?? 'Wholesale'}`;
 
 const breadcrumbs = [
   { name: t(locale, 'nav.home'), url: lp('/') },
