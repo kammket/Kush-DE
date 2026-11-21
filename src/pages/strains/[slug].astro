@@ -17,7 +17,7 @@ const product = getProductBySlug(strain.productSlug)!;
 const relatedStrains = strain.related.map(r => getStrainBySlug(r)!).filter(Boolean);
 const relatedProducts = relatedStrains.map(r => getProductBySlug(r.productSlug)!).filter(Boolean);
 
-const waUrl = `https://wa.me/420722562271?text=${encodeURIComponent(`Hello! I'm interested in ${strain.name} — can you tell me about wholesale pricing and samples?`)}`;
+const waUrl = `https://wa.me/420720315849?text=${encodeURIComponent(`Hello! I'm interested in ${strain.name} — can you tell me about wholesale pricing and samples?`)}`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -49,7 +49,7 @@ const breadcrumbs = [
 ---
 
 <BaseLayout
-  title={`${strain.name} | Strain Guide, Terpenes & Wholesale — Greens Farmhouse`}
+  title={`${strain.name} Strain Guide: Terpenes & Wholesale`}
   description={`${strain.name} strain guide: lineage, aroma, terpene profile and ${strain.cultivation.toLowerCase()} cultivation. Buy lab-tested ${strain.name} at wholesale prices, shipped across Europe in 24h.`}
   canonicalURL={`https://greensfarmhouse.com/strains/${strain.slug}`}
   jsonLd={jsonLd}

@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { blogTranslations } from './src/data/translations/blogContent.ts';
+import trailingSlashLinks from './src/integrations/trailingSlashLinks.mjs';
 
 const NON_EN_LOCALES = ['es', 'fr', 'de', 'nl', 'it', 'fi', 'pt'];
 
@@ -99,6 +100,7 @@ export default defineConfig({
         },
       },
     }),
+    trailingSlashLinks({ site: 'https://greensfarmhouse.com' }),
   ],
   compressHTML: true,
   build: {

@@ -12,13 +12,13 @@ export const categoryTranslations: Record<Locale, CategoryTranslations> = {
     'cbd-flowers': {
       name: 'Wholesale CBD Flowers',
       description: 'Premium wholesale CBD flowers selected with the greatest care. Thanks to daily monitoring of our partner farms, we guarantee consistent quality that complies with French CBD legislation.',
-      metaTitle: 'Wholesale CBD Flowers | Premium Hemp Flowers | Greens Farmhouse',
+      metaTitle: 'Wholesale CBD Flowers & Hemp Buds | Greens Farmhouse',
       metaDescription: 'Buy premium CBD flowers wholesale. Greenhouse & indoor varieties including OG Kush, Gorilla Glue, Wedding Cake & more. Best prices for professionals.',
     },
     'cbd-resins': {
       name: 'Wholesale CBD Resins',
       description: 'If you\'re looking for the best CBD resins available today, you can trust Greens Farmhouse. We specialize in wholesale CBD resins and guarantee the best value on the market.',
-      metaTitle: 'Wholesale CBD Resins & Hash | Premium Quality | Greens Farmhouse',
+      metaTitle: 'Wholesale CBD Resins & Hash | Greens Farmhouse',
       metaDescription: 'Buy wholesale CBD resins and hash at the best prices. Afghan Hash, Ketama, Pollen CBD & more. Lab-tested, legal in EU.',
     },
     'cbd-oils': {
@@ -36,7 +36,7 @@ export const categoryTranslations: Record<Locale, CategoryTranslations> = {
     'thc-gummies': {
       name: 'Wholesale THC Gummies',
       description: 'Discover our exclusive THC candy collection for professionals. Each candy is carefully formulated with several levels of potency. All products comply with European legislation.',
-      metaTitle: 'Wholesale THC Gummies & Candies | Legal EU | Greens Farmhouse',
+      metaTitle: 'EU-Legal Wholesale THC Gummies & Candies | Greens Farmhouse',
       metaDescription: 'Legal THC gummies wholesale. Compliant with EU regulations. Multiple flavors. Professional wholesale pricing.',
     },
   },

@@ -1789,10 +1789,10 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
   },
   'avoid-mistakes-with-cbd-wholesaler': {
     fr: {
-      title: 'Erreurs à Éviter en Choisissant un Fournisseur Greens Farmhouse',
+      title: 'Erreurs à Éviter en Choisissant un Grossiste CBD',
       excerpt: "N'apprenez pas à vos dépens. Voici les erreurs les plus courantes — et coûteuses — que font les détaillants CBD en choisissant leur fournisseur en gros, et comment les éviter.",
       content: `
-        <h2>5 Erreurs Coûteuses en Choisissant un Fournisseur Greens Farmhouse</h2>
+        <h2>5 Erreurs Coûteuses en Choisissant un Grossiste CBD</h2>
         <p>Nous avons parlé avec des milliers de détaillants CBD à travers l'Europe, et les mêmes erreurs liées aux fournisseurs reviennent encore et encore. Évitez ces cinq pièges pour économiser de l'argent, protéger votre réputation, et construire une entreprise plus solide.</p>
 
         <h3>Erreur n°1 : Choisir Uniquement sur le Prix</h3>
@@ -1813,14 +1813,14 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
         <h3>Comment Bien Choisir</h3>
         <p>Après avoir évité ces erreurs, concentrez-vous sur la recherche d'un fournisseur qui est un véritable partenaire commercial. Recherchez des prix transparents, une qualité constante entre les commandes, un support réactif, et un historique de service aux détaillants européens. Lisez notre <a href="/blog/choose-right-cbd-flower-supplier">guide détaillé de sélection de fournisseur</a> pour les 7 critères clés à évaluer.</p>
 
-        <p>Prêt à travailler avec un Greens Farmhouse européen de confiance ? Parcourez notre <a href="/collections">catalogue de produits</a> ou <a href="/contact">contactez-nous</a> pour un devis personnalisé.</p>
+        <p>Prêt à travailler avec un grossiste CBD européen de confiance ? Parcourez notre <a href="/collections">catalogue de produits</a> ou <a href="/contact">contactez-nous</a> pour un devis personnalisé.</p>
       `,
     },
     de: {
-      title: 'Fehler, die Sie bei der Wahl eines Greens Farmhouse Vermeiden Sollten',
+      title: 'Fehler, die Sie bei der Wahl eines CBD-Großhändlers Vermeiden Sollten',
       excerpt: 'Lernen Sie nicht auf die harte Tour. Hier sind die häufigsten — und kostspieligsten — Fehler, die CBD-Händler bei der Auswahl ihres Großhandelslieferanten machen, und wie Sie sie vermeiden.',
       content: `
-        <h2>5 Kostspielige Fehler bei der Wahl eines Greens Farmhouse</h2>
+        <h2>5 Kostspielige Fehler bei der Wahl eines CBD-Großhändlers</h2>
         <p>Wir haben mit Tausenden von CBD-Händlern in ganz Europa gesprochen, und dieselben lieferantenbezogenen Fehler tauchen immer wieder auf. Vermeiden Sie diese fünf Fallstricke, um Geld zu sparen, Ihren Ruf zu schützen, und ein stärkeres Geschäft aufzubauen.</p>
 
         <h3>Fehler #1: Nur nach Preis Wählen</h3>
@@ -1841,14 +1841,14 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
         <h3>Wie Man Richtig Wählt</h3>
         <p>Nachdem Sie diese Fehler vermieden haben, konzentrieren Sie sich darauf, einen Lieferanten zu finden, der ein echter Geschäftspartner ist. Suchen Sie nach transparenten Preisen, konsistenter Qualität über Bestellungen hinweg, reaktionsschnellem Support, und einer Erfolgsbilanz bei der Bedienung europäischer Händler. Lesen Sie unseren detaillierten <a href="/blog/choose-right-cbd-flower-supplier">Leitfaden zur Lieferantenauswahl</a> für die 7 wichtigsten zu bewertenden Kriterien.</p>
 
-        <p>Bereit, mit einem vertrauenswürdigen europäischen Greens Farmhouse zusammenzuarbeiten? Durchsuchen Sie unseren <a href="/collections">Produktkatalog</a> oder <a href="/contact">kontaktieren Sie uns</a> für ein personalisiertes Angebot.</p>
+        <p>Bereit, mit einem vertrauenswürdigen europäischen CBD-Großhändler zusammenzuarbeiten? Durchsuchen Sie unseren <a href="/collections">Produktkatalog</a> oder <a href="/contact">kontaktieren Sie uns</a> für ein personalisiertes Angebot.</p>
       `,
     },
     es: {
-      title: 'Errores a Evitar al Elegir un Greens Farmhouse',
+      title: 'Errores a Evitar al Elegir un Mayorista CBD',
       excerpt: 'No aprendas por las malas. Estos son los errores más comunes — y costosos — que cometen los minoristas de CBD al seleccionar su proveedor mayorista, y cómo evitarlos.',
       content: `
-        <h2>5 Errores Costosos al Elegir un Greens Farmhouse</h2>
+        <h2>5 Errores Costosos al Elegir un Mayorista CBD</h2>
         <p>Hemos hablado con miles de minoristas de CBD en toda Europa, y los mismos errores relacionados con proveedores aparecen una y otra vez. Evita estas cinco trampas para ahorrar dinero, proteger tu reputación, y construir un negocio más sólido.</p>
 
         <h3>Error #1: Elegir Solo por Precio</h3>
@@ -1869,14 +1869,14 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
         <h3>Cómo Elegir Correctamente</h3>
         <p>Después de evitar estos errores, concéntrate en encontrar un proveedor que sea un verdadero socio comercial. Busca precios transparentes, calidad consistente entre pedidos, soporte receptivo, y un historial de servicio a minoristas europeos. Lee nuestra <a href="/blog/choose-right-cbd-flower-supplier">guía detallada de selección de proveedores</a> para los 7 criterios clave a evaluar.</p>
 
-        <p>¿Listo para trabajar con un Greens Farmhouse europeo de confianza? Explora nuestro <a href="/collections">catálogo de productos</a> o <a href="/contact">contáctanos</a> para un presupuesto personalizado.</p>
+        <p>¿Listo para trabajar con un mayorista CBD europeo de confianza? Explora nuestro <a href="/collections">catálogo de productos</a> o <a href="/contact">contáctanos</a> para un presupuesto personalizado.</p>
       `,
     },
     it: {
-      title: 'Errori da Evitare Nella Scelta di un Greens Farmhouse',
+      title: 'Errori da Evitare Nella Scelta di un Grossista CBD',
       excerpt: "Non imparare a tue spese. Ecco gli errori più comuni — e costosi — che i rivenditori di CBD commettono nella selezione del proprio fornitore all'ingrosso, e come evitarli.",
       content: `
-        <h2>5 Errori Costosi Nella Scelta di un Greens Farmhouse</h2>
+        <h2>5 Errori Costosi Nella Scelta di un Grossista CBD</h2>
         <p>Abbiamo parlato con migliaia di rivenditori di CBD in tutta Europa, e gli stessi errori legati ai fornitori si ripresentano continuamente. Evita queste cinque trappole per risparmiare denaro, proteggere la tua reputazione, e costruire un'attività più solida.</p>
 
         <h3>Errore #1: Scegliere Solo in Base al Prezzo</h3>
@@ -1897,14 +1897,14 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
         <h3>Come Scegliere Correttamente</h3>
         <p>Dopo aver evitato questi errori, concentrati sulla ricerca di un fornitore che sia un vero partner commerciale. Cerca prezzi trasparenti, qualità costante tra gli ordini, supporto reattivo, e una comprovata esperienza nel servire rivenditori europei. Leggi la nostra dettagliata <a href="/blog/choose-right-cbd-flower-supplier">guida alla selezione del fornitore</a> per i 7 criteri chiave da valutare.</p>
 
-        <p>Pronto a lavorare con un Greens Farmhouse europeo di fiducia? Sfoglia il nostro <a href="/collections">catalogo prodotti</a> o <a href="/contact">contattaci</a> per un preventivo personalizzato.</p>
+        <p>Pronto a lavorare con un grossista CBD europeo di fiducia? Sfoglia il nostro <a href="/collections">catalogo prodotti</a> o <a href="/contact">contattaci</a> per un preventivo personalizzato.</p>
       `,
     },
     nl: {
-      title: 'Fouten om te Vermijden bij het Kiezen van een Greens Farmhouse',
+      title: 'Fouten om te Vermijden bij het Kiezen van een CBD-Groothandel',
       excerpt: 'Leer niet op de harde manier. Dit zijn de meest voorkomende — en kostbare — fouten die CBD-retailers maken bij het selecteren van hun groothandelsleverancier, en hoe u ze vermijdt.',
       content: `
-        <h2>5 Kostbare Fouten bij het Kiezen van een Greens Farmhouse</h2>
+        <h2>5 Kostbare Fouten bij het Kiezen van een CBD-Groothandel</h2>
         <p>We hebben gesproken met duizenden CBD-retailers door heel Europa, en dezelfde leverancier-gerelateerde fouten komen steeds weer terug. Vermijd deze vijf valkuilen om geld te besparen, uw reputatie te beschermen, en een sterker bedrijf op te bouwen.</p>
 
         <h3>Fout #1: Alleen op Prijs Kiezen</h3>
@@ -1925,14 +1925,14 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
         <h3>Hoe Correct te Kiezen</h3>
         <p>Na het vermijden van deze fouten, richt u zich op het vinden van een leverancier die een echte zakenpartner is. Zoek naar transparante prijzen, consistente kwaliteit tussen bestellingen, responsieve ondersteuning, en een staat van dienst in het bedienen van Europese retailers. Lees onze gedetailleerde <a href="/blog/choose-right-cbd-flower-supplier">gids voor leveranciersselectie</a> voor de 7 belangrijkste te evalueren criteria.</p>
 
-        <p>Klaar om samen te werken met een vertrouwde Europese Greens Farmhouse? Blader door onze <a href="/collections">productcatalogus</a> of <a href="/contact">neem contact met ons op</a> voor een gepersonaliseerde offerte.</p>
+        <p>Klaar om samen te werken met een vertrouwde Europese CBD-groothandel? Blader door onze <a href="/collections">productcatalogus</a> of <a href="/contact">neem contact met ons op</a> voor een gepersonaliseerde offerte.</p>
       `,
     },
     fi: {
-      title: 'Vältettävät Virheet Greens Farmhousea Valittaessa',
+      title: 'Vältettävät Virheet CBD-tukkumyyjää Valittaessa',
       excerpt: 'Älä opi kantapään kautta. Tässä ovat yleisimmät — ja kalleimmat — virheet, joita CBD-jälleenmyyjät tekevät valitessaan tukkutoimittajaansa, ja kuinka välttää ne.',
       content: `
-        <h2>5 Kallista Virhettä Greens Farmhousea Valittaessa</h2>
+        <h2>5 Kallista Virhettä CBD-tukkumyyjää Valittaessa</h2>
         <p>Olemme puhuneet tuhansien CBD-jälleenmyyjien kanssa kautta Euroopan, ja samat toimittajiin liittyvät virheet toistuvat kerta toisensa jälkeen. Vältä nämä viisi sudenkuoppaa säästääksesi rahaa, suojataksesi mainettasi, ja rakentaaksesi vahvempaa liiketoimintaa.</p>
 
         <h3>Virhe #1: Valitseminen Vain Hinnan Perusteella</h3>
@@ -1953,14 +1953,14 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
         <h3>Kuinka Valita Oikein</h3>
         <p>Vältettyäsi nämä virheet, keskity löytämään toimittaja, joka on todellinen liikekumppani. Etsi läpinäkyvää hinnoittelua, johdonmukaista laatua tilausten välillä, reagoivaa tukea, ja näyttöä eurooppalaisten jälleenmyyjien palvelemisesta. Lue yksityiskohtainen <a href="/blog/choose-right-cbd-flower-supplier">toimittajan valintaoppaamme</a> 7 keskeistä arvioitavaa kriteeriä varten.</p>
 
-        <p>Valmis työskentelemään luotettavan eurooppalaisen Greens Farmhousen kanssa? Selaa <a href="/collections">tuoteluetteloamme</a> tai <a href="/contact">ota yhteyttä</a> saadaksesi henkilökohtaisen tarjouksen.</p>
+        <p>Valmis työskentelemään luotettavan eurooppalaisen CBD-tukkumyyjän kanssa? Selaa <a href="/collections">tuoteluetteloamme</a> tai <a href="/contact">ota yhteyttä</a> saadaksesi henkilökohtaisen tarjouksen.</p>
       `,
     },
     pt: {
-      title: 'Erros a Evitar ao Escolher um Greens Farmhouse',
+      title: 'Erros a Evitar ao Escolher um Grossista CBD',
       excerpt: 'Não aprenda da forma difícil. Aqui estão os erros mais comuns — e dispendiosos — que os retalhistas de CBD cometem ao selecionar o seu fornecedor por grosso, e como evitá-los.',
       content: `
-        <h2>5 Erros Dispendiosos ao Escolher um Greens Farmhouse</h2>
+        <h2>5 Erros Dispendiosos ao Escolher um Grossista CBD</h2>
         <p>Falámos com milhares de retalhistas de CBD em toda a Europa, e os mesmos erros relacionados com fornecedores surgem repetidamente. Evite estas cinco armadilhas para poupar dinheiro, proteger a sua reputação, e construir um negócio mais forte.</p>
 
         <h3>Erro #1: Escolher Apenas pelo Preço</h3>
@@ -1981,7 +1981,7 @@ export const blogTranslations: Partial<Record<string, Partial<Record<Locale, Blo
         <h3>Como Escolher Corretamente</h3>
         <p>Depois de evitar estes erros, concentre-se em encontrar um fornecedor que seja um verdadeiro parceiro de negócios. Procure preços transparentes, qualidade consistente entre encomendas, suporte responsivo, e um histórico de servir retalhistas europeus. Leia o nosso <a href="/blog/choose-right-cbd-flower-supplier">guia detalhado de seleção de fornecedores</a> para os 7 critérios chave a avaliar.</p>
 
-        <p>Pronto para trabalhar com um Greens Farmhouse europeu de confiança? Explore o nosso <a href="/collections">catálogo de produtos</a> ou <a href="/contact">contacte-nos</a> para um orçamento personalizado.</p>
+        <p>Pronto para trabalhar com um grossista CBD europeu de confiança? Explore o nosso <a href="/collections">catálogo de produtos</a> ou <a href="/contact">contacte-nos</a> para um orçamento personalizado.</p>
       `,
     },
   },

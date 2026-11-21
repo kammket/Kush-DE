@@ -7,7 +7,7 @@ import { getProductsByCategory } from '../data/products';
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
-  { name: "Greens Farmhouse Luxembourg" },
+  { name: "CBD Wholesaler Luxembourg" },
 ];
 
 const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
@@ -16,7 +16,7 @@ const resins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Greens Farmhouse Luxembourg — Premium Wholesale CBD Products",
+  "name": "CBD Wholesaler Luxembourg — Premium Wholesale CBD Products",
   "description": "Luxembourg's trusted CBD wholesale supplier. Premium CBD flowers, oils, resins at the best wholesale prices with next-day delivery.",
   "url": "https://greensfarmhouse.com/cbd-wholesaler-luxembourg",
   "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
@@ -45,7 +45,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-  title="Greens Farmhouse Luxembourg | Premium Wholesale CBD — Best Prices"
+  title="CBD Wholesaler Luxembourg | Premium Wholesale CBD Products"
   description="Luxembourg's premium CBD wholesale supplier. Buy CBD flowers, resins, oils in bulk at the best wholesale prices. Lab-tested, EU-compliant, next-day delivery."
   canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-luxembourg"
   jsonLd={jsonLd}
@@ -59,7 +59,7 @@ const faqItems = [
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="inline-block text-3xl mb-3">🇱🇺</span>
       <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
-        Greens Farmhouse Luxembourg — <span class="text-primary">Premium CBD at Wholesale Prices</span>
+        CBD Wholesaler Luxembourg — <span class="text-primary">Premium CBD at Wholesale Prices</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
         Greens Farmhouse supplies Luxembourg's finest retailers with premium 

@@ -5,6 +5,7 @@ import QuickAnswer from '../../../components/QuickAnswer.astro';
 import ContentByline from '../../../components/ContentByline.astro';
 import { blogPosts, getBlogPostBySlug } from '../../../data/blog';
 import { getBlogTranslation } from '../../../data/translations/blogContent';
+import { seoPages, seoTranslations } from '../../../data/translations/seo-pages';
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 
@@ -32,8 +33,20 @@ const hasTranslation = !!trPost;
 const fullyTranslated = supportedLocales.every(l => !!getBlogTranslation(slug, l));
 const displayTitle = trPost?.title ?? post.title;
 const displayExcerpt = trPost?.excerpt ?? post.excerpt;
+// Pages that exist only in English. Prefixing their links with the locale would
+// send readers (and Googlebot) to a 404, so they keep pointing at the English URL.
+const EN_ONLY_PATHS = ['/quality-and-testing', '/best-cbd-strains', '/find-your-product', '/strains', '/compare', '/search'];
+const hasLocalizedVersion = (href: string) => {
+  const path = href.replace(/[?#].*$/, '').replace(/\/$/, '') || '/';
+  if (EN_ONLY_PATHS.some((p) => path === p || path.startsWith(p + '/'))) return false;
+  // Landing pages are only built for locales that have translated copy.
+  const seo = seoPages.find((s) => '/' + s.slug === path);
+  if (seo && !seoTranslations[seo.slug]?.[locale]) return false;
+  return true;
+};
 const displayContent = trPost
-  ? trPost.content.replace(/href="\//g, 'href="' + localePrefix + '/')
+  ? trPost.content.replace(/href="(\/[^"]*)"/g, (match, href) =>
+      hasLocalizedVersion(href) ? `href="${localePrefix}${href}"` : match)
   : post.content;
 
 // DEPRECATED — kept only until every post above is fully translated via blogContent.ts.

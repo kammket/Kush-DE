@@ -329,13 +329,13 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "avoid-mistakes-with-cbd-wholesaler",
-    title: "5 Mistakes to Avoid When Choosing a Greens Farmhouse",
+    title: "5 Mistakes to Avoid When Choosing a CBD Wholesaler",
     excerpt: "Don't learn the hard way. Here are the 5 most common — and costly — mistakes CBD retailers make when selecting their wholesale supplier, and how to avoid them.",
     date: "2025-12-28",
     readTime: "7 min read",
     category: "Business Guide",
     content: `
-      <h2>5 Costly Mistakes When Choosing a Greens Farmhouse</h2>
+      <h2>5 Costly Mistakes When Choosing a CBD Wholesaler</h2>
       <p>We've spoken with thousands of CBD retailers across Europe, and the same supplier-related mistakes come up again and again. Avoid these five pitfalls to save money, protect your reputation, and build a stronger business.</p>
       
       <h3>Mistake #1: Choosing on Price Alone</h3>
@@ -356,7 +356,7 @@ export const blogPosts: BlogPost[] = [
       <h3>How to Choose Right</h3>
       <p>After avoiding these mistakes, focus on finding a supplier that's a true business partner. Look for transparent pricing, consistent quality across orders, responsive support, and a track record of serving European retailers. Read our detailed <a href="/blog/choose-right-cbd-flower-supplier">supplier selection guide</a> for the 7 key criteria to evaluate.</p>
       
-      <p>Ready to work with a trusted European Greens Farmhouse? Browse our <a href="/collections">product catalog</a> or <a href="/contact">contact us</a> for a personalized quote.</p>
+      <p>Ready to work with a trusted European CBD wholesaler? Browse our <a href="/collections">product catalog</a> or <a href="/contact">contact us</a> for a personalized quote.</p>
     `,
   },
   {

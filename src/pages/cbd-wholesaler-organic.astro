@@ -7,7 +7,7 @@ import { getProductsByCategory } from '../data/products';
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
-  { name: "Organic Greens Farmhouse" },
+  { name: "Organic CBD Wholesaler" },
 ];
 
 const topFlowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
@@ -16,7 +16,7 @@ const topOils = getProductsByCategory('cbd-oils').filter(p => p.inStock).slice(0
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Organic Greens Farmhouse — Premium Certified Organic Hemp Products",
+  "name": "Organic CBD Wholesaler — Premium Certified Organic Hemp Products",
   "description": "Europe's trusted organic CBD wholesale supplier. Lab-tested, EU-compliant organic CBD flowers, resins, oils & edibles at wholesale prices.",
   "url": "https://greensfarmhouse.com/cbd-wholesaler-organic",
   "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
@@ -45,7 +45,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-  title="Organic Greens Farmhouse | Certified Organic Hemp Products Wholesale"
+  title="Organic CBD Wholesaler | Certified Organic Hemp Products"
   description="Europe's leading organic CBD wholesale supplier. Premium organic CBD flowers, resins, oils at wholesale prices. Lab-tested, EU-compliant, free delivery over €150."
   canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-organic"
   jsonLd={jsonLd}
@@ -59,7 +59,7 @@ const faqItems = [
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">100% Organic Hemp</span>
       <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
-        Organic Greens Farmhouse — <span class="text-primary">Premium European Hemp</span>
+        Organic CBD Wholesaler — <span class="text-primary">Premium European Hemp</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
         Source certified organic CBD products directly from Europe's most trusted wholesale supplier. 

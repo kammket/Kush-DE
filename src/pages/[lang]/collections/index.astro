@@ -19,11 +19,24 @@ const breadcrumbs = [
   { name: t(locale, 'nav.collections') },
 ];
 
+// Search-result copy for this index. `home.catDesc` is a one-line section subtitle
+// and too thin to stand in for a meta description.
+const seo: Record<string, { title: string; desc: string }> = {
+  es: { title: 'Catálogo CBD al por Mayor | Flores, Resinas y Aceites', desc: 'Todas las colecciones CBD al por mayor: flores, resinas, aceites, gominolas y comestibles THC. Analizados en laboratorio, conformes UE, envío en 24h.' },
+  fr: { title: 'Catalogue CBD en Gros | Fleurs, Résines et Huiles', desc: 'Toutes nos collections CBD en gros : fleurs, résines, huiles, gummies et comestibles THC. Testés en laboratoire, conformes UE, expédition en 24h.' },
+  de: { title: 'CBD Großhandel Katalog | Blüten, Harze & Öle', desc: 'Alle CBD-Großhandelskollektionen: Blüten, Harze, Öle, Fruchtgummis und THC-Edibles. Laborgeprüft, EU-konform, Versand innerhalb von 24h.' },
+  nl: { title: 'CBD Groothandel Catalogus | Bloemen, Harsen & Oliën', desc: 'Alle CBD-groothandelcollecties: bloemen, harsen, oliën, gummies en THC-edibles. Laboratoriumgetest, EU-conform, verzending binnen 24 uur.' },
+  it: { title: 'Catalogo CBD all\'Ingrosso | Fiori, Resine e Oli', desc: 'Tutte le collezioni CBD all\'ingrosso: fiori, resine, oli, caramelle e edibili THC. Testati in laboratorio, conformi UE, spedizione in 24h.' },
+  fi: { title: 'CBD-tukkukatalogi | Kukat, Hartsit ja Öljyt', desc: 'Kaikki CBD-tukkukokoelmat: kukat, hartsit, öljyt, karkit ja THC-syötävät. Laboratoriotestattu, EU-vaatimusten mukainen, toimitus 24 tunnissa.' },
+  pt: { title: 'Catálogo CBD por Grosso | Flores, Resinas e Óleos', desc: 'Todas as coleções CBD por grosso: flores, resinas, óleos, gomas e comestíveis THC. Testados em laboratório, conformes UE, envio em 24h.' },
+};
+const pageSeo = seo[locale] ?? { title: `${t(locale, 'nav.collections')} | Greens Farmhouse`, desc: t(locale, 'home.catDesc') };
+
 const collectionsJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": t(locale, 'nav.collections'),
-  "description": t(locale, 'home.catDesc'),
+  "description": pageSeo.desc,
   "url": getAbsoluteLocaleUrl(locale, '/collections'),
   "inLanguage": locale,
   "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
@@ -31,8 +44,8 @@ const collectionsJsonLd = {
 ---
 
 <BaseLayout
-  title={`${t(locale, 'nav.collections')} | Greens Farmhouse`}
-  description={t(locale, 'home.catDesc')}
+  title={pageSeo.title}
+  description={pageSeo.desc}
   locale={locale}
   canonicalURL={getAbsoluteLocaleUrl(locale, '/collections')}
   jsonLd={collectionsJsonLd}

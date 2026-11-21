@@ -17,7 +17,7 @@ export const GET: APIRoute = () => {
   for (const product of products) {
     if (!product.image) continue;
     entries.push({
-      loc: `${SITE}/products/${product.slug}`,
+      loc: `${SITE}/products/${product.slug}/`,
       images: [{ url: absoluteImage(product.image), title: product.name }],
     });
   }
@@ -25,7 +25,7 @@ export const GET: APIRoute = () => {
   for (const category of categories) {
     if (!category.image) continue;
     entries.push({
-      loc: `${SITE}/collections/${category.slug}`,
+      loc: `${SITE}/collections/${category.slug}/`,
       images: [{ url: absoluteImage(category.image), title: category.name }],
     });
   }

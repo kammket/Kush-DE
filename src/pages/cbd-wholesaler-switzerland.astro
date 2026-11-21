@@ -7,7 +7,7 @@ import { getProductsByCategory } from '../data/products';
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
-  { name: "Greens Farmhouse Switzerland" },
+  { name: "CBD Wholesaler Switzerland" },
 ];
 
 const flowers = getProductsByCategory('cbd-flowers').filter(p => p.inStock).slice(0, 4);
@@ -16,7 +16,7 @@ const resins = getProductsByCategory('cbd-resins').filter(p => p.inStock).slice(
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Greens Farmhouse Switzerland — Premium Swiss-Quality CBD Wholesale",
+  "name": "CBD Wholesaler Switzerland — Premium Swiss-Quality CBD Wholesale",
   "description": "Switzerland's trusted CBD wholesale supplier. Premium CBD flowers, resins, oils at wholesale prices. Swiss-quality standards, fast delivery throughout Switzerland.",
   "url": "https://greensfarmhouse.com/cbd-wholesaler-switzerland",
   "isPartOf": { "@type": "WebSite", "url": "https://greensfarmhouse.com" }
@@ -49,7 +49,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-  title="Greens Farmhouse Switzerland | Swiss-Quality CBD at Wholesale Prices"
+  title="CBD Wholesaler Switzerland | Swiss-Quality CBD in Bulk"
   description="Switzerland's premium CBD wholesale supplier. Top-quality CBD flowers, resins, oils at the best wholesale prices. Fast delivery across all Swiss cantons."
   canonicalURL="https://greensfarmhouse.com/cbd-wholesaler-switzerland"
   jsonLd={jsonLd}
@@ -63,7 +63,7 @@ const faqItems = [
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="inline-block text-3xl mb-3">🇨🇭</span>
       <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
-        Greens Farmhouse Switzerland — <span class="text-primary">Swiss-Quality CBD Products</span>
+        CBD Wholesaler Switzerland — <span class="text-primary">Swiss-Quality CBD Products</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
         Europe's most trusted CBD wholesale supplier for the Swiss market. We deliver premium 
