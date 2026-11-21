@@ -108,7 +108,7 @@ const relatedPages = [
   </div>
 
   <!-- Product Detail -->
-  <section class="py-6 md:py-10" itemscope itemtype="https://schema.org/Product">
+  <section class="py-6 md:py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
         
@@ -125,7 +125,6 @@ const relatedPages = [
                 loading="eager"
                 fetchpriority="high"
                 decoding="async"
-                itemprop="image"
               />
             ) : (
               <div class="w-full h-full flex items-center justify-center">
@@ -153,28 +152,26 @@ const relatedPages = [
         <!-- Product Info -->
         <div>
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wider" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
-              <span itemprop="name">{product.supplier}</span>
+            <span class="text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <span>{product.supplier}</span>
             </span>
             {product.subcategory && (
               <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{product.subcategory}</span>
             )}
           </div>
           
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4" itemprop="name">
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">
             {product.name}
           </h1>
 
           <!-- Price -->
-          <div class="flex items-baseline gap-3 mb-6" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <div class="flex items-baseline gap-3 mb-6">
             {product.originalPrice && (
               <span class="text-xl text-gray-400 line-through">{product.originalPrice}</span>
             )}
-            <span class="text-3xl font-extrabold text-primary" itemprop="price" content={String(product.priceNumeric)}>
+            <span class="text-3xl font-extrabold text-primary" data-price-display>
               {product.price}
             </span>
-            <meta itemprop="priceCurrency" content="EUR" />
-            <meta itemprop="availability" content={product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"} />
           </div>
 
           {/* Variant Pricing Table — interactive selector */}
@@ -245,7 +242,7 @@ const relatedPages = [
           </div>
 
           <!-- Description -->
-          <div class="mb-6" itemprop="description">
+          <div class="mb-6">
             <h2 class="font-semibold text-gray-900 mb-2">Description</h2>
             <p class="text-gray-600 leading-relaxed">{product.description}</p>
           </div>
@@ -317,7 +314,7 @@ const relatedPages = [
             </div>
             <div class="flex items-center gap-2 text-xs text-gray-600 bg-gray-50 rounded-lg p-3">
               <span>📦</span>
-              <span>Free delivery over €150</span>
+              <span>Free delivery over €200</span>
             </div>
           </div>
 
@@ -426,11 +423,10 @@ const relatedPages = [
             btn.dataset.variantLabel = vb.dataset.variantLabel!;
             btn.dataset.price = vb.dataset.variantPrice!;
             // Update main price display
-            const priceEl = document.querySelector('[itemprop="price"]') as HTMLElement;
+            const priceEl = document.querySelector('[data-price-display]') as HTMLElement;
             if (priceEl) {
               const p = parseFloat(vb.dataset.variantPrice!);
               priceEl.textContent = `€${p.toFixed(2)}`;
-              priceEl.setAttribute('content', String(p));
             }
             // Highlight price in the row
             variantBtns.forEach(b => {

@@ -108,10 +108,10 @@ const breadcrumbs = [
               <span id="summary-shipping" class="font-medium text-gray-900">Calculated at checkout</span>
             </div>
             <div class="border-t pt-3 flex justify-between text-lg font-bold">
-              <span>Total</span>
+              <span id="summary-total-label">Total</span>
               <span id="summary-total" class="text-primary">€0.00</span>
             </div>
-            <p id="free-shipping-note" class="hidden text-xs text-green-600 font-medium text-right">✓ Free shipping on orders over €150!</p>
+            <p id="free-shipping-note" class="hidden text-xs font-medium text-right"></p>
           </div>
           <div class="mt-6 space-y-3">
             <a href="/checkout" id="checkout-btn" class="block w-full py-4 bg-primary text-white text-center text-lg font-bold rounded-xl hover:bg-primary-dark transition-colors shadow-lg">
@@ -133,8 +133,9 @@ const breadcrumbs = [
 </BaseLayout>
 
 <script>
-  import { getCart, removeFromCart, updateQuantity, getCartTotal } from '../scripts/cart';
-  import { discountTiers, getTier, getNextTierProgress, resolveDiscount, topTierPercent } from '../data/discounts';
+  import { getCart, removeFromCart, updateQuantity, getCartTotal, getPromoCode, setPromoCode, clearPromoCode } from '../scripts/cart';
+  import { discountTiers, getTier, getNextTierProgress, topTierPercent } from '../data/discounts';
+  import { computeTotals, promoPercent, FREE_SHIPPING_THRESHOLD } from '../data/pricing';
 
   /**
    * Renders the volume-discount panel: current tier, the gap to the next one, and
@@ -192,18 +193,14 @@ const breadcrumbs = [
         }).join('');
     }
 
-    // When a promo code beats the tier, say so rather than silently overriding.
+    // When the tier beats an applied promo code, say so rather than silently overriding.
     const msg = document.getElementById('discount-msg');
-    if (msg && resolved.source === 'volume' && discountApplied) {
+    if (msg && resolved.source === 'volume' && promoPercent(getPromoCode()) > 0) {
       msg.classList.remove('hidden', 'text-red-600');
       msg.classList.add('text-green-600');
       msg.textContent = `✓ Your ${tier.percent}% volume discount is larger than the code — we applied the better one.`;
     }
   }
-
-  let discountApplied = false;
-  const DISCOUNT_PCT = 0.20;
-  const DISCOUNT_CODE = 'CBD20';
 
   function renderCart() {
     const cart = getCart();
@@ -285,54 +282,60 @@ const breadcrumbs = [
     });
 
     // Summary — volume tier and promo code do not stack; the better one wins.
-    const subtotal = getCartTotal();
-    const resolved = resolveDiscount(subtotal, discountApplied ? DISCOUNT_PCT * 100 : 0);
-    const discountAmt = resolved.amount;
-    const total = subtotal - discountAmt;
-    const freeShipping = total >= 150;
-    renderVolumePanel(subtotal, resolved);
+    // Shipping depends on the destination, which is only known at checkout.
+    const totals = computeTotals(getCartTotal(), { promoCode: getPromoCode() });
+    const { subtotal, discount } = totals;
+    renderVolumePanel(subtotal, discount);
 
     const subtotalEl = document.getElementById('summary-subtotal');
     const discountRow = document.getElementById('summary-discount-row');
     const discountEl = document.getElementById('summary-discount');
     const shippingEl = document.getElementById('summary-shipping');
     const totalEl = document.getElementById('summary-total');
+    const totalLabel = document.getElementById('summary-total-label');
     const freeShipNote = document.getElementById('free-shipping-note');
 
     if (subtotalEl) subtotalEl.textContent = `€${subtotal.toFixed(2)}`;
     if (discountRow && discountEl) {
-      if (resolved.percent > 0) {
+      if (discount.percent > 0) {
         discountRow.classList.remove('hidden');
-        discountEl.textContent = `−€${discountAmt.toFixed(2)}`;
+        discountEl.textContent = `−€${discount.amount.toFixed(2)}`;
         const label = document.getElementById('summary-discount-label');
         if (label) {
-          label.textContent = resolved.source === 'promo'
-            ? `Discount code (${resolved.percent}%)`
-            : `Volume discount (${resolved.percent}%)`;
+          label.textContent = discount.source === 'promo'
+            ? `Discount code ${discount.code} (${discount.percent}%)`
+            : `Volume discount (${discount.percent}%)`;
         }
       } else {
         discountRow.classList.add('hidden');
       }
     }
+    const freeShipping = totals.shipping.free;
     if (shippingEl) shippingEl.textContent = freeShipping ? 'FREE' : 'Calculated at checkout';
-    if (totalEl) totalEl.textContent = `€${total.toFixed(2)}`;
+    if (totalEl) totalEl.textContent = `€${totals.total.toFixed(2)}`;
+    if (totalLabel) totalLabel.textContent = freeShipping ? 'Total' : 'Total (excl. shipping)';
     if (freeShipNote) {
-      if (freeShipping) freeShipNote.classList.remove('hidden');
-      else freeShipNote.classList.add('hidden');
+      freeShipNote.classList.remove('hidden', 'text-green-600', 'text-gray-600');
+      if (freeShipping) {
+        freeShipNote.classList.add('text-green-600');
+        freeShipNote.textContent = `✓ Free shipping — your order is over €${FREE_SHIPPING_THRESHOLD}`;
+      } else {
+        freeShipNote.classList.add('text-gray-600');
+        freeShipNote.textContent = `Add €${totals.toFreeShipping.toFixed(2)} more for free shipping (from €${FREE_SHIPPING_THRESHOLD})`;
+      }
     }
 
-    // Minimum order check
-    const MIN_ORDER = 150;
+    // Minimum order — measured on the subtotal, the same figure checkout checks.
     const checkoutBtn = document.getElementById('checkout-btn') as HTMLAnchorElement | null;
     const minWarning = document.getElementById('min-order-warning');
     const minRemaining = document.getElementById('min-order-remaining');
-    if (total < MIN_ORDER) {
+    if (!totals.meetsMinimum) {
       if (checkoutBtn) {
         checkoutBtn.classList.remove('bg-primary', 'hover:bg-primary-dark', 'shadow-lg');
         checkoutBtn.classList.add('bg-gray-300', 'cursor-not-allowed', 'pointer-events-none');
       }
       if (minWarning) minWarning.classList.remove('hidden');
-      if (minRemaining) minRemaining.textContent = `€${(MIN_ORDER - total).toFixed(2)}`;
+      if (minRemaining) minRemaining.textContent = `€${totals.toMinimum.toFixed(2)}`;
     } else {
       if (checkoutBtn) {
         checkoutBtn.classList.add('bg-primary', 'hover:bg-primary-dark', 'shadow-lg');
@@ -342,33 +345,41 @@ const breadcrumbs = [
     }
   }
 
-  function initCartPage() {
-    renderCart();
+  function showCodeApplied(code: string) {
+    const discountMsg = document.getElementById('discount-msg');
+    if (!discountMsg) return;
+    discountMsg.classList.remove('hidden', 'text-red-600');
+    discountMsg.classList.add('text-green-600');
+    discountMsg.textContent = `✓ Code ${code} applied — ${promoPercent(code)}% off!`;
+  }
 
-    // Discount code
+  function initCartPage() {
     const applyBtn = document.getElementById('apply-discount');
     const codeInput = document.getElementById('discount-code') as HTMLInputElement | null;
     const discountMsg = document.getElementById('discount-msg');
 
+    // A code applied earlier (or on another page load) stays applied.
+    const saved = getPromoCode();
+    if (saved && promoPercent(saved) > 0) {
+      if (codeInput) codeInput.value = saved;
+      showCodeApplied(saved);
+    }
+    renderCart();
+
     applyBtn?.addEventListener('click', () => {
-      const code = codeInput?.value.trim().toUpperCase();
-      if (discountMsg) {
-        if (code === DISCOUNT_CODE) {
-          discountApplied = true;
-          discountMsg.classList.remove('hidden', 'text-red-600');
-          discountMsg.classList.add('text-green-600');
-          discountMsg.textContent = '✓ Code CBD20 applied — 20% off!';
-          renderCart();
-        } else {
-          discountApplied = false;
+      const code = codeInput?.value.trim().toUpperCase() || '';
+      if (promoPercent(code) > 0) {
+        setPromoCode(code);
+        showCodeApplied(code);
+      } else {
+        clearPromoCode();
+        if (discountMsg) {
           discountMsg.classList.remove('hidden', 'text-green-600');
           discountMsg.classList.add('text-red-600');
           discountMsg.textContent = '✗ Invalid discount code.';
-          const discountRow = document.getElementById('summary-discount-row');
-          discountRow?.classList.add('hidden');
-          renderCart();
         }
       }
+      renderCart();
     });
   }
 

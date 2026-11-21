@@ -134,14 +134,14 @@ const breadcrumbs = [
     <Breadcrumbs items={breadcrumbs} />
   </div>
 
-  <section class="py-6 md:py-10" itemscope itemtype="https://schema.org/Product">
+  <section class="py-6 md:py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
         <!-- Product Image -->
         <div class="relative">
           <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-green-100 border border-gray-200">
             {product.image ? (
-              <img src={product.image} alt={product.name} width="600" height="600" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" itemprop="image" />
+              <img src={product.image} alt={product.name} width="600" height="600" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
             ) : (
               <div class="w-full h-full flex items-center justify-center">
                 <div class="text-center p-8">
@@ -162,19 +162,17 @@ const breadcrumbs = [
         <!-- Product Info -->
         <div>
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wider" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
-              <span itemprop="name">{product.supplier}</span>
+            <span class="text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <span>{product.supplier}</span>
             </span>
             {product.subcategory && <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">{product.subcategory}</span>}
           </div>
           
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4" itemprop="name">{product.name}</h1>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">{product.name}</h1>
 
-          <div class="flex items-baseline gap-3 mb-6" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <div class="flex items-baseline gap-3 mb-6">
             {product.originalPrice && <span class="text-xl text-gray-400 line-through">{product.originalPrice}</span>}
-            <span class="text-3xl font-extrabold text-primary" itemprop="price" content={String(product.priceNumeric)}>{product.price}</span>
-            <meta itemprop="priceCurrency" content="EUR" />
-            <meta itemprop="availability" content={product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"} />
+            <span class="text-3xl font-extrabold text-primary" data-price-display>{product.price}</span>
           </div>
 
           {product.variants && product.variants.length > 0 && (
@@ -217,7 +215,7 @@ const breadcrumbs = [
             </dl>
           </div>
 
-          <div class="mb-6" itemprop="description">
+          <div class="mb-6">
             <h2 class="font-semibold text-gray-900 mb-2">{t(locale, 'product.description')}</h2>
             <p class="text-gray-600 leading-relaxed">{description}</p>
           </div>
@@ -342,7 +340,7 @@ const breadcrumbs = [
             vb.classList.add('bg-primary/10','ring-1','ring-inset','ring-primary/30'); vb.classList.remove('hover:bg-gray-50');
             const r = vb.querySelector('.w-4'); if(r){r.classList.remove('border-gray-300');r.classList.add('border-primary');r.innerHTML='<span class="w-2 h-2 rounded-full bg-primary"></span>';}
             btn.dataset.variantLabel = vb.dataset.variantLabel!; btn.dataset.price = vb.dataset.variantPrice!;
-            const priceEl = document.querySelector('[itemprop="price"]') as HTMLElement; if(priceEl){const p=parseFloat(vb.dataset.variantPrice!);priceEl.textContent=`€${p.toFixed(2)}`;priceEl.setAttribute('content',String(p));}
+            const priceEl = document.querySelector('[data-price-display]') as HTMLElement; if(priceEl){const p=parseFloat(vb.dataset.variantPrice!);priceEl.textContent=`€${p.toFixed(2)}`;}
             variantBtns.forEach(b=>{const ps=b.querySelector('span:last-child') as HTMLElement;if(ps){ps.classList.remove('text-primary','text-base');ps.classList.add('text-gray-900');}});
             const sp=vb.querySelector('span:last-child') as HTMLElement;if(sp){sp.classList.remove('text-gray-900');sp.classList.add('text-primary','text-base');}
           });

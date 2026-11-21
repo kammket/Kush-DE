@@ -13,13 +13,13 @@ const locale = lang as Locale;
 const lp = (path: string) => getLocalePath(path, locale);
 
 const translations: Record<string, any> = {
-  es: { volTitle: '📦 Descuento por volumen', volNudge: 'Añada <strong>€{a}</strong> más para desbloquear <strong>{p}% de descuento</strong> — ahorraría <strong>€{s}</strong>.', volMax: '🎉 Ha desbloqueado nuestra mejor tarifa: {p}% de descuento.', volFrom: 'desde €', volBadge: '{p}% APLICADO', volLabel: 'Descuento por volumen',  h1: 'Carrito de Compras', empty: 'Tu carrito está vacío', emptyDesc: 'Explora nuestros productos CBD al por mayor y añade artículos a tu carrito.', browse: 'Ver Productos', product: 'Producto', price: 'Precio', quantity: 'Cantidad', subtotalH: 'Subtotal', remove: 'Eliminar', discount: 'Código de Descuento', discountPh: 'Introduce código (ej. CBD20)', apply: 'Aplicar', orderSummary: 'Resumen del Pedido', subtotal: 'Subtotal', discountLabel: 'Descuento (20%)', shipping: 'Envío', shippingCalc: 'Calculado al finalizar', free: 'GRATIS', total: 'Total', freeShip: '✓ ¡Envío gratis en pedidos superiores a €150!', checkout: 'PROCEDER AL PAGO', continueShopping: 'Seguir Comprando', codeOk: '✓ Código CBD20 aplicado — ¡20% de descuento!', codeErr: '✗ Código de descuento no válido.', minWarning: 'Pedido mínimo de <strong>€150.00</strong> requerido para el envío. Añade <strong id="min-order-remaining">€0.00</strong> más para continuar.' },
-  fr: { volTitle: '📦 Remise sur volume', volNudge: 'Ajoutez <strong>€{a}</strong> pour débloquer <strong>{p}% de remise</strong> — vous économiseriez <strong>€{s}</strong>.', volMax: '🎉 Vous avez débloqué notre meilleur tarif : {p}% de remise.', volFrom: 'dès €', volBadge: '{p}% APPLIQUÉ', volLabel: 'Remise sur volume',  h1: 'Panier', empty: 'Votre panier est vide', emptyDesc: 'Parcourez nos produits CBD en gros et ajoutez des articles à votre panier.', browse: 'Voir les Produits', product: 'Produit', price: 'Prix', quantity: 'Quantité', subtotalH: 'Sous-total', remove: 'Supprimer', discount: 'Code de Réduction', discountPh: 'Entrez le code (ex. CBD20)', apply: 'Appliquer', orderSummary: 'Récapitulatif', subtotal: 'Sous-total', discountLabel: 'Réduction (20%)', shipping: 'Livraison', shippingCalc: 'Calculé à la caisse', free: 'GRATUIT', total: 'Total', freeShip: '✓ Livraison gratuite dès €150 !', checkout: 'PASSER LA COMMANDE', continueShopping: 'Continuer les Achats', codeOk: '✓ Code CBD20 appliqué — 20% de réduction !', codeErr: '✗ Code de réduction invalide.', minWarning: 'Commande minimum de <strong>€150.00</strong> requise pour la livraison. Ajoutez <strong id="min-order-remaining">€0.00</strong> de plus pour continuer.' },
-  de: { volTitle: '📦 Mengenrabatt', volNudge: 'Legen Sie <strong>€{a}</strong> mehr dazu und sichern Sie sich <strong>{p}% Rabatt</strong> — Sie sparen <strong>€{s}</strong>.', volMax: '🎉 Sie haben unseren besten Satz erreicht: {p}% Rabatt.', volFrom: 'ab €', volBadge: '{p}% AKTIV', volLabel: 'Mengenrabatt',  h1: 'Warenkorb', empty: 'Ihr Warenkorb ist leer', emptyDesc: 'Entdecken Sie unsere CBD-Großhandelsprodukte und legen Sie Artikel in den Warenkorb.', browse: 'Produkte Ansehen', product: 'Produkt', price: 'Preis', quantity: 'Menge', subtotalH: 'Zwischensumme', remove: 'Entfernen', discount: 'Rabattcode', discountPh: 'Code eingeben (z.B. CBD20)', apply: 'Anwenden', orderSummary: 'Bestellübersicht', subtotal: 'Zwischensumme', discountLabel: 'Rabatt (20%)', shipping: 'Versand', shippingCalc: 'Wird an der Kasse berechnet', free: 'KOSTENLOS', total: 'Gesamt', freeShip: '✓ Kostenloser Versand ab €150!', checkout: 'ZUR KASSE', continueShopping: 'Weiter Einkaufen', codeOk: '✓ Code CBD20 angewendet — 20% Rabatt!', codeErr: '✗ Ungültiger Rabattcode.', minWarning: 'Mindestbestellwert von <strong>€150.00</strong> für die Lieferung erforderlich. Fügen Sie <strong id="min-order-remaining">€0.00</strong> mehr hinzu, um fortzufahren.' },
-  nl: { volTitle: '📦 Volumekorting', volNudge: 'Voeg <strong>€{a}</strong> toe om <strong>{p}% korting</strong> te ontgrendelen — u bespaart <strong>€{s}</strong>.', volMax: '🎉 U heeft ons beste tarief ontgrendeld: {p}% korting.', volFrom: 'vanaf €', volBadge: '{p}% TOEGEPAST', volLabel: 'Volumekorting',  h1: 'Winkelwagen', empty: 'Je winkelwagen is leeg', emptyDesc: 'Bekijk onze CBD-groothandelsproducten en voeg artikelen toe aan je winkelwagen.', browse: 'Producten Bekijken', product: 'Product', price: 'Prijs', quantity: 'Aantal', subtotalH: 'Subtotaal', remove: 'Verwijderen', discount: 'Kortingscode', discountPh: 'Voer code in (bijv. CBD20)', apply: 'Toepassen', orderSummary: 'Overzicht', subtotal: 'Subtotaal', discountLabel: 'Korting (20%)', shipping: 'Verzending', shippingCalc: 'Berekend bij afrekenen', free: 'GRATIS', total: 'Totaal', freeShip: '✓ Gratis verzending bij bestellingen boven €150!', checkout: 'AFREKENEN', continueShopping: 'Verder Winkelen', codeOk: '✓ Code CBD20 toegepast — 20% korting!', codeErr: '✗ Ongeldige kortingscode.', minWarning: 'Minimale bestelling van <strong>€150.00</strong> vereist voor levering. Voeg <strong id="min-order-remaining">€0.00</strong> meer toe om door te gaan.' },
-  it: { volTitle: '📦 Sconto quantità', volNudge: 'Aggiungete <strong>€{a}</strong> per sbloccare <strong>{p}% di sconto</strong> — risparmiereste <strong>€{s}</strong>.', volMax: '🎉 Avete sbloccato la nostra tariffa migliore: {p}% di sconto.', volFrom: 'da €', volBadge: '{p}% APPLICATO', volLabel: 'Sconto quantità',  h1: 'Carrello', empty: 'Il tuo carrello è vuoto', emptyDesc: 'Sfoglia i nostri prodotti CBD all\'ingrosso e aggiungi articoli al carrello.', browse: 'Vedi Prodotti', product: 'Prodotto', price: 'Prezzo', quantity: 'Quantità', subtotalH: 'Subtotale', remove: 'Rimuovi', discount: 'Codice Sconto', discountPh: 'Inserisci codice (es. CBD20)', apply: 'Applica', orderSummary: 'Riepilogo Ordine', subtotal: 'Subtotale', discountLabel: 'Sconto (20%)', shipping: 'Spedizione', shippingCalc: 'Calcolato al checkout', free: 'GRATUITA', total: 'Totale', freeShip: '✓ Spedizione gratuita per ordini superiori a €150!', checkout: 'PROCEDI AL PAGAMENTO', continueShopping: 'Continua lo Shopping', codeOk: '✓ Codice CBD20 applicato — 20% di sconto!', codeErr: '✗ Codice sconto non valido.', minWarning: 'Ordine minimo di <strong>€150.00</strong> richiesto per la consegna. Aggiungi <strong id="min-order-remaining">€0.00</strong> in più per procedere.' },
-  fi: { volTitle: '📦 Määräalennus', volNudge: 'Lisää <strong>€{a}</strong>, niin saat <strong>{p}% alennuksen</strong> — säästäisit <strong>€{s}</strong>.', volMax: '🎉 Olet saavuttanut parhaan hintamme: {p}% alennus.', volFrom: 'alkaen €', volBadge: '{p}% KÄYTÖSSÄ', volLabel: 'Määräalennus',  h1: 'Ostoskori', empty: 'Ostoskorisi on tyhjä', emptyDesc: 'Selaa CBD-tukkutuotteitamme ja lisää tuotteita ostoskoriisi.', browse: 'Selaa Tuotteita', product: 'Tuote', price: 'Hinta', quantity: 'Määrä', subtotalH: 'Välisumma', remove: 'Poista', discount: 'Alennuskoodi', discountPh: 'Syötä koodi (esim. CBD20)', apply: 'Käytä', orderSummary: 'Tilausyhteenveto', subtotal: 'Välisumma', discountLabel: 'Alennus (20%)', shipping: 'Toimitus', shippingCalc: 'Lasketaan kassalla', free: 'ILMAINEN', total: 'Yhteensä', freeShip: '✓ Ilmainen toimitus yli €150 tilauksiin!', checkout: 'SIIRRY KASSALLE', continueShopping: 'Jatka Ostoksia', codeOk: '✓ Koodi CBD20 käytetty — 20% alennus!', codeErr: '✗ Virheellinen alennuskoodi.', minWarning: 'Vähimmäistilaus <strong>€150.00</strong> vaaditaan toimitukseen. Lisää <strong id="min-order-remaining">€0.00</strong> lisää jatkaaksesi.' },
-  pt: { volTitle: '📦 Desconto por volume', volNudge: 'Adicione <strong>€{a}</strong> para desbloquear <strong>{p}% de desconto</strong> — pouparia <strong>€{s}</strong>.', volMax: '🎉 Desbloqueou a nossa melhor tarifa: {p}% de desconto.', volFrom: 'a partir de €', volBadge: '{p}% APLICADO', volLabel: 'Desconto por volume',  h1: 'Carrinho', empty: 'O seu carrinho está vazio', emptyDesc: 'Explore os nossos produtos CBD por grosso e adicione artigos ao carrinho.', browse: 'Ver Produtos', product: 'Produto', price: 'Preço', quantity: 'Quantidade', subtotalH: 'Subtotal', remove: 'Remover', discount: 'Código de Desconto', discountPh: 'Introduza código (ex. CBD20)', apply: 'Aplicar', orderSummary: 'Resumo do Pedido', subtotal: 'Subtotal', discountLabel: 'Desconto (20%)', shipping: 'Envio', shippingCalc: 'Calculado no checkout', free: 'GRÁTIS', total: 'Total', freeShip: '✓ Envio grátis em encomendas acima de €150!', checkout: 'FINALIZAR COMPRA', continueShopping: 'Continuar a Comprar', codeOk: '✓ Código CBD20 aplicado — 20% de desconto!', codeErr: '✗ Código de desconto inválido.', minWarning: 'Encomenda mínima de <strong>€150.00</strong> necessária para entrega. Adicione mais <strong id="min-order-remaining">€0.00</strong> para prosseguir.' },
+  es: { volTitle: '📦 Descuento por volumen', volNudge: 'Añada <strong>€{a}</strong> más para desbloquear <strong>{p}% de descuento</strong> — ahorraría <strong>€{s}</strong>.', volMax: '🎉 Ha desbloqueado nuestra mejor tarifa: {p}% de descuento.', volFrom: 'desde €', volBadge: '{p}% APLICADO', volLabel: 'Descuento por volumen',  h1: 'Carrito de Compras', empty: 'Tu carrito está vacío', emptyDesc: 'Explora nuestros productos CBD al por mayor y añade artículos a tu carrito.', browse: 'Ver Productos', product: 'Producto', price: 'Precio', quantity: 'Cantidad', subtotalH: 'Subtotal', remove: 'Eliminar', discount: 'Código de Descuento', discountPh: 'Introduce código (ej. CBD20)', apply: 'Aplicar', orderSummary: 'Resumen del Pedido', subtotal: 'Subtotal', discountLabel: 'Descuento (20%)', shipping: 'Envío', shippingCalc: 'Calculado al finalizar', free: 'GRATIS', total: 'Total', freeShip: '✓ Envío gratis en este pedido (€200+)', shipNudge: 'Añada €{a} más para el envío gratis (desde €200)', codeLabel: 'Código {c} ({p}%)', totalExcl: 'Total (sin envío)', checkout: 'PROCEDER AL PAGO', continueShopping: 'Seguir Comprando', codeOk: '✓ Código CBD20 aplicado — ¡20% de descuento!', codeErr: '✗ Código de descuento no válido.', minWarning: 'Pedido mínimo de <strong>€150.00</strong> requerido para el envío. Añade <strong id="min-order-remaining">€0.00</strong> más para continuar.' },
+  fr: { volTitle: '📦 Remise sur volume', volNudge: 'Ajoutez <strong>€{a}</strong> pour débloquer <strong>{p}% de remise</strong> — vous économiseriez <strong>€{s}</strong>.', volMax: '🎉 Vous avez débloqué notre meilleur tarif : {p}% de remise.', volFrom: 'dès €', volBadge: '{p}% APPLIQUÉ', volLabel: 'Remise sur volume',  h1: 'Panier', empty: 'Votre panier est vide', emptyDesc: 'Parcourez nos produits CBD en gros et ajoutez des articles à votre panier.', browse: 'Voir les Produits', product: 'Produit', price: 'Prix', quantity: 'Quantité', subtotalH: 'Sous-total', remove: 'Supprimer', discount: 'Code de Réduction', discountPh: 'Entrez le code (ex. CBD20)', apply: 'Appliquer', orderSummary: 'Récapitulatif', subtotal: 'Sous-total', discountLabel: 'Réduction (20%)', shipping: 'Livraison', shippingCalc: 'Calculé à la caisse', free: 'GRATUIT', total: 'Total', freeShip: '✓ Livraison gratuite pour cette commande (€200+)', shipNudge: 'Ajoutez €{a} pour la livraison gratuite (dès €200)', codeLabel: 'Code {c} ({p}%)', totalExcl: 'Total (hors livraison)', checkout: 'PASSER LA COMMANDE', continueShopping: 'Continuer les Achats', codeOk: '✓ Code CBD20 appliqué — 20% de réduction !', codeErr: '✗ Code de réduction invalide.', minWarning: 'Commande minimum de <strong>€150.00</strong> requise pour la livraison. Ajoutez <strong id="min-order-remaining">€0.00</strong> de plus pour continuer.' },
+  de: { volTitle: '📦 Mengenrabatt', volNudge: 'Legen Sie <strong>€{a}</strong> mehr dazu und sichern Sie sich <strong>{p}% Rabatt</strong> — Sie sparen <strong>€{s}</strong>.', volMax: '🎉 Sie haben unseren besten Satz erreicht: {p}% Rabatt.', volFrom: 'ab €', volBadge: '{p}% AKTIV', volLabel: 'Mengenrabatt',  h1: 'Warenkorb', empty: 'Ihr Warenkorb ist leer', emptyDesc: 'Entdecken Sie unsere CBD-Großhandelsprodukte und legen Sie Artikel in den Warenkorb.', browse: 'Produkte Ansehen', product: 'Produkt', price: 'Preis', quantity: 'Menge', subtotalH: 'Zwischensumme', remove: 'Entfernen', discount: 'Rabattcode', discountPh: 'Code eingeben (z.B. CBD20)', apply: 'Anwenden', orderSummary: 'Bestellübersicht', subtotal: 'Zwischensumme', discountLabel: 'Rabatt (20%)', shipping: 'Versand', shippingCalc: 'Wird an der Kasse berechnet', free: 'KOSTENLOS', total: 'Gesamt', freeShip: '✓ Kostenloser Versand für diese Bestellung (€200+)', shipNudge: 'Noch €{a} bis zum kostenlosen Versand (ab €200)', codeLabel: 'Code {c} ({p}%)', totalExcl: 'Gesamt (ohne Versand)', checkout: 'ZUR KASSE', continueShopping: 'Weiter Einkaufen', codeOk: '✓ Code CBD20 angewendet — 20% Rabatt!', codeErr: '✗ Ungültiger Rabattcode.', minWarning: 'Mindestbestellwert von <strong>€150.00</strong> für die Lieferung erforderlich. Fügen Sie <strong id="min-order-remaining">€0.00</strong> mehr hinzu, um fortzufahren.' },
+  nl: { volTitle: '📦 Volumekorting', volNudge: 'Voeg <strong>€{a}</strong> toe om <strong>{p}% korting</strong> te ontgrendelen — u bespaart <strong>€{s}</strong>.', volMax: '🎉 U heeft ons beste tarief ontgrendeld: {p}% korting.', volFrom: 'vanaf €', volBadge: '{p}% TOEGEPAST', volLabel: 'Volumekorting',  h1: 'Winkelwagen', empty: 'Je winkelwagen is leeg', emptyDesc: 'Bekijk onze CBD-groothandelsproducten en voeg artikelen toe aan je winkelwagen.', browse: 'Producten Bekijken', product: 'Product', price: 'Prijs', quantity: 'Aantal', subtotalH: 'Subtotaal', remove: 'Verwijderen', discount: 'Kortingscode', discountPh: 'Voer code in (bijv. CBD20)', apply: 'Toepassen', orderSummary: 'Overzicht', subtotal: 'Subtotaal', discountLabel: 'Korting (20%)', shipping: 'Verzending', shippingCalc: 'Berekend bij afrekenen', free: 'GRATIS', total: 'Totaal', freeShip: '✓ Gratis verzending voor deze bestelling (€200+)', shipNudge: 'Voeg €{a} toe voor gratis verzending (vanaf €200)', codeLabel: 'Code {c} ({p}%)', totalExcl: 'Totaal (excl. verzending)', checkout: 'AFREKENEN', continueShopping: 'Verder Winkelen', codeOk: '✓ Code CBD20 toegepast — 20% korting!', codeErr: '✗ Ongeldige kortingscode.', minWarning: 'Minimale bestelling van <strong>€150.00</strong> vereist voor levering. Voeg <strong id="min-order-remaining">€0.00</strong> meer toe om door te gaan.' },
+  it: { volTitle: '📦 Sconto quantità', volNudge: 'Aggiungete <strong>€{a}</strong> per sbloccare <strong>{p}% di sconto</strong> — risparmiereste <strong>€{s}</strong>.', volMax: '🎉 Avete sbloccato la nostra tariffa migliore: {p}% di sconto.', volFrom: 'da €', volBadge: '{p}% APPLICATO', volLabel: 'Sconto quantità',  h1: 'Carrello', empty: 'Il tuo carrello è vuoto', emptyDesc: 'Sfoglia i nostri prodotti CBD all\'ingrosso e aggiungi articoli al carrello.', browse: 'Vedi Prodotti', product: 'Prodotto', price: 'Prezzo', quantity: 'Quantità', subtotalH: 'Subtotale', remove: 'Rimuovi', discount: 'Codice Sconto', discountPh: 'Inserisci codice (es. CBD20)', apply: 'Applica', orderSummary: 'Riepilogo Ordine', subtotal: 'Subtotale', discountLabel: 'Sconto (20%)', shipping: 'Spedizione', shippingCalc: 'Calcolato al checkout', free: 'GRATUITA', total: 'Totale', freeShip: '✓ Spedizione gratuita per questo ordine (€200+)', shipNudge: 'Aggiungete €{a} per la spedizione gratuita (da €200)', codeLabel: 'Codice {c} ({p}%)', totalExcl: 'Totale (spedizione esclusa)', checkout: 'PROCEDI AL PAGAMENTO', continueShopping: 'Continua lo Shopping', codeOk: '✓ Codice CBD20 applicato — 20% di sconto!', codeErr: '✗ Codice sconto non valido.', minWarning: 'Ordine minimo di <strong>€150.00</strong> richiesto per la consegna. Aggiungi <strong id="min-order-remaining">€0.00</strong> in più per procedere.' },
+  fi: { volTitle: '📦 Määräalennus', volNudge: 'Lisää <strong>€{a}</strong>, niin saat <strong>{p}% alennuksen</strong> — säästäisit <strong>€{s}</strong>.', volMax: '🎉 Olet saavuttanut parhaan hintamme: {p}% alennus.', volFrom: 'alkaen €', volBadge: '{p}% KÄYTÖSSÄ', volLabel: 'Määräalennus',  h1: 'Ostoskori', empty: 'Ostoskorisi on tyhjä', emptyDesc: 'Selaa CBD-tukkutuotteitamme ja lisää tuotteita ostoskoriisi.', browse: 'Selaa Tuotteita', product: 'Tuote', price: 'Hinta', quantity: 'Määrä', subtotalH: 'Välisumma', remove: 'Poista', discount: 'Alennuskoodi', discountPh: 'Syötä koodi (esim. CBD20)', apply: 'Käytä', orderSummary: 'Tilausyhteenveto', subtotal: 'Välisumma', discountLabel: 'Alennus (20%)', shipping: 'Toimitus', shippingCalc: 'Lasketaan kassalla', free: 'ILMAINEN', total: 'Yhteensä', freeShip: '✓ Ilmainen toimitus tälle tilaukselle (€200+)', shipNudge: 'Lisää €{a} saadaksesi ilmaisen toimituksen (yli €200)', codeLabel: 'Koodi {c} ({p}%)', totalExcl: 'Yhteensä (ilman toimitusta)', checkout: 'SIIRRY KASSALLE', continueShopping: 'Jatka Ostoksia', codeOk: '✓ Koodi CBD20 käytetty — 20% alennus!', codeErr: '✗ Virheellinen alennuskoodi.', minWarning: 'Vähimmäistilaus <strong>€150.00</strong> vaaditaan toimitukseen. Lisää <strong id="min-order-remaining">€0.00</strong> lisää jatkaaksesi.' },
+  pt: { volTitle: '📦 Desconto por volume', volNudge: 'Adicione <strong>€{a}</strong> para desbloquear <strong>{p}% de desconto</strong> — pouparia <strong>€{s}</strong>.', volMax: '🎉 Desbloqueou a nossa melhor tarifa: {p}% de desconto.', volFrom: 'a partir de €', volBadge: '{p}% APLICADO', volLabel: 'Desconto por volume',  h1: 'Carrinho', empty: 'O seu carrinho está vazio', emptyDesc: 'Explore os nossos produtos CBD por grosso e adicione artigos ao carrinho.', browse: 'Ver Produtos', product: 'Produto', price: 'Preço', quantity: 'Quantidade', subtotalH: 'Subtotal', remove: 'Remover', discount: 'Código de Desconto', discountPh: 'Introduza código (ex. CBD20)', apply: 'Aplicar', orderSummary: 'Resumo do Pedido', subtotal: 'Subtotal', discountLabel: 'Desconto (20%)', shipping: 'Envio', shippingCalc: 'Calculado no checkout', free: 'GRÁTIS', total: 'Total', freeShip: '✓ Envio grátis nesta encomenda (€200+)', shipNudge: 'Adicione €{a} para envio grátis (a partir de €200)', codeLabel: 'Código {c} ({p}%)', totalExcl: 'Total (sem envio)', checkout: 'FINALIZAR COMPRA', continueShopping: 'Continuar a Comprar', codeOk: '✓ Código CBD20 aplicado — 20% de desconto!', codeErr: '✗ Código de desconto inválido.', minWarning: 'Encomenda mínima de <strong>€150.00</strong> necessária para entrega. Adicione mais <strong id="min-order-remaining">€0.00</strong> para prosseguir.' },
 };
 
 const tr = translations[locale] || {};
@@ -41,7 +41,14 @@ const breadcrumbs = [
     data-products-prefix={lp('/products')}
     data-free={tr.free} data-shipping-calc={tr.shippingCalc}
     data-min-warning={tr.minWarning}
+    data-free-ship={tr.freeShip} data-ship-nudge={tr.shipNudge}
+    data-code-label={tr.codeLabel} data-vol-label={tr.volLabel}
+    data-total={tr.total} data-total-excl={tr.totalExcl}
   ></div>
+  {/* Volume-ladder copy for the client script (it was read from this id but never rendered). */}
+  <script type="application/json" id="vol-i18n" set:html={JSON.stringify({
+    nudge: tr.volNudge, max: tr.volMax, from: tr.volFrom, badge: tr.volBadge,
+  })} />
 
   <section class="py-6 md:py-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,10 +112,10 @@ const breadcrumbs = [
           <h2 class="text-lg font-bold text-gray-900 mb-4">{tr.orderSummary}</h2>
           <div class="space-y-3 text-sm">
             <div class="flex justify-between"><span class="text-gray-600">{tr.subtotal}</span><span id="summary-subtotal" class="font-medium text-gray-900">€0.00</span></div>
-            <div id="summary-discount-row" class="hidden flex justify-between text-green-600"><span>{tr.discountLabel}</span><span id="summary-discount">−€0.00</span></div>
+            <div id="summary-discount-row" class="hidden flex justify-between text-green-600"><span id="summary-discount-label">{tr.volLabel}</span><span id="summary-discount">−€0.00</span></div>
             <div class="flex justify-between"><span class="text-gray-600">{tr.shipping}</span><span id="summary-shipping" class="font-medium text-gray-900">{tr.shippingCalc}</span></div>
-            <div class="border-t pt-3 flex justify-between text-lg font-bold"><span>{tr.total}</span><span id="summary-total" class="text-primary">€0.00</span></div>
-            <p id="free-shipping-note" class="hidden text-xs text-green-600 font-medium text-right">{tr.freeShip}</p>
+            <div class="border-t pt-3 flex justify-between text-lg font-bold"><span id="summary-total-label">{tr.total}</span><span id="summary-total" class="text-primary">€0.00</span></div>
+            <p id="free-shipping-note" class="hidden text-xs font-medium text-right"></p>
           </div>
           <div class="mt-6 space-y-3">
             <a href={lp('/checkout')} id="checkout-btn" class="block w-full py-4 bg-primary text-white text-center text-lg font-bold rounded-xl hover:bg-primary-dark transition-colors shadow-lg">{tr.checkout}</a>
@@ -126,8 +133,9 @@ const breadcrumbs = [
 </BaseLayout>
 
 <script>
-  import { getCart, removeFromCart, updateQuantity, getCartTotal } from '../../scripts/cart';
-  import { discountTiers, getTier, getNextTierProgress, resolveDiscount, topTierPercent } from '../../data/discounts';
+  import { getCart, removeFromCart, updateQuantity, getCartTotal, getPromoCode, setPromoCode, clearPromoCode } from '../../scripts/cart';
+  import { discountTiers, getTier, getNextTierProgress, topTierPercent } from '../../data/discounts';
+  import { computeTotals, promoPercent } from '../../data/pricing';
 
   const VOL = JSON.parse(document.getElementById('vol-i18n')?.textContent || '{}');
 
@@ -166,10 +174,6 @@ const breadcrumbs = [
     }).join('');
   }
 
-  let discountApplied = false;
-  const DISCOUNT_PCT = 0.20;
-  const DISCOUNT_CODE = 'CBD20';
-
   function getI18n() {
     const el = document.getElementById('cart-i18n');
     return {
@@ -182,6 +186,12 @@ const breadcrumbs = [
       free: el?.dataset.free || 'FREE',
       shippingCalc: el?.dataset.shippingCalc || 'Calculated at checkout',
       minWarning: el?.dataset.minWarning || 'Minimum order of <strong>€150.00</strong> required for delivery. Add <strong id="min-order-remaining">€0.00</strong> more to proceed.',
+      freeShip: el?.dataset.freeShip || '✓ Free shipping on this order (€200+)',
+      shipNudge: el?.dataset.shipNudge || 'Add €{a} more for free shipping (from €200)',
+      codeLabel: el?.dataset.codeLabel || 'Code {c} ({p}%)',
+      volLabel: el?.dataset.volLabel || 'Volume discount',
+      total: el?.dataset.total || 'Total',
+      totalExcl: el?.dataset.totalExcl || 'Total (excl. shipping)',
     };
   }
 
@@ -249,30 +259,44 @@ const breadcrumbs = [
       });
     });
 
-    const subtotal = getCartTotal();
-    const resolved = resolveDiscount(subtotal, discountApplied ? DISCOUNT_PCT * 100 : 0);
-    const discountAmt = resolved.amount;
+    // Same rules as every other page: see src/data/pricing.ts.
+    const totals = computeTotals(getCartTotal(), { promoCode: getPromoCode() });
+    const { subtotal, discount } = totals;
     renderVolumePanel(subtotal);
-    const total = subtotal - discountAmt;
-    const freeShipping = total >= 150;
+    const freeShipping = totals.shipping.free;
     const subtotalEl = document.getElementById('summary-subtotal');
     const discountRow = document.getElementById('summary-discount-row');
     const discountEl = document.getElementById('summary-discount');
+    const discountLabelEl = document.getElementById('summary-discount-label');
     const shippingEl = document.getElementById('summary-shipping');
     const totalEl = document.getElementById('summary-total');
+    const totalLabelEl = document.getElementById('summary-total-label');
     const freeShipNote = document.getElementById('free-shipping-note');
     if (subtotalEl) subtotalEl.textContent = `€${subtotal.toFixed(2)}`;
-    if (resolved.percent > 0 && discountRow && discountEl) { discountRow.classList.remove('hidden'); discountEl.textContent = `−€${discountAmt.toFixed(2)}`; }
+    if (discountRow && discountEl) {
+      // Hidden again when the discount goes away (e.g. items removed below a tier).
+      discountRow.classList.toggle('hidden', discount.percent === 0);
+      discountEl.textContent = `−€${discount.amount.toFixed(2)}`;
+      if (discountLabelEl) discountLabelEl.textContent = discount.source === 'promo'
+        ? i18n.codeLabel.replace('{c}', discount.code || '').replace('{p}', String(discount.percent))
+        : `${i18n.volLabel} (${discount.percent}%)`;
+    }
     if (shippingEl) shippingEl.textContent = freeShipping ? i18n.free : i18n.shippingCalc;
-    if (totalEl) totalEl.textContent = `€${total.toFixed(2)}`;
-    if (freeShipNote) { if (freeShipping) freeShipNote.classList.remove('hidden'); else freeShipNote.classList.add('hidden'); }
+    if (totalEl) totalEl.textContent = `€${totals.total.toFixed(2)}`;
+    if (totalLabelEl) totalLabelEl.textContent = freeShipping ? i18n.total : i18n.totalExcl;
+    if (freeShipNote) {
+      freeShipNote.classList.remove('hidden', 'text-green-600', 'text-gray-600');
+      freeShipNote.classList.add(freeShipping ? 'text-green-600' : 'text-gray-600');
+      freeShipNote.textContent = freeShipping
+        ? i18n.freeShip
+        : i18n.shipNudge.replace('{a}', totals.toFreeShipping.toFixed(2));
+    }
 
-    // Minimum order check
-    const MIN_ORDER = 150;
+    // Minimum order — on the subtotal, the same figure checkout checks.
     const checkoutBtn = document.getElementById('checkout-btn') as HTMLAnchorElement | null;
     const minWarning = document.getElementById('min-order-warning');
     const minMsg = document.getElementById('min-order-msg');
-    if (total < MIN_ORDER) {
+    if (!totals.meetsMinimum) {
       if (checkoutBtn) {
         checkoutBtn.classList.remove('bg-primary', 'hover:bg-primary-dark', 'shadow-lg');
         checkoutBtn.classList.add('bg-gray-300', 'cursor-not-allowed', 'pointer-events-none');
@@ -281,7 +305,7 @@ const breadcrumbs = [
       if (minMsg) {
         let warningHtml = i18n.minWarning;
         // Update the remaining amount in the warning HTML
-        warningHtml = warningHtml.replace(/€0\.00<\/strong> /, `€${(MIN_ORDER - total).toFixed(2)}</strong> `);
+        warningHtml = warningHtml.replace(/€0\.00<\/strong> /, `€${totals.toMinimum.toFixed(2)}</strong> `);
         minMsg.innerHTML = warningHtml;
       }
     } else {
@@ -294,30 +318,37 @@ const breadcrumbs = [
   }
 
   function initCartPage() {
-    renderCart();
     const applyBtn = document.getElementById('apply-discount');
     const codeInput = document.getElementById('discount-code') as HTMLInputElement | null;
     const discountMsg = document.getElementById('discount-msg');
     const i18n = getI18n();
+    const showOk = () => {
+      if (!discountMsg) return;
+      discountMsg.classList.remove('hidden', 'text-red-600');
+      discountMsg.classList.add('text-green-600');
+      discountMsg.textContent = i18n.codeOk;
+    };
+    // A code applied earlier stays applied, here and at checkout.
+    const saved = getPromoCode();
+    if (saved && promoPercent(saved) > 0) {
+      if (codeInput) codeInput.value = saved;
+      showOk();
+    }
+    renderCart();
     applyBtn?.addEventListener('click', () => {
-      const code = codeInput?.value.trim().toUpperCase();
-      if (discountMsg) {
-        if (code === DISCOUNT_CODE) {
-          discountApplied = true;
-          discountMsg.classList.remove('hidden', 'text-red-600');
-          discountMsg.classList.add('text-green-600');
-          discountMsg.textContent = i18n.codeOk;
-          renderCart();
-        } else {
-          discountApplied = false;
+      const code = codeInput?.value.trim().toUpperCase() || '';
+      if (promoPercent(code) > 0) {
+        setPromoCode(code);
+        showOk();
+      } else {
+        clearPromoCode();
+        if (discountMsg) {
           discountMsg.classList.remove('hidden', 'text-green-600');
           discountMsg.classList.add('text-red-600');
           discountMsg.textContent = i18n.codeErr;
-          const discountRow = document.getElementById('summary-discount-row');
-          discountRow?.classList.add('hidden');
-          renderCart();
         }
       }
+      renderCart();
     });
   }
 

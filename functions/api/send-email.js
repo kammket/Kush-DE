@@ -131,7 +131,7 @@ export async function onRequestPost(context) {
 
     } else {
       // ORDER
-      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, total, firstTimeGift, discountPercent, discountAmount } = body;
+      const { firstName, lastName, email, phone, company, address, address2, city, postal, country, notes, items, subtotal, shipping, shippingCost, total, firstTimeGift, discountPercent, discountAmount, discountLabel } = body;
 
       if (!firstName || !lastName || !email || !address || !city || !postal || !country) {
         return new Response(JSON.stringify({ error: "Missing required fields" }), {
@@ -159,8 +159,26 @@ export async function onRequestPost(context) {
         ).join("");
       }
 
+      // The discount row both emails show, so Subtotal − Discount + Shipping visibly
+      // adds up to Total. Older clients sent no label; fall back to the percentage.
+      const hasDiscount = Number(discountPercent) > 0 && Number(discountAmount) > 0;
+      const discountText = escapeHtml(String(discountLabel || `Discount (${Number(discountPercent)}%)`));
+      const discountRowHtml = (style) => hasDiscount
+        ? `<tr><td style="${style}">${discountText}</td><td style="${style}text-align:right;color:#15803d;">−€${Number(discountAmount).toFixed(2)}</td></tr>`
+        : "";
+
+      // Totals arrive from the browser. Re-add them here and flag any order whose
+      // figures do not reconcile, so the team checks it before sending bank details.
+      const cents = (n) => Math.round(Number(n || 0) * 100);
+      const itemsCents = Array.isArray(items)
+        ? items.reduce((s, i) => s + Math.round(Number(i.price) * Number(i.quantity) * 100), 0)
+        : 0;
+      const expectedTotalCents = cents(subtotal) - (hasDiscount ? cents(discountAmount) : 0) + cents(shippingCost);
+      const totalsMismatch = Math.abs(itemsCents - cents(subtotal)) > 1 || Math.abs(expectedTotalCents - cents(total)) > 1;
+
       // Email to owner — full order details
       const ownerHtml = `
+        ${totalsMismatch ? `<p style="background:#fee2e2;border:2px solid #dc2626;border-radius:6px;padding:12px;font-weight:bold;color:#991b1b;">⚠ The totals on this order do not add up (items €${(itemsCents / 100).toFixed(2)}, subtotal €${Number(subtotal).toFixed(2)}, total €${Number(total).toFixed(2)}). Check the prices before sending payment details.</p>` : ""}
         <h2>New Order Received — ${escapeHtml(orderRef)}</h2>
         <h3>Customer Information</h3>
         <table style="border-collapse:collapse;width:100%;max-width:600px;">
@@ -190,13 +208,13 @@ export async function onRequestPost(context) {
         <h3>Order Totals</h3>
         <table style="border-collapse:collapse;width:100%;max-width:300px;">
           <tr><td style="padding:6px 8px;">Subtotal</td><td style="padding:6px 8px;text-align:right;">€${Number(subtotal).toFixed(2)}</td></tr>
+          ${discountRowHtml("padding:6px 8px;")}
           <tr><td style="padding:6px 8px;">Shipping</td><td style="padding:6px 8px;text-align:right;">${escapeHtml(String(shipping))}</td></tr>
           <tr style="font-weight:bold;font-size:1.1em;"><td style="padding:6px 8px;border-top:2px solid #333;">Total</td><td style="padding:6px 8px;border-top:2px solid #333;text-align:right;">€${Number(total).toFixed(2)}</td></tr>
         </table>
 
         ${notes ? `<h3>Order Notes</h3><p style="white-space:pre-wrap;">${escapeHtml(notes)}</p>` : ""}
         <hr>
-        ${Number(discountPercent) > 0 ? `<p style="font-weight:bold;color:#15803d;">Volume discount applied: ${Number(discountPercent)}% — −€${Number(discountAmount).toFixed(2)}</p>` : ""}
         <p style="color:#666;font-size:12px;">Payment: Bank Transfer (SEPA) — Order Reference: ${escapeHtml(orderRef)}</p>
         ${firstTimeGift ? `<p style="background:#fef3c7;border:2px solid #f59e0b;border-radius:6px;padding:12px;font-weight:bold;color:#92400e;">🎁 FIRST-TIME CUSTOMER — include a free sample of a top product with this package.</p>` : ""}
       `;
@@ -233,6 +251,7 @@ export async function onRequestPost(context) {
             </table>
             <table style="width:100%;max-width:300px;margin:12px 0 0 auto;">
               <tr><td style="padding:4px 8px;color:#555;">Subtotal</td><td style="padding:4px 8px;text-align:right;color:#555;">€${Number(subtotal).toFixed(2)}</td></tr>
+              ${discountRowHtml("padding:4px 8px;color:#555;")}
               <tr><td style="padding:4px 8px;color:#555;">Shipping</td><td style="padding:4px 8px;text-align:right;color:#555;">${escapeHtml(String(shipping))}</td></tr>
               <tr style="font-weight:bold;"><td style="padding:4px 8px;border-top:2px solid #333;">Total</td><td style="padding:4px 8px;border-top:2px solid #333;text-align:right;">€${Number(total).toFixed(2)}</td></tr>
             </table>

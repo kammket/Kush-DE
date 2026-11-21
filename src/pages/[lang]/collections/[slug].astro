@@ -4,7 +4,7 @@ import ProductCard from '../../../components/ProductCard.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import RecentlyViewed from '../../../components/RecentlyViewed.astro';
 import FAQ from '../../../components/FAQ.astro';
-import { categories, getProductsByCategory, getCategoryBySlug } from '../../../data/products';
+import { categories, getProductsByCategory, getCategoryBySlug, buildListOffer } from '../../../data/products';
 import { supportedLocales, type Locale } from '../../../i18n/config';
 import { t, getLocalePath, getAbsoluteLocaleUrl } from '../../../i18n/utils';
 import { categoryTranslations } from '../../../data/translations/categories';
@@ -64,7 +64,7 @@ const collectionJsonLd = {
         "@type": "Product",
         "name": product.name,
         "url": getAbsoluteLocaleUrl(locale, `/products/${product.slug}`),
-        "offers": { "@type": "Offer", "price": product.priceNumeric, "priceCurrency": "EUR", "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock" }
+        "offers": buildListOffer(product)
       }
     }))
   }

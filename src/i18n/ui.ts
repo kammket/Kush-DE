@@ -10,7 +10,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'Add to Cart', buyNow: 'Buy Now', viewAll: 'View all', readMore: 'Read more →',
-      freeDelivery: 'Free delivery over €150', products: 'products', showing: 'Showing',
+      freeDelivery: 'Free delivery over €200', products: 'products', showing: 'Showing',
       sortBy: 'Sort by:', featured: 'Featured', priceLow: 'Price: Low to High',
       priceHigh: 'Price: High to Low', nameAZ: 'Name A-Z', outOfStock: 'Out of stock',
       inStock: 'In stock', contactUs: 'Contact Us', browseProducts: 'Browse Products',
@@ -46,7 +46,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Unbeatable Quality/Price', qualityDesc: '100% natural products',
       lab: 'Laboratory Analysis', labDesc: 'Certified < 0.3% THC',
-      delivery: 'Express Delivery', deliveryDesc: 'Free from €150 · Ships 24h',
+      delivery: 'Express Delivery', deliveryDesc: 'Free from €200 · Ships 24h',
       company: 'European Company', companyDesc: 'Products stored in France',
     },
     product: {
@@ -80,7 +80,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Organic Farming', whyOrganicDesc: 'CBD flowers, resins and oils from reliable suppliers in France, Switzerland and Italy, with organically grown hemp.',
       whyCheap: 'Cheap CBD, Premium Quality', whyCheapDesc: 'Best value for money on the market. All products certified premium quality and compliant with legislation.',
       whyCatalog: 'Comprehensive Catalog', whyCatalogDesc: 'Full range of CBD resins, hemp flowers and oils compliant with current legislation for all your B2B needs.',
-      whyFast: 'Fast Delivery', whyFastDesc: 'All orders shipped within 24 hours. Free delivery for orders over €150 across France and Europe.',
+      whyFast: 'Fast Delivery', whyFastDesc: 'All orders shipped within 24 hours. Free delivery for orders over €200 across France and Europe.',
       howTitle: 'How to Buy CBD in Bulk',
       faqTitle: 'Frequently Asked Questions',
       blogTitle: 'Information and Advice',
@@ -98,7 +98,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'Añadir al carrito', buyNow: 'Comprar ahora', viewAll: 'Ver todo', readMore: 'Leer más →',
-      freeDelivery: 'Envío gratis a partir de 99€', products: 'productos', showing: 'Mostrando',
+      freeDelivery: 'Envío gratis a partir de 200€', products: 'productos', showing: 'Mostrando',
       sortBy: 'Ordenar por:', featured: 'Destacados', priceLow: 'Precio: Menor a Mayor',
       priceHigh: 'Precio: Mayor a Menor', nameAZ: 'Nombre A-Z', outOfStock: 'Agotado',
       inStock: 'En stock', contactUs: 'Contáctenos', browseProducts: 'Ver Productos',
@@ -134,7 +134,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Calidad/Precio Imbatible', qualityDesc: 'Productos 100% naturales',
       lab: 'Análisis de Laboratorio', labDesc: 'Certificado < 0,3% THC',
-      delivery: 'Envío Express', deliveryDesc: 'Gratis desde 99€ · Envío 24h',
+      delivery: 'Envío Express', deliveryDesc: 'Gratis desde 200€ · Envío 24h',
       company: 'Empresa Europea', companyDesc: 'Productos almacenados en Francia',
     },
     product: {
@@ -168,7 +168,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Cultivo Orgánico', whyOrganicDesc: 'Flores, resinas y aceites CBD de proveedores fiables en Francia, Suiza e Italia, con cáñamo cultivado orgánicamente.',
       whyCheap: 'CBD Económico, Calidad Premium', whyCheapDesc: 'La mejor relación calidad-precio del mercado. Todos los productos certificados premium y conformes con la legislación.',
       whyCatalog: 'Catálogo Completo', whyCatalogDesc: 'Gama completa de resinas CBD, flores de cáñamo y aceites conformes con la legislación vigente para todas sus necesidades B2B.',
-      whyFast: 'Envío Rápido', whyFastDesc: 'Todos los pedidos se envían en 24 horas. Envío gratuito para pedidos superiores a 99€ en Francia y Europa.',
+      whyFast: 'Envío Rápido', whyFastDesc: 'Todos los pedidos se envían en 24 horas. Envío gratuito para pedidos superiores a 200€ en Francia y Europa.',
       howTitle: 'Cómo Comprar CBD al por Mayor',
       faqTitle: 'Preguntas Frecuentes',
       blogTitle: 'Información y Consejos',
@@ -186,7 +186,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'Ajouter au panier', buyNow: 'Acheter', viewAll: 'Voir tout', readMore: 'Lire la suite →',
-      freeDelivery: 'Livraison gratuite dès 99€', products: 'produits', showing: 'Affichage de',
+      freeDelivery: 'Livraison gratuite dès 200€', products: 'produits', showing: 'Affichage de',
       sortBy: 'Trier par :', featured: 'En vedette', priceLow: 'Prix : croissant',
       priceHigh: 'Prix : décroissant', nameAZ: 'Nom A-Z', outOfStock: 'Rupture de stock',
       inStock: 'En stock', contactUs: 'Contactez-nous', browseProducts: 'Voir les Produits',
@@ -222,7 +222,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Qualité/Prix Imbattable', qualityDesc: 'Produits 100% naturels',
       lab: 'Analyses Laboratoire', labDesc: 'Certifié < 0,3% THC',
-      delivery: 'Livraison Express', deliveryDesc: 'Gratuite dès 99€ · Expédié 24h',
+      delivery: 'Livraison Express', deliveryDesc: 'Gratuite dès 200€ · Expédié 24h',
       company: 'Entreprise Européenne', companyDesc: 'Produits stockés en France',
     },
     product: {
@@ -256,7 +256,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Culture Biologique', whyOrganicDesc: 'Fleurs, résines et huiles CBD de fournisseurs fiables en France, Suisse et Italie, avec du chanvre cultivé bio.',
       whyCheap: 'CBD Pas Cher, Qualité Premium', whyCheapDesc: 'Le meilleur rapport qualité-prix du marché. Tous les produits certifiés premium et conformes à la législation.',
       whyCatalog: 'Catalogue Complet', whyCatalogDesc: 'Gamme complète de résines CBD, fleurs de chanvre et huiles conformes à la législation en vigueur pour tous vos besoins B2B.',
-      whyFast: 'Livraison Rapide', whyFastDesc: 'Toutes les commandes expédiées sous 24h. Livraison gratuite pour les commandes de plus de 99€ en France et en Europe.',
+      whyFast: 'Livraison Rapide', whyFastDesc: 'Toutes les commandes expédiées sous 24h. Livraison gratuite pour les commandes de plus de 200€ en France et en Europe.',
       howTitle: 'Comment Acheter du CBD en Gros',
       faqTitle: 'Questions Fréquentes',
       blogTitle: 'Informations et Conseils',
@@ -274,7 +274,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'In den Warenkorb', buyNow: 'Jetzt kaufen', viewAll: 'Alle anzeigen', readMore: 'Weiterlesen →',
-      freeDelivery: 'Kostenloser Versand ab 99€', products: 'Produkte', showing: 'Anzeige von',
+      freeDelivery: 'Kostenloser Versand ab 200€', products: 'Produkte', showing: 'Anzeige von',
       sortBy: 'Sortieren nach:', featured: 'Empfohlen', priceLow: 'Preis: aufsteigend',
       priceHigh: 'Preis: absteigend', nameAZ: 'Name A-Z', outOfStock: 'Ausverkauft',
       inStock: 'Auf Lager', contactUs: 'Kontaktieren Sie uns', browseProducts: 'Produkte Ansehen',
@@ -310,7 +310,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Unschlagbares Preis-Leistung', qualityDesc: '100% natürliche Produkte',
       lab: 'Laboranalysen', labDesc: 'Zertifiziert < 0,3% THC',
-      delivery: 'Express-Lieferung', deliveryDesc: 'Kostenlos ab 99€ · Versand 24h',
+      delivery: 'Express-Lieferung', deliveryDesc: 'Kostenlos ab 200€ · Versand 24h',
       company: 'Europäisches Unternehmen', companyDesc: 'Produkte in Frankreich gelagert',
     },
     product: {
@@ -344,7 +344,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Biologischer Anbau', whyOrganicDesc: 'CBD-Blüten, Harze und Öle von zuverlässigen Lieferanten in Frankreich, der Schweiz und Italien, biologisch angebaut.',
       whyCheap: 'Günstiges CBD, Premium-Qualität', whyCheapDesc: 'Bestes Preis-Leistungs-Verhältnis auf dem Markt. Alle Produkte zertifiziert und gesetzeskonform.',
       whyCatalog: 'Umfassender Katalog', whyCatalogDesc: 'Komplette Auswahl an CBD-Harzen, Hanfblüten und Ölen für alle Ihre B2B-Bedürfnisse.',
-      whyFast: 'Schnelle Lieferung', whyFastDesc: 'Alle Bestellungen innerhalb von 24 Stunden versandt. Kostenlose Lieferung ab 99€ in Frankreich und Europa.',
+      whyFast: 'Schnelle Lieferung', whyFastDesc: 'Alle Bestellungen innerhalb von 24 Stunden versandt. Kostenlose Lieferung ab 200€ in Frankreich und Europa.',
       howTitle: 'Wie Man CBD im Großhandel Kauft',
       faqTitle: 'Häufig Gestellte Fragen',
       blogTitle: 'Informationen und Ratschläge',
@@ -362,7 +362,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'In winkelwagen', buyNow: 'Nu kopen', viewAll: 'Alles bekijken', readMore: 'Lees meer →',
-      freeDelivery: 'Gratis levering vanaf €150', products: 'producten', showing: 'Tonen',
+      freeDelivery: 'Gratis levering vanaf €200', products: 'producten', showing: 'Tonen',
       sortBy: 'Sorteren op:', featured: 'Aanbevolen', priceLow: 'Prijs: laag naar hoog',
       priceHigh: 'Prijs: hoog naar laag', nameAZ: 'Naam A-Z', outOfStock: 'Uitverkocht',
       inStock: 'Op voorraad', contactUs: 'Neem Contact Op', browseProducts: 'Producten Bekijken',
@@ -398,7 +398,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Onverslaanbare Kwaliteit/Prijs', qualityDesc: '100% natuurlijke producten',
       lab: 'Laboratoriumanalyse', labDesc: 'Gecertificeerd < 0,3% THC',
-      delivery: 'Expreslevering', deliveryDesc: 'Gratis vanaf €150 · Verzending 24u',
+      delivery: 'Expreslevering', deliveryDesc: 'Gratis vanaf €200 · Verzending 24u',
       company: 'Europees Bedrijf', companyDesc: 'Producten opgeslagen in Frankrijk',
     },
     product: {
@@ -432,7 +432,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Biologische Teelt', whyOrganicDesc: 'CBD-bloemen, harsen en oliën van betrouwbare leveranciers in Frankrijk, Zwitserland en Italië.',
       whyCheap: 'Goedkope CBD, Premium Kwaliteit', whyCheapDesc: 'Beste prijs-kwaliteitverhouding op de markt. Alle producten gecertificeerd en wettelijk conform.',
       whyCatalog: 'Uitgebreide Catalogus', whyCatalogDesc: 'Compleet assortiment CBD-harsen, hennepbloemen en oliën voor al uw B2B-behoeften.',
-      whyFast: 'Snelle Levering', whyFastDesc: 'Alle bestellingen verzonden binnen 24 uur. Gratis levering vanaf €150 in Frankrijk en Europa.',
+      whyFast: 'Snelle Levering', whyFastDesc: 'Alle bestellingen verzonden binnen 24 uur. Gratis levering vanaf €200 in Frankrijk en Europa.',
       howTitle: 'Hoe CBD in Bulk te Kopen',
       faqTitle: 'Veelgestelde Vragen',
       blogTitle: 'Informatie en Advies',
@@ -450,7 +450,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'Aggiungi al carrello', buyNow: 'Acquista ora', viewAll: 'Vedi tutto', readMore: 'Leggi di più →',
-      freeDelivery: 'Spedizione gratuita da 99€', products: 'prodotti', showing: 'Mostrando',
+      freeDelivery: 'Spedizione gratuita da 200€', products: 'prodotti', showing: 'Mostrando',
       sortBy: 'Ordina per:', featured: 'In evidenza', priceLow: 'Prezzo: crescente',
       priceHigh: 'Prezzo: decrescente', nameAZ: 'Nome A-Z', outOfStock: 'Esaurito',
       inStock: 'Disponibile', contactUs: 'Contattaci', browseProducts: 'Sfoglia Prodotti',
@@ -486,7 +486,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Qualità/Prezzo Imbattibile', qualityDesc: 'Prodotti 100% naturali',
       lab: 'Analisi di Laboratorio', labDesc: 'Certificato < 0,3% THC',
-      delivery: 'Spedizione Express', deliveryDesc: 'Gratuita da 99€ · Spedizione 24h',
+      delivery: 'Spedizione Express', deliveryDesc: 'Gratuita da 200€ · Spedizione 24h',
       company: 'Azienda Europea', companyDesc: 'Prodotti stoccati in Francia',
     },
     product: {
@@ -520,7 +520,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Coltivazione Biologica', whyOrganicDesc: 'Fiori, resine e oli CBD da fornitori affidabili in Francia, Svizzera e Italia, con canapa coltivata biologicamente.',
       whyCheap: 'CBD Economico, Qualità Premium', whyCheapDesc: 'Il miglior rapporto qualità-prezzo sul mercato. Tutti i prodotti certificati premium e conformi alla legislazione.',
       whyCatalog: 'Catalogo Completo', whyCatalogDesc: 'Gamma completa di resine CBD, fiori di canapa e oli per tutte le esigenze B2B.',
-      whyFast: 'Consegna Rapida', whyFastDesc: 'Tutti gli ordini spediti entro 24 ore. Consegna gratuita per ordini superiori a 99€.',
+      whyFast: 'Consegna Rapida', whyFastDesc: 'Tutti gli ordini spediti entro 24 ore. Consegna gratuita per ordini superiori a 200€.',
       howTitle: 'Come Acquistare CBD all\'Ingrosso',
       faqTitle: 'Domande Frequenti',
       blogTitle: 'Informazioni e Consigli',
@@ -538,7 +538,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'Lisää ostoskoriin', buyNow: 'Osta nyt', viewAll: 'Näytä kaikki', readMore: 'Lue lisää →',
-      freeDelivery: 'Ilmainen toimitus yli 99€', products: 'tuotetta', showing: 'Näytetään',
+      freeDelivery: 'Ilmainen toimitus yli 200€', products: 'tuotetta', showing: 'Näytetään',
       sortBy: 'Järjestä:', featured: 'Suositellut', priceLow: 'Hinta: halvin ensin',
       priceHigh: 'Hinta: kallein ensin', nameAZ: 'Nimi A-Z', outOfStock: 'Loppuunmyyty',
       inStock: 'Varastossa', contactUs: 'Ota Yhteyttä', browseProducts: 'Selaa Tuotteita',
@@ -574,7 +574,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Voittamaton laatu/hinta', qualityDesc: '100% luonnollisia tuotteita',
       lab: 'Laboratorioanalyysit', labDesc: 'Sertifioitu < 0,3% THC',
-      delivery: 'Pikatoimitus', deliveryDesc: 'Ilmainen yli 99€ · Lähetys 24h',
+      delivery: 'Pikatoimitus', deliveryDesc: 'Ilmainen yli 200€ · Lähetys 24h',
       company: 'Eurooppalainen yritys', companyDesc: 'Tuotteet varastoitu Ranskassa',
     },
     product: {
@@ -608,7 +608,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Luomuviljely', whyOrganicDesc: 'CBD-kukkia, hartseja ja öljyjä luotettavilta toimittajilta Ranskasta, Sveitsistä ja Italiasta.',
       whyCheap: 'Edullinen CBD, Premium-laatu', whyCheapDesc: 'Markkinoiden paras hinta-laatusuhde. Kaikki tuotteet sertifioituja ja lainsäädännön mukaisia.',
       whyCatalog: 'Kattava Valikoima', whyCatalogDesc: 'Täydellinen valikoima CBD-hartseja, hamppukukkia ja öljyjä kaikkiin B2B-tarpeisiin.',
-      whyFast: 'Nopea Toimitus', whyFastDesc: 'Kaikki tilaukset lähetetään 24 tunnissa. Ilmainen toimitus yli 99€ tilauksiin.',
+      whyFast: 'Nopea Toimitus', whyFastDesc: 'Kaikki tilaukset lähetetään 24 tunnissa. Ilmainen toimitus yli 200€ tilauksiin.',
       howTitle: 'Miten Ostaa CBD:tä Tukkuhintaan',
       faqTitle: 'Usein Kysytyt Kysymykset',
       blogTitle: 'Tietoa ja Neuvoja',
@@ -626,7 +626,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     },
     common: {
       addToCart: 'Adicionar ao carrinho', buyNow: 'Comprar agora', viewAll: 'Ver tudo', readMore: 'Ler mais →',
-      freeDelivery: 'Envio grátis acima de 99€', products: 'produtos', showing: 'A mostrar',
+      freeDelivery: 'Envio grátis acima de 200€', products: 'produtos', showing: 'A mostrar',
       sortBy: 'Ordenar por:', featured: 'Destaques', priceLow: 'Preço: mais baixo',
       priceHigh: 'Preço: mais alto', nameAZ: 'Nome A-Z', outOfStock: 'Esgotado',
       inStock: 'Em stock', contactUs: 'Contacte-nos', browseProducts: 'Ver Produtos',
@@ -662,7 +662,7 @@ export const ui: Record<Locale, Record<string, any>> = {
     trust: {
       quality: 'Qualidade/Preço Imbatível', qualityDesc: 'Produtos 100% naturais',
       lab: 'Análise Laboratorial', labDesc: 'Certificado < 0,3% THC',
-      delivery: 'Entrega Expresso', deliveryDesc: 'Grátis a partir de 99€ · Envio 24h',
+      delivery: 'Entrega Expresso', deliveryDesc: 'Grátis a partir de 200€ · Envio 24h',
       company: 'Empresa Europeia', companyDesc: 'Produtos armazenados em França',
     },
     product: {
@@ -696,7 +696,7 @@ export const ui: Record<Locale, Record<string, any>> = {
       whyOrganic: 'Cultivo Biológico', whyOrganicDesc: 'Flores, resinas e óleos CBD de fornecedores fiáveis em França, Suíça e Itália, com cânhamo biológico.',
       whyCheap: 'CBD Económico, Qualidade Premium', whyCheapDesc: 'A melhor relação qualidade-preço do mercado. Todos os produtos certificados e conformes com a legislação.',
       whyCatalog: 'Catálogo Completo', whyCatalogDesc: 'Gama completa de resinas CBD, flores de cânhamo e óleos para todas as suas necessidades B2B.',
-      whyFast: 'Entrega Rápida', whyFastDesc: 'Todas as encomendas enviadas em 24 horas. Entrega gratuita para encomendas acima de 99€.',
+      whyFast: 'Entrega Rápida', whyFastDesc: 'Todas as encomendas enviadas em 24 horas. Entrega gratuita para encomendas acima de 200€.',
       howTitle: 'Como Comprar CBD por Grosso',
       faqTitle: 'Perguntas Frequentes',
       blogTitle: 'Informação e Conselhos',

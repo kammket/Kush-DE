@@ -63,11 +63,38 @@ export function getCartCount(): number {
   return getCart().reduce((sum, c) => sum + c.quantity, 0);
 }
 
+/** Sum of line items, rounded to cents so every page shows the same figure. */
 export function getCartTotal(): number {
-  return getCart().reduce((sum, c) => sum + c.price * c.quantity, 0);
+  const raw = getCart().reduce((sum, c) => sum + c.price * c.quantity, 0);
+  return Math.round((raw + Number.EPSILON) * 100) / 100;
 }
 
 export function clearCart() {
   localStorage.removeItem(CART_KEY);
+  clearPromoCode();
   broadcast();
+}
+
+// The promo code has to survive the cart → checkout page change; before this it
+// lived in a page variable, so checkout silently dropped a code the cart had shown.
+const PROMO_KEY = 'gf_promo';
+
+export function getPromoCode(): string | null {
+  try {
+    return localStorage.getItem(PROMO_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function setPromoCode(code: string) {
+  try {
+    localStorage.setItem(PROMO_KEY, code.trim().toUpperCase());
+  } catch { /* storage unavailable — code applies for this page only */ }
+}
+
+export function clearPromoCode() {
+  try {
+    localStorage.removeItem(PROMO_KEY);
+  } catch { /* ignore */ }
 }

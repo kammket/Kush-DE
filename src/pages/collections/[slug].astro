@@ -4,7 +4,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import RecentlyViewed from '../../components/RecentlyViewed.astro';
 import FAQ from '../../components/FAQ.astro';
-import { categories, getProductsByCategory, getCategoryBySlug } from '../../data/products';
+import { categories, getProductsByCategory, getCategoryBySlug, buildListOffer } from '../../data/products';
 import { getCategorySeoContent } from '../../data/translations/categorySeo';
 import { getCategoryFaqs } from '../../data/translations/categoryFaqs';
 import { strainGuides } from '../../data/strains';
@@ -48,18 +48,7 @@ const collectionJsonLd = {
           "@type": "Brand",
           "name": product.supplier
         },
-        "offers": {
-          "@type": "Offer",
-          "price": product.priceNumeric,
-          "priceCurrency": "EUR",
-          "availability": product.inStock 
-            ? "https://schema.org/InStock" 
-            : "https://schema.org/OutOfStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "Greens Farmhouse"
-          }
-        }
+        "offers": buildListOffer(product)
       }
     }))
   }
